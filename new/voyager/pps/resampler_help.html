@@ -1,0 +1,138 @@
+# Voyager PPS Resampler 1.0 Help
+
+This form enables you to generate a table of resampled and calibrated Voyager
+Photopolarimeter (PPS) ring occultation data. Simply select the parameters
+describing the tabulation and click on the "Generate table" button at the
+bottom. After a short wait, you will see a page summarizing the tabulation,
+with a link at the bottom to retrieve the file.
+
+For convenience, the parameters for the ring occultations of Saturn, Uranus
+and Neptune are arranged in three columns. First select the planet and then
+specify the parameters in that column.
+
+You are also free to specify the radial sampling and which of a variety of
+useful quantities to tabulate. The file returned will contain a single header
+line describing each column, followed by one row of numbers for each radial
+step.
+
+## Change History
+
+**1.0** (June 6, 2002): Original PPS Resampler on line. 
+
+## Planet
+
+Select the planet for which you would like data tabulated. Then select the
+remaining parameters in the same column of the table.
+
+## Geometry
+
+Select the geometry model. In general, the default geometry model is preferred
+but earlier geometry solutions are sometimes supported.
+
+For Saturn, two solutions are currently available.
+
+  * Nicholson, P.D., M.L. Cooke, and E. Pelton 1990. An absolute radius scale for Saturn's rings. _Astronomical Journal_ **100**, 1339-1362. 
+  * Esposito, L. W., et al. 1983. Voyager photopolarimeter stellar occultation of Saturn's rings. _J. Geophys. Res._ **88**, 8643-8649.   
+**Note:** This model is based on the original polynomial fit to the PPS occultation geometry. It has known inaccuracies. It also does not contain time or longitude. 
+For Uranus, one solution is currently available.
+
+  * French, R. G., et al. 1988. Uranian ring orbits from Earth-based and Voyager occultation observations. _Icarus_ **73**, 349-378. 
+For Neptune, two solutions are currently available, based on different
+assumptions about Neptune's pole. They are discussed further under the Ring
+Plane option.
+
+## Calibration
+
+Select the calibration model. This consists of a model for the background and
+stellar count rates during the occultation. In general, the default
+calibration model is preferred but earlier solutions are sometimes supported.
+
+For Saturn, one solution is currently available.
+
+  * Esposito, L. W., et al. 1983. Voyager photopolarimeter stellar occultation of Saturn's rings. _J. Geophys. Res._ **88**, 8643-8649. 
+For Uranus, four solutions are currently available.
+
+  * New Fit. This is a fit performed by the PDS Rings Node and provided as part of the archive data set [VG_2801](/volumes/VG_2801/). The sum of background and stellar counts has been derived empirically by fitting a continuous function to the raw data after the individual rings were masked out. The stellar count level is held fixed at 45, the value used by French et al. (_Icarus_ **73**, pp. 349-378, 1988). The background level is based on the difference between total and stellar counts. 
+  * Graps, A. L., M. R. Showalter, J. J. Lissauer, and D. M. Kary 1995\. Optical depth profiles and streamlines of the Uranian Epsilon and Delta Rings. _Astron. J._ **109**, pp. 2262-2273.   
+**Note:** This solution only applies to the Epsilon Ring. 
+  * French, R. G., P. D. Nicholson, C. C. Porco, and E. A. Marouf 1991\. Dynamics and structure of the Uranian rings. In _Uranus_ (J. T. Bergstralh, E. D. Miner, and M. S. Matthews, Eds.), University of Arizona Press, Tucson, pp. 327-409. 
+  * Colwell, J. E., et al. 1990. Voyager photopolarimeter observations of Uranian ring occultations. _Icarus_ **83**, 102-125. 
+For Neptune, two solutions are currently available.
+
+  * New Fit. This is a fit performed by the PDS Rings Node and provided as part of the archive data set [VG_2801](/volumes/VG_2801/). The sum of background and stellar counts has been derived empirically by fitting a continuous function to the raw data after the individual rings were masked out. The stellar count level is held fixed at 43, the value derived from earlier calibration tests on sigma Sgr. 
+  * Horn, L. J., J. Hui, A. L. Lane, and J. E. Colwell 1990. Observations of Neptunian rings by Voyager photopolarimeter experiment. _Geophys. Res. Lett._ **17**, 1745-1748.   
+**Note:** Horn et al. derived calibration parameters just in the vicinity of the Adams and Leverrier Rings. You must select which ring from the menu. 
+
+## Star
+
+The PPS instrument observed two different stellar occultations at Uranus,
+sigma Sgr and beta Per. For a Uranian ring profile, select the star. Note that
+the sigma Sgr occultation experiment only sampled the delta, lambda and
+epsilon rings.
+
+## Direction
+
+The PPS instrument observed both the ingress and egress periods of the Uranian
+ring occultations. For a Uranian ring profile, select the direction.
+
+## Ring Plane
+
+The geometry solution depends on the orientation of the ring plane during the
+occultation.
+
+For Saturn, only the equatorial plane is used.
+
+For Uranus, the rings are inclined with respect to one another. Select the
+ring you wish to profile. You can also select the planet's equatorial plane
+but keep in mind that inclined rings will fall at incorrect radii.
+
+For Neptune, two different planes are available.
+
+  * Porco, C. C. 1991. An explanation for Neptune's ring arcs. _Science_ **253**, 995-1001. 
+  * Jacobson, R., J. E. Riedel, and A. H. Taylor 1991. The orbits of Triton and Nereid from spacecraft and Earthbased observations. _Astronomy and Astrophysics_ **247**, 565-575. 
+**Note:** The Porco (1991) pole actually refers to the Adams Ring. However, this geometry solution is based on the assumption that the Adams Ring's pole is a more accurate determination of the pole for the entire ring system. 
+
+## Radius
+
+Enter the radial sampling of the profile, by specifying the location of the
+innermost sample, the outermost sample, and the radial step between samples,
+in km. The total number of samples in a tabulation is limited to 5000.
+
+**Note:** If you specify values that fall beyond the limits of the data file, geometry model or calibration model, then the radial limits of the tabulation will be adjusted appropriately. 
+
+## Filter Type
+
+Select the type of filter for the tabulation. This is equivalent to the
+effective point spread function of the resultant profile. Three types of
+filters are supported.
+
+  * **Boxcar**: Each sample in the tabulation is a uniform average of all the raw samples in the radial region. This is the fastest filter type and is recommended for most purposes. 
+  * **Triangle**: Each sample in the tabulation is weighted more heavily toward the center of radial region. 
+  * **Sinc**: Each sample in the tabulation is a convolution of the raw data with a sinc function (sin(x)/x). With this filter, each sample approximates the local value of a theoretical profile that has no spatial frequencies above the Nyquist frequency for the chosen sampling. Note that this option is much slower than the others. 
+
+## Columns
+
+Click on the box to the left of each quantity or set of quantities that you
+wish to tabulate. The order of the columns in the table will match the order
+listed on the form. Possible selections are as follows:
+
+  * **Radius:** Adds a column containing the ring intercept radius, in km. 
+  * **Spacecraft event time:** Adds a column containing the time at which photons reached the spacecraft. This is expressed as a number of seconds from midnight on the UTC day on which the occultation started. This corresponds to 25 August 1981 for Saturn, 24 January 1986 for Uranus, and 24 August 1989 for Neptune. 
+  * **Ring intercept time:** Adds a column containing the time at which photons crossed the ring plane. This is expressed as a number of seconds from midnight on the UTC day on which the occultation started. This corresponds to 25 August 1981 for Saturn, 24 January 1986 for Uranus, and 24 August 1989 for Neptune. 
+  * **J2000 longitude:** Adds a column containing the ring intercept longitude in degrees. Longitudes are measured from the equatorial plane's ascending node on Earth's J2000 pole, along the equator to the ring's ascending node, and thence along the ring plane. 
+  * **B1950 longitude:** Adds a column containing the ring intercept longitude in degrees. Longitudes are measured from the equatorial plane's ascending node on Earth's B1950 pole, along the equator to the ring's ascending node, and thence along the ring plane. 
+  * **Mean signal:** Adds a column containing the mean number of PPS counts during the sampling period, based on the chosen filter. 
+  * **Mean signal uncertainty:** Adds a column containing the derived uncertainty in the mean number of PPS counts, expressed as a standard deviation. 
+  * **Background signal:** Adds a column containing the modeled number of background counts, based on the selected calibration model. This is the number of counts coming from sources other than the star. 
+  * **Stellar signal:** Adds a column containing the modeled number of unobscured stellar counts, based on the selected calibration model. 
+  * **Median optical depth** Adds a column containing the derived normal optical depth for the ring. 
+  * **Optical depth lower/upper limit** Adds a pair of columns containing the lower and upper limits on the 1-sigma (68%) confidence interval for the normal optical depth. 
+
+* * *
+
+[Voyager PPS Resampler Form](profiles.html#RESAMPLER) | [Rings Node Home](/)
+
+Last updated 6 June 2002
+
+[Mark Showalter](/showalter/)
+

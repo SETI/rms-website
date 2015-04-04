@@ -1,0 +1,98 @@
+  * [UVIS Intro](index.html)
+  * [About UVIS Data](about.html)
+  * [Finding Data](finding.html)
+  * [Accessing Data](access.html)
+  * [UVIS Software](software.html)
+
+  
+![\[SPACER\]](../css/spacer.gif)
+
+## Finding the Data You Want
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  1\. Search Options
+
+  * **Use [OPUS](http://pds-rings-tools.seti.org/opus/) to search for specific Cassini UVIS data products using a wide range of criteria including enhanced geometric metadata produced at the Rings node. The enhanced geometric metadata includes information appropriate to planet and satelllite searches as well as enhanced ring geometry.**
+
+    * Search results include data files, tables of associated metadata, and JPG previews for each observation. User selected data files can be bundled as tar.gz files for easy downloading. 
+
+  * The [Access UVIS Data](access.html) tab, associates volumes with data sets, and for each volume gives the time interval covered by the volume and provides a link to the volume. 
+
+**NOTE**: We provide links to individual volumes. Each volume contains data from several different UVIS data sets. 
+
+The [PDS Atmospheres Node](http://pds-
+atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini/UVIS.html)
+provides links to individual data sets.
+
+For more information on UVIS data sets and data volumes, see the [About UVIS
+Data](about.html) tab.
+
+  * For more detailed searching, you can use the DATASET_ID and Volume_ID, coupled with subdirectory and file names (browse the data directories), or the INDEX.TAB files to find specific data (see below). 
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  2\. Interpreting the DATASET_ID
+
+![\[SPACER\]](../css/spacer.gif) You can use the DATA_SET_ID field to narrow
+your search. It is in the form **CO-[T]-UVIS-2-[DESC]-V1.0**, where:
+
+**CO** is the Cassini Orbiter
+
+**[T]** is a PDS target ID:
+
+    * **X** for cruise data
+    * **J** for data taken at Jupiter
+    * **S** for data taken during the Saturn phase of the mission.
+
+**UVIS** is the instrument name
+
+**2** indicates the CODMAC data level (raw)
+
+**[DESC]** is one of the following abbreviated descriptions of the data set: 
+
+    * **CALIB** \- Calibration data
+    * **CUBE** \- A multi-band image (in PDS QUBE format)
+    * **SPEC** \- A spectrum
+    * **SSB** \- A time series of photometric (occultation) data
+    * **WAV** \- An image at one wavelength
+![\[SPACER\]](../css/spacer.gif)
+
+###  3\. Interpreting the VOLUME_ID
+
+![\[SPACER\]](../css/spacer.gif)
+
+The volume ID takes the form: **COUVIS_XXXX**, where:
+
+**COUVIS** is the PDS abbreviation for Cassini Orbiter, Ultraviolet Imaging Spectrograph
+
+**XXXX** is the sequential volume number, begining with 0001
+
+![\[SPACER\]](../css/spacer.gif)
+
+The [Access UVIS Data](access.html) tab, associates volumes with data sets,
+and for each volume gives the time interval covered by the volume and provides
+a link to the volume.
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  4\. Volume INDEX Files
+
+![\[SPACER\]](../css/spacer.gif)
+
+Each volume has an [INDEX](/vol/COUVIS_0xxx/COUVIS_0004/) subdirectory
+containing several files including:
+
+  * [INDXINFO.TXT](INDXINFO.TXT): summarizes the structure and contents of the other two files in the INDEX subdirectory.
+
+**Users are strongly encouraged to read an INDXINFO.TXT before working with the INDEX files.**
+  * [INDEX.TAB](COUVIS_0002_INDEX_TAB.txt): an ASCII table file with one row for each data file on the volume. For Cassini UVIS, each index table approximately 45 columns. This example is from disk COUVIS_0002.
+
+  * [INDEX.LBL](INDEX_LBL.txt): the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index.
+
+  
+
+* * *
+
+[UVIS Intro](index.html) | [Cassini Home](/cassini/) | [Rings Node Home](/)
+

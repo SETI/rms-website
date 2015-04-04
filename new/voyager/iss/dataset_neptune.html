@@ -1,0 +1,269 @@
+# Voyager ISS Neptune Data Set Description
+
+## Index
+
+  * Data Set Overview
+  * Parameters
+  * Source Instrument Parameters
+  * Processing History
+  * Confidence Level Note
+  * References Click for the original [DATASET.CAT](dataset_neptune.txt) file (text format). 
+
+* * *
+
+## Data Set Overview
+
+This Voyager 2 Neptune data set is available on CD-ROM and magnetic tape.
+
+NASA's Voyager Project and the Planetary Data System (PDS) have created an
+archive of planetary digital images acquired by the twin Voyager spacecraft
+(Voyager 1 and Voyager 2).
+
+This data set includes images acquired by Voyager 2 as it passed by the planet
+Neptune, its' satellites and rings. Important to note is the fact that while
+geometry information and calibration files exist for all these data sets, they
+do not exist in the Experiment Data Record (EDR) data set but are available
+separately through the Imaging Node. Neither does the data set include
+starfields, calibrations, Plasma Radio Astronomy (PRA), or Plasma Wave
+Spectrometer (PWS) image-formatted information.
+
+The Voyager Neptune archive resides on magnetic tape in EDR format (this
+format is explained in the Multimission Image Processing Laboratory (MIPL)
+Real-Time Processing Subsystem Software Design Document (1985), an internal
+JPL document available from JPL vellum files) and also on three CD-ROM
+volumes.
+
+In addition to the images, supplemental information exists on the CD-ROMs.
+This includes documentation providing a user with information about the
+organization and contents of the disk. Software source code is included to
+provide programmers with tools to process the image files. There are browse
+images, sub-sampled versions of the full-resolution images, which allow users
+to rapidly view the archive collection with their interactive display.
+
+Finally, there are image index files containing information about all the
+images stored in the archive.
+
+The set of images on the magnetic tapes are raw; no processing has been
+performed other than organizing the original telemetry into raster-formatted
+files. The set of images on CD-ROM are also raw, however they have been
+compressed using a Huffman encoding algorithm.
+
+**Detail Target Clarification:**
+
+There are two targets which may prove to be confusing for the unfamiliar user;
+PLAQUE and CAL LAMPS, both are used as calibration targets. PLAQUE is an image
+of a flat piece of metal illuminated by the sun. CAL LAMPS are lamps inside
+the camera used for illumination.
+
+The target DARK is a dark current image when the camera mode is BODARK and the
+exposure is zero. DARK SKY and SKY are shuttered images, non-zero exposures
+looking at dark sky.
+
+SCAT_LIGHT images are used to measure how much light is scattered in a
+particular direction.
+
+**Definition Clarification:**
+
+Planetodetic latitude of a point on the planet surface is the angle between
+the surface normal and the equatorial plane. For a spherical body, the
+latitude is incidental to the planetocentric latitude.
+
+The p5 point is one of 6 static points on all images. It is the point located
+in the center of the image. The p1 point is located in the top left corner, p2
+top right corner, p3 bottom left corner, p4 bottom right corner, p5 center, p6
+center right edge. If the target is not on the p5 point then that point does
+not have latitude and longitude coordinates associated with it nor does the
+target have a p5 point.
+
+The spacecraft coordinate system is a coordinate system defined by the
+spacecraft structure. The antenna points alone the +z axis, the booms are
+along the +y and the -y axes, creating a unique coordinate system for each
+spacecraft.
+
+The Canopus coordinate system is the coordinate system defined by one axis
+pointing at Canopus, one pointing at the Sun and one pointing somewhere else.
+
+These systems are not used for describing images or points on images. Because
+our interest is in where the pixels lie, not relative to the spacecraft or
+stars but relative to the target's own system.
+
+    
+    
+          Processing Level Id            : 2
+          Software Flag                  : N
+          Processing Start Time          : 1988-08-01
+          Processing Stop Time           : 1990-04-01
+    
+
+  * Back to the index.
+
+## Parameters
+
+    
+    
+          Sampling Parameter Name        : PIXEL
+          Data Set Parameter Name        : DATA NUMBER
+          Data Set Parameter Unit        : DIMENSIONLESS
+    
+
+Data Number is an integer expressing the digital value of an experiment's
+telemetry data.
+
+  * Back to the index.
+
+## Source Instrument Parameters
+
+    
+    
+          Instrument Host ID              : VG2
+          Data Set Parameter Name         : DATA NUMBER
+          Instrument Parameter Name       : RADIANCE
+          Important Instrument Parameters : 1
+    
+
+  * Back to the index.
+
+## Processing History
+
+    
+    
+            Source Data Set ID          : FRAMSINK
+            Software                    : VIMBUILD
+            Product Data Set ID         : UNPROCESSED DATA RECORD
+    
+            Source Data Set ID          : UNPROCESSED DATA RECORD
+            Software                    : MERGE
+            Product Data Set ID         : RAW DATA RECORD
+    
+            Source Data Set ID          : RAW DATA RECORD
+            Software                    : EDRGEN
+            Product Data Set ID         : VG2-N-ISS-2-EDR-V1.0
+    
+
+**Software 'VIMBUILD'**
+
+The functions of VIMBUILD include: 1) to receive, reconstruct, and format high
+rate telemetry data into 'images' 2) decompress data and fill edited data as
+required, and 3) extract and store selected spacecraft and sensor engineering
+data from telemetry.
+
+    
+    
+            Source Data Set ID          : FRAMSINK
+            Software Name               : VIMBUILD
+            Product Data Set ID         : UNPROCESSED DATA RECORD
+            Software Type               : N/A
+            Software Release Date       : 1985-10-01
+            Node ID                     : IMAGING
+            Cognizant Engineer          : SUSAN K. LAVOIE
+            Software Access Description : NOT ACCESSIBLE THROUGH PDS CATALOG
+                                            - CONTACT IMAGING NODE.
+    
+
+**Software 'MERGE'**
+
+The MERGE program creates a new Voyager image from all version of a specified
+image. This program is part of the VICAR system (see VICAR).
+
+    
+    
+            Source Data Set ID          : UNPROCESSED DATA RECORD
+            Software Name               : MERGE
+            Product Data Set ID         : RAW DATA RECORD
+            Software Type               : N/A
+            Software Release Date       : 1989-09-01
+            Node ID                     : IMAGING
+            Cognizant Engineer          : SUSAN K. LAVOIE
+            Software Access Description : NOT ACCESSIBLE THROUGH PDS CATALOG
+                                            - CONTACT IMAGING NODE.
+    
+
+**Software 'EDRGEN'**
+
+The EDRGEN program generates Voyager EDR formatted tapes. This program is a
+part of the VICAR system (see VICAR).
+
+    
+    
+            Source Data Set ID          : RAW DATA RECORD
+            Software Name               : EDRGEN
+            Product Data Set ID         : VG1/VG2-S-ISS-2-EDR-V2.0
+            Software Type               : N/A
+            Software Release Date       : 1989-09-01
+            Node ID                     : IMAGING
+            Cognizant Engineer          : SUSAN K. LAVOIE
+            Software Access Description : NOT ACCESSIBLE THROUGH PDS CATALOG
+                                           - CONTACT IMAGING NODE.
+    
+
+  * Back to the index.
+
+## Confidence Level Note
+
+This data set represents a complete collection of raw images from the Voyager
+2 Neptune encounter beginning with the Observatory Phase. To make full
+scientific use of the image collection, it is necessary to obtain (from the
+Imaging Node) and understand the radiometric and geometric properties of the
+camera system and perform corrections to the data. Geometry and basic pointing
+information is included for all Image Observation Types including Calibration,
+Stars, and very small Satellites (or 'Rocks'). Non primary planetary bodies,
+like rocks may have geometry that refers to the primary planetary body
+(NEPTUNE, TRITON and NEREID).
+
+We recommend obtaining a copy of the 'Software Interface Specification, ISS PI
+SEDR Processor, Rev.b, SIS 4-7008-2', an internal JPL document available from
+the JPL vellum files for reference while using this data set. This document
+will clarify some questions which may arise when using the geometry data,
+particularly for non primary planetary bodies. For example; the original
+predict Supplemental Experiment Data Record (SEDRs) had a target for each
+image. Some targets have been changed as information about that particular
+image has been refined. However the geometry still refers to the original
+target from the SEDR. We suggest contacting the Imaging Node for more
+information, clarification or assistance.
+
+The values for emissions and incidence angles contain errors and were received
+that way on the original set of SEDR tapes. We intend to update these values
+when the entire set of SEDR tapes are regenerated.
+
+While using more than one Voyager data set some confusion can occur due to
+duplications in the Flight Data Subsystem(FDS) counts (a.k.a. spacecraft clock
+times). This is due first to the fact that Voyager 1 and 2 flew concurrently,
+so there is inter-spacecraft duplication, and second because of spacecraft
+clock resets and rollovers that occurred, causing duplication within data
+sets. Users are cautioned therefore, that the FDS count is not a unique
+identifier for an image. A unique query must include the spacecraft ID, the
+FDS count, and the target.
+
+There are two targets which may prove to be confusing for the unfamiliar user;
+PLAQUE and CAL LAMPS, both are used as calibration targets. PLAQUE is an image
+of a flat piece of metal illuminated by the sun. CAL LAMPS are lamps inside
+the camera used for illumination.
+
+The target DARK is a dark current image when the camera mode is in bodark and
+the exposure is zero. SKY is a shuttered image, non-zero exposure looking at
+dark sky.
+
+  * Back to the index.
+
+## References
+
+[BARROS1988](iss_refs.html#BARROS1988)  
+[BENESH1978](iss_refs.html#BENESH1978)  
+[DANIELSONETAL1981](http://adsabs.harvard.edu/cgi-bin/nph-
+bib_query?1981JGR%2E%2E%2E%2E86%2E8683D&db_key=)  
+[JPL D-2468](iss_refs.html#JPLD2468)  
+[JPL D-498](iss_refs.html#JPLD498)  
+[MARTINETAL1985](iss_refs.html#MARTINETAL1985)  
+[NAVE1980](iss_refs.html#NAVE1980)  
+[SCIENCEV246N4936](iss_refs.html#SCIENCEV246N4936)  
+[SIS4-7008-2](iss_refs.html#SIS4-7008-2)  
+
+  * Back to the index.
+
+* * *
+
+[Voyager Images](/voyager/iss/) | [Voyager Mission](/voyager/) | [Rings Node
+Home](/)
+
+Last updated Feb-21-1997
+
