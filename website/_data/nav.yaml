@@ -1,0 +1,25 @@
+# main side nav bar
+- title: Cassini News
+  href: /cassini/news
+  submenu: 
+
+    - title: Cassini Mission (JPL)
+      href: /cassini/news
+
+    - title: Press Release Images
+      href: /cassini/press
+
+    - title: Data and Information
+      href: /cassini/data
+
+
+- title: Ringed Planets
+  href: /planets/
+
+  submenu: 
+
+    - title: Saturn
+      href: /saturn
+
+    - title: Uranus
+      href: /uranus

@@ -1,0 +1,22 @@
+<nav>
+
+    <ul>
+        {% for section in site.data.nav %}
+
+        <li class="subheading">
+            <a href="{{ section.href }}">{{ section.title }}</a>
+        
+            <ul class="submenu">
+        
+                {% for item in section.submenu %} 
+
+                    <li><a href="{{ item.href }}">{{ item.title }}</a></li>
+
+                {% endfor %}
+
+            </ul>
+        </li>
+        {% endfor %}
+
+    </ul>
+</nav>
