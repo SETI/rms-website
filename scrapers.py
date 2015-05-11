@@ -39,8 +39,6 @@ def spider_site(base_path_original, file_type):
                 create_file(new_path, content)
 
 
-
-
 def create_file(filepath, content):
 
     file_split = [ a for a in filepath.split('/') if a.strip() ]
@@ -64,10 +62,6 @@ def create_file(filepath, content):
             text_file = open(filepath, "w")
             text_file.write(content)
             text_file.close()
-
-
-
-
 
 
 def convert_page(filename):
