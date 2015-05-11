@@ -1,0 +1,3 @@
+[submodule "rings-node-style-guide"]
+	path = rings-node-style-guide
+	url = https://github.com/anitakhart/rings-node-style-guide.git
