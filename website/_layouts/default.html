@@ -4,12 +4,22 @@
   {% include head.html %}
 
   <body>
-
     <div class="container">
 
-      {% include header.html %}
+      <div class = "row">
+        {% include header.html %}
+      </div>
+      
+      <div class = "row">
 
-      {{ content }}
+        {{ content }}
+
+        <!-- left side nav --> 
+        <div class = "col-md-2 col-md-pull-10 col-sm-2 col-sm-pull-10 col-xm-4 nav-container">
+              {% include nav.html %}
+        </div>
+
+      </div><!-- /row -->
 
     </div>
 
