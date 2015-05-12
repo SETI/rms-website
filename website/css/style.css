@@ -4,9 +4,11 @@ body {
 }
 .site-header  {
   height: 150px;
+  background-color: black;
 }
 .container {
   background-color: white;
+  width:90%;
 }
 h1, h2, h3, h4 {
   font-family: 'Open Sans', sans-serif;
@@ -98,6 +100,7 @@ ul.homebox a:active {
 /* site header / banner */
 .banner {
   background: url(assets/header%20banners/PRN_header1.jpg) no-repeat;
+  background-position: right 0 top 0;
   height: 150px;
   /*width: 1170px;
   height: 150px;*/
