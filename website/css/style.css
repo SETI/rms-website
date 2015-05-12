@@ -45,53 +45,49 @@ h4 {
 
 /* homepage boxes */
 .homebox {
+  font:1.2em 'Open Sans', sans-serif;
 	border: 1px solid #cccccc;
 	background-color: #ffffff;
 	margin-top: 20px;
+  min-height: 24em;
 }
 
 .homebox .panel-heading {
-  background: url(assets/PRN_home_heading_bg.png) no-repeat;
-  background-color: #585858;
-  color: #ffffff;
-  font-weight:200;
-  text-align: center;
-  padding:0;
-  padding-bottom:5px;
-
-}
-.homebox h2 {
-  font-family: 'Open Sans', sans-serif;
   margin:0; padding:0;
-  font-weight: 400;
+  /* background: url(assets/PRN_home_heading_bg.png) no-repeat; */
+  background-color: #585858;
   color:white;
-  padding-top:5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size:1.3em;
+  text-align: center;
+  padding:3px 0;
+}
+.homebox .panel-body {
+    padding:17px 10px;
 }
 
-ul.homebox  {
+.homebox ul  {
   border:0;
 	display: block;
 	list-style-type: disc;
-	margin: 15px;
-	padding: 22px;	
 }
 
-.homebox li {
-	font: 15px 'Open Sans', sans-serif;
+.homebox li, .homebox p {
 	line-height: 1.4em;
 	margin-bottom: 13px;
 	padding: ;	
 }
-ul.homebox a {
+.homebox ul a {
 	color: #435ca4;
 }
-ul.homebox a:visited {
+.homebox ul a:visited {
 	color: #4e4a92;
 }
-ul.homebox a:hover {
+.homebox ul a:hover {
 	color: #5a72b7;
 }
-ul.homebox a:active {
+.homebox ul a:active {
 	color: #31488d;
 }
 
