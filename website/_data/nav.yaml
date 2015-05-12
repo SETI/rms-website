@@ -1,25 +1,112 @@
-# main side nav bar
 - title: Cassini News
   href: /cassini/news
   submenu: 
 
     - title: Cassini Mission (JPL)
-      href: /cassini/news
+      href: http://saturn.jpl.nasa.gov/
 
     - title: Press Release Images
-      href: /cassini/press
+      href: /saturn/cassini/
 
     - title: Data and Information
-      href: /cassini/data
-
+      href: /cassini/
 
 - title: Ringed Planets
-  href: /planets/
+  href: /ringed-planets
+  submenu:
 
-  submenu: 
+    - title: Jupiter
+      href: /jupiter/
 
     - title: Saturn
-      href: /saturn
+      href: /saturn/
 
     - title: Uranus
-      href: /uranus
+      href: /uranus/
+
+    - title: Neptune
+      href: /neptune/
+
+
+- title: Missions and Data
+  href: /missions/data/
+  submenu:
+
+    - title: Search Tool
+      href: /opus/
+
+    - title: Cassini
+      href: /cassini/
+
+    - title: Voyager
+      href: /voyager/
+
+    - title: New Horizons
+      href: /newhorizons/
+
+    - title: Galileo
+      href: /galileo/
+
+    - title: Occultations
+      href: /ringocc/
+
+    - title: Hubble Telescope
+      href: /hst/
+
+    - title: Saturn RPX 1995
+      href: /rpx/
+
+    - title: Uranus RPX 2007
+      href: /urpx/
+
+    - title: Astrometry
+      href: /astrometry/
+
+    - title: Resonances
+      href: /resonance/
+
+    - title: ROSES Support
+      href: /roses/
+
+- title: Downloads  
+  href: /downloads/
+  submenu: 
+
+    - title: Data volumes
+      href: /vol/)
+
+    - title: Compressed archives
+      href: /archives/)
+
+    - title: Previews/Thumbnails
+      href: /browse/)
+
+- title: Resources
+  href: /resources/
+  submenu:
+
+    - title: Tools
+      href: /tools/
+
+    - title: Toolkits
+      href: /toolkits/
+
+    - title: Glossary
+      href: /glossary.html
+
+- title: Contacts  
+  href: /contacts/
+  submenu:
+
+    - title: Mark Showalter
+      href: http://www.seti.org/users/mark-showalter) 
+
+    - title: Mitch Gordon
+      href: http://www.seti.org/users/mitchell-gordon
+
+    - title: Neil Heather
+      href: /heather/
+
+    - title: Lisa Ballard
+      href: /ballard/
+
