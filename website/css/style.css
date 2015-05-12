@@ -54,11 +54,11 @@ h4 {
 
 .homebox .panel-heading {
   margin:0; padding:0;
-  /* background: url(assets/PRN_home_heading_bg.png) no-repeat; */
+  background: url(assets/PRN_home_heading_bg.png) no-repeat;
   background-color: #585858;
   color:white;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-size:1.3em;
   text-align: center;
   padding:3px 0;
