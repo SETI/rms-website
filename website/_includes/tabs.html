@@ -1,0 +1,17 @@
+{% assign tabs = site.data.tabs[page.tabs] %}
+
+<ul class="tab-pill-group">
+
+	{% for tab in tabs %}
+		
+	  <li class="tab-pill 
+	  		{% if page.active_tab == tab.title %}
+	  			active
+	  		{% endif %}
+
+	  	" >	<a href="{{ tab.href }}">{{ tab.title }}</a>
+	  </li>
+	  {% endfor %}
+
+</ul>
+

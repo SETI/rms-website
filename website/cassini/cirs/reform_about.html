@@ -1,0 +1,120 @@
+  * [About Re-formatted Data](reform_about.html)
+  * [Naming Conventions](reform_dir_names.html)
+  * [Finding Data](reform_finding.html)
+  * [Documentation](reform_doc.html)
+
+  
+![\[SPACER\]](../css/spacer.gif)
+
+![\[SPACER\]](../css/spacer.gif)
+
+## About Re-formatted CIRS Data
+
+![\[SPACER\]](../css/spacer.gif)
+
+These pages contain excerpts from the [TUTORIAL.TXT](TUTORIAL.TXT) file, found
+in the DOCUMENT directory on each re-formatted volume. See TUTORIAL.TXT for
+extensive guidance on how to use the data.
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  1\. Overview of the Re-Formatted Data Set
+
+![\[SPACER\]](../css/spacer.gif)
+
+This data set has been designed to ease the access to the CIRS data set for
+scientists who do not use Vanilla. It simplifies the selection of data subsets
+based on target, CIMS request or CIRS focal plane. The reorganization also
+eliminates the need for variable-length files, on the assumption that users
+will have a much easier time writing programs to read fixed-length records.
+
+The re-formatted data set has the following properties.
+
+(a) File boundaries correspond to CIMS requests, so the data associated with
+individual Cassini activities are found within a single set of files; no file
+contains information from more than one CIMS activity.
+
+(b) Data files have been divided up by focal plane.
+
+(c) Metadata files (mainly timing and geometry) have been restructured to
+contain the identical record sequence as that in the corresponding data files.
+Users will find an exact 1:1 correspondence between the records in each data
+file and the records in the metadata files.
+
+(d) All information except the actual thermal spectra are available in ASCII
+format. Most users find ASCII files easier to read than binary files. However,
+because the spectra are quite large, they are only archived in binary.
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  2\. Volume Names
+
+![\[SPACER\]](../css/spacer.gif)
+
+The original CIRS data volumes are named COCIRS_yymm, where yy is the last two
+digits of the year and mm is the month number (01 through 12).
+
+These re-formatted volumes are also organized by month. To distinguish the two
+data sets, re-formatted volumes have 50 added to the year. For example, the
+data in original volume COCIRS_0407 can be found, in the alternative form, in
+volume COCIRS_5407.
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  3\. Introduction to the Cassini Timeline
+
+![\[SPACER\]](../css/spacer.gif)
+
+The Cassini timeline has been allocated in terms of specific activities,
+sometimes referred to as "CIMS requests." Here "CIMS" stands for the "Cassini
+Information Management System." A CIMS request corresponds to a particular
+block of time in which one or more instruments observe (usually) a single
+target. In the Cassini timeline, one instrument is always "prime" and defines
+the details of the observation, such as where the instrument points and how
+long it dwells at each location. Often, additional instruments are "riders"
+and will obtain simultaneous data from the same target.
+
+CIMS requests have identifiers such as this:
+
+CIRS_016RE_E60PHASE001_VIMS
+
+It is constructed as follows:
+
+CIRS: Indicates the instrument doing the observation, regardless of whether it
+is prime or a rider.
+
+016: Indicates Cassini's orbit number
+
+RE: Abbreviation for the nominal target, in this case Ring E.
+
+E60PHASE: A brief mnemonic indicating the purpose of the observation, in this
+case to gather the phase curve information around 60 degrees.
+
+001: For the first activity of this type in the given orbit of Cassini.
+
+VIMS: Finally, this indicates that the VIMS (Visual and Infrared Mapping
+Spectrometer) instrument is prime for the observation. If CIRS had been prime,
+the identifier would have ended with PRIME instead.
+
+**The CIMS request ID associated with a given file can be found in the PDS label as the value for the keyword OBSERVATION_ID.**
+
+![\[SPACER\]](../css/spacer.gif)
+
+### 4\. Where to go next
+
+![\[SPACER\]](../css/spacer.gif)
+
+  * Use the tabs at the top of this page to obtain more information about the re-formatted data.
+
+  * Access [ the re-formatted data](access_reform.html)
+
+  * Return to [About CIRS Data](about.html)
+
+  * Go to information [about original format CIRS data](orig_about.html)
+
+  
+
+* * *
+
+[CIRS Intro](index.html) | [Cassini Home](/cassini/) | [Rings Node Home](/)
+

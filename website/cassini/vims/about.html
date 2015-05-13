@@ -1,0 +1,81 @@
+  * [VIMS Intro](index.html)
+  * [About VIMS Data](about.html)
+  * [Finding Data](finding.html)
+  * [Accessing Data](access.html)
+  * [VIMS Calibration](calibration.html)
+
+  
+![\[SPACER\]](../css/spacer.gif)
+
+## Getting Started
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  1\. Organization
+
+  * The Cassini Visual and Infrared Mapping Spectrometer (VIMS) data is organized as a single, multi-volume data set that will span the entire mission.
+
+  * The archive volumes contain VIMS data products: raw images, spectra, and stellar occultations. The archive also contains the associated pointing, navigation and spacecraft orientation information, instrument documentation, calibration files, calibration algorithms, representative software for handling the UVIS data files, and documentation necessary to produce higher level calibrated products.
+
+![\[SPACER\]](../css/spacer.gif)
+
+**Note:** The archive volumes are organized exclusively by date. This means that files from several channels and modes can be interleaved in the same volumes and directories. 
+
+![\[SPACER\]](../css/spacer.gif)
+
+###  2\. Directory and File Naming
+
+  * All data files are contained in subdirectories of the data directory. Subdirectory names are sequential, based on spacecraft event time (SCET). Subdirectory names are in the form **yyyydddThhmmss_yyyydddThhmmss**, where the two date/time strings correspond to the start and end times of the interval covered in the subdirectory.
+
+  * File names are sequential based on spacecraft clock time values (SCLK) corresponding to the beginnning of the exposure, with an appended version number. File names are in the form **vnnnnnnnnnn_xx_yyy.qub**, where: 
+
+    * **v** indicates a VIMS data file.
+    * **nnnnnnnnn** is the SCLK value at the beginning of the exposure.
+    * **xx** & **yyy** are version numbers.
+    * **.qub** indicates an ISIS 2 compatible QUBE file.
+![\[SPACER\]](../css/spacer.gif)
+
+### 3\. Documentation
+
+![\[SPACER\]](../css/spacer.gif)
+
+** Users are strongly encouraged to review a VIMS [aareadme.txt](aareadme.txt) file.** Identical versions of this file appear in the root directory of every volume. 
+
+![\[SPACER\]](../css/spacer.gif)
+
+Further details of the VIMS archive volumes as well as descriptions of the
+data products and calibration software can be found in the "Software Interface
+Specification" (SIS) Documents. These are found in the document directory on
+each data volume.
+
+  * The Data Product and Label SIS is available as [document/dpsis.txt](dpsis.txt). It provides details of the data file and label formats.
+  * The Volume Organization SIS is available as [document/archsis.txt](archsis.txt). It describes the contents of the data volumes.
+![\[SPACER\]](../css/spacer.gif)
+
+The [catalog](/vol/COVIMS_0xxx/COVIMS_0001/catalog/) subdirectory on each
+volume contains a wealth of information about the VIMS instrument, team, data
+products and the data set. See, in particular:
+
+  * [COVIMS_0001/catalog/dataset.cat](dataset.txt): Description of the VIMS data set.
+  * [COVIMS_0001/catalog/inst.cat](inst.txt): Description of the VIMS instrument.
+  * [COVIMS_xxxx/catalog/insthost.cat](insthost.txt): Description of the Cassini spacecraft.
+  * [COVIMS_xxxx/catalog/mission.cat](mission.txt): Description of the Cassini mission.
+  * [COVIMS_xxxx/catalog/software.cat](software.txt): Brief description of the ISIS software package.
+![\[SPACER\]](../css/spacer.gif)
+
+A file, [errata.txt](errata.txt), in the root directory of each volume
+documents any known anomalies or deviations from PDS standards contained in
+that volume.
+
+![\[SPACER\]](../css/spacer.gif)
+
+Additional descriptions of the instrument can be found at the [ Cassini VIMS
+web page.](http://saturn.jpl.nasa.gov/spacecraft/inst-cassini-vims-
+details.cfm)
+
+  
+
+* * *
+
+[VIMS Intro](index.html) | [Cassini Home](/cassini/) | [Rings Node Home](/)
+

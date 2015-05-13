@@ -45,7 +45,7 @@ h4 {
 
 /* homepage boxes */
 .homebox {
-  font:1.2em 'Open Sans', sans-serif;
+  font:1.0em 'Open Sans', sans-serif;
 	border: 1px solid #cccccc;
 	background-color: #ffffff;
 	margin-top: 20px;
@@ -203,4 +203,44 @@ h4 {
 }
 
 
+/* tabs */
+ul.tab-pill-group {
+  margin-top:20px;
+  display: inline-block;
+}
+li.tab-pill a {
+  display:inline-block;
+  padding: 10px 16px;
 
+}
+li.tab-pill {
+  font-family: 'Open Sans', sans-serif;
+  background: #efefef;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  border-radius: .25em;
+  float: left;
+  font-size: 14px;
+  font-weight:600;
+  color: #222222;
+  margin-right: 6px;
+  list-style-type: none;
+  text-align:center;
+
+}
+
+li.tab-pill.active {
+  background: url(../assets/active-tab-bg.png) repeat-x;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  border-radius: .25em;
+  float: left;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:600;
+  color: #222222;
+  margin-right: 6px;
+  cursor: pointer;
+  text-align:center;
+}

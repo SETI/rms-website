@@ -1,0 +1,133 @@
+* * *
+
+[![](icons/next.gif)](chap1.html)
+
+* * *
+
+# (SIS) IO-AR-019
+
+# Cassini RPWS Standard Products Archive Volume Software Interface
+Specification
+
+## D-28355
+
+## Version 1.0
+
+### March 01, 2004
+
+  * Table of Contents
+  * List of Tables
+
+**Prepared by:**  
+William S. Kurth  
+Cassini RPWS Deputy Principal Investigator  
+  
+---  
+  
+**Approved:**  
+Donald A. Gurnett  
+Cassini RPWS Principal Investigator  
+  
+**Approved:**  
+Diane Conner  
+Cassini Archive Data Engineer  
+  
+**Approved:**  
+Raymond Walker  
+PDS-PPI Node Manager  
+  
+**Approved:**  
+Steve Adams  
+PDS Central Node Data Engineer  
+  
+****
+
+![](icons/nasalogo.gif)
+
+National Aeronautics and Space Administration
+
+****
+
+![](icons/jpllogo.gif)
+
+JET PROPULSION LABORATORY  
+California Institute of Technology  
+Pasadena, California
+
+* * *
+
+# Table of Contents
+
+  * [1\. Preface ](chap1.html)
+  * [2\. Introduction ](chap2.html)
+    * [2.1 Content Overview ](chap2.html#SEC2.1)
+    * [2.2 Scope ](chap2.html#SEC2.2)
+    * [2.3 Applicable Documents ](chap2.html#SEC2.3)
+    * [2.4 Audience ](chap2.html#SEC2.4)
+  * [3\. Archive Volume Generation ](chap3.html)
+    * [3.1 Data Transfer and Validation Methods ](chap3.html#SEC3.1)
+    * [3.2. Data Product Sizes and Delivery Dates ](chap3.html#SEC3.2.)
+    * [3.3 Interface Media Characteristics ](chap3.html#SEC3.3)
+    * [3.4 Backup and Duplicates ](chap3.html#SEC3.4)
+    * [3.5 Labeling and Identification ](chap3.html#SEC3.5)
+  * [4\. Archive Volume Contents ](chap4.html)
+    * [4.1 Root Directory Contents ](chap4.html#SEC4.1)
+    * [4.2 INDEX Directory Contents ](chap4.html#SEC4.2)
+    * [4.3 DOCUMENT Directory Contents ](chap4.html#SEC4.3)
+    * [4.4 CATALOG Directory Contents ](chap4.html#SEC4.4)
+    * [4.5 BROWSE Directory Contents and Naming Conventions ](chap4.html#SEC4.5)
+      * [4.5.1 Required Files ](chap4.html#SEC4.5.1)
+      * [4.5.2 BROWSE/RPWS_KEY_PARAMETERS Directory Contents ](chap4.html#SEC4.5.2)
+      * [4.5.3 BROWSE/RPWS_LOW_RATE_FULL Directory Contents ](chap4.html#SEC4.5.3)
+      * [4.5.4 BROWSE/RPWS_WIDEBAND_FULL Directory Contents ](chap4.html#SEC4.5.4)
+      * [4.5.5 BROWSE/RPWS_WAVEFORM_FULL Directory Contents ](chap4.html#SEC4.5.5)
+    * [4.6 DATA Directory Contents and Naming Conventions ](chap4.html#SEC4.6)
+      * [4.6.1 Required Files ](chap4.html#SEC4.6.1)
+      * [4.6.2 DATA/RPWS_RAW_COMPLETE Directory Contents ](chap4.html#SEC4.6.2)
+      * [4.6.3 DATA/RPWS_KEY_PARAMETERS Directory Contents ](chap4.html#SEC4.6.3)
+      * [4.6.4 DATA/RPWS_LOW_RATE_FULL Directory Contents ](chap4.html#SEC4.6.4)
+      * [4.6.5 DATA/RPWS_WIDEBAND_FULL Directory Contents ](chap4.html#SEC4.6.5)
+      * [4.6.6 DATA/RPWS_WAVEFORM_FULL Directory Contents ](chap4.html#SEC4.6.6)
+      * [4.6.7 DATA/ANCILLARY Directory Contents ](chap4.html#SEC4.6.7)
+    * [4.7 EXTRAS Directory Contents ](chap4.html#SEC4.7)
+  * [5\. Archive Volume Format ](chap5.html)
+    * [5.1 Disk Format ](chap5.html#SEC5.1)
+    * [5.2 File Formats ](chap5.html#SEC5.2)
+      * [5.2.1 Document File Format ](chap5.html#SEC5.2.1)
+      * [5.2.2 Tabular File Format ](chap5.html#SEC5.2.2)
+      * [5.2.3 PDS Label Format ](chap5.html#SEC5.2.3)
+      * [5.2.4 Catalog File Format ](chap5.html#SEC5.2.4)
+      * [5.2.5 Index File Format ](chap5.html#SEC5.2.5)
+      * [5.2.6 Science Data File Formats ](chap5.html#SEC5.2.6)
+        * [5.2.6.1 RPWS_KEY_PARAMETERS_BROWSE Data Product Format ](chap5.html#SEC5.2.6.1)
+        * [5.2.6.2 RPWS_KEY_PARAMETERS Data Product Format ](chap5.html#SEC5.2.6.2)
+        * [5.2.6.3 RPWS_RAW_COMPLETE Data Product Format ](chap5.html#SEC5.2.6.3)
+        * [5.2.6.4 RPWS_LOW_RATE_BROWSE Data Product Format ](chap5.html#SEC5.2.6.4)
+        * [5.2.6.5 RPWS_LOW_RATE_FULL Data Product Format ](chap5.html#SEC5.2.6.5)
+        * [5.2.6.6 RPWS_WIDEBAND_BROWSE Data Product Format ](chap5.html#SEC5.2.6.6)
+        * [5.2.6.7 RPWS_WIDEBAND_FULL Data Product Format ](chap5.html#SEC5.2.6.7)
+        * [5.2.6.8 RPWS_WAVEFORM_BROWSE Data Product Format ](chap5.html#SEC5.2.6.8)
+        * [5.2.6.9 RPWS_WAVEFORM_FULL Data Product Format ](chap5.html#SEC5.2.6.9)
+  * [6\. Support Staff and Cognizant Persons ](chap6.html)
+  * [Appendix A Directory Structure](appA.html#APPA)
+  * [Appendix B Sample Labels for RPWS_KEY_PARAMETERS](appB.html#APPB)
+  * [Appendix C Sample Labels for RPWS_RAW_COMPLETE](appC.html#APPC)
+  * [Appendix D Sample labels for RPWS_LOW_RATE_FULL](appD.html#APPD)
+  * [Appendix E Sample labels for RPWS_WIDEBAND_FULL](appE.html#APPE)
+  * [Appendix F Sample labels for RPWS_WAVEFORM_FULL](appF.html#APPF)
+  * [Appendix G Sample Index Labels<](appG.html#APPG)
+  * [Appendix H Sample Ancillary Files](appH.html#APPH)
+  * [Appendix I Acronym List](appI.html#APPI)
+
+# List of Tables
+
+  * [ Table 1. Data Products included in this document:](chap2.html#TABLE1.)
+  * [ Table 2 : RPWS Standard Product Sizes and Delivery Rates](chap3.html#TABLE2)
+  * [ Table 3 : RPWS Archive Collection Support Staff](chap6.html#TABLE3)
+
+* * *
+
+[![](icons/next.gif)](chap1.html)
+
+* * *
+

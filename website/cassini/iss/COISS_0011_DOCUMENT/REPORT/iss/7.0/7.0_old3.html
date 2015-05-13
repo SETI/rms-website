@@ -1,0 +1,666 @@
+> 699-416
+
+>
+
+> ### ![7.0 Radiometric Calibration Steps](7.0.gif)
+
+>
+
+> * * *
+
+>
+
+>  
+_Modified version of draft by Alfred McEwen and James Winburn ( Reference
+7-1), incorporating comments from C. Avis (Reference 7-2 through 7-5 ), G.
+Yagi (Reference 7-2), R. West (Reference 7-4 and 7-5 ), and E. Romo_
+
+>
+
+> Reference 7-1 -  | E-mail, " Cassini ISS Calibration", Alfred McEwen,
+October 15, 1997  
+> ---|---  
+> Reference 7-2 -  |  E-mail, "Review of Alfred's Calibration Outline",
+Charlie Avis, October 24, 1997  
+> Reference 7-3 -  |  E-mail, "Modified Section 7.0 Radiometric Steps",
+Charlie Avis, May 14, 1998  
+> Reference 7-4 -  | IOM 388-PAG-CCA98-14, " NAC FM Calibration Results :
+Nonlinear Response Terms", Bob West and Charlie Avis, July 20, 1998 (see
+Section 5.1.11.3)  
+> Reference 7-5 -  | IOM 388-PAG-CCA98-15, " NAC FM Calibration Results :
+Nonlinear Response Terms", Bob West and Charlie Avis, July 20, 1998 (see
+Section 5.1.11.4)  
+>  
+> * * *
+
+>
+
+> **Below is the summary of the calibration steps required to radiometrically
+correct the NAC and WAC images.**
+
+>
+
+> * * *
+
+>
+
+> **Step 1 - Conversion from 8-12 Bit Word**  
+>  
+> ---  
+>  
+> If the data was sent through a 12-8 bit converter, convert it back to 12
+bits (16 bits actually).
+
+>
+
+> The conversion type used is stored in the VICAR label as an item called
+conversion_type.
+
+>
+
+> conversion_type = VICAR_label.conversion_type;
+
+>
+
+>   * 12BIT :no conversion  
+TABLE :12-8 look up table  
+8LSB :8 least significant bits
+
+>
+
+> if conversion_type = TABLE then
+
+>
+
+>     * DN_Step1(i,j) = 8-12_lut[ DN_raw(i,j) ]
+
+>
+
+> else if conversion_type = NONE or LSB then
+
+>
+
+>     * DN_Step1(i,j) = (short)DN_raw(i.j)
+
+>
+
+> endif
+
+>
+
+> * * *
+
+>
+
+> **Step 2 - Uneven Bit Weight Correction**  
+>  
+> ---  
+>  
+> Uneven_bit_weight_table stored in tables with names of format:  
+camera_gain_optics-temperature, specifically:  
+["wac"|"nac"]g[1|2|3][m10|p5|p25]
+
+>
+
+> _Note: There are some combinations of camera, gain state, summation mode and
+optics temperature for which UBW tables were not produced. The detected DN's
+for these cases should NOT be altered unless tables are created from in-flight
+data or model tables are produced_.
+
+>
+
+> This step can be skipped for DCT-compressed (Lossy) data.  
+
+
+>
+
+>   * // Get appropriate UBW table
+
+>
+
+> if UBW table (based on camera, gain, and optics temperature ) exists
+
+>
+
+>     * UBWtable = ["wac"|"nac"]g[1|2|3]["m10"|"p5"|"p25"]
+
+>
+
+> else
+
+>
+
+>     * UBWtable = default_table // a simple 1-4096 table
+
+>
+
+> endif
+
+>
+
+> DN_Step2(i,j) = UBWtable[ DN_Step1(i,j) ]
+
+>
+
+> * * *
+
+>
+
+> **Step 3 - Computation of Bias and Subtraction from DN **  
+>  
+> ---  
+>  
+> DN = DN - frame_bias
+
+>
+
+> The frame bias can be retrieved either from the OFFSET label (mean of all
+available offset values), or as the average of the overclocked pixels which
+are stored in the binary prefix of each line.  
+
+
+>
+
+>   * if label "OFFSET" exists then
+
+>     * get the offset from OFFSET label
+
+>
+
+> else
+
+>
+
+>     * total = 0  
+for i = 1 to number_of_lines
+
+>       * total = total + DNbinary_prefix(i).overclocked_pixel
+
+>
+
+> endfor  
+bias = total / number_of_lines;
+
+>
+
+> endif
+
+>
+
+> DN_Step3(i,j) = DN_Step2(i,j) - bias
+
+>
+
+> _Note : For prelaunch calibration frames, the VICAR label item OFFSET
+contained the mean value of all available Overclocked Pixels. This value was,
+however, truncated to an integer. For Flight data, this value will be floating
+point and the code will throw out the huge spurious values that appear from
+time to time before creating the mean._
+
+>
+
+> * * *
+
+>
+
+> **Step 4 - Subtract Dark Frame **  
+>  
+> ---  
+>  
+> DN_Step4(i,j) = DN_Step3(i,j) - Dark_cal(i,j)
+
+>
+
+> Dark_cal frame accounts for dark current (DC) and Residual Bulk Image (RBI),
+and varies with camera, gain, exposure time, summation mode, compression mode,
+framing time, readout rate, T of CCD, T of sensor head if gain 3, etc., and
+may change over time.
+
+>
+
+> Earch Dark_cal frame is typically produced for many (order 10) individual
+dark frames, to despike and average. Dark-current frames should have their
+offset subtracted before being included in any average. This not only makes
+the frames consistent, but removes the Gain 3 dependence upon temperature,
+because it is the offset which is being affected.
+
+>
+
+> IT IS NOT FEASIBLE TO COLLECT UNSHUTTERED FRAMES THAT EXACTLY MATCH ALL
+PARAMETERS FOR EACH SHUTTERED FRAME, unless we dedicate half of our data
+return to dark frames.
+
+>
+
+> Also, it is desirable to average many dark frames in order to remove
+radiation spikes and correct for the low-level graininesss. We especially
+cannot dedicate ~90% of our data rate to dark frames.
+
+>
+
+> Options:
+
+>
+
+> 1\. Collect standard dark frames for commonly used modes and typical
+temperatures (order 100 calibration files). Update in-flight at Jupiter and
+~once/year at Saturn.
+
+>
+
+> 100 x 1024 x 1024 x 2 bytes = 210 MBytes to keep on-line.
+
+>
+
+> _Note : There was not a great amount of data , therefore not a great amount
+of analysis, comparing dark current data among the different gain states. Dark
+current calibration data (with integration times from 0 seconds to 20 minutes)
+was only taken in Gain State 3. The comparison made among the gain states was
+for the bias frames (integration time of 0 seconds). This evaluation noted
+different line profiles among the gain states with the only similarity being
+between gain state 3 and gain state 2 (both 1x1 summation mode). It has been
+noted that dark current line profiles are influenced by many factors :
+transfer rate from detector to memory (telemetry rate), size of image file,
+light flood (for exposures longer than 1 second), etc. Suffice it to say that
+more data and analysis is required in the future to determine how applicable
+and accurate it is to use the gain ratios for dark current calibrations among
+the different gain states. Although, comparison of bias frames for gain state
+3 and 2, using the gain ratios, showed a difference of 1 DN._
+
+>
+
+> 2\. Gary Yagi's camera model in the planning tools does a good job of
+predicting the dark-current (and its dependence upon line number), but not
+lightflood spatial variation.
+
+>
+
+> 3\. When photometry is critical, plan in-flight dark frames as part of each
+observation sequence.
+
+>
+
+> Calibration program must either look for appropriate standard dark
+correction frame or accept a user-input dark_cal frame.
+
+>
+
+> * * *
+
+>
+
+> **Step 5 - Correction for Bright/Dark Differences in Anti-Blooming Mode **  
+>  
+> ---  
+>  
+> (Algorithm to be constructed.)
+
+>
+
+> DN_Step5(i,j) = f{DN_Step4(i,j)}
+
+>
+
+> _NOTE : The algorithm should recognize when each of the bright/dark pixel
+pairs becomes a problem. This depends on both the exposure time and the size
+of the trap which can be obtained from the calibration files provided for
+pixel pair identification. We would probably want to do nothing to a
+bright/dark pair if the exposure time is not long and/or if the size of the
+trap is small (~ a few percent for the longest exposures)._
+
+>
+
+> * * *
+
+>
+
+> **Step 6 - Correct for Non-Linearity  **  
+>  
+> ---  
+>  
+> Linearity tests made during thermal vac calibration revealed nonlinear
+behavior. Departures from linearity (decreased sensitivity at high DN levels)
+were strongest for Gain State 0, 4x4 Summation. To correct for this nonlinear
+behavior, a correction factor (see Reference 7-4 and 7-5) must be applied.
+Note : Corrected DN values greater than 4095 will result in some cases even
+though the data were not actually saturated. This fact will have an effect on
+the radiometric correction software.  
+
+
+>
+
+> DN_Step6(i,j)= f {C * DN_Step5(i,j)}
+
+>
+
+> where C is the nonlinearity correction factor, and
+
+> f is an undefined algorithm to account for corrected DN values greater than
+4095
+
+>
+
+> * * *
+
+>
+
+> **Step 7 - Correct for Sensor Blemishes **  
+>  
+> ---  
+>  
+> (Algorithm to be constructed.)
+
+>
+
+> _Notes :_  
+_a) The calibration blemish files currently identify the bad pixel and which
+of its_ _neighbors are good._  
+_b) In order to track if a pixel has been interpolated, a suggestion was made
+to add a bad data binary header to each image (similar to what Galileo did)._
+
+>
+
+> * * *
+
+>
+
+>  
+**To continue calibration with flat-field files (not produced by the development team), continue with Steps 8 through 14.**
+>
+
+> |  **To continue calibration with radiometric slope files (delivered by the
+development team), proceed to Steps 15 through 19.**  
+> ---|---  
+> |  **FLAT FIELD OPTION **  
+> ---  
+> |  **RADIOMETRIC SLOPE FILE OPTION **  
+> ---  
+> |
+
+>
+
+> **Step 8 - Multiply by Gain Constant **  
+>  
+> ---  
+>  
+> DN_step8(i,j) = DN_Step7(i,j) x g
+
+>
+
+> See tables in System Gain calibration reports.
+
+>
+
+> **Step 9 - Divide by Flat-Field (FF) File**  
+>  
+> ---  
+>  
+> DN_step9(i,j) = DN_Step8(i,j) / FF(i,j)
+
+>
+
+> FF(i,j) calibration files must be derived for each filter combination that
+will be used (63 NAC / 30 WAC), and for full (2 gain states), 2x2, and 4x4
+modes, for a total of 372 FF files.
+
+>
+
+> _Notes :_  
+_a) Flat-field frames in all filter combinations were only taken in 1x1 Gain
+2._  
+b) _The slope files contain values in picoamp-msec/DN and thus are gain
+-dependent and are not normalized flat field frames. The gain ratios derived
+from calibration are used in the correction._  
+c) _A few Gain 3 slope files were made (clear only) ._
+
+>
+
+> ** **
+
+>
+
+> **Step 10 - Divide By Exposure Time**  
+>  
+> ---  
+>  
+> DN_step10(i,j) = DN_Step9(i,j) / t(i)
+
+>
+
+> where t(i) = T - to(i)
+
+>
+
+> T is commanded exposure time (from image labels) to(i) is shutter offset;
+varies almost linearly with sample number
+
+>
+
+> read to(i) from lookup tables for each camera and optics temperature;
+interpolate to actual optics temperature.
+
+>
+
+> Anomaly: bright band across image, not understood.
+
+>
+
+> _Note : The shutter offset files have been produced (see Appendix E). There
+is one for each camera at each of three optics temperatures:_
+
+>
+
+> SO.WACFM_PLUS25  
+SO.WACFM_PLUS5  
+SO.WACFM_MINUS10  
+SO.NACFM_PLUS25  
+SO.NACFM_PLUS5  
+SO.NACFM_MINUS10
+
+>
+
+> These are VICAR binary image files (1 line by 1024 R*4) samples.
+
+>
+
+> **Step 11 - Divide by Area of Optics and Solid Angle of 1 Pixel **  
+>  
+> ---  
+>  
+> DN_step11(i,j) = DN_Step10(i,j) / (A*omega)
+
+>
+
+> **Step 12 - Divide by Spectral Transmission and QE **  
+>  
+> ---  
+>  
+> DN_step12(i,j) = DN_Step11(i,j) / S (f1,f2)
+
+>
+
+> S is the integral over wavelength of optics and filter transmissions and CCD
+QE (see R. West write-up).
+
+>
+
+> _Note : The tables of wavelength vs. transmissions and QE exist but the
+integrals have not been produced. Gary's planning tool code does the integrals
+on the fly._
+
+>
+
+> **Step 13 - Apply Calibration Fudge Factor **  
+>  
+> ---  
+>  
+> DN_step13(i,j) = DN_Step12(i,j) / C(f1,f2)
+
+>
+
+> C(f1,f2) corrects to absolute sensitivity from observations of stars or
+other objects whose intensity is independently calibrated. Should be close to
+unity.
+
+>
+
+> Step 13 produces an array of intensities averaged over the spectral
+bandpass.
+
+>
+
+> **Step 14 - Convert to I/F **  
+>  
+> ---  
+>  
+> DN_step14(i,j) = DN_Step13(i,j) / pi x F x D^2
+
+>
+
+> D is distance to the sun in AU.  
+See R. West write-up.
+
+>
+
+> Program outputs image in units of radiance or I/F.  
+  
+
+
+>
+
+> |
+
+>
+
+> **Step 15 - Multiply by Slope File **  
+>  
+> ---  
+>  
+> DN_step15(i,j) = DN_Step7(i,j) x S(i,j,g,f1,f2,T)
+
+>
+
+> See Radiometric Slope Files calibration reports, and also Appendix E for the
+Radiometric Slope File data.  
+_Notes :_  
+_a) Flat-field frames in all filter combinations were only taken in 1x1 Gain
+2._  
+b) _The slope files contain values in picoamp-msec/DN and thus are gain
+-dependent and are not normalized flat field frames_  
+c) _A few Gain 3 slope files were made (clear only) ._
+
+>
+
+> **Step 16 - Multiply by Ratio of Gains **  
+>  
+> ---  
+>  
+> DN_step16(i,j) = DN_Step15(i,j) x Gi/Gs
+
+>
+
+> See tables in System Gain calibration reports.  
+In order to use the Slope files S to correct all gain states, the result must
+be scaled by the ratio of the e/dn of the image over the e/dn of the slope
+file.
+
+>
+
+> output units are picoamp-msec
+
+>
+
+> **Step 17 - Divide By Exposure Time **  
+>  
+> ---  
+>  
+> DN_step17(i,j) = DN_Step16(i,j) / t(i)
+
+>
+
+> where t(i) = T - to(i)
+
+>
+
+> output units are picoamps
+
+>
+
+> T is commanded exposure time (from image labels) to(i) is shutter offset;
+varies almost linearly with sample number .
+
+>
+
+> Read to(i) from lookup tables for each camera and optics temperature;
+interpolate to actual optics temperature.
+
+>
+
+> Anomaly: bright band across image, not understood.
+
+>
+
+> _Note : The shutter offset files have been produced (see Appendix E). There
+is one for each camera at each of three optics temperatures:_
+
+>
+
+> SO.WACFM_PLUS25  
+SO.WACFM_PLUS5  
+SO.WACFM_MINUS10  
+SO.NACFM_PLUS25  
+SO.NACFM_PLUS5  
+SO.NACFM_MINUS10
+
+>
+
+> These are VICAR binary image files (1 line by 1024 R*4) samples.
+
+>
+
+> **Step 18 - Convert to Radiance Units or I/F **  
+>  
+> ---  
+>  
+> DN_step18(i,j) = DN_Step17(i,j) x R1(f1,f2)
+
+>
+
+> output units in nanowatts/cm2 /sr/nm
+
+>
+
+> or  
+DN_step18(i,j) = DN_Step17(i,j) x R2(f1,f2,D)
+
+>
+
+> output units in I/F or albedo' units
+
+>
+
+> R1 and R2 are filter-dependent conversion factors  
+D is distance to the sun in AU.  
+See R. West write-up.
+
+>
+
+> **Step 19 - Apply Calibration Fudge Factor **  
+>  
+> ---  
+>  
+> DN_step19(i,j) = DN_Step18(i,j) / C(f1,f2)
+
+>
+
+> C(f1,f2) corrects to absolute sensitivity from observations of stars or
+other objects whose intensity is independently calibrated. Should be close to
+unity.
+
+>
+
+> Step 19 produces an array of intensities averaged over the spectral
+bandpass.  
+>  
+> [![HOME](../images/home.gif)](../../index.html)
+
