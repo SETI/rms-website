@@ -13,23 +13,23 @@
       <div class = "row">
         
         <!-- main content area -->
-
         <div class = "col-md-10 col-md-push-2 col-sm-9 col-sm-push-3 col-xm-6">
+
           {% if page.tabs %}
+
             {% include tabs.html %}
+
           {% endif %}
 
-          <div class = "col-md-10">
-            {% if page.format == 'html' %}
+          {% if page.format == 'html' %}
 
-              {{ content }}
+            {{ content }}
 
-            {% else %}
+          {% else %}
 
-              {{ content | markdownify}}
+            {{ content | markdownify}}
 
-            {% endif %}
-        </div>
+          {% endif %}
 
         </div>
 
