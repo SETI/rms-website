@@ -20,28 +20,29 @@
           {% endif %}
 
           <div class = "col-md-10">
-            {% if page.format == 'html' %}
+              {% if page.format == 'html' %}
 
-              {{ content }}
+                {{ content }}
 
-            {% else %}
+              {% else %}
 
-              {{ content | markdownify}}
+                {{ content | markdownify}}
 
-            {% endif %}
-        </div>
+              {% endif %}
+          </div>
 
         </div>
 
         <!-- left side nav -->
         <div class = "col-md-2 col-md-pull-10 col-sm-3 col-sm-pull-9 col-xm-4 nav-container">
-        {% include nav.html %}
-      </div>
+          {% include nav.html %}
+        </div>
 
     </div>
 
     {% include footer.html %}
-
+  </div>
+  
   </body>
 
 </html>
