@@ -6,4 +6,5 @@ http://anitakhart.github.io/rings-node-style-guide/
 design mockups:
 http://anitakhart.github.io/rings-node-style-guide/mockups/
 
-
+dev deployment: 
+http://ringsnodewebsite.beforeamillionuniverses.com/
