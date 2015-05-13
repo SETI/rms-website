@@ -230,7 +230,7 @@ li.tab-pill {
 }
 
 li.tab-pill.active {
-  background: url(../assets/active-tab-bg.png) repeat-x;
+  background: url(assets/active-tab-bg.png) repeat-x;
   background-color: #ffffff;
   border: 1px solid #cccccc;
   box-shadow: none;
