@@ -1,0 +1,24 @@
+!       Standard star list for the Uranus Viewer
+!
+!The file format is
+!  star name
+!  right ascension (hours or hours/minutes/seconds, J2000)
+!  declination (degrees or degrees/minutes/seconds, J2000)
+!  (repeat)
+!
+!These are the stars used in the Voyager 2 PPS/UVS ring occultation
+!experiments on 1986-Jan-24.
+!
+sigma Sgr
+18.921168625
+-26.29639211
+!
+beta Per
+3.136059949
+40.95518812
+!
+!If you would like to add a star to this list or refine listed
+!coordinates, send email with the appropriate information to
+!Mark Showalter, mshowalter@seti.org.
+!
+!Last update: 28 January 1999

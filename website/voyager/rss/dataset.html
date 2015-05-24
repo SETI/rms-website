@@ -1,0 +1,263 @@
+<html>
+<head><title>Voyager RSS DATASET.CAT</title></head>
+
+<body
+bgcolor="#ffffff"
+>
+<center><h1>
+Voyager RSS DATASET.CAT
+</h1></center>
+Return to <a href="index.html">RSS data set page</a>.
+<hr>
+<pre>
+PDS_VERSION_ID                    = PDS3
+LABEL_REVISION_NOTE               = "M.R. SHOWALTER, 2003-12-04"
+RECORD_TYPE                       = STREAM
+
+OBJECT                            = DATA_SET
+  DATA_SET_ID                     = "VG1/VG2-SR/UR-RSS-4-OCC-V1.0"
+
+  OBJECT                          = DATA_SET_INFORMATION
+  DATA_SET_NAME                   = "VG1/VG2 SR/UR RSS RESAMPLED
+                                     RING OCCULTATION V1.0"
+
+  ARCHIVE_STATUS                  = IN_PEER_REVIEW
+  DATA_SET_COLLECTION_MEMBER_FLG  = Y
+  DATA_OBJECT_TYPE                = SERIES
+  START_TIME                      = 1980-11-01T00:00:00
+  STOP_TIME                       = 1986-02-01T00:00:00
+  DATA_SET_RELEASE_DATE           = 2003-12-31
+  PRODUCER_FULL_NAME              = "MARK R. SHOWALTER"
+  DETAILED_CATALOG_FLAG           = N
+
+  DATA_SET_TERSE_DESC             = "
+    This data set contains highly processed ring profiles of the rings
+    of Saturn (Voyager 1) and Uranus (Voyager 2) produced by
+    transmitting 3.6 and 13 cm wavelength coherent signals through the
+    rings toward Earth."
+
+  DATA_SET_DESC                   = "
+
+  Data Set Overview
+  =================
+    This data set contains radio occultation data obtained during the
+    Voyager 1 Saturn encounter and the Voyager 2 Uranus encounter.
+    Only highly processed ring occultation data is included.
+
+    Ring profiles are archived in a variety of formats, from the
+    source files as provided to the Rings Node to calibrated and
+    resampled optical depth profiles. Processing software, geometry
+    solutions and calibration models are also provided.
+
+
+  Parameters
+  ==========
+    Data files contain ring normal opacity and phase shift of the
+    X-band (3.6 cm) and S-band (13 cm) signals as they passed through
+    the ring plane on their transit from Voyager to Earth.
+
+    Some files contain the complex transmissivity of the ring, which
+    is related to ring opacity and phase shift as follows:
+
+    tau = normal opacity
+    phi = phase shift
+
+    T_norm = exp(-tau/(2*mu0)) = amplitude of the transmissivity
+
+    T_re = T_norm * cos(phi) = real component of the transmissivity
+
+    T_im = T_norm * sin(phi) = imaginary component of the
+                               transmissivity
+
+    Here mu0 is the cosine of the incidence angle.
+
+
+  Processing
+  ==========
+    These data files are already highly processed, as summarized by
+    [MAROUFETAL1986] for Saturn and [GRESHETAL1989] for Uranus.
+    Further processing involves conventional resampling and smoothing.
+
+
+  Data
+  ====
+    A variety of data files are included on this volume.
+
+
+    Source data (S_RINGS/SORCDATA and U_RINGS/SORCDATA directories)
+    ---------------------------------------------------------------
+      The data files as contributed to the Rings Node by several
+      investigators. These files are provided for documentation
+      purposes and are not otherwise supported.
+
+
+    Raw data (S_RINGS/RAWDATA and U_RINGS/RAWDATA directories)
+    ----------------------------------------------------------
+      These files contain essentially the same data as are found in
+      the SORCDATA directory, but in easier to use, PDS-compliant
+      formats. Note that these are not raw in the conventional
+      sense---they are in fact highly processed. However they serve as
+      the raw materials from which the Rings Node generated its
+      derived products.
+
+
+    Edited data (S_RINGS/EDITDATA and U_RINGS/EDITDATA directories)
+    ---------------------------------------------------------------
+      Edited versions of the raw data, which in this case entails
+      conversion from opacity and phase to complex transmissivity. The
+      latter is more appropriate for smoothing and resampling.
+
+
+    Derived profiles (S_RINGS/EASYDATA and S_RINGS/EASYDATA dirs)
+    -------------------------------------------------------------
+      Easy-to-use ASCII data files containing ring opacity, phase and
+      their uncertainty vs. radial location in a ring system. Files
+      are included at a variety of radial resolutions. Because the
+      rings of Uranus are narrow and inclined, there are separate
+      profiles for each Uranian ring.
+
+
+
+  Ancillary Data
+  ==============
+    Several different types of ancillary data files are provided to
+    describe the geometry and calibration during each occultation.
+
+
+    Geometry models (S_RINGS/GEOMETRY and S_RINGS/GEOMETRY dirs)
+    ------------------------------------------------------------
+      ASCII data files, containing a description of the ring intercept
+      geometry, indexed to locations in the corresponding edited data
+      files. Because the rings of Uranus are inclined, there are
+      separate geometry files for each ring of these planets.
+
+
+    Calibration models (S_RINGS/CALIB and S_RINGS/CALIB directories)
+    ----------------------------------------------------------------
+      ASCII data files, containing the modeled free space signal and
+      noise power, indexed to locations in the corresponding edited
+      data files.
+
+
+    Ephemeris files (SPICE directory)
+    ---------------------------------
+      Voyager ephemeris files for each of the planetary encounters, in
+      SPICE format. For more information about SPICE data and
+      toolkits, consult the PDS Navigation and Ancillary Information
+      (NAIF) Node at:
+                http://pds.jpl.nasa.gov/naif.html
+
+
+  Coordinate System
+  =================
+    All geometric quantities appearing in the labels are in J2000
+    coordinates. In this coordinate frame, the z-axis points
+    northward along the Earth's J2000 rotation axis and the x-axis
+    points toward the First Point of Aries. In some cases, B1950
+    coordinate values are also included.
+
+
+  Software
+  ========
+    Included on this disk is the source code for several libraries
+    of software tools designed to be used with this and other ring
+    occultation data sets.
+
+
+    Light Label Library (SOFTWARE/OAL directory)
+    --------------------------------------------
+      A toolkit supported by the PDS Central Node for reading and
+      writing PDS labels.
+
+
+    Object Access Library (SOFTWARE/OAL directory)
+    ----------------------------------------------
+      A toolkit supported by the PDS Central Node for reading and
+      writing data objects described by PDS labels. Built atop the
+      Light Label Library.
+
+
+    Profile Library (SOFTWARE/PROFILE directory)
+    --------------------------------------------
+      A toolkit supported by the PDS Rings Node for manipulating
+      one-dimensional profiles of planetary rings. Built atop the
+      Light Label Library and the Object Access Library.
+
+
+    Also included are the software tools to generate calibrated ring
+    profiles at arbitrary resolution. These are the tools used to
+    populate the EASYDATA subdirectories. These tools make full use of
+    the above libraries.
+
+
+  Media/Format
+  ============
+    This data set is archived on compact disc (CDROM) media.
+    Organization and formats are according to PDS and ISO 9660
+    level 1 standards.
+
+    Binary data files are provided in native formats for most
+    platforms. Also, note that the software tools provided on this
+    volume handle binary conversions on the fly if this is necessary."
+
+   CONFIDENCE_LEVEL_NOTE          = "
+
+  Confidence Level Overview
+  =========================
+
+    Models for the noise power in the data can be found in the
+    CALIB subdirectories. The ring profiles found in the EASYDATA
+    subdirectories include estimates of the 50% confidence interval on
+    opacity and phase.
+
+
+  Peer Review
+  ===========
+    Peer review of this data set is in progress.
+
+
+  Data Coverage and Quality
+  =========================
+
+    The RSS experiments provided complete coverage of the ring systems
+    of Saturn and Uranus. At Uranus, both the ingress and egress
+    occultations of each ring were observed.
+
+    This data set does not include information about the regions
+    between the known Uranian rings."
+
+  END_OBJECT                    = DATA_SET_INFORMATION
+
+  OBJECT                        = DATA_SET_TARGET
+    TARGET_NAME                 = "S RINGS"
+  END_OBJECT                    = DATA_SET_TARGET
+
+  OBJECT                        = DATA_SET_TARGET
+    TARGET_NAME                 = "U RINGS"
+  END_OBJECT                    = DATA_SET_TARGET
+
+  OBJECT                        = DATA_SET_HOST
+    INSTRUMENT_HOST_ID          = VG1
+    INSTRUMENT_ID               = RSSVG1SE
+  END_OBJECT                    = DATA_SET_HOST
+
+  OBJECT                        = DATA_SET_HOST
+    INSTRUMENT_HOST_ID          = VG2
+    INSTRUMENT_ID               = RSSVG2UD
+  END_OBJECT                    = DATA_SET_HOST
+
+  OBJECT                        = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID            = "GRESHETAL1989"
+  END_OBJECT                    = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                        = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID            = "MAROUFETAL1986"
+  END_OBJECT                    = DATA_SET_REFERENCE_INFORMATION
+
+END_OBJECT                      = DATA_SET
+END
+</pre>
+<hr>
+Return to <a href="index.html">RSS data set page</a>.
+</body>
+</html>

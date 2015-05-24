@@ -1,0 +1,25 @@
+Uranus Rings in False Color
+
+False-color view of nine rings of Uranus.
+
+This false-color view of the rings of Uranus was made from images
+taken by Voyager 2 on Jan. 21, 1986, from a distance of 4.17 million
+kilometers (2.59 million miles). All nine known rings are visible
+here; the somewhat fainter, pastel lines seen between them are
+contributed by the computer enhancement. Six 15-second narrow-angle
+images were used to extract color information from the extremely dark
+and faint rings. Two images each in the green, clear and violet
+filters were added together and averaged to find the proper color
+differences between the rings. The final image was made from these
+three color averages and represents an enhanced, false-color view. The
+image shows that the brightest, or epsilon, ring at top is neutral in
+color, with the fainter eight other rings showing color differences
+between them. Moving down, toward Uranus, we see the delta, gamma and
+eta rings in shades of blue and green; the beta and alpha rings in
+somewhat lighter tones; and then a final set of three, known simply as
+the 4, 5 and 6 rings, in faint off- white tones. Scientists will use
+this color information to try to understand the nature and origin of
+the ring material. The resolution of this image is approximately 4O km
+(25 mi). The Voyager project is managed for NASA by the Jet Propulsion
+Laboratory.
+

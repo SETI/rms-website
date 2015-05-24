@@ -1,0 +1,43 @@
+plot 2
+ lines 2 9999
+ read {x 1 vidicon 2 optics 3}
+ read filter $1
+ limits 605 640 0 1.2
+ expand 1.6
+ lweight 1
+ format i3 f3.1
+ box
+ format
+ xlabel Wavelength (nm)
+ ylabel Transmission
+ lweight 3
+ box 0 0 0 0
+ set maxval = 0
+ do i = 0, DIMEN(filter)-1 {
+   if (vidicon[$i] * optics[$i] > maxval) {
+     set maxval = vidicon[$i] * optics[$i]
+   }
+ }
+ set y = filter * optics * vidicon / maxval
+ connect x y
+ ltype 3
+ connect x filter
+ ltype 0
+ lweight 1
+ limits 0 1 0 1
+ relocate 0.5 1.01
+ putlabel 8 $2
+ ltype 0
+ lweight 3
+ relocate 0.03 0.94
+ draw 0.13 0.94
+ ltype 3
+ relocate 0.03 0.87
+ draw     0.13 0.87
+ ltype 0
+ lweight 1
+ relocate 0.15 0.94
+ putlabel 6 Filter + Instrument
+ relocate 0.15 0.87
+ putlabel 6 Filter alone
+ expand 1

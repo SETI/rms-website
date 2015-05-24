@@ -1,0 +1,72 @@
+---
+layout: base
+---
+
+# Martian Moon Tracker Help
+
+This form enables you to generate a Postscript file showing the east-west
+motion of the Martian satellites within a specified time period. The distance
+of each selected moon from the planet's axis is plotted in units of either
+arcsec or Martian radii. Positive values correspond to bodies on the "morning"
+(east) side of Mars and negative values by the "evening" (west) side. In the
+diagram, the limbs of Mars are indicated by a dark gray stripe down the
+middle. Time increases downward on the plot.
+
+The Tracker tool also allows you to download an ASCII table containing the
+numeric values that went into the diagram. The file contains a single header
+line followed by the numbers. Columns are as follows:
+
+Modified Julian Date (UTC)  
+Year  
+Month  
+Day  
+Hour  
+Minute  
+Projected equatorial radius of planet (arcsec)  
+Distance of first moon from planet's axis (arcsec)  
+Distance of second moon from planet's axis (arcsec)  
+etc.
+
+## Change History
+
+**2.0** (November 9, 1999): Original Martian Moon Tracker on line. (The version number was chosen for consistency with other tools.)   
+**2.1** (December 1, 2009): Updated the default ephemerides. To reduce confusion, we have removed the choice about what ephemeris to use.   
+**2.5** (January 23, 2013): Renumbered for consistency across all the Moon Tracker tools. Ephemeris updates. 
+
+## Time Limits
+
+The start and stop times (UTC) of the plot can be entered in a variety of
+formats. For example, the following all parse to 0:01:02 UTC on July 4, 1976:
+
+  * `1976-JUL-04 00:01:02.00`
+  * `July 4, 1976 12:01:02 am`
+  * `12:01:02 am July 4, 1976`
+  * `1976-07-04T00:01:02Z` (_PDS format_)
+  * `MJD 42963.00071759259`
+  * `JD 2442963.50071759259`
+If you want the gory details of how times are interpreted, click
+[here](time_formats.html).
+
+**Interval**: Enter the time interval to be used for the tabulation as a number in the box, and select the time unit from the choices provided. Start times and intervals are rounded to the nearest minute. 
+
+## Plot Options
+
+**Scale**: Enter the numeric range and units of the horizontal axis. The value you enter is actually half the width of the diagram; for example, if you enter 10 Martian radii, then the axis will run from -10 to 10. Zero always falls at the middle of the plot. 
+
+**Title**: Enter a title for the plot in this box. It will appear centered above the diagram. 
+
+## Moon Selection
+
+Click on the box to the left of each moon that you wish to include in the
+diagram and in the tabulation. By default, both Phobos and Deimos are
+selected.
+
+* * *
+
+[Martian Moon Tracker Form](tracker2_mar.html) | [Rings Node
+Tools](index.html) | [Rings Node Home](/)
+
+Last updated 23 January 2013.
+
+[Mark Showalter](/showalter)
+

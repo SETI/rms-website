@@ -1,0 +1,77 @@
+
+                         WORKSHOP ANNOUNCEMENT
+
+We are pleased to announce a workshop to discuss observing opportunities
+during the upcoming passages of the Earth and Sun through Saturn's ring
+plane.  The meeting will take place Thursday and Friday, May 26-27, 1994
+at the University of Arizona in Tucson.  It is sponsored jointly by the
+Planetary Data System Rings Node and the Lunar and Planetary Laboratory
+of the University of Arizona.  A preliminary agenda follows at the end
+of this message. 
+
+We have reserved a block of rooms at the Plaza Hotel 602-327-7341 at $49
+(+tax) per room for May 25-27.  To get this reduced rate, indicate that
+you are a participant in the "Saturn Workshop" when you make your
+reservation.  Reservations must be made before May 11.  If you have any
+further questions about local arrangements, contact Steve Larson
+(slarson@comet.lpl.arizona.edu; 602-621-4973). 
+
+We plan to set up an "ftp" site at the PDS Rings Node for further 
+information about the workshop and about Saturn observing opportunities.
+We will inform you by email when this is available.  If you have
+further questions about this facility or about the workshop agenda,
+contact Mark Showalter (showalter@ringside.arc.nasa.gov; 415-604-3382). 
+
+Please pass this announcement on to any of your colleagues who might 
+also be interested.  We look forward seeing you in Tucson.
+
+Mark Showalter
+Steve Larson
+Phil Nicholson
+
+------------------------------------------------------------------------
+
+Saturn Ring Plane Crossing Workshop
+May 26-27, 1994
+Lunar and Planetary Laboratory
+Rm. 308, Gerard P. Kuiper Space Science Bldg.
+University of Arizona
+Tucson, Arizona
+
+                        AGENDA
+
+Thursday May 26
+         9:00   Welcome, logistics
+         9:15   Circumstances of 1995-96 Ring Plane Crossing
+                        Ring
+                        Illumination
+                        Satellite ephemerides
+        10:00   Information to be gained from RPX
+                        Bright rings
+                        Faint rings
+                        Bright satellites
+                        Faint satellites
+        11:30   Discussion
+        12:30   Lunch
+         2:00   Review of information from previous RPXs
+                        Bright rings
+                        Faint rings
+                        Bright satellites
+                        Faint satellites
+         4:00   Discussion
+         5:00   Adjourn
+
+Friday May 27
+        8:30    Plans
+                        CCD imaging
+                        Coronagraphic imaging
+                        Near-IR imaging
+                        Classical photometry
+                        Spectroscopy
+                        Standard stars/filters
+        12:30   Lunch
+         2:00   Role of PDS Rings Node
+         3:00   Coordination
+         4:00   Discussion
+         5-6:00 Adjourn
+

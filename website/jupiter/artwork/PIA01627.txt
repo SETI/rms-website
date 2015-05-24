@@ -1,0 +1,93 @@
+Jupiter's Inner Satellites and Ring Components
+
+Cut-away View of Jupiter's Inner Satellites and Ring Components
+
+This schematic cut-away view of the components of Jupiter's ring
+system shows the geometry of the rings in relation to Jupiter and to
+the small inner satellites, which are the source of the dust which
+forms the rings.
+
+<P>
+
+<CENTER>
+
+<A HREF="./R08_satorb_full.jpg"><IMG SRC="./R08_satorb_thumb.jpg"></A>
+
+<P>
+
+<B>The Formation of Jupiter's Ring System</B>
+
+</CENTER>
+
+<P>
+
+The innermost and thickest ring, shown in gray shading, is the halo
+that ends at the main ring. The thin, narrow main ring, shown with red
+shading, is bounded by the 16- kilometer-wide (10-miles) satellite
+Adrastea and shows a marked decrease in brightness near the orbit of
+Jupiter's innermost moon, Metis. It is composed of fine particles
+knocked off Adrastea and Metis. Although the orbits of Adrastea and
+Metis are about 1,000 kilometers (about 600 miles) apart, that
+separation is not depicted in this drawing. Impacts by small
+meteoroids (fragments of asteroids and comets) into these small,
+low-gravity satellites feed material into the rings. Thebe and
+Amalthea, the next two satellites in increasing distance from Jupiter,
+supply dust which forms the thicker, disk-like "gossamer" rings. The
+gossamer rings, depicted with yellow and green shading, are thicker
+because the source satellites orbit Jupiter on inclined paths
+
+<P>
+
+<CENTER>
+
+<A HREF="./R09_satinc_full.jpg"><IMG SRC="./R09_satinc_thumb.jpg"></A>
+
+<P>
+
+<B>Satellite Interactions with Jupiter's Ring System</B>
+
+</CENTER>
+
+<P>
+
+These small satellites all orbit closer to Jupiter than the four
+largest Galilean satellites, Io, Europa, Ganymede and Callisto, which
+were discovered nearly 400 years ago. The orbital distances of the
+moons are drawn relative to the size of Jupiter.
+
+<CENTER>
+
+<TABLE>
+  <TR>
+     <TH COLSPAN=2><B>Jupiter's Main Ring and Inner Satellites</B></TH>
+  </TR>
+  <TR>
+    <TD>Side view of system:</TD>
+    <TD>Overhead view of system:</TD>
+  </TR>
+  <TR>
+    <TD><A HREF="./R01_jupsats1_full.jpg">
+        <IMG SRC="./R01_jupsats1_thumb.jpg"></A></TD>
+    <TD><A HREF="./R01_jupsats2_full.jpg">
+        <IMG SRC="./R01_jupsats2_thumb.jpg"></A></TD>
+  </TR>
+</TABLE>
+
+</CENTER>
+
+<P>
+
+The Jupiter image was created from a map based on data obtained by the
+Hubble Space Telescope.
+
+<P>
+
+<DT><B>Image Note:</B>
+<dd>See also image <A HREF="../galileo/PIA01623.html">Jupiter's Gossamer Ring Structure</A> and
+<A HREF="./PIA01628.html">Jupiter's Main and Gossamer Ring Structures</A>
+</DL>
+
+<BR>
+<A HREF="http://www.jpl.nasa.gov/galileo/">
+Galileo Home Page</A>
+

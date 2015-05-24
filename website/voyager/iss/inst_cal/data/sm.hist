@@ -1,0 +1,40 @@
+macro read plot.mac
+data VG1_WA_CH4JS.TAB
+device sm
+device x11
+plot 3 "VG1 WA CH4_JS"
+quit
+macro read PLOT_CH4JS.MAC
+data VG1_WA_CH4JS.TAB
+device x11
+plot 3 "VG1 WA CH4_JS"
+erase
+plot 4 "VG1 WA CH4_JS"
+device postlandfile VG1_WA_CH4JS.ps
+plot 4 "VG1 WA CH4_JS"
+hardcopy
+data VG2_WA_CH4JS.TAB
+device x11
+erase
+plot 4 "VG2 WA CH4_JS"
+device postlandfile VG2_WA_CH4JS.ps
+plot 4 "VG2 WA CH4_JS"
+hardcopy
+data VG2_WA_CH4u.TAB
+device x11
+erase
+plot 4 "VG2 WA CH4_U"
+macro read plot_ch4u.mac
+erase
+plot 4 "VG2 WA CH4_U"
+device postlandfile VG2_WA_CH4u.ps
+plot 4 "VG2 WA CH4_U"
+hardcopy
+data VG1_WA_CH4u.TAB
+device x11
+erase
+plot 4 "VG1 WA CH4_U"
+device postlandfile VG1_WA_CH4u.ps
+plot 4 "VG1 WA CH4_U"
+hardcopy
+quit

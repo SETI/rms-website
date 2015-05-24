@@ -1,0 +1,21 @@
+Uranus Ring System
+
+View of the rings while in the shadow of Uranus.
+
+This dramatic Voyager 2 picture reveals a continuous
+distribution of small particles throughout the Uranus ring system Voyager
+took this image while in the shadow of Uranus, at a distance of 236,000
+kilometers (142,000 miles and a resolution of about 33 km (20 ml). This
+unique geometry -- the highest <A HREF="/glossary.html#phase_angle">phase angle</A> at which Voyager imaged the
+rings -- allows us to see lanes of fine dust particles not visible from
+other viewing angles. All the previously known rings are visible here
+however, some of the brighest feature in the image are bright dust lanes
+not previously seen. The combination of this unique geometry and a long,
+96 second exposure allowed this spectacular observation, acquired through
+the clear filter of Voyager's wide-angle camera The long exposure
+produced a noticeable, non-uniform smear as well as streaks due to
+trailed stars. The Voyager project is managed for NASA by the Jet
+Propulsion Laboratory.
+
+<DT><B>Image Note:</B> <dd><A HREF="/glossary.html#fds">FDS</A> 26852.19
+ </DL>

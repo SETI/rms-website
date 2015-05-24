@@ -1,0 +1,17 @@
+Neptune's Rings
+
+Three arcs of Neptune's outermost ring.
+
+Two of Neptune's narrow rings are visible as arches above the crescent
+planet. The inner ring, LeVerrier, is uniform but the outer ring, Adams,
+contains three visible arcs.  The arcs are designated, from bottom to
+top, Liberte, Egalite and Fraternite.  A smaller arc, Courage, leads the
+other three but falls outside this field of view.  Voyager 2 acquired
+this image as it encountered Neptune in August of 1989. 
+
+<P>
+
+<DT><B>Image Note:</B> <dd><A HREF="/glossary.html#fds">FDS</A> 11412.51
+<P>
+<DT><B>Related image:</B> <dd>
+<A HREF="http://photojournal.jpl.nasa.gov/cgi-bin/PIAGenCatalogPage.pl?PIA01493">NASA's Planetary Photojournal: Image No. PIA01493</A>

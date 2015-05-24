@@ -1,0 +1,19 @@
+!       Standard star list for the Jupiter Viewer
+!
+!The file format is
+!  star name
+!  right ascension (hours or hours/minutes/seconds, J2000)
+!  declination (degrees or degrees/minutes/seconds, J2000)
+!  (repeat)
+!
+!This star is occulted by Jupiter on 1999-Oct-10
+!
+SAO 92746
+02 00 22.732
+10 37 47.71
+!
+!If you would like to add a star to this list or refine listed
+!coordinates, send email with the appropriate information to
+!Mark Showalter, mshowalter@seti.org.
+!
+!Last update: 8 February 1999

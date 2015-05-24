@@ -1,0 +1,143 @@
+---
+layout: base
+---
+
+![](c3r001.edr.jpg)
+
+#  Galileo NIMS Spectral Image C3R001
+
+##  Download the Image Cube:
+
+  * [Raw (EDR) data, PDS format](c3r001.edr) (256000 bytes) 
+  * [Calibrated (I/F units), PDS format](c3r001ti.qub) (1547264 bytes) 
+  * [Calibrated (radiance units), PDS format](c3r001tr.qub) (2058240 bytes) 
+  * Diagram, JPEG format: [256 x 256](c3r001.edr.jpg), (8202 bytes) 
+
+## PDS Label Information:
+
+** /* Data description: general */ **  
+---  
+** DATA_SET_ID : ** |  'GO-J-NIMS-4-TUBE-V1.0'   
+** SPACECRAFT_NAME : ** |  GALILEO_ORBITER   
+** MISSION_PHASE_NAME : ** |  CALLISTO_3_ENCOUNTER   
+** INSTRUMENT_NAME : ** |  'NEAR INFRARED MAPPING SPECTROMETER'   
+** INSTRUMENT_ID : ** |  NIMS   
+** ^INSTRUMENT_DESCRIPTION : ** |  "NIMSINST.TXT"   
+** TARGET_NAME : ** |  J_RINGS   
+** START_TIME : ** |  1996-11-09T04:19:05Z   
+** STOP_TIME : ** |  1996-11-09T04:28:01Z   
+** NATIVE_START_TIME : ** |  "3689745.00.0"   
+** NATIVE_STOP_TIME : ** |  "3689753.75"   
+** OBSERVATION_NAME : ** |  'C3RNMRING_01A'   
+** NOTE : ** |  "Study composition and particle sizes of Jupiter's main ring //   
+** PRODUCT_ID : ** |  "C3RNMRING_01A_MSY03.VIOF"   
+** PRODUCT_CREATION_DATE : ** |  1998-06-03   
+** IMAGE_ID : ** |  NULL   
+** INCIDENCE_ANGLE : ** |  91.78   
+** EMISSION_ANGLE : ** |  89.11   
+** PHASE_ANGLE : ** |  178.82   
+** SOLAR_AZIMUTH : ** |  203.37   
+** SUB_SPACECRAFT_AZIMUTH : ** |  359.65   
+** START_SUB_SPACECRAFT_LATITUDE : ** |  0.48   
+** START_SUB_SPACECRAFT_LONGITUDE : ** |  57.19   
+** STOP_SUB_SPACECRAFT_LATITUDE : ** |  0.48   
+** STOP_SUB_SPACECRAFT_LONGITUDE : ** |  62.50   
+** START_SUB_SOLAR_LATITUDE : ** |  -1.26   
+** START_SUB_SOLAR_LONGITUDE : ** |  236.25   
+** STOP_SUB_SOLAR_LATITUDE : ** |  -1.26   
+** STOP_SUB_SOLAR_LONGITUDE : ** |  241.63   
+** MINIMUM_SLANT_DISTANCE : ** |  2256410.00   
+** MAXIMUM_SLANT_DISTANCE : ** |  2261960.00   
+** SCAN_RATE_TOLERANCE : ** |  0.230769   
+** MEAN_SCAN_RATE : ** |  1.217110   
+** /* The unit of SCAN RATE TOLERANCE is mrad/s. */ **  
+** /* The unit of MEAN SCAN RATE is the Nyquist scanning rate, which depends on */ **  
+** /* the instrument mode: it is one-half FOV (0.5 mrad) per grating cycle. */ **  
+** MIN_SPACECRAFT_SOLAR_DISTANCE : ** |  7.73648e+08   
+** MAX_SPACECRAFT_SOLAR_DISTANCE : ** |  7.73651e+08   
+** MINIMUM_CENTRAL_BODY_DISTANCE : ** |  2259970.00   
+** MAXIMUM_CENTRAL_BODY_DISTANCE : ** |  2263640.00   
+** /* Data description: instrument status */ **  
+** INSTRUMENT_MODE_ID : ** |  FULL_MAP   
+** GAIN_MODE_ID : ** |  4   
+** CHOPPER_MODE_ID : ** |  REFERENCE   
+** START_GRATING_POSITION : ** |  00   
+** OFFSET_GRATING_POSITION : ** |  04   
+** GRATING_POSITION_INCREMENT : ** |  02   
+** GRATING_POSITIONS : ** |  12   
+** MEAN_FOCAL_PLANE_TEMPERATURE : ** |  65.00   
+** MEAN_RAD_SHIELD_TEMPERATURE : ** |  0.00   
+** MEAN_TELESCOPE_TEMPERATURE : ** |  0.00   
+** MEAN_GRATING_TEMPERATURE : ** |  130.00   
+** MEAN_CHOPPER_TEMPERATURE : ** |  0.00   
+** MEAN_ELECTRONICS_TEMPERATURE : ** |  0.00   
+** MEAN_DARK_DATA_NUMBER : ** |  (27.26,26.90,25.79,25.75,24.43,21.88,   
+** /* The "mean dark data numbers" are the DN value of dark sky for each of the */ **  
+** /* 17 NIMS detectors, averaged over the mirror-position-specific values used */ **  
+** /* in the computation of radiance. The original dark values were obtained */ **  
+** /* from either off-limb portions of the observation or special "heaven dark" */ **  
+** /* observations for an encounter. */ **  
+** GROUP : ** |  BAND_BIN   
+** /* Spectral axis description */ **  
+** BAND_BIN_CENTER : ** |  (0.7035,0.7296,0.7556,0.7817,0.8077,0.8337,   
+** BAND_BIN_UNIT : ** |  MICROMETER   
+** BAND_BIN_ORIGINAL_BAND : ** |  (1,3,5,7,9,11,13,15,17,19,21,23,25,   
+** BAND_BIN_GRATING_POSITION : ** |  (0,2,4,6,8,10,0,2,4,6,8,10,0,2,   
+** BAND_BIN_DETECTOR : ** |  (1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,   
+** BAND_BIN_SOLAR_FLUX : ** |  (5563.8799,5170.3101,4808.8501,4511.5898,   
+** BAND_BIN_SENSITIVITY : ** |  (0.7858,1.0433,1.2487,1.1637,1.2213,   
+** /* "Band Bin Sensitivity" is the Sensitivity for each band, in units of */ **  
+** /* DN/radiance_unit (see CORE UNIT). These values are functions of */ **  
+** /* reported focal plane assembly temperature during the observation and */ **  
+** /* of ground and flight calibration data. They may be used to construct */ **  
+** /* "idealized data numbers" (DNs which would have been measured by an */ **  
+** /* anomaly-free instrument) by the formula: */ **  
+** /* DN = dark_value + sensitivity * radiance, */ **  
+** /* where 'dark_value' is approximated by the MEAN_DARK_DATA_NUMBER array. */ **  
+** /* Note that actually measured raw DNs are not obtainable in this way, */ **  
+** /* due to corrections for instrument anomalies (see the referenced */ **  
+** /* INSTRUMENT_DESCRIPTION for details) and possible resampling of the */ **  
+** /* data. */ **  
+** END_GROUP : ** |  BAND_BIN   
+** GROUP : ** |  IMAGE_MAP_PROJECTION   
+** /* Projection description */ **  
+** MAP_PROJECTION_TYPE : ** |  POINT_PERSPECTIVE   
+** MAP_SCALE : ** |  565.453   
+** MAP_RESOLUTION : ** |  2.207   
+** SUB_SPACECRAFT_LATITUDE : ** |  0.48   
+** SUB_SPACECRAFT_LONGITUDE : ** |  59.85   
+** LINE_SUB_SPACECRAFT_OFFSET : ** |  -21.46   
+** SAMPLE_SUB_SPACECRAFT_OFFSET : ** |  150.41   
+** TARGET_CENTER_DISTANCE : ** |  2261814.0   
+** LINE_OPTICAL_AXIS_OFFSET : ** |  -22.83   
+** SAMPLE_OPTICAL_AXIS_OFFSET : ** |  -37.65   
+** FOCAL_LENGTH : ** |  800.0   
+** FOCAL_PLANE_SCALE : ** |  5.000   
+** OFFSET_DIRECTION : ** |  TO_ORIGIN   
+** MINIMUM_LATITUDE : ** |  -9.17   
+** MAXIMUM_LATITUDE : ** |  7.95   
+** MINIMUM_LONGITUDE : ** |  143.92   
+** MAXIMUM_LONGITUDE : ** |  150.34   
+** EASTERNMOST_LONGITUDE : ** |  143.92   
+** WESTERNMOST_LONGITUDE : ** |  150.34   
+** COORDINATE_SYSTEM_TYPE : ** |  "BODY-FIXED ROTATING"   
+** COORDINATE_SYSTEM_NAME : ** |  PLANETOGRAPHIC   
+** POSITIVE_LONGITUDE_DIRECTION : ** |  WEST   
+** A_AXIS_RADIUS : ** |  71492.00   
+** B_AXIS_RADIUS : ** |  71492.00   
+** C_AXIS_RADIUS : ** |  66854.00   
+** MAP_PROJECTION_ROTATION : ** |  180.42   
+** SAMPLE_FIRST_PIXEL : ** |  1   
+** SAMPLE_LAST_PIXEL : ** |  77   
+** LINE_FIRST_PIXEL : ** |  1   
+** LINE_LAST_PIXEL : ** |  45   
+** END_GROUP : ** |  IMAGE_MAP_PROJECTION   
+** END_OBJECT : ** |  QUBE   
+  
+* * *
+
+[NIMS C3 Images](/galileo/nims_data/c3) | [JSDAP](/galileo/jsdap.html) |
+[Rings Node Home](/)
+
+Last update: November 25, 1998
+

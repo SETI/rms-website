@@ -1,0 +1,345 @@
+<html>
+<head><title>Voyager UVS DATASET.CAT</title></head>
+
+<body
+bgcolor="#ffffff"
+>
+<center><h1>
+Voyager UVS DATASET.CAT
+</h1></center>
+Return to <a href="index.html">UVS data set page</a>.
+<hr>
+<pre>
+PDS_VERSION_ID                   = PDS3
+LABEL_REVISION_NOTE              = "M.R. SHOWALTER, 2003-12-05"
+RECORD_TYPE                      = STREAM
+
+OBJECT                           = DATA_SET
+  DATA_SET_ID                    = "VG1/VG2-SR/UR/NR-UVS-2/4-OCC-V1.0"
+  OBJECT                         = DATA_SET_INFORMATION
+  DATA_SET_NAME                  =
+         "VG1/VG2 SR/UR/NR UVS EDITED/RESAMPLED RING OCCULTATION V1.0"
+
+  CITATION_DESC                  = "Showalter, M.R., P.D. Nicholson,
+A.L. Broadfoot, W.T. Forrester, and J.B. Holberg, VG1/VG2 SR/UR/NR
+UVS EDITED/RESAMPLED RING OCCULTATION V1.0, VG_2802, NASA Planetary
+Data System, 2004."
+
+  ARCHIVE_STATUS                 = IN_PEER_REVIEW
+  DATA_SET_COLLECTION_MEMBER_FLG = Y
+  DATA_OBJECT_TYPE               = SERIES
+  START_TIME                     = 1980-08-23T00:00:00
+  STOP_TIME                      = 1989-10-03T00:00:00
+  DATA_SET_RELEASE_DATE          = 2003-12-31
+  PRODUCER_FULL_NAME             = "MARK R. SHOWALTER"
+  DETAILED_CATALOG_FLAG          = N
+
+  DATA_SET_TERSE_DESC            = "
+This data set contains stellar occultation data from the Voyager
+Ultraviolet Spectrometer. It includes ring profiles from Saturn,
+Uranus and Neptune at several levels of processing, plus geometry and
+calibration files, software and documentation."
+
+  DATA_SET_DESC                  = "
+
+  Data Set Overview
+  =================
+    This data set contains stellar occultation data obtained by the
+    Voyager Ultraviolet Spectrometer (UVS). It includes ring
+    occultation profiles from Saturn, Uranus and Neptune. It does not
+    include other types of data obtained by the Voyager UVS.
+
+    The specific ring occultation experiments carried out by UVS
+    are:
+
+    -----------------------------------------------------------
+    Planet   Star       Direction  Vgr Comments
+    -----------------------------------------------------------
+    Saturn   iota Her   egress      1  Inner C Ring only
+    Saturn   delta Sco  ingress     2  Inner C Ring only
+    Saturn   delta Sco  egress      2  Entire ring system
+    Uranus   sigma Sgr  both        2  Delta, Lambda and
+                                       Epsilon rings only
+    Uranus   beta Per   both        2  All rings
+    Neptune  sigma Sgr  ingress     2  All rings
+    -----------------------------------------------------------
+
+    Ring profiles are archived in a variety of formats, from raw data
+    to calibrated and resampled optical depth profiles. Processing
+    software, geometry solutions and calibration models are also
+    provided.
+
+
+  Parameters
+  ==========
+    Raw data files contain a time series of spectra, where each
+    spectrum consists of 126 wavelength samples. UVS counts are
+    proportional to the number of photons received, with roughly 2.5
+    UVS counts per photon. Samples are time-tagged by Voyager's
+    internal clock, the Flight Data System (FDS) count. Sampling
+    intervals are 0.32 sec in occultation mode.
+
+
+  Processing
+  ==========
+    Data are archived at a variety of levels of processing. The fully
+    processed, resampled and calibrated ring profiles have been
+    generated as follows:
+
+    (1) Raw data files are edited to flag missing and invalid data and
+    are padded as necessary to yield a continues, uniformly-spaced
+    time series of data.
+
+    (2) To improve signal-to-noise ratio, a selected range of
+    wavelengths is summed to yield a single value.
+
+    (3) A geometry model is used to match up each raw sample in the
+    edited data file with the corresponding intercept point in the
+    ring plane. The GEOMETRY directory contains these files; in some
+    cases a geometry file comes in several versions to record the
+    differing geometry solutions that various investigators have
+    obtained.
+
+    (4) A calibration model is used to determine the number of
+    background photons and the number of stellar photons corresponding
+    to a given sample. The CALIB directory contains these files. As
+    with geometry, multiple calibration models are provided for many
+    rings.
+
+    (5) Using the geometry model, the time-series of raw samples is
+    converted to a uniformly-spaced series of radial samples, in which
+    each new radial sample is calculated via a weighted average of the
+    relevant raw samples. Invalid and missing samples are
+    zero-weighted at this step.
+
+    (6) Using the weighting function described above and the known
+    noise properties of the raw data, the uncertainty in each
+    resampled value is calculated.
+
+    (7) Resampled photon count values are converted to ring opacity
+    tau using the calibration model, via the following formula:
+
+    measured_counts = background_counts + stellar_counts*exp(-tau/mu)
+
+    where mu is the cosine of the emission angle (listed in the labels
+    of the geometry files).
+
+    (8) By adding or subtracting the derived uncertainty from the
+    measured count value and then solving the formula above for tau,
+    the confidence interval on the ring opacity is derived.
+
+
+  Data
+  ====
+    A variety of data files are included on this volume.
+
+
+    Source data (SORCDATA directory)
+    --------------------------------
+      The (typically) binary data files as contributed to the Rings
+      Node by several investigators. These files are provided for
+      documentation purposes and are not otherwise supported.
+
+
+    Raw data (RAWDATA directory)
+    ----------------------------
+      These files contain essentially the same data as are found in
+      the SORCDATA directory, but with time tags corrected.
+
+
+    Edited data (EDITDATA directory)
+    --------------------------------
+      Edited versions of the raw data, padded with empty records to
+      represent continuous, uniformly-spaced time-series of UVS
+      spectra and spectral sums. Invalid and missing data samples are
+      flagged. These are the easiest binary files to use and are
+      recommended for most purposes.
+
+
+    Derived profiles (EASYDATA directory)
+    -------------------------------------
+      Easy-to-use ASCII data files containing ring opacity and its
+      uncertainty vs. radial location in a ring system. Files are
+      included at a variety of radial resolutions: 0.2, 0.5, 1, 2, 5,
+      10, 20 and 50 km per sample. Because the rings of Uranus are
+      narrow and inclined, there are separate profiles for each
+      Uranian ring.
+
+      Also provided are calibrated ring profiles that have not been
+      radially resampled. Instead, they are subsampled at integer
+      multiples of the original spacing.
+
+
+  Ancillary Data
+  ==============
+    Many different types of ancillary data files are provided to
+    document the PPS experiments and to describe the geometry and
+    calibration during each occultation.
+
+
+    Geometry models (GEOMETRY directory)
+    ------------------------------------
+      ASCII data files, containing a description of the ring intercept
+      geometry at times matching the data records in each
+      corresponding edited data file. Because the rings of Uranus and
+      Neptune are inclined, there are separate geometry files for each
+      ring of these planets.
+
+
+    Trajectory models (TRAJECT directory)
+    --------------------------------------
+      ASCII data files, containing a position and velocity of Voyager
+      relative to the center of the planet at times matching the data
+      records in each corresponding edited data file.
+
+
+    Calibration models (CALIB directory)
+    ------------------------------------
+      ASCII data files, containing the modeled stellar and background
+      photon count rates at times matching the data records in each
+      corresponding edited data file.
+
+
+    Noise models (NOISDATA directory)
+    ---------------------------------
+      Edited, binary data files in which the known rings of Uranus and
+      Neptune have been removed. These are used for fitting some
+      calibration models. Their formats are identical to the
+      corresponding edited data files.
+
+
+    Support images (IMAGES directory)
+    ---------------------------------
+      Voyager support images obtained before, during and after the
+      ring occultations.
+
+
+    Ephemeris files (SPICE directory)
+    ---------------------------------
+      Voyager ephemeris files for each of the planetary encounters, in
+      SPICE format. For more information about SPICE data and
+      toolkits, consult the PDS Navigation and Ancillary Information
+      (NAIF) Node at:
+                http://pds.jpl.nasa.gov/naif.html
+
+
+  Coordinate System
+  =================
+    All geometric quantities appearing in the labels are in J2000
+    coordinates. In this coordinate frame, the z-axis points
+    northward along the Earth's J2000 rotation axis and the x-axis
+    points toward the First Point of Aries. In some cases, B1950
+    coordinate values are also included.
+
+
+  Software
+  ========
+    Included on this disk is the source code for several libraries
+    of software tools designed to be used with this and other ring
+    occultation data sets.
+
+
+    Light Label Library (SOFTWARE/OAL directory)
+    --------------------------------------------
+      A toolkit supported by the PDS Central Node for reading and
+      writing PDS labels.
+
+
+    Object Access Library (SOFTWARE/OAL directory)
+    ----------------------------------------------
+      A toolkit supported by the PDS Central Node for reading and
+      writing data objects described by PDS labels. Built atop the
+      Light Label Library.
+
+
+    Profile Library (SOFTWARE/PROFILE directory)
+    --------------------------------------------
+      A toolkit supported by the PDS Rings Node for manipulating
+      one-dimensional profiles of planetary rings. Built atop the
+      Light Label Library and the Object Access Library.
+
+
+    Also included are the software tools to generate calibrated ring
+    profiles at arbitrary resolution. These are the tools used to
+    populate the EASYDATA subdirectories. These tools make full use of
+    the above libraries.
+
+
+  Media/Format
+  ============
+    This data set is archived on compact disc (CDROM) media.
+    Organization and formats are according to PDS and ISO 9660
+    level 1 standards.
+
+    Binary data files are provided in native formats for most
+    platforms. Also, note that the software tools provided on this
+    volume handle binary conversions on the fly if this is necessary."
+
+   CONFIDENCE_LEVEL_NOTE         = "
+
+  Confidence Level Overview
+  =========================
+
+    Strong variations in overall photon count are correlated with
+    instrument pointing changes, because the UVS field of view is
+    narrow relative to Voyager's 'limit cycle' motion. As a result,
+    sensitivity varies substantially within each single data set. The
+    calibration models show these variation. Nevertheless, subtle
+    features in the data that correlate with these sensitivity
+    variations should be regarded with some skepticism.
+
+    The data from the Uranus beta Per occultation were dominated by
+    the charged particle background at Uranus. As a result, the rings
+    are not detectable.
+
+
+  Peer Review
+  ===========
+    Peer review of this data set is in progress.
+
+
+  Data Coverage and Quality
+  =========================
+
+    The UVS experiments provided complete coverage of the ring systems
+    of Saturn and Neptune. Only the outer part of the Uranian ring
+    system is covered at reasonable sensitivity, including the Delta
+    and Epsilon Rings.
+
+    A few small, isolated gaps are present. In the edited data files,
+    missing data samples have been indicated via a MISSING_CONSTANT
+    flag. Unreliable samples have been replaced by an
+    INVALID_CONSTANT flag. Unedited versions of the same data are
+    also provided."
+
+  END_OBJECT                     = DATA_SET_INFORMATION
+
+  OBJECT                         = DATA_SET_TARGET
+    TARGET_NAME                  = "S RINGS"
+  END_OBJECT                     = DATA_SET_TARGET
+
+  OBJECT                         = DATA_SET_TARGET
+    TARGET_NAME                  = "U RINGS"
+  END_OBJECT                     = DATA_SET_TARGET
+
+  OBJECT                         = DATA_SET_TARGET
+    TARGET_NAME                  = "N RINGS"
+  END_OBJECT                     = DATA_SET_TARGET
+
+  OBJECT                         = DATA_SET_HOST
+    INSTRUMENT_HOST_ID           = VG2
+    INSTRUMENT_ID                = UVS
+  END_OBJECT                     = DATA_SET_HOST
+
+  OBJECT                         = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID             = "N/A"
+  END_OBJECT                     = DATA_SET_REFERENCE_INFORMATION
+
+END_OBJECT                       = DATA_SET
+END
+</pre>
+<hr>
+Return to <a href="index.html">UVS data set page</a>.
+</body>
+</html>
+

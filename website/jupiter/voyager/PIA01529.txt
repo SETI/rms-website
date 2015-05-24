@@ -1,0 +1,20 @@
+Jupiter Ring System
+
+Long exposure color composite image of the ring system.
+
+Jupiter's faint ring system is shown in this color composite as two
+light orange lines protruding from the left toward Jupiter's limb.
+This picture was taken in Jupiter's shadow through orange and violet
+filters.  The colorful images of Jupiter's bright limb are evidence of
+the spacecraft motion during these long exposures.  The Voyager 2
+spacecraft was at a range of 1,450,000 kilometers (900,000 miles)
+about two degrees below the plane of the ring.  The lower ring image
+was cut short by Jupiter's shadow on the ring.
+
+<P>
+
+JPL manages the Voyager project for NASA's Office of Space Science.<BR><P>
+
+<B>Image Note:</B><DD>This image was scanned from physical media.
+<DD>Made by combining violet image <A HREF="/glossary.html#fds">FDS</A> 20691.27 and orange image <A HREF="/glossary.html#fds">FDS</A> 20691.31.
+</DL>

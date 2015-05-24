@@ -1,0 +1,65 @@
+Jupiter's Main and Gossamer Ring Structures
+
+Schematic depictions of the structures of Jupiter's main and gossamer rings.
+
+The schematic structures of Jupiter's main and gossamer rings are
+depicted here. Scientists studying data from NASA's Galileo spacecraft
+have found that the ring system is made up of impact debris created
+when meteoroids, which are fragments of comets and asteroids, slam
+into Jupiter`s four smallest satellites.
+
+<P>
+
+The top panel shows that the main ring (red) is formed mostly from
+meteoroid impact debris kicked up from the innermost moons, Metis (m)
+and Adrastea (a). Since both satellites orbit in paths not inclined to
+Jupiter's equator, the main ring appears as a narrow line.
+
+<P>
+
+The middle panel shows the additional effect of dust ejected from the
+satellite Amalthea (A), responsible for producing one of the two moon
+components of the gossamer ring. Amalthea's orbit is inclined to
+Jupiter's equatorial plane, and at different times the satellite's
+vertical position can range anywhere between the two extreme limits
+shown. Dust ejected from Amalthea (orange) produces a ring whose
+thickness equals Amalthea's vertical projections beyond Jupiter's
+equatorial plane.
+
+<P>
+
+<CENTER>
+
+<A HREF="./R09_satinc_full.jpg"><IMG SRC="./R09_satinc_thumb.jpg"></A>
+
+<P>
+
+<B>Satellite Interactions with Jupiter's Ring System</B>
+
+</CENTER>
+
+<P>
+
+The lower panel shows the additional effect of dust ejected from Thebe
+(T), which makes up the second component (shown in green) of the
+gossamer ring. Again, the two positions shown represent the maximum
+projections of Thebe from Jupiter's equatorial plane. This component
+of the gossamer ring is thicker than the component due to Amaltheas
+dust because Thebe's orbit is more inclined than that of Amalthea.
+
+<P>
+
+
+The Jupiter image was created from a map based on data obtained by the
+Hubble Space Telescope.
+
+<P>
+
+<DT><B>Image Note:</B> <dd>See also image
+<A HREF="../galileo/PIA01623.html">Jupiter's Gossamer Ring Structure</A> and 
+<A HREF="./PIA01627.html">Jupiter's Inner Satellites and Ring Components</A>
+</DL>
+
+<BR>
+<A HREF="http://www.jpl.nasa.gov/galileo/">
+Galileo Home Page</A>

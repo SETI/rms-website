@@ -1,0 +1,133 @@
+---
+layout: base
+---
+
+  * [SPICE Intro](index.html)
+  * [Ephemerides](spk.html)
+  * [Pointing](ck.html)
+  * [Other](other.html)
+
+![\[SPACER\]](../css/spacer.gif)
+
+## Voyager Pointing Information
+
+SPICE C kernels contain the pointing and orientation history of spacecrafts.
+
+For more information about SPICE visit the home page of PDS's [Navigation and
+Ancillary Information Facility](http://pds-naif.jpl.nasa.gov) (NAIF).
+
+## SEDR Files
+
+Traditionally, the pointing information for the Voyager instruments was
+distributed in the form of Supplemental Experiment Data Record (SEDR) files.
+These were generated shortly after each flyby and were distributed on 9-track
+tape. The format of the tapes was unique to each instrument but at minimum the
+tapes contained the direction in space that the instrument was pointed. Today,
+many of the SEDR tapes have been lost.
+
+The one major exception is Voyager's Imaging Science Subsystem
+([ISS](../iss/index.html)), for which the SEDR files were later converted to
+Vax binary format and are still widely available. However, the ISS SEDR files
+only describe the camera direction and orientation at the time when images
+were taken, leaving large intervals during each flyby when the pointing is
+unknown.
+
+The Rings Node has recently obtained SEDR files for the Ultraviolet
+Spectrometer ([UVS](../uvs/index.html)), which have the advantage that they
+provide nearly complete temporal coverage of each encounter. However, the
+accuracy is not as good as that of the ISS SEDR files.
+
+These files will be posted on line shortly, along with complete descriptive
+information. Meanwhile, contact [Mark Showalter](/showalter/index.html) if you
+would like any of these files.
+
+## C Kernels
+
+Unfortunately, because the Voyager mission pre-dates the PDS and the SPICE
+toolkit, reliable C kernels were never generated for the scan platform, which
+carried the four remote sensing instruments: [ISS](../iss/index.html),
+[IRIS](../iris/index.html), [PPS](../pps/index.html), and
+[UVS](../uvs/index.html). The Rings Node has recently undertaken the project
+of generating reliable C kernels for all of the Voyager flybys.
+
+To date, we have generated C kernels for the Voyager 1 flyby of Saturn. Other
+C kernels will follow shortly.
+
+For completeness and to preserve historical information, the C kernels are
+being generated in five versions:
+
+1\. The ISS pointing information exactly as recorded by the ISS SEDR files.
+These C kernels are discontinuous; they only contain the pointing information
+at the times when images were taken.
+
+2\. The UVS pointing information exactly as recorded by the UVS SEDR files.
+These kernels have been interpolated to provide continuous and nearly-complete
+temporal coverage, although with less accuracy than the Version #1 ISS-based C
+kernels.
+
+3\. Merged C kernels, in which the UVS SEDR information has been used to
+interpolate between the times of the images. These kernels have the accuracy
+of the Version #1 C kernels but also the temporal coverage of the Version #2
+kernels.
+
+4\. "C-smithed" C kernels for ISS, in which a subset of the images have been
+used to correct pointing errors in the original ISS SEDR files. These kernels
+should be significantly more accurate than the Version #1 kernels. However,
+they are discontinuous, containing pointing information only at the times of
+the Voyager images.
+
+5\. Finally, merged, "C-smithed" kernels, in which the UVS SEDR files have
+been used to interpolate between the times of the images. These should be as
+reliable as the Version #4 C-smithed kernels but also provide continuous,
+nearly-complete temporal coverage.
+
+**NOTE**: These files have not yet been through peer review. We believe them to be accurate but further testing is probably appropriate. Please send any questions or problems to [Mark Showalter](/showalter/index.html). 
+
+## Downloads
+
+Follow the links below for more information and files to download. Check back
+later for additional C-smithed and merged C kernels. In the table below, "Type
+1" refers to a kernel that only records pointing at discrete times (e.g.,
+versions #1 and #4) whereas "Type 3" refers to a continuous kernel. Note that
+the latter are much larger, and so the Type-1 kernels are probably more
+appropriate for users only interested in the Voyager images.
+
+Planet  |  Spacecraft  |  Kernel  
+Version  |  Reference  
+Instrument  |  C-smithed?  |  Type  |  Links  
+---|---|---|---|---|---|---  
+Jupiter  |  Voyager 1  |  1  |  ISS  |  No  |  Type 1  |
+[Info](ck/vg1_jup_version1_type1_iss_sedr.txt )
+[Download](ck/vg1_jup_version1_type1_iss_sedr.bc )  
+Jupiter  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  |
+[Info](ck/vg2_jup_version1_type1_iss_sedr.txt)
+[Download](ck/vg2_jup_version1_type1_iss_sedr.bc)  
+Saturn  |  Voyager 1  |  1  |  ISS  |  No  |  Type 1  |
+[Info](ck/vg1_sat_version1_type1_iss_sedr.txt)
+[Download](ck/vg1_sat_version1_type1_iss_sedr.bc)  
+Saturn  |  Voyager 1  |  2  |  UVS  |  No  |  **Type 3** |
+[Info](ck/V1SAT_VERSION2_TYPE3_UVS_SEDR.txt)
+[Download](ck/V1SAT_VERSION2_TYPE3_UVS_SEDR.ck)  
+Saturn  |  Voyager 1  |  3  |  ISS + UVS  |  No  |  **Type 3** |
+[Info](ck/V1SAT_VERSION3_TYPE3_MERGED_SEDR.txt)
+[Download](ck/V1SAT_VERSION3_TYPE3_MERGED_SEDR.ck)  
+Saturn  |  Voyager 1  |  4  |  ISS  |  **Yes** |  Type 1  |
+[Info](ck/V1SAT_VERSION4_TYPE1_ISS_CSMITHED.txt)
+[Download](ck/V1SAT_VERSION4_TYPE1_ISS_CSMITHED.ck)  
+Saturn  |  Voyager 1  |  5  |  ISS + UVS  |  **Yes** |  **Type 3** |
+[Info](ck/V1SAT_VERSION5_TYPE3_MERGED_CSMITHED.txt)
+[Download](ck/V1SAT_VERSION5_TYPE3_MERGED_CSMITHED.ck)  
+Saturn  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  |
+[Info](ck/vg2_sat_version1_type1_iss_sedr.txt)
+[Download](ck/vg2_sat_version1_type1_iss_sedr.bc)  
+Uranus  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  |
+[Info](ck/vg2_ura_version1_type1_iss_sedr.txt)
+[Download](ck/vg2_ura_version1_type1_iss_sedr.bc)  
+Neptune  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  |
+[Info](ck/vg2_nep_version1_type1_iss_sedr.txt)
+[Download](ck/vg2_nep_version1_type1_iss_sedr.bc)  
+  
+* * *
+
+[Voyager](/voyager/) | [Rings Node Home](/)
+

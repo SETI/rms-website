@@ -1,0 +1,273 @@
+#!/usr/bin/perl -w
+
+#print "Content-type: text/html\n\n";
+#print "<HTML>\n";
+#print "<HEAD>\n";
+#print "<TITLE>Environment and Parameter Listing</TITLE>\n";
+#print "</HEAD>\n";
+#print "<BODY>\n";
+
+# print "<B>The following environment variables are set:</B>\n";
+# print "<UL>\n";
+
+#foreach $key (keys (%ENV)) {
+#    print "<LI> $key = $ENV{$key}\n";
+#}
+
+# Determine the REQUEST_METHOD
+if ( $ENV{'REQUEST_METHOD'} eq "GET" ) { 
+    $qs = $ENV{'QUERY_STRING'};
+} elsif ($ENV{'REQUEST_METHOD'} eq "POST") {
+    read(STDIN, $qs, $ENV{'CONTENT_LENGTH'});
+}  
+
+#print "</UL><P>\n";
+
+# print "<B>You entered the following parameters:</B>";
+
+# Convert plusses to spaces
+$qs =~ s/\+/ /g;
+
+# The keyword = value pairs are separated by ampersands "&".
+@item = split(/&/,$qs);			# split value into items
+
+# print "<UL>\n";
+
+
+
+foreach $item (@item) {			# get each item
+
+# The keywords and values are separated by equals sign "=".
+	($kwd,$val) = split(/=/,$item);	# stmt into kwd and val
+
+# Convert url-encoded values
+        $kwd =~ s/%(..)/pack("c",hex($1))/ge;       
+        $val =~ s/%(..)/pack("c",hex($1))/ge;
+
+#	print "<LI> $kwd = $val\n";	# print item
+
+	if (defined ($keyvals{$kwd})) {
+	    $keyvals{$kwd} .= ":" . $val;
+	} else {
+	    $keyvals{$kwd} = $val;
+	}
+    }
+
+# print "</UL><P>\n";
+
+# print "<PRE>\n";
+
+# print "\$pid = $$\n"; 
+
+foreach $key (keys (%keyvals)) {
+#    print "$key = $keyvals{$key}\n";
+}
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Give the key symbols more memorable names
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+$username     = $keyvals{"name"};
+$email        = $keyvals{"email"};
+$phone        = $keyvals{"phone"};
+$institution  = $keyvals{"institution"};
+$comments     = $keyvals{"comments"};
+$toolkit      = $keyvals{"toolkit"};
+# COMCOUNT      = ''WWW_KEY_10_COUNT'
+# COMPREF       = "WWW_KEY_10_"
+# FIRSTFILE     = 12
+
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Confirm that user info is OK.  If not, notify user.
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# print "length(\$username) = " . length($username) . "\n";
+
+# if (!((length($username) > 0) && ((index $email, "@") < length($email)))) {
+# print "Content-Type: text/html\n\n";
+# print "<HTML>\n";
+# print "<TITLE>Invalid User Info</TITLE>\n";
+# print "<H1>ERROR: Invalid User Info</H1>\n";
+# print "You did not provide a valid name and/or email address.\n";
+# print "Please try again.\n";
+# print "<PRE>\n";
+# print " Name: $username\n";
+# print "Email: $email\n";
+# print "</PRE>\n";
+# exit;
+# }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Confirm that at least one toolkit was ordered
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+if (!(defined ($keyvals{"toolkit"}))) {
+    print "Content-Type: text/html\n\n";
+    print "<HTML>\n";
+    print "<TITLE>Invalid Toolkit Order</TITLE>\n";
+    print "<H1>ERROR: Invalid Toolkit Order</H1>\n";
+    print "You did not request any toolkits.\n";
+    print "Please try again.\n";
+    print "<PRE>\n";
+    print " Name: $username\n";
+    print "Email: $email\n";
+    print "</PRE>\n";
+    exit;
+}
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Make a unique file name
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+$filename = "toolkit_order_" . $$ . ".txt";
+
+# print "\$filename = $filename\n";
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Summarize data order and send email
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+open OUTFILE, '>$filename';
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Write out user info
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+print OUTFILE "       Date: " . scalar localtime() . "\n";
+print OUTFILE "       Name: $username\n";
+print OUTFILE "      Email: $email\n";
+print OUTFILE "Institution: $institution\n\n";
+print OUTFILE "       Node: WWW_REMOTE_HOST\n";
+print OUTFILE "    Address: $ENV{'REMOTE_ADDR'}\n";
+print OUTFILE "      Ident: WWW_REMOTE_IDENT\n";
+print OUTFILE "       User: WWW_REMOTE_USER\n\n";
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Write out comments, if any
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@commentlist = split /\n/, $comments;
+
+for ($i = 0 ; $i <= $#commentlist; $i++) {
+  print OUTFILE " Comment #" . ($i+1) . ": $commentlist[$i]\n";
+}
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Write out requested files
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@toolkitlist = split /:/, $toolkit;
+
+for ($i = 0 ; $i <= $#toolkitlist; $i++) {
+
+  print OUTFILE "Request #" . ($i+1) . ": $toolkitlist[$i]";
+
+  $file = "/Volumes/pds-rings/welcome/toolkits/" . $toolkitlist[$i] . ".tar";
+
+#  print "\$file = $file\n";
+  $size=(stat($file))[7];
+
+  print OUTFILE ".tar ($size)\n";
+}
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Send order message
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    close OUTFILE;
+
+#$ mail/noself 'filename' neil/subject="Toolkit Request via WWW"
+#$ mail/noself 'filename' showalter/subject="Toolkit Request via WWW"
+#$ delete/noconfirm/nolog 'filename';*
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Create data request form
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+print "Content-Type: text/html\n\n";
+print "<HTML>\n";
+print "<HEAD><TITLE>Toolkit Order</TITLE></HEAD>\n";
+print "<BODY\n";
+print "<H1>Toolkit Order</H1>\n";
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Write user info
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+print "<B>User Information</B>:\n";
+print "<PRE>\n";
+print "       Date: " . scalar localtime() . "\n";
+print "       Name: $username\n";
+print "      Email: $email\n";
+print "Institution: $institution\n";
+print "       Node: $ENV{'REMOTE_HOST'}\n";
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Write out comments, if any
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@commentlist = split /\n/, $comments;
+
+for ($i = 0 ; $i <= $#commentlist; $i++) {
+  print " Comment #" . ($i+1) . ": $commentlist[$i]\n";
+}
+
+print "\n</PRE>\n";
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Report status of Toolkit order
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+print "These files are ready for transfer\n";
+print "<UL>\n";
+
+
+# print "\$toolkit = $toolkit\n";
+
+# @toolkitlist = split /:/, $toolkit;
+
+for ($i = 0 ; $i <= $#toolkitlist; $i++) {
+#   print "\$toolkitlist[$i] = $toolkitlist[$i]\n";
+
+  $link = $toolkitlist[$i] . ".tar";
+  $file = "/Volumes/pds-rings/welcome/toolkits/" . $toolkitlist[$i] . ".tar";
+  $size=(stat($file))[7];
+
+print "<LI>\n";
+print "<A HREF=\"http://lost.arc.nasa.gov/toolkits/$link\">\n";
+print "<TT>$link</TT></A> ($size bytes)\n";
+print "</LI>\n";
+}
+
+print "</UL>\n";
+print "Click on each file name to transfer it\n";
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Provide a route back
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+print "<HR>\n";
+print "<A HREF=\"/www/toolkits/toolkits.html\">Toolkits</A> |\n";
+print "<A HREF=\"/\">Rings Node Home</A>\n";
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Summarize all symbols (for debugging)
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#$! say "<P>"
+#$! say "<PRE>"
+#$! show sym WWW_KEY_*
+#$! say "</PRE>"
+#$
+#$ say "</BODY>"
+#$ say "</HTML>"
+#$ exit
+
+print "</PRE>\n";
+
+
+
+print "</BODY></HTML>\n";
+

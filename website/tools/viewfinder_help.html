@@ -1,0 +1,136 @@
+---
+layout: base
+---
+
+# Help Page for the Cassini Viewfinder 1.1
+
+This tool enables you to select times during the Cassini Tour when Cassini's
+viewpoint satisfies specified geometric constraints. Simply enter the desired
+lower or upper limit (or both) on any field in the form, click "Submit," and a
+table of the time intervals that satisfy the constraints is returned. You can
+then, for example, cut and paste the times into the [Cassini/Saturn
+Viewer](viewer2_satc.html) tool to generate a diagram of the viewing geometry
+for that moment. Leave the form blank for any parameters that you do not wish
+to constrain.
+
+**NOTE**: This tool is operational but not currently supported. Its primary purpose was for Cassini mission planning. An update may be released to support the Cassini extended mission. 
+
+## Details
+
+This tool uses a table of viewing geometry parameters sampled every ten
+minutes during the Cassini tour. The tool simply searches the database for all
+rows in the table that match the constraints and groups consecutive rows
+together in the output. Because of the sampling, viewing opportunities that
+exist for shorter than ten minutes might be missed. In addition, the estimated
+duration of a particular viewing geometry could be in error by +/- ten
+minutes.
+
+The viewing geometry is actually tabulated for the planet, not the rings. Keep
+in mind that, particularly when close in, the rings can span a signficant
+range of phase angles, distances, solar hour angles, etc.
+
+The time limits of the table are from May 1, 2004 (about three months before
+Saturn orbit insertion) to July 1, 2007.
+
+## Change History
+
+**1.0 Beta** (December 27, 2000) Original beta test of Cassini viewfinder form on line.  
+**1.0** (January 4, 2001) Database replaced with one that samples the tour at ten-minute intervals rather than two-hour intervals.  
+**1.1** (July 20, 2001) New options provided for the revised Saturn tour, yyyy-ddd date formats, and planetocentric vs. planetographic latitude.  
+
+## INDEX
+
+  * Tour
+  * Date Format
+  * Latitude Type
+  * Observation Time
+  * Orbit Number
+  * Range
+  * Sub-spacecraft Latitude
+  * Sub-solar Latitude
+  * Solar Hour Angle
+  * Phase Angle
+  * Duration
+
+* * *
+
+## Tour
+
+You may select between the original T18-5 tour and the revised tour S2-C22 in
+which the first two orbits have been changed to allow for the revised Titan
+probe delivery. The latter is the default but the former is provided for
+backward-compatibility.
+
+Note that orbit numbers are 0, A, B, C, 3, 4, ... in the revised tour. This is
+because two orbits in the original tour were changed into three in the revised
+tour. With this nomenclature, subsequent orbit numbers are unchanged.
+
+## Date Format
+
+You may select between "yyyy-mm-dd" and "yyyy-ddd" date formats. You always
+have freedom to use either format in input fields; this merely affects the
+format of the output.
+
+## Latitude Type
+
+You may select between planetographic and planetocentric latitude;
+planetocentric is the default. The planetocentric latitude is equivalent to
+the ring opening angle. The difference can be ~5 degrees at mid-latitudes.
+
+## Observation Time
+
+The observation time gives the time UTC at which the given viewing geometry
+occurs. Times are given by default in PDS format, of the form "yyyy-mm-
+ddThh:mm:ss.sss". However, in the queries, times can be entered in a broad
+range of formats; click [here](time_formats.html) for the gory details.
+
+## Orbit Number
+
+The orbits are numbered from one apoapse to the next. The first orbit,
+containing SOI, is number 0.
+
+## Range
+
+Range is the distance to the center of Saturn in units of Saturn radii, 60330
+km.
+
+## Sub-Spacecraft Latitude
+
+The sub-spacecraft latitude is the latitude on the planet directly beneath the
+spacecraft, in degrees. It can range from -90 to 90. It is roughly equivalent
+to the ring opening angle. Note that it is negative for views of the south
+side of the rings and positive for views of the north side.
+
+## Sub-Solar Latitude
+
+The sub-solar latitude is the latitude on the planet directly beneath the Sun,
+in degrees. It can range from -90 to 90. However, it is always negative during
+the Cassini Tour because the Sun shines on the south side of the rings.
+
+## Solar Hour Angle
+
+The solar angle hour measures the spacecraft-planet-antisolar direction as
+projected into the ring plane, in degrees. It can range from 0 to 360\. It is
+measured in the direction of ring rotation so SHA=90 places Cassini above the
+morning quadrant of the rings (where the ring material has just emerged from
+shadow) and SHA=270 places Cassini above the evening quadrant (where ring
+material is heading into the shadow).
+
+## Phase Angle
+
+The phase angle is the spacecraft-planet-Sun angle, in degrees. It can range
+from 0 to 180.
+
+## Duration
+
+The duration is the approximate time interval over which a specified viewing
+geometry exists, in hours. Note that this value can be in error by up to +/-
+10 minutes.
+
+* * *
+
+[Viewfinder Form](viewfinder.html) | [Cassini Tools](index.html#CASSINI) |
+[Rings Node Home](/)
+
+Last updated 20 July 2001
+

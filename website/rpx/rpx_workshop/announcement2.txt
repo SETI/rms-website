@@ -1,0 +1,112 @@
+                          SECOND ANNOUNCEMENT
+
+                Saturn Ring Plane Crossing Workshop
+                May 26-27, 1994
+                Lunar and Planetary Laboratory
+                Rm. 308, Gerard P. Kuiper Space Science Bldg.
+                University of Arizona, Tucson
+
+Reminders:
+    * Room reservations are due by May 11
+    * Reply to this email if you are planning to attend
+    * Reply if you wish to receive a copy of the proceedings
+    * Reply if you would like to contribute a short presentation
+
+
+The Saturn Ring Plane Crossing Workshop is coming up in just a few
+weeks.  The agenda is rapidly taking shape and is included at the end of
+this message.  Thanks to all of you who have already agreed to speak. 
+
+CONTRIBUTED PAPERS
+
+Note that the meeting is intended to be very informal and the agenda
+contains plenty of flexibility at this time.  Anyone who wishes to
+contribute a ~10-minute presentation is encouraged to do so; please
+inform Mark Showalter (showalter@ringside.arc.nasa.gov; 415-604-3382) of
+your interests as soon as possible.
+
+PROCEEDINGS
+
+We plan to distribute an informal "proceedings" of the meeting to the
+attendees and to those who are interested but unable to attend.  Please
+reply to this email if you would like to receive the proceedings. 
+Include your mailing address. 
+
+To minimize the work of speakers, the proceedings will take the form of
+a copy of all viewgraphs shown, plus any written material that the
+speakers are able to provide.  Paper copies will be mailed out in early
+June.  In addition, any slides and supporting information that the
+speakers can provide in digital form (e.g. Postscript, TeX, plain ASCII
+text, etc.) will be made available from the PDS Rings Node via anonymous
+ftp (see below).
+
+REGISTRATION
+
+We would be grateful if you would reply to this message if you plan to
+attend.  This rough "head count" will help us to better plan meeting
+logistics (and to provide refreshments!) 
+
+ROOM RESERVATIONS
+
+Remember that room reservations are due by May 11.  We have a block of
+rooms at the Plaza Hotel 602-327-7341 for the special rate of $49 (+tax)
+for May 25-27.  To get this reduced rate, indicate that you are a
+participant in the "Saturn Workshop" when you make your reservation.  If
+you have any further questions about local arrangements, contact Steve
+Larson (slarson@comet.lpl.arizona.edu; 602-621-4973).
+
+FURTHER INFORMATION
+
+An anonymous "ftp" site has been established at the PDS Rings Node for
+further workshop information.  Just ftp into "ringside.arc.nasa.gov"
+with user id "anonymous" and enter your own email address as the
+password.  The subdirectory "rpx_workshop" will contain updated
+information and Postscript files of maps to the meeting site.  Note that
+the maps are not available at this time; look for them next week.  If
+you have any questions or suggestions about the ftp site, contact Mark
+Showalter (showalter@ringside.arc.nasa.gov; 415-604-3382).
+
+Please pass this announcement on to any of your colleagues who might
+also be interested.  We look forward seeing you in Tucson.
+
+Mark Showalter
+Steve Larson
+Phil Nicholson
+
+
+                        AGENDA
+
+----------------------------------------------------
+THURSDAY, MAY 26 -- Background and Scientific Issues
+----------------------------------------------------
+
+    9:00  Welcome, logistics (Larson)
+
+    9:15  Geometry of crossings (Nicholson)
+   10:00  Bright rings (Sicardy?, Lissauer)
+   11:15  Faint rings (Showalter)
+
+   12:30  Lunch
+
+    2:00  Classical satellites (Harper, Jacobson, Aksnes)
+    3:15  Small satellites (Murray)
+    4:30  Discussion
+
+    5:30  Adjourn
+
+---------------------------------------------
+FRIDAY, MAY 27 -- Observing Methods and Plans
+---------------------------------------------
+
+    9:00  Visual imaging (Larson)
+    9:45  Near-IR imaging (Nicholson)
+   10:30  Mutual event predictions (Descamps, Aksnes)
+   11:15  Satellite photometry (Tholen?)
+   12:00  Spectroscopy
+
+   12:45  Lunch
+
+    2:15  Observing campaign (Showalter)
+    3:00  Discussion
+    4:00  Adjourn
+

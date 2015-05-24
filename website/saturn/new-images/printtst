@@ -1,0 +1,47 @@
+#!/usr/local/bin/perl
+
+$directory="directory";
+$image="image";
+$title="title";
+$brief="brief";
+@caption=qw(this is the caption);
+
+print "<A HREF=\"$directory/$image.html\">\n";
+print "<IMG SRC=\"$directory/$image","-small.jpg\">\n</a><br>\n";
+print "<font size=\"-1\">\n$brief\n</font></td>\n";
+print "<HTML><HEAD>\n<TITLE>\n$title\n</TITLE></HEAD>\n";
+
+print "<BODY BGCOLOR=\"#FFFFFF\" ALINK=\"#B10000\">\n";
+print "<h1 align=\"CENTER\">\n$title\n</h1>\n";
+print "<P>\n<TABLE BORDER=\"0\"><TR><TD ALIGN=\"CENTER\">\n";
+print "<IMG ALIGN=\"CENTER\" SRC=\"";
+print "$directory/$image-med.jpg\">\n";
+print "<A HREF=\"";
+print "$directory/$image.jpg\">\n";
+print "Full size image</A>";
+
+print "</STRONG>\n<DT> <B>Caption: </B>\n<DD>\n";
+
+print "\@caption\n";
+print "<BR></DL>\n<HR>\n</BODY></HTML>\n";
+
+print <<LASTBIT;
+  </tr>
+</table>
+
+<P>
+
+<HR>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/voyager2.html">[Voyager 2 Images]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/pps.html">[PPS Pseudo-images]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/hst/wfpc2.html">[Hubble/WFPC2]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/art/art.html">[Artwork]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/saturn.html">[Saturn Page]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/">[Rings Node Home]</A>
+<P>
+Last updated April 7, 1999
+<P>
+</body>
+</html>
+LASTBIT
+

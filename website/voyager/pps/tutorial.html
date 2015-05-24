@@ -1,0 +1,960 @@
+<html>
+<head><title>Voyager PPS TUTORIAL.TXT</title></head>
+
+<body
+bgcolor="#ffffff"
+>
+<center><h1>
+Voyager PPS TUTORIAL.TXT
+</h1></center>
+Return to <a href="index.html">PPS data set page</a>.
+<hr>
+<pre>
+PDS_VERSION_ID                  = PDS3
+RECORD_TYPE                     = STREAM
+
+DATA_SET_ID                     = "VG2-SR/UR/NR-PPS-2/4-OCC-V1.0"
+
+OBJECT                          = TEXT
+  PUBLICATION_DATE              = 2003-09-30
+  AUTHOR_FULL_NAME              = "MARK R. SHOWALTER"
+  NOTE                          = "Voyager PPS Ring Occultation
+Data Set Tutorial"
+END_OBJECT                      = TEXT
+END
+
+           Voyager PPS Ring Occultation Data Set Tutorial
+           ==============================================
+
+This document provides a tutorial on how to make optimal use of this
+data set. It is organized as follows:
+    1. Data Set Overview
+    2. Directory Structure
+    3. File Names
+    4. File Formats
+    5. PDS Labels
+    6. Voyager PPS Overview
+    7. Processing Guidelines
+    8. PPS Calibration
+    9. References
+
+1. Data Set Overview
+====================
+
+This data set contains stellar occultation data obtained by the Voyager
+2 Photopolarimeter (PPS). It includes ring occultation profiles from
+Saturn, Uranus and Neptune, plus a selection of star calibration files.
+It does not include other types of data obtained by the Voyager PPS.
+
+The specific ring occultation experiments carried out by PPS are:
+
+     ------------------------------------------------------------
+     Planet    Star         Comments
+     ------------------------------------------------------------
+     Saturn    delta Sco    Entire ring system, egress.
+     Uranus    sigma Sgr    Delta, Lambda and Epsilon rings only,
+                            ingress and egress.
+     Uranus    beta Per     All rings, ingress and egress.
+     Neptune   sigma Sgr    All rings, ingress.
+     ------------------------------------------------------------
+
+2. Directory Structure
+======================
+
+This volume contains a large variety of files, preserving the PPS data
+at various levels of processing. Also included are ancillary files
+related to the geometry and calibration of the observations.
+
+The files in this data set fit into several general categories and are
+grouped into directories as follows:
+
+    ----------------------------------------------------------------
+    Category                       Directories
+    ----------------------------------------------------------------
+    Derived ring profiles          EASYDATA
+    Primary data/ancillary files   EDITDATA, GEOMETRY, CALIB
+    Additional ancillary files     VECTORS
+    Processing history files       SORCDATA, RAWDATA, NOISDATA,
+                                   TRAJECT
+    Support files                  IMAGES, FOVMAPS, SPICE, JITTER
+    Documentation                  DOCUMENT, CATALOG, INDEX
+    Software tools                 SOFTWARE
+    ----------------------------------------------------------------
+
+The EASYDATA directory tree contains simple, calibrated ring profiles
+that should meet the needs of most investigators interested in a
+particular aspect of the ring, but not wishing to dig into the details
+of the PPS data set.
+
+The primary data files in the EDITDATA, GEOMETRY and CALIB directories
+should meet the need of most remaining users. The Rings Node has gone to
+considerable effort to analyze, format and validate these files to make
+them as reliable as possible and as simple as possible to use.
+
+2.1 Derived Ring Profiles
+-------------------------
+
+EASYDATA - This directory contains easy-to-use derived ASCII profiles
+tabulating ring opacity and its uncertainty vs. radial location in a
+ring system. Files are included at a variety of radial resolutions: 0.1,
+0.2, 0.5, 1, 2, 5, 10, 20 and 50 km per sample. Because the rings of
+Uranus and Neptune are narrow and inclined, separate profiles are
+provided for each ring of these planets.
+
+For users who wish to make plots of ring opacity without worrying about
+the many subtle issues relating to calibration, geometry, and
+sensitivity of the PPS data, this directory is the place to look. The
+data are suitable for most theoretical analyses and for comparison with
+other data sets.
+
+2.2 Edited Raw Data and Simplified Ancillary Data Files
+-------------------------------------------------------
+
+EDITDATA - We recommended that users needing access to the raw PPS
+samples refer to the EDITDATA directory. This directory contains edited
+versions of the raw data, converted to a common, easy-to-use binary
+format. The Rings Node has carefully processed these files so that they
+have the following properties: (1) each data file contains a continuous,
+uniformly-spaced time-series of PPS samples; and (2) invalid and missing
+data samples have been flagged. This directory also contains data from a
+number of star calibration experiments, in which the PPS observed a star
+without any rings present.
+
+Note that some very simple sample programs are provided in the SOFTWARE
+directory to help users access the raw data in these binary files.
+Programs DUMPOC1.FOR and DUMPOC1.C retrieve data from the OC-1 mode
+files; programs DUMPGS3.FOR and DUMPGS3.C retrieve data from the GS-3
+mode files. See section 6.2 below for more information about operating
+modes.
+
+Two other directories contain ancillary data files to support the
+analysis of the edited data files. In both cases, the files contain
+ASCII files that tabulate information about the occultation at times
+that match the data records in the corresponding edited data file.
+
+GEOMETRY - Files in this directory tabulate the ring intercept geometry
+(ring intercept time, radius, and longitude).
+
+CALIB - Files in this directory tabulate models for the stellar and
+background photon count rates during each occultation. Using this
+information, estimates of ring opacity can be derived.
+
+Over the years, several investigators have arrived at different
+solutions for the geometry and calibration during the PPS experiments.
+Because of this, the Rings Node has provided multiple versions of these
+files for many occultations. Our own models for occultation geometry and
+calibration are also included.
+
+2.3 Additional ancillary files
+------------------------------
+
+VECTORS - Files in this directory tree tabulate the time and vector
+positions of the ring intercept point and of Voyager during each
+occultation experiment. These files are provided in a variety of useful
+coordinate systems, including celestial (B1950 and J2000) and in planet
+and ring-centered frames. These can be used to derive geometry
+parameters that are not specifically listed in the GEOMETRY directory.
+
+2.4 Processing History Files
+----------------------------
+
+The Rings Node has obtained data from a variety of sources and in a
+variety of formats. Our work has involved extensive re-formatting to
+simplify the use of this data set, as well as some actual editing to
+identify questionable data samples. We have provided the data in less
+processed formats to document our own processing, to support users who
+might wish to "second guess" our processing, and also to support those
+investigators who might already be familiar with the data in a different
+format.
+
+SORCDATA - This directory contains "source" data files exactly as they
+were received by the Rings Node. Although file formats are fully
+documented, they vary significantly from investigator to investigator
+and from file to file. These files are provided for documentation
+purposes and are not otherwise supported.
+
+RAWDATA - Files in this directory contain essentially the same data as
+are found in the SORCDATA directory, but in a simplified, uniform format
+consisting of binary integers. A summary of how each of these files was
+generated from its source files is found in file label.
+
+NOISDATA - This directory contains a set of binary data files identical
+in format to those found in the EDITDATA directory. However, in these
+files the known rings of Uranus and Neptune have been removed. These
+were generated by the Rings Node and were used for fitting some
+calibration models.
+
+TRAJECT - This directory contains the Voyager trajectory model (position
+relative to the planet center vs. time) used in the derivation of all
+geometric parameters.
+
+2.5 Support Files
+-----------------
+
+The Rings Node has gathered a number of additional files to support more
+detailed investigations of the PPS ring occultation experiments.
+
+IMAGES - This directory contains Voyager images obtained during the ring
+occultation experiments, which can be used for more detailed pointing
+reconstructions.
+
+FOVMAPS - This directory shows the result of an attempt by the PPS team
+to map out the variation in the response of the PPS instrument to the
+position of a star in its 1-degree field of view.
+
+SPICE - This directory contains SPICE kernels recording the ephemeris
+Voyager 2 during each encounter, along with the planet and its moons;
+these files are to be used with the SPICE toolkit, available from the
+PDS NAIF Node at
+    http://pds.jpl.nasa.gov/naif.html
+
+JITTER - This directory contains reconstructions of the instrument
+pointing during each occultation experiment.
+
+2.6 Documentation
+-----------------
+
+Several additional directories contain documentation associated with
+this data set. These are directories are required by PDS standards.
+
+DOCUMENT - This directory contains a variety of documents associated
+with the PPS experiments. This directory also contains subdirectories
+named CALIB, EDITDATA, FOVMAPS, GEOMETRY, JITTER, RAWDATA, SORCDATA,
+which contain programs and intermediate data files developed at the
+Rings Node for the production of the files found in the associated
+root-level directories. These files are provided for documentation
+purposes only and are not otherwise supported.
+
+CATALOG - This directory contains the PDS "Catalog Objects" providing
+general information about the data set. The files are:
+
+      --------------------------------------------------------------
+      File name      Topic
+      --------------------------------------------------------------
+      DATASET.CAT    This data set
+      DSCOLL.CAT     The data set collection (ring occultations from
+                     Voyager)
+      INST.CAT       The PPS instrument
+      INSTHOST.CAT   The instrument host, Voyager 2
+      MISSION.CAT    The overall Voyager mission
+      PERSON.CAT     Personnel involved in the production of this
+                     data set (Rings Node staff & PPS team members)
+      REF.CAT        Bibliographic references.
+      SOFTWARE.CAT   Supported software tools.
+      --------------------------------------------------------------
+
+INDEX - This directory contains a tabulation of all the data files in
+this data set.
+
+2.7 Software Tools
+------------------
+
+SOFTWARE - This directory contains the source code for several toolkits
+supporting the processing of this (and other) ring occultation profiles.
+More information about these toolkits is found below (Section 7.4).
+
+3. File Names
+=============
+
+ISO-9660 Level 1 standards for CD-ROMs require that file names be a
+maximum of eight characters, followed by an extension or type of up to
+three characters.
+
+3.1 File Extensions
+-------------------
+
+The major file types used on this volume are:
+
+Binary files:
+    Images                                      *.IMG, *.GIF
+    Other binary data files                     *.DAT
+    SPICE ephemeris files                       *.BSP
+    Postscript documentation files              *.PS, *.EPS
+    Source data files (for documentation only)  *.FOT, *.GS3, *.SCO,
+
+ASCII text files:
+    PDS labels                                  *.LBL
+    ASCII tables and indices                    *.TAB
+    PDS catalog files                           *.CAT
+    Text documentation files                    *.TXT, *.ASC
+    TeX documentation files                     *.TEX
+    Source code files                           *.C, *.H, *.FOR,
+                                                *.INC, *.PRO
+    Software build scripts                      *.MAK, *.COM, *.DEF
+    SPICE kernels                               *.TLS, *.TPC
+    SPICE transfer ephemeris files              *.XSP
+
+On this volume, a few files obtained from other sources have unique
+extensions. See the associated PDS label for more information.
+
+3.2 File Naming Conventions
+---------------------------
+
+Most of the supported data files provided on this volume are named
+according to the following nomenclature:
+
+Characters 1-3: Experiment indicator
+    1st character: P for PPS.
+    2nd character: S for Saturn; U for Uranus; N for Neptune.
+    3rd character: 1-8, indicating a stellar occultation sequence
+                   number at the given planet.
+
+    Based on these rules, the following indicators have been used:
+    PS1   = Saturn delta Sco ring occultation data.
+    PS2   = Extended Saturn delta Sco occultation data.
+    PS3-8 = Star calibration observations (no rings).
+    PU1   = Uranus sigma Sgr ring occultation data.
+    PU2   = Uranus beta Per ring occultation data.
+    PU3-6 = Star calibration observations associated with Uranus (no
+            rings).
+    PN1   = Neptune sigma Sgr ring occultation data.
+
+Character 4: File type
+    C = calibration models.
+    D = edited data.
+    G = geometry files.
+    J = jitter (instrument pointing) files.
+    N = noise data.
+    P = resampled, calibrated profiles.
+    R = raw data.
+    T = trajectory files.
+
+Characters 5-6: Version number
+    A two-digit number indicating the version number of the given file
+    (using a leading zero if necessary). In general, the meaning of
+    this number depends on the experiment and file type.
+
+    Note that the vector files are exceptional in that the fifth
+    character specifies the coordinate system for the vectors. This
+    leaves only the sixth digit to use as a version number.
+
+Characters 7-8: Supplemental
+    These characters are only used when needed to further identify a
+    file. They are used to distinguish rings, ingress vs. egress,
+    coordinate frames, etc. These characters are explained in the
+    *INFO.TXT file found in each relevant subdirectory.
+
+These naming rules apply to the files in the CALIB, EASYDATA,
+EDITDATA, GEOMETRY, JITTER, NOISDATA, RAWDATA, TRAJECT and VECTORS
+directories. Non-data files (in the CATALOG, DOCUMENT, INDEX and
+SOFTWARE directories) do not follow these conventions. Also, some
+ancillary files (FOVMAPS, IMAGES, and SPICE) do not. Finally, the
+source data files provided by other investigators (SORCDATA directory)
+have been archived under their original names wherever possible.
+
+4. File Formats
+===============
+
+4.1 ASCII Text Files
+--------------------
+
+Different popular operating systems use different standards for how
+ASCII text files are formatted. On Unix systems, lines are terminated
+by a &gt;lf&lt; (linefeed character, control-J, ASCII 10). On Macintosh
+computers, lines are terminated by a &gt;cr&lt; (carriage return character,
+control-M, ASCII 13). On PCs, lines are terminated by a &gt;cr&lt;&gt;lf&lt; pair.
+PDS standards require all text files to use &gt;cr&lt;&gt;lf&lt; line termination.
+If the PDS label indicates INTERCHANGE_FORMAT = ASCII or RECORD_TYPE =
+STREAM, then this line termination is in use.
+
+On occasion, users on Unix and Macintosh computers may need to change
+the line termination on some text files before they can use them. This
+can be handled via text editors or a variety of utilities. For example,
+the Unix tr (translate) command can be used to change carriage returns
+to blanks:
+    tr "\015" " " &gt;oldfile.txt &lt;newfile.txt
+
+Note that some software tools provided with this data set could fail if
+the extraneous &gt;cr&lt; characters are simply removed from ASCII-format data
+files rather than being replaced by blanks; the reason is that removing
+the &gt;cr&lt; changes the record lengths within the file, which could make
+the file incompatible with its PDS label.
+
+4.2 Binary Data Files
+---------------------
+
+The binary data files provided on this volume are tables and images.
+As described in the labels, most binary files consist of one- and
+two-byte integers. For two-byte integers, the least significant byte
+appears first, followed by the most significant byte with (optional)
+sign. Users of PCs and Digital workstations will find that these files
+are in the native machine format. For users of Macintoshes and
+workstations from Sun and Silicon Graphics, binary numbers read from
+these files will need to be byte-swapped first. However, note that the
+software tools included in the SOFTWARE directory take care of this
+conversion automatically.
+
+Some binary files in the SORCDATA subdirectory contain four-byte
+(single precision) floating-point numbers in Vax format. These are
+source data files as provided by the original investigators; the same
+data can be found in integer form in the RAWDATA and EDITDATA
+subdirectories.
+
+5. PDS Labels
+=============
+
+5.1 Types of Labels
+-------------------
+
+On this volume, every file has a PDS label. Most are in the form of
+detached labels, where the label corresponding to a given file has the
+same name but an extension ".LBL". For example, the file PS1D01.DAT is
+described by the label file PS1D01.LBL.
+
+There are a few exceptions to this rule. Some text files (like this
+one) have attached labels, meaning that the label information can be
+found at the top of the actual file. These can be recognized by the
+fact that the file ends with .TXT and there is no corresponding file
+ending in .LBL. Information files *INFO.TXT that appear in most
+directories and describe that directory's contents use this approach.
+
+Finally, a few directories employ "combined-detached" labels, in which
+a single label file describes most if not all the files in the
+directory. In this case, the label file is given the same name as the
+enclosing directory, with the .LBL extension. For example, the
+directory DOCUMENT/EDITDATA/ contains a single combined-detached label
+file EDITDATA.LBL.
+
+5.2 PDS Label Structure
+-----------------------
+
+PDS labels contain nothing but ASCII text and can be viewed using any
+editor or word processor software. However labels have a very specific
+format that can be read by humans and also (relatively) easily parsed by
+computers. The PDS has developed toolkits called the Label Library (L3)
+and the Object Access Library (OAL), which makes it easy to read,
+manipulate and write PDS labels and the data files that they describe,
+using programs written in C or FORTRAN. The directory SOFTWARE/OAL on
+this volume contains the source code for both of these libraries.
+
+A PDS label consists of a sequence of expressions of the form "keyword
+= value". These keywords are sometimes nested inside data objects,
+indicated by "OBJECT = xxx" and terminated by "END_OBJECT = xxx".
+These data objects describe specific components of the corresponding
+data files. PDS objects can be nested; for example a PDS TABLE object
+generally contains multiple COLUMN objects. Keywords inside the TABLE
+object describe the overall properties of the table, and afterward the
+keywords inside each COLUMN object describe one particular column.
+
+Here is an annotated example, excerpted from file
+EASYDATA/KM010/PS1P01.LBL, which describes the derived profile of
+Saturn's ring system sampled at 10 km intervals. The file begins with
+information about the structure of the data file:
+
+  PDS_VERSION_ID                  = PDS3
+  RECORD_TYPE                     = FIXED_LENGTH
+  RECORD_BYTES                    = 50
+  FILE_RECORDS                    = 7051
+  ^SERIES                         = "PS1P01.TAB"
+
+This indicates that file PS1P01.TAB is contains 7051 fixed-length
+records, each of which is 50 characters long (including the terminal
+&gt;cr&lt;&gt;lf&lt; pair). Next come some cataloging parameters related to the
+file:
+
+  DATA_SET_ID                     = "VG2-SR/UR/NR-PPS-2/4-OCC-V1.0"
+  RING_OBSERVATION_ID             = "S/OCC/VG2/PPS/1981-08-25/DELTA_SCO"
+  PRODUCT_ID                      = "KM010/PS1P01.TAB"
+  PRODUCT_TYPE                    = RING_PROFILE
+  PRODUCT_CREATION_TIME           = 2000-06-01T16:00:00
+  SOURCE_PRODUCT_ID               = {"PS1D01.DAT",
+                                     "PS1G02.TAB",
+                                     "PS1C01.TAB"}
+
+  SPACECRAFT_NAME                 = "VOYAGER 2"
+  SPACECRAFT_ID                   = VG2
+  INSTRUMENT_NAME                 = "PHOTOPOLARIMETER SUBSYSTEM"
+  INSTRUMENT_ID                   = PPS
+  TARGET_NAME                     = "S RINGS"
+  START_TIME                      = 1981-08-26T00:00:39.342
+  STOP_TIME                       = 1981-08-26T01:55:00.793
+  SPACECRAFT_CLOCK_START_COUNT    = "44001:22:666"
+  SPACECRAFT_CLOCK_STOP_COUNT     = "44003:45:624"
+
+  OBSERVATION_TYPE                = OCCULTATION_PROFILE
+  OCCULTATION_TYPE                = STELLAR
+  STAR_NAME                       = "DELTA SCO"
+  FEATURE_NAME                    = "RING SYSTEM"
+  RING_OCCULTATION_DIRECTION      = EGRESS
+  PLANETARY_OCCULTATION_FLAG      = N
+  WAVELENGTH                      = 0.264   /* microns */
+  INSTRUMENT_MODE_ID              = OC1
+
+  RING_EVENT_START_TIME           = 1981-08-26T00:00:38.420
+  RING_EVENT_STOP_TIME            = 1981-08-26T01:55:00.193
+  MINIMUM_RING_RADIUS             = 72000.
+  MAXIMUM_RING_RADIUS             = 142500.
+  RADIAL_RESOLUTION               = 10.
+  INCIDENCE_ANGLE                 = 61.30638
+
+This label describes a data file containing derived ring opacity vs.
+radius. It is formatted as a table with columns. This is now described
+by a SERIES object:
+
+  OBJECT                          = SERIES
+    NAME                          = OCCULTATION_PROFILE
+    INTERCHANGE_FORMAT            = ASCII
+    ROWS                          = 7051
+    COLUMNS                       = 6
+    ROW_BYTES                     = 50
+    SAMPLING_PARAMETER_NAME       = RING_INTERCEPT_RADIUS
+    SAMPLING_PARAMETER_UNIT       = KILOMETER
+    MINIMUM_SAMPLING_PARAMETER    = 72000.
+    MAXIMUM_SAMPLING_PARAMETER    = 142500.
+    SAMPLING_PARAMETER_INTERVAL   = 10.
+    DESCRIPTION                   = "This is a radial profile of ...."
+
+Most of the data products on this volume are structured as either a
+table or a series. Both of these have the same logical structure---a
+set of rows structured identically, each containing a sequence of column
+values. The difference is that a series has rows that are uniformly
+spaced in a particular "sampling parameter", as indicated by the
+SAMPLING_PARAMETER keywords shown above. They indicate that this file
+is sampled uniformly in ring intercept radius, with one record every 10
+km, starting at 72,000 km and ending at 142,500 km.
+
+Next come a set of six COLUMN objects, each describing one column in the
+table. For example, the fourth column is described this way:
+
+    OBJECT                        = COLUMN
+      NAME                        = MEDIAN_NORMAL_OPACITY
+      DATA_TYPE                   = ASCII_REAL
+      START_BYTE                  = 26
+      BYTES                       = 7
+      FORMAT                      = "F7.4"
+      MAXIMUM                     = 99.
+      UNIT                        = 'N/A'
+      DESCRIPTION                 = "Estimate of the mean normal
+  opacity for a band of ring material centered at the given radius.
+  For opaque rings, this value is set to 99. For unconstrained
+  segments of the data, this value is set to 0."
+    END_OBJECT                    = COLUMN
+
+It indicates that characters 26-32 in each row contain the median normal
+opacity of the ring, in F7.4 format. After the last column object, the
+file ends as follows:
+
+  END_OBJECT                      = SERIES
+  END
+
+The first line here marks the end of the SERIES object description, and
+the second marks the end of the label itself.
+
+Here are the first three lines of the data file:
+ 72000.00, 55.469, 0.777,-0.0199,-0.0290,-0.0106
+ 72010.00, 54.832, 0.774,-0.0124,-0.0216,-0.0031
+ 72020.00, 54.425, 0.770,-0.0076,-0.0169, 0.0018
+                         _______
+The six columns are, in order, named RING_INTERCEPT_RADIUS, MEAN_SIGNAL,
+MEAN_SIGNAL_UNCERTAINTY, MEDIAN_NORMAL_OPACITY,
+NORMAL_OPACITY_LOWER_LIMIT, and NORMAL_OPACITY_UPPER_LIMIT. The column
+described by the MEDIAN_NORMAL_OPACITY column is underlined.
+
+The detailed definition of every PDS keyword appearing in the label of a
+data file can be found in the file DOCUMENT/PDSDD.TXT. These
+definitions have been extracted from the PDS Data Dictionary.
+
+See the PDS Standards Reference (JPL D-7669) for a complete description
+of PDS label formats. This document can also be found on line at
+    http://pds.jpl.nasa.gov/stdref/
+
+6. Voyager PPS Overview
+=======================
+
+6.1 Voyager FDS Time Tags
+-------------------------
+
+Each record in each binary data file has a time tag generated by
+Voyager's "Flight Data System" (FDS) clock. FDS clock counts consist
+of three integers, typically called the "FDS hours", "FDS minutes",
+and "FDS seconds". An FDS hour has a duration of 48 true minutes; an
+FDS minute has a duration of 48 true seconds; an FDS second has a
+duration of 60 milliseconds. Hence, there are 800 FDS seconds per
+minute (numbered 1 through 800) and 60 FDS minutes per hour (numbered
+0 through 59). The FDS hour value is typically a five-digit number.
+In this data set, FDS clock counts are typically formatted
+"hhhhh:mm:sss".
+
+6.2 PPS Operating Modes
+-----------------------
+
+The PPS occultation data were acquired in two different instrument
+modes, called OC-1 and GS-3. OC-1 mode was used for the actual ring
+occultations and for some star calibration experiments. Here the
+photons counts were sampled every 10 ms (7.5 ms integration plus 2.5
+ms readout, according to Graps and Lane (1986). OC-1 data samples are
+grouped into records of 600 samples, corresponding to 100 FDS seconds
+(6 true seconds). GS-3 is a slower counting mode used for additional
+star calibration experiments. In this case the photon counts were
+sampled at 600 ms intervals (400 ms integration plus 200 ms readout
+according to Graps and Lane). GS-3 samples are grouped into records
+of 80 samples, corresponding to one FDS minute (48 true seconds).
+
+For all of these experiments, the 0.264 micron filter was used,
+along with the 1-degree aperture. See CATALOG/INST.CAT for more
+information about the PPS instrument.
+
+7. Processing Guidelines
+========================
+
+As noted above, many users will find that files in the EASYDATA
+directories meet their needs for PPS data. These contain tabulations of
+ring opacity and its uncertainty, resampled to be uniformly spaced in
+ring radius.
+
+In this section I discuss some of the technical details behind the
+generation of these calibrated profiles.
+
+7.1 Edited Data
+---------------
+
+The primary input file for one of these profiles is an edited data file,
+as are found in the EDITDATA directory. The key property of these files
+is that they are uniformly spaced in time; there are no gaps. In
+addition, all invalid or missing samples have been flagged, meaning that
+they have been replaced a particular numeric value.
+
+The edited occultation data files (OC-1 mode) are organized in 612-byte
+binary records. Each record consists of 600 unsigned, single-byte
+samples, followed by an FDS time tag consisting of three four-byte
+integers (FDS hours, minutes and seconds). The time tag refers to the
+beginning of the corresponding data record. Sample values are the
+integral number of photons counted by the PPS during its 10-ms
+integration interval (7.5 ms of integration followed by 2.5 ms dead time
+during readout). Thus, each record contains six true seconds (or 100
+FDS seconds) of data. Missing samples are indicated by a value of 255;
+invalid samples are indicated by a value of 254.
+
+Note that some edited data files are from star calibration experiments
+obtained in GS-3 mode, where the PPS sampling rate is slower. These
+files are organized in 172-byte binary records, consisting of 80 signed,
+two-byte integer samples followed by the FDS time tag. Sample values
+are photons counted during its 600-ms integration interval (400 ms of
+integration followed by 200 ms for readout). Thus, each record contains
+48 true seconds (or 1 FDS minute) of data. Missing samples are
+indicated by a value of -1; invalid samples are indicated by a value of
+-2.
+
+The editing that has been performed on each file is summarized in the
+file's label, and also in the file EDITDATA/DATAINFO.TXT. The programs
+developed at the Rings Node to perform the editing are found in the
+DOCUMENT/EDITDATA subdirectory (although these files are provided for
+documentation purposes only and are not supported). Users who have
+reason to can revisit this process and generate their own edit of the
+data.
+
+Because the missing and invalid samples in an edited data file contain
+specific values, they can be easily recognized. Users who write
+software to read the edited data files should test all samples and
+ignore any that have one of these values.
+
+As noted above, the edited data files are continuous. As necessary,
+missing records have been filled in by empty records (containing nothing
+but the missing flag, 255). As a result, it is relatively easy to index
+directly into an edited data file to find a particular record.
+
+7.2 Geometry Files
+------------------
+
+The edited data files are labeled as SERIES objects, in which the
+SAMPLING_PARAMETER is called RECORD_INDEX. Associated geometry files
+are indexed using exactly the same sampling parameter, so that it is
+relatively straightforward to find the values of geometry parameters
+associated with the beginning of a given record. Geometry parameters
+can be interpolated to generate the value associated with a particular
+sample.
+
+Files in the GEOMETRY directory tabulate the location in the ring plane
+sampled by the PPS instrument at the beginning of a given record. In
+addition to the RECORD_INDEX, columns in these files include
+RING_INTERCEPT_TIME (corrected for light travel time),
+RING_INTERCEPT_RADIUS (in km), RING_INTERCEPT_LONGITUDE (measured from
+the ring plane's ascending node on the Earth's equator of J2000),
+B1950_RING_INTERCEPT_LONGITUDE (same as previous but measured using the
+Earth's equator of B1950), and SPACECRAFT_EVENT_TIME (in seconds). The
+RING_INTERCEPT_TIME and SPACECRAFT_EVENT_TIME are measured in seconds
+relative to a REFERENCE_TIME specified in the corresponding COLUMN
+object.
+
+Values in these files are generally provided at much greater precision
+than can be considered reliable. The additional precision makes it
+easier to interpolate the models smoothly.
+
+For the rings of Saturn, two geometry solutions are provided, PS1G01 and
+PS1G02. The former only contains only RING_INTERCEPT_RADIUS and is the
+result of an early polynomial fit to the Saturn ring geometry. It is
+included only for users who might wish to compare new results with old
+ones obtained using that particular solution. For all other purposes,
+solution 02 is recommended.
+
+Because many rings of Uranus are inclined, the ring intercept geometry
+depends on the specific inclination and orientation of a given ring. As
+a result, it was necessary to provide a unique geometry file for each
+ring. The naming convention is as follows:
+    PUnG01rd.TAB/.LBL
+where
+    n = occultation index: 1 = sigma Sgr; 2 = beta Per.
+    r = ring identifier: 6 = Ring 6;
+                         5 = Ring 5;
+                         4 = Ring 4;
+                         A = Ring alpha;
+                         B = Ring beta;
+                         N = Ring eta;
+                         G = Ring gamma;
+                         D = Ring delta;
+                         L = Ring lambda;
+                         E = Ring epsilon.
+    d = occultation direction: I = ingress; E = egress.
+In addition, the files PUnG01.TAB/.LBL (with no ring identifier or
+occultation direction specified) contain ring intercept geometry for a
+hypothetical, purely equatorial ring system.
+
+For the rings of Neptune, two geometry solutions are provided. PN1G01
+describes the intercept for a hypothetical equatorial ring system using
+the planetary pole inferred by Jacobson et al. (1991). PN1G02 describes
+a hypothetical ring system using the pole inferred by Porco (1991) for
+the Adams Ring; this file is likely to more accurate for the Adams Ring
+and maybe for other rings as well.
+
+The highest-numbered version of each geometry file was generated by the
+Rings Node for this data set. The files are believed to be extremely
+accurate, although refinements to the Voyager trajectories, poles or
+ring inclinations could change results slightly. The software used to
+generate these files was written by Philip Nicholson of Cornell and is
+archived in the DOCUMENT/GEOMETRY/PDN subdirectory, although these
+programs are not supported.
+
+For users who might wish to revisit the geometry solutions, note that
+the spacecraft trajectory solutions used by Nicholson are archived in
+the GEOMETRY directory under the names PxxT01*.TAB/.LBL. The files
+tabulate the position of Voyager relative to the center of the planet at
+times corresponding to the beginning of individual PPS records.
+Alternatively, users can consult the SPICE ephemeris files in the SPICE
+directory.
+
+7.3 Calibration Files
+---------------------
+
+Like the geometry files, calibration files are labeled as SERIES objects
+and use the same SAMPLING_PARAMETER as the corresponding edited data
+files.
+
+To convert a measured photon rate to ring opacity "tau", one requires
+some additional information. The relationship between measured counts
+and tau is:
+    measured_counts = background_counts + stellar_counts*exp(-tau/mu)
+Here
+    measured_counts   = the number of measured photons (typically
+                        averaged to reduce noise).
+    background_counts = the expected number of photons entering the PPS
+                        optics that did not come from the star.
+    stellar_counts    = the expected number of photons that would be
+                        received from the star if no ring were obscuring
+                        it.
+    mu                = cosine of the incidence angle, i.e. the angle
+                        between the ring plane normal and the direction
+                        to the star.
+The calibration file contains columns called BACKGROUND_SIGNAL and
+STELLAR_SIGNAL that provide models of the expected count values during
+the occultations. They also contain the TOTAL_SIGNAL, defined by
+    TOTAL_SIGNAL = BACKGROUND_SIGNAL + STELLAR_SIGNAL
+This quantity is included simply because it can be directly measured in
+the vicinity of isolated rings.
+
+These tabulations also contain estimates of the uncertainty in each of
+these parameters, plus an estimate of the correlation between the
+uncertainties. (Note that, because the TOTAL_SIGNAL is often directly
+measurable, BACKGROUND_SIGNAL and STELLAR_SIGNAL can be strongly
+anti-correlated). If one wishes, one can use these parameters to
+estimate the calibration uncertainty associated with a particular
+value of tau.
+
+The value for mu is constant for an occultation so it is not tabulated
+in the files. Instead, it can be derived from the value for the
+INCIDENCE_ANGLE keyword in the label of each calibration and geometry
+file. Note that, in general, the value found in the geometry files is
+likely to be slightly more accurate.
+
+Over the years, investigators have made many different assumptions about
+the calibration of the PPS data for the different ring systems and, in
+some cases, for individual rings. For this reason, many different
+calibration models are provided. For Uranus, the file naming echoes
+that for the geometry files:
+    PUnC0vrd.TAB/.LBL
+where
+    n = occultation index: 1 = sigma Sgr; 2 = beta Per.
+    v = calibration model version: 1-4.
+    r = ring identifier: 6 = Ring 6;
+                         5 = Ring 5;
+                         4 = Ring 4;
+                         A = Ring alpha;
+                         B = Ring beta;
+                         N = Ring eta;
+                         G = Ring gamma;
+                         D = Ring delta;
+                         L = Ring lambda;
+                         E = Ring epsilon.
+    d = occultation direction: I = ingress; E = egress.
+For models that apply to the entire ring system rather than to a
+specific ring, the last two characters are omitted.
+
+A similar file naming scheme is used for Neptune:
+    PN1C0vr.TAB/.LBL
+where
+    v = calibration model version: 1-2.
+    r = ring identifier: A = Adams Ring; L = Leverrier Ring.
+Again, for models that apply to the entire ring system rather than to a
+specific ring, the last character is omitted.
+
+The label of each calibration file contains some information about the
+origin of the given file, including bibliographic references. For
+Saturn, only one calibration model has ever been derived. For Uranus
+and Neptune, the highest-numbered version of each calibration file was
+generated by the Rings Node for this data set. Files were generated by
+editing out the known rings of Uranus and Neptune from the raw data
+files and then fitting continuous, linear segments to the remaining
+data. (The NOISDATA directory contains the edited files with known rings
+removed). The result is a reliable model for TOTAL_SIGNAL and its
+uncertainty throughout each of these occultations. STELLAR_SIGNAL was
+then held fixed based on the results of previous investigations.
+Finally, BACKGROUND_SIGNAL was derived from the difference. See Section
+8 below for further discussions of PPS calibration.
+
+7.4 Profile Generation Procedure
+--------------------------------
+
+The files in the EASYDATA directory have been generated by the Rings
+Node using program PPSRESAM.FOR. This is a sample program packaged with
+the Rings Node's Profile Toolkit; see the SOFTWARE subdirectory. It
+should be possible for computer-savvy users to build this program and
+run it locally if they wish. The label of each derived EASYDATA profile
+includes a summary of the input parameters used by the program.
+
+The program requires three input files: edited data, geometry, and
+calibration. These must refer to the same ring occultation and must
+overlap, as indicated by a common range of SAMPLING_PARAMETER values.
+
+Using the selected geometry model, the time-series of raw samples is
+converted to a uniformly-spaced series of radial samples, in which each
+new radial sample is calculated via a weighted average of the relevant
+raw samples. The weighting function is derived from the known weighting
+of the raw data (boxcar-averages with 7.5 ms duration) and a target
+point-spread function (PSF). The target PSF is usually another boxcar
+function, but the user is free to chose alternative PSFs.
+
+Invalid and missing samples are zero-weighted in this averaging step.
+Based on the other weighting factors, it is then possible to derive the
+relationship between the uncertainty in the weighted sum and the
+uncertainties in the original raw samples. For this purpose, raw
+samples are assumed to be Poisson-distributed, which is valid for most
+purposes. (However, see Showalter and Nicholson, 1990).
+
+Next, the resampled photon count values are converted to ring opacity
+using the calibration model and the formula above. By adding or
+subtracting the derived uncertainty from the measured count value and
+then solving the formula above again, one can obtain the +/- 1-sigma
+confidence interval for tau.
+
+Clearly, other resampling methods are possible. Although this one can
+be rather slow, it was chosen because it supports a rigorous estimate of
+the confidence interval on tau.
+
+8. PPS Calibration
+==================
+
+One of the goals of the Rings Node during the preparation of this data
+set was to understand better the calibration properties of the PPS
+occultation experiments. For example, between the known rings of Uranus
+and and Neptune, the raw occultation data show distinct variations that
+cannot be attributed to ring material.
+
+Several documents archived on this volume discuss some of the questions
+about absolute calibration of the PPS instrument. Coleman (1987a,
+1987b, 1987c, 1988) wrote several internal reports studying the
+temperature-dependence of the PPS sensitivity and also exploring
+possible intrinsic variations in the brightness of delta Sco.
+Transcriptions of these reports can be found in the DOCUMENT directory
+under the names C1987A*.*, C1987B.*, C1987C.*, and C1988.*.
+
+In addition, the Rings Node commissioned the report (Black and
+Nicholson, 1995), which employed spacecraft telemetry and support
+imaging to reconstruct the movement of the target stars within the PPS
+instrument's field of view during each occultation experiment. This
+report can be found in the DOCUMENT directory under BN1995*.*. The
+DOCUMENT/BN1995 subdirectory contains programs and data files that Black
+& Nicholson developed for their study. The occultation support images
+obtained by Voyager are found in the IMAGES directory and a map of the
+PPS's sensitivity is found in FOVMAPS. Finally, the JITTER directory
+contains tabulations of the instrument pointing during each occultation
+experiment, re-sampled to match the timing of the corresponding edited
+data, geometry and calibration files.
+
+On this volume we have also included data from a number of star
+calibration experiments. During these experiments, PPS observed a star
+for an extended period during the cruise phases of the mission, without
+any intervening ring material to occult it. These files are found in
+the RAWDATA and EDITDATA directories with names beginning PS3-PS8 and
+PU3-PU5. Other star calibration experiments were performed (including
+some for Neptune) but the files could not be obtained for this data set.
+
+The primary conclusions from this assembly of information are as
+follows.
+
+(1) According to Black and Nicholson (1995), the target stars never
+wandered very far from the center of the PPS field of view during an
+occultation. Overall variations in the effective value of the stellar
+count rate are probably at the level of a few percent.
+
+(2) Nevertheless, variations in the total count rate during the Uranus
+and Neptune occultations correlate closely with the small changes in
+instrument pointing. We now believe that these are variations in the
+background count rate, caused by changes in the number of off-axis
+photons from the nearby, bright planet finding their way into the
+instrument. It would be hopeless to try to model this variation
+quantitatively.
+
+Therefore, we simply have to live with the uncertainty. This means that
+broad, subtle features in a derived ring profile should always be taken
+with a grain of salt, because changes in the background count rate could
+be involved. If in doubt, one could to check the jitter files to
+determine if the PPS pointing was changing during the period when a
+broad feature is observed. This can at least provide a clue as to
+whether the variation is real, although one could never be certain using
+this data set alone.
+
+9. References
+=============
+
+Black, G., and P. Nicholson 1995. Voyager 2 pointing during stellar
+ring occultations. Report to the Planetary Data System Rings Node.
+
+Coleman, L. 1987a. Voyager 2 electronics temperature calibration.
+Report to the Voyager PPS Team.
+
+Coleman, L. 1987b. A statistical test of the variability of Delta
+Scorpii. Report to the Voyager PPS Team.
+
+Coleman, L. 1987c. A Fourier Transform search for periodicities in
+Delta Scorpii. Report to the Voyager PPS Team.
+
+Coleman, L. 1988. A search for variability in Voyager 2 occultation
+stars. Report to the Voyager PPS Team.
+
+Graps, A.L., and A.L. Lane 1986. Voyager 2 Photopolarimeter experiment:
+Evidence for tenuous outer ring material at Saturn. Icarus 67, 205-210.
+
+Jacobson, R. A., J. E. Riedel, and A. H. Taylor 1991. The orbits of
+Triton and Nereid from spacecraft and Earth-based observations. Astron.
+Astrophys. 247, 565-575.
+
+Porco, C. C. 1991. An explanation for Neptune's ring arcs. Science
+253, 995-1001.
+
+Showalter, M. R., and P. D. Nicholson 1990. Saturn's Rings through a
+microscope: Particle size constraints from the Voyager PPS scan. Icarus
+87, 285-306.
+</pre>
+<hr>
+Return to <a href="index.html">PPS data set page</a>.
+</body>
+</html>

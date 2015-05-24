@@ -1,0 +1,675 @@
+<html>
+<head><title>Voyager PPS AAREADME.TXT</title>
+</head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<center><h1>
+Voyager PPS AAREADME.TXT
+</h1></center>
+Return to <a href="index.html">PPS data set page</a>.
+<hr>
+<pre>
+PDS_VERSION_ID                  = PDS3
+RECORD_TYPE                     = STREAM
+
+DATA_SET_ID                     = "VG2-SR/UR/NR-PPS-2/4-OCC-V1.0"
+
+OBJECT                          = TEXT
+  PUBLICATION_DATE              = 2003-09-30
+  NOTE                          = "General overview of the Voyager 2
+PPS ring occultation data set."
+END_OBJECT                      = TEXT
+END
+
+                VOYAGER 2 PPS RING OCCULTATION ARCHIVE
+                --------------------------------------
+
+1. INTRODUCTION
+
+This volume contains the data from the four Voyager 2 Photopolarimeter
+(PPS) ring occultation experiments: delta Sco at Saturn, sigma Sgr at
+Uranus, beta Per at Uranus, and sigma Sgr at Neptune. The data from
+each experiment is provided in a variety of formats ranging from raw
+to calibrated and resampled. Also provided are ancillary files
+containing geometry, calibration models, and trajectory data, plus
+software tools for manipulating the data.
+
+For more detailed information and guidance about how to work with this
+data set, see the file <a href="tutorial.html">DOCUMENT/TUTORIAL.TXT</a>. Most users will find the
+calibrated, uniformly-sampled ring profiles in the EASYDATA directory
+tree sufficient for their needs. Users wishing to dig further into the
+details of the PPS experiment will probably need only consult the
+EDITDATA, GEOMETRY and CALIB directories. Most other files in this
+archive are provided primarily for documentation purposes and for
+users with very special needs.
+
+This data set represents the first component of a data set collection
+which will also include the Voyager Ultraviolet Spectrometer (UVS) and
+Radio Science (RSS) ring occultation data sets.
+
+Supporting documentation and label files conform to the Planetary Data
+System (PDS) Standards, Version 3.5, Jet Propulsion Laboratory (JPL)
+document JPL D-7669 (October 15, 2002).
+
+2. VOLUME FORMAT
+
+This disk has been formatted according to the ISO 9660 Level 1
+Interchange Standard. This format is compatible with a large variety
+of computer systems (e.g. Sun, DEC, Macintosh, PC). For further
+information, refer to the ISO 9660 Standard Document, RF# ISO
+9660-1988, 15 April 1988.
+
+3. FILE FORMATS
+
+3.1 FILE EXTENSIONS
+
+Files on this volume are named according to PDS standards, where the
+1-3 characters after the period indicate the file type. The file types
+used on this volume are:
+
+Binary files:
+    Images                                      *.IMG, *.GIF
+    Other binary data files                     *.DAT
+    SPICE ephemeris files                       *.BSP
+    Source data files (for documentation only)  *.FOT, *.GS3, *.SCO,
+                                                *.SGR,
+    Postscript documentation files              *.PS, *.EPS
+    Adobe Acrobat documentation files           *.PDF
+
+ASCII text files:
+    PDS labels                                  *.LBL
+    ASCII tables and indices                    *.TAB
+    PDS catalog files                           *.CAT
+    Text documentation files                    *.TXT, *.ASC
+    TeX documentation files                     *.TEX
+    Source code files                           *.C, *.H, *.FOR,
+                                                *.INC, *.PRO, *.F1,
+                                                *.C1, *.H1
+    Software build scripts                      *.COM, *.MAK, *.DEF
+    SPICE kernels                               *.TLS, *.TPC
+    SPICE transfer ephemeris files              *.XSP
+    Pointing files (for documentation only)     *.POI
+    Source data files (for documentation only)  *.LIS
+    Other files (for documentation only)        *.FDS, *.LOG, *.OUT
+
+3.2 PDS LABELS
+
+Every file in this data set is described by an associated PDS label.
+Most files are described by a detached label, which has the same name
+as the corresponding file but an extension ".LBL". Text files (*.TXT,
+*.CAT) have attached labels.
+
+In some cases, all or most of the files in a given directory share a
+single, abbreviated "combined-detached" label. In this case, the name
+of the file is the name of the enclosing directory, with extension
+".LBL".
+
+See the PDS Standards Reference (JPL D-7669) for a complete
+description of the PDS label format. This document can also be found
+online at
+        http://pds.jpl.nasa.gov/stdref/
+
+3.3 ASCII TEXT FILES
+
+Different popular operating systems use different standards for how
+ASCII text files are formatted. On Unix systems, lines are terminated
+by a &lt;LF&gt; (linefeed character, control-J, ASCII 10). On Macintosh
+computers, lines are terminated by a &lt;CR&gt; (carriage return character,
+control-M, ASCII 13). On PCs, lines are terminated by a &lt;CR&gt;&lt;LF&gt; pair.
+PDS standards require all text files to use &lt;CR&gt;&lt;LF&gt; line termination.
+If the PDS label indicates INTERCHANGE_FORMAT = ASCII or RECORD_TYPE =
+STREAM, then this line termination is in use.
+
+On occasion, users on Unix and Macintosh computers may need to change
+the line termination on some text files before they can use them. This
+can be handled via text editors or a variety of utilities. For
+example, the Unix tr (translate) command can be used to change
+carriage returns to blanks:
+    tr "\015" " " &lt;oldfile.txt &gt;newfile.txt
+
+Some ASCII tables indicate RECORD_TYPE = FIXED_LENGTH and include an
+additional parameter RECORD_BYTES, which indicates the length in bytes
+of each record in the file. It should be noted that all ASCII files
+still include the &lt;CR&gt;&lt;LF&gt; line terminators, and these two bytes are
+included in the byte count. For this reason, it is unwise to convert
+the line terminator to a single character (&lt;LF&gt; on Unix or &lt;CR&gt; on
+Macintosh) because this can change the number of bytes per record and
+invalidate the label. In these situations, it is recommended that the
+line terminator be replaced by a space plus &lt;LF&gt; or a space plus &lt;CR&gt;
+instead.
+
+3.4 BINARY FORMATS
+
+The binary data files provided on this volume are tables and images.
+As described in the labels, most binary files consist of one- and
+two-byte integers. For two-byte integers, the least significant byte
+appears first, followed by the most significant byte with (optional)
+sign. Users of PCs and Digital workstations will find that these files
+are in the native machine format. For users of Macintoshes and
+workstations from Sun and Silicon Graphics, binary numbers read from
+these files will need to be byte-swapped first. However, note that the
+software tools included in the SOFTWARE/PROFILE subdirectory take care
+of this conversion automatically.
+
+Some binary files in the SORCDATA and FOVMAPS subdirectories contain
+four-byte (single precision) floating-point numbers in Vax format.
+This is indicated in the label by DATA_TYPE = VAX_REAL or SAMPLE_TYPE
+= VAX_REAL. These are unsupported source data files as provided by
+the original investigators; the same data can be found in integer form
+in the RAWDATA and EDITDATA subdirectories. However, if a user wishes
+to interpret these files, the Vax binary data format (and also every
+other binary format supported by the PDS) is documented in complete
+detail in Appendix C of the PDS Standards Reference (JPL D-7669, Part
+2), which is available online at
+        http://pds.jpl.nasa.gov/stdref/
+
+The SPICE subdirectory contains ephemeris files for Voyager 2 and
+planets and satellites, plus the Sun, Earth, and Moon. These files are
+provided in SPICE format for a variety of platforms. For more
+information about SPICE data and toolkits, consult the PDS Navigation
+and Ancillary Information (NAIF) Node at
+        http://pds.jpl.nasa.gov/naif.html
+
+4. VOLUME CONTENTS
+
+4.1 FILE NAMING CONVENTIONS
+
+ISO-9660 Level 1 standards require that file names be a maximum of
+eight characters. Most of the supported data files provided on this
+volume are based on the following nomenclature:
+
+Characters 1-3: Experiment indicator
+    1st character: P for PPS.
+    2nd character: S for Saturn; U for Uranus; N for Neptune.
+    3rd character: 1-8, indicating a stellar occultation sequence
+                   number at the given planet.
+
+    Based on these rules, the following indicators have been used:
+    PS1   = Saturn delta Sco ring occultation data.
+    PS2   = Extended Saturn delta Sco occultation data.
+    PS3-8 = Star calibration observations (no rings).
+    PU1   = Uranus sigma Sgr ring occultation data.
+    PU2   = Uranus beta Per ring occultation data.
+    PU3-6 = Star calibration observations associated with Uranus (no
+            rings).
+    PN1   = Neptune sigma Sgr ring occultation data.
+
+Character 4: File type
+    C = calibration models.
+    D = edited data.
+    G = geometry files.
+    J = jitter (instrument pointing) files.
+    N = noise data.
+    P = resampled, calibrated profiles.
+    R = raw data.
+    T = trajectory files.
+    V = vector files.
+
+Characters 5-6: Version number
+    A two-digit number indicating the version number of the given file
+    (using a leading zero if necessary). In general, the meaning of
+    this number depends on the experiment and file type.
+
+    Note that the vector files are exceptional in that the fifth
+    character specifies the coordinate system for the vectors. This
+    leaves only the sixth digit to use as a version number.
+
+Characters 7-8: Supplemental
+    These characters are only used when needed to further identify a
+    file. They are used to distinguish rings, ingress vs. egress,
+    coordinate frames, etc. These characters are explained in the
+    *INFO.TXT file in each relevant subdirectory.
+
+These naming rules apply to the files in the CALIB, EASYDATA,
+EDITDATA, GEOMETRY, JITTER, NOISDATA, RAWDATA, TRAJECT and VECTORS
+directories. Non-data files (in the CATALOG, DOCUMENT, INDEX and
+SOFTWARE directories) do not follow these conventions. Also, some
+ancillary files (FOVMAPS, IMAGES, and SPICE) do not. Finally, the
+source data files provided by other investigators (SORCDATA directory)
+have been archived under their original names wherever possible.
+
+4.2 DIRECTORY STRUCTURE
+
+The PPS data set is organized in a directory tree as follows:
+
+FILE                    CONTENTS
+
+(root)                  Root directory for this PDS Volume.
+|
+|-AAREADME.TXT          This file.
+|
+|-ERRATA.TXT            A file describing any known errors or
+|                       deviations from PDS standards.
+|
+|-VOLDESC.CAT           A PDS volume object, providing a high-level
+|                       description of the volume and its contents.
+|
+|-CALIB/                A directory containing calibration models for
+| |                     the ring occultations, in simple ASCII format.
+| |
+| |-CALINFO.TXT         Description of the files in this directory.
+| |
+| |-PxxCnn*.TAB         ASCII data files that tabulate models for the
+| |                     stellar and background photon counts as a
+| |                     function of PPS record index during the given
+| |                     occultation.
+| |-PxxCnn*.LBL         Detached PDS labels for the above.
+|
+|-CATALOG/              A directory containing PDS catalog
+| |                     information, providing high-level descriptions
+| |                     of the data, instruments, etc.
+| |
+| |-CATINFO.TXT         Description of the files in this directory.
+| |
+| |-*.CAT               PDS catalog files describing this data set.
+|
+|-DOCUMENT/             A directory containing useful documentation
+| |                     relating to the data on this volume.
+| |
+| |-DOCINFO.TXT         Description of the files in this directory.
+| |
+| |-BN1995*.*           Files containing the instrument pointing
+| |                     report [BLACK&NICHOLSON1995] in various
+| |                     formats.
+| |
+| |-BN1995/             A subdirectory containing additional files
+| |                     associated with [BLACK&NICHOLSON1995].
+| |
+| |-C1987*.*            Files containing the PPS calibration reports
+| |                     [COLEMAN1987A], [COLEMAN1987B], and
+| |                     [COLEMAN1987C].
+| |
+| |-C1988.*             Files containing the PPS calibration report
+| |                     [COLEMAN1988].
+| |
+| |-GRAP2002.TXT        Supplemental information about calibration and
+| |                     jitter provided by Amara Graps, MPI fuer
+| |                     Kernphysik, August 2002.
+| |
+| |-PDSDD.TXT           Excerpts from the PDS Data Dictionary,
+| |                     defining the keywords appearing in the PDS
+| |                     labels of this data set.
+| |
+| |-POLES.TXT           A memo defining the conversion between ring
+| |                     longitudes in B1950 and J2000 coordinates.
+| |
+| |-TUTORIAL.TXT        A tutorial describing how to use this data
+| |                     set and providing background information.
+| |
+| |-CALIB/              Subdirectories containing programs and
+| |-EDITDATA/           intermediate data files documenting the
+| |-FOVMAPS/            generation of files in the corresponding
+| |-GEOMETRY/           root-level directories. These files are often
+| |-JITTER/             referred to in the *INFO.TXT files and in the
+| |-RAWDATA/            DESCRIPTION fields of individual labels.
+| |-SORCDATA/
+| |-TRAJECT/
+| |-VECTORS/
+|
+|-EASYDATA/             A directory containing calibrated, resampled
+| |                     ASCII profiles of the rings in a form
+| |                     particularly easy to use.
+| |
+| |-DATAINFO.TXT        A description of the files in the
+| |                     subdirectories of this directory.
+| |
+| |-KM000_1/PxxP01*.TAB Ring profiles at 0.1 km resolution.
+| |-KM000_2/PxxP01*.TAB Ring profiles at 0.2 km resolution.
+| |-KM000_5/PxxP01*.TAB Ring profiles at 0.5 km resolution.
+| |-KM001/PxxP01*.TAB   Ring profiles at 1 km resolution.
+| |-KM002/PxxP01*.TAB   Ring profiles at 2 km resolution.
+| |-KM005/PxxP01*.TAB   Ring profiles at 5 km resolution.
+| |-KM010/PxxP01*.TAB   Ring profiles at 10 km resolution.
+| |-KM020/PxxP01*.TAB   Ring profiles at 20 km resolution.
+| |-KM050/PxxP01*.TAB   Ring profiles at 50 km resolution.
+| |-KM*/PxxP01*.LBL     Detached PDS labels for each of the above.
+|
+|-EDITDATA/             A directory containing edited data files.
+| |                     These have been carefully cleaned and
+| |                     reformatted and should be the easiest binary
+| |                     files to use.
+| |
+| |-DATAINFO.TXT        A description of the files in this directory.
+| |
+| |-PxxDnn*.DAT         Edited data files.
+| |-PxxDnn*.LBL         Detached PDS labels for the above.
+|
+|-FOVMAPS/              A directory containing the PPS 1-degree field
+| |                     of view map in various formats.
+| |
+| |-DATAINFO.TXT        A description of the files in this directory.
+| |
+| |-FOVMAP.GIF          The PPS field of view map in GIF format.
+| |-FOVMAP.LBL          A detached PDS label for the above.
+| |
+| |-FOVMAPnn.DAT        The PPS field of view map as a simple binary
+| |                     file in Vax real, IEEE real, and integer
+| |                     formats.
+| |-FOVMAP.LBL          Detached PDS labels for the above.
+|
+|-GEOMETRY/             A directory containing footprint geometry
+| |                     models for the ring occultations, in simple
+| |                     ASCII format.
+| |
+| |-GEOMINFO.TXT        Description of the files in this directory.
+| |
+| |-PxxGnn*.TAB         ASCII data files that tabulate models for the
+| |                     ring intercept geometry as a function of PPS
+| |                     record index during the given occultation.
+| |-PxxGnn*.LBL         Detached PDS labels for the above.
+|
+|-IMAGES/               A directory containing support images obtained
+| |                     during each of the Voyager occultations.
+| |
+| |-DATAINFO.TXT        Description of the images in this directory.
+| |
+| |-C1138nnn.IMG        VICAR format images supporting the Neptune
+| |                     sigma Sgr occultation. The 7-digit number is
+| |                     the associated FDS count.
+| |-C2683058.IMG        VICAR format image supporting the Uranus sigma
+| |                     Sgr occultation.
+| |-C2684902.IMG        VICAR format image supporting the Uranus beta
+| |                     Per occultation.
+| |-C4400349.IMG        VICAR format image supporting the Saturn delta
+| |                     Sco occultation.
+| |-*.LBL               Detached PDS labels for each of the above.
+|
+|-INDEX/                A directory containing indices of the files in
+| |                     this data set.
+| |
+| |-INDXINFO.TXT        Description of the files in this directory.
+| |
+| |-INDEX.TAB           A table of all the data files on this volume.
+| |-INDEX.LBL           A detached PDS label for the above, defining
+|                       each column in the table.
+|
+|-JITTER/               A directory containing jitter (instrument
+| |                     pointing) models during the occultations.
+| |
+| |-DATAINFO.TXT        Description of the files in this directory.
+| |
+| |-PxxJnn*.TAB         ASCII data files that tabulate models for the
+| |                     instrument pointing as a function of PPS
+| |                     record index during the given occultation.
+| |-PxxJnn*.LBL         Detached PDS labels for the above.
+|
+|-NOISDATA/             A directory containing edited data files in
+| |                     which all ring signal has been removed,
+| |                     leaving only noise. These files were used for
+| |                     some calibration solutions.
+| |
+| |-DATAINFO.TXT        A description of the files in this directory.
+| |
+| |-PxxNnn*.DAT         Edited noise data files.
+| |-PxxNnn*.LBL         Detached PDS labels for the above.
+|
+|-RAWDATA/              A directory containing raw data files. These
+| |                     files contain the same values as found in the
+| |                     SORCDATA directories but have been
+| |                     re-formatted for ease of use.
+| |
+| |-DATAINFO.TXT        A description of the files in this directory.
+| |
+| |-PxxRnn*.DAT         Raw data files.
+| |-PxxNnn*.LBL         Detached PDS labels for the above.
+|
+|-SOFTWARE/             A directory containing software libraries to
+| |                     support the processing and analysis of the PPS
+| |                     data set.
+| |
+| |-SOFTINFO.TXT        Description of the files in the subdirectories
+| |                     of this directory.
+| |
+| |-OAL/                A subdirectory containing the source code and
+| |                     documentation for version 1.3 of the PDS
+| |                     Object Access Library and version 1.2 of the
+| |                     PDS Light Label Library.
+| |
+| |-PROFILE/            A subdirectory containing the source code and
+|                       documentation for version 1.1 of the Rings
+|                       Node's Profile Library.
+|
+|-SORCDATA/             A directory containing "source" data files as
+|                       originally provided to the Rings Node. These
+|                       files are included for documentation purposes
+|                       only and are not otherwise supported. See the
+|                       RAWDATA directory for supported files.
+|
+|-SPICE/                A directory containing SPICE ephemeris files
+| |                     for the Voyager 2 encounters with Saturn,
+| |                     Uranus and Neptune.
+| |
+| |-DATAINFO.TXT        Description of the files in this directory
+| |                     tree.
+| |
+| |-NAIF0007.TLS        The latest leap seconds file for the SPICE
+| |                     toolkit.
+| |-NAIF0007.LBL        A detached PDS label for the above.
+| |
+| |-PCK00006.TPC        The latest body constants file for the SPICE
+| |                     toolkit.
+| |-PCK00006.LBL        A detached PDS label for the above.
+| |
+| |-IEEE/               A subdirectory containing binary ephemeris
+| | |                   files in SPICE format for machines that use
+| | |                   IEEE floating-point format (e.g. Sun, Silicon
+| | |                   Graphics, Macintosh).
+| | |
+| | |-VG2_SAT.BSP       Ephemeris for the Voyager 2 Saturn encounter.
+| | |-VG2_SAT.LBL       A detached PDS label for the above.
+| | |
+| | |-VG2_URA.BSP       Ephemeris for the Voyager 2 Uranus encounter.
+| | |-VG2_URA.LBL       A detached PDS label for the above.
+| | |
+| | |-VG2_NEP.BSP       Ephemeris for the Voyager 2 Neptune encounter.
+| | |-VG2_NEP.LBL       A detached PDS label for the above.
+| |
+| |-PC/                 A subdirectory containing files identical to
+| |                     those in the IEEE subdirectory, except in PC
+| |                     binary (i.e. byte-swapped IEEE) format. This
+| |                     is also the correct format for DEC Alpha
+| |                     workstations running Unix.
+| |
+| |-VAXG/               A subdirectory containing files identical to
+| |                     those in the IEEE subdirectory, except in VAXG
+| |                     binary format, appropriate for DEC Alpha
+| |                     workstations running VMS.
+| |
+| |-TRANSFER/           A subdirectory containing the same ephemeris
+|                       files as the IEEE subdirectory, except in the
+|                       SPICE "transfer" (.XSP) ASCII format. These
+|                       can be translated to binary for any platform
+|                       on which the SPICE toolkit has been
+|                       implemented.
+|
+|-TRAJECT/              A directory containing trajectory models for
+| |                     Voyager during the ring occultations.
+| |
+| |-DATAINFO.TXT        Description of the files in this directory.
+| |
+| |-PxxTnn*.TAB         ASCII data files that tabulate the trajectory
+| |                     of Voyager as a function of PPS record index
+| |                     during the given occultation.
+| |-PxxTnn*.LBL         Detached PDS labels for the above.
+|
+|-VECTORS/              A directory containing vector position tables
+  |                     from which additional geometry parameters can
+  |                     be derived.
+  |
+  |-DATAINFO.TXT        Description of the files in this directory.
+  |
+  |-B1950/              A subdirectory containing vector tables based
+  | |                   on the B1950 coordinate frame.
+  | |
+  | |-PxxVCn*.TAB       Vectors in B1950 celestial coordinates.
+  | |
+  | |-PxxVEn*.TAB       Vectors in planet equator coordinates, where
+  | |                   the Z-axis points along the planet's pole.
+  | |                   The longitude reference is Earth's B1950
+  | |                   equator.
+  | |
+  | |-PUxVRn*.TAB       Vectors in ring plane coordinates, where the
+  | |                   Z-axis points normal to the ring plane. The
+  | |                   longitude reference is Earth's B1950 equator.
+  | |                   Provided for Uranus only.
+  |
+  |-J2000/*.TAB         A subdirectory containing vector tables based
+  |                     on the J2000 coordinate frame. File names are
+  |                     identical to those found in the B1950
+  |                     subdirectory.
+  |
+  |-RINGANOM/           A subdirectory containing vector tables in
+    |                   ring anomaly coordinates.
+    |
+    |-PUxVAn*.TAB       Vectors in ring anomaly coordinates, where the
+                        Z-axis points normal to the ring plane and the
+                        longitude reference is the ring's pericenter.
+                        Provided for Uranus only.
+
+5. CONTACT INFORMATION
+
+PDS Rings Node personnel:
+
+    Mark Showalter
+    SETI Institute
+    515 N. Whisman Road
+    Mountain View, CA 94043
+    650-810-0234
+    mshowalter@seti.org
+
+or
+
+    Mitch Gordon
+    SETI Institute
+    515 N. Whisman Road
+    Mountain View, CA 94043
+    276-523-0341
+    mgordon@seti.org
+
+or
+
+    Neil Heather
+    SETI Institute
+    515 N. Whisman Road
+    Mountain View, CA 94043
+    650-810-0243
+    nheather@seti.org
+
+    http://pds-rings.seti.org/
+
+For software, data, and further information regarding SPICE data,
+contact the PDS Navigation and Ancillary Information Node:
+
+    Charles Acton
+    Jet Propulsion Laboratory
+    Mail Stop 301-125L
+    4800 Oak Grove Drive
+    Pasadena, CA
+    818-354-3869
+    charles.h.acton@jpl.nasa.gov
+
+    http://pds.jpl.nasa.gov/naif.html
+
+The PPS team members who carried out the observations archived in this
+data set, as of 1986, area as follows. (Note that we have provided
+up-to-date contact information where if was available):
+
+    Arthur L. Lane
+    Jet Propulsion Laboratory
+    Mail Stop 306-473
+    4800 Oak Grove Dr.
+    Pasadena, CA 91109
+
+    Bonnie J. Buratti
+    Jet Propulsion Laboratory
+    Mail Stop 183-501
+    4800 Oak Grove Dr.
+    Pasadena, CA 91109
+
+    Larry W. Esposito
+    University of Colorado
+    LASP
+    Campus Box 392
+    Boulder, CO 80309
+
+    Amara L. Graps
+    Max Planck Institut fuer Kernphysik
+    Saupfercheckweg 1
+    Heidelberg, D-69117
+    GERMANY
+
+    Charles W. Hord
+    University of Colorado
+    LASP
+    Campus Box 475
+    Boulder, CO 80309
+
+    Robert M. Nelson
+    Jet Propulsion Laboratory
+    Mail Stop 183-501
+    4800 Oak Grove Dr.
+    Pasadena, CA 91109
+
+    Wayne R. Pryor
+    University of Colorado
+    LASP
+    1234 Innovation Drive
+    Boulder, CO 80309
+
+    Karen E. Simmons
+    University of Colorado
+    1234 Innovation Drive
+    Boulder, CO 80309
+
+    Linda J. Spilker
+    Jet Propulsion Laboratory
+    Mail Stop 183-501
+    4800 Oak Grove Dr.
+    Pasadena, CA 91109
+
+    Brad D. Wallis
+    Jet Propulsion Laboratory
+    Mail Stop 300-233
+    4800 Oak Grove Dr.
+    Pasadena, CA 91109
+
+    Robert A. West
+    Jet Propulsion Laboratory
+    Mail Stop 169-237
+    4800 Oak Grove Dr.
+    Pasadena, CA 91109
+
+======================================================================
+ACKNOWLEDGMENTS
+======================================================================
+
+We thank Joshua Colwell, Amara Graps, Jay Holberg, Philip Nicholson,
+Karen Simmons and Linda Spilker for their extensive help in locating
+the data files and documents archived herein.
+
+Joshua Colwell, Amara Graps, Ron Joyner, and Richard Simpson provided
+extensive, helpful comments as part of the peer review.
+
+Additional assistance with the archiving was provided by Ken Bollinger
+and Peter Mariani during their stints at the PDS Rings Node.
+
+======================================================================
+DISCLAIMER
+======================================================================
+
+Although considerable care has gone into making this volume, errors
+are both possible and likely. Users of the data are advised to
+exercise the same caution as they would when dealing with any other
+unknown data set.
+
+Reports of errors or difficulties would be appreciated. Please
+contact Mark Showalter, Mitch Gordon, or Neil Heather at the addresses
+listed above.
+</pre>
+<hr>
+Return to <a href="index.html">PPS data set page</a>.
+</body>
+</html>

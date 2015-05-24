@@ -1,0 +1,81 @@
+---
+layout: base
+---
+
+# Uranus Moon Tracker Help
+
+This form enables you to generate a Postscript file showing the east-west
+motion of Uranian satellites within a specified time period. The distance of
+each selected moon from the planet's axis is plotted in units of either arcsec
+or Uranus radii. Positive values correspond to bodies on the "morning" (east)
+side of Uranus and negative values by the "evening" (west) side. In the
+diagram, the limbs of Uranus are indicated by a dark gray stripe down the
+middle. The location of the Epsilon Ring can be added as a band in lighter
+gray. Time increases downward on the plot.
+
+The Tracker tool also allows you to download an ASCII table containing the
+numeric values that went into the diagram. The file contains a single header
+line followed by the numbers. Columns are as follows:
+
+Modified Julian Date (UTC)  
+Year  
+Month  
+Day  
+Hour  
+Minute  
+Projected equatorial radius of planet (arcsec)  
+Distance of first moon from planet's axis (arcsec)  
+Distance of second moon from planet's axis (arcsec)  
+etc.
+
+## Change History
+
+**1.0** (February 3, 1997): Original Uranus moon tracker on line.   
+**1.1** (February 8, 1997): Older ephemerides URA027 and URA032 added, making it possible to generate diagrams for a longer range of times.   
+**2.0** (January 12, 1999): Revised user interface. Added two new ephemeris options.   
+**2.1** (August 24, 2006): Added Perdita, Mab and Cupid.   
+**2.3** (November 9, 2009): Updated the default ephemerides. To reduce confusion, we have removed the choice about what ephemeris to use. Version number modified for consistency with the other Uranus tools.   
+**2.5** (January 23, 2013): Renumbered for consistency across all the Moon Tracker tools. Ephemeris updates. 
+
+## Time Limits
+
+The start and stop times (UTC) of the plot can be entered in a variety of
+formats. For example, the following all parse to 0:01:02 UTC on July 4, 1976:
+
+  * `1976-JUL-04 00:01:02.00`
+  * `July 4, 1976 12:01:02 am`
+  * `12:01:02 am July 4, 1976`
+  * `1976-07-04T00:01:02Z` (_PDS format_)
+  * `MJD 42963.00071759259`
+  * `JD 2442963.50071759259`
+If you want the gory details of how times are interpreted, click
+[here](time_formats.html).
+
+**Interval**: Enter the time interval to be used for the tabulation as a number in the box, and select the time unit from the choices provided. Start times and intervals are rounded to the nearest minute. 
+
+## Plot Options
+
+**Scale**: Enter the numeric range and units of the horizontal axis. The value you enter is actually half the width of the diagram; for example, if you enter 10 Uranus radii, then the axis will run from -10 to 10. Zero always falls at the middle of the plot. 
+
+**Title**: Enter a title for the plot in this box. It will appear centered above the diagram. 
+
+## Moon Selection
+
+Click on the box to the left of each moon that you wish to include in the
+diagram and in the tabulation.
+
+## Ring Selection
+
+Click on the box to include the outer boundary of the ring system (i.e. the
+Epsilon ring semimajor axis) in the plot. It will appear as a vertical gray
+stripe on each side of the planet.  
+
+* * *
+
+[Uranus Moon Tracker Form](tracker2_ura.html) | [Rings Node Tools](index.html)
+| [Rings Node Home](/)
+
+Last updated 23 January 2013.
+
+[Mark Showalter](/showalter/)
+

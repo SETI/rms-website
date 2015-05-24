@@ -1,0 +1,106 @@
+---
+layout: base
+---
+
+# Voyager ISS Data Set References
+
+**BARROS1988**
+
+Barros, P. A., Voyager Flight Data System Flight Software Description,
+Reissued January 1988, 618-236, Rev. A., Jet Propulsion Laboratory, California
+Institute of Technology, Pasadena, California, JPL D-1772, 1988.
+**BENESH1978**
+
+Benesh, M., P. Jepsen, Voyager Imaging Science Subsystem Calibration Report,
+Voyager Document Number 618-802, Jet Propulsion Laboratory, California
+Institute of Technology, Pasadena, California, 1978.  **DANIELSONETAL1981**
+
+Danielson, G. E., _et al_., Radiometric Performance of the Voyager Cameras,
+_Journal of Geophysical Research_, **86**, 8683-8689, 1981.  **HARCH1987**
+
+Harch, A. P., IPPS Boresight Offset Database Validation, JPL Interoffice
+Memorandum, VGR-006-87.  **HARCH1988A**
+
+Harch, A. P., IPPS Boresight Offset Database Update Philosophy and Offset
+Update for Voyager 2 Wide Angle Camera and PPS, JPL Interoffice Memorandum,
+VGR-002-88.  **HARCH1988B**
+
+Harch, A. P., IPPS Boresight Offset Database Update for the Voyager-2 Scan-
+platform Instruments, JPL Interoffice Memorandum, VGR-003-88.  **HARCH1988C**
+
+Harch, A. P., IPPS Boresight Offset Database Update Clarification, JPL
+Interoffice Memorandum, Voyager-APH-88-007.  **JGRV88**
+
+_Journal of Geophysical Research_., **88**, 8,625-9,019, 1983.  **JGRV92**
+
+_Journal of Geophysical Research_., **92**, 14,873-15,376, 1987.  **JPL
+D-2468**
+
+Multimission Image Processing Laboratory, Real-Time Processing Subsystem,
+Software Design Document, Jet Propulsion Laboratory, California Institute of
+Technology, Pasadena, California, JPL D-2468, 1985.  **JPL D-498**
+
+Voyager Neptune/Interstellar Mission Flight Science Office, Science and
+Missions Systems Handbook, Rev. D, Jet Propulsion Laboratory, California
+Institute of Technology, Pasadena, California, JPL D-498, 1987.
+**MARTINETAL1985**
+
+Martin, M., Stanley, C., Laughlin, G., Planetary Image Conversion Task, Final
+Report JPL Publication 85-50, 1985  **NAVE1980**
+
+Nave, E. L., Voyager Spaceflight Operations Plan, Volume IV, Sec. IV, Rev. B,
+618-505, Spaceflight Telemetry Dictionary and Launch Operational Limits,
+Reissued 21 July 1980, Jet Propulsion Laboratory, California Institute of
+Technology, Pasadena, California, 1980.  **SCIENCEV204N4392**
+
+_Science_, Vol. 204, No. 4392, 1979.  
+This issue of Science provides a detailed account of Voyager 1's encounter
+with Jupiter.  **SCIENCEV206N4421**
+
+_Science_, Vol. 206, No. 4421, 1979.  
+This issue of Science provides a detailed account of Voyager 2's encounter
+with Jupiter.  **SCIENCEV212N4491**
+
+_Science_, Vol. 212, No. 4491, 1981.  
+This issue of Science provides a detailed account of Voyager 1's encounter
+with Saturn.  **SCIENCEV215N4532**
+
+_Science_, Vol. 215, No. 4532, 1982.  
+This issue of Science provides a detailed account of Voyager 2's encounter
+with Saturn.  **SCIENCEV233N4759**
+
+_Science_, Vol. 233, No. 4759, 1986.  
+This issue of Science provides a detailed account of Voyager 2's encounter
+with Uranus.  **SCIENCEV246N4936**
+
+_Science_, Vol. 246, No. 4936, 1989.  
+This issue of Science provides a detailed account of Voyager 2's encounter
+with Neptune.  **SIS4-7008-2**
+
+Software Interface Specification, ISS PI SEDR Processor, Rev. B, SIS 4-7008-2,
+January 27, 1989, Jet Propulsion Laboratory, California Institute of
+Technology, Pasadena, California.  **SNYDER,L1979**
+
+Snyder, Leonard, Television optics for the Voyager Mission to Jupiter and
+Saturn, _Proceedings of the Society of Photo-Optical Instrumentation
+Engineers_, v. 183, 1979.  **SSRV21N2**
+
+This issue of Space Science Reviews is a collection of the first six of twelve
+papers providing a detailed description of the Voyager objectives and
+investigations of the Jupiter and Saturn planetary systems. Papers seven
+through twelve appear _Space Science Reviews_, Vol. 21, No.3, 1977. _Space
+Science Reviews_, Vol. 21, No. 2, 1977.  **SSRV21N3**
+
+This issue of Space Science Reviews is a collection of six papers, seven
+through twelve, providing a detailed description of the Voyager objectives and
+investigations of the Jupiter and Saturn planetary systems. Papers one through
+six appear in _Space Science Reviews_, Vol. 21, No. 2, 1977. _Space Science
+Reviews_, Vol. 21, No. 3, 1977.
+
+* * *
+
+[ISS Data Set](dataset_info.html) | [Voyager Mission](/voyager/voyager.html) |
+[Rings Node Home](/)
+
+Last updated 27 August 2003
+

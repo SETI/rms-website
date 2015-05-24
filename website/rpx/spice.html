@@ -1,0 +1,78 @@
+---
+layout: base
+---
+
+# What is a SPICE file?
+
+The Navigation and Ancillary Information Facility (NAIF) Node of the Planetary
+Data System is responsible for the design, implementation and operation of the
+SPICE information system--**a means for providing ancillary observation
+geometry data and related tools used in the planning and interpretation of
+science instrument observations returned from planetary spacecraft.**
+
+The SPICE acronym comes from:  **S** | Spacecraft  
+---|---  
+**P** | Planet  
+**I** | Instrument  
+**C** | "C-matrix"  
+**E** | Events  
+  
+SPICE data files, called kernels, exist for spacecraft trajectory (S), planet,
+satellite, comet and asteroid ephemerides and associated physical and
+cartographic constants (P), instrument information, including mounting
+alignment and other relevant geometric information (I), orientation of
+spacecraft structures upon which science instruments are mounted (C); and
+spacecraft and ground data system events, both planned and unplanned (E).
+
+The [PDS NAIF node](http://pds.jpl.nasa.gov/naif.html) provides SPICE users a
+portable ANSI FORTRAN 77 toolkit that contains readers subroutines for
+retrieving data from each of the SPICE kernels, plus a wide assortment of
+geometry, math, and utility modules useful in computing instrument observation
+geometry parameters: examples are range, optic axis intercept latitude and
+longitude, and phase, incidence, and emission angles. The NAIF toolkit also
+includes utility and demonstration programs, and is accompanied by extensive
+user-focused documentation.
+
+The NAIF node is responsible for archiving and distributing SPICE kernel files
+produced by NASA's planetary flight projects. NAIF also assembles and
+distributes generic planet, satellite, comet, and asteroid ephemeris files, in
+SPICE format, used for a wide assortment of mission evaluation, observation
+planning and data analysis tasks. These generic ephemeris files are based on
+products provided by JPL's Solar System Dynamics Group. (NAIF does not
+generally produce or distribute SPICE files for active flight projects; the
+project has this responsibility.)
+
+While NASA's planetary missions were the original focus of SPICE development,
+today the system is being used, or considered for use, on flight projects in
+other disciplines (astrophysics, space physics and Earth science) and in other
+countries.
+
+NAIF's products are available to scientists participating in the activities of
+NASA's Office of Space Science (Code S). Support for other scientists is
+offered to the extent permitted by NASA and Caltech/JPL policies and limited
+NAIF resources.
+
+Potential users are advised that programming and science/math skills at an
+advanced college level are needed to utilize SPICE products. Users must have a
+computer with 25-50 Mbytes of disk space, 8 Mbytes of available RAM and a
+FORTRAN compiler. (Resource requirements vary from platform to platform and on
+the user's application.) The user's own code must be capable of calling
+FORTRAN modules. Internet ftp capability is needed to obtain the necessary
+SPICE components.
+
+  * [SUPPORTED MISSIONS](http://pds.jpl.nasa.gov/naifmsn.html) \- (NAIF Node) 
+
+  * [CONTACTING NAIF](http://pds.jpl.nasa.gov/naifcont.html) \- (NAIF Node) 
+
+  * [RELATED CONTACT INFORMATION](http://pds.jpl.nasa.gov/naifrelat.html) \- (NAIF Node) 
+
+* * *
+
+Go back to the :
+
+  * [Saturn Ring Plane Crossing Campiagn Page](campaign.html#ephem)  
+
+    * [Planetary Rings Homepage](/)  
+
+(Information reformatted from NAIF node)
+

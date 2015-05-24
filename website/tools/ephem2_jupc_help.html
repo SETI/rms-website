@@ -1,0 +1,86 @@
+---
+layout: base
+---
+
+# Cassini/Jupiter Ephemeris Generator Help
+
+This form enables you to generate a table listing useful information about
+Cassini's viewing geometry for Jupiter and/or any of its moons as a function
+of time. You are free to specify which of a variety of useful quantities to
+tabulate. The file returned will contain a single header line describing each
+column, followed by one row of numbers for each time step.
+
+## Change History
+
+**1.0** (July 29, 2004): Original Jupiter Ephemeris Generator for Cassini on line.   
+**1.1** (December 1, 2009): Updated the default ephemerides. To reduce confusion, we have removed the choice about what ephemeris to use.   
+**1.5** (January 23, 2013): Raised the maximum number of output lines to 10,000. Renumbered for consistency across all the Ephemeris Generator tools. Ephemeris updates. 
+
+## Time Limits
+
+The start and stop times (UTC) of the table can be entered in a variety of
+formats. For example, the following all parse to 0:01:02 UTC on July 4, 1976:
+
+  * `1976-JUL-04 00:01:02.00`
+  * `1976-186 00:01:02.00`
+  * `July 4, 1976 12:01:02 am`
+  * `12:01:02 am July 4, 1976`
+  * `1976-07-04T00:01:02Z` (_PDS format_)
+  * `MJD 42963.00071759259`
+  * `JD 2442963.50071759259`
+If you want the gory details of how times are interpreted, click
+[here](time_formats.html).
+
+Enter the time interval to be used for the tabulation as a number in the box,
+and select the time unit from the choices provided. This tool works for the
+time interval June 15, 2000 to March 12, 2004.
+
+## General Column Selection
+
+Click on the box to the left of each quantity or set of quantities that you
+wish to tabulate. The order of the columns in the table will match the order
+listed on the form. Possible selections are as follows:
+
+  * Year, Month, Day, Hour, Minute Adds five columns containing the UTC date (year, month, day) and time (hours, minutes) as integers.
+  * Year, Month, Day, Hour, Minute, Second Adds six columns containing the UTC date (year, month, day) and time (hours, minutes, seconds) as integers.
+  * Year, DOY, Hour, Minute Adds four columns containing the UTC date (year, day-of-year) and time (hours, minutes) as integers.
+  * Year, DOY, Hour, Minute, Second Adds five columns containing the UTC date (year, day-of-year) and time (hours, minutes, seconds) as integers.
+  * Modified Julian Date Adds a column containing the Modified Julian Date, a common method of designating dates and times in astronomy. MJD is equal to the number of (possibly fractional) days elapsed since 0:00 UTC on 17 November 1858.
+  * Spacecraft-Jupiter distance Adds a column containing the Spacecraft-Jupiter distance, in km.
+  * Jupiter phase angle Adds a column containing the phase angle of Jupiter as seen from the spacecraft, in degrees.
+  * Ring opening angle to the spacecraft Adds a column containing the ring plane opening angle to the spacecraft, in degrees.
+  * Ring opening angle to Sun Adds a column containing the ring plane opening angle to the Sun, in degrees.
+  * Sub-spacecraft inertial longitude Adds a column containing the sub-spacecraft longitude at Jupiter, in degrees. This is measured from the J2000 ascending node of the planet's equatorial plane. Note that it is an inertial longitude, not measured in a frame rotating with the planet.
+  * Sub-solar inertial longitude Adds a column containing the sub-solar longitude at Jupiter, in degrees. This is measured from the J2000 ascending node of the planet's equatorial plane. Note that it is an inertial longitude, not measured in a frame rotating with the planet.
+  * Sub-spacecraft planetocentric latitude and rotating longitude Adds a pair of columns containing the sub-spacecraft latitude and longitude at Jupiter, in degrees. These are measured in a frame rotating with the planet.
+  * Sub-solar planetocentric latitude and rotating longitude Adds a pair of columns containing the sub-solar latitude and longitude at Jupiter, in degrees. These are measured in a frame rotating with the planet.
+  * Sun-Jupiter distance Adds a column containing the Sun-Jupiter distance, in km.
+  * Jupiter RA and Dec Adds two columns containing the J2000 right ascension and declination of Jupiter. RA is tabulated in units of hours; declinations is in units of degrees.
+  * Earth RA and Dec Adds two columns containing the J2000 right ascension and declination of Earth. RA is tabulated in units of hours; declinations is in units of degrees.
+  * Sun RA and Dec Adds two columns containing the J2000 right ascension and declination of the Sun. RA is tabulated in units of hours; declinations is in units of degrees.
+
+## Moon Columns
+
+You may also include information about the viewing geometry on any set of
+inner Jupiterian moons in the table. Up to six sets of quantities can be
+tabulated for each selected moon:
+
+  * Spacecraft-Satellite distance Adds a column containing the spacecraft-satellite distance, in km.
+  * Satellite phase angle Adds a column containing the phase angle of the satellite as seen from the spacecraft, in degrees.
+  * Sub-spacecraft latitude and rotating longitude Adds a pair of columns containing the sub-spacecraft latitude and longitude on the selected moon, in degrees. These are measured in a frame rotating with the body.
+  * Sub-solar planetocentric latitude and rotating longitude Adds a pair of columns containing the sub-solar latitude and longitude on the selected moon, in degrees. These are measured in a frame rotating with the body.
+  * RA and dec Adds a pair of columns containing the J2000 right ascension and declination for each selected moon. RA values are given in units of hours; dec values are given in degrees.
+  * Offset RA and dec Adds a pair of columns containing the positional offset of each moon from the center of the planet. Values are given in units of degrees, where the first value is the offset in the direction of increasing J2000 RA and the second is in the direction of increasing dec.
+
+Finally, click on the box to the left of each moon that you wish to include in
+the table. Note that it is not necessary to include any moon columns at all.
+
+* * *
+
+[Jupiter Ephemeris Generator Form](ephem2_jupc.html) | [Rings Node
+Tools](index.html) | [Rings Node Home](/)
+
+Last updated 23 January 2013.
+
+[Mark Showalter](/showalter/)
+

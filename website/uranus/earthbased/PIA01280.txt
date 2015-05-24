@@ -1,0 +1,49 @@
+Hubble Captures Detailed Image of Uranus' Atmosphere
+
+This false color image also shows the planet's rings.
+
+Hubble Space Telescope has peered deep into Uranus' atmosphere to see
+clear and hazy layers created by a mixture of gases.  Using infrared
+filters, Hubble captured detailed features of three layers of Uranus'
+atmosphere.
+
+<P>
+
+Hubble's images are different from the ones taken by the Voyager 2
+spacecraft, which flew by Uranus 10 years ago.  Those images - not
+taken in infrared light - showed a greenish-blue disk with very little
+detail.
+
+<P>
+
+The infrared image allows astronomers to probe the structure of
+Uranus' atmosphere, which consists of mostly hydrogen with traces of
+methane. The red around the planet's edge represents a very thin haze
+at a high altitude. The haze is so thin that it can only be seen by
+looking at the edges of the disk, and is similar to looking at the
+edge of a soap bubble. The yellow near the bottom of Uranus is another
+hazy layer. The deepest layer, the blue near the top of Uranus, shows
+a clearer atmosphere.
+
+<P>
+
+Image processing has been used to brighten the rings around Uranus so
+that astronomers can study their structure. In reality, the rings are
+as dark as black lava or charcoal.
+
+<P>
+
+This false color picture was assembled from several exposures taken
+July 3, 1995 by the Wide Field Planetary Camera-2.
+
+<P>
+
+<DT><B>Image Note:</B> <dd>CREDIT: Erich Karkoschka (University of Arizona Lunar &
+Planetary Lab) and NASA
+</DL>
+
+<BR>
+<DT><B>Alternative source:</B> <dd>
+Space Telescope Science Institute
+<A HREF="http://oposite.stsci.edu/pubinfo/pr/96/15/A.html">
+STSci-PRC96-15</A>

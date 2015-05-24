@@ -1,0 +1,18 @@
+Rings of Jupiter Star Trail
+
+Trails due to camera motion can be seen in this rings image.
+
+The rings of Jupiter proved to be unexpectedly bright when seen with
+the Sun nearly behind them. Strong forward scattering of sunlight is
+characteristic of small particles. This view was obtained by Voyager 2
+on July 10 from a perspective inside the shadow of Jupiter. The
+distance of the spacecraft from the rings was about 1.5 million
+kilometers. Although the resolution has been degraded by camera motion
+during the time exposures, these images reveal the rings have some
+radial structure.
+
+<P>
+
+<DT><B>Image Note:</B> <dd>PICNO 0206J2+001, Caption is from 'Voyage to Jupiter'
+NASA SP-439 (p.112)
+</DL>
