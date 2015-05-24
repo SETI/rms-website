@@ -1,17 +1,24 @@
-<nav>
 
+<nav>
   <ul>
+
     {% for section in site.data.nav %}
 
     <li class="subheading">
       <a href="{{ section.href }}"> {{ section.title }}</a>
     
       <ul class="submenu">
-    
+
         {% for item in section.submenu %} 
 
-          <li>
+          {% capture url %}{{ item.href }}index.html{% endcapture %}
+          <li
+            {% if url == page.url %}
+              class = "active" 
+            {% endif %}
+          >
             <a href = "{{ item.href }}">{{ item.title }}</a>
+
           </li>
 
         {% endfor %}

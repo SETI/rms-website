@@ -1,3 +1,15 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
+
 body {
   background-color: #585858;
   font-family: 'Open Sans', sans-serif;
@@ -201,7 +213,11 @@ h4 {
 .nav-container .submenu li a:active {
 	color: #31488d;
 }
-
+.nav-container .submenu li.active {
+  background-color: #ffffff; 
+  border-left: 5px solid #fffa93;
+  padding-left: -15px;
+}
 
 /* tabs */
 ul.tab-pill-group {

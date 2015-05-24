@@ -1,5 +1,8 @@
+# all internal links must end in a / 
+# so every href field that points inside
+# this drives the nav's active styles when on a matching page
 - title: Cassini News
-  href: /cassini/news
+  href: /cassini/news/
   submenu: 
 
     - title: Cassini Mission (JPL)
@@ -12,7 +15,7 @@
       href: /cassini/
 
 - title: Ringed Planets
-  href: /ringed-planets
+  href: /ringed-planets/
   submenu:
 
     - title: Jupiter
