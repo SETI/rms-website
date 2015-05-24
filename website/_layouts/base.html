@@ -19,7 +19,10 @@
             {% include tabs.html %}
           {% endif %}
 
-          <div class = "col-md-10">
+            {% if page.layout_type == blank %}
+              <div class = "col-md-10">
+            {% endif %}
+
               {% if page.format == 'html' %}
 
                 {{ content }}
@@ -29,7 +32,11 @@
                 {{ content | markdownify}}
 
               {% endif %}
-          </div>
+
+            {% if page.layout_type == blank %}
+              </div>
+            {% endif %}
+
 
         </div>
 
