@@ -10,3 +10,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Build settings
 markdown: kramdown
+keep_files: []
+
+# copy this and remove the one you want to watch during jekyll serve --watch
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
+exclude: [roses, ringocc, resonance, neptune, jupiter, glossary.html, feed.xml, cassini, astrometry, uranus, tools, toolkits, saturn, voyager]
