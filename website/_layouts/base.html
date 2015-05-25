@@ -4,7 +4,15 @@
   {% include head.html %}
 
   <body>
+
     <div class="container">
+
+    {% if page.url == '/index.html' %}
+
+      <h1 class = "hidden"> 
+        The Planetary Rings Node
+      </h1>
+    {% endif %}
 
       <div class = "row">
         {% include header.html %}
