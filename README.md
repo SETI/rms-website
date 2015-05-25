@@ -12,8 +12,17 @@ http://ringsnodewebsite.beforeamillionuniverses.com/
 
 Local deployment: 
 
+## navigate to here: 
 
-To serve locally
+    cd ~/sites/ringsnode/
+    python -m SimpleHTTPServer 8000
+
+## then load this in browser: 
+
+    http://lisas-mbp:8000/
+
+
+To watch local changes:
 
 	cd ~/projects/ringsnode_website/website/
 
@@ -36,6 +45,7 @@ And in another start rsyncing that build to local deployment directory:
 but make sure before doing that rsync on repeate that you've done the full rsync at least once: 
 	
 	rsync -a -v _site/ /Users/lballard/sites/ringsnode
+
 
 
 
