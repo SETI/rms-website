@@ -68,8 +68,10 @@ h4 {
   margin:0 0 20px 20px; 
 }
 .content p {
-  /* max-width:1000px; */
-
+  max-width: 50em; 
+}
+.content li {
+  max-width: 40em;
 }
 .content p.superwide {
   max-width: none;
