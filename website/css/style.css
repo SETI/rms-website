@@ -25,6 +25,7 @@ body {
   background-color: white;
   width:90%;
 }
+
 h1, h2, h3, h4 {
   font-family: 'Open Sans', sans-serif;
   color: #222222;
@@ -56,6 +57,27 @@ h4 {
   line-height: 1.2;
   margin: 1em 0 .6em 0;
 }
+
+
+/* content containers, and customizations for pages */
+.content {
+  margin:0; padding:0; 
+}
+.content > p > img, .content > img, .content > a > img, .content > p > a > img {
+  float:right;
+  margin:0 0 20px 20px; 
+}
+
+/* .content ringocc */ 
+.ringocc > p > a > img {
+  float:left;
+  margin:0;
+  width: 100%;
+}
+.ringocc > p {
+}
+
+
 
 
 /* homepage boxes */
@@ -226,7 +248,8 @@ h4 {
 ul.tab-pill-group {
   margin: 0; padding:0;
   margin-top:20px;
-  margin-left:15px;
+  margin-left:0;
+  margin-bottom:0;
   display: inline-block;
 }
 li.tab-pill a {
