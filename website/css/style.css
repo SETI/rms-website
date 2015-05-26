@@ -59,7 +59,7 @@ h4 {
 }
 
 
-/* content containers, and customizations for pages */
+/* content containers */
 .content {
   margin:0; padding:0; 
 }
@@ -67,16 +67,25 @@ h4 {
   float:right;
   margin:0 0 20px 20px; 
 }
+.content p {
+  max-width:900px;
 
-/* .content ringocc */ 
+}
+.content p.superwide {
+  max-width: none;
+  width: 100%;
+  overflow: visible;
+}
+
+
+
+/* .content container customizations for pages */ 
 .ringocc > p > a > img {
+  overflow:visible;
   float:left;
   margin:0;
   width: 100%;
 }
-.ringocc > p {
-}
-
 
 
 
