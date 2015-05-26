@@ -28,24 +28,34 @@
             {% include tabs.html %}
           {% endif %}
 
-            {% if page.layout_type == blank %}
+            {% if page.layout_style == 'wide' %}
+              {% assign custom_layout = true %}
+
+              <div class = "col-md-12">
+
+            {% else %}
+              
               <div class = "col-md-10">
-            {% endif %}
 
-              {% if page.format == 'html' %}
+            {% endif %}            
 
-                {{ content }}
 
-              {% else %}
+            {% assign page_url_path_split = page.url | split: "/" %}
 
-                {{ content | markdownify}}
+              <div class = "content {{ page_url_path_split[1] }}">
+                {% if page.format == 'html' %}
 
-              {% endif %}
+                  {{ content }}
 
-            {% if page.layout_type == blank %}
-              </div>
-            {% endif %}
+                {% else %}
 
+                  {{ content | markdownify}}
+
+                {% endif %}
+
+                </div><!-- wde/normal -->
+
+            </div><!-- /content -->
 
         </div>
 
