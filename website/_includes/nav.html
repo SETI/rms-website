@@ -11,9 +11,11 @@
 
         {% for item in section.submenu %} 
 
-          {% capture url %}{{ item.href }}index.html{% endcapture %}
+          {% assign menu_url_path_split = item.href | split: "/" %}
+          {% assign page_url_path_split = page.url | split: "/" %}
+
           <li
-            {% if url == page.url %}
+            {% if menu_url_path_split[1] == page_url_path_split[1] %}
               class = "active" 
             {% endif %}
           >
