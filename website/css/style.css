@@ -63,13 +63,18 @@ h4 {
 
 /* searchbox */
 .searchbox {
-  width:300px;
+  width:320px;
   position: absolute;
-  right:70px; 
-  top:105px;
+  right:55px; 
+  top:100px;
 
 }
-
+@media only screen and (max-width: 320px) {
+  .searchbox {
+    display:none;  /* hiding it for now, hard to layout this thing in phone-size screens */
+    width:70%;
+  }
+}
 
 .mission_statement {
   padding: 15px 40px 10px 20px;
@@ -215,7 +220,11 @@ h4 {
   margin: 20px 37px 20px 37px;
   }
 }
-
+@media only screen and (max-width: 480px) {
+  .banner .brandtext {
+    font-size:35px;
+  }
+}
 
 
 /* nav - the left main nav menu */ 

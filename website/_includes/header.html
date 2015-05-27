@@ -1,12 +1,55 @@
 <header class="site-header">
 
-        <div class="banner col-md-12">
+    <div class="banner">
+    	<span class = "brandtext">
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+	    </span>
 
-          <div class="brandtext">
-            <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-          </div><!-- /brandtext -->
-          
-        </div><!-- /banner-sample-->
+      	<div class = "searchbox">
+
+
+			 <!-- Search Google -->
+			  <script>
+			    (function() {
+			      var cx = '007870209983431604483:hux2hfzwefc';
+			      var gcse = document.createElement('script');
+			      gcse.type = 'text/javascript';
+			      gcse.async = true;
+			      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+			          '//www.google.com/cse/cse.js?cx=' + cx;
+			      var s = document.getElementsByTagName('script')[0];
+			      s.parentNode.insertBefore(gcse, s);
+			    })();
+			  </script>
+
+
+          	 <gcse:search linktarget="_parent"></gcse:search>
+
+          	 <style>
+
+        	  	 .cse .gsc-control-cse, .gsc-control-cse {
+          	 		border:0;
+			  		background: rgba(54, 25, 25, 0);
+				}
+				/* resolves conflict with Bootstrap */
+				input.gsc-input,
+				.gsc-input-box,
+				.gsc-input-box-hover,
+				.gsc-input-box-focus,
+				.gsc-search-button {
+				    box-sizing: content-box; 
+				    line-height: normal;
+				}
+				input.gsc-input,
+				.gsc-input-box {
+					margin-right:-10px;
+				}
+
+			</style>
+		</div>
+
+	 </div>
+
 
 </header>
 
