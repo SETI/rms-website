@@ -80,7 +80,9 @@ h4 {
 /* content containers */
 .content {
   margin:0; padding:0; 
+  margin-top:20px;
 }
+
 .content > p > img, .content > img, .content > a > img, .content > p > a > img {
   float:right;
   margin:0 0 20px 20px; 
