@@ -13,6 +13,7 @@
 body {
   background-color: #585858;
   font-family: 'Open Sans', sans-serif;
+  color: #595959;
 }
 .hidden {  /* accessible way to present an h1 when you don't wnat one showing to other users */
   text-indent: -5000px;
@@ -59,12 +60,11 @@ h4 {
 }
 
 
-
 .mission_statement {
   padding: 30px 40px 10px 20px;
   line-height: 1.5;
   font-size:1.4em;
-  color: #909090;
+  color: #595959;
 }
 @media only screen and (max-width: 320px) {
   .mission_statement {
