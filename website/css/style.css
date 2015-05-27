@@ -1,14 +1,15 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
+/* Small devices (tablets, 768px and up) 
 @media (min-width: @screen-sm-min) { ... }
 
-/* Medium devices (desktops, 992px and up) */
+/* Medium devices (desktops, 992px and up) 
 @media (min-width: @screen-md-min) { ... }
 
-/* Large devices (large desktops, 1200px and up) */
+/* Large devices (large desktops, 1200px and up) 
 @media (min-width: @screen-lg-min) { ... }
+*/
 
 body {
   background-color: #585858;
@@ -97,11 +98,14 @@ h4 {
   float:right;
   margin:0 0 20px 20px; 
 }
-.content p {
-  max-width: 50em; 
-}
-.content li {
-  max-width: 40em;
+
+@media (min-width: 1200px) {
+  .content p {
+    max-width: 60em;
+  }
+  .content li {
+    max-width: 50em; 
+  }
 }
 .content p.superwide {
   max-width: none;
