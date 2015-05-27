@@ -59,13 +59,22 @@ h4 {
 }
 
 
-/* searchbox */
+
 .mission_statement {
-  width: 45em;
   padding: 30px 40px 10px 20px;
   line-height: 1.5;
   font-size:1.4em;
   color: #909090;
+}
+@media only screen and (max-width: 320px) {
+  .mission_statement {
+    font-size:1.1em;
+ }
+}
+@media only screen and (min-width: 1440px) {
+  .mission_statement {
+    width:90%;
+ }
 }
 
 /* content containers */
