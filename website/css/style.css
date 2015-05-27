@@ -59,6 +59,15 @@ h4 {
 }
 
 
+/* searchbox */
+.mission_statement {
+  width: 45em;
+  padding: 30px 40px 10px 20px;
+  line-height: 1.5;
+  font-size:1.4em;
+  color: #909090;
+}
+
 /* content containers */
 .content {
   margin:0; padding:0; 
