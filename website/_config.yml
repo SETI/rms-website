@@ -12,6 +12,24 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 markdown: kramdown
 keep_files: []
 
-# copy this and remove the one you want to watch during jekyll serve --watch
+
+# files to exclude from jekell build, commment out all of these to build entire site
+
+# work on homepage only - exclude everything 
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
-exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
+
+# work on cassini
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
+
+# work on voyager
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn]
+
+# work on saturn 
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, voyager]
+
+# work on jupiter
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
+
+# work on cassini and saturn
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, voyager]
+
