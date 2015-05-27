@@ -16,10 +16,14 @@ keep_files: []
 # files to exclude from jekell build, commment out all of these to build entire site
 
 # work on homepage only - exclude everything 
+# copy this as basic template and remove from it what you want to work on
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
 # work on cassini
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
+
+# work on astrometry
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, urpx, uranus, tools, toolkits, saturn, voyager]
 
 # work on voyager
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn]
