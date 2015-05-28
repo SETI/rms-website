@@ -40,14 +40,21 @@
             {% endif %}            
 
 
-            {% assign page_url_path_split = page.url | split: "/" %}
-
               <span class = "hidden">
                 <a href = "#nav">skip to navigation</a>
               </span>
 
+              {% assign page_url_path_split = page.url | split: "/" %}
+              {% assign page_class = page_url_path_split[1] %}
+
+              {% if page_class == 'index.html' %}
+                {% assign page_class = '' %}
+              {% endif %}
+
+              {% assign page_class = ' ' + page_class %} <!-- adding in the space here -->
+
               <a name = "content"></a>
-              <div class = "content {{ page_url_path_split[1] }}">
+              <div class = "content{{page_class}}">
                 {% if page.format == 'html' %}
 
                   {{ content }}
