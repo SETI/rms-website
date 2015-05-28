@@ -7,7 +7,7 @@
 
     <div class="container">
 
-    {% if page.url == '/index.html' %}
+    {% if page.url == '/index.html' %}  <!-- homepage -->
 
       <h1 class = "hidden"> 
         {{ site.title }}
@@ -48,13 +48,11 @@
               {% assign page_class = page_url_path_split[1] %}
 
               {% if page_class == 'index.html' %}
-                {% assign page_class = '' %}
+                {% assign page_class = 'homepage' %}
               {% endif %}
 
-              {% assign page_class = ' ' + page_class %} <!-- adding in the space here -->
-
               <a name = "content"></a>
-              <div class = "content{{page_class}}">
+              <div class = "content {{page_class}}">
                 {% if page.format == 'html' %}
 
                   {{ content }}
@@ -72,7 +70,15 @@
         </div>
 
         <!-- left side nav -->
+
         <div class = "col-md-2 col-md-pull-10 col-sm-3 col-sm-pull-9 col-xm-12 nav-container">
+
+          {% if page.url != '/index.html' %}  <!-- homepage -->
+            <div class = "mobile toplink">
+              <a href = "#">back to top</a>
+            </div>
+          {% endif %}
+
           {% include nav.html %}
         </div>
 

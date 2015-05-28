@@ -233,6 +233,7 @@ h4 {
   padding-top:5px;
   word-wrap:nowrap;
   font-size: 1.3em;
+  text-align: center;
 }
 .hamburger-container a {
   color:white;
@@ -258,6 +259,7 @@ h4 {
   margin: 20px 37px 20px 37px;
   }
 }
+
 @media only screen and (max-width: 480px) {
   .banner .brandtext {
     font-size:2.2em;
@@ -273,15 +275,15 @@ h4 {
     font-size:2.5em;
     margin-bottom:10px;
   }
-  .hamburger-container {
-  }
 }
 
 
 
 /* nav - the left main nav menu */ 
+nav {
+    background-color: #efefef;
+}
 .nav-container {
-	background-color: #efefef;
 	padding:0;
 }
 .nav-container nav ul {
@@ -369,7 +371,6 @@ h4 {
 @media only screen and (max-width: 768px) {
   .mobile {
     display:block;    
-    text-align:center;
   }
 }
 
@@ -420,3 +421,15 @@ li.tab-pill.active {
   cursor: pointer;
   text-align:center;
 }
+
+
+.toplink {
+  margin:20px;
+  text-align: center;
+}
+.homebox-toplink {
+    margin:0;
+    margin-top:-10px;
+    padding:0 0 30px 0;
+}
+

@@ -13,14 +13,22 @@
           </div>
 
           <div class="panel-body">
+
             <div>
 
               {{ homebox.content | markdownify }}
 
             </div>
-          </div>
+
+          </div><!-- /panel-body -->
 
         </div><!--/homebox panel panel-default -->
+
+        <div class = "mobile toplink homebox-toplink">
+          <a href = "#">back to top</a>
+        </div>
+
+
       </div><!-- /colx -->
 
 {% endfor %}
