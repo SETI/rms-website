@@ -42,6 +42,11 @@
 
             {% assign page_url_path_split = page.url | split: "/" %}
 
+              <span class = "hidden">
+                <a href = "#nav">skip to navigation</a>
+              </span>
+
+              <a name = "content"></a>
               <div class = "content {{ page_url_path_split[1] }}">
                 {% if page.format == 'html' %}
 

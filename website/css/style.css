@@ -16,7 +16,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #595959;
 }
-.hidden {  /* accessible way to present an h1 when you don't wnat one showing to other users */
+.hidden {  /* a11y way to present only to screen readers */
   text-indent: -5000px;
 }
 .site-header  {
