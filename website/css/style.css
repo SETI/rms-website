@@ -207,6 +207,24 @@ h4 {
 .banner a.site-title:hover {
 	text-decoration: none;
 }
+.hamburger-container {
+  padding:0; margin:0;
+  padding-top:13px;
+  word-wrap:nowrap;
+  font-size: 1.2em;
+}
+.hamburger-container a {
+  color:white;
+}
+.hamburger-container a:hover {
+  text-decoration: none;
+}
+.hamburger-container a:active {
+  color:#585858;
+}
+.hamburger {
+  padding:0; margin:0;
+}
 @media only screen and (max-width: 600px) {
 .banner .brandtext {
   font-size: 42px;
@@ -221,9 +239,10 @@ h4 {
 }
 @media only screen and (max-width: 480px) {
   .banner .brandtext {
-    font-size:35px;
+    font-size:2.1em;
   }
 }
+
 
 
 /* nav - the left main nav menu */ 
