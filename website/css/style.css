@@ -140,6 +140,7 @@ h4 {
 
 .homebox .panel-heading {
   margin:0; padding:0;
+  border: 1px solid black;
   background: url(assets/PRN_home_heading_bg.png) no-repeat;
   background-color: #585858;
   color:white;
@@ -176,7 +177,19 @@ h4 {
 .homebox ul a:active {
 	color: #31488d;
 }
+@media only screen and (max-width: 480px) {
+  .homebox {
+    margin:0; padding:0;
+    margin-bottom:10px;
+  }
+  .content {
+    padding:0; margin:0;
+  }
+  div.col-xm-12 {
+    margin:0; padding:0;
+  }
 
+}
 
 
 /* site header / banner */
@@ -207,9 +220,10 @@ h4 {
 .banner a.site-title:hover {
 	text-decoration: none;
 }
+/* mobile hamburger menu is inside banner */
 .hamburger-container {
   padding:0; margin:0;
-  padding-top:13px;
+  padding-top:5px;
   word-wrap:nowrap;
   font-size: 1.2em;
 }
@@ -239,7 +253,7 @@ h4 {
 }
 @media only screen and (max-width: 480px) {
   .banner .brandtext {
-    font-size:2.1em;
+    font-size:2.2em;
   }
 }
 
