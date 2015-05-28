@@ -69,10 +69,9 @@ h4 {
   top:100px;
 
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .searchbox {
     display:none;  /* hiding it for now, hard to layout this thing in phone-size screens */
-    width:70%;
   }
 }
 
@@ -297,6 +296,30 @@ h4 {
   border-left: 5px solid #fffa93;
   padding-left: -15px;
 }
+@media only screen and (max-width: 767px) {
+  .nav-container nav ul {
+    text-align: center;
+  }
+  .nav-container .submenu li {
+    font: 1.3em 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+
+.mobile {
+  display:none;
+}
+@media only screen and (max-width: 767px) {
+  .mobile {
+    display:block;    
+    text-align:center;
+  }
+}
+
+
+
 
 /* tabs */
 ul.tab-pill-group {
