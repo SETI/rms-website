@@ -74,6 +74,15 @@ h4 {
     display:none;  /* hiding it for now, hard to layout this thing in phone-size screens */
   }
 }
+@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation : portrait) { 
+  .searchbox {
+    display:block;    
+    position: absolute;
+    right:25px;
+    top:100px;
+  }
+}
+
 
 .mission_statement {
   padding: 15px 40px 10px 20px;
@@ -177,7 +186,7 @@ h4 {
 .homebox ul a:active {
 	color: #31488d;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   div.row {
     padding:0; 
   }
@@ -355,7 +364,7 @@ nav {
   border-left: 5px solid #fffa93;
   padding-left: -15px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   .nav-container nav ul {
     text-align: center;
   }
@@ -374,8 +383,28 @@ nav {
   .mobile {
     display:block;    
   }
+  .brandtext {
+    width: 80%;    
+    text-align: center;
+  }
 }
+@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation:portrait) { 
+  .mobile {
+    display:none;    
+  }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) { 
+  .mobile {
+    display:block;
+  }
+  .brandtext {
+    display:block;
+    width:100%;
+    text-align: center;
+    margin:20px auto;
 
+  }
+}
 
 
 
