@@ -178,17 +178,24 @@ h4 {
 	color: #31488d;
 }
 @media only screen and (max-width: 480px) {
+  div.row {
+    padding:0; 
+  }
   .homebox {
     margin:0; padding:0;
     margin-bottom:10px;
   }
-  .content {
+  .content, .container, .row {
     padding:0; margin:0;
+    width:100%;
   }
   div.col-xm-12 {
     margin:0; padding:0;
   }
-
+  .mission_statement {
+    padding:10px 10px 10px 20px;
+    font-size:1.2em;
+  }
 }
 
 
@@ -225,7 +232,7 @@ h4 {
   padding:0; margin:0;
   padding-top:5px;
   word-wrap:nowrap;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 .hamburger-container a {
   color:white;
