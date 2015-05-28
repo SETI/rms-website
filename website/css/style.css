@@ -69,7 +69,7 @@ h4 {
   top:100px;
 
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .searchbox {
     display:none;  /* hiding it for now, hard to layout this thing in phone-size screens */
   }
@@ -263,6 +263,19 @@ h4 {
     font-size:2.2em;
   }
 }
+@media only screen and (min-width: 480px) {
+  .banner .brandtext {
+    font-size:2.2em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .banner .brandtext {
+    font-size:2.5em;
+    margin-bottom:10px;
+  }
+  .hamburger-container {
+  }
+}
 
 
 
@@ -353,7 +366,7 @@ h4 {
 .mobile {
   display:none;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .mobile {
     display:block;    
     text-align:center;
