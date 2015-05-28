@@ -288,10 +288,12 @@ h4 {
 .nav-container .submenu li a:hover {
 	color: #5a72b7;
 }
-.nav-container .submenu li a:active {
-	color: #31488d;
+.nav-container a:active { /* for the key press */
+  background-color: #ffffff; 
+  border-left: 5px solid #fffa93;
+  padding-left: -15px;
 }
-.nav-container .submenu li.active {
+.nav-container .submenu li.active { /* nav hinting */
   background-color: #ffffff; 
   border-left: 5px solid #fffa93;
   padding-left: -15px;
