@@ -1,3 +1,5 @@
+** this seems deprected **
+
 copy old directory structure and all media files to new structure
 
 	# copy the directory from the old site to an empty directory

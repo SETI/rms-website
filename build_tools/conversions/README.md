@@ -13,6 +13,6 @@ convert all html files to markdown and copy those to new directory
 	python converter.py html_to_md
 
 
-then when ur happy: 
+then copy this directory structure into the website folder
 
 cp -r  ~/projects/ringsnode_website/converted_markdown/ ~/projects/ringsnode_website/website
