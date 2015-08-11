@@ -1,22 +1,24 @@
 ---
 layout: base
+layout_style: default
 ---
 
 #!/usr/local/bin/perl -w chomp($directory=); # get directory chomp(@list=); #
 get list of images $grouptitle = "New Image Gallery of Saturn's Ring System";
-print <
+print <<START;
 
 #  MIDDLE print "$grouptitle
 
-\n"; print < THE_END $i = 0; foreach $image (@list) { open(IMAGE_TXT,
-"$image.txt") || die "can't open $image.txt: $!"; open(IMAGE_HTML,
-">$image.html") || die "can't open $image.html: $!"; chomp($title=); # get
-title $dummy=; # get blank line chomp($brief=); # get brief description
-$dummy=; # get blank line @caption=; # get remaining caption # create table
-entry print "\n"; print "$title\n  
+\n"; print <<THE_END;  THE_END $i = 0; foreach $image (@list) {
+open(IMAGE_TXT, "$image.txt") || die "can't open $image.txt: $!";
+open(IMAGE_HTML, ">$image.html") || die "can't open $image.html: $!";
+chomp($title=); # get title $dummy=; # get blank line chomp($brief=); # get
+brief description $dummy=; # get blank line @caption=; # get remaining caption
+# create table entry print "\n"; print "$title\n  
 "; print "[\n"; print
 "![](\\"$directory/$image","-small.jpg\\")\n](\\"$directory/$image.html\\")  
 \n"; print "\n$brief\n\n"; if ($i == 2) { print "  
+---  
 \n\n"; $i = 0; } else { $i++; } # create html file print IMAGE_HTML "\n";
 print IMAGE_HTML "\n"; print IMAGE_HTML "
 
@@ -30,8 +32,8 @@ print IMAGE_HTML "@caption\n"; print IMAGE_HTML "
 * * *
 
 \n\n"; close(IMAGE_TXT) || die "can't close $image.txt: $!"; close(IMAGE_HTML)
-|| die "can't close $image.html: $!"; } print <
-
+|| die "can't close $image.html: $!"; } print <<LASTBIT;  
+  
 * * *
 
 [[Voyager 2

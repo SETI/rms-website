@@ -173,17 +173,7 @@ programs in the <a href="http://go.nasa.gov/ROSES12">ROSES 2013 NRA</a>. </p>
 <hr>
 <a href="/">Rings Node Home</a>
 
-<hr>
-<font size=1 color="#CCCCCC">
-Keywords for Rings Node internal indexing:
-roses, roses 2013, cassini data analysis program, cassini dap, cdaps,
-cassini participating scientist program, cassini data analysis and participating 
-scientists program, outer planets research program, opr, planetary geology and geophysics, 
-pg&g, planetary mission data analysis, planetary mission data analysis program, 
-pmdap, planetary rings data, proposal, proposer, propose, call for proposals, nra, 
-nasa research announcement, ao, announcement of opportunity, nspires, research proposal, 
-proposal assistance
-</font>
+
 
 <?php include $_SERVER["DOCUMENT_ROOT"] . '/includes/headbottom.html' ?>
 

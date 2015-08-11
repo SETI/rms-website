@@ -1,5 +1,6 @@
 ---
 layout: base
+layout_style: default
 ---
 
 ../cpage.pl < c0552599400r.lbl > c0552599400.html ../cpage.pl <

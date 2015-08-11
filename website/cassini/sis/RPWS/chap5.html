@@ -1,3 +1,8 @@
+---
+layout: base
+layout_style: default
+---
+
 * * *
 
 [![](icons/back.gif)](chap4.html) [![](icons/toc.gif)](document.html)
@@ -76,8 +81,8 @@ suffix).
 
 A PDS label, whether embedded or detached from its associated file, provides
 descriptive information about the associated file. The PDS label is an object-
-oriented structure consisting of sets of >keyword = value= declarations. The
-object to which the label refers (e.g. IMAGE, TABLE, etc.) is denoted by a
+oriented structure consisting of sets of &gt;keyword = value= declarations.
+The object to which the label refers (e.g. IMAGE, TABLE, etc.) is denoted by a
 statement of the form:
 
     
@@ -105,13 +110,13 @@ in this product.
   
 ---  
   
-^object = n <BYTES>  
+^object = n &lt;BYTES&gt;  
   
 ^object = Afilename.ext@  
   
 ^object = (Afilename.ext@, n)  
   
-^object = (Afilename.ext@, n <BYTES>)  
+^object = (Afilename.ext@, n &lt;BYTES&gt;)  
       
     
     where
@@ -130,8 +135,8 @@ be easily read on all common operating systems.
 ### 5.2.4 Catalog File Format
 
 Catalog files (suffix .CAT) exist in the Root and Catalog directories. They
-are formatted in an object-oriented structure consisting of sets of >keyword =
-value= declarations.
+are formatted in an object-oriented structure consisting of sets of
+&gt;keyword = value= declarations.
 
 ### 5.2.5 Index File Format
 
