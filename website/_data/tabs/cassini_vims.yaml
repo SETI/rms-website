@@ -1,0 +1,19 @@
+- parent_tabs_yaml: cassini
+  parent_label: Cassini
+  parent_tab: Instruments and Data
+  this_page_label: VIMS
+
+- title: UVIS Intro
+  href: /cassini/vims/index.html
+
+- title: About UVIS Data
+  href: /cassini/vims/about.html
+
+- title: Finding Data
+  href: /cassini/vims/finding.html
+
+- title: Accessing Data
+  href: /cassini/vims/access.html
+
+- title: Calibration
+  href: /cassini/iss/calibration.html
