@@ -1,0 +1,19 @@
+- parent_tabs_yaml: voyager
+  parent_label: Voyager
+  parent_tab: Instruments and Data
+  this_page_label: PPS
+
+- title: PPS Intro
+  href: /voyager/pps/index.html
+
+- title: Instrument
+  href: /voyager/pps/instrument.html
+
+- title: Archive Data
+  href: /voyager/pps/data.html
+
+- title: Standard Profiles
+  href: /voyager/pps/profiles.html
+
+- title: Custom Profiles
+  href: /voyager/pps/resampler.html

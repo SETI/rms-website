@@ -1,0 +1,17 @@
+- parent_tabs_yaml: voyager
+  parent_label: Voyager
+  parent_tab: Instruments and Data
+  this_page_label: IRIS
+
+- title: IRIS Intro
+  href: /voyager/iris/index.html
+
+- title: Instrument
+  href: /voyager/iris/instrument.html
+
+- title: Original Volume
+  href: /voyager/iris/original_volume.html
+
+- title: Expanded Volumes
+  href: /voyager/iris/expanded_volumes.html
+

@@ -1,0 +1,16 @@
+- parent_tabs_yaml: voyager
+  parent_label: Voyager
+  parent_tab: Instruments and Data
+  this_page_label: UVS
+
+- title: UVS Intro
+  href: /voyager/uvs/index.html
+
+- title: Instrument
+  href: /voyager/uvs/instrument.html
+
+- title: Archive Data
+  href: /voyager/uvs/data.html
+
+- title: Standard Profiles
+  href: /voyager/uvs/profiles.html

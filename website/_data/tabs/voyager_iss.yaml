@@ -1,0 +1,20 @@
+- parent_tabs_yaml: voyager
+  parent_label: Voyager
+  parent_tab: Instruments and Data
+  this_page_label: ISS
+
+- title: ISS Intro
+  href: /voyager/iss/index.html
+
+- title: Instrument
+  href: /voyager/iss/instrument.html
+
+- title: Processed Images
+  href: /voyager/iss/calib_images.html
+
+- title: Raw Images
+  href: /voyager/iss/raw_images.html
+
+- title: Derived Products
+  href: /voyager/iss/derived.html
+
