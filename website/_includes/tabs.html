@@ -1,16 +1,22 @@
-{% assign tabs = site.data.tabs[page.tabs] %}
+{% assign all_tabs = site.data.tabs[page.tabs] %}
+
+{% for tab in all_tabs %}
+	{% if tab.href == page.url %}
+		{% assign active_tab = tab %}
+		{% break %}
+	{% endif %}
+{% endfor %}
 
 <ul class="tab-pill-group">
 
-	{% for tab in tabs %}
-		
-	  <li class="tab-pill 
-	  		{% if page.active_tab == tab.title %}
-	  			active
-	  		{% endif %}
+	{% for tab in all_tabs %}
+		  <li class="tab-pill 
+		  		{% if active_tab.title == tab.title %}
+		  			active
+		  		{% endif %}
 
-	  	" >	<a href="{{ tab.href }}">{{ tab.title }}</a>
-	  </li>
+		  	" >	<a href="{{ tab.href }}">{{ tab.title }}</a>
+		  </li>
 	  {% endfor %}
 
 </ul>
