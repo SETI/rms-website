@@ -1,3 +1,8 @@
+- parent_tabs_yaml: cassini
+  parent_label: Cassini
+  parent_tab: Instruments and Data
+  this_page_label: UVIS
+
 - title: UVIS Intro
   href: /cassini/uvis/index.html
 

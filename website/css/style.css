@@ -426,13 +426,13 @@ nav {
 ul.tab-pill-group {
   margin: 0; padding:0;
   margin-top:20px;
-  margin-left:0;
+  margin-left:10px;
   margin-bottom:0;
   display: inline-block;
 }
 li.tab-pill a {
   display:inline-block;
-  padding: 10px 16px;
+  padding: 5px 16px;
 
 }
 li.tab-pill {
@@ -448,9 +448,7 @@ li.tab-pill {
   margin-right: 6px;
   list-style-type: none;
   text-align:center;
-
 }
-
 li.tab-pill.active {
   background: url(assets/active-tab-bg.png) repeat-x;
   background-color: #ffffff;
@@ -467,7 +465,14 @@ li.tab-pill.active {
   text-align:center;
 }
 
+/* breadcrumbs */
+ol.breadcrumb {
+  background-color: white;
+  margin-bottom:-20px;
+}
 
+
+/* ? */
 .toplink {
   margin:20px;
   text-align: center;
