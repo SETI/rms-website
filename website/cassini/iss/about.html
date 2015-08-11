@@ -1,21 +1,11 @@
 ---
 layout: base
 layout_style: default
+tabs: cassini_iss
+active_tab: About ISS Data
 ---
 
-  * [ISS Intro](index.html)
-  * [About ISS Data](about.html)
-  * [Finding Data](finding.html)
-  * [Accessing Data](access.html)
-  * [Calibration](calibration.html)
-  * [Software](software.html)
-
-  
-![\[SPACER\]](../css/spacer.gif)
-
 ## Getting Started
-
-![\[SPACER\]](../css/spacer.gif)
 
 ###  1\. Organization
 
@@ -31,11 +21,7 @@ The ISS archive is composed of four, multi-volume data sets.
     * One data set for all of the ISS raw images from the Saturn tour. These volumes are numbered COISS_2nnn. 
     * One data set for cartographic map products. These volumes are numbered COISS_3nnn, and are available from the PDS Imaging Node's web page for[ Cassini volumes.](http://pdsimg.jpl.nasa.gov/Admin/resources/cd_cassini.html)
 
-![\[SPACER\]](../css/spacer.gif)
-
 ###  2\. Directory and file naming.
-
-![\[SPACER\]](../css/spacer.gif)
 
 The data directory on each volume contains the EDR image data files and
 accompanying detached PDS label files. These files are organized on the
@@ -56,11 +42,7 @@ File names are in the form **Annnnnnnnnn_v.IMG**, where:
 
 **v** is the version number.
 
-![\[SPACER\]](../css/spacer.gif)
-
 ### 3\. Documentation
-
-![\[SPACER\]](../css/spacer.gif)
 
 ** The ISS Users Guide**, released July 2012, provides a substantial amount of information reguarding the instrument and its data in a single document. 
 
@@ -68,8 +50,6 @@ File names are in the form **Annnnnnnnnn_v.IMG**, where:
   * [MS Office .docx](/cassini/iss/ISS_Data_User_Guide_120703.docx).
 
 **Users are strongly encouraged to review an ISS [aareadme.txt](aareadme.txt) file.** This file appears in the root directory of every volume. (Some of the header information in the aareadme.txt files varies from one volume to the next, but the body of information in the files is the same.) 
-
-![\[SPACER\]](../css/spacer.gif)
 
 Further details of the ISS archive volumes can be found in the "Software
 Interface Specification" (SIS) Documents. These are found in the document
@@ -80,8 +60,6 @@ directory on each data volume.
   * The Volume Organization SIS is available as [document/archsis.pdf](archsis.pdf) and [document/archsis.txt](archsis.txt). 
 
   * The image files are archived in VICAR2 format. Each data volume contains a file [COISS_xxxx/label/vicar2.txt](vicar2.txt) providing the details of this file format. 
-
-![\[SPACER\]](../css/spacer.gif)
 
 The [catalog](/volumes/COISS_2001/catalog/) subdirectory on each volume
 contains a wealth of information about the ISS instrument, team and data set.
@@ -95,13 +73,11 @@ data set.
   * [COISS_xxxx/catalog/isswa_inst.cat](ISSWA_INST.txt): Description of the wide-angle camera.
   * [COISS_xxxx/catalog/insthost.cat](INSTHOST.txt): Description of the Cassini spacecraft.
   * [COISS_xxxx/catalog/mission.cat](MISSION.txt): Description of the Cassini mission.
-![\[SPACER\]](../css/spacer.gif)
 
 A file, [errata.txt](errata.txt), in the root directory of each volume
 documents any known anomalies or deviations from PDS standards, and identifies
 potential problems with the calibration files and their use.
 
-![\[SPACER\]](../css/spacer.gif)
 
 Additional descriptions of the instrument can be found at the [ Cassini ISS
 web page.](http://saturn.jpl.nasa.gov/spacecraft/inst-cassini-iss-details.cfm)
