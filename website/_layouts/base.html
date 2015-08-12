@@ -23,7 +23,7 @@
         
         <!-- main content area -->
 
-        <div class = "col-md-10 col-md-push-2 col-sm-9 col-sm-push-3 col-xm-12">
+        <div class = "col-md-10 col-md-push-2 col-sm-10 col-sm-push-2 col-xm-12">
           {% if page.tabs %}
             {% include tabs.html %}
           {% endif %}
@@ -31,11 +31,11 @@
             {% if page.layout_style == 'wide' %}
               {% assign custom_layout = true %}
 
-              <div class = "col-md-12">
+              <div class = "col-md-12 col-sm-12">
 
             {% else %}
               
-              <div class = "col-md-12">
+              <div class = "col-md-12 col-sm-12">
 
             {% endif %}            
 
@@ -71,7 +71,7 @@
 
         <!-- left side nav -->
 
-        <div class = "col-md-2 col-md-pull-10 col-sm-3 col-sm-pull-9 col-xm-12 nav-container">
+        <div class = "col-md-2 col-md-pull-10 col-sm-2 col-sm-pull-10 col-xm-12 nav-container">
 
           {% if page.url != '/index.html' %}  <!-- homepage -->
             <div class = "mobile toplink">
