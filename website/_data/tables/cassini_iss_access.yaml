@@ -1,3 +1,12 @@
+- columns: 
+    - Volume Id
+    - Bundled Volumes
+    - Browse Images
+    - Calibrated Images
+    - Index File
+    - Spacecraft Clock (SCLK) range  
+    - Date Range (UTC)
+
 - release:  
 
     date: July 1, 2005
@@ -7,37 +16,37 @@
         - volume: 
             id: COISS_2001
             clock_range: 1454725799 to 1460960370 
-            UTC: 2004-02-06 to 2004-04-18
+            date_range: 2004-02-06 to 2004-04-18
 
         - volume: 
             id: COISS_2002
             clock_range:  1460960653 to 1463538454 
-            UTC:  2004-04-18 to 2004-05-18
+            date_range:  2004-04-18 to 2004-05-18
 
         - volume: 
             id: COISS_2003
             clock_range:  1463538487 to 1465674412 
-            UTC:  2004-05-18 to 2004-06-11
+            date_range:  2004-05-18 to 2004-06-11
 
         - volume: 
             id: COISS_2004
             clock_range:  1465674475 to 1469618468 
-            UTC:  2004-06-11 to 2004-07-27
+            date_range:  2004-06-11 to 2004-07-27
 
         - volume: 
             id: COISS_2005
             clock_range:  1469618524 to 1472808065 
-            UTC:  2004-07-27 to 2004-09-02
+            date_range:  2004-07-27 to 2004-09-02
 
         - volume: 
             id: COISS_2006
             clock_range:  1472808065 to 1475025202 
-            UTC:  2004-09-02 to 2004-09-28
+            date_range:  2004-09-02 to 2004-09-28
 
         - volume: 
             id: COISS_2007
             clock_range:  1475025239 to 1477653092 
-            UTC:  2004-09-28 to 2004-10-28
+            date_range:  2004-09-28 to 2004-10-28
 
 
 - release:  
@@ -49,7 +58,7 @@
         - volume: 
             id: COISS_2008
             clock_range:  1477654052 to 1483225307 
-            UTC:  2004-10-28 to 2004-12-31
+            date_range:  2004-10-28 to 2004-12-31
 
 
 - release:  
@@ -60,12 +69,12 @@
         - volume: 
             id: COISS_2009
             clock_range:  1484573287 to 1488210311 
-            UTC:  2005-01-16 to 2005-02-27
+            date_range:  2005-01-16 to 2005-02-27
 
         - volume: 
             id: COISS_2010
             clock_range:  1488210347 to 1491006407 
-            UTC:  2005-02-27 to 2005-03-31
+            date_range:  2005-02-27 to 2005-03-31
 
 
 - release:  
@@ -76,17 +85,17 @@
         - volume: 
             id: COISS_2011
             clock_range:  1491006469 to 1493885777 
-            UTC:  2005-04-01 to 2005-05-04
+            date_range:  2005-04-01 to 2005-05-04
 
         - volume: 
             id: COISS_2012
             clock_range:  1493885952 to 1498351283 
-            UTC:  2005-05-04 to 2005-06-25
+            date_range:  2005-05-04 to 2005-06-25
 
         - volume: 
             id: COISS_2013
             clock_range:  1498351302 to 1498825765 
-            UTC:  2005-06-25 to 2005-06-30
+            date_range:  2005-06-25 to 2005-06-30
 
 
 - release:  
@@ -97,12 +106,12 @@
         - volume: 
             id: COISS_2014
             clock_range:  1498874330 to 1503245293 
-            UTC:  2005-07-01 to 2005-08-20
+            date_range:  2005-07-01 to 2005-08-20
 
         - volume: 
             id: COISS_2015
             clock_range:  1503245364 to 1506814111 
-            UTC:  2005-08-20 to 2005-09-29
+            date_range:  2005-08-20 to 2005-09-29
 
 
 - release:  
@@ -113,17 +122,17 @@
         - volume: 
             id: COISS_2016
             clock_range:  1506820484 to 1510209922 
-            UTC:  2005-10-01 to 2005-11-09
+            date_range:  2005-10-01 to 2005-11-09
 
         - volume: 
             id: COISS_2017
             clock_range:  1510209958 to 1514331366 
-            UTC:  2005-11-09 to 2005-12-26
+            date_range:  2005-11-09 to 2005-12-26
 
         - volume: 
             id: COISS_2018
             clock_range:  1514331399 to 1514757207 
-            UTC:  2005-12-26 to 2005-12-31
+            date_range:  2005-12-26 to 2005-12-31
 
 
 - release:  
@@ -134,17 +143,17 @@
         - volume: 
             id: COISS_2019
             clock_range:  1514778150 to 1517073577 
-            UTC:  2006-01-01 to 2006-01-27
+            date_range:  2006-01-01 to 2006-01-27
 
         - volume: 
             id: COISS_2020
             clock_range:  1517073787 to 1520512984 
-            UTC:  2006-01-27 to 2006-03-08
+            date_range:  2006-01-27 to 2006-03-08
 
         - volume: 
             id: COISS_2021
             clock_range:  1520513038 to 1522542444 
-            UTC:  2006-03-08 to 2006-03-31
+            date_range:  2006-03-08 to 2006-03-31
 
 
 - release:  
@@ -156,12 +165,12 @@
         - volume: 
             id: COISS_2022
             clock_range:  1522542710 to 1526038532 
-            UTC:  2006-04-01 to 2006-05-11
+            date_range:  2006-04-01 to 2006-05-11
 
         - volume: 
             id: COISS_2023
             clock_range:  1526038904 to 1530373711 
-            UTC:  2006-05-11 to 2006-06-30
+            date_range:  2006-05-11 to 2006-06-30
 
 
 - release:  
@@ -172,12 +181,12 @@
         - volume: 
             id: COISS_2024
             clock_range:  1530431890 to 1536146633 
-            UTC:  2006-07-01 to 2006-09-05
+            date_range:  2006-07-01 to 2006-09-05
 
         - volume: 
             id: COISS_2025
             clock_range:  1536146675 to 1538302595 
-            UTC:  2006-09-05 to 2006-09-30
+            date_range:  2006-09-05 to 2006-09-30
 
 
 - release:  
@@ -188,12 +197,12 @@
         - volume: 
             id: COISS_2026
             clock_range:  1538857861 to 1542736726 
-            UTC:  2006-10-06 to 2006-11-20
+            date_range:  2006-10-06 to 2006-11-20
 
         - volume: 
             id: COISS_2027
             clock_range:  1542736808 to 1546295078 
-            UTC:  2006-11-20 to 2006-12-31
+            date_range:  2006-11-20 to 2006-12-31
 
 
 - release:  
@@ -204,17 +213,17 @@
         - volume: 
             id: COISS_2028
             clock_range:  1546310212 to 1548767008 
-            UTC:  2007-01-01 to 2007-01-29
+            date_range:  2007-01-01 to 2007-01-29
 
         - volume: 
             id: COISS_2029
             clock_range:  1548767805 to 1550624037 
-            UTC:  2007-01-29 to 2007-02-20
+            date_range:  2007-01-29 to 2007-02-20
 
         - volume: 
             id: COISS_2030
             clock_range:  1550624037 to 1554072073 
-            UTC:  2007-02-20 to 2007-03-31
+            date_range:  2007-02-20 to 2007-03-31
 
 
 - release:  
@@ -225,17 +234,17 @@
         - volume: 
             id: COISS_2031
             clock_range:  1554109736 to 1557397433 
-            UTC:  2007-04-01 to 2007-05-09
+            date_range:  2007-04-01 to 2007-05-09
 
         - volume: 
             id: COISS_2032
             clock_range:  1557397493 to 1560553326 
-            UTC:  2007-05-09 to 2007-06-14
+            date_range:  2007-05-09 to 2007-06-14
 
         - volume: 
             id: COISS_2033
             clock_range:  1560553717 to 1561883275 
-            UTC:  2007-06-14 to 2007-06-30
+            date_range:  2007-06-14 to 2007-06-30
 
 
 - release:  
@@ -246,22 +255,22 @@
         - volume: 
             id: COISS_2034
             clock_range:  1561952692 to 1564917386 
-            UTC:  2007-07-01 to 2007-08-03
+            date_range:  2007-07-01 to 2007-08-03
 
         - volume: 
             id: COISS_2035
             clock_range:  1564917520 to 1567440323 
-            UTC:  2007-08-03 to 2007-09-01
+            date_range:  2007-08-03 to 2007-09-01
 
         - volume: 
             id: COISS_2036
             clock_range:  1567440376 to 1569482786 
-            UTC:  2007-09-01 to 2007-09-26
+            date_range:  2007-09-01 to 2007-09-26
 
         - volume: 
             id: COISS_2037
             clock_range:  1569482858 to 1569890022 
-            UTC:  2007-09-26 to 2007-09-30
+            date_range:  2007-09-26 to 2007-09-30
 
 
 - release:  
@@ -272,17 +281,17 @@
         - volume: 
             id: COISS_2038
             clock_range:  1569890544 to 1573185858 
-            UTC:  2007-10-01 to 2007-11-08
+            date_range:  2007-10-01 to 2007-11-08
 
         - volume: 
             id: COISS_2039
             clock_range:  1573186007 to 1576929541 
-            UTC:  2007-11-08 to 2007-12-21
+            date_range:  2007-11-08 to 2007-12-21
 
         - volume: 
             id: COISS_2040
             clock_range:  1576929618 to 1577838933 
-            UTC:  2007-12-21 to 2007-12-31
+            date_range:  2007-12-21 to 2007-12-31
 
 
 - release:  
@@ -293,17 +302,17 @@
         - volume: 
             id: COISS_2041
             clock_range:  1577839260 to 1580849129 
-            UTC:  2008-01-01 to 2008-02-04
+            date_range:  2008-01-01 to 2008-02-04
 
         - volume: 
             id: COISS_2042
             clock_range:  1580849252 to 1585391135 
-            UTC:  2008-02-04 to 2008-03-29
+            date_range:  2008-02-04 to 2008-03-29
 
         - volume: 
             id: COISS_2043
             clock_range:  1585391194 to 1585679889 
-            UTC:  2008-03-29 to 2008-03-31
+            date_range:  2008-03-29 to 2008-03-31
 
 
 - release:  
@@ -314,17 +323,17 @@
         - volume: 
             id: COISS_2044
             clock_range:  1585714912 to 1589107702 
-            UTC:  2008-04-01 to 2008-05-10
+            date_range:  2008-04-01 to 2008-05-10
 
         - volume: 
             id: COISS_2045
             clock_range:  1589107813 to 1592543361 
-            UTC:  2008-05-10 to 2008-06-19
+            date_range:  2008-05-10 to 2008-06-19
 
         - volume: 
             id: COISS_2046
             clock_range:  1592543393 to 1593561976 
-            UTC:  2008-06-19 to 2008-06-30
+            date_range:  2008-06-19 to 2008-06-30
 
 
 - release:  
@@ -335,12 +344,12 @@
         - volume: 
             id: COISS_2047
             clock_range:  1593567330 to 1597823599 
-            UTC:  2008-07-01 to 2008-08-19
+            date_range:  2008-07-01 to 2008-08-19
 
         - volume: 
             id: COISS_2048
             clock_range:  1597823640 to 1601512734 
-            UTC:  2008-08-19 to 2008-09-30
+            date_range:  2008-08-19 to 2008-09-30
 
 
 - release:  
@@ -351,17 +360,17 @@
         - volume: 
             id: COISS_2049
             clock_range:  1601512974 to 1604723103 
-            UTC:  2008-10-01 to 2008-11-07
+            date_range:  2008-10-01 to 2008-11-07
 
         - volume: 
             id: COISS_2050
             clock_range:  1604723151 to 1608534697 
-            UTC:  2008-11-07 to 2008-12-21
+            date_range:  2008-11-07 to 2008-12-21
 
         - volume: 
             id: COISS_2051
             clock_range:  1608534761 to 1609436118 
-            UTC:  2008-12-21 to 2008-12-31
+            date_range:  2008-12-21 to 2008-12-31
 
 
 - release:  
@@ -372,12 +381,12 @@
         - volume: 
             id: COISS_2052
             clock_range:  1609475100 to 1612979183 
-            UTC:  2009-01-01 to 2009-02-10
+            date_range:  2009-01-01 to 2009-02-10
 
         - volume: 
             id: COISS_2053
             clock_range:  1612979357 to 1617237040 
-            UTC:  2009-02-10 to 2009-03-31
+            date_range:  2009-02-10 to 2009-03-31
 
 
 - release:  
@@ -388,12 +397,12 @@
         - volume: 
             id: COISS_2054
             clock_range:  1617276884 to 1622025718 
-            UTC:  2009-04-01 to 2009-05-26
+            date_range:  2009-04-01 to 2009-05-26
 
         - volume: 
             id: COISS_2055
             clock_range:  1622025854 to 1625075053 
-            UTC:  2009-05-26 to 2009-06-30
+            date_range:  2009-05-26 to 2009-06-30
 
 
 - release:  
@@ -404,12 +413,12 @@
         - volume: 
             id: COISS_2056
             clock_range:  1625115007 to 1629144528 
-            UTC:  2009-07-01 to 2009-08-16
+            date_range:  2009-07-01 to 2009-08-16
 
         - volume: 
             id: COISS_2057
             clock_range:  1629144588 to 1633029787 
-            UTC:  2009-08-16 to 2009-09-30
+            date_range:  2009-08-16 to 2009-09-30
 
 
 - release:  
@@ -420,12 +429,12 @@
         - volume: 
             id: COISS_2058
             clock_range:  1633303610 to 1637523775 
-            UTC:  2009-10-03 to 2009-11-21
+            date_range:  2009-10-03 to 2009-11-21
 
         - volume: 
             id: COISS_2059
             clock_range:  1637523963 to 1640948146 
-            UTC:  2009-11-21 to 2009-12-31
+            date_range:  2009-11-21 to 2009-12-31
 
 
 - release:  
@@ -436,12 +445,12 @@
         - volume: 
             id: COISS_2060
             clock_range:  1641034395 to 1646527563 
-            UTC:  2010-01-01 to 2010-03-06
+            date_range:  2010-01-01 to 2010-03-06
 
         - volume: 
             id: COISS_2061
             clock_range:  1646527553 to 1648584112 
-            UTC:  2010-03-06 to 2010-03-29
+            date_range:  2010-03-06 to 2010-03-29
 
 
 - release:  
@@ -452,12 +461,12 @@
         - volume: 
             id: COISS_2062
             clock_range:  1648877202 to 1655080551 
-            UTC:  2010-04-02 to 2010-06-12
+            date_range:  2010-04-02 to 2010-06-12
 
         - volume: 
             id: COISS_2063
             clock_range:  1655080582 to 1656635176 
-            UTC:  2010-06-12 to 2010-06-30
+            date_range:  2010-06-12 to 2010-06-30
 
 
 - release:  
@@ -468,12 +477,12 @@
         - volume: 
             id: COISS_2064
             clock_range:  1656702236 to 1662813261 
-            UTC:  2010-07-01 to 2010-09-10
+            date_range:  2010-07-01 to 2010-09-10
 
         - volume: 
             id: COISS_2065
             clock_range:  1662813294 to 1664263331 
-            UTC:  2010-09-10 to 2010-09-27
+            date_range:  2010-09-10 to 2010-09-27
 
 - release:  
     date:  October 1, 2011
@@ -483,7 +492,7 @@
         - volume: 
             id: COISS_2066
             clock_range:  1664840648 to 1671890732 
-            UTC:  2010-10-03 to 2010-12-24
+            date_range:  2010-10-03 to 2010-12-24
 
 
 - release:  
@@ -494,7 +503,7 @@
         - volume: 
             id: COISS_2067
             clock_range:  1672660228 to 1680244602 
-            UTC:  2011-01-02 to 2011-03-31
+            date_range:  2011-01-02 to 2011-03-31
 
 
 - release:  
@@ -505,7 +514,7 @@
         - volume: 
             id: COISS_2068
             clock_range:  1680805726 to 1687817348 
-            UTC:  2011-04-06 to 2011-06-26
+            date_range:  2011-04-06 to 2011-06-26
 
 
 - release:  
@@ -516,12 +525,12 @@
         - volume: 
             id: COISS_2068
             clock_range:  1680805726 to 1687817348 
-            UTC:  2011-04-06 to 2011-06-26
+            date_range:  2011-04-06 to 2011-06-26
 
         - volume: 
             id: COISS_2070
             clock_range:  1680805726 to 1687817348 
-            UTC:  2011-04-06 to 2011-06-26
+            date_range:  2011-04-06 to 2011-06-26
 
 
 - release:  
@@ -532,7 +541,7 @@
         - volume: 
             id: COISS_2071
             clock_range:  1696121676 to 1704030594 
-            UTC:  2011-10-01 to 2011-12-31
+            date_range:  2011-10-01 to 2011-12-31
 
 
 - release:  
@@ -543,12 +552,12 @@
         - volume: 
             id: COISS_2072
             clock_range:  1704074026 to 1710382537 
-            UTC:  2012-01-01 to 2012-03-14
+            date_range:  2012-01-01 to 2012-03-14
 
         - volume: 
             id: COISS_2073
             clock_range:  1710382571 to 1711687639 
-            UTC:  2012-03-14 to 2012-03-29
+            date_range:  2012-03-14 to 2012-03-29
 
 
 - release:  
@@ -559,12 +568,12 @@
         - volume: 
             id: COISS_2074
             clock_range:  1711950276 to 1718118023 
-            UTC:  2012-04-01 to 2012-06-11
+            date_range:  2012-04-01 to 2012-06-11
 
         - volume: 
             id: COISS_2075
             clock_range:  1718119408 to 1719707007 
-            UTC:  2012-06-11 to 2012-06-29
+            date_range:  2012-06-11 to 2012-06-29
 
 
 - release:  
@@ -575,12 +584,12 @@
         - volume: 
             id: COISS_2076
             clock_range:  1719817887 to 1727539077 
-            UTC:  2012-07-01 to 2012-09-28
+            date_range:  2012-07-01 to 2012-09-28
 
         - volume: 
             id: COISS_2077
             clock_range:  1727539149 to 1727552003 
-            UTC:  2012-09-28 to 2012-09-28
+            date_range:  2012-09-28 to 2012-09-28
 
 
 - release:  
@@ -591,12 +600,12 @@
         - volume: 
             id: COISS_2078
             clock_range:  1727768838 to 1732777784 
-            UTC:  2012-10-01 to 2012-11-28
+            date_range:  2012-10-01 to 2012-11-28
 
         - volume: 
             id: COISS_2079
             clock_range:  1732778945 to 1735607575 
-            UTC:  2012-11-28 to 2012-12-31
+            date_range:  2012-11-28 to 2012-12-31
 
 
 - release:  
@@ -607,12 +616,12 @@
         - volume: 
             id: COISS_2080
             clock_range:  1735820948 to 1740280668 
-            UTC:  2013-01-02 to 2013-02-23
+            date_range:  2013-01-02 to 2013-02-23
 
         - volume: 
             id: COISS_2081
             clock_range:  1740280710 to 1743467682 
-            UTC:  2013-02-23 to 2013-03-31
+            date_range:  2013-02-23 to 2013-03-31
 
 
 - release:  
@@ -623,12 +632,12 @@
         - volume: 
             id: COISS_2082
             clock_range:  1743471132 to 1748625981 
-            UTC:  2013-04-01 to 2013-05-30
+            date_range:  2013-04-01 to 2013-05-30
 
         - volume: 
             id: COISS_2083
             clock_range:  1748626053 to 1751331417 
-            UTC:  2013-05-30 to 2013-06-30
+            date_range:  2013-05-30 to 2013-06-30
 
 
 - release:  
@@ -639,12 +648,12 @@
         - volume: 
             id: COISS_2084
             clock_range:  1751331317 to 1757175175 
-            UTC:  2013-06-30 to 2013-09-06
+            date_range:  2013-06-30 to 2013-09-06
 
         - volume: 
             id: COISS_2085
             clock_range:  1757175247 to 1758918748 
-            UTC:  2013-09-06 to 2013-09-26
+            date_range:  2013-09-06 to 2013-09-26
 
 
 - release:  
@@ -655,12 +664,12 @@
         - volume: 
             id: COISS_2086
             clock_range:  1759651531 to 1767109007 
-            UTC:  2013-10-05 to 2013-12-30
+            date_range:  2013-10-05 to 2013-12-30
 
         - volume: 
             id: COISS_2087
             clock_range:  1767109051 to 1767192839 
-            UTC:  2013-12-30 to 2013-12-31
+            date_range:  2013-12-30 to 2013-12-31
 
 
 - release:  
@@ -671,12 +680,12 @@
         - volume: 
             id: COISS_2088
             clock_range:  1767238900 to 1773012835 
-            UTC:  2014-01-01 to 2014-03-08
+            date_range:  2014-01-01 to 2014-03-08
 
         - volume: 
             id: COISS_2089
             clock_range:  1773012952 to 1774999982 
-            UTC:  2014-03-08 to 2014-03-31
+            date_range:  2014-03-08 to 2014-03-31
 
 
 - release:  
@@ -687,7 +696,7 @@
         - volume: 
             id: COISS_2090
             clock_range:  1775058271 to 1782849980 
-            UTC:  2014-04-01 to 2014-06-30
+            date_range:  2014-04-01 to 2014-06-30
 
 
 - release:  
@@ -698,10 +707,10 @@
         - volume: 
             id: COISS_2091
             clock_range:  1782983700 to 1790054929 
-            UTC:  2014-07-02 to 2014-09-26
+            date_range:  2014-07-02 to 2014-09-26
 
         - volume: 
             id: COISS_2092
             clock_range:  1790059156 to 1790610212 
-            UTC:  2014-09-26 to 2014-09-28
+            date_range:  2014-09-26 to 2014-09-28
 
