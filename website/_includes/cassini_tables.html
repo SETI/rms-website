@@ -1,5 +1,5 @@
 {% assign releases = site.data.tables['cassini_iss_access'] %}
-
+{% assign columns = releases[0].columns %}
 		
 <table summary ="A list of Cassini ISS Releases">
 
@@ -7,50 +7,106 @@
 
   <thead>
 	<tr>
-		<th scope="col" id="t1">volume_id</th>
 
-		<th scope="col" id="t2">Bundled Volumes</th>		
+		{% for col in columns %}
 
-		<th scope="col" id="t3">Browse Images</th>
+			<th scope="col" id="{{ col | slugify }}">{{ col }}</th>
 
-		<th scope="col" id="t4">Calibrated Images</th>
-
-		<th scope="col" id="t5">Index File</th>
-
-		<th scope="col" id="t6">Spacecraft Clock (SCLK) Range</th>
-
-		<th scope="col" id="t7">Date Range (UTC)</th>
+		{% endfor %}
 
 	</tr>
 	</thead>
 
 
-{% for volume in releases %}
-	<tbody>
+	{% for volume in releases %}
+		
+		{% if volume.columns %}
+			{% continue %}
+		{% endif %}
 
-	<tr>
-		<th class="colgroup-seperator" colspan="7" id="release-{{ volume.release.date | slugify}}" scope="colgroup">
-			{{ volume.release.date  }} Release
-		</th>
-	</tr>
+		<tbody>
 
-{% for row in volume.release.volumes %}
+			<tr>
+				<th class="colgroup-seperator" colspan="7" id="release-{{ volume.release.date | slugify}}" scope="colgroup">
+					{{ volume.release.date  }} Release
+				</th>
+			</tr>
 
-	<tr>
-		<td headers="t1 release-{{ volume.release.date | slugify}}">{{ row.volume.id }}</td>
-		<td headers="t2 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
-		<td headers="t3 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
-		<td headers="t4 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
-		<td headers="t5 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
-		<td headers="t6 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
-		<td headers="t7 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
-	</tr>
+			{% for row in volume.release.volumes %}
 
-{% endfor %}
+				<tr>
+					{% for col in columns %}
 
-	</tbody>
 
-{% endfor %}
+						{% if col == "Volume Id" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+								<a href = "http://pds-rings.seti.org/vol/COISS_2xxx/{{ row.volume.id }}">
+										{{ row.volume.id }}
+								</a>
+							</td>
+						{% endif %}
+
+
+						{% if col == "Bundled Volumes" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+								<a href = "http://pds-rings.seti.org/archives/COISS_2xxx/{{ row.volume.id }}.tar.gz">
+										{{ row.volume.id }}.tar.gz
+								</a>
+							</td>
+						{% endif %}
+
+
+						{% if col == "Browse Images" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+								<a href = "http://pds-rings.seti.org/browse/COISS_2xxx/{{ row.volume.id }}/data/">
+										{{ col }}
+								</a>
+							</td>
+						{% endif %}
+
+
+						{% if col == "Calibrated Images" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+								<a href = "http://pds-rings.seti.org/derived/COISS_2xxx/{{ row.volume.id }}/data/">
+										{{ col }}
+								</a>
+							</td>
+						{% endif %}
+
+
+						{% if col == "Index File" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+								<a href = "http://pds-rings.seti.org/volumes/COISS_2xxx/{{ row.volume.id }}/index/index.tab">
+										index.tab
+								</a>
+							</td>
+						{% endif %}
+
+
+						{% if col == "Spacecraft Clock (SCLK) range" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+								{{ row.volume.clock_range | replace: ' ', '<br>' }}
+							</td>
+						{% endif %}
+
+
+						{% if col == "Date Range (UTC)" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+								{{ row.volume.date_range | replace: ' ', '<br>' }}
+							</td>
+						{% endif %}
+
+
+					{% endfor %}
+				</tr>
+
+
+			{% endfor %}
+
+		</tbody>
+		
+
+	{% endfor %}
 
 </table>
 
