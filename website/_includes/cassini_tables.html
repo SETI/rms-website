@@ -1,0 +1,57 @@
+{% assign releases = site.data.tables['cassini_iss_access'] %}
+
+		
+<table summary ="A list of Cassini ISS Releases">
+
+	<caption class = "hidden">Cassini ISS Releases</caption>
+
+  <thead>
+	<tr>
+		<th scope="col" id="t1">volume_id</th>
+
+		<th scope="col" id="t2">Bundled Volumes</th>		
+
+		<th scope="col" id="t3">Browse Images</th>
+
+		<th scope="col" id="t4">Calibrated Images</th>
+
+		<th scope="col" id="t5">Index File</th>
+
+		<th scope="col" id="t6">Spacecraft Clock (SCLK) Range</th>
+
+		<th scope="col" id="t7">Date Range (UTC)</th>
+
+	</tr>
+	</thead>
+
+
+{% for volume in releases %}
+	<tbody>
+
+	<tr>
+		<th class="colgroup-seperator" colspan="7" id="release-{{ volume.release.date | slugify}}" scope="colgroup">
+			{{ volume.release.date  }} Release
+		</th>
+	</tr>
+
+{% for row in volume.release.volumes %}
+
+	<tr>
+		<td headers="t1 release-{{ volume.release.date | slugify}}">{{ row.volume.id }}</td>
+		<td headers="t2 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
+		<td headers="t3 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
+		<td headers="t4 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
+		<td headers="t5 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
+		<td headers="t6 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
+		<td headers="t7 release-{{ volume.release.date | slugify}}">{{ volume.id }}</td>
+	</tr>
+
+{% endfor %}
+
+	</tbody>
+
+{% endfor %}
+
+</table>
+
+
