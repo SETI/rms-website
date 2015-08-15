@@ -1,4 +1,5 @@
 - columns: 
+    # content folks: do not edit this part, if you do you must edit the template! 
     - Volume Id
     - Bundled Volumes
     - Browse Images
@@ -7,6 +8,7 @@
     - Spacecraft Clock (SCLK) range  
     - Date Range (UTC)
 
+# OK to edit: 
 - release:  
 
     date: July 1, 2005
