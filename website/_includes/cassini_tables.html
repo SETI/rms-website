@@ -1,4 +1,3 @@
-{% assign releases = site.data.tables['cassini_iss_access'] %}
 {% assign columns = releases[0].columns %}
 		
 <table summary ="A list of Cassini ISS Releases">
@@ -40,7 +39,7 @@
 
 						{% if col == "Volume Id" %}
 							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/vol/COISS_2xxx/{{ row.volume.id }}">
+								<a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.volume.id }}">
 										{{ row.volume.id }}
 								</a>
 							</td>
@@ -49,7 +48,7 @@
 
 						{% if col == "Bundled Volumes" %}
 							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/archives/COISS_2xxx/{{ row.volume.id }}.tar.gz">
+								<a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.volume.id }}.tar.gz">
 										{{ row.volume.id }}.tar.gz
 								</a>
 							</td>
@@ -58,7 +57,7 @@
 
 						{% if col == "Browse Images" %}
 							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/browse/COISS_2xxx/{{ row.volume.id }}/data/">
+								<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.volume.id }}/data/">
 										{{ col }}
 								</a>
 							</td>
@@ -67,7 +66,7 @@
 
 						{% if col == "Calibrated Images" %}
 							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/derived/COISS_2xxx/{{ row.volume.id }}/data/">
+								<a href = "http://pds-rings.seti.org/derived/{{ base_dir }}/{{ row.volume.id }}/data/">
 										{{ col }}
 								</a>
 							</td>
@@ -76,7 +75,7 @@
 
 						{% if col == "Index File" %}
 							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/volumes/COISS_2xxx/{{ row.volume.id }}/index/index.tab">
+								<a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.volume.id }}/index/index.tab">
 										index.tab
 								</a>
 							</td>

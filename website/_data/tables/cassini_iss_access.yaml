@@ -1,5 +1,4 @@
-# content folks: do not edit this part, the columns, 
-# if you do you must also edit the template cassini_tables.html
+# do not edit columns without first reading cassini.README.md in this directory
 - columns: 
     - Volume Id
     - Bundled Volumes
