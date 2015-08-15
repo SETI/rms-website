@@ -1,0 +1,950 @@
+# do not edit columns without first reading cassini.README.md in this directory
+- columns: 
+    - Volume Id
+    - Bundled Volumes
+    - Index File
+    - Spacecraft Clock (SCLK) range  
+    - Date Range (UTC)
+
+# Edit Below:
+- release:   
+    heading: Data from Launch to Saturn Approach
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0010
+            clock_range: 1349230561 to 1351571202 
+            date_range: 2000-10-03 to 2000-10-30  
+
+        - volume: 
+            id: COCIRS_0011
+            clock_range: 1351772518 to 1354311202 
+            date_range: 2000-11-01 to 2000-11-30  
+
+        - volume: 
+            id: COCIRS_0012
+            clock_range: 1354323316 to 1356991469 
+            date_range: 2000-12-01 to 2000-12-31  
+
+        - volume: 
+            id: COCIRS_0101
+            clock_range: 1357008930 to 1359606693 
+            date_range: 2001-01-01 to 2001-01-31  
+
+        - volume: 
+            id: COCIRS_0102
+            clock_range: 1360074361 to 1361974572 
+            date_range: 2001-02-05 to 2001-02-27  
+
+        - volume: 
+            id: COCIRS_0103
+            clock_range: 1362157874 to 1363896955 
+            date_range: 2001-03-01 to 2001-03-21  
+
+        - volume: 
+            id: COCIRS_0104
+            clock_range: 1367175483 to 1367249296 
+            date_range: 2001-04-28 to 2001-04-29  
+
+        - volume: 
+            id: COCIRS_0107
+            clock_range: 1373503245 to 1373586326 
+            date_range: 2001-07-11 to 2001-07-11  
+
+        - volume: 
+            id: COCIRS_0110
+            clock_range: 1383097514 to 1383214460 
+            date_range: 2001-10-30 to 2001-10-31  
+
+        - volume: 
+            id: COCIRS_0201
+            clock_range: 1389874621 to 1389906369 
+            date_range: 2002-01-16 to 2002-01-16  
+
+        - volume: 
+            id: COCIRS_0205
+            clock_range: 1399708091 to 1401311591 
+            date_range: 2002-05-10 to 2002-05-28  
+
+        - volume: 
+            id: COCIRS_0207
+            clock_range: 1405154374 to 1405815401 
+            date_range: 2002-07-12 to 2002-07-19  
+
+        - volume: 
+            id: COCIRS_0209
+            clock_range: 1410300515 to 1410308257 
+            date_range: 2002-09-09 to 2002-09-09  
+
+        - volume: 
+            id: COCIRS_0210
+            clock_range: 1412205318 to 1413237764 
+            date_range: 2002-10-01 to 2002-10-13  
+
+        - volume: 
+            id: COCIRS_0301
+            clock_range: 1422112725 to 1422153544 
+            date_range: 2003-01-24 to 2003-01-25  
+
+        - volume: 
+            id: COCIRS_0304
+            clock_range: 1429470013 to 1429733257 
+            date_range: 2003-04-19 to 2003-04-22  
+
+        - volume: 
+            id: COCIRS_0306
+            clock_range: 1433571816 to 1435367457 
+            date_range: 2003-06-06 to 2003-06-27  
+
+- release:   
+    heading: Data from Saturn Approach to End of Mission  
+
+    date: July 1, 2005
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0401
+            clock_range: 1452654167 to 1453622095 
+            date_range: 2004-01-13 to 2004-01-24  
+
+        - volume: 
+            id: COCIRS_0402
+            clock_range: 1454690838 to 1456686292 
+            date_range: 2004-02-05 to 2004-02-28  
+
+        - volume: 
+            id: COCIRS_0403
+            clock_range: 1457223275 to 1459308812 
+            date_range: 2004-03-05 to 2004-03-30  
+
+        - volume: 
+            id: COCIRS_0404
+            clock_range: 1459651371 to 1461843329 
+            date_range: 2004-04-03 to 2004-04-28  
+
+        - volume: 
+            id: COCIRS_0405
+            clock_range: 1462150327 to 1464736685 
+            date_range: 2004-05-02 to 2004-05-31  
+
+        - volume: 
+            id: COCIRS_0406
+            clock_range: 1464845306 to 1466587630 
+            date_range: 2004-06-02 to 2004-06-22  
+
+        - volume: 
+            id: COCIRS_0407
+            clock_range: 1467343973 to 1470011054 
+            date_range: 2004-07-01 to 2004-07-31  
+
+        - volume: 
+            id: COCIRS_0408
+            clock_range: 1470011078 to 1472689485 
+            date_range: 2004-08-01 to 2004-08-31  
+
+        - volume: 
+            id: COCIRS_0409
+            clock_range: 1472689497 to 1475281465 
+            date_range: 2004-09-01 to 2004-09-30  
+
+- release: 
+    date: October 1, 2005
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0410
+            clock_range: 1475281513 to 1477958958 
+            date_range: 2004-10-01 to 2004-10-31  
+
+        - volume: 
+            id: COCIRS_0411
+            clock_range: 1477970758 to 1480527246 
+            date_range: 2004-11-01 to 2004-11-30  
+
+        - volume: 
+            id: COCIRS_0412
+            clock_range: 1480569375 to 1483230337 
+            date_range: 2004-12-01 to 2004-12-31  
+
+- release: 
+    date: January 1, 2006
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0501
+            clock_range: 1483230360 to 1485908712 
+            date_range: 2005-01-01 to 2005-01-31  
+
+        - volume: 
+            id: COCIRS_0502
+            clock_range: 1485908776 to 1488327990 
+            date_range: 2005-02-01 to 2005-02-28  
+
+        - volume: 
+            id: COCIRS_0503
+            clock_range: 1488327995 to 1491006403 
+            date_range: 2005-03-01 to 2005-03-31  
+
+- release: 
+    date: April 1, 2006
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0504
+            clock_range: 1491006413 to 1493598417 
+            date_range: 2005-04-01 to 2005-04-30  
+
+        - volume: 
+            id: COCIRS_0505
+            clock_range: 1493598431 to 1496265859 
+            date_range: 2005-05-01 to 2005-05-31  
+
+        - volume: 
+            id: COCIRS_0506
+            clock_range: 1496338049 to 1498824202 
+            date_range: 2005-06-01 to 2005-06-30  
+
+- release: 
+    date: July 1, 2006
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0507
+            clock_range: 1498873965 to 1501547273 
+            date_range: 2005-07-01 to 2005-07-30  
+
+        - volume: 
+            id: COCIRS_0508
+            clock_range: 1501547323 to 1504170295 
+            date_range: 2005-08-01 to 2005-08-31  
+
+        - volume: 
+            id: COCIRS_0509
+            clock_range: 1504287800 to 1506658378 
+            date_range: 2005-09-01 to 2005-09-29  
+
+- release: 
+    date: October 1, 2006
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0510
+            clock_range: 1506817771 to 1509496108 
+            date_range: 2005-10-01 to 2005-10-31  
+
+        - volume: 
+            id: COCIRS_0511
+            clock_range: 1509618565 to 1512088142 
+            date_range: 2005-11-02 to 2005-11-30  
+
+        - volume: 
+            id: COCIRS_0512
+            clock_range: 1512088152 to 1514579653 
+            date_range: 2005-12-01 to 2005-12-29  
+
+- release: 
+    date: January 1, 2007
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0601
+            clock_range: 1514766569 to 1517444968 
+            date_range: 2006-01-01 to 2006-01-31  
+
+        - volume: 
+            id: COCIRS_0602
+            clock_range: 1517444982 to 1519864168 
+            date_range: 2006-02-01 to 2006-02-28  
+
+        - volume: 
+            id: COCIRS_0603
+            clock_range: 1519864232 to 1522542569 
+            date_range: 2006-03-01 to 2006-03-31  
+
+- release: 
+    date: April 1, 2007
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0604
+            clock_range: 1522542633 to 1525120233 
+            date_range: 2006-04-01 to 2006-04-30  
+
+        - volume: 
+            id: COCIRS_0605
+            clock_range: 1525134632 to 1527813032 
+            date_range: 2006-05-01 to 2006-05-31  
+
+        - volume: 
+            id: COCIRS_0606
+            clock_range: 1527813046 to 1530405032 
+            date_range: 2006-06-01 to 2006-06-30  
+
+- release: 
+    date: July 1, 2007
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0607
+            clock_range: 1530405096 to 1533083433 
+            date_range: 2006-07-01 to 2006-07-31  
+
+        - volume: 
+            id: COCIRS_0608
+            clock_range: 1533083497 to 1535761893 
+            date_range: 2006-08-01 to 2006-08-31  
+
+        - volume: 
+            id: COCIRS_0609
+            clock_range: 1535761896 to 1538353897 
+            date_range: 2006-09-01 to 2006-09-30  
+
+- release: 
+    date: October 1, 2007
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0610
+            clock_range: 1538353961 to 1541032297 
+            date_range: 2006-10-01 to 2006-10-31  
+
+        - volume: 
+            id: COCIRS_0611
+            clock_range: 1541032361 to 1543609961 
+            date_range: 2006-11-01 to 2006-11-30  
+
+        - volume: 
+            id: COCIRS_0612
+            clock_range: 1543624361 to 1546302761 
+            date_range: 2006-12-01 to 2006-12-31  
+
+- release: 
+    date: January 1, 2008
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0701
+            clock_range: 1546302825 to 1548981171 
+            date_range: 2007-01-01 to 2007-01-31  
+
+        - volume: 
+            id: COCIRS_0702
+            clock_range: 1548981183 to 1551400361 
+            date_range: 2007-02-01 to 2007-02-28  
+
+        - volume: 
+            id: COCIRS_0703
+            clock_range: 1551400425 to 1554078760 
+            date_range: 2007-03-01 to 2007-03-31  
+
+- release: 
+    date: April 1, 2008
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0704
+            clock_range: 1554078824 to 1556670824 
+            date_range: 2007-04-01 to 2007-04-30  
+
+        - volume: 
+            id: COCIRS_0705
+            clock_range: 1556670888 to 1559349224 
+            date_range: 2007-05-01 to 2007-05-31  
+
+        - volume: 
+            id: COCIRS_0706
+            clock_range: 1559349288 to 1561941224 
+            date_range: 2007-06-01 to 2007-06-30  
+
+- release: 
+    date: July 1, 2008
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0707
+            clock_range: 1561941288 to 1564619631 
+            date_range: 2007-07-01 to 2007-07-31  
+
+        - volume: 
+            id: COCIRS_0708
+            clock_range: 1564619695 to 1567298089 
+            date_range: 2007-08-01 to 2007-08-31  
+
+        - volume: 
+            id: COCIRS_0709
+            clock_range: 1567298098 to 1569890110 
+            date_range: 2007-09-01 to 2007-09-30  
+
+- release: 
+    date: October 1, 2008
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0710
+            clock_range: 1569938818 to 1572548654 
+            date_range: 2007-10-01 to 2007-10-31  
+
+        - volume: 
+            id: COCIRS_0711
+            clock_range: 1572779148 to 1575160537 
+            date_range: 2007-11-03 to 2007-11-30  
+
+        - volume: 
+            id: COCIRS_0712
+            clock_range: 1575160561 to 1577795554 
+            date_range: 2007-12-01 to 2007-12-31  
+
+- release: 
+    date: January 1, 2009
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0801
+            clock_range: 1577863463 to 1580517351 
+            date_range: 2008-01-01 to 2007-01-31  
+
+        - volume: 
+            id: COCIRS_0802
+            clock_range: 1580517401 to 1583022992 
+            date_range: 2008-02-01 to 2008-02-29  
+
+        - volume: 
+            id: COCIRS_0803
+            clock_range: 1583023005 to 1585701397 
+            date_range: 2008-03-01 to 2008-03-31  
+
+- release: 
+    date: April 1, 2009
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0804
+            clock_range: 1585701447 to 1588293440 
+            date_range: 2008-04-01 to 2007-04-30  
+
+        - volume: 
+            id: COCIRS_0805
+            clock_range: 1588293445 to 1590971859 
+            date_range: 2008-05-01 to 2008-05-31  
+
+        - volume: 
+            id: COCIRS_0806
+            clock_range: 1590971909 to 1593563819 
+            date_range: 2008-06-01 to 2008-06-30  
+
+- release: 
+    date: July 1, 2009
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0807
+            clock_range: 1593563890 to 1596242278 
+            date_range: 2008-07-01 to 2008-07-31  
+
+        - volume: 
+            id: COCIRS_0808
+            clock_range: 1596242328 to 1598920699 
+            date_range: 2008-08-01 to 2008-08-31  
+
+        - volume: 
+            id: COCIRS_0809
+            clock_range: 1598920749 to 1601512732 
+            date_range: 2008-09-01 to 2008-09-30  
+
+- release: 
+    date: October 1, 2009
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0810
+            clock_range: 1601512736 to 1604191149 
+            date_range: 2008-10-01 to 2008-10-31  
+
+        - volume: 
+            id: COCIRS_0811
+            clock_range: 1604191154 to 1606758156 
+            date_range: 2008-11-01 to 2008-11-30  
+
+        - volume: 
+            id: COCIRS_0812
+            clock_range: 1606840543 to 1609438674 
+            date_range: 2008-12-01 to 2008-12-31  
+
+- release: 
+    date: January 1, 2010
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0901
+            clock_range: 1609461638 to 1612139974 
+            date_range: 2009-01-01 to 2009-01-31  
+
+        - volume: 
+            id: COCIRS_0902
+            clock_range: 1612140014 to 1614559174 
+            date_range: 2009-02-01 to 2009-02-28  
+
+        - volume: 
+            id: COCIRS_0903
+            clock_range: 1614559229 to 1617237638 
+            date_range: 2009-03-01 to 2009-03-31  
+
+- release: 
+    date: April 1, 2010
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0904
+            clock_range: 1617237702 to 1619829638 
+            date_range: 2009-04-01 to 2009-04-30  
+
+        - volume: 
+            id: COCIRS_0905
+            clock_range: 1619829670 to 1622508038 
+            date_range: 2009-05-01 to 2009-05-31  
+
+        - volume: 
+            id: COCIRS_0906
+            clock_range: 1622508102 to 1625085765 
+            date_range: 2009-06-01 to 2009-06-30  
+
+- release: 
+    date: July 1, 2010
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0907
+            clock_range: 1625100107 to 1627778503 
+            date_range: 2009-07-01 to 2009-07-31  
+
+        - volume: 
+            id: COCIRS_0908
+            clock_range: 1627778553 to 1630456929 
+            date_range: 2009-08-01 to 2009-08-31  
+
+        - volume: 
+            id: COCIRS_0909
+            clock_range: 1630456941 to 1633048950 
+            date_range: 2009-09-01 to 2009-09-30  
+
+- release: 
+    date: October 1, 2010
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_0910
+            clock_range: 1633048962 to 1635727366 
+            date_range: 2009-10-01 to 2009-10-31  
+
+        - volume: 
+            id: COCIRS_0911
+            clock_range: 1635727430 to 1638319366 
+            date_range: 2009-11-01 to 2009-11-30  
+
+        - volume: 
+            id: COCIRS_0912
+            clock_range: 1638319430 to 1640997808 
+            date_range: 2009-12-01 to 2009-12-31  
+
+- release: 
+    date: January 1, 2011
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1001
+            clock_range: 1640997820 to 1643676231 
+            date_range: 2010-01-01 to 2010-01-31  
+
+        - volume: 
+            id: COCIRS_1002
+            clock_range: 1643676236 to 1646095431 
+            date_range: 2010-02-01 to 2010-02-28  
+
+        - volume: 
+            id: COCIRS_1003
+            clock_range: 1646095455 to 1648773831 
+            date_range: 2010-03-01 to 2010-03-31  
+
+- release: 
+    date: April 1, 2011
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1004
+            clock_range: 1648773881 to 1651365830 
+            date_range: 2010-04-01 to 2010-04-30  
+
+        - volume: 
+            id: COCIRS_1005
+            clock_range: 1651365894 to 1654044295 
+            date_range: 2010-05-01 to 2010-05-31  
+
+        - volume: 
+            id: COCIRS_1006
+            clock_range: 1654044313 to 1656621959 
+            date_range: 2010-06-01 to 2010-06-30  
+
+- release: 
+    date: July 1, 2011
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1007
+            clock_range: 1656636359 to 1659314695 
+            date_range: 2010-07-01 to 2010-07-31  
+
+        - volume: 
+            id: COCIRS_1008
+            clock_range: 1659314759 to 1661993159 
+            date_range: 2010-08-01 to 2010-08-31  
+
+        - volume: 
+            id: COCIRS_1009
+            clock_range: 1661993171 to 1664585159 
+            date_range: 2010-09-01 to 2010-09-30  
+
+- release: 
+    date: October 1, 2011
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1010
+            clock_range: 1664585223 to 1667263559 
+            date_range: 2010-10-01 to 2010-10-31  
+
+        - volume: 
+            id: COCIRS_1011
+            clock_range: 1667277959 to 1669855618 
+            date_range: 2010-11-01 to 2010-11-30  
+
+        - volume: 
+            id: COCIRS_1012
+            clock_range: 1669855623 to 1672534036 
+            date_range: 2010-12-01 to 2010-12-31  
+
+- release: 
+    date: January 1, 2012
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1101
+            clock_range: 1672534100 to 1675212409 
+            date_range: 2011-01-01 to 2011-01-31  
+
+        - volume: 
+            id: COCIRS_1102
+            clock_range: 1675212459 to 1677631646 
+            date_range: 2011-02-01 to 2011-02-28  
+
+        - volume: 
+            id: COCIRS_1103
+            clock_range: 1677631696 to 1680310036 
+            date_range: 2011-03-01 to 2011-03-31  
+
+- release: 
+    date: April 1, 2012
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1104
+            clock_range: 1680310100 to 1682902101 
+            date_range: 2011-04-01 to 2011-04-30  
+
+        - volume: 
+            id: COCIRS_1105
+            clock_range: 1682902165 to 1685566165 
+            date_range: 2011-05-01 to 2011-05-31  
+
+        - volume: 
+            id: COCIRS_1106
+            clock_range: 1685580565 to 1688172500 
+            date_range: 2011-06-01 to 2011-06-30  
+
+- release: 
+    date: July 1, 2012
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1107
+            clock_range: 1688172564 to 1690850938 
+            date_range: 2011-07-01 to 2011-07-31  
+
+        - volume: 
+            id: COCIRS_1108
+            clock_range: 1690850962 to 1693529363 
+            date_range: 2011-08-01 to 2011-08-31  
+
+        - volume: 
+            id: COCIRS_1109
+            clock_range: 1693529387 to 1696121364 
+            date_range: 2011-09-01 to 2011-09-30  
+
+- release: 
+    date: October 1, 2012
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1110
+            clock_range: 1696121428 to 1698799789 
+            date_range: 2011-10-01 to 2011-10-31  
+
+        - volume: 
+            id: COCIRS_1111
+            clock_range: 1698799828 to 1701391763 
+            date_range: 2011-11-01 to 2011-11-30  
+
+        - volume: 
+            id: COCIRS_1112
+            clock_range: 1701391827 to 1704070227 
+            date_range: 2011-12-01 to 2011-12-31  
+
+- release: 
+    date: January 1, 2013
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1201
+            clock_range: 1704070241 to 1706734291 
+            date_range: 2012-01-01 to 2012-01-31  
+
+        - volume: 
+            id: COCIRS_1202
+            clock_range: 1706748693 to 1709254228 
+            date_range: 2012-02-01 to 2012-02-29  
+
+        - volume: 
+            id: COCIRS_1203
+            clock_range: 1709254292 to 1711920208 
+            date_range: 2012-03-01 to 2012-03-31  
+
+- release: 
+    date: April 1, 2013
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1204
+            clock_range: 1711932689 to 1714524692 
+            date_range: 2012-04-01 to 2012-04-30  
+
+        - volume: 
+            id: COCIRS_1205
+            clock_range: 1714524756 to 1717197907 
+            date_range: 2012-05-01 to 2012-05-31  
+
+        - volume: 
+            id: COCIRS_1206
+            clock_range: 1717203923 to 1719795119 
+            date_range: 2012-06-01 to 2012-06-30  
+
+- release: 
+    date: July 1, 2013
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1207
+            clock_range: 1719795154 to 1722459465 
+            date_range: 2012-07-01 to 2012-07-31  
+
+        - volume: 
+            id: COCIRS_1208
+            clock_range: 1722473555 to 1725151955 
+            date_range: 2012-08-01 to 2012-08-31  
+
+        - volume: 
+            id: COCIRS_1209
+            clock_range: 1725152018 to 1727743966 
+            date_range: 2012-09-01 to 2012-09-30  
+
+- release: 
+    date: October 1, 2013
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1210
+            clock_range: 1727744016 to 1730422355 
+            date_range: 2012-10-01 to 2012-10-31  
+
+        - volume: 
+            id: COCIRS_1211
+            clock_range: 1730422419 to 1733013074 
+            date_range: 2012-11-01 to 2012-11-30  
+
+        - volume: 
+            id: COCIRS_1212
+            clock_range: 1733014430 to 1735692819 
+            date_range: 2012-12-01 to 2012-12-31  
+
+- release: 
+    date: January 1, 2014
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1301
+            clock_range: 1735692883 to 1738371253 
+            date_range: 2013-01-01 to 2013-01-31  
+
+        - volume: 
+            id: COCIRS_1302
+            clock_range: 1738371258 to 1740780347 
+            date_range: 2013-02-01 to 2013-02-28  
+
+        - volume: 
+            id: COCIRS_1303
+            clock_range: 1740790483 to 1743468883 
+            date_range: 2013-03-01 to 2013-03-31  
+
+- release: 
+    date: April 1, 2014
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1304
+            clock_range: 1743468887 to 1746046592 
+            date_range: 2013-04-01 to 2013-04-30  
+
+        - volume: 
+            id: COCIRS_1305
+            clock_range: 1746060909 to 1748739315 
+            date_range: 2013-05-01 to 2013-05-31  
+
+        - volume: 
+            id: COCIRS_1306
+            clock_range: 1748739325 to 1751331283 
+            date_range: 2013-06-01 to 2013-06-30 | 
+
+- release: 
+    date: July 1, 2014
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1307
+            clock_range: 1751331347 to 1753995411 
+            date_range: 2013-07-01 to 2013-07-31  
+
+        - volume: 
+            id: COCIRS_1308
+            clock_range: 1754009811 to 1756673810 
+            date_range: 2013-08-01 to 2013-08-31  
+
+        - volume: 
+            id: COCIRS_1309
+            clock_range: 1756688210 to 1759280118 
+            date_range: 2013-09-01 to 2013-09-30  
+
+- release: 
+    date: October 1, 2014
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1310
+            clock_range: 1759280211 to 1761958548 
+            date_range: 2013-10-01 to 2013-10-31  
+
+        - volume: 
+            id: COCIRS_1311
+            clock_range: 1761958612 to 1764550612 
+            date_range: 2013-11-01 to 2013-11-30  
+
+        - volume: 
+            id: COCIRS_1312
+            clock_range: 1764550624 to 1767229011 
+            date_range: 2013-12-01 to 2013-12-31 | 
+
+- release: 
+    date: January 1, 2015
+
+    volumes: 
+
+        - volume: 
+            id: COCIRS_1401
+            clock_range: 1767229054 to 1769906801 
+            date_range: 2014-01-01 to 2014-01-31  
+
+        - volume: 
+            id: COCIRS_1402
+            clock_range: 1769907475 to 1772319926 
+            date_range: 2014-02-01 to 2014-02-28  
+
+        - volume: 
+            id: COCIRS_1403
+            clock_range: 177232667 to 1775005075 |
+            date_range: 014-03-01 to 2014-03-31  
+
+- release: 
+    date: April 1, 2015
+
+    volumes: 
+
+        - volume: 
+            id:  COCIRS_1404
+            clock_range: 1775005097 to 1777597075 
+            date_range: 2014-04-01 to 2014-04-30  
+
+        - volume: 
+            id:  COCIRS_1405
+            clock_range: 1777597139 to 1780261139 
+            date_range: 2014-05-01 to 2014-05-31  
+
+        - volume: 
+            id:  COCIRS_1406
+            clock_range: 1780275540 to 1782867531 
+            date_range: 2014-06-01 to 2014-06-30  
+
+- release: 
+    date: July 1, 2015
+
+    volumes: 
+
+        - volume: 
+            id:  COCIRS_1407
+            clock_range: 1782867538 to 1785545940 
+            date_range: 2014-07-01 to 2014-07-31  
+
+        - volume: 
+            id:  COCIRS_1408
+            clock_range: 1785546004 to 1788224339 
+            date_range: 2014-08-01 to 2014-08-31  
+
+        - volume: 
+            id:  COCIRS_1409
+            clock_range: 1788224382 to 1790816375 
+            date_range: 2014-09-01 to 2014-09-30  

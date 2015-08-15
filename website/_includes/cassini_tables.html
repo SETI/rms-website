@@ -1,8 +1,8 @@
 {% assign columns = releases[0].columns %}
 		
-<table summary ="A list of Cassini ISS Releases">
+<table summary ="A list of {{ table_name }}">
 
-	<caption class = "hidden">Cassini ISS Releases</caption>
+	<caption class = "hidden">{{ table_name }}</caption>
 
   <thead>
 	<tr>
@@ -16,7 +16,6 @@
 	</tr>
 	</thead>
 
-
 	{% for volume in releases %}
 		
 		{% if volume.columns %}
@@ -25,72 +24,135 @@
 
 		<tbody>
 
-			<tr>
-				<th class="colgroup-seperator" colspan="7" id="release-{{ volume.release.date | slugify}}" scope="colgroup">
-					{{ volume.release.date  }} Release
-				</th>
-			</tr>
+				{% if volume.release.date %}
+				<tr>
+					<th class="colgroup-seperator" colspan="7" id="release-{{ volume.release.date | slugify}}" scope="colgroup">
+						{{ volume.release.date  }} Release
+					</th>
+				</tr>
+				{% endif %}
+
+				{% if volume.release.heading %}
+				<tr>
+					<th class="colgroup-seperator" colspan="7" id="{{ volume.release.heading | slugify}}" scope="colgroup">
+						{{ volume.release.heading }}
+					</th>
+				</tr>
+				{% endif %}
+
 
 			{% for row in volume.release.volumes %}
+
+					{% assign inst_split = row.volume.id | split: '_' %}
+					{% capture base_dir %}{{ inst_split[0] }}_{{ inst_split[1] | split: "" | first }}xxx{% endcapture %}
 
 				<tr>
 					{% for col in columns %}
 
 
 						{% if col == "Volume Id" %}
-							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.volume.id }}">
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
+
+								{% if volume.release.nolinks == true %}		
 										{{ row.volume.id }}
-								</a>
+								{% else %}
+									<a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.volume.id }}">
+											{{ row.volume.id }}
+									</a>
+								{% endif %}
 							</td>
+
 						{% endif %}
 
 
 						{% if col == "Bundled Volumes" %}
-							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.volume.id }}.tar.gz">
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
+
+								{% if volume.release.nolinks == true %}		
 										{{ row.volume.id }}.tar.gz
-								</a>
+								{% else %}
+									<a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.volume.id }}.tar.gz">
+											{{ row.volume.id }}.tar.gz
+									</a>
+								{% endif %}
 							</td>
+
 						{% endif %}
 
 
 						{% if col == "Browse Images" %}
-							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.volume.id }}/data/">
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
+
+								{% if volume.release.nolinks == true %}		
 										{{ col }}
-								</a>
+								{% else %}
+									<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.volume.id }}/data/">
+											{{ col }}
+									</a>
+								{% endif %}
+
 							</td>
 						{% endif %}
 
 
 						{% if col == "Calibrated Images" %}
-							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/derived/{{ base_dir }}/{{ row.volume.id }}/data/">
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
+
+								{% if volume.release.nolinks == true %}		
 										{{ col }}
-								</a>
+								{% else %}
+									<a href = "http://pds-rings.seti.org/derived/{{ base_dir }}/{{ row.volume.id }}/data/">
+											{{ col }}
+									</a>
+								{% endif %}
+
 							</td>
 						{% endif %}
 
 
+						{% if col == "Footprint Link" %}
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
+
+								{% if volume.release.nolinks == true %}		
+										Footprints
+								{% else %}
+									<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.volume.id }}/BROWSE/">
+											Footprints
+									</a>
+								{% endif %}
+
+							</td>
+						{% endif %}
+
 						{% if col == "Index File" %}
-							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								<a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.volume.id }}/index/index.tab">
-										index.tab
-								</a>
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
+									
+									{% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
+										{% assign index_tab_name = "TSDR_INDEX.TAB" %}
+									{% else %}
+										{% assign index_tab_name = "index.tab" %}
+									{% endif %}
+
+									{% if volume.release.nolinks == true %}		
+											{{ index_tab_name }}
+									{% else %}
+										<a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.volume.id }}/index/{{ index_tab_name }}">
+												{{ index_tab_name }}
+										</a>
+									{% endif %}
 							</td>
 						{% endif %}
 
 
 						{% if col == "Spacecraft Clock (SCLK) range" %}
-							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
 								{{ row.volume.clock_range | replace: ' ', '<br>' }}
 							</td>
 						{% endif %}
 
 
 						{% if col == "Date Range (UTC)" %}
-							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
+							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}} {{ volume.release.heading | slugify}}">
 								<span style = "white-space:nowrap">{{ row.volume.date_range | replace: ' ', '</span><br><span class = "white-space:nowrap">' }}</span>
 							</td>
 						{% endif %}

@@ -7,5 +7,6 @@ you must also add it the html in the cassini_tables.html template
      - Bundled Volumes
      - Browse Images
      - Calibrated Images
+     - Footprint Link
      - Index File
      - Spacecraft Clock (SCLK) range  
