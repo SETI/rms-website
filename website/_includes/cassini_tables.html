@@ -92,7 +92,7 @@
 
 						{% if col == "Date Range (UTC)" %}
 							<td headers="{{ col | slugify }} release-{{ volume.release.date | slugify}}">
-								{{ row.volume.date_range | replace: ' ', '<br>' }}
+								<span style = "white-space:nowrap">{{ row.volume.date_range | replace: ' ', '</span><br><span class = "white-space:nowrap">' }}</span>
 							</td>
 						{% endif %}
 
