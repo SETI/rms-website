@@ -1,5 +1,6 @@
+# content folks: do not edit this part, the columns, 
+# if you do you must also edit the template cassini_tables.html
 - columns: 
-    # content folks: do not edit this part, if you do you must edit the template! 
     - Volume Id
     - Bundled Volumes
     - Browse Images
@@ -8,7 +9,7 @@
     - Spacecraft Clock (SCLK) range  
     - Date Range (UTC)
 
-# OK to edit: 
+# Edit Below:
 - release:  
 
     date: July 1, 2005
