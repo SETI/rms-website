@@ -197,6 +197,35 @@
 							{% endif %}
 
 
+							<!-- volume_id_list -->
+							{% if col == "Data Set" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+									<span style = "white-space:nowrap">{{ row.table_row.dataset }}</span>
+								</td>
+							{% endif %}
+
+
+
+							<!-- volume_id_list -->
+              {% if col == 'Volume ID List' %}
+                  <td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                      <ul class = "list-inline" style = "text-align:left">
+
+                        {% for volume_id in row.table_row.volume_id_list %}
+
+                          {% assign instrument = volume_id | split: '_' %}
+                          {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
+
+                          <li>
+                              <a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ volume_id }}/">{{ volume_id }}</a>
+                          </li>
+
+                        {% endfor %}
+                      </ul>
+                  </td>
+              {% endif %}
+
+
 						{% endfor %}
 					</tr>
 			{% endfor %}
