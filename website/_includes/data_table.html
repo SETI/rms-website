@@ -49,7 +49,7 @@
 				<!-- volume group separator rows -->
 				{% if entry.section.heading1 %}
 					<tr>
-						<th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="release-{{ entry.section.heading1 | slugify }}" scope="colgroup">
+						<th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="section-{{ entry.section.heading1 | slugify }}" scope="colgroup">
 							{{ entry.section.heading1 }} 
 						</th>
 					</tr>
@@ -86,7 +86,7 @@
 
 							<!-- Volume ID -->
 							{% if col == "Volume ID" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 									{% if table_data.section.nolinks == true %}		
 											{{ row.table_row.id }}
 									{% else %}
@@ -100,7 +100,7 @@
 
 							<!-- Bundled Volumes -->
 							{% if col == "Bundled Volumes" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 									{% if table_data.section.nolinks == true %}		
 											{{ row.table_row.id }}.tar.gz
 									{% else %}
@@ -114,7 +114,7 @@
 
 							<!-- Browse Images -->
 							{% if col == "Browse Images" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
 									{% if table_data.section.nolinks == true %}		
 											{{ col }}
@@ -130,7 +130,7 @@
 
 							<!-- Calibrated Images -->
 							{% if col == "Calibrated Images" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
 									{% if table_data.section.nolinks == true %}		
 											{{ col }}
@@ -146,7 +146,7 @@
 
 							<!-- Footprint Link -->
 							{% if col == "Footprint Link" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
 									{% if table_data.section.nolinks == true %}		
 											Footprints
@@ -162,7 +162,7 @@
 
 							<!-- Index File -->
 							{% if col == "Index File" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 										
 										{% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
 											{% assign index_tab_name = "TSDR_INDEX.TAB" %}
@@ -183,7 +183,7 @@
 
 							<!-- Spacecraft Clock (SCLK) range -->
 							{% if col == "Spacecraft Clock (SCLK) range" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 									{{ row.table_row.clock_range | replace: ' ', '<br>' }}
 								</td>
 							{% endif %}
@@ -191,7 +191,7 @@
 
 							<!-- Date Range (UTC) -->
 							{% if col == "Date Range (UTC)" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 									<span style = "white-space:nowrap">{{ row.table_row.date_range | replace: ' ', '</span><br><span class = "white-space:nowrap">' }}</span>
 								</td>
 							{% endif %}
@@ -199,7 +199,7 @@
 
 							<!-- volume_id_list -->
 							{% if col == "Data Set" %}
-								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+								<td id = "dataset-{{ row.table_row.dataset }}" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 									<span style = "white-space:nowrap">{{ row.table_row.dataset }}</span>
 								</td>
 							{% endif %}
@@ -208,7 +208,7 @@
 
 							<!-- volume_id_list -->
               {% if col == 'Volume ID List' %}
-                  <td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                  <td headers="{{ col | slugify }} dataset-{{ row.table_row.dataset }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
                       <ul class = "list-inline" style = "text-align:left">
 
                         {% for volume_id in row.table_row.volume_id_list %}
