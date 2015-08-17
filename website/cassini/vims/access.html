@@ -36,15 +36,11 @@ images is in [COVIMS_previews.txt](COVIMS_previews.txt).
 
   * To determine which volumes meet the publicly available criteria for a specific ROSES Announcement please see the appropriate DAP page under our [Proposal Support](/roses) pages.
 
-{% assign releases = site.data.tables['cassini_vims_access'] %}
-{% assign base_dir = "COVIMS_0xxx" %}
 {% assign table_name = "Cassini VIMS Releases" %}
-{% include cassini_tables.html %}
+{% assign table_desc = "A listing of Cassini VIMS Releases" %}
+{% assign table_data = site.data.tables['cassini_vims_access'] %}
+{% include data_table.html %}
 
-
-Next Release October 1, 2015  
-  
-  
 
 * * *
 

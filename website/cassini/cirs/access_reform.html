@@ -61,14 +61,12 @@ diagrams is given in [COCIRS_previews.txt](COCIRS_previews.txt).
 
 Data from Saturn Approach to End of Mission  
 
-{% assign releases = site.data.tables['cassini_cirs_access_reform'] %}
 {% assign table_name = "Cassini CIRS Reformated Releases" %}
-{% include cassini_tables.html %}
+{% assign table_desc = "A listing of Cassini CIRS Reformated Releases" %}
+{% assign table_data = site.data.tables['cassini_cirs_access_reform'] %}
+{% include data_table.html %}
 
 
-Next Release October 1, 2015  
-  
-  
   
 
 * * *

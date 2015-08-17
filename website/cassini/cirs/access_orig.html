@@ -62,13 +62,11 @@ to download during the late night/early morning hours California time.
   * To determine which volumes meet the publicly available criteria for a specific ROSES Announcement please see the appropriate DAP page under our [Proposal Support](/roses) pages.
 
 
-{% assign releases = site.data.tables['cassini_cirs_access_orig'] %}
-{% assign table_name = "Cassini CIRS Releases" %}
-{% include cassini_tables.html %}
+{% assign table_name = "Cassini CIRS Original Releases" %}
+{% assign table_desc = "A listing of Cassini CIRS Original Releases" %}
+{% assign table_data = site.data.tables['cassini_cirs_access_orig'] %}
+{% include data_table.html %}
 
-
-Next Release October 1, 2015  
-  
   
 
 * * *

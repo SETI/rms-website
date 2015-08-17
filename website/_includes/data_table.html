@@ -1,0 +1,207 @@
+{% comment %}
+
+		to use this template assign a table name, table description, and next-release date as you want them displayed, 
+		and a yaml file that lists the table_data, for example see cassini_cirs_access.yaml 
+
+		like so:
+
+				{% assign table_name = "Cassini UVIS Releases" %}
+				{% assign table_desc = "A listing of Cassini UVIS Releases" %}
+				{% assign table_data = site.data.tables['cassini_uvis_access'] %}
+				{% include cassini_tables.html %}
+
+
+{% endcomment %}
+
+{% assign column_labels = table_data[0].column_labels %}
+		
+
+<table summary ="A list of {{ table_name }}">
+	<caption class = "hidden">{{ table_name }}</caption>
+
+  <thead>
+		<tr>
+			{% for col in column_labels %}
+				<th scope="col" id="{{ col | slugify }}">{{ col }}</th>
+			{% endfor %}
+		</tr>
+	</thead>
+
+	{% if table_data[1].footer_msg %}
+		<tfoot>
+			<tr>
+				<td class="colgroup-seperator" colspan="{{ column_labels | size }}">
+					{{ table_data[1].footer_msg }}
+				</td>	
+			</tr>
+		</tfoot>
+	{% endif %}
+
+
+		{% for entry in table_data %}
+			
+			{% if entry.section.column_labels | entry.section.column_labels %}
+				{% continue %}
+			{% endif %}
+
+
+			<tbody>
+				<!-- volume group separator rows -->
+				{% if entry.section.heading1 %}
+					<tr>
+						<th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="release-{{ entry.section.heading1 | slugify }}" scope="colgroup">
+							{{ entry.section.heading1 }} 
+						</th>
+					</tr>
+				{% endif %}
+
+				{% if entry.section.heading2 %}
+					<tr>
+						<th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="{{ entry.section.heading2 | slugify}}" scope="colgroup">
+							{{ entry.section.heading2 }}
+						</th>
+					</tr>
+				{% endif %}
+
+
+				{% comment %}
+
+						table cells by column. Column names are defined in the yaml file that is called with this template
+						see cassini.README.md to find or edit the list of allowed column names 
+						to add a new column, add a new <td> data column element below and edit cassini.README.md 
+
+				{% endcomment %}
+				{% for row in entry.section.section_rows %}
+
+
+					{% if row.table_row.id %}
+						{% assign instrument = row.table_row.id | split: '_' %}
+						{% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
+					{% endif %}
+
+					<tr>
+						{% for col in column_labels %}
+
+							<!-- data column_labels --> 
+
+							<!-- Volume ID -->
+							{% if col == "Volume ID" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+									{% if table_data.section.nolinks == true %}		
+											{{ row.table_row.id }}
+									{% else %}
+										<a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.table_row.id }}">
+											{{ row.table_row.id }}
+										</a>
+									{% endif %}
+								</td>
+							{% endif %}
+
+
+							<!-- Bundled Volumes -->
+							{% if col == "Bundled Volumes" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+									{% if table_data.section.nolinks == true %}		
+											{{ row.table_row.id }}.tar.gz
+									{% else %}
+										<a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
+												{{ row.table_row.id }}.tar.gz
+										</a>
+									{% endif %}
+								</td>
+							{% endif %}
+
+
+							<!-- Browse Images -->
+							{% if col == "Browse Images" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+
+									{% if table_data.section.nolinks == true %}		
+											{{ col }}
+									{% else %}
+										<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/data/">
+												{{ col }}
+										</a>
+									{% endif %}
+
+								</td>
+							{% endif %}
+
+
+							<!-- Calibrated Images -->
+							{% if col == "Calibrated Images" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+
+									{% if table_data.section.nolinks == true %}		
+											{{ col }}
+									{% else %}
+										<a href = "http://pds-rings.seti.org/derived/{{ base_dir }}/{{ row.table_row.id }}/data/">
+												{{ col }}
+										</a>
+									{% endif %}
+
+								</td>
+							{% endif %}
+
+
+							<!-- Footprint Link -->
+							{% if col == "Footprint Link" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+
+									{% if table_data.section.nolinks == true %}		
+											Footprints
+									{% else %}
+										<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/">
+												Footprints
+										</a>
+									{% endif %}
+
+								</td>
+							{% endif %}
+
+
+							<!-- Index File -->
+							{% if col == "Index File" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+										
+										{% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
+											{% assign index_tab_name = "TSDR_INDEX.TAB" %}
+										{% else %}
+											{% assign index_tab_name = "index.tab" %}
+										{% endif %}
+
+										{% if table_data.section.nolinks == true %}		
+												{{ index_tab_name }}
+										{% else %}
+											<a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.table_row.id }}/index/{{ index_tab_name }}">
+													{{ index_tab_name }}
+											</a>
+										{% endif %}
+								</td>
+							{% endif %}
+
+
+							<!-- Spacecraft Clock (SCLK) range -->
+							{% if col == "Spacecraft Clock (SCLK) range" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+									{{ row.table_row.clock_range | replace: ' ', '<br>' }}
+								</td>
+							{% endif %}
+
+
+							<!-- Date Range (UTC) -->
+							{% if col == "Date Range (UTC)" %}
+								<td headers="{{ col | slugify }} release-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+									<span style = "white-space:nowrap">{{ row.table_row.date_range | replace: ' ', '</span><br><span class = "white-space:nowrap">' }}</span>
+								</td>
+							{% endif %}
+
+
+						{% endfor %}
+					</tr>
+			{% endfor %}
+		</tbody>
+	{% endfor %}
+</table>
+
+

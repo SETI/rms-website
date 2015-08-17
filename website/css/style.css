@@ -495,11 +495,13 @@ td, th {
   border: 1px solid #ccc; 
   text-align:center;
 }
-th.colgroup-seperator {
+th.colgroup-seperator, td.colgroup-seperator {
   background: #efefef;
   border: 1px solid #ccc; 
 }
-
+td.colgroup-seperator {
+  font-weight: bold;
+}
 
 /* ? */
 .toplink {
