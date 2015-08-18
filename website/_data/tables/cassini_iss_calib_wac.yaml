@@ -1,0 +1,215 @@
+# do not edit columns without first reading cassini.README.md in this directory
+- column_labels: 
+    - Volume
+    - COISS_0001
+    - COISS_0002
+    - COISS_0003
+    - COISS_0004
+    - COISS_0005
+    - COISS_0006
+    - COISS_0007
+    - COISS_0008
+    - COISS_0009
+    - COISS_0010
+
+# Edit Below:
+- section: 
+
+    section_rows: 
+        - table_row: 
+
+            sub_directory: ANTI_BLM
+            volumes:
+                - COISS_0004
+
+        - table_row: 
+
+            sub_directory: BIAS
+            volumes: 
+
+        - table_row: 
+
+            sub_directory: BIT_WGHT
+            volumes: 
+                - COISS_0001
+                - COISS_0002
+                - COISS_0004
+                - COISS_0005
+                - COISS_0006
+                - COISS_0007
+                - COISS_0008
+                - COISS_0009
+
+        - table_row: 
+
+            sub_directory: BLEMGAIN
+            volumes: 
+                - COISS_0004
+                - COISS_0005
+                - COISS_0006
+
+        - table_row: 
+
+            sub_directory: CROSS_FLT
+            volumes: 
+
+        - table_row: 
+
+            sub_directory: DARK_CUR
+            volumes: 
+                - COISS_0004
+                - COISS_0005
+                - COISS_0006
+                - COISS_0007
+                - COISS_0008
+                - COISS_0009
+                - COISS_0010
+
+        - table_row: 
+
+            sub_directory: FILT_EXP
+            volumes: 
+                - COISS_0005
+
+
+        - table_row: 
+
+            sub_directory: FOCUS
+            volumes: 
+                - COISS_0005
+                - COISS_0006
+
+        - table_row: 
+
+            sub_directory: FTP
+            volumes: 
+                - COISS_0005
+
+        - table_row: 
+
+            sub_directory: FTP_DA
+            volumes: 
+                - COISS_0005
+
+        - table_row: 
+
+            sub_directory: GAIN
+            volumes: 
+
+        - table_row: 
+
+            sub_directory: GAIN_TESTS
+            volumes: 
+
+        - table_row: 
+
+            sub_directory: GEOMETRY
+            volumes: 
+                - COISS_0005
+
+        - table_row: 
+
+            sub_directory: LOSSEY
+            volumes: 
+                - COISS_0005
+
+        - table_row: 
+
+            sub_directory: LOSSEY_DA
+            volumes: 
+
+        - table_row: 
+
+            sub_directory: LT_LEAK
+            volumes: 
+                - COISS_0005
+
+        - table_row: 
+
+            sub_directory: LT_TRANS
+            volumes: 
+                - COISS_0005
+                - COISS_0006
+                - COISS_0007
+                - COISS_0008
+                - COISS_0009
+                - COISS_0010
+
+        - table_row: 
+
+            sub_directory: MTF
+            volumes: 
+                - COISS_0006
+                - COISS_0007
+                - COISS_0008
+                - COISS_0009
+                - COISS_0010
+
+        - table_row: 
+
+            sub_directory: NAV
+            volumes: 
+                - COISS_0006
+
+
+        - table_row: 
+
+            sub_directory: NOISE
+            volumes: 
+                - COISS_0006
+
+        - table_row: 
+
+            sub_directory: PC_VOLT
+            volumes: 
+                - COISS_0006
+                - COISS_0007
+                - COISS_0008
+                - COISS_0009
+                - COISS_0010
+
+        - table_row: 
+
+            sub_directory: POLAR
+            volumes: 
+                - COISS_0006
+
+        - table_row: 
+
+            sub_directory: PRF
+            volumes: 
+                - COISS_0001
+                - COISS_0007
+                - COISS_0008
+                - COISS_0009
+
+        - table_row: 
+
+            sub_directory: PTP
+            volumes: 
+                - COISS_0007
+                - COISS_0008
+                - COISS_0009
+
+        - table_row: 
+
+            sub_directory: PTP_DA
+            volumes: 
+                - COISS_0007
+
+        - table_row: 
+
+            sub_directory: SHUTTER
+            volumes: 
+                - COISS_0008
+                - COISS_0009
+
+        - table_row: 
+
+            sub_directory: SIGNAL
+            volumes: 
+
+        - table_row: 
+
+            sub_directory: VO_NOISE
+            volumes: 
