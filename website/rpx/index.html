@@ -27,38 +27,12 @@ which also provides links to the data.
 The bundled volumes are provided in .tar.gz format. For information on opening
 files of this type, click [here](/targzip.htm).
 
-Telescope | Volume ID | Bundled Volumes | Status | Date  
----|---|---|---|---  
-Hubble Space Telescope (HST) | [RPX_0001](/vol/RPX_xxxx/RPX_0001) |
-[RPX_0001.tar.gz](/archives/RPX_xxxx/RPX_0001.tar.gz) |  Archived |
-2000-03-10  
-Hubble Space Telescope (HST) | [RPX_0002](/vol/RPX_xxxx/RPX_0002) |
-[RPX_0002.tar.gz](/archives/RPX_xxxx/RPX_0002.tar.gz) |  Archived |
-2000-03-10  
-Hubble Space Telescope (HST) | [RPX_0003](/vol/RPX_xxxx/RPX_0003) |
-[RPX_0003.tar.gz](/archives/RPX_xxxx/RPX_0003.tar.gz) |  Archived |
-2000-03-10  
-Hubble Space Telescope (HST) | [RPX_0004](/vol/RPX_xxxx/RPX_0004) |
-[RPX_0004.tar.gz](/archives/RPX_xxxx/RPX_0004.tar.gz) |  Archived |
-2000-03-10  
-Hubble Space Telescope (HST) | [RPX_0005](/vol/RPX_xxxx/RPX_0005) |
-[RPX_0005.tar.gz](/archives/RPX_xxxx/RPX_0005.tar.gz) |  Archived |
-2000-03-10  
-William Herschel Telescope (WHT) | [RPX_0101](/vol/RPX_xxxx/RPX_0101) |
-[RPX_0101.tar.gz](/archives/RPX_xxxx/RPX_0101.tar.gz) |  Archived |
-2004-04-02  
-NASA Infra Red Telescope Facility (IRTF) | [RPX_0201](/vol/RPX_xxxx/RPX_0201)
-| [RPX_0201.tar.gz](/archives/RPX_xxxx/RPX_0201.tar.gz) |  Locally Archived  |
-2009-01-05  
-Canada France Hawaii Telescope (CFHT) | [RPX_0301](/vol/RPX_xxxx/RPX_0301) |
-[RPX_0301.tar.gz](/archives/RPX_xxxx/RPX_0301.tar.gz) |  Locally Archived |
-2008-02-18  
-Wisconsin-Indiana-Yale-NOAO Telescope(WIYN) |
-[RPX_0401](/vol/RPX_xxxx/RPX_0401) |
-[RPX_0401.tar.gz](/archives/RPX_xxxx/RPX_0401.tar.gz) |  Archived  |
-2010-11-23  
-  
-![\[SPACER\]](css/spacer.gif)
+
+{% assign table_name = "Saturn RPX Data Releases" %}
+{% assign table_desc = "A listing of Saturn RPX Data Releases" %}
+{% assign table_data = site.data.tables['saturn_rpx'] %}
+{% include data_table.html %}
+
 
 The Rings Node will also archive other ring plane crossing data sets from
 those observers willing to provide them. For more information please contact

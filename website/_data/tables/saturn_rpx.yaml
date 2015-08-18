@@ -1,0 +1,65 @@
+# do not edit columns without first reading cassini.README.md in this directory
+- column_labels: 
+    - Telescope
+    - Volume ID
+    - Bundled Volumes
+    - Status
+    - Date
+
+- section:   
+
+    section_rows:
+
+        - table_row:
+            telescope: Hubble Space Telescope (HST) 
+            id: RPX_0001
+            status: Archived 
+            date: 2000-03-10  
+
+        - table_row:
+            telescope: Hubble Space Telescope (HST) 
+            id: RPX_0002
+            status: Archived 
+            date: 2000-03-10  
+
+        - table_row:
+            telescope: Hubble Space Telescope (HST) 
+            id: RPX_0003
+            status: Archived 
+            date: 2000-03-10  
+
+        - table_row: 
+            telescope: Hubble Space Telescope (HST) 
+            id: RPX_0004
+            status: Archived 
+            date: 2000-03-10  
+
+        - table_row: 
+            telescope: Hubble Space Telescope (HST) 
+            id: RPX_0005
+            status: Archived 
+            date: 2000-03-10  
+
+        - table_row: 
+            telescope: William Herschel Telescope (WHT) 
+            id: RPX_0101
+            status: Archived 
+            date: 2004-04-02  
+
+        - table_row: 
+            telescope: NASA Infra Red Telescope Facility (IRTF) 
+            id: RPX_0201
+            status: Locally Archived  
+            date: 2009-01-05  
+
+        - table_row:
+            telescope: Canada France Hawaii Telescope (CFHT) 
+            id: RPX_0301
+            status: Locally Archived 
+            date: 2008-02-18  
+
+        - table_row: 
+            telescope: Wisconsin-Indiana-Yale-NOAO Telescope(WIYN) 
+            id: RPX_0401
+            status: Archived  
+            date: 2010-11-23  

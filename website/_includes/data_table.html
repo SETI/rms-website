@@ -139,6 +139,11 @@
 				{% if row.table_row.id %}
 					{% assign instrument = row.table_row.id | split: '_' %}
 					{% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
+
+          {% if instrument[0] == 'RPX' %}
+            {% assign base_dir = 'RPX_xxxx' %}
+          {% endif %}
+
 				{% endif %}
 
 				<tr>
@@ -291,6 +296,21 @@
             {% endif %}
 
 
+            <!-- Status -->
+            {% if col == "Status" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.status }}
+              </td>
+            {% endif %}
+
+
+            <!-- FDS range -->
+            {% if col == "Date" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.date }}
+              </td>
+            {% endif %}            
+
 						<!-- Date Range (UTC) -->
 						{% if col == "Date Range (UTC)" %}
 							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
@@ -299,6 +319,12 @@
 						{% endif %}
 
 
+            <!-- Telescope  -->
+            {% if col == "Telescope" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.telescope }}
+              </td>
+            {% endif %}
 
 						<!-- volume_id_list -->
 						{% if col == "Data Set" %}
