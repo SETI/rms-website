@@ -141,9 +141,6 @@
             volumes: 
                 - COISS_0006
                 - COISS_0007
-                - COISS_0008
-                - COISS_0009
-                - COISS_0010
 
         - table_row: 
 
@@ -172,7 +169,7 @@
 
             sub_directory: POLAR
             volumes: 
-                - COISS_0006
+                - COISS_0007
 
         - table_row: 
 
