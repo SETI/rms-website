@@ -189,9 +189,24 @@
 								{% if table_data.section.nolinks == true %}		
 										{{ col }}
 								{% else %}
-									<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/data/">
-											{{ col }}
-									</a>
+
+                  {% if table_name contains "Voyager" %}
+
+                    {% if row.table_row.browse_vol %}
+                      {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.browse_vol }}/BROWSE/{% endcapture %}  
+                    {% else %}
+                      {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/{% endcapture %}  
+                    {% endif %}
+
+                  {% else %}
+
+                    {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/data/{% endcapture %}  
+                  
+                  {% endif %}
+                  
+                  <a href = "{{ browse_link }}">
+                  {{ col }}
+                  </a>
 								{% endif %}
 
 							</td>
@@ -239,13 +254,18 @@
 									
 									{% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
 										{% assign index_tab_name = "TSDR_INDEX.TAB" %}
-									{% else %}
+
+									{% elsif table_name contains "Voyager ISS Raw" %}
+                    {% assign index_tab_name = "IMGINDEX.TAB" %}
+
+                  {% else %}
 										{% assign index_tab_name = "index.tab" %}
 									{% endif %}
 
 									{% if table_data.section.nolinks == true %}		
 											{{ index_tab_name }}
 									{% else %}
+
 										<a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.table_row.id }}/index/{{ index_tab_name }}">
 												{{ index_tab_name }}
 										</a>
@@ -262,6 +282,13 @@
 							</td>
 						{% endif %}
 
+
+            <!-- FDS range -->
+            {% if col == "FDS Range" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.fds_range | replace: ' ', '<br>' }}
+              </td>
+            {% endif %}
 
 
 						<!-- Date Range (UTC) -->
