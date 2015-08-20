@@ -475,7 +475,7 @@ ol.breadcrumb {
 
 /* data tables */
 table { 
-  border-collapse: collapse; 
+  border-collapse: separate;
   background-color: white;
 }
 /* Zebra striping */
