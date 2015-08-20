@@ -1,14 +1,14 @@
 {% comment %}
 
-		to use this template assign a table name, table description, and next-release date as you want them displayed, 
-		and a yaml file that lists the table_data, for example see cassini_cirs_access.yaml 
+    to use this template assign a table name, table description, and next-release date as you want them displayed, 
+    and a yaml file that lists the table_data, for example see cassini_cirs_access.yaml 
 
-		like so:
+    like so:
 
-				{% assign table_name = "Cassini UVIS Releases" %}
-				{% assign table_desc = "A listing of Cassini UVIS Releases" %}
-				{% assign table_data = site.data.tables['cassini_uvis_access'] %}
-				{% include cassini_tables.html %}
+        {% assign table_name = "Cassini UVIS Releases" %}
+        {% assign table_desc = "A listing of Cassini UVIS Releases" %}
+        {% assign table_data = site.data.tables['cassini_uvis_access'] %}
+        {% include cassini_tables.html %}
 
 
 {% endcomment %}
@@ -20,13 +20,13 @@
 {% endif %}
 
 <table summary ="A list of {{ table_name }}">
-	<caption class = "hidden">{{ table_name }}</caption>
+  <caption class = "hidden">{{ table_name }}</caption>
 
   <!-- table header row -->
   <thead>
 
-		<tr>
-			{% for col in column_labels %}
+    <tr>
+      {% for col in column_labels %}
 
         {% if custom_code == 'cassini_iss_calibration' %}
           
@@ -55,20 +55,20 @@
 
         {% endif %}
 
-			{% endfor %}
-		</tr>
+      {% endfor %}
+    </tr>
 
-	</thead>
+  </thead>
 
-	{% if table_data[1].footer_msg %}
-		<tfoot>
-			<tr>
-				<td class="colgroup-seperator" colspan="{{ column_labels | size }}">
-					{{ table_data[1].footer_msg }}
-				</td>	
-			</tr>
-		</tfoot>
-	{% endif %}
+  {% if table_data[1].footer_msg %}
+    <tfoot>
+      <tr>
+        <td class="colgroup-seperator" colspan="{{ column_labels | size }}">
+          {{ table_data[1].footer_msg }}
+        </td>  
+      </tr>
+    </tfoot>
+  {% endif %}
 
 
   {% if custom_code == 'cassini_iss_calibration' %}
@@ -100,100 +100,102 @@
   {% endif %}
 
 
-	{% for entry in table_data %}
-		
-		{% if entry.section.column_labels | entry.section.column_labels %}
-			{% continue %}
-		{% endif %}
+  {% for entry in table_data %}
+    
+    {% if entry.section.column_labels | entry.section.column_labels %}
+      {% continue %}
+    {% endif %}
 
 
-		<tbody>
-			<!-- volume group separator rows -->
-			{% if entry.section.heading1 %}
-				<tr>
-					<th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="section-{{ entry.section.heading1 | slugify }}" scope="colgroup">
-						{{ entry.section.heading1 }} 
-					</th>
-				</tr>
-			{% endif %}
+    <tbody>
+      <!-- volume group separator rows -->
+      {% if entry.section.heading1 %}
+        <tr>
+          <th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="section-{{ entry.section.heading1 | slugify }}" scope="colgroup">
+            {{ entry.section.heading1 }} 
+          </th>
+        </tr>
+      {% endif %}
 
-			{% if entry.section.heading2 %}
-				<tr>
-					<th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="{{ entry.section.heading2 | slugify}}" scope="colgroup">
-						{{ entry.section.heading2 }}
-					</th>
-				</tr>
-			{% endif %}
-
-
-			{% comment %}
-
-					table cells by column. Column names are defined in the yaml file that is called with this template
-					see cassini.README.md to find or edit the list of allowed column names 
-					to add a new column, add a new <td> data column element below and edit cassini.README.md 
-
-			{% endcomment %}
-			{% for row in entry.section.section_rows %}
+      {% if entry.section.heading2 %}
+        <tr>
+          <th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="{{ entry.section.heading2 | slugify}}" scope="colgroup">
+            {{ entry.section.heading2 }}
+          </th>
+        </tr>
+      {% endif %}
 
 
-				{% if row.table_row.id %}
-					{% assign instrument = row.table_row.id | split: '_' %}
-					{% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
+      {% comment %}
+
+          table cells by column. Column names are defined in the yaml file that is called with this template
+          see cassini.README.md to find or edit the list of allowed column names 
+          to add a new column, add a new <td> data column element below and edit cassini.README.md 
+
+      {% endcomment %}
+      {% for row in entry.section.section_rows %}
+
+        {% if row.table_row.id %}
+          {% assign instrument = row.table_row.id | split: '_' %}
+          {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
 
           {% if instrument[0] == 'RPX' %}
             {% assign base_dir = 'RPX_xxxx' %}
           {% endif %}
 
-				{% endif %}
+          {% if instrument[0] == 'ASTROM' %}
+            {% assign base_dir = 'ASTROM_xxxx' %}
+          {% endif %}
 
-				<tr>
-					{% for col in column_labels %}
+        {% endif %}
 
-						<!-- data column_labels --> 
+        <tr>
+          {% for col in column_labels %}
 
+            <!-- data column_labels --> 
 
-						<!-- Volume ID -->
-						{% if col == "Volume ID" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-								{% if table_data.section.nolinks == true %}		
-										{{ row.table_row.id }}
-								{% else %}
-									<a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.table_row.id }}">
-										{{ row.table_row.id }}
-									</a>
-								{% endif %}
-							</td>
-						{% endif %}
-
-
-
-						<!-- Bundled Volumes -->
-						{% if col == "Bundled Volumes" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-
-								{% if table_data.section.nolinks == true %}		
-
-										{{ row.table_row.id }}.tar.gz
-
-								{% else %}
-
-									<a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
-											{{ row.table_row.id }}.tar.gz
-									</a>
-
-								{% endif %}
-							</td>
-						{% endif %}
+            <!-- Volume ID -->
+            {% if col == "Volume ID" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {% if table_data.section.nolinks == true %}    
+                    {{ row.table_row.id }}
+                {% else %}
+                  <a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.table_row.id }}">
+                    {{ row.table_row.id }}
+                  </a>
+                {% endif %}
+              </td>
+            {% endif %}
 
 
 
-						<!-- Browse Images -->
-						{% if col == "Browse Images" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+            <!-- Bundled Volumes -->
+            {% if col == "Bundled Volumes" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
-								{% if table_data.section.nolinks == true %}		
-										{{ col }}
-								{% else %}
+                {% if table_data.section.nolinks == true %}    
+
+                    {{ row.table_row.id }}.tar.gz
+
+                {% else %}
+
+                  <a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
+                      {{ row.table_row.id }}.tar.gz
+                  </a>
+
+                {% endif %}
+              </td>
+            {% endif %}
+
+
+
+            <!-- Browse Images -->
+            {% if col == "Browse Images" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+
+                {% if table_data.section.nolinks == true %}    
+                    {{ col }}
+                {% else %}
 
                   {% if table_name contains "Voyager" %}
 
@@ -212,80 +214,80 @@
                   <a href = "{{ browse_link }}">
                   {{ col }}
                   </a>
-								{% endif %}
+                {% endif %}
 
-							</td>
-						{% endif %}
-
-
-
-						<!-- Calibrated Images -->
-						{% if col == "Calibrated Images" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-
-								{% if table_data.section.nolinks == true %}		
-										{{ col }}
-								{% else %}
-									<a href = "http://pds-rings.seti.org/derived/{{ base_dir }}/{{ row.table_row.id }}/data/">
-											{{ col }}
-									</a>
-								{% endif %}
-
-							</td>
-						{% endif %}
+              </td>
+            {% endif %}
 
 
 
-						<!-- Footprint Link -->
-						{% if col == "Footprint Link" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+            <!-- Calibrated Images -->
+            {% if col == "Calibrated Images" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
-								{% if table_data.section.nolinks == true %}		
-										Footprints
-								{% else %}
-									<a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/">
-											Footprints
-									</a>
-								{% endif %}
+                {% if table_data.section.nolinks == true %}    
+                    {{ col }}
+                {% else %}
+                  <a href = "http://pds-rings.seti.org/derived/{{ base_dir }}/{{ row.table_row.id }}/data/">
+                      {{ col }}
+                  </a>
+                {% endif %}
 
-							</td>
-						{% endif %}
+              </td>
+            {% endif %}
 
 
 
-						<!-- Index File -->
-						{% if col == "Index File" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-									
-									{% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
-										{% assign index_tab_name = "TSDR_INDEX.TAB" %}
+            <!-- Footprint Link -->
+            {% if col == "Footprint Link" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
-									{% elsif table_name contains "Voyager ISS Raw" %}
+                {% if table_data.section.nolinks == true %}    
+                    Footprints
+                {% else %}
+                  <a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/">
+                      Footprints
+                  </a>
+                {% endif %}
+
+              </td>
+            {% endif %}
+
+
+
+            <!-- Index File -->
+            {% if col == "Index File" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                  
+                  {% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
+                    {% assign index_tab_name = "TSDR_INDEX.TAB" %}
+
+                  {% elsif table_name contains "Voyager ISS Raw" %}
                     {% assign index_tab_name = "IMGINDEX.TAB" %}
 
                   {% else %}
-										{% assign index_tab_name = "index.tab" %}
-									{% endif %}
+                    {% assign index_tab_name = "index.tab" %}
+                  {% endif %}
 
-									{% if table_data.section.nolinks == true %}		
-											{{ index_tab_name }}
-									{% else %}
+                  {% if table_data.section.nolinks == true %}    
+                      {{ index_tab_name }}
+                  {% else %}
 
-										<a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.table_row.id }}/index/{{ index_tab_name }}">
-												{{ index_tab_name }}
-										</a>
-									{% endif %}
-							</td>
-						{% endif %}
+                    <a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.table_row.id }}/index/{{ index_tab_name }}">
+                        {{ index_tab_name }}
+                    </a>
+                  {% endif %}
+              </td>
+            {% endif %}
 
 
 
-						<!-- Spacecraft Clock (SCLK) range -->
-						{% if col == "Spacecraft Clock (SCLK) range" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-								{{ row.table_row.clock_range | replace: ' ', '<br>' }}
-							</td>
-						{% endif %}
+            <!-- Spacecraft Clock (SCLK) range -->
+            {% if col == "Spacecraft Clock (SCLK) range" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.clock_range | replace: ' ', '<br>' }}
+              </td>
+            {% endif %}
 
 
             <!-- FDS range -->
@@ -311,12 +313,12 @@
               </td>
             {% endif %}            
 
-						<!-- Date Range (UTC) -->
-						{% if col == "Date Range (UTC)" %}
-							<td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-								<span style = "white-space:nowrap">{{ row.table_row.date_range | replace: ' ', '</span><br><span class = "white-space:nowrap">' }}</span>
-							</td>
-						{% endif %}
+            <!-- Date Range (UTC) -->
+            {% if col contains "Date Range" %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                <span style = "white-space:nowrap">{{ row.table_row.date_range | replace: ' ', '</span><br><span class = "white-space:nowrap">' }}</span>
+              </td>
+            {% endif %}
 
 
             <!-- Telescope  -->
@@ -326,16 +328,16 @@
               </td>
             {% endif %}
 
-						<!-- volume_id_list -->
-						{% if col == "Data Set" %}
-							<td scope="row" id = "dataset-{{ row.table_row.dataset }}" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-								<span style = "white-space:nowrap">{{ row.table_row.dataset }}</span>
-							</td>
-						{% endif %}
+          <!-- volume_id_list -->
+          {% if col == "Data Set" %}
+            <td scope="row" id = "dataset-{{ row.table_row.dataset }}" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <span style = "white-space:nowrap">{{ row.table_row.dataset }}</span>
+            </td>
+          {% endif %}
 
 
 
-						<!-- volume_id_list -->
+            <!-- volume_id_list -->
             {% if col == 'Volume ID List' %}
               <td headers="{{ col | slugify }} dataset-{{ row.table_row.dataset }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
                 <ul class = "list-inline" style = "text-align:left">
@@ -357,7 +359,7 @@
 
 
             <!-- sub-directory column (1st) for Cassini Ground Calibration Table-->
-            {% if col == 'Volume' & custom_code == 'cassini_iss_calibration' %}
+            {% if col == 'Volume' and custom_code == 'cassini_iss_calibration' %}
               <td headers="sub-directory" scope = "row">
                   {{ row.table_row.sub_directory }}
               </td>
@@ -366,7 +368,7 @@
 
 
             <!-- Volume for Cassini Ground Calibration Table-->
-            {% if col contains 'COISS' & custom_code == 'cassini_iss_calibration' %}
+            {% if col contains 'COISS' and custom_code == 'cassini_iss_calibration' %}
               <td headers="{{ col | slugify }}">
                   {% if row.table_row.volumes contains col %}
                      X
@@ -375,13 +377,32 @@
             {% endif %}
 
 
+            <!-- Astrometry Tables --> 
+            {% if table_name contains 'Astrometry' and col contains 'Satellite' %}
+              <td style = "white-space: normal" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.sats }}
+              </td>
+            {% endif %}
+
+            {% if table_name contains 'NAIF ID' and col contains 'Satellite' %}
+              <td style = "white-space: normal" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.sat }}
+              </td>
+            {% endif %}
+
+            {% if table_name contains 'NAIF ID' and col contains 'NAIF' %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                {{ row.table_row.naif_id }}
+              </td>
+            {% endif %}
 
 
-					{% endfor %} <!-- end row -->
-				</tr> 
-		{% endfor %}
-		</tbody>
-	{% endfor %}
+
+          {% endfor %} <!-- end row -->
+        </tr> 
+    {% endfor %}
+    </tbody>
+  {% endfor %}
 </table>
 
 

@@ -17,36 +17,22 @@ provided at the bottom of the page.
 The bundled volumes are provided in .tar.gz format. For information on opening
 files of this type, click [here](/targzip.htm).
 
-![\[SPACER\]](./css/spacer.gif)
-
 ### Saturn Satellite Astrometry
 
-![\[SPACER\]](./css/spacer.gif) Volume | Bundle | Coverage Dates (UTC) |
-Satellites included (NAIF ID)  
----|---|---|---  
-[ASTROM_0001](/vol/ASTROM_xxxx/ASTROM_0001/) |
-[ASTROM_0001.tar.gz](/archives/ASTROM_xxxx/ASTROM_0001.tar.gz) |  1994-12-01
-to 2002-12-18 |   601,602,603,604,605,607,610,611,612,616,617  
-[ASTROM_0101](/vol/ASTROM_xxxx/ASTROM_0101/) |
-[ASTROM_0101.tar.gz](/archives/ASTROM_xxxx/ASTROM_0101.tar.gz) | 1996-09-30 to
-2005-01-14 |   601,602,603,604,605,606,607,610,611,612,613,614,616,617  
-  
-#### NAIF IDs for the inner Saturn Satellites
 
-NAIF ID | Satellite Name | NAIF ID | Satellite Name  
----|---|---|---  
-601 |  Mimas |  610 |  Janus  
-602 |  Enceladus |  611 |  Epimetheus  
-603 |  Thethys |  612 |  Helene  
-604 |  Dione |  613 |  Telesto  
-605 |  Rhea |  614 |  Calypso  
-606 |  Titan |  615 |  Atlas  
-607 |  Hyperion |  616 |  Prometheus  
-608 |  Iapetus |  617 |  Pandora  
-609 |  Phoebe |  618 |  Pan  
-**Discovered by Cassini** | 632 | Methone | 634 | Polydeuces  
-633 | Pallene | 635 | Daphnis  
-  
+{% assign table_name = "Saturn Satellite Astrometry" %}
+{% assign table_desc = "A listing of Saturn Satellite Astrometry" %}
+{% assign table_data = site.data.tables['astrometry_saturn_sat'] %}
+{% include data_table.html %}
+
+
+### NAIF IDs for the inner Saturn Satellites
+
+
+{% assign table_name = "NAIF IDs for the inner Saturn Satellites" %}
+{% assign table_desc = "A listing of NAIF IDs for the inner Saturn Satellites" %}
+{% assign table_data = site.data.tables['astrometry_naif_ids'] %}
+{% include data_table.html %}  
   
 
 * * *
