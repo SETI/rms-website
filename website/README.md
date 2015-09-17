@@ -1,39 +1,51 @@
-Local deployment: 
+## Local deployment: 
 
-## navigate to here: 
+You will need 3 shell windows/tabs running 3 processes: 
 
-    cd ~/sites/ringsnode/
-    python -m SimpleHTTPServer 8000
+1. run a small local web server with python SimpleHTTPServer
+- run the jekyll watch command
+- rsync the site built by jekyll (2) into the directory served by python (1)
 
-## then load this in browser: 
+### Details:
 
-    http://127.0.0.1:8000
+1. Navigate to the directory where you have a copy of the current website  which includes all its image assets and start the SimpleHTTTPServer on port 8000. For example I keep this in ~/sites/ringsnode:
 
+	    cd ~/sites/ringsnode/
+	    python -m SimpleHTTPServer 8000
 
-To watch local changes:
+	Then load this in a browser:
 
-	cd ~/projects/ringsnode_website/website/
-
-
-first edit the _config.yml for what directory you want to work on.
-remove the directory name from the 'excludes' list: 
-
-	subl config.yml
+    	http://127.0.0.1:8000
 
 
-Then in one tab start auto-building the website:
+2. Tell Jekyll to start watching local changes. First open and edit the _config.yml for what directory you want to work on. Then in the jekyll website directory issue the jekyll build --watch command:
+
+		cd ~/projects/ringsnode_website/website/
+		jekyll build --watch
+
+
+3. In another tab, in the same directory as step 2, start rsyncing that jekyll build directory to the local deployment directory served by SimpleHTTPServer (see __Note__ below) 
+
+	__On a Mac__:
+
+		while :; do clear; rsync -a -v _site/ /Users/lballard/sites/ringsnode; sleep 2; done
+
+	In __Linux__ you have the watch command:
 	
-	jekyll build --watch
+		watch -n 2 rsync -a -v _site/ /Users/lballard/sites/ringsnode
+		
+	In __Windows__ try something like this: write a small batch file, call it rsyncer.bat
 
+		@ECHO OFF
+		:loop
+		  rsync -a -v _site/ /Users/lballard/sites/ringsnode;
+		  timeout /t 2
+		goto loop
 
-And in another start rsyncing that build to local deployment directory: 
+	then run it like so:
+	
+		rsyncer
 
-	while :; do clear; rsync -a -v _site/ /Users/lballard/sites/ringsnode; sleep 2; done
-
-but make sure before doing that rsync on repeate that you've done the full rsync at least once: 
+__Note:__ Before doing step 3 putting that rsync on repeat, make sure you've done the full rsync at least once: 
 	
 	rsync -a -v _site/ /Users/lballard/sites/ringsnode
-
-
-
-
