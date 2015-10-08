@@ -1,0 +1,213 @@
+# do not edit columns without first reading cassini.README.md in this directory
+- column_labels: 
+    - Sampling
+    - Star
+    - Direction
+    - Range
+    - Data File
+    - Size
+    - Label File
+
+- section:
+
+    section_rows:
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 72,000-79,999 km
+            name: PS1P0107
+            size: 391 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 80,000-89,999 km
+            name: PS1P0108
+            size: 488 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 90,000-99,999 km
+            name: PS1P0109
+            size: 488 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 100,000-109,999 km
+            name: PS1P0110
+            size: 488 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 110,000-119,999 km
+            name: PS1P0111
+            size: 488 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 120,000-129,999 km
+            name: PS1P0112
+            size: 488 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 130,000-139,999 km
+            name: PS1P0113
+            size: 488 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 1 km 
+            sub_dir: KM001
+            star: delta Sco 
+            direction: ingress
+            range: 140,000-142,500 km
+            name: PS1P0114
+            size: 122 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 80,000-89,998 km
+            name: PS1P0107
+            size: 195 K 
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 80,000-89,998 km
+            name: PS1P0108
+            size: 244 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 90,000-99,998 km
+            name: PS1P0109
+            size: 244 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 100,000-109,998 km
+            name: PS1P0110
+            size: 244 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 110,000-119,998 km
+            name: PS1P0111
+            size: 244 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 120,000-129,998 km
+            name: PS1P0112
+            size: 244 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 130,000-139,998 km
+            name: PS1P0113
+            size: 244 K
+            id: VG_2801
+
+        - table_row:
+            sampling: 2 km 
+            sub_dir: KM002
+            star: delta Sco 
+            direction: ingress
+            range: 140,000-142,500 km
+            name: PS1P0114
+            size: 61 K
+            id: VG_2801
+
+        - table_row: 
+            sampling: 5 km 
+            sub_dir: KM005
+            star: delta Sco 
+            direction: ingress 
+            range: 72,000-142,500 km
+            name: PS1P01
+            size: 689 K  
+            id: VG_2801
+
+        - table_row: 
+            sampling: 10 km 
+            sub_dir: KM010
+            star: delta Sco 
+            direction: ingress 
+            range: 72,000-142,500 km
+            name: PS1P01
+            size: 344 K  
+            id: VG_2801
+
+        - table_row: 
+            sampling: 20 km 
+            sub_dir: KM020
+            star: delta Sco 
+            direction: ingress 
+            range: 72,000-142,500 km
+            name: PS1P01
+            size: 172 K  
+            id: VG_2801
+
+        - table_row: 
+            sampling: 50 km 
+            sub_dir: KM050
+            star: delta Sco 
+            direction: ingress 
+            range: 72,000-142,500 km
+            name: PS1P01
+            size:  69 K  
+            id: VG_2801
+

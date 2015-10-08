@@ -100,6 +100,8 @@
   {% endif %}
 
 
+
+
   {% for entry in table_data %}
     
     {% if entry.section.column_labels | entry.section.column_labels %}
@@ -136,6 +138,7 @@
       {% for row in entry.section.section_rows %}
 
         {% if row.table_row.id %}
+
           {% assign instrument = row.table_row.id | split: '_' %}
           {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
 
@@ -396,7 +399,40 @@
               </td>
             {% endif %}
 
+            <!-- Voyager pps tables -->
+            {% if table_name contains 'Voyager PPS' %}
 
+              {% if col contains 'Data File' %}
+
+                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                  <a href = "http://pds-rings.seti.org/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.TAB">
+                    {{ row.table_row.name }}.TAB
+                    
+                  </a>            
+                </td>
+
+              {% elsif col contains 'Label File' %}
+                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                  <a href = "http://pds-rings.seti.org/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.LBL">
+                    .LBL
+                  </a>                      
+                </td>
+
+              {% else %}
+
+                {% capture field_name %}{{ col | downcase }}{% endcapture %}
+
+                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                  
+                    <span style = "white-space:nowrap">
+                      {{ row.table_row[field_name] }}
+                    </span>
+                  </a>                      
+                </td>
+
+              {% endif %}
+
+            {% endif %}
 
           {% endfor %} <!-- end row -->
         </tr> 
