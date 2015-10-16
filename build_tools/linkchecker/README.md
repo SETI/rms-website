@@ -1,3 +1,5 @@
+UMMMM this doesn't seem to work
+
 use python LinkChecker to verify links
 
 execute: 
