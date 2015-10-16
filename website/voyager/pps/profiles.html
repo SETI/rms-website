@@ -2,660 +2,1450 @@
 layout: base
 layout_style: default
 tabs: voyager_pps
+format: html
 ---
+<h2>Standard PPS Ring Profiles</h2>
 
+<p>
+This page provides access to ASCII table files containing information
+about the rings at
+uniformly-spaced radial samples (0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50 km).
+The columns tabulated are:
+</p>
+<ul>
+<li>Radius in km</li>
+<li>Raw PPS counts</li>
+<li>Standard deviation in raw PPS counts</li>
+<li>Normal optical depth</li>
+<li>One standard deviation lower limit on optical depth</li>
+<li>One standard deviation upper limit on optical depth</li>
+</ul>
 
-## Standard PPS Ring Profiles
+<p>
+Click on the data file name (*.TAB) to retrieve the data.  Click on the
+corresponding label file (*.LBL) to retrieve the PDS label, which
+describes the data file contents in detail.
+</p>
 
-This page provides access to ASCII table files containing information about
-the rings at uniformly-spaced radial samples (0.1, 0.2, 0.5, 1, 2, 5, 10, 20,
-50 km). The columns tabulated are:
-
-  * Radius in km
-  * Raw PPS counts
-  * Standard deviation in raw PPS counts
-  * Normal optical depth
-  * One standard deviation lower limit on optical depth
-  * One standard deviation upper limit on optical depth
-
-Click on the data file name (*.TAB) to retrieve the data. Click on the
-corresponding label file (*.LBL) to retrieve the PDS label, which describes
-the data file contents in detail.
-
+<p>
 Note that all of these files are located within subdirectories of the
-[EASYDATA](/vol/VG_28xx/VG_2801/EASYDATA/) directory on PDS volume
-[VG_2801](/vol/VG_28xx/VG_2801/).
+<a href="/vol/VG_28xx/VG_2801/EASYDATA/">EASYDATA</a> directory on PDS volume
+<a href="/vol/VG_28xx/VG_2801/">VG_2801</a>.
+</p>
 
-If none of these files meet your needs, use the [PPS
-Resampler](resampler.html) to generate a table to your specifications.
+<p>
+If none of these files meet your needs, use the
+<a href="resampler.html">PPS Resampler</a>
+to generate a table to your specifications.
+</p>
 
-  * <a href = "#Saturn">Saturn</a>
-  * Uranus
-    * Ring 6
-    * Ring 5
-    * Ring 4
-    * Ring alpha
-    * Ring beta
-    * Ring eta
-    * Ring gamma
-    * Ring delta
-    * Ring lambda
-    * Ring epsilon
-    * Full Ring System (assuming equatorial geometry) 
-  * Neptune
+<ul>
+<li>
+    <a href="#SATURN">Saturn</a>
+</li>
+<li>
+    <a href="#URANUS">Uranus</a>
+</li>
+    <ul>
+    <li>
+        <a href="#SIX">Ring 6</a>
+    </li>
+    <li>
+        <a href="#FIVE">Ring 5</a>
+    </li>
+    <li>
+        <a href="#FOUR">Ring 4</a>
+    </li>
+    <li>
+        <a href="#ALPHA">Ring alpha</a>
+    </li>
+    <li>
+        <a href="#BETA">Ring beta</a>
+    </li>
+    <li>
+        <a href="#ETA">Ring eta</a>
+    </li>
+    <li>
+        <a href="#GAMMA">Ring gamma</a>
+    </li>
+    <li>
+        <a href="#DELTA">Ring delta</a>
+    </li>
+    <li>
+        <a href="#DELTA">Ring lambda</a>
+    </li>
+    <li>
+        <a href="#EPSILON">Ring epsilon</a>
+    </li>
+    <li>
+        <a href="#SYSTEM">Full Ring System</a> (assuming equatorial geometry)
+    </li>
+    </ul>
+<li>
+    <a href="#NEPTUNE">Neptune</a>
+</li>
+</ul>
 
+<a name="SATURN"></a>
+<h2>Saturn</h2>
 
-<h2 id = "Saturn"> Saturn </h2>
+<div class = "table-responsive">
+<table class = "table" units="RELATIVE" align="center" cellpadding=4 border="1">
+<tr>
+<th>Sampling</th>
+<th>Star</th>
+<th>Direction</th>
+<th>Range</th>
+<th>Data file</th>
+<th>Size</th>
+<th>Label<br>file</th>
+</tr>
 
-{% assign table_name = "Voyager PPS Ring Profiles for Saturn" %}
-{% assign table_desc = "A listing of Voyager PPS Ring Profiles for Saturn" %}
-{% assign table_data = site.data.tables['voyager_pps_saturn'] %}
-{% include data_table.html %}
+<tr>
+<td align="right">1 km</td>
+<td align="center">delta Sco</td>
+<td align="center">ingress</td>
+<td align="right">
+72,000-79,999 km<br>
+80,000-89,999 km<br>
+90,000-99,999 km<br>
+100,000-109,999 km<br>
+110,000-119,999 km<br>
+120,000-129,999 km<br>
+130,000-139,999 km<br>
+140,000-142,500 km<br>
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0107.TAB">PS1P0107.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0108.TAB">PS1P0108.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0109.TAB">PS1P0109.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0110.TAB">PS1P0110.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0111.TAB">PS1P0111.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0112.TAB">PS1P0112.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0113.TAB">PS1P0113.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0114.TAB">PS1P0114.TAB</a><br>
+</td>
+<td align="right">
+391 K<br>
+488 K<br>
+488 K<br>
+488 K<br>
+488 K<br>
+488 K<br>
+488 K<br>
+122 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0107.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0108.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0109.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0110.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0111.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0112.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0113.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PS1P0114.LBL">.LBL</a><br>
+</td>
+</tr>
 
-  
-## Uranus
+<tr>
+<td align="right">2 km</td>
+<td align="center">delta Sco</td>
+<td align="center">ingress</td>
+<td align="right">
+72,000-79,998 km<br>
+80,000-89,998 km<br>
+90,000-99,998 km<br>
+100,000-109,998 km<br>
+110,000-119,998 km<br>
+120,000-129,998 km<br>
+130,000-139,998 km<br>
+140,000-142,500 km<br>
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0107.TAB">PS1P0107.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0108.TAB">PS1P0108.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0109.TAB">PS1P0109.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0110.TAB">PS1P0110.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0111.TAB">PS1P0111.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0112.TAB">PS1P0112.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0113.TAB">PS1P0113.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0114.TAB">PS1P0114.TAB</a><br>
+</td>
+<td align="right">
+195 K<br>
+244 K<br>
+244 K<br>
+244 K<br>
+244 K<br>
+244 K<br>
+244 K<br>
+61 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0107.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0108.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0109.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0110.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0111.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0112.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0113.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PS1P0114.LBL">.LBL</a><br>
+</td>
+</tr>
 
-Sampling | Star | Direction | Range | Data file | Size | Label  
-file  
----|---|---|---|---|---|---  
-**Ring 6**  
-1 km | beta Per | ingress  
-egress  
-|  41,660-42,020 km  |
-[PU2P016I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016I.TAB)  
-[PU2P016E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016E.TAB)  
-|  18 K  
-18 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016E.LBL)  
-  
-2 km | beta Per | ingress  
-egress  
-|  41,660-42,020 km  |
-[PU2P016I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016I.TAB)  
-[PU2P016E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016E.TAB)  
-|  9 K  
-9 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016E.LBL)  
-  
-5 km | beta Per | ingress  
-egress  
-|  41,660-42,020 km  |
-[PU2P016I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016I.TAB)  
-[PU2P016E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016E.TAB)  
-|  4 K  
-4 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016E.LBL)  
-  
-**Ring 5**  
-1 km | beta Per | ingress  
-egress  
-|  42,050-42,410 km  |
-[PU2P015I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015I.TAB)  
-[PU2P015E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015E.TAB)  
-|  18 K  
-18 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015E.LBL)  
-  
-2 km | beta Per | ingress  
-egress  
-|  42,050-42,410 km  |
-[PU2P015I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015I.TAB)  
-[PU2P015E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015E.TAB)  
-|  9 K  
-9 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015E.LBL)  
-  
-5 km | beta Per | ingress  
-egress  
-|  42,050-42,410 km  |
-[PU2P015I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015I.TAB)  
-[PU2P015E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015E.TAB)  
-|  4 K  
-4 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015E.LBL)  
-  
-**Ring 4**  
-1 km | beta Per | ingress  
-egress  
-|  42,400-42,770 km  |
-[PU2P014I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014I.TAB)  
-[PU2P014E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014E.TAB)  
-|  18 K  
-18 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014E.LBL)  
-  
-2 km | beta Per | ingress  
-egress  
-|  42,400-42,770 km  |
-[PU2P014I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014I.TAB)  
-[PU2P014E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014E.TAB)  
-|  9 K  
-9 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014E.LBL)  
-  
-5 km | beta Per | ingress  
-egress  
-|  42,400-42,770 km  |
-[PU2P014I.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014I.TAB)  
-[PU2P014E.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014E.TAB)  
-|  4 K  
-4 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014I.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014E.LBL)  
-  
-**Ring alpha**  
-1 km | beta Per | ingress  
-egress  
-|  44,530-44,930 km  |
-[PU2P01AI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AI.TAB)  
-[PU2P01AE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AE.TAB)  
-|  20 K  
-20 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AE.LBL)  
-  
-2 km | beta Per | ingress  
-egress  
-|  44,530-44,930 km  |
-[PU2P01AI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AI.TAB)  
-[PU2P01AE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AE.TAB)  
-|  10 K  
-10 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AE.LBL)  
-  
-5 km | beta Per | ingress  
-egress  
-|  44,530-44,930 km  |
-[PU2P01AI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AI.TAB)  
-[PU2P01AE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AE.TAB)  
-|  4 K  
-4 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AE.LBL)  
-  
-**Ring beta**  
-1 km | beta Per | ingress  
-egress  
-|  45,430-45,860 km  |
-[PU2P01BI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BI.TAB)  
-[PU2P01BE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BE.TAB)  
-|  21 K  
-21 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BE.LBL)  
-  
-2 km | beta Per | ingress  
-egress  
-|  45,430-45,860 km  |
-[PU2P01BI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BI.TAB)  
-[PU2P01BE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BE.TAB)  
-|  11 K  
-11 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BE.LBL)  
-  
-5 km | beta Per | ingress  
-egress  
-|  45,430-45,860 km  |
-[PU2P01BI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BI.TAB)  
-[PU2P01BE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BE.TAB)  
-|  4 K  
-4 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BE.LBL)  
-  
-**Ring eta**  
-1 km | beta Per | ingress  
-egress  
-|  46,970-47,430 km  |
-[PU2P01NI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NI.TAB)  
-[PU2P01NE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NE.TAB)  
-|  23 K  
-23 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NE.LBL)  
-  
-2 km | beta Per | ingress  
-egress  
-|  46,970-47,430 km  |
-[PU2P01NI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NI.TAB)  
-[PU2P01NE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NE.TAB)  
-|  11 K  
-11 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NE.LBL)  
-  
-5 km | beta Per | ingress  
-egress  
-|  46,970-47,430 km  |
-[PU2P01NI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NI.TAB)  
-[PU2P01NE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NE.TAB)  
-|  5 K  
-5 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NE.LBL)  
-  
-**Ring gamma**  
-1 km | beta Per | ingress  
-egress  
-|  47,390-47,840 km  |
-[PU2P01GI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GI.TAB)  
-[PU2P01GE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GE.TAB)  
-|  22 K  
-22 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GE.LBL)  
-  
-2 km | beta Per | ingress  
-egress  
-|  47,390-47,840 km  |
-[PU2P01GI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GI.TAB)  
-[PU2P01GE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GE.TAB)  
-|  11 K  
-11 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GE.LBL)  
-  
-5 km | beta Per | ingress  
-egress  
-|  47,390-47,840 km  |
-[PU2P01GI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GI.TAB)  
-[PU2P01GE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GE.TAB)  
-|  4 K  
-4 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GE.LBL)  
-  
-**Ring delta**  
-0.1 km | sigma Sgr | ingress  
-egress |  48,150-48,525 km |
-[PU1P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DI.TAB)  
-[PU1P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DE.TAB)  
-|  183 K  
-183 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DE.LBL)  
-  
-0.2 km | sigma Sgr | ingress  
-egress |  48,150-48,525 km  |
-[PU1P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DI.TAB)  
-[PU1P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DE.TAB)  
-|  92 K  
-92 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DE.LBL)  
-  
-0.5 km | sigma Sgr | ingress  
-egress |  48,150-48,525 km  |
-[PU1P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DI.TAB)  
-[PU1P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DE.TAB)  
-|  37 K  
-37 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DE.LBL)  
-  
-1 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  48,150-48,525 km  
-  
-48,150-48,550 km  
-|  [PU1P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DI.TAB)  
-[PU1P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DE.TAB)  
-[PU2P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DI.TAB)  
-[PU2P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DE.TAB)  
-|  18 K  
-18 K  
-20 K  
-20 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DE.LBL)  
-  
-2 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  48,150-48,524 km  
-  
-48,150-48,550 km  
-|  [PU1P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DI.TAB)  
-[PU1P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DE.TAB)  
-[PU2P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DI.TAB)  
-[PU2P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DE.TAB)  
-|  9 K  
-9 K  
-10 K  
-10 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DE.LBL)  
-  
-5 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  48,150-48,525 km  
-  
-48,150-48,550 km  
-|  [PU1P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DI.TAB)  
-[PU1P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DE.TAB)  
-[PU2P01DI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DI.TAB)  
-[PU2P01DE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DE.TAB)  
-|  4 K  
-4 K  
-4 K  
-4 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DE.LBL)  
-  
-**Ring lambda**  
-0.1 km | sigma Sgr | ingress  
-egress |  49,880-50,200 km  
-49,850-50,200 km  
-|  [PU1P01LI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LI.TAB)  
-[PU1P01LE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LE.TAB)  
-|  156 K  
-171 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LE.LBL)  
-  
-0.2 km | sigma Sgr | ingress  
-egress |  49,880-50,200 km  
-49,850-50,200 km  
-|  [PU1P01LI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LI.TAB)  
-[PU1P01LE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LE.TAB)  
-|  78 K  
-85 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LE.LBL)  
-  
-0.5 km | sigma Sgr | ingress  
-egress |  49,880-50,200 km  
-49,850-50,200 km  
-|  [PU1P01LI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LI.TAB)  
-[PU1P01LE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LE.TAB)  
-|  31 K  
-34 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LE.LBL)  
-  
-1 km | sigma Sgr | ingress  
-egress  
-|  49,880-50,200 km  
-49,850-50,200 km  
-|  [PU1P01LI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LI.TAB)  
-[PU1P01LE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LE.TAB)  
-|  16 K  
-17 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LE.LBL)  
-  
-2 km | sigma Sgr | ingress  
-egress |  49,880-50,200 km  
-49,850-50,200 km  
-|  [PU1P01LI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LI.TAB)  
-[PU1P01LE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LE.TAB)  
-|  8 K  
-9 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LE.LBL)  
-  
-5 km | sigma Sgr | ingress  
-egress |  49,880-50,200 km  
-49,850-50,200 km  
-|  [PU1P01LI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LI.TAB)  
-[PU1P01LE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LE.TAB)  
-|  3 K  
-3 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LE.LBL)  
-  
-**Ring epsilon**  
-0.1 km | sigma Sgr | ingress  
-egress |  50,400-51,800 km  |
-[PU1P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EI.TAB)  
-[PU1P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EE.TAB)  
-|  684 K  
-684 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EE.LBL)  
-  
-0.2 km | sigma Sgr | ingress  
-egress |  50,400-51,800 km  |
-[PU1P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EI.TAB)  
-[PU1P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EE.TAB)  
-|  342 K  
-342 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EE.LBL)  
-  
-0.5 km | sigma Sgr | ingress  
-egress |  50,400-51,800 km  |
-[PU1P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EI.TAB)  
-[PU1P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EE.TAB)  
-|  137 K  
-137 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EE.LBL)  
-  
-1 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  50,400-51,800 km  
-  
-50,400-51,800 km  
-|  [PU1P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EI.TAB)  
-[PU1P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EE.TAB)  
-[PU2P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EI.TAB)  
-[PU2P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EE.TAB)  
-|  68 K  
-68 K  
-68 K  
-68 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EE.LBL)  
-  
-2 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  50,400-51,800 km  
-  
-50,400-51,800 km  
-|  [PU1P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EI.TAB)  
-[PU1P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EE.TAB)  
-[PU2P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EI.TAB)  
-[PU2P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EE.TAB)  
-|  34 K  
-34 K  
-34 K  
-34 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EE.LBL)  
-  
-5 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  50,400-51,800 km  
-  
-50,400-51,800 km  
-|  [PU1P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EI.TAB)  
-[PU1P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EE.TAB)  
-[PU2P01EI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EI.TAB)  
-[PU2P01EE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EE.TAB)  
-|  14 K  
-14 K  
-14 K  
-14 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EE.LBL)  
-  
-**Full Ring System (assuming equatorial geometry)**  
-0.1 km | sigma Sgr | ingress  
-egress |  48,000-53,595 km  
-48,000-51,820 km  
-|  [PU1P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XI.TAB)  
-[PU1P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XE.TAB)  
-|  2.7 M  
-1.8 M  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XE.LBL)  
-  
-0.2 km | sigma Sgr | ingress  
-egress |  48,000-53,595 km  
-48,000-51,820 km  
-|  [PU1P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XI.TAB)  
-[PU1P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XE.TAB)  
-|  1.3 M  
-933 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XE.LBL)  
-  
-0.5 km | sigma Sgr | ingress  
-egress |  48,000-53,595 km  
-48,000-51,820 km  
-|  [PU1P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XI.TAB)  
-[PU1P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XE.TAB)  
-|  546 K  
-373 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XE.LBL)  
-  
-1 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  48,000-53,595 km  
-48,000-51,820 km  
-36,400-53,000 km  
-37,750-53,500 km  
-|  [PU1P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XI.TAB)  
-[PU1P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XE.TAB)  
-[PU2P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XI.TAB)  
-[PU2P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XE.TAB)  
-|  273 K  
-187 K  
-811 K  
-769 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XE.LBL)  
-  
-2 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  48,000-53,595 km  
-48,000-51,820 km  
-36,400-53,000 km  
-37,750-53,500 km  
-|  [PU1P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XI.TAB)  
-[PU1P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XE.TAB)  
-[PU2P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XI.TAB)  
-[PU2P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XE.TAB)  
-|  137 K  
-93 K  
-405 K  
-385 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XE.LBL)  
-  
-5 km | sigma Sgr  
-  
-beta Per | ingress  
-egress  
-ingress  
-egress  
-|  48,000-53,594 km  
-48,000-51,820 km  
-36,400-53,000 km  
-37,750-53,500 km  
-|  [PU1P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XI.TAB)  
-[PU1P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XE.TAB)  
-[PU2P01XI.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XI.TAB)  
-[PU2P01XE.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XE.TAB)  
-|  55 K  
-37 K  
-162 K  
-154 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XE.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XI.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XE.LBL)  
-  
-  
-## Neptune
+<tr>
+<td align="right">5 km</td>
+<td align="center">delta Sco</td>
+<td align="center">ingress</td>
+<td align="right">
+72,000-142,500 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PS1P01.TAB">PS1P01.TAB</a>
+</td>
+<td align="right">
+689 K
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PS1P01.LBL">.LBL</a>
+</td>
+</tr>
 
-Sampling | Star | Direction | Range | Data file | Size | Label  
-file  
----|---|---|---|---|---|---  
-1 km | sigma Sgr | ingress |  42,500-49,999 km  
-50,000-59,999 km  
-60,000-69,999 km  
-70,000-76,000 km  
-|  [PN1P0104.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0104.TAB)  
-[PN1P0105.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0105.TAB)  
-[PN1P0106.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0106.TAB)  
-[PN1P0107.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0107.TAB)  
-|  368 K  
-492 K  
-492 K  
-296 K  
-|  [.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0104.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0105.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0106.LBL)  
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0107.LBL)  
-  
-2 km | sigma Sgr | ingress | 42,500-76,000 km |
-[PN1P01.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PN1P01.TAB) |  689 K  |
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PN1P01.LBL)  
-5 km | sigma Sgr | ingress | 42,500-76,000 km |
-[PN1P01.TAB](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PN1P01.TAB) |  689 K  |
-[.LBL](/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PN1P01.LBL)  
-  
-* * *
+<tr>
+<td align="right">10 km</td>
+<td align="center">delta Sco</td>
+<td align="center">ingress</td>
+<td align="right">
+72,000-142,500 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM010/PS1P01.TAB">PS1P01.TAB</a>
+</td>
+<td align="right">
+344 K
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM010/PS1P01.LBL">.LBL</a>
+</td>
+</tr>
 
-[Voyager](/voyager/) | [Rings Node Home](/)
+<tr>
+<td align="right">20 km</td>
+<td align="center">delta Sco</td>
+<td align="center">ingress</td>
+<td align="right">
+72,000-142,500 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM020/PS1P01.TAB">PS1P01.TAB</a>
+</td>
+<td align="right">
+172 K
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM020/PS1P01.LBL">.LBL</a>
+</td>
+</tr>
 
+<tr>
+<td align="right">50 km</td>
+<td align="center">delta Sco</td>
+<td align="center">ingress</td>
+<td align="right">
+72,000-142,500 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM050/PS1P01.TAB">PS1P01.TAB  </a>
+</td>
+<td align="right">
+69 K
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM050/PS1P01.LBL">.LBL</a>
+</td>
+</tr>
+</table>
+</div>
+
+<a name="URANUS"></a>
+<h2>Uranus</h2>
+
+<div class = "table-responsive">
+
+<table class = "table" units="RELATIVE" align="center" cellpadding=4 border="1">
+
+<tr>
+<th>Sampling</th>
+<th>Star</th>
+<th>Direction</th>
+<th>Range</th>
+<th>Data file</th>
+<th>Size</th>
+<th>Label<br>file</th>
+</tr>
+
+<tr><td colspan="7">
+<a name="SIX"></a>
+<b>Ring 6</b>
+</td></tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+41,660-42,020 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016I.TAB">PU2P016I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016E.TAB">PU2P016E.TAB</a><br>
+</td>
+<td align="right">
+18 K<br>
+18 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P016E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+41,660-42,020 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016I.TAB">PU2P016I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016E.TAB">PU2P016E.TAB</a><br>
+</td>
+<td align="right">
+9 K<br>
+9 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P016E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+41,660-42,020 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016I.TAB">PU2P016I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016E.TAB">PU2P016E.TAB</a><br>
+</td>
+<td align="right">
+4 K<br>
+4 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P016E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="FIVE"></a>
+<b>Ring 5</b>
+</td></tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+42,050-42,410 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015I.TAB">PU2P015I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015E.TAB">PU2P015E.TAB</a><br>
+</td>
+<td align="right">
+18 K<br>
+18 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P015E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+42,050-42,410 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015I.TAB">PU2P015I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015E.TAB">PU2P015E.TAB</a><br>
+</td>
+<td align="right">
+9 K<br>
+9 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P015E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+42,050-42,410 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015I.TAB">PU2P015I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015E.TAB">PU2P015E.TAB</a><br>
+</td>
+<td align="right">
+4 K<br>
+4 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P015E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="FOUR"></a>
+<b>Ring 4</b>
+</td></tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+42,400-42,770 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014I.TAB">PU2P014I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014E.TAB">PU2P014E.TAB</a><br>
+</td>
+<td align="right">
+18 K<br>
+18 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P014E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+42,400-42,770 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014I.TAB">PU2P014I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014E.TAB">PU2P014E.TAB</a><br>
+</td>
+<td align="right">
+9 K<br>
+9 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P014E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+42,400-42,770 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014I.TAB">PU2P014I.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014E.TAB">PU2P014E.TAB</a><br>
+</td>
+<td align="right">
+4 K<br>
+4 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014I.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P014E.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="ALPHA"></a>
+<b>Ring alpha</b>
+</td></tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td align="right">
+44,530-44,930 km
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AI.TAB">PU2P01AI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AE.TAB">PU2P01AE.TAB</a><br>
+</td>
+<td align="right">
+20 K<br>
+20 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01AE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+44,530-44,930 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AI.TAB">PU2P01AI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AE.TAB">PU2P01AE.TAB</a><br>
+</td>
+<td align="right">
+10 K<br>
+10 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01AE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+44,530-44,930 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AI.TAB">PU2P01AI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AE.TAB">PU2P01AE.TAB</a><br>
+</td>
+<td align="right">
+4 K<br>
+4 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01AE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="BETA"></a>
+<b>Ring beta</b>
+</td></tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+45,430-45,860 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BI.TAB">PU2P01BI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BE.TAB">PU2P01BE.TAB</a><br>
+</td>
+<td align="right">
+21 K<br>
+21 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01BE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+45,430-45,860 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BI.TAB">PU2P01BI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BE.TAB">PU2P01BE.TAB</a><br>
+</td>
+<td align="right">
+11 K<br>
+11 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01BE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+45,430-45,860 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BI.TAB">PU2P01BI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BE.TAB">PU2P01BE.TAB</a><br>
+</td>
+<td align="right">
+4 K<br>
+4 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01BE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="ETA"></a>
+<b>Ring eta</b>
+</td></tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+46,970-47,430 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NI.TAB">PU2P01NI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NE.TAB">PU2P01NE.TAB</a><br>
+</td>
+<td align="right">
+23 K<br>
+23 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01NE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+46,970-47,430 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NI.TAB">PU2P01NI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NE.TAB">PU2P01NE.TAB</a><br>
+</td>
+<td align="right">
+11 K<br>
+11 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01NE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+46,970-47,430 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NI.TAB">PU2P01NI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NE.TAB">PU2P01NE.TAB</a><br>
+</td>
+<td align="right">
+5 K<br>
+5 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01NE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="GAMMA"></a>
+<b>Ring gamma</b>
+</td></tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+47,390-47,840 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GI.TAB">PU2P01GI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GE.TAB">PU2P01GE.TAB</a><br>
+</td>
+<td align="right">
+22 K<br>
+22 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01GE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+47,390-47,840 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GI.TAB">PU2P01GI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GE.TAB">PU2P01GE.TAB</a><br>
+</td>
+<td align="right">
+11 K<br>
+11 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01GE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">beta Per</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+47,390-47,840 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GI.TAB">PU2P01GI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GE.TAB">PU2P01GE.TAB</a><br>
+</td>
+<td align="right">
+4 K<br>
+4 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01GE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="DELTA"></a>
+<b>Ring delta</b>
+</td></tr>
+
+<tr>
+<td align="right">0.1 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+48,150-48,525 km
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DI.TAB">PU1P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DE.TAB">PU1P01DE.TAB</a><br>
+</td>
+<td align="right">
+183 K<br>
+183 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01DE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.2 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+48,150-48,525 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DI.TAB">PU1P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DE.TAB">PU1P01DE.TAB</a><br>
+</td>
+<td align="right">
+92 K<br>
+92 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01DE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.5 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+48,150-48,525 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DI.TAB">PU1P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DE.TAB">PU1P01DE.TAB</a><br>
+</td>
+<td align="right">
+37 K<br>
+37 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01DE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+48,150-48,525 km<br>
+<br>
+48,150-48,550 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DI.TAB">PU1P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DE.TAB">PU1P01DE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DI.TAB">PU2P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DE.TAB">PU2P01DE.TAB</a><br>
+</td>
+<td align="right">
+18 K<br>
+18 K<br>
+20 K<br>
+20 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01DE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01DE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+48,150-48,524 km<br>
+<br>
+48,150-48,550 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DI.TAB">PU1P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DE.TAB">PU1P01DE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DI.TAB">PU2P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DE.TAB">PU2P01DE.TAB</a><br>
+</td>
+<td align="right">
+9 K<br>
+9 K<br>
+10 K<br>
+10 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01DE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01DE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+48,150-48,525 km<br>
+<br>
+48,150-48,550 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DI.TAB">PU1P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DE.TAB">PU1P01DE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DI.TAB">PU2P01DI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DE.TAB">PU2P01DE.TAB</a><br>
+</td>
+<td align="right">
+4 K<br>
+4 K<br>
+4 K<br>
+4 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01DE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01DE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="LAMBDA"></a>
+<b>Ring lambda</b>
+</td></tr>
+
+<tr>
+<td align="right">0.1 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+49,880-50,200 km<br>
+49,850-50,200 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LI.TAB">PU1P01LI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LE.TAB">PU1P01LE.TAB</a><br>
+</td>
+<td align="right">
+156 K<br>
+171 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01LE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.2 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+49,880-50,200 km<br>
+49,850-50,200 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LI.TAB">PU1P01LI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LE.TAB">PU1P01LE.TAB</a><br>
+</td>
+<td align="right">
+78 K<br>
+85 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01LE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.5 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+49,880-50,200 km<br>
+49,850-50,200 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LI.TAB">PU1P01LI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LE.TAB">PU1P01LE.TAB</a><br>
+</td>
+<td align="right">
+31 K<br>
+34 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01LE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress<br></td>
+<td  align="right">
+49,880-50,200 km<br>
+49,850-50,200 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LI.TAB">PU1P01LI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LE.TAB">PU1P01LE.TAB</a><br>
+</td>
+<td align="right">
+16 K<br>
+17 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01LE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+49,880-50,200 km<br>
+49,850-50,200 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LI.TAB">PU1P01LI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LE.TAB">PU1P01LE.TAB</a><br>
+</td>
+<td align="right">
+8 K<br>
+9 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01LE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+49,880-50,200 km<br>
+49,850-50,200 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LI.TAB">PU1P01LI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LE.TAB">PU1P01LE.TAB</a><br>
+</td>
+<td align="right">
+3 K<br>
+3 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01LE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="EPSILON"></a>
+<b>Ring epsilon</b>
+</td></tr>
+
+<tr>
+<td align="right">0.1 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+50,400-51,800 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EI.TAB">PU1P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EE.TAB">PU1P01EE.TAB</a><br>
+</td>
+<td align="right">
+684 K<br>
+684 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01EE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.2 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+50,400-51,800 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EI.TAB">PU1P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EE.TAB">PU1P01EE.TAB</a><br>
+</td>
+<td align="right">
+342 K<br>
+342 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01EE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.5 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+50,400-51,800 km
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EI.TAB">PU1P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EE.TAB">PU1P01EE.TAB</a><br>
+</td>
+<td align="right">
+137 K<br>
+137 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01EE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+50,400-51,800 km<br>
+<br>
+50,400-51,800 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EI.TAB">PU1P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EE.TAB">PU1P01EE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EI.TAB">PU2P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EE.TAB">PU2P01EE.TAB</a><br>
+</td>
+<td align="right">
+68 K<br>
+68 K<br>
+68 K<br>
+68 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01EE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01EE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+50,400-51,800 km<br>
+<br>
+50,400-51,800 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EI.TAB">PU1P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EE.TAB">PU1P01EE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EI.TAB">PU2P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EE.TAB">PU2P01EE.TAB</a><br>
+</td>
+<td align="right">
+34 K<br>
+34 K<br>
+34 K<br>
+34 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01EE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01EE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+50,400-51,800 km<br>
+<br>
+50,400-51,800 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EI.TAB">PU1P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EE.TAB">PU1P01EE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EI.TAB">PU2P01EI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EE.TAB">PU2P01EE.TAB</a><br>
+</td>
+<td align="right">
+14 K<br>
+14 K<br>
+14 K<br>
+14 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01EE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01EE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr><td colspan="7">
+<a name="SYSTEM"></a>
+<b>Full Ring System (assuming equatorial geometry)</b>
+</td></tr>
+
+<tr>
+<td align="right">0.1 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+48,000-53,595 km<br>
+48,000-51,820 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XI.TAB">PU1P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XE.TAB">PU1P01XE.TAB</a><br>
+</td>
+<td align="right">
+2.7 M<br>
+1.8 M<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/PU1P01XE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.2 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+48,000-53,595 km<br>
+48,000-51,820 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XI.TAB">PU1P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XE.TAB">PU1P01XE.TAB</a><br>
+</td>
+<td align="right">
+1.3 M<br>
+933 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/PU1P01XE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">0.5 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress<br>egress</td>
+<td  align="right">
+48,000-53,595 km<br>
+48,000-51,820 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XI.TAB">PU1P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XE.TAB">PU1P01XE.TAB</a><br>
+</td>
+<td align="right">
+546 K<br>
+373 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/PU1P01XE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+48,000-53,595 km<br>
+48,000-51,820 km<br>
+36,400-53,000 km<br>
+37,750-53,500 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XI.TAB">PU1P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XE.TAB">PU1P01XE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XI.TAB">PU2P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XE.TAB">PU2P01XE.TAB</a><br>
+</td>
+<td align="right">
+273 K<br>
+187 K<br>
+811 K<br>
+769 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU1P01XE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PU2P01XE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+48,000-53,595 km<br>
+48,000-51,820 km<br>
+36,400-53,000 km<br>
+37,750-53,500 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XI.TAB">PU1P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XE.TAB">PU1P01XE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XI.TAB">PU2P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XE.TAB">PU2P01XE.TAB</a><br>
+</td>
+<td align="right">
+137 K<br>
+93 K<br>
+405 K<br>
+385 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU1P01XE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PU2P01XE.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">sigma Sgr<br><br>beta Per</td>
+<td align="center">ingress<br>egress<br>ingress<br>egress<br></td>
+<td  align="right">
+48,000-53,594 km<br>
+48,000-51,820 km<br>
+36,400-53,000 km<br>
+37,750-53,500 km<br>
+</td>
+<td  align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XI.TAB">PU1P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XE.TAB">PU1P01XE.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XI.TAB">PU2P01XI.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XE.TAB">PU2P01XE.TAB</a><br>
+</td>
+<td align="right">
+55 K<br>
+37 K<br>
+162 K<br>
+154 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU1P01XE.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XI.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PU2P01XE.LBL">.LBL</a><br>
+</td>
+</tr>
+</table>
+</div>
+
+<a name="NEPTUNE"></a>
+<h2>Neptune</h2>
+
+<div class = "table-responsive">
+
+<table class = "table" units="RELATIVE" align="center" cellpadding=4 border="1">
+
+<tr>
+<th>Sampling</th>
+<th>Star</th>
+<th>Direction</th>
+<th>Range</th>
+<th>Data file</th>
+<th>Size</th>
+<th>Label<br>file</th>
+</tr>
+
+<tr>
+<td align="right">1 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress</td>
+<td align="right">
+42,500-49,999 km<br>
+50,000-59,999 km<br>
+60,000-69,999 km<br>
+70,000-76,000 km<br>
+</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0104.TAB">PN1P0104.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0105.TAB">PN1P0105.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0106.TAB">PN1P0106.TAB</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0107.TAB">PN1P0107.TAB</a><br>
+</td>
+<td align="right">
+368 K<br>
+492 K<br>
+492 K<br>
+296 K<br>
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0104.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0105.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0106.LBL">.LBL</a><br>
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM001/PN1P0107.LBL">.LBL</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="right">2 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress</td>
+<td align="right">42,500-76,000 km</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PN1P01.TAB">PN1P01.TAB</a>
+</td>
+<td align="right">
+689 K
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM002/PN1P01.LBL">.LBL</a>
+</td>
+</tr>
+
+<tr>
+<td align="right">5 km</td>
+<td align="center">sigma Sgr</td>
+<td align="center">ingress</td>
+<td align="right">42,500-76,000 km</td>
+<td align="right">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PN1P01.TAB">PN1P01.TAB</a>
+</td>
+<td align="right">
+689 K
+</td>
+<td align="center">
+<a href="/volumes/VG_28xx/VG_2801/EASYDATA/KM005/PN1P01.LBL">.LBL</a>
+</td>
+</tr>
+</table>
+</div>
