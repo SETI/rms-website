@@ -1,4 +1,4 @@
-# do not edit columns without first reading cassini.README.md in this directory
+# do not edit columns without first reading README.md in this directory
 - column_labels: 
     - Volume ID
     - Bundled Volumes
