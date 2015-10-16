@@ -503,6 +503,19 @@ td.colgroup-seperator {
   font-weight: bold;
 }
 
+
+/* tools page */
+.tools > .container {
+  margin:0;
+  padding:0;
+}
+.tools > .container .row {
+  margin-top:20px;
+}
+.tools > .container .row h2{
+  margin-top:0;
+}
+
 /* ? */
 .toplink {
   margin:20px;
