@@ -16,6 +16,8 @@ original_site/
 deploy.bash
 converted_markdown/
 website/cassini/iss/*/*.txt
+website/browse/
+website/saturn/cassini/
 *.db
 *~
 *.pdf
