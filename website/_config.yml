@@ -19,7 +19,6 @@ keep_files: []
 # copy this as basic template and remove from it what you want to work on
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
-# -------------- 
 # work on jupiter
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
@@ -32,10 +31,8 @@ keep_files: []
 # work on uranus
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, tools, toolkits, saturn, voyager]
 
-
-# -------------- 
 # work on cassini
-exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
+# exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
 # work on voyager
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn]
@@ -67,8 +64,6 @@ exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, gl
 # work on roses 
 # exclude: [rpx, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
-
-# -------------- 
 # work on tools
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, toolkits, saturn, voyager]
 
@@ -77,7 +72,6 @@ exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, gl
 
 # work on Glossary
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
-
 
 # work on cassini and saturn
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, voyager]
