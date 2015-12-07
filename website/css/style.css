@@ -14,7 +14,7 @@
 body {
   background-color: #585858;
   font-family: 'Open Sans', sans-serif;
-  color: #595959;
+  color: #404040;
 }
 .hidden {  /* a11y way to present only to screen readers */
   text-indent: -5000px;
@@ -96,7 +96,7 @@ h4 {
   padding: 15px 40px 10px 20px;
   line-height: 1.5;
   font-size:1.4em;
-  color: #595959;
+  color: #404040;
 }
 @media only screen and (max-width: 320px) {
   .mission_statement {
