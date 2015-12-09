@@ -76,13 +76,13 @@
   submenu: 
 
     - title: Data volumes
-      href: /vol/)
+      href: /vol/
 
     - title: Compressed archives
-      href: /archives/)
+      href: /archives/
 
     - title: Previews/Thumbnails
-      href: /browse/)
+      href: /browse/
 
 - title: Resources
   href: /resources/
@@ -102,7 +102,7 @@
   submenu:
 
     - title: Mark Showalter
-      href: http://www.seti.org/users/mark-showalter) 
+      href: http://www.seti.org/users/mark-showalter 
 
     - title: Mitch Gordon
       href: http://www.seti.org/users/mitchell-gordon
