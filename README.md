@@ -9,5 +9,3 @@ http://anitakhart.github.io/rings-node-style-guide/mockups/
 
 dev deployment: 
 http://ringsnodewebsite.beforeamillionuniverses.com/
-
-
