@@ -152,7 +152,6 @@ p.superwide > a > img {
 	border: 1px solid #cccccc;
 	background-color: #ffffff;
 	margin-top: 20px;
-  min-height: 24em;
 }
 
 .homebox .panel-heading {
@@ -167,6 +166,7 @@ p.superwide > a > img {
   text-align: center;
   padding:3px 0;
 }
+
 .homebox .panel-body {
     padding:17px 10px;
 }
@@ -180,7 +180,6 @@ p.superwide > a > img {
 .homebox li, .homebox p {
 	line-height: 1.4em;
 	margin-bottom: 13px;
-	padding: ;	
 }
 .homebox ul a {
 	color: #435ca4;
@@ -194,6 +193,61 @@ p.superwide > a > img {
 .homebox ul a:active {
 	color: #31488d;
 }
+
+.homebox .panel-body p strong {
+  font-size: 1.5em;
+}
+
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+.homebox_row, .homebox_item {
+  margin:0; padding:0;
+}
+
+.homebox_row {
+ -moz-column-width: 40em;
+ -webkit-column-width: 40em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+}
+@media (min-width: 768px) and (max-width: 1050px) {
+  .homebox_row {
+     -moz-column-width: 23em;
+     -webkit-column-width: 23em;
+  }
+}
+@media (min-width: 1050px) and (max-width: 1150px) {
+  .homebox_row {
+     -moz-column-width: 20em;
+     -webkit-column-width: 20em;
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1700px) {
+  .homebox_row {
+     -moz-column-width: 30em;
+     -webkit-column-width: 30em;
+  }
+}
+@media (min-width: 1950px) {
+  .homebox_row {
+     -moz-column-width: 45em;
+     -webkit-column-width: 45em;
+     max-width:100em;
+  }
+}
+.homebox_item {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%; 
+}
+
+
+
+
+
+
 @media only screen and (max-width: 768px) {
   div.row {
     padding:0; 
