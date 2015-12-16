@@ -93,7 +93,8 @@ h4 {
 
 
 .mission_statement {
-  padding: 15px 40px 10px 20px;
+  padding: 0px 40px 0px 5px;
+  margin:0;
   line-height: 1.5;
   font-size:1.4em;
   color: #404040;
