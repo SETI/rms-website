@@ -173,7 +173,7 @@
 
 
             <!-- Bundled Volumes -->
-            {% if col == "Bundled Volumes" %}
+            {% if col contains "Bundled" %}
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
                 {% if table_data.section.nolinks == true %}    
@@ -182,9 +182,18 @@
 
                 {% else %}
 
-                  <a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
-                      {{ row.table_row.id }}.tar.gz
-                  </a>
+                  {% if col contains "Bundled Volumes" %}
+                    <a href = "http://pds-rings.seti.org/archives/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
+                        {{ row.table_row.id }}.tar.gz
+                    </a>
+                  {% endif %}
+
+                  {% if col contains "Bundled Calibrated" %}
+                    <a href = "http://pds-rings.seti.org/derived/archives/{{ row.table_row.id }}.tar.gz">
+                        {{ row.table_row.id }}.tar.gz
+                    </a>
+                  {% endif %}
+
 
                 {% endif %}
               </td>
