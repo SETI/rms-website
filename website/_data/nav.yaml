@@ -36,7 +36,7 @@
   submenu:
 
     - title: Search Tool
-      href: /opus/
+      href: /search/
 
     - title: Cassini
       href: /cassini/
