@@ -1,0 +1,69 @@
+# do not edit columns without first reading README.md in this directory
+- column_labels: 
+    - Volume ID
+    - Bundled Volumes
+    - Browse Images
+    - Calibrated Images
+    - Bundled Calibrated
+    - Index File
+    - Spacecraft Clock (SCLK) range  
+    - Date Range (UTC)
+
+- footer_msg: 
+    - Next Release January 1, 2016
+
+# Edit Below:
+- section: 
+    heading1: Data from Launch to Saturn Approach
+
+    section_rows: 
+
+        - table_row: 
+            id: COISS_2001
+            clock_range: 1454725799 to 1460960370 
+            date_range: 2004-02-06 to 2004-04-18
+
+        - table_row: 
+            id: COISS_1001
+            clock_range: 1294561143 to 1351738471 
+            date_range: 1999-01-09 to 2000-11-01
+
+        - table_row: 
+            id: COISS_1002
+            clock_range: 1351738505 to 1353756211 
+            date_range: 2000-11-01 to 2000-11-24
+
+        - table_row: 
+            id: COISS_1003
+            clock_range: 1353756268 to 1354880622 
+            date_range: 2000-11-24 to 2000-12-07
+
+        - table_row: 
+            id: COISS_1004
+            clock_range: 1354880676 to 1357564405 
+            date_range: 2000-12-07 to 2001-01-07
+
+        - table_row: 
+            id: COISS_1005
+            clock_range: 1357564438 to 1359362884 
+            date_range: 2001-01-07 to 2001-01-28
+
+        - table_row: 
+            id: COISS_1006
+            clock_range: 1359362956 to 1363539029 
+            date_range: 2001-01-28 to 2001-03-17
+
+        - table_row: 
+            id: COISS_1007
+            clock_range: 1363539046 to 1404903619 
+            date_range: 2001-03-17 to 2002-07-09
+
+        - table_row: 
+            id: COISS_1008
+            clock_range: 1405160033 to 1444749812 
+            date_range: 2002-07-12 to 2003-10-13
+
+        - table_row: 
+            id: COISS_1009
+            clock_range: 1444749868 to 1451040707 
+            date_range: 2003-10-13 to 2003-12-25
