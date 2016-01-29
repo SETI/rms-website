@@ -19,11 +19,6 @@
     section_rows: 
 
         - table_row: 
-            id: COISS_2001
-            clock_range: 1454725799 to 1460960370 
-            date_range: 2004-02-06 to 2004-04-18
-
-        - table_row: 
             id: COISS_1001
             clock_range: 1294561143 to 1351738471 
             date_range: 1999-01-09 to 2000-11-01
