@@ -60,32 +60,28 @@ established as an overall clearing house for Cassini support.
   * **Downloadable tables of enhanced geometric metadata**
 
     The PDS Rings Node generates detailed metadata about Saturn and its satellites
-    to support searches using [OPUS](http://pds-rings-tools.seti.org/opus/).
-    Tables of that metadata are available for downloading.
+    to support searches using [OPUS](http://pds-rings-tools.seti.org/opus/). We currently produce 
+    supplemental metadata for Cassini ISS, UVIS, and VIMS. CIRS metadata may be available near 
+    the end of FY16.
+    
+    [Tables of that metadata are available](http://pds-rings.seti.org/metadata/) for 
+    browsing and downloading. Each instrument subdirectory contains browsable metadata by volume. 
+    
+    tar.gz files for each volume are in the /archives/ subdirectory of the relevant instrument 
+    directory - e.g., metadata/COISS_2xxx/archives/. For information on opening tar.gz
+    files, click [here.](/targzip.htm)
 
-**Update February 2015:**
-
-We updated our pipeline and regenerated all previous metadata files.
-Improvements include:
-
-  * more accurate ring information,
-  * fewer missing files due to gaps in the C kernels,
-  * corrected timing of the VIMS cubes.
-
-The metadata is organized by data volume for each instrument (e.g., ISS volume
-2001 has a set of tables). For each volume we provide three tables with their
-associated PDS labels which include column descriptions. The three tables
-provide geometric metadata for the moons of Saturn, the Rings of Saturn, and
-for Saturn. The tables are updated quarterly shortly after we receive the
-Cassini quarterly delivery.
-
-You can browse the tables on-line and download individual tables, download the
-set of tables for a specific volume as a tar.gz file, or download the entire
-set for one instrument as a single tar.gz file. In addition, links to geometry
-tables for each volume are provided in the "Access Data" pages of the
-respective Instrument information pages. For information on opening tar.gz
-files, click [here.](/targzip.htm)
-
+    The metadata is organized by data volume for each instrument (e.g., ISS volume
+    2001 has a set of tables). For each volume we provide four tables with their
+    associated PDS labels which include column descriptions. Three of the tables
+    provide geometric metadata for the moons of Saturn, the Rings of Saturn, and
+    for Saturn. The fourth table, nnnn_index.tab, list all of the detectable (e.g., 
+    satellites completly obscured behind the planet are not included) targets
+    in the instrument field of view. 
+    
+    The tables are updated quarterly shortly after we receive the
+    Cassini quarterly delivery.
+    
 **ISS**
 
   * Browse and download [ individual ISS geometry tables](/metadata/COISS_2xxx/).
