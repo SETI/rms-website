@@ -8,7 +8,12 @@
 !css/*.png
 !css/*.svg
 !requirements.txt
-*.txt
+website/*.txt
+website/*/*.txt
+website/*/*/*.txt
+website/*/*/*/*.txt
+website/*/*/*/*/*.txt
+website/*/*/*/*/*/*.txt
 *.pyc
 venv
 .DS_Store
