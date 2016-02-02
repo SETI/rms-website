@@ -7,7 +7,8 @@ from secrets import PROD_DIR, PROD_USR
 env.hosts = ['pds-rings.seti.org']
 
 def deploy():
-    """ You are in /deploy so go a level up and git pull """
+    """ this will pull the website from github, build it locally, transfer
+        it to production server, and move it into production directory on that server"""
 
     # You are in /deploy so go a level up and git pull
     with lcd("../"):
