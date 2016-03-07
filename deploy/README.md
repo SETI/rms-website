@@ -6,7 +6,7 @@
 
 ### Install: 
 
-Create a virtualenv and install the requirements:
+To create a virtualenv and install the requirements:
 
     virtualenv venv --distribute
     source venv/bin/activate
