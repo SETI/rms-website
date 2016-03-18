@@ -11,6 +11,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 # Build settings
 markdown: kramdown
 keep_files: []
+gems:
+ - jekyll-redirect-from
 
 
 # files to exclude from jekell build, commment out all of these to build entire site
