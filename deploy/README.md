@@ -1,4 +1,6 @@
-### Run: 
+# How to Deploy This Website
+
+## Deploy to Production 
 
 Linux/Mac:
 
@@ -7,10 +9,12 @@ Linux/Mac:
 
 Windows:
 
-    venv\Scripts\activate.bat
+In cygwin with openssh installed: 
+
+    venv/Scripts/activate
     fab deploy
 
-### Install: 
+## Install: 
 
 If you don't already have virtualenv installed:
 
