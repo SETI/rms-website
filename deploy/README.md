@@ -12,7 +12,11 @@ Windows:
 
 ### Install: 
 
-To create a virtualenv and install the requirements:
+If you don't already have virtualenv installed:
+
+    sudo pip install virtualenv
+
+Create a virtualenv and install the requirements. 
 
 Linux/Mac:
 
