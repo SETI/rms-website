@@ -23,3 +23,8 @@ def deploy():
     # on the server, copy the website to the production directory
     with cd('~/'):
         run("sudo rsync -rv --exclude=*.tif --exclude=*.tiff --exclude=*.tgz --exclude=*.tar.gz website/ %s/. " % (PROD_DIR))
+
+
+    print("Finished! \n")
+    sys.exit()
+    
