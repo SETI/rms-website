@@ -1,5 +1,7 @@
 # How to Deploy This Website
 
+from the deploy/ directory:
+
 ## Deploy to Production 
 
 Linux/Mac:
