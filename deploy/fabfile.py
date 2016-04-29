@@ -1,15 +1,27 @@
 from __future__ import print_function
 import sys
 import socket
+import time
 from fabric.api import env, cd, lcd, run, local, abort
 from fabric.contrib.console import confirm
 from secrets import PROD_DIR, PROD_USR
 
 env.hosts = ['pds-rings.seti.org']
+REPO = 'https://github.com/basilleaf/ringsnode_website'
 
 def deploy():
-    """ this will pull the website from github, build it locally, transfer
-        it to production server, and move it into production directory on that server"""
+    """ This script will deploy the website to production from the github repo 
+
+        It first pulls the code repo from github and builds the site locally, 
+        then uses a series of rsyncs to deploy the site to production.
+
+        If you are not running this script on the production server pds-rings 
+        it will transfer the site from your machine to that server. 
+
+        You must have a directory named 'website' in your home directory on pds-rings.
+
+        Once your copy of ~/website is updated it will confirm that you want  
+        to rsync deploy it to the public website production directory"""
 
     # is this your laptop or logged into the web server? (want this script to work on both)
     web_server = False
@@ -18,7 +30,8 @@ def deploy():
 
     # You are in /deploy so go a level up and git pull
     with lcd("../"):
-        print("pulling the latest site from github: https://github.com/basilleaf/ringsnode_website")
+        print("\nPulling the latest site from github.com: \n-----> %s\n" % REPO)
+        time.sleep(2.5)  # please remind people we are pulling from remote 
         local("git pull")
 
     # build the website. 
