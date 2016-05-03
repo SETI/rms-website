@@ -7,7 +7,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release April 1, 2016
+    - Next Release July 1, 2016
 
 # Edit Below:
 - section:   
@@ -991,3 +991,23 @@
             id:  COCIRS_1503
             clock_range: 1803862932 to 1806530937 
             date_range: 2015-03-01 to 2015-03-31  
+
+- section: 
+    heading2: April 1, 2016
+
+    section_rows: 
+
+        - table_row: 
+            id:  COCIRS_1504
+            clock_range: 1798765267 to 1809118988 
+            date_range: 2015-04-01 to 2015-04-30  
+
+        - table_row: 
+            id:  COCIRS_1505
+            clock_range: 1809133368 to 1811797323 
+            date_range: 2015-05-01 to 2015-05-31  
+
+        - table_row: 
+            id:  COCIRS_1506
+            clock_range: 1811842932 to 1814283914 
+            date_range: 2015-06-01 to 2015-06-29  
