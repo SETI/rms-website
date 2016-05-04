@@ -26,7 +26,7 @@ Pull the latest version from github, activate the virtualenv, and run the script
 
 2. Create the python virtual environment for the deploy script
 
-        cd deploy/
+        cd ringsnode_website/deploy/
         virtualenv venv --distribute
 
 3. Activate the virtualenv and install the requirements
@@ -44,4 +44,7 @@ Pull the latest version from github, activate the virtualenv, and run the script
     Edit the secrets.py to define the web root directory.
     (Web root must be accessible locally to this script)
 
+6. Try it out! 
+    
+    See above "Deploying"
 
