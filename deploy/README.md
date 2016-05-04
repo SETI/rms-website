@@ -1,39 +1,47 @@
-# How to Deploy This Website
+# Deploying the Website
 
-from the deploy/ directory:
+This script will fetch the latest version from the remote repo, 
+build the site locally, and rsync that into the web root.
 
-## Deploy to Production 
+## Deploying:
 
-Linux/Mac:
+_Note:_ If this is your first time, see **Setup** below. 
 
-    source venv/bin/activate
-    fab deploy 
+Pull the latest version from github, activate the virtualenv, and run the script:
 
-Windows:
-
-In cygwin with openssh installed: 
-
-    venv/Scripts/activate
+    cd ~/ringsnode_website
+    git pull
+    cd deploy/
+    source venv/bin/activate 
     fab deploy
 
-## Install: 
 
-If you don't already have virtualenv installed:
+## Initial Setup: 
 
-    sudo pip install virtualenv
+1. Grab a local copy of the remote repo
 
-Create a virtualenv and install the requirements. 
-
-Linux/Mac:
-
-    virtualenv venv --distribute
-    source venv/bin/activate
-    pip install -r requirements.txt 
+        cd ~/
+        git clone https://github.com/basilleaf/ringsnode_website.git
 
 
-Windows
+2. Create the python virtual environment for the deploy script
 
-    virtualenv venv --distribute
-    venv\Scripts\activate.bat
-    easy_install http://www.voidspace.org.uk/python/pycrypto-2.6.1/pycrypto-2.6.1.win32-py2.7.exe
-    pip install -r requirements.txt 
+        cd deploy/
+        virtualenv venv --distribute
+
+3. Activate the virtualenv and install the requirements
+
+        source venv/bin/activate
+        pip install -r requirements.txt 
+
+4. Create a secrets.py file
+
+        cp secrets_template.py secrets.py 
+
+
+5. Edit the secrets.py file
+
+    Edit the secrets.py to define the web root directory.
+    (Web root must be accessible locally to this script)
+
+
