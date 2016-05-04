@@ -66,6 +66,9 @@ gems:
 # work on roses 
 # exclude: [rpx, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
+# work on roses and cassini
+# exclude: [rpx, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
+
 # work on tools
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, toolkits, saturn, voyager]
 
