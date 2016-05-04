@@ -46,5 +46,6 @@ Pull the latest version from github, activate the virtualenv, and run the script
 
 6. Try it out! 
     
-    See above "Deploying"
+    fab deploy
+
 
