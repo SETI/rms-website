@@ -5,7 +5,7 @@ build the site locally, and rsync that into the web root.
 
 ## Deploying:
 
-_Note:_ If this is your first time, see **Setup** below. 
+_Note:_ If this is your first time, see **Initial Setup** below. 
 
 Pull the latest version from github, activate the virtualenv, and run the script:
 
@@ -18,7 +18,7 @@ Pull the latest version from github, activate the virtualenv, and run the script
 
 ## Initial Setup: 
 
-1. Grab a local copy of the remote repo
+1. While logged into the web server, grab a local copy of the remote repo
 
         cd ~/
         git clone https://github.com/basilleaf/ringsnode_website.git
