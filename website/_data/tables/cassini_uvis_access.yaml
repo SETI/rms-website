@@ -483,11 +483,11 @@
             date_range: 2015-01-01 to 2015-03-31
 
 - section: 
-    heading2: April 1, 2016 Release * There are timing errors in this volume.
+    heading2: April 1, 2016 Release * Redelivered May 6, 2016 - timing errors corrected.
 
     section_rows: 
 
         - table_row: 
             id: COUVIS_0051 
             clock_range: 1806541807 to 1814401072 
-            date_range: 2015-04-01 to TBD
+            date_range: 2015-04-01 to 2015-06-30
