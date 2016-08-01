@@ -53,6 +53,7 @@
             - COUVIS_0049
             - COUVIS_0050
             - COUVIS_0051
+            - COUVIS_0052
 
 - section: 
     heading1: Cruise Data
@@ -110,64 +111,64 @@
             - COUVIS_0002
             - COUVIS_0004
 
-
 - section: 
     heading1: Data from Saturn Approach to End of Mission
 
     section_rows:  
 
       - table_row:  
-        dataset: CO-S-UVIS-2-CUBE-V1.n
-        volume_id_list:
-            - COUVIS_0003
-            - COUVIS_0004
-            - COUVIS_0005
-            - COUVIS_0006
-            - COUVIS_0007
-            - COUVIS_0008
-            - COUVIS_0009
-            - COUVIS_0010
-            - COUVIS_0011
-            - COUVIS_0012
-            - COUVIS_0013
-            - COUVIS_0014
-            - COUVIS_0015
-            - COUVIS_0016
-            - COUVIS_0017
-            - COUVIS_0018
-            - COUVIS_0019
-            - COUVIS_0020
-            - COUVIS_0021
-            - COUVIS_0022
-            - COUVIS_0023
-            - COUVIS_0024
-            - COUVIS_0025
-            - COUVIS_0026
-            - COUVIS_0027
-            - COUVIS_0028
-            - COUVIS_0029
-            - COUVIS_0030
-            - COUVIS_0031
-            - COUVIS_0032
-            - COUVIS_0033
-            - COUVIS_0034
-            - COUVIS_0035
-            - COUVIS_0036
-            - COUVIS_0037
-            - COUVIS_0038
-            - COUVIS_0039
-            - COUVIS_0040
-            - COUVIS_0041
-            - COUVIS_0042
-            - COUVIS_0043
-            - COUVIS_0044
-            - COUVIS_0045
-            - COUVIS_0046
-            - COUVIS_0047
-            - COUVIS_0048
-            - COUVIS_0049
-            - COUVIS_0050
-            - COUVIS_0051
+          dataset: CO-S-UVIS-2-CUBE-V1.n
+          volume_id_list:
+              - COUVIS_0003
+              - COUVIS_0004
+              - COUVIS_0005
+              - COUVIS_0006
+              - COUVIS_0007
+              - COUVIS_0008
+              - COUVIS_0009
+              - COUVIS_0010
+              - COUVIS_0011
+              - COUVIS_0012
+              - COUVIS_0013
+              - COUVIS_0014
+              - COUVIS_0015
+              - COUVIS_0016
+              - COUVIS_0017
+              - COUVIS_0018
+              - COUVIS_0019
+              - COUVIS_0020
+              - COUVIS_0021
+              - COUVIS_0022
+              - COUVIS_0023
+              - COUVIS_0024
+              - COUVIS_0025
+              - COUVIS_0026
+              - COUVIS_0027
+              - COUVIS_0028
+              - COUVIS_0029
+              - COUVIS_0030
+              - COUVIS_0031
+              - COUVIS_0032
+              - COUVIS_0033
+              - COUVIS_0034
+              - COUVIS_0035
+              - COUVIS_0036
+              - COUVIS_0037
+              - COUVIS_0038
+              - COUVIS_0039
+              - COUVIS_0040
+              - COUVIS_0041
+              - COUVIS_0042
+              - COUVIS_0043
+              - COUVIS_0044
+              - COUVIS_0045
+              - COUVIS_0046
+              - COUVIS_0047
+              - COUVIS_0048
+              - COUVIS_0049
+              - COUVIS_0050
+              - COUVIS_0051
+              - COUVIS_0052
 
       - table_row:
           dataset: CO-S-UVIS-2-SPEC-V1.n 
@@ -216,6 +217,7 @@
             - COUVIS_0049
             - COUVIS_0050
             - COUVIS_0051
+            - COUVIS_0052
 
       - table_row:
           dataset: CO-S-UVIS-2-SSB-V1.n 
@@ -269,6 +271,7 @@
             - COUVIS_0049
             - COUVIS_0050
             - COUVIS_0051
+            - COUVIS_0052
 
       - table_row:
           dataset: CO-S-UVIS-2-WAV-V1.n 
