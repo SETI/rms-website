@@ -1,13 +1,13 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
-/* Small devices (tablets, 768px and up) 
+/* Small devices (tablets, 768px and up)
 @media (min-width: @screen-sm-min) { ... }
 
-/* Medium devices (desktops, 992px and up) 
+/* Medium devices (desktops, 992px and up)
 @media (min-width: @screen-md-min) { ... }
 
-/* Large devices (large desktops, 1200px and up) 
+/* Large devices (large desktops, 1200px and up)
 @media (min-width: @screen-lg-min) { ... }
 */
 
@@ -73,7 +73,7 @@ h4 {
 .searchbox {
   width:320px;
   position: absolute;
-  right:55px; 
+  right:55px;
   top:90px;
 
 }
@@ -82,9 +82,9 @@ h4 {
     display:none;  /* hiding it for now, hard to layout this thing in phone-size screens */
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation : portrait) { 
+@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation : portrait) {
   .searchbox {
-    display:block;    
+    display:block;
     position: absolute;
     right:25px;
     top:90px;
@@ -112,13 +112,13 @@ h4 {
 
 /* content containers */
 .content {
-  margin:0; padding:0; 
+  margin:0; padding:0;
   margin-top:20px;
 }
 
 .content > p > img, .content > img, .content > a > img, .content > p > a > img {
   float:right;
-  margin:0 0 20px 20px; 
+  margin:0 0 20px 20px;
 }
 
 @media (min-width: 1200px) {
@@ -126,7 +126,7 @@ h4 {
     max-width: 60em;
   }
   .content li {
-    max-width: 50em; 
+    max-width: 50em;
   }
 }
 .content p.superwide {
@@ -137,7 +137,7 @@ h4 {
 
 
 
-/* .content container customizations for pages */ 
+/* .content container customizations for pages */
 p.superwide > a > img {
   overflow:visible;
   float:left;
@@ -210,7 +210,7 @@ p.superwide > a > img {
  -moz-column-width: 40em;
  -webkit-column-width: 40em;
  -moz-column-gap: 1em;
- -webkit-column-gap:1em; 
+ -webkit-column-gap:1em;
 }
 @media (min-width: 768px) and (max-width: 1050px) {
   .homebox_row {
@@ -241,7 +241,7 @@ p.superwide > a > img {
 .homebox_item {
  display: inline-block;
  padding:  .25rem;
- width:  100%; 
+ width:  100%;
 }
 
 
@@ -251,7 +251,7 @@ p.superwide > a > img {
 
 @media only screen and (max-width: 768px) {
   div.row {
-    padding:0; 
+    padding:0;
   }
   .homebox {
     margin:0; padding:0;
@@ -276,7 +276,7 @@ p.superwide > a > img {
   background: url(assets/header%20banners/PRN_header1.jpg) no-repeat;
   background-position: right 0 top 0;
   height: 150px;
-  margin:0; padding:0; 
+  margin:0; padding:0;
   /*width: 1170px;
   height: 150px;*/
 }
@@ -291,7 +291,7 @@ p.superwide > a > img {
   position: relative;
   display: inline-block;
   margin: 50px 37px 50px 37px;
-  
+
 }
 .banner a.site-title {
 	color:white;
@@ -353,24 +353,24 @@ p.superwide > a > img {
 
 
 
-/* nav - the left main nav menu */ 
+/* nav - the left main nav menu */
 nav {
     background-color: #efefef;
 }
 .nav-container nav ul {
-	margin: 0; padding: 0;	
+	margin: 0; padding: 0;
 	list-style-type: none;
 }
 
 .nav-container nav ul li:last-child {
-	padding-bottom: 6px;	
+	padding-bottom: 6px;
 }
 
 .nav-container nav ul:last-child {
-	padding-bottom: 12px;	
+	padding-bottom: 12px;
 }
 
-.nav-container .subheading > a {  /* nav menu section headings */
+.nav-container .subheading > a, .nav-container .subheading > p {  /* nav menu section headings */
 	display:block;
 	width:100%;
 	font: 1.1em 'Open Sans', sans-serif;
@@ -382,16 +382,19 @@ nav {
 	background-color: #e9e9e9;
 	padding: 12px 15px;
 }
+.nav-container .subheading > p {
+  color:black;
+}
 
-.nav-container .subheading > a:visited { 
+.nav-container .subheading > a:visited {
 	color: #4e4a92;
 }
 
-.nav-container .subheading > a:hover { 
+.nav-container .subheading > a:hover {
 	color: #5a72b7;
 }
 
-.nav-container .subheading > a:active { 
+.nav-container .subheading > a:active {
 	color: #31488d;
 }
 
@@ -411,12 +414,12 @@ nav {
 	color: #5a72b7;
 }
 .nav-container a:active { /* for the key press */
-  background-color: #ffffff; 
+  background-color: #ffffff;
   border-left: 5px solid #fffa93;
   padding-left: -15px;
 }
 .nav-container .submenu li.active { /* nav hinting */
-  background-color: #ffffff; 
+  background-color: #ffffff;
   border-left: 5px solid #fffa93;
   padding-left: -15px;
 }
@@ -455,19 +458,19 @@ nav {
 }
 @media only screen and (max-width: 768px) {
   .mobile {
-    display:block;    
+    display:block;
   }
   .brandtext {
-    width: 80%;    
+    width: 80%;
     text-align: center;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation:portrait) { 
+@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation:portrait) {
   .mobile {
-    display:none;    
+    display:none;
   }
 }
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) { 
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
   .mobile {
     display:block;
   }
@@ -533,30 +536,30 @@ ol.breadcrumb {
 
 
 /* data tables */
-table { 
+table {
   border-collapse: separate;
   background-color: white;
 }
 /* Zebra striping */
 /*
-tr:nth-of-type(odd) { 
-  background: #efefef; 
+tr:nth-of-type(odd) {
+  background: #efefef;
 }
 */
-th { 
-  padding: 3px 15px; 
-  background: #fdfabe; 
-  color: #222222; 
-  font-weight: bold; 
+th {
+  padding: 3px 15px;
+  background: #fdfabe;
+  color: #222222;
+  font-weight: bold;
 }
-td, th { 
-  padding: 3px 15px; 
-  border: 1px solid #ccc; 
+td, th {
+  padding: 3px 15px;
+  border: 1px solid #ccc;
   text-align:center;
 }
 th.colgroup-seperator, td.colgroup-seperator {
   background: #efefef;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
 }
 td.colgroup-seperator {
   font-weight: bold;
@@ -618,5 +621,3 @@ td.colgroup-seperator {
   min-width: 768px;
   overflow: scroll;
 }
-
-
