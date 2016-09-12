@@ -1,25 +1,48 @@
 ---
 layout: base
 layout_style: default
+tabs: newhorizons
 ---
 
-# Welcome to the Rings Node's New Horizons at Jupiter Information Page
+# Welcome to the Rings Node's New Horizons Information Page
 
 ##  Introduction
 
-**Supporting SPICE files from the Jupiter encounter are no longer maintained at the Rings Node.** These files are available from the PDS NAIF Node. 
-
-The New Horizons mission obtained data using a variety of instruments during
-the Jupiter encounter and for approximately 90 days following Jupiter closest
-approach. The bulk of the rings relevant New Horizons data was obtained by the
-LOng Range Reconnaissance Imager (LORRI), a high resolution optical camera.
+**Last updated: 9/2/2016**
 
 While all of the New Horizons data are available from the [PDS Small Bodies
 Node (SBN)](http://pds-
 smallbodies.astro.umd.edu/data_sb/missions/newhorizons/index.shtml), the Rings
-Node maintains duplicate copies of all of the LORRI data. The raw data is
-provided in a single volume while the same data in calibrated form is divided
-into three volumes.
+Node maintains duplicate copies of all of the released LORRI and MVIC data. 
+
+  * Searches of the LORRI data are supported in [OPUS](/search/). 
+  * This capability will be extended to the MVIC data shortly.
+    
+For each mission phase prior to the Pluto encounter, for each instrument, the raw data 
+is provided in a single volume NHaabb_1xxx, and the corresponding calibrated data is in 
+a single volume, NHaabb_2xxx, where aa is the mission phase, bb is a two character 
+instrument abbreviation, and xxx is the remainder of the volume number. 
+
+For the Pluto Encounter, because of the long transfer time from the spacecraft, data are 
+being released incrementally with the final 'x' in the volume number incremented for each 
+new release.
+
+Mission phases are:
+
+  * LA - Post Launch Cruise
+  * JU - Jupiter Encounter
+  * PC - Pluto Cruise
+  * PE - Pluto Encounter
+
+##  Metadata
+
+The metadata provided in the original INDEX.TAB files is very limited. We
+have produced a single, expanded index file covering each calibrated volume. 
+
+In addition we have generated indices of enhanced geometric metadata for each LORRI volume. We 
+plan to do the same for each MVIC volume in the near future.
+
+  * All of the data, and the enhanced metadata can be accessed via [Access Data](./access.html): links to data volumes and supplemental material.
 
 ##  Key Documents
 
@@ -40,64 +63,29 @@ the
 
   * [quaternion description](QUAT_AXYZ_J2K_TO_INSTR.ASC) file and its associated [label file.](QUAT_AXYZ_J2K_TO_INSTR.LBL)
 
-The meta data provided in the original INDEX.TAB files is very limited. We
-have produced a single, expanded index file covering the entire calibrated
-data set.
-
-  * [expanded index](nhjulo_newindex.tab) file and its associated [label file.](nhjulo_newindex.lbl)
 
 ## Ring Observation "Tour Guide"
 
-Mark Showalter has assembled a table of all the ring observations, including a
+Mark Showalter has assembled a table of all the LORRI Jupiter ring observations, including a
 brief description of the targeting and the science goals.
 
   * PDS-formatted table: [lorri_jring_images.tab](lorri_jring_images.tab)
   * PDS3 label: [lorri_jring_images.lbl](lorri_jring_images.lbl)
   * Zip file of all the diagrams: [lorri_jring_image_diagrams.zip](lorri_jring_image_diagrams.zip)
 
-##  All of the LORRI data can be accessed directly from the table below.
-
-We also provide browse images for all of the LORRI observations.
-
-  * Clicking on the VOLUME_ID will allow you to browse the volume. 
-
-  * To download an entire volume, right click on that volume's "Bundled" link in the second column. 
-
-The bundled volumes are provided in .tar.gz format. For information on opening
-files of this type, click [here](/targzip.htm).
-
-  * Browse images for the calibrated files can be viewed by following the "Browse Images" link for that volume. 
-
-Volume ID | Bundled Volumes | Browse Images | Spacecraft Clock (SCLK) Range |
-Date Range (UTC)  
----|---|---|---|---  
-Raw Data  
-[NHJULO_1001/](/vol/NHJULO_1xxx/NHJULO_1001/) |
-[NHJULO_1001.tar.gz](/archives/NHJULO_1xxx/NHJULO_1001.tar.gz) |   |
-0030598438 to 0043906321 |  2007-01-08 to 2007-06-11  
-Calibrated Data  
-[NHJULO_2001/](/vol/NHJULO_2xxx/NHJULO_2001/) |
-[NHJULO_2001.tar.gz](/archives/NHJULO_2xxx/NHJULO_2001.tar.gz) | [Browse
-Images](/browse/NHJULO_2xxx/NHJULO_2001/data/) |  0030598438 to 0043906321 |
-2007-01-08 to 2007-06-11  
-  
-![\[SPACER\]](css/spacer.gif)
 
 ## New Horizons Links
 
-In additon to the Rings Node, geometry data is available from the
+In additon to the Rings Node, New Horizons information web pages are available from the
 
-PDS NAIF Node.  and New Horizons information web pages are available from the
-
-  * [Atmospheres Node](http://atmos.nmsu.edu/data_and_services/atmospheres_data/NewHorizons/NH_Jupiter.html)
   * [Small Bodies Node (SBN)](http://pds-smallbodies.astro.umd.edu/data_sb/missions/newhorizons/index.shtml)
+  * [Atmospheres Node](http://atmos.nmsu.edu/data_and_services/atmospheres_data/NewHorizons/NH_Jupiter.html)
+
+Observational geometry (SPICE kernel files) is available from
+
+  * [NAIF Node](http://naif.jpl.nasa.gov/naif/)
 
 Information on the spacecraft and its instruments is available from the New
 Horizons Mission [Home page](http://pluto.jhuapl.edu/).
 
-  
-
-* * *
-
-[ROSES Support Home](/roses/) |
 
