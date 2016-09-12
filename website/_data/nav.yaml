@@ -35,17 +35,17 @@
   href: /missions/data/
   submenu:
 
-    - title: Search Tool
+    - title: OPUS (Search)
       href: /search/
 
     - title: Cassini
       href: /cassini/
 
-    - title: Voyager
-      href: /voyager/
-
     - title: New Horizons
       href: /newhorizons/
+
+    - title: Voyager
+      href: /voyager/
 
     - title: Galileo
       href: /galileo/
@@ -80,6 +80,12 @@
 
     - title: Compressed archives
       href: /archives/
+
+    - title: Derived volumes
+      href: /derived/
+
+    - title: Compressed derived vols
+      href: /derived/archives/
 
     - title: Previews/Thumbnails
       href: /browse/
