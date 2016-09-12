@@ -1,0 +1,137 @@
+# do not edit columns without first reading cassini.README.md in this directory
+- column_labels:
+    - Description
+    - Volume ID
+    - Bundled Volumes
+    - Browse Images
+    - Enhanced Metadata
+    - Open Liens
+
+- footer_msg:
+    - Next Release February 1, 2017
+
+- base_url: https://pds-rings.seti.org/vol/
+
+# Edit Below:
+- section:
+    heading1: Post Launch Cruise
+
+    section_rows:
+
+        - table_row:
+            id: NHLALO_1001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Raw LORRI
+
+        - table_row:
+            id: NHLALO_2001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Calib LORRI
+
+        - table_row:
+            id: NHLAMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Raw MVIC
+
+        - table_row:
+            id: NHLAMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Calib MVIC
+
+- section:
+    heading1: Jupiter Encounter
+
+    section_rows:
+
+        - table_row:
+            id: NHJULO_1001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Raw LORRI
+
+        - table_row:
+            id: NHJULO_2001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Calib LORRI
+
+        - table_row:
+            id: NHJUMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Raw MVIC
+
+        - table_row:
+            id: NHJUMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Calib MVIC
+
+- section:
+    heading1: Pluto Cruise
+
+    section_rows:
+
+        - table_row:
+            id: NHPCLO_1001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Raw LORRI
+
+        - table_row:
+            id: NHPCLO_2001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Calib LORRI
+
+
+- section:
+    heading1: Pluto Cruise - Unreleased
+    nolinks: true
+
+    section_rows:
+
+        - table_row:
+            id: NHPCMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: not released
+            description: Raw MVIC
+
+        - table_row:
+            id: NHPCMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: not released
+            description: Raw MVIC
+
+- section:
+    heading1: Pluto Encounter
+
+    section_rows:
+
+        - table_row:
+            id: NHPELO_1001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Raw LORRI
+
+        - table_row:
+            id: NHPELO_2001
+            base_dir:  NHxxLO_xxxx_lien_resolution
+            liens: Open Liens
+            description: Calib LORRI
+
+        - table_row:
+            id: NHPEMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: Open Liens
+            description: Raw MVIC
+
+        - table_row:
+            id: NHPEMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: Open Liens
+            description: Calib MVIC
