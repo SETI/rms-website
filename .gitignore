@@ -3,6 +3,7 @@
 *.png
 *.svg
 *.gif
+!/galileo/vgr_data/2069135-stretch_tn.gif
 !css/*.jpg
 !css/*.jpeg
 !css/*.png

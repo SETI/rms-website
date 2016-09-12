@@ -1,7 +1,7 @@
 {% comment %}
 
-    to use this template assign a table name, table description, and next-release date as you want them displayed, 
-    and a yaml file that lists the table_data, for example see cassini_cirs_access.yaml 
+    to use this template assign a table name, table description, and next-release date as you want them displayed,
+    and a yaml file that lists the table_data, for example see cassini_cirs_access.yaml
 
     like so:
 
@@ -29,9 +29,9 @@
       {% for col in column_labels %}
 
         {% if custom_code == 'cassini_iss_calibration' %}
-          
+
           <!-- custom table headers for Cassini Ground Calibration table -->
-          {% if col == 'Volume' %}          
+          {% if col == 'Volume' %}
             <th scope="row" id="volume">
               {{ col }}
             </th>
@@ -65,7 +65,7 @@
       <tr>
         <td class="colgroup-seperator" colspan="{{ column_labels | size }}">
           {{ table_data[1].footer_msg }}
-        </td>  
+        </td>
       </tr>
     </tfoot>
   {% endif %}
@@ -100,10 +100,8 @@
   {% endif %}
 
 
-
-
   {% for entry in table_data %}
-    
+
     {% if entry.section.column_labels | entry.section.column_labels %}
       {% continue %}
     {% endif %}
@@ -114,7 +112,7 @@
       {% if entry.section.heading1 %}
         <tr>
           <th class="colgroup-seperator" colspan="{{ column_labels | size }}" id="section-{{ entry.section.heading1 | slugify }}" scope="colgroup">
-            {{ entry.section.heading1 }} 
+            {{ entry.section.heading1 }}
           </th>
         </tr>
       {% endif %}
@@ -131,8 +129,8 @@
       {% comment %}
 
           table cells by column. Column names are defined in the yaml file that is called with this template
-          see cassini.README.md to find or edit the list of allowed column names 
-          to add a new column, add a new <td> data column element below and edit cassini.README.md 
+          see cassini.README.md to find or edit the list of allowed column names
+          to add a new column, add a new <td> data column element below and edit cassini.README.md
 
       {% endcomment %}
       {% for row in entry.section.section_rows %}
@@ -155,12 +153,16 @@
         <tr>
           {% for col in column_labels %}
 
-            <!-- data column_labels --> 
+            {% if instrument[0] contains 'NH' %}
+              {% assign base_dir =  row.table_row.base_dir %}
+            {% endif %}
+
+            <!-- data column_labels -->
 
             <!-- Volume ID -->
             {% if col == "Volume ID" %}
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-                {% if table_data.section.nolinks == true %}    
+                {% if entry.section.nolinks == true %}
                     {{ row.table_row.id }}
                 {% else %}
                   <a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.table_row.id }}">
@@ -176,10 +178,8 @@
             {% if col contains "Bundled" %}
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
-                {% if table_data.section.nolinks == true %}    
-
+                {% if entry.section.nolinks == true %}
                     {{ row.table_row.id }}.tar.gz
-
                 {% else %}
 
                   {% if col contains "Bundled Volumes" %}
@@ -205,24 +205,24 @@
             {% if col == "Browse Images" %}
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
-                {% if table_data.section.nolinks == true %}    
+                {% if entry.section.nolinks == true %}
                     {{ col }}
                 {% else %}
 
                   {% if table_name contains "Voyager" %}
 
                     {% if row.table_row.browse_vol %}
-                      {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.browse_vol }}/BROWSE/{% endcapture %}  
+                      {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.browse_vol }}/BROWSE/{% endcapture %}
                     {% else %}
-                      {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/{% endcapture %}  
+                      {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/{% endcapture %}
                     {% endif %}
 
                   {% else %}
 
-                    {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/data/{% endcapture %}  
-                  
+                    {% capture browse_link %}http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/data/{% endcapture %}
+
                   {% endif %}
-                  
+
                   <a href = "{{ browse_link }}">
                   {{ col }}
                   </a>
@@ -237,7 +237,7 @@
             {% if col == "Calibrated Images" %}
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
-                {% if table_data.section.nolinks == true %}    
+                {% if entry.section.nolinks == true %}
                     {{ col }}
                 {% else %}
                   <a href = "http://pds-rings.seti.org/derived/{{ base_dir }}/{{ row.table_row.id }}/data/">
@@ -254,7 +254,7 @@
             {% if col == "Footprint Link" %}
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
 
-                {% if table_data.section.nolinks == true %}    
+                {% if entry.section.nolinks == true %}
                     Footprints
                 {% else %}
                   <a href = "http://pds-rings.seti.org/browse/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/">
@@ -270,7 +270,7 @@
             <!-- Index File -->
             {% if col == "Index File" %}
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-                  
+
                   {% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
                     {% assign index_tab_name = "TSDR_INDEX.TAB" %}
 
@@ -281,7 +281,7 @@
                     {% assign index_tab_name = "index.tab" %}
                   {% endif %}
 
-                  {% if table_data.section.nolinks == true %}    
+                  {% if entry.section.nolinks == true %}
                       {{ index_tab_name }}
                   {% else %}
 
@@ -323,7 +323,7 @@
               <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
                 {{ row.table_row.date }}
               </td>
-            {% endif %}            
+            {% endif %}
 
             <!-- Date Range (UTC) -->
             {% if col contains "Date Range" %}
@@ -389,7 +389,7 @@
             {% endif %}
 
 
-            <!-- Astrometry Tables --> 
+            <!-- Astrometry Tables -->
             {% if table_name contains 'Astrometry' and col contains 'Satellite' %}
               <td style = "white-space: normal" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
                 {{ row.table_row.sats }}
@@ -408,6 +408,46 @@
               </td>
             {% endif %}
 
+
+
+            <!-- New Horizons LORRI and MVIC Releases -->
+            {% if table_name contains 'New Horizons' %}
+
+              <!-- table cell -->
+              {% if col contains 'Description' %}
+              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                    {{ row.table_row.description }}
+                  </td>
+              {% endif %}
+              <!-- end table cell -->
+
+
+              <!-- table cell -->
+              {% if col contains 'Enhanced Metadata' %}
+                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+
+                  {% if entry.section.nolinks == true %}
+                      Enhanced Metadata
+                  {% else %}
+                    <a href = "https://pds-rings.seti.org/metadata/{{ base_dir}}/{{ row.table_row.id }}">
+                      Enhanced Metadata
+                    </a>
+                  {% endif %}
+                </td>
+              {% endif %}
+              <!-- end table cell -->
+
+              <!-- table cell -->
+              {% if col contains 'Open Liens' %}
+                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                  {{ row.table_row.liens }}
+                </td>
+              {% endif %}
+              <!-- end table cell -->
+
+            {% endif %}<!-- end table New Horizons -->
+
+
             <!-- Voyager pps tables -->
             {% if table_name contains 'Voyager PPS' %}
 
@@ -416,15 +456,15 @@
                 <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
                   <a href = "http://pds-rings.seti.org/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.TAB">
                     {{ row.table_row.name }}.TAB
-                    
-                  </a>            
+
+                  </a>
                 </td>
 
               {% elsif col contains 'Label File' %}
                 <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
                   <a href = "http://pds-rings.seti.org/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.LBL">
                     .LBL
-                  </a>                      
+                  </a>
                 </td>
 
               {% else %}
@@ -432,11 +472,11 @@
                 {% capture field_name %}{{ col | downcase }}{% endcapture %}
 
                 <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-                  
+
                     <span style = "white-space:nowrap">
                       {{ row.table_row[field_name] }}
                     </span>
-                  </a>                      
+                  </a>
                 </td>
 
               {% endif %}
@@ -444,10 +484,8 @@
             {% endif %}
 
           {% endfor %} <!-- end row -->
-        </tr> 
+        </tr>
     {% endfor %}
     </tbody>
   {% endfor %}
 </table>
-
-
