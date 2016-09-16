@@ -1,0 +1,141 @@
+New Horizon LORRI Specific Liens for Pluto Encounter Data Sets
+--------------------------------------------------------------
+
+Certification Status: Certified for release.
+
+
+Request that for lossy compressed images that have a corrupted block of 40x8 pixels resulting from the 34 pixels of housekeeping data, the quality map indicate the pixels that are affected.  The team will look into doing this.
+
+Neither the Hot Pixel Maps nor the Dead Pixel Maps have any flagged pixels.  Is this correct?
+
+From DATASET.CAT:  For calibrated window objects, pixels outside the window are zero in raw, and pass through calibration.  Why can’t the quality map be used to produce a mask that can reset the bad pixels back to zero?
+
+In radiance calibration: Need to provide coefficients/guidance/suggestions on how to calibrate small moons, etc. 
+
+Is it stated anywhere how well the smear removal is supposed to work?  I see streaks in the data still  (about 1% level). 
+
+Responsivity – Discussion of the conversion equation and plot in the SSR paper points out an error.  This is noted in various places in the documentation, but they say Fig 9 is wrong when it looks like it’s actually Eq 3 that is wrong .  Assuming units are (DN/s/pixel)/(W/cm^2/sr).  There are several affected files:
+--> CALIB/LORRI_RESPONSIVITY:
+--> --> Need to remove "/nm" from "(DN/s/pixel)/(W/cm^2/sr/nm) 
+--> --> Note should say that Eq 3 from CHENGETAL2008 is wrong
+--> DOCUMENT/LORRI_SSR.LBL 
+--> --> Note should say that Eq 3 from CHENGETAL2008 is wrong
+--> --> Also, "monocrhomatic" should be "monochromatic"
+--> DOCUMENT/DOCINFO.TXT
+--> --> Note should say that Eq 3 from CHENGETAL2008 is wrong
+--> CATALOG/DATASET.CAT   (Calibrated dataset)
+--> --> Note should say that Eq 3 from CHENGETAL2008 is wrong
+--> perhaps other locations as well
+
+IntroDoc also states that the first 34 pixels are flagged as missing in the quality map, but I never saw that information anywhere in the other documents.   Should be included somewhere that is part of the archive.
+
+Lots of geometric information in the FITS header, but little in the PDS Labels
+Please add to the PDS labels.  In general, data in common generally agree well.  Estimated pixel positions don’t. APPROX_TARGET_LINE / SAMPLE vs  TARGFOV00
+
+Some position vectors in PDS label are inverse of those in FITS header. Fine if they are not lt & abberation corrected, but PDS label says they are corrected.  Geometry should be lt & abberation corrected.
+
+My calculations suggest there is a mix of positions calculated with and without light time corrections.  For geometry listed in PDS labels (defined as light time corrected):
+--> s/c – target position is best matched with "lt+s"
+--> s/c – Sun position is best matched with no correction  (incorrect)
+--> Target – Sun position best matched with "lt+s"
+--> s/c – Earth  position best matched with "lt+s
+For FITS headers, 
+--> target-s/c  is given as the inverse of s/c-target (incorrect)
+--> Earth – s/c  is given as the inverse of s/c-target (incorrect)
+
+Solar phase angle in the PDS label should be checked.  Example:   LOR_0299124574_0X632_SCI.LBL gives a phase angle (Sun-Pluto-s/c)  for Pluto of 69.463 deg but I compute 16.09 deg and the Image suggests ~16 deg is correct.
+
+
+For file: 'calib/calinfo.txt'
+--> Update or remove the comment "Filenames of calibration file used in data calibration will be included in PDS labels produced after the 2014-01 peer review."
+
+For file: 'catalog/dataset.cat'
+--> For the statement: "some sequences may have failed to execute due to spacecraft events (e.g. safing) and there will be observations associated with those sequences."
+--> --> Is this correct?
+--> --> Not clear if observations are not obtained, or if they are obtained with bad pointing, etc. 
+--> --> More detail would be useful.
+--> Is it straightforward to determine what sequences were not obtained, simply by comparing to the index table.
+--> Is it possible to get a list of known "interruptions" that might have affected the data sequences, just as a basic guide (e.g. a table of times when observations might have been affected)?
+--> "The common data product is a 2-D image of brightnesses that is, or can be, calibrated to radiance." For LORRI, this should probably be  "… can be calibrated to radiance or irradiance"
+
+For file: 'NOTES/introdoc.pdf'
+--> Line 1:  is "[instrument]" supposed to be replaced by LORRI?
+--> 4th paragraph:  "!25-30 microradians"    what is "!"?
+--> Directory and filenames Paragraph
+--> --> It would be useful to point to the DATASET.CAT file for definitions of the APID, etc.  
+--> --> Filename definition includes a version number after the "eng" or "sci" identifier, but none of the files contains this version number and it is not mentioned in any other documentation.
+
+
+
+
+General Liens for all New Horizon Pluto Encounter Data Sets
+-----------------------------------------------------------
+
+Some very brief, high-level description of when the actual encounter happened,
+and maybe where in the directory structure those data are, would be very
+helpful to users. [This should probably be in some permanent part of the data
+set description that users are likely to see – like the abstract.]
+
+The dataset.cat needs to reflect the state of the Pluto data now, as delivered
+(with little Pluto data at very low resolution).
+
+The boilerplate, all-encompassing descriptions that worked reasonably well for
+early mission and cruise data are not addressing the needs of users now, who
+are looking for the more interesting encounter data, and need to be able to
+find the most interesting data easily.  AAREADME should be pared down to only
+relevant sections that actually address volume layout and otherwise refer
+users to documents.
+
+Please update the references that refer to JPL internal documents, which are not generally accessible to anyone outside JPL, to indicate that the referenced documents are not generally available (in the reference.cat file).
+
+
+
+For file: 'aareadme.txt'
+--> typo: "The filename prefix may provides additional infomation about the instrument detector." => "The filename prefix may provide additional information about the instrument detector."
+--> typo: Missing content "The following URLs were current as of 2007 when the early New occasionally, and ..." between the words "New" and "occasionally".
+
+For file: 'catalog/nh.cat'
+--> Add subphase table to the mission.cat description.  It is referenced in SWAP data set catalog file for example.
+
+For file: 'catalog/nhsc.cat'
+--> Check statement "more than 4 billion miles from Earth" -> 4.9 billion km from Sun.  Change unit to km.
+--> Section on propulsion mentions a "Figure 5" but there is no such figure in the catalog file.  It should say "as shown in Figure 5 of [FOUNTAINETAL2008]."
+--> Some of the mission descriptions are still written in future tense, with predicted distances, etc.  These could be updated with more meaningful information.  Emphasis given using asterisks ('*').
+--> --> "Pluto and Charon *will first appear* as unresolved bright dots, but the planet and its moon *appear larger* as the encounter date *approaches*. About three months from the closest approach … the cameras on the spacecraft *can make* the first maps."
+--> --> "the spacecraft *comes as close as* … when the spacecraft *is closest* to Pluto … it *will take* close-up pictures ..."
+--> Is his statement still true: "as of early 2016, no extension to the mission has been approved."
+--> Include reference in text: Control rates for each of the spacecraft axes are *shown below in Table II.* ==> "shown in [FOUNTAINETAL2008] Table 2."
+--> Spacecraft sketches do not show position of SDC nor is its position described in the document.
+
+For file: 'catalog/ref.cat'
+--> ROSENBERGETAL1994: Abbreviate the authors' names appropriately. Also, the DOI is given in two formats; I suggest dropping the URL one.
+
+For file: 'document/codmac_level_definitions.pdf'
+--> Describes the NASA Level 1B (Resampled L4) as irreversibly transformed measured values. I assume these are derived from the calibrated L3? Please note the source.
+
+For file: 'document/docinfo.txt'
+--> In several places throughout the text, the SSR papers are referenced to 2007 though they should be for 2008.  Also please make reference to the REF_ID used in the reference catalog file when a copy of the paper is present in this directory.
+
+For file: 'document/nh_mission_trajectory.tab'
+--> This file ends before the start date of the data sets.  This file only goes through 2014-12-31.
+
+For file: 'document/nh_trajectory.tab'
+--> This file is only relevant for Jupiter fly-by.  Why include it here?
+
+For file: 'document/soc_inst_icd.pdf'
+--> page 18, 8.1: Note that the type in the spectral range ("1.225-2.5" should be "1.25-2.5").
+--> page 54, table 10-2, 10-3: Data format not consistent with the specifications in these two tables
+--> page 66, 10.3.4:  The unit for resolved and unresolved sources are reversed
+--> page 67, 10.3.6:  Information outdated, and conflict with 10.3.13
+--> page 54, table 10-2, 10-3: Data format not consistent with the specifications in these two tables
+--> --> For example: '028769/mc0_0287692247_0x536_eng.fit': HOUSEKEEPING table 75 columns and WINDOW_MISMATCHES table 10 columns
+--> page 66, 10.3.4:  The unit for resolved and unresolved sources are reversed
+--> page 67, 10.3.6:  Information outdated, and conflict with 10.3.13
+--> page 115, 13.2.1, 2) the unused channel should be 10 not 11 (which on higher level data products becomes 11)
+--> page 121, 13.4.4, 1)  Calibrated Data - Only 9 columns are defined but there are 10 columns.  "j.   Impact Velocity" should be added
+--> page ???, 14. : The ICD refers to the RPA as a "low-pass filter".  It is, in fact, a high-pass filter.
+--> page 132: It refers to "section 135" which does not exist.  This is probably Section 14.5.10.
+--> page 133: It refers to "section 13" which does not exist.  This is probably Section 14.5.10.
+--> page 141: typo: "4 time" => "4 times"
+
+

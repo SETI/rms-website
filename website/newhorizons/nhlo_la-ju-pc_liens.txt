@@ -1,0 +1,85 @@
+Below are the liens for the following NH LORRI data sets:
+    NH-J-LORRI-2-JUPITER-V2.0
+    NH-J-LORRI-3-JUPITER-V2.0
+    NH-X-LORRI-2-LAUNCH-V2.0
+    NH-X-LORRI-2-PLUTOCRUISE-V1.0\
+    NH-X-LORRI-3-LAUNCH-V2.0
+    NH-X-LORRI-3-PLUTOCRUISE-V1.0
+
+o Jian Yang has a few examples of V2.0 files that seem to contain artifacts 
+  that were not in the previous version, and also V1.0 artifacts that seem
+  to have spontaneously resolved.  This needs to be investigated. (This
+  was in the launch data set; he actually reviewed all the images, so his
+  list is complete.)  See blow:
+========================
+Comparing the data contents:
+* One more datafile added to v2.0: 20060904_001968/lor_0019687017_0x630_eng_2.fit (not in the calibrated set!)
+* All other images in raw set are exactly the same.
+* 23 different images in level-3 dataset:
+lor_0019139909_0x633_sci_1.fit, lor_0019314769_0x630_sci_1.fit, lor_0019314770_0x630_sci_1.fit, lor_0019314894_0x630_sci_1.fit, lor_0019683064_0x630_sci_1.fit, lor_0019683068_0x630_sci_1.fit, lor_0019683105_0x630_sci_1.fit, lor_0019683106_0x630_sci_1.fit, lor_0019683108_0x630_sci_1.fit, lor_0019683144_0x630_sci_1.fit, lor_0019683145_0x630_sci_1.fit, lor_0019683148_0x630_sci_1.fit, lor_0019683184_0x630_sci_1.fit, lor_0019683186_0x630_sci_1.fit, lor_0019683187_0x630_sci_1.fit, lor_0019683225_0x630_sci_1.fit, lor_0019683345_0x630_sci_1.fit, lor_0019683346_0x630_sci_1.fit, lor_0019683348_0x630_sci_1.fit, lor_0020170803_0x630_sci_1.fit, lor_0020170853_0x630_sci_1.fit, lor_0020176493_0x630_sci_1.fit, lor_0023502552_0x630_sci_1.fit,
+Of which 7 images with relative difference >1e-7:
+lor_0019314769_0x630_sci_1.fit: COLO_LORRI-010/COLO_LORRI-018
+lor_0019314770_0x630_sci_1.fit: COLO_LORRI-010/COLO_LORRI-018
+lor_0019314894_0x630_sci_1.fit: COLO_LORRI-010/COLO_LORRI-018
+lor_0020170803_0x630_sci_1.fit: COLO_LORRI-029/COLO_LORRI-030
+lor_0020170853_0x630_sci_1.fit: COLO_LORRI-029/COLO_LORRI-030
+lor_0020176493_0x630_sci_1.fit: COLO_LORRI-029/COLO_LORRI-030
+lor_0023502552_0x630_sci_1.fit: COLO_LORRI-023a
+Relevant sequence:
+COLO_LORRI-010/COLO_LORRI-018, 2006-08-31T00:00:00, 31 Aug 2006: Radiometric/PSF images (Messier 7) MVIC co-alignment images
+COLO_LORRI-029/COLO_LORRI-030, 2006-09-10T00:00:00, 10,19 Sep 2006: Uranus/Neptune
+COLO_LORRI-023a              , 2006-09-21T00:00:00, 21, 24 Sep 2006: Pluto
+========================
+
+o The same UNIT issues found in the MVIC and LEISA data recur here and
+  need addressing.  In particular the high-level documentation needs to
+  make the actual calibration performed clear.
+
+o The controversy noted regarding units in the LORRI responsivity plot 
+  is not resolved.  It needs to be noted prominently, and when a 
+  resolution is reach that needs to be incorporated into the archive
+  documentation.  In the meantime, SBN (Raugh) will attempt to add an
+  annotation to the PDF file with the controversial plot, and Brian
+  will provide text for that and any additional documentation needed
+  on this point.
+--> In the published version (not the submitted version that is archived) of the LORRI SSR Cheng et al. 2005 paper, the Figure 9 y-axis has units of W m-2 sr-1 in the denominator. The caption cites a correction form the Morgan LORRI paper.
+--> In the archived submitted version of the LORRI SSR Cheng et al. paper, figure 9 is identical to the Morgan LORRI paper figure 5 (and has units of W cm-2 sr-1)
+--> Figure 9.3 in the ICD matches the published version of the graph
+--> The lorri_responsivity_plot.png file in the archive matches the published version of the Cheng et al. figure 9.
+--> --> The preprint Cheng paper and this .png are inconsistent with one another
+--> Despite citing an error in the Morgan et al. paper, later work seems to indicate that the original units of W cm-2 sr-1 were correct after all.
+--> --> This is based on personal communication with Frank Morgan, as well as inconsistencies discovered between the Cheng numbers and LORRI operational spreadsheets (personal comm. Brett Denevi)
+--> This is clearly an issue - but I'm uncertain as to the solution
+--> If the Cheng units are correct: It needs to be noted somewhere that there was an important change to figure 9 between the submitted and final versions.
+--> --> If the Morgan units are correct: It should be noted somewhere that in the final version of the Cheng paper the units are not correct. Additionally, the file lorri_responsivity_plot.png should be made to match the Morgan numbers.
+--> --> If the correct version of the graph is unknown, this is may be a project issue to solve?
+--> --> Does the absolute calibration step discussed in the documentation (e.g., the discussion of specific targets and the translation from DN to absolute units in the ICD) yield correct numbers?
+
+o The 90 degree rotation problem noted in a previous version was with the 
+  North Pole Clock Angle, and this has been corrected.  This affects the
+  documentation of the reported problem, which will require amending.
+
+file: '*launch*/catalog/dataset.cat'
+--> Should the list of updates to V2.0 be listed with bullet points in the ABSTRACT_DESC?  Would prefer in a paragraph format if included.  Please note that the jupiter fly byes do not contain these.
+--> typo: text "NEWHORIZONS:APPROX_TARGET_SAMP" should be "NEWHORIZONS:APPROX_TARGET_SAMPLE"
+
+files: 'nh-x-lorri-2-launch-v2.0/data/20060424_000819/lor_0008194193_0x633_eng_1.*'
+--> These files do not exist in the RDR data set.  Please double check that this should be the case.
+
+files: 'data/*/*.lbl'
+--> There are no unit labels in either the level 2 or level 3 files
+--> --> Both should be noted as "DN"
+--> PRODUCT_TYPE         = "EDR" for both 
+--> --> For level 3 files, this should be "RDR"
+--> Typo in level 3 files
+--> --> L2_SWNAM ... "/*evel 2" should be "/*level 2"
+--> --> L2_SWVER ... "/*oftware version" should be "/*software version"
+
+files: 'document/soc_inst_icd*.pdf'
+--> Please add to the ICD a description of the derivation of the various conversion factors used to convert the calibrated absolute DNs to radiance for specific bodies or classes of bodies.
+
+
+
+ Last updated: 2015-01-08, SBN:T.Barnes
+
+

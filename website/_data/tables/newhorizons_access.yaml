@@ -97,13 +97,13 @@
 
         - table_row:
             id: NHPCMV_1001
-            base_dir:  NHxxMV_xxxx
+            base_dir:  NHxxMV_xxxx_lien_resolution
             liens: not released
             description: Raw MVIC
 
         - table_row:
             id: NHPCMV_2001
-            base_dir:  NHxxMV_xxxx
+            base_dir:  NHxxMV_xxxx_lien_resolution
             liens: not released
             description: Raw MVIC
 
@@ -126,12 +126,12 @@
 
         - table_row:
             id: NHPEMV_1001
-            base_dir:  NHxxMV_xxxx
+            base_dir:  NHxxMV_xxxx_lien_resolution
             liens: Open Liens
             description: Raw MVIC
 
         - table_row:
             id: NHPEMV_2001
-            base_dir:  NHxxMV_xxxx
+            base_dir:  NHxxMV_xxxx_lien_resolution
             liens: Open Liens
             description: Calib MVIC
