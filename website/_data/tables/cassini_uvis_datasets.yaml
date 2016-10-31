@@ -54,6 +54,7 @@
             - COUVIS_0050
             - COUVIS_0051
             - COUVIS_0052
+            - COUVIS_0053
 
 - section: 
     heading1: Cruise Data
@@ -169,6 +170,7 @@
               - COUVIS_0050
               - COUVIS_0051
               - COUVIS_0052
+              - COUVIS_0053
 
       - table_row:
           dataset: CO-S-UVIS-2-SPEC-V1.n 
@@ -218,6 +220,7 @@
             - COUVIS_0050
             - COUVIS_0051
             - COUVIS_0052
+            - COUVIS_0053
 
       - table_row:
           dataset: CO-S-UVIS-2-SSB-V1.n 
@@ -272,6 +275,7 @@
             - COUVIS_0050
             - COUVIS_0051
             - COUVIS_0052
+            - COUVIS_0053
 
       - table_row:
           dataset: CO-S-UVIS-2-WAV-V1.n 

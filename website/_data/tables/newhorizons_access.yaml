@@ -105,7 +105,7 @@
             id: NHPCMV_2001
             base_dir:  NHxxMV_xxxx_lien_resolution
             liens: not released
-            description: Raw MVIC
+            description: Calib MVIC
 
 - section:
     heading1: Pluto Encounter
