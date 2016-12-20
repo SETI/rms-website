@@ -1,0 +1,12 @@
+---
+layout: base
+---
+
+<h2>{{ page.title }}</h2>
+
+<div class = "index">
+  {% for vol_hash in site.data.browse %}
+    {% assign vol_group = vol_hash[0] %}
+    <a href = "{{ vol_group }}/">{{ vol_group }}</a><br>
+  {% endfor %}
+</div>
