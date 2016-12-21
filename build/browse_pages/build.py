@@ -5,6 +5,14 @@ from shutil import copyfile
 
 base_path = '/volumes/TINY/pdsdata/browse/'
 
+# the jekyll markdown pages will all look the same, there are 4 different kinds tho:
+page_templates = {  # paths relative to this script
+    'index': '../../website/browse/index.html',  # the main index. a list of volume groups
+    'volumes': '../../website/browse/COISS_2xxx/index.html',  # a page listing all volumes in a group
+    'sub_dirs': '../../website/browse/COISS_2xxx/COISS_2069/index.html',  # list of all sub_dirs in a volume
+    'images': '../../website/browse/COISS_2xxx/COISS_2069/1688230146_1688906749/index.html'
+}
+
 class BuildBrowsePages:
 
     def build_yaml(self):
@@ -31,7 +39,7 @@ class BuildBrowsePages:
                         all_images[volume_group][volume_id] = {}
 
                     url_path = '/'.join(root.split('/')[4:])
-                    all_images[volume_group][volume_id].setdefault(volume_subdir, []).append(url_path + fname)
+                    all_images[volume_group][volume_id].setdefault(volume_subdir, []).append("%s/%s" % (url_path, fname))
 
         # now we have all the images, build the jekyll data files from that
         for enclosing_vol in all_images:
