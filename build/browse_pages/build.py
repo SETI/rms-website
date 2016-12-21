@@ -7,14 +7,12 @@ from secrets import BASE_PATH_IMAGES
 data_dir = "../../website/_data/browse/"  # paths relative to this script
 browse_dir = "../../website/browse/"
 
-# the jekyll markdown pages will all look the same, there are 4 different kinds tho
-# use these as the base copy from which to copy into all the other directories
-page_templates = {  # paths relative to this script
-    'index': '../../website/browse/index.html',  # the main index. a list of volume groups
-    'volumes': '../../website/browse/COISS_2xxx/index.html',  # a page listing all volumes in a group
-    'sub_dirs': '../../website/browse/COISS_2xxx/COISS_2069/index.html',  # list of all sub_dirs in a volume
-    'images': '../../website/browse/COISS_2xxx/COISS_2069/1688230146_1688906749/index.html'
-}
+markdown_template = """
+---
+layout: %s
+---
+
+""".strip()
 
 class BuildBrowsePages:
 
@@ -59,8 +57,8 @@ class BuildBrowsePages:
                 os.makedirs("%s%s/" % (browse_dir, enclosing_vol))
 
             # copy the html file to browse
-            if page_templates['volumes'] != "%s%s/index.html" % (browse_dir, enclosing_vol):
-                copyfile(page_templates['volumes'], "%s%s/index.html" % (browse_dir, enclosing_vol))
+            with open("%s%s/index.html" % (browse_dir, enclosing_vol), 'w') as f:
+                print(markdown_template % 'browse_volumes', file=f)
 
             for volume_id in all_images[enclosing_vol]:
 
@@ -71,8 +69,8 @@ class BuildBrowsePages:
                     os.makedirs("%s%s/%s/" % (browse_dir, enclosing_vol, volume_id))
 
                 # copy the html file to browse
-                if page_templates['sub_dirs'] != "%s%s/%s/index.html" % (browse_dir, enclosing_vol, volume_id):
-                    copyfile(page_templates['sub_dirs'], "%s%s/%s/index.html" % (browse_dir, enclosing_vol, volume_id))
+                with open("%s%s/%s/index.html" % (browse_dir, enclosing_vol, volume_id), 'w') as f:
+                    print(markdown_template % 'browse_subdirs', file=f)
 
                 for volume_subdir in all_images[enclosing_vol][volume_id]:
 
@@ -85,9 +83,8 @@ class BuildBrowsePages:
                         os.makedirs("%s%s/%s/%s/" % (browse_dir, enclosing_vol, volume_id, volume_subdir))
 
                     # here copy the template file into place
-                    if page_templates['images'] != "%s%s/%s/%s/index.html" % (browse_dir, enclosing_vol, volume_id, volume_subdir):
-                        copyfile(page_templates['images'], "%s%s/%s/%s/index.html" % (browse_dir, enclosing_vol, volume_id, volume_subdir))
-
+                    with open("%s%s/%s/%s/index.html" % (browse_dir, enclosing_vol, volume_id, volume_subdir), 'w') as f:
+                        print(markdown_template % 'browse_images', file=f)
 
 
 if __name__ == '__main__':

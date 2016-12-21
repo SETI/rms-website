@@ -1,0 +1,21 @@
+---
+layout: base
+---
+{% assign url_path_split = page.url | split:"/" %}
+{% assign volume_id = url_path_split | last %}
+{% assign vol_group = url_path_split[2] %}
+
+<div class = "browse">
+
+  <h2>Browse Images {{ volume_id }}</h2>
+
+  <p>Back to <a href = "/browse/{{ vol_group }}">{{ vol_group }}</a></p>
+
+  {% for vol_hash in site.data.browse[vol_group][volume_id] %}
+    {% assign vol_subdir = vol_hash[0] %}
+
+    <a href = "{{ vol_subdir }}/">{{ vol_subdir }}</a><br>
+
+  {% endfor %}
+
+</div>

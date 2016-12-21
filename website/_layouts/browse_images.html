@@ -1,0 +1,26 @@
+---
+layout: base
+---
+{% assign url_path_split = page.url | split:"/" %}
+{% assign vol_subdir = url_path_split | last %}
+{% assign vol_group = url_path_split[2] %}
+{% assign volume_id = url_path_split[3] %}
+
+<div class = "browse">
+
+  <h2>Browse Images {{ volume_id }} </h2>
+  <h3>Section {{ vol_subdir }}</h3>
+
+  <p>Back to <a href = "/browse/{{ vol_group }}/{{ volume_id }}">{{ volume_id }}</a></p>
+
+  {% for img_path in site.data.browse[vol_group][volume_id][vol_subdir] %}
+
+    {% if img_path contains 'med' %}
+
+      <a href = "/{{ img_path }}">{{ img_path | split:'/' | last }}</a><br>
+
+    {% endif %}
+
+  {% endfor %}
+
+</div>
