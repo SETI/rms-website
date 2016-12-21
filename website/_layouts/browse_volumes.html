@@ -5,9 +5,11 @@ layout: base
 
 <div class = "browse">
 
-  <h2>Browse Images {{ vol_group }}</h2>
+  <p><a href = "/browse/">All Images</a> >
+    {{ vol_group }}
+  </p>
 
-  <p>Back to <a href = "/browse/">All Images</a></p>
+  <h2>Browse Images {{ vol_group }}</h2>
 
   {% for vol_hash in site.data.browse[vol_group] %}
     {% assign volume_id = vol_hash[0] %}

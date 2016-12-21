@@ -8,10 +8,14 @@ layout: base
 
 <div class = "browse">
 
+  <p><a href = "/browse/">All Images</a> >
+     <a href = "/browse/{{ vol_group }}">{{ vol_group }}</a> >
+     <a href = "/browse/{{ vol_group }}/{{ volume_id }}">{{ volume_id }}</a> >
+     {{ vol_subdir }}
+   </p>
+
   <h2>Browse Images {{ volume_id }} </h2>
   <h3>Section {{ vol_subdir }}</h3>
-
-  <p>Back to <a href = "/browse/{{ vol_group }}/{{ volume_id }}">{{ volume_id }}</a></p>
 
   {% for img_path in site.data.browse[vol_group][volume_id][vol_subdir] %}
 
