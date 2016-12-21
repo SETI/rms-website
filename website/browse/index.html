@@ -1,12 +1,13 @@
 ---
 layout: base
 ---
+<div class = "browse">
 
-<h2>{{ page.title }}</h2>
+  <h2>Browse Images</h2>
 
-<div class = "index">
   {% for vol_hash in site.data.browse %}
     {% assign vol_group = vol_hash[0] %}
     <a href = "{{ vol_group }}/">{{ vol_group }}</a><br>
   {% endfor %}
+
 </div>
