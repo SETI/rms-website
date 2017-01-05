@@ -38,7 +38,7 @@ List a volume's groupings like:
       {% endcomment %}
 
       {% for img_path in site.data.browse[vol_group][volume_id][vol_subdir] %}
-        {% if img_path contains "full" %}
+        {% if img_path contains "med" %}
             {% assign img_path = img_path %}
             {% break %}
         {% endif %}

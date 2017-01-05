@@ -48,6 +48,10 @@ class BuildBrowsePages:
     def build_dirs(self, all_images):
         """  build the _data pages and browse/ pages """
 
+        # first build the main browse index file
+        with open("%s/index.html" % (browse_dir), 'w') as f:
+            print(markdown_template % 'browse_index', file=f)
+
         for enclosing_vol in all_images:
 
             # create the enclosing volume directories (ie COISS_2xxx)

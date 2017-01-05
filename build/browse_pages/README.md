@@ -25,4 +25,4 @@ and/or put it on cron/Celery
 • this adds a new directory to the web root
 add a line for this in the _config.yml (a 'work on' line because this directory is big)
 
-• why is the url at /browse but we are calling them Previews in the menu? Let's pick one or make a redirect 
+• why is the url at /browse but we are calling them Previews in the menu? Let's pick one or make a redirect
