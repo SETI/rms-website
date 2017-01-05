@@ -1,16 +1,29 @@
 ---
 layout: base
 ---
+{% comment %}
+
+List a volume's groupings like:
+
+  1680805782_1681997642
+  1681997802_1682453677
+  1682453719_1683279157
+  1683279174_1683355540
+
+{% endcomment %}
+
 {% assign url_path_split = page.url | split:"/" %}
 {% assign volume_id = url_path_split | last %}
 {% assign vol_group = url_path_split[2] %}
 
 <div class = "browse">
 
-  <p><a href = "/browse/">All Images</a> >
-     <a href = "/browse/{{ vol_group }}">{{ vol_group }}</a> >
-     {{ volume_id }}
-  </p>
+  <div class = "breadcrumbs">
+    <p><a href = "/browse/">All Images</a> >
+       <a href = "/browse/{{ vol_group }}">{{ vol_group }}</a> >
+       {{ volume_id }}
+    </p>
+  </div>
 
   <h2>Browse Images {{ volume_id }}</h2>
 

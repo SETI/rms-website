@@ -1,6 +1,12 @@
 ---
 layout: base
 ---
+{% comment %}
+
+  List of images in a volume subdir
+
+{% endcomment %}
+
 {% assign url_path_split = page.url | split:"/" %}
 {% assign vol_subdir = url_path_split | last %}
 {% assign vol_group = url_path_split[2] %}
@@ -8,11 +14,13 @@ layout: base
 
 <div class = "browse">
 
-  <p><a href = "/browse/">All Images</a> >
-     <a href = "/browse/{{ vol_group }}">{{ vol_group }}</a> >
-     <a href = "/browse/{{ vol_group }}/{{ volume_id }}">{{ volume_id }}</a> >
-     {{ vol_subdir }}
-   </p>
+  <div class = "breadcrumbs">
+    <p><a href = "/browse/">All Images</a> >
+       <a href = "/browse/{{ vol_group }}">{{ vol_group }}</a> >
+       <a href = "/browse/{{ vol_group }}/{{ volume_id }}">{{ volume_id }}</a> >
+       {{ vol_subdir }}
+     </p>
+  </div>
 
   <h2>Browse Images {{ volume_id }} </h2>
   <h3>Section {{ vol_subdir }}</h3>

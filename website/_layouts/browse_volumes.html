@@ -1,13 +1,24 @@
 ---
 layout: base
 ---
+{% comment %}
+
+list the volumes like:
+
+  COISS_2068
+  COISS_2069
+
+{% endcomment %}
+
 {% assign vol_group = page.url | split:"/" | last %}
 
 <div class = "browse">
 
-  <p><a href = "/browse/">All Images</a> >
-    {{ vol_group }}
-  </p>
+  <div class = "breadcrumbs">
+    <p><a href = "/browse/">All Images</a> >
+      {{ vol_group }}
+    </p>
+  </div>
 
   <h2>Browse Images {{ vol_group }}</h2>
 
