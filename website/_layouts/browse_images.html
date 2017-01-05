@@ -25,14 +25,23 @@ layout: base
   <h2>Browse Images {{ volume_id }} </h2>
   <h3>Section {{ vol_subdir }}</h3>
 
+  <div class="row">
   {% for img_path in site.data.browse[vol_group][volume_id][vol_subdir] %}
 
-    {% if img_path contains 'med' %}
+    {% if img_path contains 'full' %}
+      <div class="col-xs-6 col-md-4">
+        <div class="thumbnail">
 
-      <a href = "/{{ img_path }}">{{ img_path | split:'/' | last }}</a><br>
+          <a href = "https://pds-rings.seti.org/{{ img_path }}" class="thumbnail">
+            <img src="https://pds-rings.seti.org/{{ img_path }}">
+          </a>
 
+          <div class="caption">
+            <h3>{{ img_path | split:'/' | last }}</h3>
+          </div>
+
+        </div><!-- /thumbnail -->
+      </div>
     {% endif %}
-
   {% endfor %}
-
-</div>
+</div><!-- /row -->

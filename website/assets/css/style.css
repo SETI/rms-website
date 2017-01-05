@@ -244,11 +244,6 @@ p.superwide > a > img {
  width:  100%;
 }
 
-
-
-
-
-
 @media only screen and (max-width: 768px) {
   div.row {
     padding:0;
@@ -449,10 +444,6 @@ nav {
   }
 }
 
-
-
-
-
 .mobile {
   display:none;
 }
@@ -578,6 +569,17 @@ td.colgroup-seperator {
   margin-top:0;
 }
 
+
+/* Browse pages */
+.browse .caption {
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+.browse .caption h3 {
+  font-size: 90%;
+  overflow: hidden;
+}
 
 /* footer */
 .navbar-nav.nav-justified > li{

@@ -27,11 +27,36 @@ List a volume's groupings like:
 
   <h2>Browse Images {{ volume_id }}</h2>
 
-  {% for vol_hash in site.data.browse[vol_group][volume_id] %}
-    {% assign vol_subdir = vol_hash[0] %}
+  <div class="row">
 
-    <a href = "{{ vol_subdir }}/">{{ vol_subdir }}</a><br>
+    {% for vol_hash in site.data.browse[vol_group][volume_id] %}
+      {% assign vol_subdir = vol_hash[0] %}
 
-  {% endfor %}
+      {% comment %}
+        this subdirectory will contain a number of images
+        select the first image found (?) to display here to represent the grouping
+      {% endcomment %}
+
+      {% for img_path in site.data.browse[vol_group][volume_id][vol_subdir] %}
+        {% if img_path contains "full" %}
+            {% assign img_path = img_path %}
+            {% break %}
+        {% endif %}
+      {% endfor %}
+
+      <div class="col-xs-6 col-md-4">
+        <div class="thumbnail">
+          <a href = "{{ vol_subdir }}/">
+            <img src="https://pds-rings.seti.org/{{ img_path }}" alt = "link to subdirectory {{ vol_subdir }}">
+          </a>
+            <div class="caption">
+              <h3><a href = "{{ vol_subdir }}">{{ vol_subdir }}</a></h3>
+            </div>
+        </div>
+      </div>
+
+
+    {% endfor %}
+    <div><!-- /row -->
 
 </div>
