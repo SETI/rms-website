@@ -16,6 +16,52 @@ layout: %s
 
 class BuildBrowsePages:
 
+    def get_links(self, full_image_file):
+        links = {}
+
+        print(full_image_file)
+
+        if 'COISS' in full_image_file:
+            links = {
+                'order': ['thumb','small','med','full','thing','IMG'],  # it didn't work converting an OrderedDict to yaml
+                'thumb': full_image_file.replace('_full','_thumb'),
+                'small': full_image_file.replace('_full','_small'),
+                'med': full_image_file.replace('_full','_med'),
+                'full': full_image_file,
+                # 'thing':'https://www.nasa.gov/',
+                # 'IMG':'https://www.nasa.gov/',
+            }
+
+        if 'COCIRS' in full_image_file:
+            links = {
+                'order': ['thumb','small','med','full','thing','IMG'],  # it didn't work converting an OrderedDict to yaml
+                'thumb': full_image_file.replace('_full','_thumb'),
+                'small': full_image_file.replace('_full','_small'),
+                'med': full_image_file.replace('_full','_med'),
+                'full': full_image_file,
+            }
+
+        if 'COVIMS' in full_image_file:
+            links = {
+                'order': ['thumb','small','med','full','thing','IMG'],  # it didn't work converting an OrderedDict to yaml
+                'thumb': full_image_file.replace('_full','_thumb'),
+                'small': full_image_file.replace('_full','_small'),
+                'med': full_image_file.replace('_full','_med'),
+                'full': full_image_file,
+            }
+
+        if 'VGISS' in full_image_file:
+            links = {
+                'order': ['thumb','small','med','full','thing','IMG'],  # it didn't work converting an OrderedDict to yaml
+                'thumb': full_image_file.replace('_full','_thumb'),
+                'small': full_image_file.replace('_full','_small'),
+                'med': full_image_file.replace('_full','_med'),
+                'full': full_image_file,
+            }
+
+        return links
+
+
     def spider_images(self):
         """
         builds the yaml file that describes the directory structure and image paths
@@ -25,7 +71,7 @@ class BuildBrowsePages:
         for root, dirs, files in os.walk(BASE_PATH_IMAGES):
 
             for fname in files:
-                if 'jpg' in fname or 'png' in fname or 'jpeg' in fname:
+                if ('jpg' in fname or 'png' in fname or 'jpeg' in fname) and ('full' in fname):
                     # We've found the images, build a page to navigate them
                     # and also their enclosing directories, here
                     # print(fname)
@@ -40,7 +86,15 @@ class BuildBrowsePages:
                         all_images[volume_group][volume_id] = {}
 
                     url_path = '/'.join(root.split('/')[4:])
-                    all_images[volume_group][volume_id].setdefault(volume_subdir, []).append("%s/%s" % (url_path, fname))
+
+                    # find all the links associated with this full size image
+                    all_links = self.get_links("%s/%s" % (url_path, fname))
+                    short_name = fname.split('.')[0].replace('_full','')
+
+                    print('------->')
+                    print({short_name})
+
+                    all_images[volume_group][volume_id].setdefault(volume_subdir, []).append({ short_name: all_links })
 
         return all_images
 
@@ -94,5 +148,6 @@ class BuildBrowsePages:
 if __name__ == '__main__':
     build = BuildBrowsePages()
     all_images = build.spider_images()
+    # print(all_images)
     build.build_dirs(all_images)
     print("ok")
