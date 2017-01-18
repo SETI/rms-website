@@ -3,7 +3,7 @@ layout: base
 layout_style: wide
 format: html
 
-homeboxes: 
+homeboxes:
 
   - title: OPUS Data Search
     content: >
@@ -13,19 +13,34 @@ homeboxes:
       <div class="alert alert-info" role="alert">
             Now supports New Horizons LORRI Jupiter and Pluto data. New Horizons MVIC support coming soon.
       </div>
-      
-        + The OPUS API can be accessed directly. See instructions in the 
+
+        + The OPUS API can be accessed directly. See instructions in the
         <a href="http://tools.pds-rings.seti.org/opus/api/">OPUS API Guide</a>.
 
       <div class="alert alert-info" role="alert">
             Includes enhanced geometric metadata for Cassini ISS, UVIS, and VIMS Saturn and Jupiter data
       </div>
-      
+
         + Supports surface searches for the planet, satellites and rings (e.g., latitudes & longitudes).
 
         + Uses comprehensive target lists for Cassini ISS & VIMS.
 
-        + Provides numerous viewing, illumination, spacecraft and instrument constraints.   
+        + Provides numerous viewing, illumination, spacecraft and instrument constraints.
+
+
+  - title: New from JunoCam at Jupiter
+    content: >
+
+        <figure class="figure-img">
+          <a href = "juno-jupiter-main-ring.png"> <img width = "100%" src = "juno-jupiter-main-ring-thumb.jpg" alt = "Juno Jupiter's Main Ring"> </a>
+
+          <figcaption class = "figure-caption text-center">Main Ring - Credit MSSS/MC</figcaption>
+        </figure>
+
+        <p>Obtained when passing through the equatorial belt, this is a full spin image that captured Jupiter's ring. The optical depth of the ring is greatest at this geometry, which compensates for the challenging phase angle. This is a public release image. JunoCam Jupiter data will be available from the PDS Cartography and Imaging Sciences Node later this year.</p>
+
+        <p>More information on JunoCam can be found at <a href="https://www.missionjuno.swri.edu/junocam/">the JunoCam web site.</a>
+        </p>
 
 
   - title: Enhanced Cassini Support
@@ -50,7 +65,7 @@ homeboxes:
     content: >
 
       + <a href = "/roses/index.html">Our Research Proposal Support</a> pages provide information and links to data for ROSES 2016 programs relevant to the Planetary Ring-Moon Systems Node.
-      
+
       <div class="alert alert-danger" role="alert">
         ROSES programs impose restrictions on data quality and availability. The Data Status tab of our support pages provides this information.
       </div>
@@ -64,14 +79,11 @@ homeboxes:
         tools are now available.
 
       + The Cassini ephemeris now in use is the final selection for the remainder of the Saturn tour.
-      
-      + The small moon S/2004 N 1 is now available in all the Neptune tools.    
+
+      + The small moon S/2004 N 1 is now available in all the Neptune tools.
 
 
 
 ---
 {% include homepage_inner.html %}
 {% include homebox.html %}
-
-
-
