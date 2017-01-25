@@ -3,10 +3,10 @@
   parent_tab: Instruments and Data
   this_page_label: VIMS
 
-- title: UVIS Intro
+- title: VIMS Intro
   href: /cassini/vims/index.html
 
-- title: About UVIS Data
+- title: About VIMS Data
   href: /cassini/vims/about.html
 
 - title: Finding Data
@@ -16,4 +16,4 @@
   href: /cassini/vims/access.html
 
 - title: Calibration
-  href: /cassini/iss/calibration.html
+  href: /cassini/vims/calibration.html
