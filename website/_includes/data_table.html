@@ -44,7 +44,7 @@
             {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
 
             <th scope="col" id="{{ col | slugify }}" headers = "volume">
-              <a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ col }}/">{{ col }}</a>
+              <a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ col }}/">{{ col }}</a>
             </th>
           {% endif %}
 
@@ -165,7 +165,7 @@
                 {% if entry.section.nolinks == true %}
                     {{ row.table_row.id }}
                 {% else %}
-                  <a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ row.table_row.id }}">
+                  <a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ row.table_row.id }}">
                     {{ row.table_row.id }}
                   </a>
                 {% endif %}
@@ -360,7 +360,7 @@
                     {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
 
                     <li>
-                        <a href = "http://pds-rings.seti.org/vol/{{ base_dir }}/{{ volume_id }}/">{{ volume_id }}</a>
+                        <a href = "http://pds-rings.seti.org/volumes/{{ base_dir }}/{{ volume_id }}/">{{ volume_id }}</a>
                     </li>
 
                   {% endfor %}
