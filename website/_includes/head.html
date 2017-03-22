@@ -3,7 +3,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+      {% if page.title == null %}
+
+          {% if page.url == "/index.html" or page.url == "" or page.url == "/" %}
+              {% comment %} This is the homepage {% endcomment %}
+              {% assign page_title = site.title | append: ' Home' %}
+          {% else %}
+            nope
+            {% assign page_title = page.url | split:'/' | join:' ' | upcase | replace: '.HTML','' | normalize_whitespace %}
+            {% assign page_title = site.title | append: ' -' | append: page_title %}
+
+          {% endif %}
+
+      {% endif %}
+
+  <title>{{ page_title }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
