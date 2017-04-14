@@ -16,8 +16,8 @@ Space Telescope can be found at
 
 <!--------------------------------------------------------------------->
 
-<A HREF="http://ringmaster.arc.nasa.gov/saturn/hst/satstorm.gif">
-<IMG SRC="http://ringmaster.arc.nasa.gov/saturn/hst/satstorm-tn.gif" height=50 width=50>
+<A HREF="/saturn/hst/satstorm.gif">
+<IMG SRC="/saturn/hst/satstorm-tn.gif" height=50 width=50>
 HST Views a Storm on Saturn</A>
 (Color GIF, 74 kbytes)
 
@@ -25,19 +25,19 @@ HST Views a Storm on Saturn</A>
 The image shows a storm in Saturn's northern hemisphere in December
 1994.  The rings are open to Earth by only a few degrees as Earth
 approaches the ring plane crossing of May 1995.  The 
-<A HREF="http://ringmaster.arc.nasa.gov/saturn/hst/satstorm.txt">press release</A>
+<A HREF="/saturn/hst/satstorm.txt">press release</A>
 provides more information.
 </UL>
 
 <!--------------------------------------------------------------------->
 <P>
 <HR>
-<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/voyager1.html">[Voyager 1 Images]</A>
-<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/voyager2.html">[Voyager 2]</A>
-<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/pps.html">[PPS Pseudo-images]</A>
-<A HREF="http://ringmaster.arc.nasa.gov/saturn/art/art.html">[Artwork]</A>
-<A HREF="http://ringmaster.arc.nasa.gov/saturn/saturn.html">[Saturn Page]</A>
-<A HREF="http://ringmaster.arc.nasa.gov/">[Rings Node Home]</A>
+<A HREF="/saturn/voyager/index1.html">[Voyager 1 Images]</A>
+<A HREF="/saturn/voyager/index2.html">[Voyager 2]</A>
+<A HREF="/saturn/voyager/pps.html">[PPS Pseudo-images]</A>
+<A HREF="/saturn/art/art.html">[Artwork]</A>
+<A HREF="/saturn/index.html">[Saturn Page]</A>
+<A HREF="/">[Rings Node Home]</A>
 <P>
 Last updated Feb-27-1997
 <P>

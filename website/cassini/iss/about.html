@@ -15,10 +15,10 @@ and documentation necessary to produce calibrated ISS images.
 
 The ISS archive is composed of four, multi-volume data sets.
 
-    * One data set devoted to calibration files. These volumes are numbered COISS_0nnn. 
-    * One data set for all of the ISS raw images from launch through Saturn approach. These volumes are numbered COISS_1nnn. 
-    * One data set for all of the ISS raw images from the Saturn tour. These volumes are numbered COISS_2nnn. 
-    * One data set for cartographic map products. These volumes are numbered COISS_3nnn, and are available from the PDS Imaging Node's web page for[ Cassini volumes.](http://pdsimg.jpl.nasa.gov/Admin/resources/cd_cassini.html)
+  * One data set devoted to calibration files. These volumes are numbered COISS_0nnn. 
+  * One data set for all of the ISS raw images from launch through Saturn approach. These volumes are numbered COISS_1nnn. 
+  * One data set for all of the ISS raw images from the Saturn tour. These volumes are numbered COISS_2nnn. 
+  * One data set for cartographic map products. These volumes are numbered COISS_3nnn, and are available from the PDS Imaging Node's web page for[ Cassini volumes.](http://pdsimg.jpl.nasa.gov/Admin/resources/cd_cassini.html)
 
 ###  2\. Directory and file naming.
 
@@ -34,8 +34,8 @@ File names are in the form **Annnnnnnnnn_v.IMG**, where:
 
 **A** can be one of the following indicators: 
 
-      * **N** \- Narrow Angle Camera.
-      * **W** \- Wide Angle Camera.
+  * **N** \- Narrow Angle Camera.
+  * **W** \- Wide Angle Camera.
 
 **nnnnnnnnn** is the SCLK value at at time of shutter close.
 
@@ -60,18 +60,18 @@ directory on each data volume.
 
   * The image files are archived in VICAR2 format. Each data volume contains a file [COISS_xxxx/label/vicar2.txt](vicar2.txt) providing the details of this file format. 
 
-The [catalog](/volumes/COISS_2001/catalog/) subdirectory on each volume
+The [catalog](/vol/COISS_2xxx/COISS_2001/catalog/) subdirectory on each volume
 contains a wealth of information about the ISS instrument, team and data set.
 See, in particular:
 
-  * [COISS_1xxx/catalog/jupiterds.cat](JUPITERDS.txt): Description of the Jupiter data set.
+  * [/volumes/COISS_1xxx/catalog/jupiterds.cat](JUPITERDS.txt): Description of the Jupiter data set.
 [COISS_2xxx/catalog/saturnds.cat](SATURNDS.txt): Description of the Saturn
 data set.
 
-  * [COISS_xxxx/catalog/issna_inst.cat](ISSNA_INST.txt): Description of the narrow-angle camera.
-  * [COISS_xxxx/catalog/isswa_inst.cat](ISSWA_INST.txt): Description of the wide-angle camera.
-  * [COISS_xxxx/catalog/insthost.cat](INSTHOST.txt): Description of the Cassini spacecraft.
-  * [COISS_xxxx/catalog/mission.cat](MISSION.txt): Description of the Cassini mission.
+  * [/volumes/COISS_2xxx/catalog/issna_inst.cat](ISSNA_INST.txt): Description of the narrow-angle camera.
+  * [/volumes/COISS_2xxx/catalog/isswa_inst.cat](ISSWA_INST.txt): Description of the wide-angle camera.
+  * [/volumes/COISS_2xxx/catalog/insthost.cat](INSTHOST.txt): Description of the Cassini spacecraft.
+  * [/volumes/COISS_2xxx/catalog/mission.cat](MISSION.txt): Description of the Cassini mission.
 
 A file, [errata.txt](errata.txt), in the root directory of each volume
 documents any known anomalies or deviations from PDS standards, and identifies

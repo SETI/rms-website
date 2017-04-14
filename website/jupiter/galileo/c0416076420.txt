@@ -14,4 +14,4 @@ the moon Amalthea.
 
 <P>
 <DT><B>Image Note:</B> <dd>Image courtesy of
-<a href="/showalter.html">Mark Showalter</a>
+<a href="http://www.seti.org/users/mark-showalter">Mark Showalter</a>

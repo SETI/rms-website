@@ -18,10 +18,10 @@ def deploy():
     """
 
     # You are running this in /deploy so go a level up and git pull the latest repo
-    with lcd("../"):
-        print("\nPulling the latest site from github.com: \n-----> %s\n" % REPO)
-        time.sleep(2.5)  # please remind people we are pulling from remote
-        local("git pull")
+#     with lcd("../"):
+#         print("\nPulling the latest site from github.com: \n-----> %s\n" % REPO)
+#         time.sleep(2.5)  # please remind people we are pulling from remote
+#         local("git pull")
 
     # build the website.
     with lcd("../website"):
