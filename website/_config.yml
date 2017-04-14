@@ -17,14 +17,14 @@ gems:
 
 # files to exclude from jekell build, commment out all of these to build entire site
 
-# work on homepage only - exclude everything 
+# work on homepage only - exclude everything
 # copy this as basic template and remove from it what you want to work on
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
 # work on jupiter
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
-# work on saturn 
+# work on saturn
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, voyager]
 
 # work on neptune
@@ -42,7 +42,7 @@ gems:
 # work on newhorizons
 # exclude: [rpx, roses, ringocc, resonance, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
-# work on galileo 
+# work on galileo
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
 # work on Occulations /ringocc
@@ -63,7 +63,7 @@ gems:
 # work on resonances
 # exclude: [rpx, roses, ringocc, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
-# work on roses 
+# work on roses
 # exclude: [rpx, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, cassini, astrometry, urpx, uranus, tools, toolkits, saturn, voyager]
 
 # work on roses and cassini
@@ -80,4 +80,3 @@ gems:
 
 # work on cassini and saturn
 # exclude: [rpx, roses, ringocc, resonance, newhorizons, neptune, jupiter, hst, glossary.html, galileo, feed.xml, astrometry, urpx, uranus, tools, toolkits, voyager]
-

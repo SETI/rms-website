@@ -154,7 +154,9 @@ p.superwide > a > img {
 	background-color: #ffffff;
 	margin-top: 20px;
 }
-
+.homebox figure {
+  margin-bottom:10px;
+}
 .homebox .panel-heading {
   margin:0; padding:0;
   border: 1px solid black;
