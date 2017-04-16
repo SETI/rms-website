@@ -15,10 +15,10 @@ and documentation necessary to produce calibrated ISS images.
 
 The ISS archive is composed of four, multi-volume data sets.
 
-    * One data set devoted to calibration files. These volumes are numbered COISS_0nnn. 
-    * One data set for all of the ISS raw images from launch through Saturn approach. These volumes are numbered COISS_1nnn. 
-    * One data set for all of the ISS raw images from the Saturn tour. These volumes are numbered COISS_2nnn. 
-    * One data set for cartographic map products. These volumes are numbered COISS_3nnn, and are available from the PDS Imaging Node's web page for[ Cassini volumes.](http://pdsimg.jpl.nasa.gov/Admin/resources/cd_cassini.html)
+  * One data set devoted to calibration files. These volumes are numbered COISS_0nnn. 
+  * One data set for all of the ISS raw images from launch through Saturn approach. These volumes are numbered COISS_1nnn. 
+  * One data set for all of the ISS raw images from the Saturn tour. These volumes are numbered COISS_2nnn. 
+  * One data set for cartographic map products. These volumes are numbered COISS_3nnn, and are available from [Cassini cartographic volumes.](/volumes/COISS_3xxx/)
 
 ###  2\. Directory and file naming.
 
@@ -30,12 +30,13 @@ archive volumes in subdirectories in Spacecraft Clock (SCLK) order.
 
 File names are sequential based on spacecraft clock time values (SCLK)
 corresponding to the time of shutter close, with an appended version number.
+
 File names are in the form **Annnnnnnnnn_v.IMG**, where:
 
 **A** can be one of the following indicators: 
 
-      * **N** \- Narrow Angle Camera.
-      * **W** \- Wide Angle Camera.
+  * **N** \- Narrow Angle Camera.
+  * **W** \- Wide Angle Camera.
 
 **nnnnnnnnn** is the SCLK value at at time of shutter close.
 
@@ -43,10 +44,7 @@ File names are in the form **Annnnnnnnnn_v.IMG**, where:
 
 ### 3\. Documentation
 
-** The ISS Users Guide**, released July 2012, provides a substantial amount of information reguarding the instrument and its data in a single document. 
-
-  * [Adobe .pdf](/cassini/iss/ISS_Data_User_Guide_120703.pdf)
-  * [MS Office .docx](/cassini/iss/ISS_Data_User_Guide_120703.docx).
+The [**ISS Users Guide**](iss_data_user_guide_160929.pdf), in Adobe .pdf form, was updated September 2016. It provides a substantial amount of information reguarding the instrument and its data in a single document. 
 
 **Users are strongly encouraged to review an ISS [aareadme.txt](aareadme.txt) file.** This file appears in the root directory of every volume. (Some of the header information in the aareadme.txt files varies from one volume to the next, but the body of information in the files is the same.) 
 
