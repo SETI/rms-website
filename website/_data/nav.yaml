@@ -76,7 +76,7 @@
   submenu: 
 
     - title: Data volumes
-      href: /vol/
+      href: /volumes/
 
     - title: Compressed archives
       href: /archives/
