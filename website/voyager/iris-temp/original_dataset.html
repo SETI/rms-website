@@ -1,0 +1,418 @@
+---
+layout: base
+layout_style: default
+---
+
+# Voyager IRIS Data Set Description
+
+### Index
+
+Data Set Description  
+Confidence Level Note  
+Parameter Information  
+References  
+Click for the [text](iris_dataset.txt) version of this file.
+
+* * *
+
+## Data Set Description
+
+    
+    
+        DATA_SET_NAME                  = "VG1/VG2 JUPITER IRIS 3 RDR V1.0"
+        DATA_SET_COLLECTION_MEMBER_FLG = N
+        START_TIME                     = 1979-061T18:57:33Z
+        STOP_TIME                      = 1979-194T02:54:32Z
+        NATIVE_START_TIME              = "1630800"
+        NATIVE_STOP_TIME               = "2075500"
+        DATA_OBJECT_TYPE               = SPECTRUM
+        DATA_SET_RELEASE_DATE          = 1994-02-14
+        PROCESSING_LEVEL_ID            = 3
+        PRODUCER_FULL_NAME             = "Barney J. Conrath"
+        PRODUCER_INSTITUTION_NAME      = "GODDARD SPACE FLIGHT CENTER"
+        SOFTWARE_FLAG                  = Y
+        DETAILED_CATALOG_FLAG          = N
+        PROCESSING_START_TIME          = 'N/A'
+        PROCESSING_STOP_TIME           = 'N/A'
+    
+
+The data set contains measurements from both the infrared interferometer
+spectrometer and the broadband reflected solar radiometer and ancillary data.
+The data set is ordered by time as measured by the Flight Data System Count
+(FDSC). This represents the data frame number, modulo 60. Also included is
+pointing and other information on the geometry associated with a given data
+record.
+
+Each record of the data set contains a header, radiometer observations, and
+interferometer observations.
+
+The interferometer data consists of calibrated thermal emission spectra
+expressed as spectral radiances in Watt/cm**2/sr/cm**-1. The wavenumber
+corresponding to each spectral radiance value is not included in the data set;
+the beginning wavenumber and the constant wave number increment are given,
+permitting easy calculation of the appropriate wavenumber for each radiance.
+The calibrated radiances have been obtained from the directly measured
+interferograms of the planetary body, along with deep space calibration
+observations. The interferograms are first symmetrized to correct for the fact
+that they are not sampled at zero path difference and to also remove the
+asymmetry due to residual dispersion in the beamsplitter and compensator. The
+symmetrized interferograms are then apodized using a Hamming function and are
+cosine-transformed. The responsivity obtained from the deep space measurements
+and knowledge of the instrument temperature are then used to obtain calibrated
+radiances.
+
+The radiometer data include a measurement integrated over the 45.6 sec
+required to take one interferogram and measurements sampled 8 times during the
+data frame. The latter include both high and low gain measurements. A steady
+target yields identical signals for the 8 samples each of high and normal gain
+data, and for the integrated data, within the resolution of each measurement.
+The integrating radiometer provides the best resolution (by a factor of ~3);
+however, for an accurate integrated measurement the target must remain stable
+in the field of view for an entire frame, which seldom happens.
+
+Radiometer data are presented as Watts at the detector (wad), which is the
+integral across the instrument passband of the wavenumber-dependent power
+received at the detector (wad(nu)). For a target filling the instrument field
+of view:
+
+    
+    
+            wad(nu) = Signal at instrument * instrument factor
+                    = Target object illumination 
+                      * target object reflectance 
+                      * instrument grasp 
+                      * instrument filter function
+    
+
+For the IRIS measurements, the target is illuminated by the sun; the target
+object reflectance is described by the bidirectional reflectance function; the
+instrument grasp is the telescope area-solid angle product, A * omega,
+multiplied by an obscuration factor, g; and the instrument filter function, t,
+is the wavelength dependent instrument passband.
+
+Integrating over the passband gives: wad = I * (A * omega * g) * t
+
+where I is the spectrally integrated radiance from the target, and t is the
+spectrally integrated radiance as attenuated by the instrument, normalized by
+the entering flux; as such, it is independent of the normalization of the
+target BDRF, and can be calculated using a normalized reflectance spectrum.
+The spectral geometric albedo, as determined from groundbased measurements was
+used [HANELETAL1981A].
+
+The flux measured by the IRIS instrument is therefore:
+
+I = WAD / (A * omega * g * t)
+
+    
+    
+        
+            where:
+              A *  omega * g   = 0.02535
+              t (Jupiter)      = 0.173 +/- 0.003
+              t (Io)           = 0.171 +/- 0.003
+              t (Europa)       = 0.173 +/- 0.003
+              t (Ganymede)     = 0.168 +/- 0.003
+              t (Callisto)     = 0.163 +/- 0.003
+              t (target plate) = 0.156 +/- 0.002
+    
+
+For a detailed description of the data set contents, see [HANELETAL1980B].
+Scientific results of IRIS observations of the Jovian system are contained in
+[HANELETAL1979A], [HANELETAL1979B], [PEARLETAL1979], [CONRATHETAL1981],
+[FLASARETAL1981], [GAUTIERETAL1981], [HANELETAL1981A], and [KUNDEETAL1982].
+
+  * Back to the index.
+
+## Confidence Level Note
+
+In evaluating the confidence level of a given data record, several factors
+should be taken into account. These include the interferometer data quality,
+instrument temperature drift, field of view smear, and pointing accuracy.
+
+The interferometer data quality is indicated in the data sets by the parameter
+REJECT_CODE. The various values of this parameter have the following meaning:
+
+    
+    
+              0 = good
+              1 = too many spikes in interferogram
+              2 = missing data in interferogram
+              3 = zero peak in interferogram
+              4 = no interferogram data, but 
+                  radiometer data are available
+              5 = interferogram symmetrization problem
+    
+
+Only code 0 indicates the interferogram is usable; however, the radiometer
+data may be available in the other cases.
+
+When spectral data are selected for analysis, care must be taken to insure
+that excessive motion of the field of view on the target body has not occurred
+during the time the interferogram is taken. Smearing can be checked for by
+noting the differences in latitude/longitude of the Q5 points (center of field
+of view) at line counts 350 and 750. An additional check can sometimes be made
+by noting variations in the sampled radiometer data during a frame. Since the
+total infrared energy and the very low resolution components of the spectral
+data are recorded in a brief time surrounding the interferogram peak, even
+when smear occurs this information can be associated with the pointing
+information at the 24 second point, as can radiometer sample #3.
+
+A change in detector temperature can cause a shift in the absolute calibration
+of the measured infrared radiance. The detector temperature, IR_DET_TEMP,
+should be within 0.1 or 0.2K of 200K. If it is not, the spectrum can be
+corrected using I(corrected) = I(uncorrected) - B(IR_DET_TEMP) + B(200) where
+B(T) is the Planck radiance at temperature T.
+
+The Noise Equivalent Spectral Radiance (NESR) provides a measure of the random
+errors of the spectra, expressed in radiometric units. It is defined as the
+radiance corresponding to a signal to noise ratio of unity and represents the
+one-sigma uncertainty in an individual spectrum. It is calculated from the
+standard deviation of measurements taken while the instrument is viewing deep
+space. Values of the NESR at selected wave numbers are given in the following
+table. A detailed listing of NESR versus wave number can be found in the NESR
+files included with each data set volume.
+
+    
+    
+                    IRIS NESR (1.E-8 W/cm**2/sr/cm**-1)
+    
+            
+                                  Wavenumber (cm**-1)
+                        200   400   600   800   1000  1500  2000
+            
+            V1 Jupiter  3.05  0.43  0.56  0.75  0.65  1.03  1.89
+            
+            V1 Saturn   2.62  0.56  0.55  0.73  0.66  1.07  2.32
+            
+            V2 Jupiter  2.84  0.60  0.80  2.02  2.50  1.79  3.57
+            
+            V2 Saturn   2.93  0.49  1.07  3.54  1.84  2.94  (1) 
+    
+            V2 Uranus   3.84  0.70  2.63  2.29   (2)
+            
+            V2 Neptune  3.34  0.88  3.48  1.79   (3)
+            
+            (1) Noisy
+            (2) Spectra truncated at 799 cm**-1
+            (3) Spectra truncated at 898 cm**-1
+    
+
+Radiometer calibration consists of a verification of instrument stability by
+repeated determinations of t(target plate), based on observations of a
+diffusely scattering target plate mounted on the spacecraft. The calibration
+conversion to Watts at the detector takes into account the detector response
+and electrical gains. Observations of the target plate were carried out before
+and after each encounter with the exception of after the Voyager 2 Saturn
+encounter when jamming of the instrument scan platform caused the maneuver to
+be aborted. The spacecraft was oriented so that an on- board, diffusely
+scattering target plate was illuminated by the sun at 30 degrees from the
+surface normal of the plate. The plate was then viewed by IRIS, to provide a
+check on the stability of the radiometer calibration, and by the other scan
+platform-mounted instruments. Each observational sequence proceeded as
+follows: view deep space, view target, view deep space (occasionally an
+interval is included when the IRIS field of view is only partially on the
+target; this results in data with an intermediate signal level in the data
+set). The difference in signals between target and space observations is then
+multiplied by the square of the spacecraft-sun distance to provide a
+normalized calibration signal (the calibration factor).
+
+The principal sources of uncertainty are possible system nonlinearities,
+signal variability associated with instrument response to changing orientation
+relative to the sun, signal variability associated with sudden acquisition or
+loss of the bright target, and quantization. At Jupiter and Saturn, overall
+uncertainty is dominated by possible system nonlinearities (estimated as =<
+0.5%). Otherwise, fluctuations in the deep space signal due to excursions in
+scan platform pointing immediately before and after viewing the target are
+significant; these arise because the instrument has a transient response to
+time- varying illumination by the sun. Transients due to abrupt acquisition of
+the target damp out in the first few frames of the target observation.
+
+Files containing the target plate observations are included with each data set
+volume. The data format follows that of the standard Voyager IRIS records.
+However, all of the spectral data have been set to zero. Bad or missing
+integrated radiometer and normal gain radiometer data have also been set to
+zero; however, bad or missing normal gain radiometer data have been set to a
+constant negative value (corresponding to -1 DN, since the normal gain
+radiometer offset for Voyager 1 IRIS is equal to 0 DN). Tables summarizing the
+radiometer calibrations are contained in the calibration section of the
+Voyager 1 and 2 IRIS instrument catalog templates.
+
+The pointing information provided in the SEDRs is derived from knowledge of
+the spacecraft position (determined from trajectory analysis), the spacecraft
+orientation (as indicated by sun and star sensor data and by displacements
+within the limit cycle), and the articulation of the scan platform on which
+the instruments are mounted. When adequate data are not available (due to
+downlink loss, for example), predicted values for pointing information are
+used. The quoted 3-sigma pointing uncertainty is 0.15 degrees (to be compared
+with the 0.25 degree diameter of the IRIS field of view). In addition, there
+are sometimes systematic errors in the SEDR pointing values for entire data
+sequences or links that take the form of approximately constant offsets in the
+given field of view locations on the picture body. When high accuracy in
+pointing knowledge is required, it is best to refer directly to images
+obtained simultaneously with the IRIS data, using the pointing changes between
+the line count 350 and 750 Q5 values to correct for spatial drift between the
+times of interferogram peaks and the shuttering of images. In correlating
+images and IRIS observations, note that images are not read out during the
+frames in which they are shuttered. When a single image is made during a
+frame, its assigned FDSC is one decimal count (modulo 60) greater than the
+FDSC of that frame. When both cameras are shuttered simultaneously (in the
+imaging modes BOTSIM and BSIMAN), the narrow angle image of the pair is read
+out first (with FDSC augmented by 0.01), and the wide angle image is read out
+second (with FDSC augmented by 0.02). IRIS FDSCs are never augmented.
+
+When attempting to correlate IRIS data with that from other Voyager
+instruments, it may be necessary to take into account the relative offsets of
+the centers of the fields of view of the various instruments. Offsets relative
+to the center of the ISS Narrow Angle camera field of view are given in the
+tables below. Elevation is positive to the right within the imaging field of
+view and crosselevation is positive downward. The offsets are expressed both
+in degrees and in Narrow Angle pixels.
+
+    
+    
+    
+            Voyager 1:
+            
+              Instrument   Elevation    Cross-Elevation
+            
+              IRIS         +0.020 deg     +0.024 deg
+                         (+37.7 pixels) (+45.3 pixels)
+            
+              ISS(WA)      +0.0315 deg    +0.0247 deg
+                         (+59.4 pixels) (+46.6 pixels)
+            
+              UVS          +0.010 deg     -0.030 deg
+                         (+18.9 pixels) (-56.6 pixels)
+            
+            
+            Voyager 2:
+            
+              Instrument   Elevation    Cross-Elevation
+            
+              IRIS         +0.016 deg     -0.009 deg
+                         (+30.2 pixels) (-17.0 pixels)
+            
+              ISS(WA)      -0.0308 deg    -0.0068 deg
+                         (-58.1 pixels) (-12.8 pixels)
+            
+              UVS           0.0 deg       +0.08 deg
+                           (0.0 pixels)(+150.9 pixels)
+            
+              PPS          -0.06 deg      +0.003 deg
+                        (-113.2 pixels)  (+5.7 pixels)
+    
+    
+    
+
+One difference should be noted between the IRIS data sets described here and
+those previously deposited in the National Space Science Data Center (NSSDC
+data set I.D. Numbers: 77-084A-03A; 77-084A-03B; 77-076A-03A; 77-076A-03B; 77
+-076A-03C; 77-076A-03D). The spectral radiances in the earlier data sets were
+listed with a wave number spacing of 1.39051 cm**-1. This represents a
+significant over sampling of the data for which the apodized spectral
+resolution is 4.3 cm**-1. In order to make the present data set more compact,
+the sampling interval for the spectral radiances was reduced to 2.15 cm**-1.
+This was accomplished by Fourier transforming the original data, resampling at
+larger intervals, and transforming back to the spectral space. It should be
+noted that the full intrinsic information content of the data has been
+preserved with this procedure, and the two forms of presentation of the data
+are entirely equivalent insofar as the information content is concerned.
+
+  * Back to the index.
+
+## Parameter Information
+
+    
+    
+        SAMPLING_PARAMETER_NAME        = TIME
+        SAMPLING_PARAMETER_RESOLUTION  = 2.4
+        MINIMUM_SAMPLING_PARAMETER     = 6
+        MAXIMUM_SAMPLING_PARAMETER     = 6
+        SAMPLING_PARAMETER_INTERVAL    = 6
+        MINIMUM_AVAILABLE_SAMPLING_INT = 6
+        SAMPLING_PARAMETER_UNIT        = SECOND
+        DATA_SET_PARAMETER_NAME        = "SAMPLED_VISIBLE_RADIANCE"
+        NOISE_LEVEL                    = 'N/A'
+        DATA_SET_PARAMETER_UNIT        = WATT
+    
+    
+    
+        SAMPLING_PARAMETER_NAME        = TIME
+        SAMPLING_PARAMETER_RESOLUTION  = 45.6
+        MINIMUM_SAMPLING_PARAMETER     = 48
+        MAXIMUM_SAMPLING_PARAMETER     = 48
+        SAMPLING_PARAMETER_INTERVAL    = 48
+        MINIMUM_AVAILABLE_SAMPLING_INT = 48
+        SAMPLING_PARAMETER_UNIT        = SECOND
+        DATA_SET_PARAMETER_NAME        = "INTEGRATED_VISIBLE_RADIANCE"
+        NOISE_LEVEL                    = 'N/A'
+        DATA_SET_PARAMETER_UNIT        = WATT
+    
+    
+    
+        SAMPLING_PARAMETER_NAME        = TIME
+        SAMPLING_PARAMETER_RESOLUTION  = 45.6
+        MINIMUM_SAMPLING_PARAMETER     = 48
+        MAXIMUM_SAMPLING_PARAMETER     = 48
+        SAMPLING_PARAMETER_INTERVAL    = 48
+        MINIMUM_AVAILABLE_SAMPLING_INT = 48
+        SAMPLING_PARAMETER_UNIT        = SECOND
+        DATA_SET_PARAMETER_NAME        = "THERMAL_RADIANCE"
+        NOISE_LEVEL                    = 'N/A'
+        DATA_SET_PARAMETER_UNIT        = "WATT/CM**2/SR/CM**-1"
+    
+
+  * Back to the index.
+
+## References
+
+Hanel, R., B. Conrath, M. Flasar, V. Kunde, P. Lowman, W. Maguire, J. Pearl,
+J. Pirraglia, R. Samuelson, D. Gautier, P. Gierasch, S. Kumar, and C.
+Ponnamperuma, Infrared Observations of the Jovian System from Voyager 1,
+_Science_, **204**, 972-976, 1979.
+
+Hanel, R., B. Conrath, M. Flasar, L. Herath, V. Kunde, P. Lowman, W. Maguire,
+J. Pearl, J. Pirraglia, R. Samuelson, D. Gautier, P. Gierasch, L. Horn, S.
+Kumar, and C. Ponnamperuma, Infrared Observations of the Jovian System from
+Voyager 2, _Science_, **206**, 952-956, 1979.
+
+Gautier, D., B. Conrath, M. Flasar, R. Hanel, V. Kunde, A. Chedin, and N.
+Scott, The Helium Abundance of Jupiter from Voyager, _J. Geophys. Res._,
+**86**, 8713-8720, 1981.
+
+Hanel, R. A., B. J. Conrath, L. W. Herath, V. G. Kunde, and J.A. Pirraglia,
+Albedo, Internal Heat, and Energy Balance of Jupiter: Preliminary Results of
+the Voyager Infrared Investigation, _J. Geophys. Res._, **86**, 8705-8712,
+1981.
+
+Flasar, F. M., B. J. Conrath, J. A. Pirraglia, P. C. Clark, R. G. French, and
+P. J. Gierasch, Thermal Structure and Dynamics of the Jovian Atmosphere 1. The
+Great Red Spot, _J. Geophys. Res._, **86**, 8759-8767, 1981.
+
+Conrath, B. J., F. M. Flasar, J. A. Pirraglia, P. J. Gierasch, and G. E. Hunt,
+Thermal Structure and Dynamics of the Jovian Atmosphere 2. Visible Cloud
+Features, _J. Geophys. Res._, **86**, 8769-8775, 1981.
+
+Kunde, V. G., R. Hanel, W. Maguire, J. P. Baluteau, A. Marten, N. Husson, and
+N. Scott, The Tropospheric Gas Composition of Jupiter's North Equatorial Belt
+(NH3, PH3, CH3D, GeH4, H20) and the Jovian Isotopic D/H Ratio, _Astrophys.
+J._, **263**, 443-467, 1982.
+
+Pearl, J., R. Hanel, V. Kunde, W. Maguire, K. Fox, S. Gupta, C. Ponnamperuma,
+and F. Raulin, Identifications and Gaseous SO2 and New Upper Limits for Other
+Gases on Io, _Nature_, **280**, 755-758, 1979.
+
+Hanel, R. A., L. W. Herath, V. G. Kunde, and J. C. Pearl, Voyager Infrared
+Interferometer Spectrometer and Radiometer (IRIS) - Documentation for Reduced
+Data Records (RDR) for Jupiter, Doc. X-693-821-8, Goddard Space Flight Center,
+1980.
+
+  * Back to the index.
+
+* * *
+
+[IRIS Data Set](/voyager/datasets/iris/index.html) | [Voyager
+Mission](/voyager/index.html) | [Ring-Moon Systems Node Home](/)
+
+Last updated Feb-21-1997
+

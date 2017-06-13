@@ -27,4 +27,4 @@ the inclined orbit of its source moon.
 <P>
 
 <DT><B>Image Note:</B> <DD> Image courtesy of
-<a href="http://www.seti.org/users/mark-showalter">Mark Showalter</a>
+<a href="/showalter.html">Mark Showalter</a>

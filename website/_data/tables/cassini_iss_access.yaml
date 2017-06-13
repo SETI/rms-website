@@ -10,7 +10,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release April 1, 2017
+    - Next Release July 1, 2017
 
 # Edit Below:
 - section: 
@@ -802,3 +802,18 @@
             id: COISS_2103
             clock_range:  1837313197 to 1838138149 
             date_range:  2016-03-22 to 2016-03-31
+
+- section: 
+    heading1:  April 1, 2017
+
+    section_rows: 
+
+        - table_row: 
+            id: COISS_2104
+            clock_range:  1838169061 to 1844319142 
+            date_range:  2016-04-02 to 2016-06-12
+
+        - table_row: 
+            id: COISS_2105
+            clock_range:  1844319240 to 1845993031 
+            date_range:  2016-06-12 to 2016-07-01

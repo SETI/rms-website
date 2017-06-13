@@ -32,12 +32,12 @@ print <<LASTBIT;
 <P>
 
 <HR>
-<A HREF="/saturn/voyager/index2.html">[Voyager 2 Images]</A>
-<A HREF="/saturn/voyager/pps.html">[PPS Pseudo-images]</A>
-<A HREF="/saturn/hst/wfpc2.html">[Hubble/WFPC2]</A>
-<A HREF="/saturn/art/art.html">[Artwork]</A>
-<A HREF="/saturn/index.html">[Saturn Page]</A>
-<A HREF="/saturn/voyager/">[Rings Node Home]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/voyager2.html">[Voyager 2 Images]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/pps.html">[PPS Pseudo-images]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/hst/wfpc2.html">[Hubble/WFPC2]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/art/art.html">[Artwork]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/saturn.html">[Saturn Page]</A>
+<A HREF="http://ringmaster.arc.nasa.gov/saturn/voyager/">[Rings Node Home]</A>
 <P>
 Last updated April 7, 1999
 <P>
