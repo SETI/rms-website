@@ -1,9 +1,0 @@
----
-layout: base
-layout_style: default
----
-
-../cpage.pl < c0626030645r.lbl > c0626030645.html ../cpage.pl <
-c0626030646r.lbl > c0626030646.html ../cpage.pl < c0626030845r.lbl >
-c0626030845.html
-

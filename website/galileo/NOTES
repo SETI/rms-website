@@ -1,8 +1,0 @@
-[DONE] Use parse-csv.pl to create the orbit pages.
-       I.e. parse_csv.pl < g28-report > ssi_g28_data.html
-
-Use cpage.pl to create the individual image pages.
-I.e. cpage.pl < c0.lbl > c0.html
-(leave off the r so it would be c0368975968.html
-and not c0368975968r.html)
-

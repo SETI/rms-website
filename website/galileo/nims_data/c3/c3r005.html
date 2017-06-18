@@ -14,35 +14,75 @@ layout_style: default
 
 ## PDS Label Information:
 
-** /* Data description: general */ **  
----  
-** DATA_SET_ID : ** |  "GO-J-NIMS-2-EDR-V2.0"   
-** SPACECRAFT_NAME : ** |  GALILEO_ORBITER   
-** INSTRUMENT_NAME : ** |  "NEAR INFRARED MAPPING SPECTROMETER"   
-** INSTRUMENT_ID : ** |  NIMS   
-** ^INSTRUMENT_DESCRIPTION : ** |  "NIMSINST.TXT"   
-** TARGET_NAME : ** |  J_RINGS   
-** MISSION_PHASE_NAME : ** |  CALLISTO_3_ENCOUNTER   
-** NATIVE_START_TIME : ** |  "03689752.84"   
-** NATIVE_STOP_TIME : ** |  "03689753.75"   
-** /* Event times are SPICE E-kernel functions of native times */ **  
-** /* Earth received times are inclusive of all merged downlink data */ **  
-** EARTH_RECEIVED_START_TIME : ** |  1996-12-12T02:33:32.123   
-** EARTH_RECEIVED_STOP_TIME : ** |  1996-12-12T04:33:32.510   
-** SPACECRAFT_COMPRESSION_TYPE : ** |  RICE   
-** /* Most non-realtime NIMS data taken during Galileo phase-2 operations */ **  
-** /* were compressed on the spacecraft using a lossless 8-option adaptive */ **  
-** /* compression method devised by Robert Rice. This EDR contains the */ **  
-** /* original data after decompression on the ground. */ **  
-** SPACECRAFT_COMPRESSION_RATIO : ** |  2.25   
-** PRODUCT_CREATION_TIME : ** |  1998-02-11T10:31:30Z   
-** PRODUCT_ID : ** |  "C3RNMRING_01E.10"   
-** NOTE : ** |  "EDR product provided by Multimission Image Processing   
-** END_OBJECT : ** |  DATA_TABLE   
-  
+<pre><code>
+    CCSD3ZF0000100000001NJPL3IF0PDS200000001 = SFDU_LABEL
+    
+    /* File Structure (512-byte records required by ISIS software) */
+    
+    RECORD_TYPE             = FIXED_LENGTH
+    RECORD_BYTES            = 512
+    FILE_RECORDS            = 164
+    LABEL_RECORDS           = 6
+    CHECKSUM                = 955847
+    /* This is an unsigned 32-bit checksum of all bytes after label records */
+    FILE_STATE              = CLEAN
+    
+    /* Object pointers and descriptions */
+    
+    ^HEADER_TABLE           = 7
+    OBJECT                  = HEADER_TABLE
+     INTERCHANGE_FORMAT     = BINARY
+     COLUMNS                = UNK
+     ROWS                   = 1
+     ROW_BYTES              = 2048
+     ^STRUCTURE             = "EDRHDR2.FMT"
+    END_OBJECT              = HEADER_TABLE
+    
+    ^DATA_TABLE             = 11
+    OBJECT                  = DATA_TABLE
+     INTERCHANGE_FORMAT     = BINARY
+     COLUMNS                = UNK
+     ROWS                   = 77
+     ROW_BYTES              = 1024
+     ^STRUCTURE             = "EDRDATA2.FMT"
+    
+    /* Data description: general */
+    
+     DATA_SET_ID                    = "GO-J-NIMS-2-EDR-V2.0"
+     SPACECRAFT_NAME                = GALILEO_ORBITER
+     INSTRUMENT_NAME                = "NEAR INFRARED MAPPING SPECTROMETER"
+     INSTRUMENT_ID                  = NIMS
+     ^INSTRUMENT_DESCRIPTION        = "NIMSINST.TXT"
+    
+     TARGET_NAME                    = J_RINGS
+     MISSION_PHASE_NAME             = CALLISTO_3_ENCOUNTER
+     NATIVE_START_TIME              = "03689752.84"
+     NATIVE_STOP_TIME               = "03689753.75"
+    /* Event times are SPICE E-kernel functions of native times */
+    /* Earth received times are inclusive of all merged downlink data */
+     EARTH_RECEIVED_START_TIME      = 1996-12-12T02:33:32.123
+     EARTH_RECEIVED_STOP_TIME       = 1996-12-12T04:33:32.510
+    
+     SPACECRAFT_COMPRESSION_TYPE     = RICE
+    /* Most non-realtime NIMS data taken during Galileo phase-2 operations */
+    /* were compressed on the spacecraft using a lossless 8-option adaptive */
+    /* compression method devised by Robert Rice.  This EDR contains the */
+    /* original data after decompression on the ground. */
+     SPACECRAFT_COMPRESSION_RATIO   =  2.25
+    
+     PRODUCT_CREATION_TIME          = 1998-02-11T10:31:30Z
+     PRODUCT_ID                     = "C3RNMRING_01E.10"
+     NOTE = "EDR product provided by Multimission Image Processing
+                     Laboratory of JPL, CALTECH"
+    
+    END_OBJECT              = DATA_TABLE
+    
+    END
+</code></pre>
+
 * * *
 
-[NIMS C3 Images](/galileo/nims_data/c3) | [JSDAP](/galileo/index.html) |
+[NIMS C3 Images](/galileo/nims_data/c3) | [Galileo Mission](/galileo/index.html) |
 [Ring-Moon Systems Node Home](/)
 
 Last update: November 25, 1998

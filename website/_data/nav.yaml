@@ -6,7 +6,7 @@
   submenu: 
 
     - title: Cassini Mission (JPL)
-      href: http://saturn.jpl.nasa.gov/
+      href: https://saturn.jpl.nasa.gov/
 
     - title: Press Release Images
       href: /saturn/cassini/
@@ -14,8 +14,8 @@
     - title: Data and Information
       href: /cassini/
 
-- title: Ringed Planets
-  href: /ringed-planets/
+- title: Ring-Moon Systems
+  href: /
   submenu:
 
     - title: Jupiter
@@ -32,7 +32,7 @@
 
 
 - title: Missions and Data
-  href: /missions/data/
+  href: /
   submenu:
 
     - title: OPUS (Search)
@@ -72,26 +72,26 @@
       href: /roses/
 
 - title: Downloads  
-  href: /downloads/
+  href: /
   submenu: 
 
     - title: Data volumes
-      href: /volumes/
+      href: /webapps/link/volumes
 
     - title: Compressed archives
-      href: /archives/
+      href: /webapps/link/archives-volumes
 
-    - title: Derived volumes
-      href: /derived/
+    - title: Calibrated volumes
+      href: /webapps/link/calibrated
 
-    - title: Compressed derived vols
-      href: /derived/archives/
+    - title: Compressed calibrated vols
+      href: /webapps/link/archives-calibrated
 
     - title: Previews/Thumbnails
-      href: /browse/
+      href: /webapps/link/previews
 
 - title: Resources
-  href: /resources/
+  href: /
   submenu:
 
     - title: Tools
@@ -104,7 +104,7 @@
       href: /glossary.html
 
 - title: Contacts  
-  href: /contacts/
+  href: /
   submenu:
 
     - title: Mark Showalter
