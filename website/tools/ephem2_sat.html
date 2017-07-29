@@ -1,0 +1,142 @@
+---
+layout: base
+layout_style: default
+---
+
+# Saturn Ephemeris Generator 2.6
+
+<form method="POST" action="/cgi-bin/tools/ephem2_sat.pl">
+
+<input type="hidden" name="ephem" value="011 SAT375 + SAT382 + DE430">
+
+<p>
+<b>2016-02-16</b>: Release 2.6 ported to a new server.
+</p>
+<p>
+Click <a href="ephem2_sat_help.html">here</a> for help, or click on
+individual highlighted items.
+Current ephemeris selection is <b>SAT375 + SAT382 + DE430</b>.
+</p>
+
+<a href="ephem2_sat_help.html#TIME">Time Limits</a>
+<ul>
+Start time: <input name="start"    size=30 maxlength=50><br>
+Stop time:  <input name="stop"     size=30 maxlength=50><br>
+Interval:   <input name="interval" size=6  maxlength=50>
+<select name="time_unit">
+  <option>          seconds
+  <option>          minutes
+  <option selected> hours
+  <option>          days
+</select>
+</ul>
+
+<a href="ephem2_sat_help.html#COLUMNS">Column Selection:</a>
+<ul>
+<input type=checkbox name="columns"
+        value="001 Modified Julian Date" checked>
+                   Modified Julian Date (UTC)<br>
+<input type=checkbox name="columns"
+        value="002 Year, Month, Day, Hour, Minute">
+                   Year, Month, Day, Hour, Minute (UTC)<br>
+<input type=checkbox name="columns"
+        value="017 Year, Month, Day, Hour, Minute, Second">
+                   Year, Month, Day, Hour, Minute, Second (UTC)<br>
+<input type=checkbox name="columns"
+        value="003 Saturn RA & Dec" checked>
+                   Saturn RA (hours) & Dec (deg)<br>
+<input type=checkbox name="columns"
+        value="004 Saturn phase angle">
+                   Saturn phase angle (deg)<br>
+<input type=checkbox name="columns"
+        value="005 Ring opening angle to the Sun">
+                   Ring opening angle to the Sun (deg)<br>
+<input type=checkbox name="columns"
+        value="006 Ring opening angle to Earth">
+                   Ring opening angle to Earth (deg)<br>
+<input type=checkbox name="columns"
+        value="007 Sub-solar inertial longitude">
+                   Sub-solar inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+        value="008 Sub-Earth inertial longitude">
+                   Sub-Earth inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+        value="009 Sub-solar latitude & rotating longitude">
+                   Sub-solar latitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+        value="010 Sub-Earth latitude & rotating longitude">
+                   Sub-Earth latitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+        value="011 Saturn projected equatorial radius">
+                   Saturn projected equatorial radius (arcsec)<br>
+<input type=checkbox name="columns"
+        value="012 Sun-Saturn distance">
+                   Sun-Saturn distance (km)<br>
+<input type=checkbox name="columns"
+        value="013 Earth-Saturn distance">
+                   Earth-Saturn distance (km)<br>
+<input type=checkbox name="columns"
+        value="014 Lunar phase angle">
+                   Lunar phase angle (deg)<br>
+<input type=checkbox name="columns"
+        value="015 Sun-Saturn sky separation angle">
+                   Sun-Saturn sky separation angle (deg)<br>
+<input type=checkbox name="columns"
+        value="016 Moon-Saturn sky separation angle">
+                   Moon-Saturn sky separation angle (deg)
+</ul>
+<p>
+<a href="ephem2_sat_help.html#MOONS">Moon Columns:</a>
+<ul>
+<input type=checkbox name="mooncols"
+        value="001 RA & Dec" checked>
+                   RA (hours) & Dec (deg)<br>
+<input type=checkbox name="mooncols"
+        value="002 Offset RA & Dec from Saturn">
+                   Offset RA & Dec from Saturn (arcsec)<br>
+<input type=checkbox name="mooncols"
+        value="003 Sub-solar latitude & rotating longitude">
+                   Sub-solar latitude & rotating longitude (deg)*<br>
+<input type=checkbox name="mooncols"
+        value="004 Sub-Earth latitude & rotating longitude">
+                   Sub-Earth latitude & rotating longitude (deg)*
+<p>
+<input type=checkbox name="moons" value="001 Mimas (S1)">       Mimas (S1)
+<input type=checkbox name="moons" value="002 Enceladus (S2)">   Enceladus (S2)
+<input type=checkbox name="moons" value="003 Tethys (S3)">      Tethys (S3)
+<input type=checkbox name="moons" value="004 Dione (S4)">       Dione (S4)
+<input type=checkbox name="moons" value="005 Rhea (S5)">        Rhea (S5)
+<input type=checkbox name="moons" value="006 Titan (S6)">       Titan (S6)
+<input type=checkbox name="moons" value="007 Hyperion (S7)">    Hyperion (S7)
+<input type=checkbox name="moons" value="008 Iapetus (S8)">     Iapetus (S8)
+<input type=checkbox name="moons" value="009 Phoebe (S9)">      Phoebe (S9)
+<input type=checkbox name="moons" value="010 Janus (S10)">      Janus (S10)
+<input type=checkbox name="moons" value="011 Epimetheus (S11)"> Epimetheus (S11)
+<input type=checkbox name="moons" value="012 Helene (S12)">     Helene (S12)
+<input type=checkbox name="moons" value="013 Telesto (S13)">    Telesto (S13)
+<input type=checkbox name="moons" value="014 Calypso (S14)">    Calypso (S14)
+<input type=checkbox name="moons" value="015 Atlas (S15)">      Atlas (S15)
+<input type=checkbox name="moons" value="016 Prometheus (S16)"> Prometheus (S16)
+<input type=checkbox name="moons" value="017 Pandora (S17)">    Pandora (S17)
+<input type=checkbox name="moons" value="018 Pan (S18)">        Pan (S18)
+<input type=checkbox name="moons" value="032 Methone (S32)">    Methone (S32)
+<input type=checkbox name="moons" value="033 Pallene (S33)">    Pallene (S33)
+<input type=checkbox name="moons" value="034 Polydeuces (S34)"> Polydeuces (S34)
+<input type=checkbox name="moons" value="035 Daphnis (S35)">    Daphnis (S35)
+<input type=checkbox name="moons" value="049 Anthe (S49)">      Anthe (S49)
+<input type=checkbox name="moons" value="053 Aegaeon (S53)">    Aegaeon (S53)
+</ul>
+
+*Note: The rotation state of Hyperion is unavailable.
+<p>
+<input type=submit value="Generate table">
+<input type=reset value="Reset form">
+</form>
+
+<hr>
+<a href="viewer2_sat.html">Saturn Viewer</a> |
+<a href="tracker2_sat.html">Saturn Moon Tracker</a> |
+<a href="index.html">Node Tools</a> |
+<a href="/">Ring-Moon Systems Node Home</a>
+<p>
+Last updated 4 January 2016.

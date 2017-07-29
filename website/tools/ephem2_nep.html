@@ -1,0 +1,128 @@
+---
+layout: base
+layout_style: default
+---
+
+# Neptune Ephemeris Generator 2.6
+
+<form method="POST" action="/cgi-bin/tools/ephem2_nep.pl">
+
+<input type="hidden" name="ephem" value="005 NEP081 + NEP088 + DE430">
+
+<p>
+<b>2016-02-16</b>: Release 2.6 ported to a new server.
+</p>
+<p>
+Click <a href="ephem2_nep_help.html">here</a> for help, or click on
+individual highlighted items.
+Current ephemeris selection is <b>NEP081 + NEP088 + DE430</b>.
+<p>
+
+<a href="ephem2_nep_help.html#TIME">Time Limits</a>
+<ul>
+Start time: <input name="start"    size=30 maxlength=50><br>
+Stop time:  <input name="stop"     size=30 maxlength=50><br>
+Interval:   <input name="interval" size=6  maxlength=50>
+<select name="time_unit">
+  <option>          seconds
+  <option>          minutes
+  <option selected> hours
+  <option>          days
+</select>
+</ul>
+
+<a href="ephem2_nep_help.html#COLUMNS">Column Selection:</a>
+<ul>
+<input type=checkbox name="columns"
+    value="001 Modified Julian Date" checked>
+               Modified Julian Date (UTC)<br>
+<input type=checkbox name="columns"
+    value="002 Year, Month, Day, Hour, Minute">
+               Year, Month, Day, Hour, Minute (UTC)<br>
+<input type=checkbox name="columns"
+    value="017 Year, Month, Day, Hour, Minute, Second">
+               Year, Month, Day, Hour, Minute, Second (UTC)<br>
+<input type=checkbox name="columns"
+    value="003 Neptune RA & Dec" checked>
+               Neptune RA (hours) & Dec (deg)<br>
+<input type=checkbox name="columns"
+    value="004 Neptune phase angle">
+               Neptune phase angle (deg)<br>
+<input type=checkbox name="columns"
+    value="005 Ring opening angle to the Sun">
+               Ring opening angle to the Sun (deg)<br>
+<input type=checkbox name="columns"
+    value="006 Ring opening angle to Earth">
+               Ring opening angle to Earth (deg)<br>
+<input type=checkbox name="columns"
+    value="007 Sub-solar inertial longitude">
+               Sub-solar inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+    value="008 Sub-Earth inertial longitude">
+               Sub-Earth inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+    value="009 Sub-solar latitude & rotating longitude">
+               Sub-solar latitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+    value="010 Sub-Earth latitude & rotating longitude">
+               Sub-Earth latitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+    value="011 Neptune projected equatorial radius">
+               Neptune projected equatorial radius (arcsec)<br>
+<input type=checkbox name="columns"
+    value="012 Sun-Neptune distance">
+               Sun-Neptune distance (km)<br>
+<input type=checkbox name="columns"
+    value="013 Earth-Neptune distance">
+               Earth-Neptune distance (km)<br>
+<input type=checkbox name="columns"
+    value="014 Lunar phase angle">
+               Lunar phase angle (deg)<br>
+<input type=checkbox name="columns"
+    value="015 Sun-Neptune sky separation angle">
+               Sun-Neptune sky separation angle (deg)<br>
+<input type=checkbox name="columns"
+    value="016 Moon-Neptune sky separation angle">
+               Moon-Neptune sky separation angle (deg)
+</ul>
+<p>
+<a href="ephem2_nep_help.html#MOONS">Moon Columns:</a>
+<ul>
+<input type=checkbox name="mooncols"
+    value="001 RA & Dec" checked>
+               RA (hours) & Dec (deg)<br>
+<input type=checkbox name="mooncols"
+    value="002 Offset RA & Dec from Neptune">
+               Offset RA & Dec from Neptune (arcsec)<br>
+<input type=checkbox name="mooncols"
+    value="003 Sub-solar latitude & rotating longitude">
+               Sub-solar latitude & rotating longitude (deg)*<br>
+<input type=checkbox name="mooncols"
+    value="004 Sub-Earth latitude & rotating longitude">
+               Sub-Earth latitude & rotating longitude (deg)*
+<p>
+<input type=checkbox name="moons" value="001 Triton (N1)">   Triton (N1)
+<input type=checkbox name="moons" value="002 Nereid (N2)">   Nereid (N2)
+<input type=checkbox name="moons" value="003 Naiad (N3)">    Naiad (N3)
+<input type=checkbox name="moons" value="004 Thalassa (N4)"> Thalassa (N4)
+<input type=checkbox name="moons" value="005 Despina (N5)">  Despina (N5)
+<input type=checkbox name="moons" value="006 Galatea (N6)">  Galatea (N6)
+<input type=checkbox name="moons" value="007 Larissa (N7)">  Larissa (N7)
+<input type=checkbox name="moons" value="008 Proteus (N8)">  Proteus (N8)
+<input type=checkbox name="moons" value="014 S/2004 N 1 (N14)"> S/2004 N 1 (N14)
+</ul>
+
+*Note: The rotation states of Nereid and S/2004 N 1 are not currently available.
+
+<p>
+<input type=submit value="Generate table">
+<input type=reset value="Reset form">
+</form>
+
+<hr>
+<a href="viewer2_nep.html">Neptune Viewer</a> |
+<a href="tracker2_nep.html">Neptune Moon Tracker</a> |
+<a href="index.html">Node Tools</a> |
+<a href="/">Ring-Moon Systems Node Home</a>
+<p>
+Last updated 4 January 2016.

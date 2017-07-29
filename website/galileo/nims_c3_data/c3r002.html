@@ -1,0 +1,93 @@
+---
+layout: base
+layout_style: default
+---
+
+<div class="breadcrumb" style="background:white; border-width:0px; padding-left:0px">
+  <li><a href="/galileo/">Galileo</a></li>
+  <li><a href="index.html">NIMS C3 Encounter</a></li>
+  <li style="color:gray">C3R002</li>
+</div>
+
+![Galileo NIMS footprint for c3r002](c3r002.edr.jpg)
+
+#  Galileo NIMS Spectral Image C3R002
+
+##  Download the Image Cube:
+
+  * [Raw (EDR) data, PDS format](c3r002.edr) (174080 bytes) 
+  * Diagram, JPEG format: [256 x 256](c3r002.edr.jpg), (8202 bytes) 
+
+## PDS Label Information:
+
+<pre><code>
+    CCSD3ZF0000100000001NJPL3IF0PDS200000001 = SFDU_LABEL
+    
+    /* File Structure (512-byte records required by ISIS software) */
+    
+    RECORD_TYPE             = FIXED_LENGTH
+    RECORD_BYTES            = 512
+    FILE_RECORDS            = 340
+    LABEL_RECORDS           = 6
+    CHECKSUM                = 1268753
+    /* This is an unsigned 32-bit checksum of all bytes after label records */
+    FILE_STATE              = CLEAN
+    
+    /* Object pointers and descriptions */
+    
+    ^HEADER_TABLE           = 7
+    OBJECT                  = HEADER_TABLE
+     INTERCHANGE_FORMAT     = BINARY
+     COLUMNS                = UNK
+     ROWS                   = 1
+     ROW_BYTES              = 2048
+     ^STRUCTURE             = "EDRHDR2.FMT"
+    END_OBJECT              = HEADER_TABLE
+    
+    ^DATA_TABLE             = 11
+    OBJECT                  = DATA_TABLE
+     INTERCHANGE_FORMAT     = BINARY
+     COLUMNS                = UNK
+     ROWS                   = 165
+     ROW_BYTES              = 1024
+     ^STRUCTURE             = "EDRDATA2.FMT"
+    
+    /* Data description: general */
+    
+     DATA_SET_ID                    = "GO-J-NIMS-2-EDR-V2.0"
+     SPACECRAFT_NAME                = GALILEO_ORBITER
+     INSTRUMENT_NAME                = "NEAR INFRARED MAPPING SPECTROMETER"
+     INSTRUMENT_ID                  = NIMS
+     ^INSTRUMENT_DESCRIPTION        = "NIMSINST.TXT"
+    
+     TARGET_NAME                    = J_RINGS
+     MISSION_PHASE_NAME             = CALLISTO_3_ENCOUNTER
+     NATIVE_START_TIME              = "03689747.84"
+     NATIVE_STOP_TIME               = "03689749.80"
+    /* Event times are SPICE E-kernel functions of native times */
+    /* Earth received times are inclusive of all merged downlink data */
+     EARTH_RECEIVED_START_TIME      = 1996-12-12T01:03:07.273
+     EARTH_RECEIVED_STOP_TIME       = 1996-12-12T01:15:39.600
+    
+     SPACECRAFT_COMPRESSION_TYPE     = RICE
+    /* Most non-realtime NIMS data taken during Galileo phase-2 operations */
+    /* were compressed on the spacecraft using a lossless 8-option adaptive */
+    /* compression method devised by Robert Rice.  This EDR contains the */
+    /* original data after decompression on the ground. */
+     SPACECRAFT_COMPRESSION_RATIO   =  3.21
+     INSTRUMENT_THRESHOLD           = (30,30,30,0,30,29,28,28,29,28,32,34,31,31,32,30,29)
+    /* Per-detector threshold values for data return during Galileo phase-2 */
+    /* operation.  When thresholding is selected, detector DNs less than the */
+    /* threshold value for that detector are not returned; those DNs are */
+    /* therefore known to be less than that threshold value.  Detectors with */
+    /* zero threshold values are not thresholded. */
+    
+     PRODUCT_CREATION_TIME          = 1998-02-11T10:31:23Z
+     PRODUCT_ID                     = "C3RNMRING_01B.9"
+     NOTE = "EDR product provided by Multimission Image Processing
+                     Laboratory of JPL, CALTECH"
+    
+    END_OBJECT              = DATA_TABLE
+    
+    END
+</code></pre>

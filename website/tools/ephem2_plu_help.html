@@ -1,0 +1,163 @@
+---
+layout: base
+layout_style: default
+---
+
+# Pluto Ephemeris Generator Help
+
+This form enables you to generate a table listing useful information
+about the viewing geometry for Pluto and/or any of its moons as a
+function of time.  You are free to specify which of a variety of useful
+quantities to tabulate.  The file returned will contain a single header
+line describing each column, followed by one row of numbers for each
+time step. 
+
+<h2>Change History</h2>
+
+<b>2.5</b> (February 28, 2014): Original Pluto ephemeris generator released.
+
+<h2><a name="TIME">Time Limits</a></h2>
+The start and stop times (UTC) of the table can be entered in a variety
+of formats.  For example, the following all parse to 0:01:02 UTC on July
+4, 1976: 
+<ul>
+<li><tt>1976-JUL-04 00:01:02.00</tt></li>
+<li><tt>July 4, 1976 12:01:02 am</tt></li>
+<li><tt>12:01:02 am July 4, 1976</tt></li>
+<li><tt>1976-07-04T00:01:02Z</tt> (<i>PDS format</i>)</li>
+<li><tt>MJD 42963.00071759259</tt></li>
+<li><tt>JD 2442963.50071759259</tt></li>
+</ul>
+If you want the gory details of how times are interpreted, click
+<a href="time_formats.html">here</a>.
+<p>
+Enter the time interval to be used for the tabulation as a number in the box,
+and select the time unit from the choices provided.
+
+<h2><a name="COLUMNS">General Column Selection</a></h2>
+Click on the box to the left of each quantity or set of quantities that
+you wish to tabulate.  The order of the columns in the table will match
+the order listed on the form.  Possible selections are as follows: 
+<ul>
+<li>
+Modified Julian Date
+<ul>Adds a column containing the Modified Julian Date, a common method
+of designating dates and times in astronomy.  MJD is equal to the number
+of (possibly fractional) days elapsed since 0:00 UTC on 17 November
+1858. </ul> 
+</li><li>
+Year, Month, Day, Hour, Minute
+<ul>Adds five columns containing the UTC date (year, month, day) and time 
+(hours, minutes) as integers.</ul> 
+</li><li>
+Year, Month, Day, Hour, Minute, Second
+<ul>Adds six columns containing the UTC date (year, month, day) and time 
+(hours, minutes, seconds) as integers.</ul> 
+</li><li>
+Pluto RA and Dec
+<ul>Adds two columns containing the J2000 right ascension and 
+declination of Pluto.  RA is tabulated in units of hours; declinations 
+is in units of degrees.</ul>
+</li><li>
+Pluto phase angle
+<ul>Adds a column containing the phase angle of Pluto as seen from 
+Earth, in degrees.  This is equal to the Sun-Pluto-Earth angle.</ul>
+</li><li>
+Ring opening angle to Sun
+<ul>Adds a column containing the ring plane opening angle to the Sun, in
+degrees.  This is equivalent to the sub-solar latitude as seen from
+Pluto; it equals zero during a ring plane crossing.</ul> 
+</li><li> 
+Ring opening angle to Earth
+<ul>Adds a column containing the ring plane opening angle to the Earth, in
+degrees.  This is equivalent to the sub-Earth latitude as seen from
+Pluto; it equals zero during a ring plane crossing.</ul> 
+</li><li> 
+Sub-solar inertial longitude
+<ul>Adds a column containing the sub-solar longitude at Pluto, in
+degrees.  This is measured from the J2000 ascending node of the planet's
+equatorial plane.  Note that it is an inertial longitude, not measured
+in a frame rotating with the planet.</ul> 
+</li><li> 
+Sub-Earth inertial longitude
+<ul>Adds a column containing the sub-Earth longitude at Pluto, in
+degrees.  This is measured from the J2000 ascending node of the planet's
+equatorial plane.  Note that it is an inertial longitude, not measured
+in a frame rotating with the planet.</ul> 
+</li><li>
+Sub-solar latitude and rotating longitude
+<ul>Adds a pair of columns containing the sub-solar latitude and
+longitude at Pluto, in degrees.  This is measured in a frame rotating
+with the planet.</ul> 
+</li><li>
+Sub-Earth latitude and rotating longitude
+<ul>Adds a pair of columns containing the sub-Earth latitude and
+longitude at Pluto, in degrees.  This is measured in a frame rotating
+with the planet.</ul> 
+</li><li>
+Pluto projected equatorial radius
+<ul>Adds a column containing the projected equatorial radius of Pluto 
+as seen from Earth, in units of arcseconds.</ul>
+</li><li>
+Sun-Pluto distance
+<ul>Adds a column containing the Sun-Pluto distance, in km.</ul>
+</li><li>
+Earth-Pluto distance
+<ul>Adds a column containing the Earth-Pluto distance, in km.</ul> 
+</li><li>
+Lunar phase angle
+<ul>Adds a column containing the phase angle of the Moon at the 
+specified time, in degrees.  A value near zero corresponds to a full 
+moon; a value near 180 corresponds to a new moon.</ul>
+</li><li>
+Sun-Pluto sky separation angle
+<ul>Adds a column containing the angular separation on the sky from
+Pluto to the Sun, in degrees.  A Sun-Pluto value near zero
+corresponds to solar conjunction; a value near 180 corresponds to
+opposition.</ul> 
+</li><li>
+Moon-Pluto sky separation angle
+<ul>Adds a column containing the angular separation on the sky
+from Pluto to the Moon, in degrees.</ul>
+</li>
+</ul>
+
+<h2><a name="MOONS">Moon Columns</a></h2>
+You may also include the positions of any set of Pluto's moons in the
+table.  Up to four pairs of quantities can be tabulated for each 
+selected moon: 
+<ul>
+<li>
+RA and dec
+<ul>Adds a pair of columns containing the J2000 right ascension and 
+declination for each selected moon.  RA values are given in units of 
+hours; dec values are given in degrees.</ul>
+</li><li>
+Offset RA and dec
+<ul>Adds a pair of columns containing the positional offset of each moon
+from the center of the planet.  Values are given in units of arcseconds,
+where the first value is the offset in the direction of increasing J2000 
+RA and the second is in the direction of increasing dec.</ul>
+</li><li>
+Sub-solar latitude and rotating longitude
+<ul>Adds a pair of columns containing the sub-solar latitude and
+longitude on the selected moon, in degrees.  These are measured in a frame
+rotating with the body.</ul> 
+</li><li>
+Sub-Earth latitude and rotating longitude
+<ul>Adds a pair of columns containing the sub-Earth latitude and
+longitude on the selected moon, in degrees.  These are measured in a frame
+rotating with the body.</ul> 
+</ul>
+<p>
+Finally, click on the box to the left of each moon that you wish to
+include in the table.  Note that it is not necessary to include any 
+moon columns at all.
+
+<hr>
+<a href="ephem2_nep.html">Pluto Ephemeris Generator Form</a> |
+<a href="index.html">Ring-Moon Systems Node Tools</a> |
+<a href="/">Ring-Moon Systems Node Home</a>
+<p>
+Last updated 28 February 2014.
+<p>

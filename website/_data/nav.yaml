@@ -1,18 +1,24 @@
 # all internal links must end in a / 
 # so every href field that points inside
 # this drives the nav's active styles when on a matching page
-- title: Cassini News
-  href: /cassini/news/
-  submenu: 
+- title: Node Resources
+  href: /
+  submenu:
 
-    - title: Cassini Mission (JPL)
-      href: https://saturn.jpl.nasa.gov/
+    - title: Browse and Download Data
+      href: /webapps/viewmaster/
 
-    - title: Press Release Images
-      href: /saturn/cassini/
+    - title: Search for Data (OPUS)
+      href: /search/
 
-    - title: Data and Information
-      href: /cassini/
+    - title: Image Galleries
+      href: /galleries.html
+
+    - title: Ephemeris Tools
+      href: /tools/
+
+    - title: ROSES Proposal Support
+      href: /roses/
 
 - title: Ring-Moon Systems
   href: /
@@ -30,13 +36,15 @@
     - title: Neptune
       href: /neptune/
 
+    - title: Neptune
+      href: /neptune/
+
+    - title: Pluto
+      href: /pluto/
 
 - title: Missions and Data
   href: /
   submenu:
-
-    - title: OPUS (Search)
-      href: /search/
 
     - title: Cassini
       href: /cassini/
@@ -68,42 +76,7 @@
     - title: Resonances
       href: /resonance/
 
-    - title: ROSES Support
-      href: /roses/
-
-- title: Downloads  
-  href: /
-  submenu: 
-
-    - title: Data volumes
-      href: /webapps/link/volumes
-
-    - title: Compressed archives
-      href: /webapps/link/archives-volumes
-
-    - title: Calibrated volumes
-      href: /webapps/link/calibrated
-
-    - title: Compressed calibrated vols
-      href: /webapps/link/archives-calibrated
-
-    - title: Previews/Thumbnails
-      href: /webapps/link/previews
-
-- title: Resources
-  href: /
-  submenu:
-
-    - title: Tools
-      href: /tools/
-
-    - title: Toolkits
-      href: /toolkits/
-
-    - title: Glossary
-      href: /glossary.html
-
-- title: Contacts  
+- title: Contacts
   href: /
   submenu:
 
@@ -112,6 +85,9 @@
 
     - title: Mitch Gordon
       href: http://www.seti.org/users/mitchell-gordon
+
+    - title: Matt Tiscareno
+      href: http://www.seti.org/users/matthew-tiscareno
 
     - title: Lisa Ballard
       href: /ballard/

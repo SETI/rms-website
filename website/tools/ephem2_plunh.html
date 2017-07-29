@@ -1,0 +1,134 @@
+---
+layout: base
+layout_style: default
+---
+
+# Pluto Ephemeris Generator 2.6 for New Horizons
+
+<form method="POST" action="/cgi-bin/tools/ephem2_plunh.pl">
+
+<input type="hidden" name="ephem" value="005 PLU055 + DE432">
+
+<p>
+<b>2016-02-16</b>: Release 2.6.
+Version number was chosen for consistency with other tools.
+</p>
+<p>
+Click <a href="ephem2_plunh_help.html">here</a> for help, or click on
+individual highlighted items.
+Current ephemeris selection is <b>PLU055 + DE432</b>.
+</p>
+
+<a href="ephem2_plunh_help.html#TIME">Time Limits</a>
+<ul>
+Start time: <input name="start"    size=30 maxlength=50><br>
+Stop time:  <input name="stop"     size=30 maxlength=50><br>
+Interval:   <input name="interval" size=6  maxlength=50>
+<select name="time_unit">
+  <option>          seconds
+  <option>          minutes
+  <option selected> hours
+  <option>          days
+</select>
+</ul>
+
+<a href="ephem2_plunh_help.html#COLUMNS">Column Selection:</a>
+<ul>
+<input type=checkbox name="columns"
+    value="002 Year, Month, Day, Hour, Minute" checked>
+               Year, Month, Day, Hour, Minute (UTC)<br>
+<input type=checkbox name="columns"
+    value="015 Year, Month, Day, Hour, Minute, Second">
+               Year, Month, Day, Hour, Minute, Second (UTC)<br>
+<input type=checkbox name="columns"
+    value="001 Year, DOY, Hour, Minute">
+               Year, DOY, Hour, Minute (UTC)<br>
+<input type=checkbox name="columns"
+    value="014 Year, DOY, Hour, Minute, Second">
+               Year, DOY, Hour, Minute, Second (UTC)<br>
+<input type=checkbox name="columns"
+    value="003 Modified Julian Date">
+               Modified Julian Date (UTC)<br>
+<input type=checkbox name="columns"
+    value="004 Spacecraft-Pluto distance">
+               Spacecraft-Pluto distance (km)<br>
+<input type=checkbox name="columns"
+    value="005 Pluto phase angle">
+               Pluto phase angle (deg)<br>
+<input type=checkbox name="columns"
+    value="006 Ring opening angle to Spacecraft">
+               Ring opening angle to Spacecraft (deg)<br>
+<input type=checkbox name="columns"
+    value="007 Ring opening angle to the Sun">
+               Ring opening angle to the Sun (deg)<br>
+<input type=checkbox name="columns"
+    value="008 Sub-spacecraft inertial longitude">
+               Sub-spacecraft inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+    value="009 Sub-solar inertial longitude">
+               Sub-solar inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+    value="010 Sub-spacecraft planetocentric latitude & rotating longitude">
+               Sub-spacecraft planetocentric latitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+    value="011 Sub-solar planetocentriclatitude & rotating longitude">
+               Sub-solar planetocentriclatitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+    value="012 Sun-Pluto distance">
+               Sun-Pluto distance (km)<br>
+<input type=checkbox name="columns"
+    value="013 Pluto RA & Dec">
+               Pluto RA (hours) & Dec (deg)<br>
+<input type=checkbox name="columns"
+    value="016 Earth RA & Dec">
+               Earth RA (hours) & Dec (deg)<br>
+<input type=checkbox name="columns"
+    value="017 Sun RA & Dec">
+               Sun RA (hours) & Dec (deg)<br>
+</ul>
+<p>
+<a href="ephem2_plunh_help.html#MOONS">Moon Columns:</a>
+<ul>
+<input type=checkbox name="mooncols"
+    value="001 Spacecraft-Satellite distance">
+               Spacecraft-Satellite distance (km)<br>
+<input type=checkbox name="mooncols"
+    value="002 Satellite phase angle">
+               Satellite phase angle (deg)<br>
+<input type=checkbox name="mooncols"
+    value="003 Sub-spacecraft planetocentric latitude & rotating longitude">
+               Sub-spacecraft planetocentric latitude & rotating longitude (deg)*<br>
+<input type=checkbox name="mooncols"
+    value="004 Sub-solar planetocentric latitude & rotating longitude">
+               Sub-solar planetocentric latitude & rotating longitude (deg)*<br>
+<input type=checkbox name="mooncols"
+    value="005 RA & Dec">
+               RA (hours) & Dec (deg)<br>
+<input type=checkbox name="mooncols"
+    value="006 Offset RA & Dec from Pluto">
+               Offset RA & Dec from Pluto (deg)<br>
+<input type=checkbox name="mooncols"
+    value="007 Orbit opening from Observer">
+               Orbit opening from Observer (deg)<br>
+<p>
+<input type=checkbox name="moons" value="001 Charon (P1)">   Charon (P1)
+<input type=checkbox name="moons" value="002 Nix (P2)">      Nix (P2)
+<input type=checkbox name="moons" value="003 Hydra (P3)">    Hydra (P3)
+<input type=checkbox name="moons" value="004 Kerberos (P4)"> Kerberos (P4)
+<input type=checkbox name="moons" value="005 Styx (P5)">     Styx (P5)
+</ul>
+
+*Note: The rotation states of Styx,
+Nix, Kerberos and Hydra are not currently available.
+
+<p>
+<input type=submit value="Generate table">
+<input type=reset value="Reset form">
+</form>
+
+<hr>
+<a href="viewer2_plunh.html">Pluto Viewer for New Horizons</a> |
+<a href="index.html">Node Tools</a> |
+<a href="/">Ring-Moon Systems Node Home</a>
+<p>
+Last updated 4 January 2016.

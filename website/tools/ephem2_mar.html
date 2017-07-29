@@ -1,0 +1,119 @@
+---
+layout: base
+layout_style: default
+---
+
+# Mars Ephemeris Generator 2.6
+
+<form method="POST" action="/cgi-bin/tools/ephem2_mar.pl">
+
+<input type="hidden" name="ephem" value="007 MAR097 + DE430">
+
+<p>
+<b>2016-02-16</b>: Release 2.6 ported to a new server.
+</p>
+<p>
+Click <a href="ephem2_mar_help.html">here</a> for help, or click on
+individual highlighted items.
+Current ephemeris selection is <b>MAR097 + DE430</b>.
+<p>
+
+<a href="ephem2_mar_help.html#TIME">Time Limits</a>
+<ul>
+Start time: <input name="start"    size=30 maxlength=50><br>
+Stop time:  <input name="stop"     size=30 maxlength=50><br>
+Interval:   <input name="interval" size=6  maxlength=50>
+<select name="time_unit">
+  <option>          seconds
+  <option>          minutes
+  <option selected> hours
+  <option>          days
+</select>
+</ul>
+
+<a href="ephem2_mar_help.html#COLUMNS">Column Selection:</a>
+<ul>
+<input type=checkbox name="columns"
+    value="001 Modified Julian Date" checked>
+               Modified Julian Date (UTC)<br>
+<input type=checkbox name="columns"
+    value="002 Year, Month, Day, Hour, Minute">
+               Year, Month, Day, Hour, Minute (UTC)<br>
+<input type=checkbox name="columns"
+    value="017 Year, Month, Day, Hour, Minute, Second">
+               Year, Month, Day, Hour, Minute, Second (UTC)<br>
+<input type=checkbox name="columns"
+    value="003 Mars RA & Dec" checked>
+               Mars RA (hours) & Dec (deg)<br>
+<input type=checkbox name="columns"
+    value="004 Mars phase angle">
+               Mars phase angle (deg)<br>
+<input type=checkbox name="columns"
+    value="005 Ring opening angle to the Sun">
+               Ring opening angle to the Sun (deg)<br>
+<input type=checkbox name="columns"
+    value="006 Ring opening angle to Earth">
+               Ring opening angle to Earth (deg)<br>
+<input type=checkbox name="columns"
+    value="007 Sub-solar inertial longitude">
+               Sub-solar inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+    value="008 Sub-Earth inertial longitude">
+               Sub-Earth inertial longitude (deg, J2000)<br>
+<input type=checkbox name="columns"
+    value="009 Sub-solar latitude & rotating longitude">
+               Sub-solar latitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+    value="010 Sub-Earth latitude & rotating longitude">
+               Sub-Earth latitude & rotating longitude (deg)<br>
+<input type=checkbox name="columns"
+    value="011 Mars projected equatorial radius">
+               Mars projected equatorial radius (arcsec)<br>
+<input type=checkbox name="columns"
+    value="012 Sun-Mars distance">
+               Sun-Mars distance (km)<br>
+<input type=checkbox name="columns"
+    value="013 Earth-Mars distance">
+               Earth-Mars distance (km)<br>
+<input type=checkbox name="columns"
+    value="014 Lunar phase angle">
+               Lunar phase angle (deg)<br>
+<input type=checkbox name="columns"
+    value="015 Sun-Mars sky separation angle">
+               Sun-Mars sky separation angle (deg)<br>
+<input type=checkbox name="columns"
+    value="016 Moon-Mars sky separation angle">
+               Moon-Mars sky separation angle (deg)
+</ul>
+<p>
+<a href="ephem2_mar_help.html#MOONS">Moon Columns:</a>
+<ul>
+<input type=checkbox name="mooncols"
+    value="001 RA & Dec" checked>
+               RA (hours) & Dec (deg)<br>
+<input type=checkbox name="mooncols"
+    value="002 Offset RA & Dec from Mars">
+               Offset RA & Dec from Mars (arcsec)<br>
+<input type=checkbox name="mooncols"
+    value="003 Sub-solar latitude & rotating longitude">
+               Sub-solar latitude & rotating longitude (deg)<br>
+<input type=checkbox name="mooncols"
+    value="004 Sub-Earth latitude & rotating longitude">
+               Sub-Earth latitude & rotating longitude (deg)
+<p>
+<input type=checkbox name="moons" value="001 Phobos (M1)"> Phobos (M1)
+<input type=checkbox name="moons" value="002 Deimos (M2)"> Deimos (M2)
+</ul>
+
+<p>
+<input type=submit value="Generate table">
+<input type=reset value="Reset form">
+</form>
+
+<hr>
+<a href="viewer2_mar.html">Mars Viewer</a> |
+<a href="tracker2_mar.html">Martian Moon Tracker</a> |
+<a href="index.html">Node Tools</a> |
+<a href="/">Ring-Moon Systems Node Home</a>
+<p>
+Last updated 4 January 2016.
