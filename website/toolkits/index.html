@@ -5,6 +5,35 @@ layout_style: default
 
 # Ring-Moon Systems Node Toolkits
 
+### Open Source Python on GitHub
+
+We provide a variety of useful tools in our
+GitHub repository.
+Browse the entire collection at:
+* [SETI/pds-tools](https://github.com/SETI/pds-tools)
+
+All are written in Python 2.7. Download these files and put them in a directory
+that is part of your PYTHONPATH environment variable.
+
+Name | Description | Also requires
+---|---
+[cspice](https://github.com/SETI/pds-tools/tree/master/cspice)* | Python interface to the SPICE toolkit | [CSPICE](//naif.jpl.nasa.gov/naif/toolkit_C.html), [SWIG](http://www.swig.org)
+[gravity](https://github.com/SETI/pds-tools/blob/master/gravity.py) | Tools for calculating orbital elements around an oblate planet |
+[julian](https://github.com/SETI/pds-tools/blob/master/julian.py) | Calendar time and date calculations | [julian_dateparser.py](https://github.com/SETI/pds-tools/blob/master/julian_dateparser.py)
+[pdsparser](https://github.com/SETI/pds-tools/blob/master/pdsparser.py) | Read and manipulate PDS3 label files |
+[pdstable](https://github.com/SETI/pds-tools/blob/master/pdstable.py) | Read and manipulate ASCII tables with PDS3 labels | [julian](https://github.com/SETI/pds-tools/blob/master/julian.py), [julian_dateparser.py](https://github.com/SETI/pds-tools/blob/master/julian_dateparser.py), [pdsparser](https://github.com/SETI/pds-tools/blob/master/pdsparser.py)
+[picmaker](https://github.com/SETI/pds-tools/blob/master/picmaker.py) | Creates views of PDS images in many formats such as JPEG | [colornames](https://github.com/SETI/pds-tools/blob/master/colornames.py), [tiff16](https://github.com/SETI/pds-tools/blob/master/tiff16.py), [pdsparser](https://github.com/SETI/pds-tools/blob/master/pdsparser.py), [tabulation](https://github.com/SETI/pds-tools/blob/master/tabulation.py)
+[solar](https://github.com/SETI/pds-tools/blob/master/solar.py) | Tabulates the solar spectrum vs. wavelength | [tabulation](https://github.com/SETI/pds-tools/blob/master/tabulation.py)
+[textkernel](https://github.com/SETI/pds-tools/blob/master/textkernel.py) | Reads SPICE text kernels, creating a Python dictionary | [julian](https://github.com/SETI/pds-tools/blob/master/julian.py), [julian_dateparser.py](https://github.com/SETI/pds-tools/blob/master/julian_dateparser.py)
+[tiff16](https://github.com/SETI/pds-tools/blob/master/tiff16.py) | Reads and writes 16-bit TIFF files |
+[vax](https://github.com/SETI/pds-tools/blob/master/vax.py) | Converts Vax-format floats to IEEE |
+[vicar](https://github.com/SETI/pds-tools/blob/master/vicar.py) | Reads and manipulates [VICAR](http://www-mipl.jpl.nasa.gov/external/VICAR_file_fmt.pdf) format files and their labels |
+
+[*] Although our cspice library is well maintained, we recommend [spiceypy](https://github.com/AndrewAnnex/SpiceyPy)
+as a more widely used alternative.
+
+### Legacy C Libraries
+
 <div class = "alert alert-danger">
 These toolkits are no longer supported and may in some cases no longer compile
 without modification.
@@ -24,7 +53,7 @@ instructions and scripts.
 **Note**: This software is licensed under the terms of the Academic Free License v. 3.0.
 See <//opensource.org/licenses/afl-3.0.php> for further information. 
 
-## Kepler Library
+#### Kepler Library
 
 A set of routines for performing calculations related to orbital motion around
 an oblate planet. Routines can be used to predict satellite locations and to
@@ -34,7 +63,7 @@ calculate arbitrary resonance locations in planetary rings.
   * [Browse](kepler_102/) the delivery package including source code. 
   * Go to the [software order form](order.html). (It's free!) 
 
-## Julian Library
+#### Julian Library
 
 A set of routines for manipulating dates and times. It includes routines for
 conversions between Universal Time (UTC), Atomic Time (TAI), and Ephemeris
@@ -45,7 +74,7 @@ dates, and interprets or formats dates and times in a variety of styles.
   * [Browse](julian_133/) the delivery package including source code. 
   * Go to the [software order form](order.html). 
 
-## Profile Library
+#### Profile Library
 
 A set of object-oriented routines for manipulating ring occultation data sets.
 Tools are provided for reading PDS-labeled data files, applying geometry and
@@ -64,6 +93,6 @@ you use version 1.3.1, as optimized by the Ring-Moon Systems Node for this toolk
   * [Browse](oal_131/) the OAL delivery package. 
   * Go to the [software order form](order.html). 
 
-## Toolkit Order Form
+#### Toolkit Order Form
 
 Click [here](order.html) to download any or all of the toolkits.

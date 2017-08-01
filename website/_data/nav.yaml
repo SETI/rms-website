@@ -1,24 +1,37 @@
 # all internal links must end in a / 
 # so every href field that points inside
 # this drives the nav's active styles when on a matching page
+- title: Planetary Data
+  href: /
+  submenu:
+
+    - title: Search (OPUS)
+      href: /search/
+
+    - title: Browse Data Volumes
+      href: /webapps/viewmaster/volumes/
+
+    - title: Browse Metadata
+      href: /webapps/viewmaster/metadata/
+
+    - title: Quick Downloads
+      href: /webapps/viewmaster/archives-volumes/
+
 - title: Node Resources
   href: /
   submenu:
 
-    - title: Browse and Download Data
-      href: /webapps/viewmaster/
-
-    - title: Search for Data (OPUS)
-      href: /search/
-
     - title: Image Galleries
       href: /galleries.html
+
+    - title: ROSES Proposal Support
+      href: /roses/
 
     - title: Ephemeris Tools
       href: /tools/
 
-    - title: ROSES Proposal Support
-      href: /roses/
+    - title: Open Source
+      href: /toolkits/
 
 - title: Ring-Moon Systems
   href: /
