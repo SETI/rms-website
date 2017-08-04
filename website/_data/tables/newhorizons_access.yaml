@@ -20,13 +20,13 @@
 
         - table_row:
             id: NHLALO_1001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Raw LORRI
 
         - table_row:
             id: NHLALO_2001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Calib LORRI
 
@@ -49,13 +49,13 @@
 
         - table_row:
             id: NHJULO_1001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Raw LORRI
 
         - table_row:
             id: NHJULO_2001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Calib LORRI
 
@@ -78,13 +78,13 @@
 
         - table_row:
             id: NHPCLO_1001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Raw LORRI
 
         - table_row:
             id: NHPCLO_2001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Calib LORRI
 
@@ -97,13 +97,13 @@
 
         - table_row:
             id: NHPCMV_1001
-            base_dir:  NHxxMV_xxxx_lien_resolution
+            base_dir:  NHxxMV_xxxx
             liens: not released
             description: Raw MVIC
 
         - table_row:
             id: NHPCMV_2001
-            base_dir:  NHxxMV_xxxx_lien_resolution
+            base_dir:  NHxxMV_xxxx
             liens: not released
             description: Calib MVIC
 
@@ -114,24 +114,24 @@
 
         - table_row:
             id: NHPELO_1001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Raw LORRI
 
         - table_row:
             id: NHPELO_2001
-            base_dir:  NHxxLO_xxxx_lien_resolution
+            base_dir:  NHxxLO_xxxx
             liens: Open Liens
             description: Calib LORRI
 
         - table_row:
             id: NHPEMV_1001
-            base_dir:  NHxxMV_xxxx_lien_resolution
+            base_dir:  NHxxMV_xxxx
             liens: Open Liens
             description: Raw MVIC
 
         - table_row:
             id: NHPEMV_2001
-            base_dir:  NHxxMV_xxxx_lien_resolution
+            base_dir:  NHxxMV_xxxx
             liens: Open Liens
             description: Calib MVIC

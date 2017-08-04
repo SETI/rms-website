@@ -65,6 +65,8 @@ to download during the late night/early morning hours California time.
 
 {% assign table_name = "Cassini CIRS Original Releases" %}
 {% assign table_desc = "A listing of Cassini CIRS Original Releases" %}
+{% assign table_data = site.data.tables['cassini_cirs_access_orig_cruise'] %}
+{% include data_table.html %}
 {% assign table_data = site.data.tables['cassini_cirs_access_orig'] %}
 {% include data_table.html %}
 

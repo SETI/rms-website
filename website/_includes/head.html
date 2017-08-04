@@ -9,8 +9,8 @@
               {% comment %} This is the homepage {% endcomment %}
               {% assign page_title = site.title | append: ' Home' %}
           {% else %}
-            {% assign page_title = page.url | split:'/' | join:' ' | upcase | replace: '.HTML','' | normalize_whitespace %}
-            {% assign page_title = site.title | append: ' -' | append: page_title %}
+            {% assign page_title = page.url | replace: '.HTML','' | replace: '.html','' | normalize_whitespace %}
+            {% assign page_title = site.title | append: ' - ' | append: page_title %}
 
           {% endif %}
 
