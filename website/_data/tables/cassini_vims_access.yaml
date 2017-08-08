@@ -8,7 +8,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release July 1, 2017
+    - Next Release October 1, 2017
 
 # Edit Below:
 - section:  
@@ -651,3 +651,23 @@
             clock_range: 1843195446 to 1845993296 
             date_range: 2016-05-29 to 2016-06-30  
 
+
+- section: 
+    heading1: July 1, 2017
+
+    section_rows: 
+
+        - table_row: 
+            id: COVIMS_0081
+            clock_range: 1846032724 to 1850137325 
+            date_range: 2016-07-01 to 2016-08-17  
+
+        - table_row: 
+            id: COVIMS_0082
+            clock_range: 1850219010 to 1852624924 
+            date_range: 2016-08-18 to 2016-09-15  
+
+        - table_row: 
+            id: COVIMS_0083
+            clock_range: 1852626266 to 1853973656 
+            date_range: 2016-09-15 to 2016-09-30  
