@@ -14,6 +14,9 @@
 
           {% endif %}
 
+      {% else %}
+        {% assign page_title = site.title | append: ' - ' | append: page.title %}
+
       {% endif %}
 
   <title>{{ page_title }}</title>
