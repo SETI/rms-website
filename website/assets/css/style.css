@@ -581,7 +581,6 @@ td.colgroup-seperator {
 }
 
 
-
 /* gallery pages */
 /* like http://staging.pds-rings.seti.org/jupiter/galileo/ */
 .gallery .row {
@@ -592,7 +591,7 @@ td.colgroup-seperator {
   height: 100%;
 }
 .gallery h1 {
-  margin: 0 15px;
+  margin: 10px 15px;
 }
 .thumbnail {
   padding:0;
@@ -607,21 +606,15 @@ td.colgroup-seperator {
 .thumbnail_img {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     height: 190px;
-    overflow: hidden
-
+    overflow: hidden;
 }
 .thumbnail_img img {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%
 }
-
-
-
-
-
 .thumbnail .caption {
   padding-bottom: 20px;
 }
@@ -631,7 +624,6 @@ td.colgroup-seperator {
 .thumbnail .caption p {
   font-size:1.2em;
 }
-
 
 
 /* footer */
