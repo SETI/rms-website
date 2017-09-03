@@ -1,31 +1,36 @@
 ---
 layout: base
 ---
-<div class="gallery row">
+{% if img.alt %}
+  {% assign alt = img.alt %}
+{% else %}
+  {% assign alt = img.title %}
+{% endif %}
+
+<div class = "gallery">
 
   <h1>{{ page.title }}</h1>
 
+  <div class="row is-flex">
+
   {% for img in page.gallery %}
 
-  <div class="col col-sm-6 col-md-4">
-
-  <div class="thumbnail">
-
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
       <div class = "thumbnail_img">
         <a href="{{ img.href }}">
           <img src="{{ img.src }}"
-               alt="{{ img.alt }}">
+               alt="{{ alt }}">
         </a>
       </div>
 
       <div class="caption">
           <h2>{{ img.title }}</h2>
           <p>{{ img.caption }}</p>
-      </div><!-- /caption -->
+      </div>
+    </div><!-- /col -->
 
-   </div><!-- /col- -->
-
- </div> <!-- /col -->
 
   {% endfor %}
 </div><!-- /row -->
+
+</div><!-- /gallery -->

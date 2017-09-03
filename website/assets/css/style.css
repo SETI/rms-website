@@ -583,47 +583,103 @@ td.colgroup-seperator {
 
 /* gallery pages */
 /* like http://staging.pds-rings.seti.org/jupiter/galileo/ */
+/* flex bits via https://scotch.io/quick-tips/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height */
 .gallery .row {
-  display:flex;
+  display: flex;
+  flex-wrap: wrap;
 }
-.gallery .col {
-  flex: 1; /* additionally, equal width */
-  height: 100%;
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+    margin-right: -10px; /* fixes layout break in Safari desktop */
 }
+
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand.
+* Use a preprocesser with autoprefixing.
+*/
+}
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+
 .gallery h1 {
-  margin: 10px 15px;
+  margin-bottom: 30px;
 }
-.thumbnail {
-  padding:0;
-  margin:0;
-  margin:20px 0;
-  overflow: hidden;
-}
-.thumbnail .title h2 {
-  font-size: 2em;
+@media (max-width: 415px) {
+  .gallery h1 {
+    text-align: center;
+  }
 }
 
 .thumbnail_img {
+    max-height: 160px;
     display: flex;
-    justify-content: center;
-    align-items: top;
-    height: 190px;
+    justify-content:flex-start;
+    align-items: center;
     overflow: hidden;
 }
+@media (min-width: 1300px) {
+  .thumbnail_img {
+    max-height: 200px;
+  }
+}
+@media (min-width: 1800px) {
+  .thumbnail_img {
+    max-height: 280px;
+  }
+}
+@media (max-width: 415px) {
+  .thumbnail_img {
+    max-height: 240px;
+  }
+}
+
 .thumbnail_img img {
-    flex-shrink: 0;
     min-width: 100%;
-    min-height: 100%
+    min-height: 100%;
 }
-.thumbnail .caption {
-  padding-bottom: 20px;
+
+
+.gallery .caption {
+  padding: 0 5px 20px 10px;
 }
-.thumbnail .caption h2 {
+@media (max-width: 415px) {
+  .gallery .caption {
+    padding: 0 5px 20px 0;
+  }
+}
+
+.gallery .caption h2 {
   font-size:2em;
 }
-.thumbnail .caption p {
-  font-size:1.2em;
+@media (max-width: 415px) {
+  .gallery .caption h2 {
+    font-size:2.2em;
+  }
+
 }
+
+.gallery .caption p {
+  font-size:1.1em;
+}
+@media (max-width: 415px) {
+  .gallery .caption p {
+    font-size: 2.1em;
+  }
+}
+
+
 
 
 /* footer */
