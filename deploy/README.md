@@ -10,7 +10,7 @@ _Note:_ If this is your first time, see **Initial Setup** below.
 Log into the webserver, pull the latest version from github, activate the virtualenv, and run the script:
 
     cd ~/ringsnode_website
-    git pull
+    git pull origin production 
     cd deploy/
     source venv/bin/activate
     fab deploy
