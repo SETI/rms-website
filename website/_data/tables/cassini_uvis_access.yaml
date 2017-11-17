@@ -8,7 +8,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release October 1, 2017
+    - Next Release January 1, 2018
 
 # Edit Below:
 - section: 
@@ -541,3 +541,13 @@
             id: COUVIS_0056 
             clock_range: 1846029873 to 1853974816 
             date_range: 2016-07-01 to 2016-09-30
+
+- section: 
+    heading2: October 1, 2017 Release
+
+    section_rows: 
+
+        - table_row: 
+            id: COUVIS_0057 
+            clock_range: 1853975456 to 1861772866 
+            date_range: 2016-10-01 to 2016-12-30
