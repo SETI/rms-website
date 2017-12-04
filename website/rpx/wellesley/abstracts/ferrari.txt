@@ -1,0 +1,23 @@
+Azimuthal distribution of arcs and clumps in the F ring of Saturn during
+August 1995 ring plane crossing.
+
+C. Ferrari (Europa, Univ. Paris 7), A. Brahic (Europa, Univ. Paris 7),
+S. Charnoz (Europa, Univ. Paris 7), P. Thebault (Europa, Univ. Paris 7) and
+F. Roddier (IFA, Univ. of Hawaii).
+
+Ground-based observations of the August 1995 Saturn's ring plane crossing
+with the University of Hawaii Adaptive Optics System have led to the discovery
+of several new objects orbiting around the planet. Their orbits are known
+with variable accuracy but most of them are compatible with the F ring. Some
+of these objects are clearly azimuthally elongated structures, possible arcs, 
+the others are not resolved. Planetary arcs are swarms of clumps, which largest
+particles are most probaly unresolved kilometer-sized objects (Ferrari and 
+Brahic, 1992, 1994, 1997). Are these objects evolving with time ? On which 
+timescale ? The F ring arcs have been first observed during the Voyager 
+encounters. New constraints on the evolution of the brightests of them, on a 
+two-weeks timescale, at the epoch of the Voyager 2 encounter, are presented.
+A revised orbit of the F ring is used to derive an azimuthal distribution of the 
+newly discovered objects at August 1995 epoch. This is compared with the 
+azimuthal profile of the F ring observed three months later during the Sun ring 
+plane crossing (Nicholson et al., 1996). The possible nature and lifetime of 
+these new objects is discussed.

@@ -1,0 +1,7 @@
+gallery:
+
+  - title: {{ title }}
+    href: {{ href }}
+    src: {{ src }}
+    alt: {{ alt }}
+    caption: {{ caption }}

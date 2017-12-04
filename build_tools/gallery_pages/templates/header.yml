@@ -1,0 +1,8 @@
+---
+layout: gallery
+layout_style: default
+title: {{ page_title }}
+
+{% include gallery.yml %}
+
+---

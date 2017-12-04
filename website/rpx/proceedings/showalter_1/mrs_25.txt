@@ -1,0 +1,53 @@
+I have produced a radial profile that incorporates a simplified version
+of the dynamics of micron-sized particles (see postscript file
+"hamilton.ps").  The eccentricity is assumed to vary sinusoidally under
+the combined influences of J2, electromagnetism, and radiation pressure.
+The model is rather crude in that it includes only a single particle
+size, whereas in reality the dynamics is very sensitive to particle size
+(1.0 and 0.8 micron grains follow quite different orbits). 
+
+Dashed Curve: Fit to observations - Mark Showalter's power law 
+              (proportional to (a/Re)^-7 inward and (a/Re)^15 
+              where Re=3.95)
+Dotted Curves: Theoretical contributions of individual satellites
+               From the Hamilton/Burns model with the parameters
+               given below
+Solid Curve: Calculated E ring radial profile (Sum of the dotted
+             curves).
+
+Parameters adopted for this fit:
+
+  Source      Source Efficiency  Max. Eccentricity
+  Mimas            0.1                0.4
+  Enceladus        1.0                0.4
+  Tethys           0.1                0.4
+  Dione            0.1                0.4
+  Rhea             0.01               0.4
+
+These parameters are *not* a best fit. I chose simple yet "reasonable"
+values that might be expected in the E ring. Giving Tethys a bit more
+material and Dione a bit less would agree better with the theory as
+well as providing a closer fit to the dashed line. Changing the
+maximum eccentricities to more reasonable values (from Mimas outward:
+0.25,0.45,0.55,0.65,0.85) does not change the profile greatly.
+
+
+Main Results:
+
+1. The extra material inward of Enceladus (3.95) is a robust feature
+of the model -- it is very difficult to match the dashed line. I
+encourage observers to look for material inside of Enceladus' and
+Mimas' orbits.
+
+2. An excess of material near satellites other than Enceladus is
+possible (e.g. the Dione peak near 6.25 in the plot), but not required
+by all sets of parameters.
+
+3. Material should exist outside of the nominal outer edge of the ring
+(8Rs). At the few tenths of a percent level, material should extend to
+between 9Rs and 11Rs. Observers with sensitive instruments should be
+able to extend the extent of the known ring. 
+
+Doug Hamilton
+hamilton@eu1.mpi-hd.mpg.de
+18-May-1994

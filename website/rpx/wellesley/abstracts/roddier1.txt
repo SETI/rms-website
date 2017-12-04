@@ -1,0 +1,32 @@
+Title: Adaptive optics observations of Saturn's ring plane crossing in
+August 1995
+
+Authors: F. Roddier, C. Roddier, C. Dumas, J. E. Graves, M. J. Northcott,
+T. Owen (Institute for Astronomy, University of Hawaii), and A. Brahic
+(Observatoire de Paris and Universite de Paris 7).
+
+Abstract: An adaptive optics system developed at the University of Hawaii
+was mounted on the 3.6-m CFH telescope on Mauna Kea and used to observe
+Saturn during the August 95 ring-plane crossing. Near IR images of the ring
+system were obtained with a resolution of 0.1 arc-sec. These images have
+since been processed and analyzed both astrometrically and photometrically.
+
+Evidence was found for a dozen of objects, probably clumps, orbiting at the
+distance of the F-ring. Among these objects two of them have been
+identified with objects 1995 S5 and S7 observed by the Hubble Space
+Telescope.
+
+An eclipse of Epimetheus was observed over about 10 minutes. We have
+determined that Epimetheus was crossing the shadow produced by a region
+extending from the F ring to the Encke division. The observed positions of
+Epimetheus during the eclipse give constraints on its orbit, and on the
+optical depth of the rings.
+
+Photometric profiles have been obtained along the rings, and their time
+evolution has been modeled. Values have been derived for the rings
+brightness (compared to a Lambert diffuser). The gap between the A ring and
+the F ring is found to contribute to the profiles with a transverse optical
+thickness of the order of 0.0001. Evidence is also found for a composite
+structure in the F ring with a geometrically thick component of very low
+particle density.
+

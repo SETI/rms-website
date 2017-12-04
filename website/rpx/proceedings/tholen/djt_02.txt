@@ -1,0 +1,56 @@
+           with n representing the count rate, through the smaller aperture, we
+           have:
+                n_total = n_obj + n_back + n_dark
+           and through the larger aperture, we have:
+                n_total = <alpha> n_obj + <beta> <gamma> n_back + n_dark
+           > the coefficient <alpha> is not unity because of nonzero light in
+           the wings of the PSF; for aperture sizes of 6.6 and 9.4
+           arcsec and arcsec seeing, experience suggests a value of about 1.02;
+           can be measured by performing standard photometry through both
+           apertures on a bright star
+           > the coefficient <beta> is essentially the area ratio of the larger
+           and smaller apertures; can be measured by determining the brightness
+           of a blank region of sky through both apertures; best to measure it
+           observationally, rather than relying on measurements of the aperture
+           diameters (apertures may not be perfectly round, or may have burrs
+           around the edges); a value close to 2 is good, because if too close
+           to 1, then the determination of the background is poor, and if too
+           large, then the value of <gamma> (see below) becomes too large and
+           therefore sensitive to modeling errors
+           > the coefficient <gamma> represents the ratio between the average
+           sky brightness through the larger and smaller apertures; it is not
+           unity because of the complex background brightness distribution; can
+           be determined by numerically integrating over the two apertures using
+           either a model background brightness distribution, or better yet, one
+           provided by an observer using a two-dimensional detector; note that
+           the function that describes the brightness variation caused by the
+           planet sits on top of a variable bias caused by other essentially
+           flat sky brightness contributions, such as moonlight, so the value of
+           <gamma> changes from observation to observation due to both this
+           effect and the changing radial distance from the planet, and
+           therefore must be remodeled each time; the closer to the planet, the
+           larger the value of <gamma>
+           > this concentric aperture technique is essentially a variant on the
+           second one mentioned above, namely sampling the background in a
+           variety of positions surrounding the object; however, in this case
+           the background brightness in the smaller aperture is determined from
+           the background brightness in the annulus surrounding the smaller
+           aperture, but inside the larger aperture; this annulus is much closer
+           to the region of interest than in the second technique mentioned, is
+           more continuous than in the second technique, and much less sensitive
+           to the background model
+
+IV. Data Format
+    * time invariant information (telescope, observer, instrument, etc.) kept in
+      header file
+    * time variable information stored in data file; sample format used for
+      Pluto-Charon mutual event data (expressed using FORTRAN edit descriptors):
+        * F13.5         midtime of observation, expressed as Julian Date
+        * 1X,A2         filter code
+        * 1X,F7.4       apparent magnitude
+        * 1X,F6.4       one-sigma uncertainty in apparent magnitude
+
+V. Know Your Field
+    * one percent photometry requires knowledge about other light sources in
+      your object or background fields that are five magnitudes fainter than
+      your object

@@ -1,0 +1,14 @@
+Satellite Detection Limits in HST Data 
+
+Patrick Seitzer
+Dept of Astronomy
+University of Michigan
+
+We analyze the completeness of detecting satellites in the 1995/1996
+Saturn WFPC2 data sets.  Artificial satellites of known magnitude and
+angular motion are introduced into pairs of WFPC2 images, and the
+frequency of recovery is determined as a function of angular motion,
+total magnitude, and whether the satellite is projected on or off the
+rings.  This recovery frequency is then used to place limits on the
+sizes and distance from Saturn of undiscovered satellites.
+

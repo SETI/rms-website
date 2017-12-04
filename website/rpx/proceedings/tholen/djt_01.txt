@@ -1,0 +1,52 @@
+                             Satellite Photometry
+                               David J. Tholen
+                     Saturn Ring Plane Crossing Workshop
+                  Lunar and Planetary Laboratory, Tucson, AZ
+                                 1994 May 27
+
+I. Calibration
+    * timing should be good to better than a second to keep the systematic error
+      smaller than the likely random error in the midevent time determination
+        * GPS good to better than a millisecond
+        * modem synchronization to NIST good to small fraction of a second
+        * TCP/IP synchronization to NIST good to fraction of a second (not as
+          good as modem due to irregular network delays
+        * manual synchronization can be done to fraction of a second using WWV
+          receiver
+        * for longer events, be sure to measure clock drift
+    * use two comparison stars for magnitude calibration
+        * should be chosen to match colors of satellites reasonably well so that
+          transformation errors are minimized
+        * should be faint enough to avoid saturation or nonlinearity problems,
+          but bright enough to minimize time spent on magnitude calibration
+        * Titan itself may prove to be a useful calibrator for other satellites
+
+II. Signal to Noise Ratio
+    * most events are of short duration, so high speed devices are required to
+      provide suitable time resolution, and large aperture is needed to provide
+      adequate signal to noise ratio during each integration
+        * high speed CCD is best
+        * slow readout CCD might work if image drifted across chip (orthogonal
+          to Saturn-satellite axis), though saturation may be a problem
+        * high speed aperture photometer may work, though see below
+
+III. Background Subtraction
+    * two-dimensional detectors offer best prospects for accurate background
+      subtraction
+    * single element detectors can work, with some effort; possible techniques
+      include:
+        1. chopping to a point the same distance from Saturn: doesn't work, due
+           to the complex brightness contours produced by the rings and
+           diffraction bars
+        2. measuring the background at several positions surrounding your
+           object, such as to the north, south, east, and west: doesn't work,
+           because the average of these is not usually the same as the
+           background at your object
+        3. chopping to a point diametrically opposite the center of Saturn: best
+           bet for those who can't change aperture sizes easily, because there
+           is some symmetry to the scattered light background, but very
+           sensitive to positioning errors, especially when working closer to
+           the planet, where the brightness gradient is steeper
+        4. chopping between concentric apertures of different sizes: known to
+           work well for Triton and Deimos, but requires additional
+           calibration observations;

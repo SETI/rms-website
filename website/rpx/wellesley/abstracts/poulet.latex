@@ -1,0 +1,361 @@
+% DPSFORM.TEX -- DPS meeting abstract electronic form.
+
+% DON'T remove the following comment; it identifies the form.
+%
+% Division of Planetary Sciences electronic abstract form.
+
+% COMMENTS are preceded by the "%" character.  Lines (or portions of
+% lines) that start with a "%" are ignored by LaTeX.  Such lines may be
+% left in the file during processing.
+%
+% Lines that are to be filled in by the author start at the left margin
+% with either "\" or "%\".  Indented lines that start with "% " are
+% examples only, and should be left alone.
+
+% The following two lines are REQUIRED.  Leave them alone.
+
+
+\documentstyle[11pt,dpsab]{article}
+\pagestyle{empty}
+
+%  The following line ("\input epsf") is REQUIRED if you are including
+%  an encapsulated PostScript file in your abstract, so you must
+%  remove the percent sign. If you aren't including a figure, you
+%  can leave the line commented out (i.e., leave the percent sign).
+%  If you are including a figure, you will need to e-mail it
+%  to dps97@cass.jsc.nasa.gov BEFORE you e-mail your abstract. The
+%  subject line of your e-mail message must be "DPS EPS FILE: XXXXXX.eps",
+%  where "XXXXXX.eps" matches EXACTLY the file name you inserted in the body
+%  of your abstract. Try to use a unique file name (e.g., "mjb547" instead
+%  of "Fig1"), because the system will automatically reject any eps file
+%  having a file name that is an exact duplicate of a file name already
+%  used by another author.
+%
+
+%\input epsf
+
+
+% The LPI will fill in the following data after the abstract
+% has been received and accepted.  Please leave the \runningident, 
+% \session, \subdate, and \societydiv lines alone; DO NOT DELETE THEM,
+% DO NOT FILL THEM IN.
+%
+
+\runningident{}
+\session{0}{00}
+\subdate{}
+\societydiv{Division for Planetary Sciences}
+
+% Administrative information.  Some of this information is required,
+% while some of it is optional or depends on the status of
+% other items.  In the sample markup that follows, the items that are
+% required are not commented, i.e., they are *not* preceded by a "%".
+% Optional items that are desired or called for by virtue of choices
+% made should be uncommented (by deleting the "%").
+%
+%    presentationtype   indicates your preference for the presentation
+%                       of the paper.  Select one of:
+%
+%                       oral, poster, either, title-only 
+%
+%                       This field is case-sensitive; please use
+%                       lower case. Fill in your choice between the
+%                       two braces "{}" on the next line.
+
+\presentationtype{oral}     % REQUIRED
+
+%  Have you obtained your Ph.D. since the last DPS meeting?
+%  If so, type in "yes" between the braces next to the word
+%  "\newphd{}". To be scheduled for a one-minute oral
+%  introduction to your poster, you must fill in the word
+%  "yes" for this prompt. This item is optional and may be left
+%  as is. If you enter "yes" between the braces, please remove the
+%  percent sign from the beginning of the line.
+
+\newphd{no}               % OPTIONAL
+
+
+%   Is your abstract especially newsworthy, and if
+%   so, would you be willing to prepare a news
+%   release and be available for interviews with
+%   reporters?  Please enter "yes", "no", or "maybe"
+%   between the braces next the word "\pressabstract".
+
+\pressabstract{no}        % OPTIONAL
+
+
+%   The first author MUST be the "presenter" of the
+%   paper. This name must be identified separately
+%   from the \author list for administrative reasons.
+%   The first name (and middle name if desired) of the first
+%   author should be spelled out between the braces next to
+%   the word "\firstname" (e.g., "\firstname{Stephen L.}").
+%   The last name of the first author should be spelled out              
+%   between the braces next to the word "\lastname" (e.g.,
+%   "\lastname{Hokanson}".
+                                   
+\firstname{Fran\c cois}            % REQUIRED
+\lastname{Poulet}             % REQUIRED
+
+%   If the first author (presenter) is not a DPS
+%   member, you MUST enter the name of the member who will 
+%   "introduce" the paper. The name should be spelled out
+%   in full (i.e., {Stephen L. Hokanson}) between the braces
+%   next to the word "\sponsor". This item is optional 
+%   and may be left as is. If you enter a sponsor's
+%   name, please remove the percent sign from the
+%   beginning of the line.
+
+%\sponsor{}             % REQUIRED FOR NONMEMBERS
+
+
+% Author contact information.
+%
+%    The address lines should contain the complete mailing 
+%    address of the first author. You will be given three lines
+%    for your address, plus separate lines for city, state/province,
+%    zip code, and country. These lines should be NO MORE THAN 
+%    35 characters long, and it's okay to leave some fields blank
+%    if your address doesn't require that you use all of them. If you 
+%    use an ampersand in your address, you MUST put a backslash in
+%    front of it ("\&"). Type the address information between the
+%    braces next to the appropriate prompt below, e.g.,
+%    \firstaddress{LPI}
+%    \secondaddress{3600 Bay Area Blvd.}
+%    \third address{}
+%    \fourth address{}
+%    \city{Houston}
+%    \state{TX}
+%    \zip{77058-1113}
+%    \country{USA}
+
+
+\firstaddress{Obs. Paris}        
+\secondaddress{5 Place Janssen}
+\city{Meudon C\'edex}
+\zip{92195}
+\country{France}
+
+
+%    The \authorphone line should contain the phone number of the
+%    first author.  Foreign authors should include the country
+%    code and city code as part of their phone number. Please 
+%    separate parts of the phone number with hyphens: 
+%    areacode-office-number, e.g., "602-327-5511", or  countrycode-
+%    city-code-office-number, e.g., "49-30-2897-2544". Type in
+%    the first author's phone number between the braces next 
+%    to the word "\authorphone". Type in the word "none" if you
+%    do not have a phone number.
+
+\authorphone{33-1-45 07 76 60}          % REQUIRED
+       
+%    The \authorfax line should contain the fax number of the first
+%    author. Foreign authors should include the country
+%    code and city code. Please separate parts of the fax number 
+%    with hyphens: areacode-office-number, e.g., "602-327-7643", or
+%    countrycode-citycode-office-number, e.g., "49-30-2897-2546". 
+%    Enter the fax number of the first author between the braces 
+%    next to the word "\authorfax".  Type in the word "none" if you 
+%    do not have a fax number.
+
+\authorfax{33-1-45 07 71 10}            % REQUIRED
+
+%    The \authoremail line should contain the COMPLETE e-mail address
+%    of the first author. Please give your primary network
+%    address, preferably in Internet format (user@host.domain), 
+%    rather than a series of choices. If your e-mail address contains
+%    any punctuation marks that LaTeX considers special characters (e.g.,
+%    &, $, %, #, _), you MUST put a backslash in front of them. Enter 
+%    the e-mail address of the first author between the braces next 
+%    to the word "\authoremail". Type in the word "none" if 
+%    you do not have an e-mail address.
+
+\authoremail{francois.poulet@obspm.fr}          % REQUIRED
+
+%     Special instructions can be specified through
+%     the \instructions command.  If you wish to
+%     identify any special instructions regarding
+%     your abstract, please type them in between the
+%     braces "{}" next to the word "\instructions"
+%     below and remove the "%" at the beginning of the 
+%     line. Special instructions are limited to 250 characters
+%     (approximately 50 words).    
+%     This item is optional and may be left commented
+%     out (i.e., don't enter any text, don't remove
+%     the percent sign at the beginning of the line).
+
+%\instructions{}        % OPTIONAL
+
+
+%      Are you willing to serve as a session chair?  If so, enter
+%      "yes" between the braces below.
+
+%\sessionchair{}        % OPTIONAL
+
+
+
+%    Membertype         indicates your membership status in the Division
+%                       for Planetary Sciences. This information is
+%                       REQUIRED.
+%
+%                       Options are:
+%                       DPS        -  member of DPS
+%                       NONDPS     -  nonmember (this MUST be your first
+%                           time to submit, and you must have an
+%                           introducing member)
+%                       STUDENTDPS -  student member of DPS
+%                       STUDENTNON -  student nonmember (this MUST be your
+%                           first time to submit, and you must have an
+%                           introducing member)
+%                   
+%
+%                       Enter one of the above four options (in all
+%                       caps, please) between the braces next to the
+%                       word "\membertype".
+
+\membertype{STUDENTDPS}           % REQUIRED
+
+
+%  For NONMEMBERS ONLY:
+%  Is this your first DPS presentation?   Type in either "yes"
+%  or "no" in between the braces next to the word "\firstpresent".
+
+%\firstpresent{}         % REQUIRED FOR NONMEMBERS
+
+
+%  The next line ("\begin{document}") tells LaTeX that you are ready 
+%  to start typing in your abstract information.  DO NOT DELETE THIS
+%  LINE!
+
+\begin{document}
+
+% Now you can input the information dealing with the scientific
+% content of your abstract.  The DPS category code is the numeric
+% identification of the subject matter; it is used by the program
+% organizers to keep related papers in sessions together.
+% Choices are:
+%
+%     1. Moon, Mercury                      
+%     2. Venus                 
+%     3. Mars (including MGS and Pathfinder)                           
+%     4. Jupiter (including Galileo)                  
+%     5. Saturn (except rings)       
+%     6. Uranus and Neptune                
+%     7. Triton and Pluto                            
+%     8. Kuiper Belt and the distant solar system                               
+%     9. Io (including Galileo)
+%    10. Europa, Callisto, and Ganymede (including Galileo)
+%    11. Titan  
+%    12. Other outer planet satellites (including Galileo)i
+%    13. Planetary rings                               
+%    14. Asteroids (including NEAR)           
+%    15. Comets (except Hale-Bopp and Hyakutake)                   
+%    16. Hale-Bopp and Hyakutake                            
+%    17. Meteorites (including ALH 84001)
+%    18. Solar-system formation
+%    19. Extrasolar planets
+%    20. Invited talk
+%    21. Education
+%    22. Other (describe in "\instructions" field above)
+%
+% Type in your ONE category code (the number only) between the braces 
+% next to the word "\category", e.g. "\category{5}".
+
+\category{13}            % REQUIRED
+
+% The title of your abstract should be typed in between the braces next
+% to the word "\title".  Please use upper- and lower-case letters,
+% e.g., "Large-Scale Topography on Main-Belt Asteroids".
+
+\title{Role of the F ring during the ring plane crossings in 1995-96}               
+% REQUIRED
+
+% Authors and their affiliations are specified in groups by
+% institution.  Each group of authors from the same institution whose
+% names appear next to each other in the author list should be given
+% together in a single \author statement, their names separated by
+% commas.  The institution should be specified in an \affil statement
+% that follows; please abbreviate institution names as much as possible.
+% When several institutions are involved, additional \author and \affil
+% pairs are required. The only punctuation the author needs to provide
+% is a comma to separate two (or more) authors' names from the same
+% affiliation. DO NOT use a comma before Sr., Jr., III, etc.
+%
+% For example, an author list that looks like this:
+%
+%    P. B. Boyce, H. Dalterio (AAS), C. D. Biemesderfer (NOAO),
+%    R. J. Hanisch (STScI), J. Johnson (AAS)
+%
+% would be specified like this:
+%
+%    \author{P. B. Boyce, H. Dalterio}
+%    \affil{AAS}
+%    \author{C. D. Biemesderfer}
+%    \affil{NOAO}
+%    \author{R. J. Hanisch}
+%    \affil{STScI}
+%    \author{J. Johnson}
+%    \affil{AAS}
+%
+%  If you are the sole author of the abstract, your author list
+%  would look like this:
+%
+%     \author{S. L. Hokanson}
+%     \affil{LPI}
+%
+%  Type in YOUR author and affiliation information below, in the braces
+%  next to the words "\author" and "\affil".  Note that you can type in
+%  as many "\author" and "\affil" lines as it takes to complete your
+%  author list.
+
+\author{F. Poulet}
+\affil{Obs. Paris}
+\author{B. Sicardy}
+\affil{Obs. Paris, Univ./IUF Paris 6}
+
+
+% The abstract itself belongs in a LaTeX abstract environment, which is
+% set up by these two statements.
+%
+%    \begin{abstract}
+%    \end{abstract}
+%
+%  DO NOT DELETE THESE TWO LINES!
+
+
+\begin{abstract}
+
+We will examine the role played by the Saturn F ring during the plane crossings 
+in 1995-96. Emphasis is given on the ring thickness and the small inner 
+objects.
+
+We model the photometric data obtained during the Earth ring plane crossings 
+and the solar crossing. The data from the Earth ring plane crossing 
+could give lower limit on the physical height of the F ring (Poulet 
+and Sicardy, {\em BAAS} {\bf 28}, 1124). New constraints from the solar 
+crossing in November 1995 are obtained, in order to explain both the August 
+and November 1995 profiles. 
+
+New detections of four small inner objects were made, allowing us to 
+cover several revolutions of two objects. We use the photometric model 
+to infer the nature of these new objects. We also propose that they are 
+composed of regolith ejecta and result from collisions between small 
+moonlets. From the number and optical depth, we derive the lifetimes of 
+the new objects and we estimate the total cross-sectionnal area and sizes 
+of the unseen parent objects to be consistent with observations 
+of the F ring region.
+
+\end{abstract}
+
+% The following two lines are REQUIRED.  Leave them alone.
+
+\admininfo
+\end{document}
+
+% Thank you for using this form, and for following the instructions.
+% You can submit the abstract via e-mail to dps97@cass.jsc.nasa.gov;
+% you will receive an electronic acknowledgment of your submission.
+% If you have any questions, please phone the LPI at
+% 281-486-2188, -2195, or -2161, or send an e-mail message to
+% publish@lpi.jsc.nasa.gov; DO NOT send questions
+% or queries to the abstract submission address.

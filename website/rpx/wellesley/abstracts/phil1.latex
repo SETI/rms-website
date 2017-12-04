@@ -1,0 +1,175 @@
+% /usr/local/tex/bin/latex209 works for me, and /usr/local/tex/bin/dvips
+% works to print it.
+
+% -Greg
+
+% DPSFORM.TEX -- DPS meeting abstract electronic form.
+
+\documentstyle[11pt,dpsab]{article}
+\pagestyle{empty}
+
+\runningident{}
+\session{0}{00}
+\subdate{}
+\societydiv{Division for Planetary Sciences}
+
+\presentationtype{oral}     % REQUIRED
+
+\newphd{no}               % OPTIONAL
+
+
+%   Is your abstract especially newsworthy, and if
+%   so, would you be willing to prepare a news
+%   release and be available for interviews with
+%   reporters?  Please enter "yes", "no", or "maybe"
+%   between the braces next the word "\pressabstract".
+
+\pressabstract{}        % OPTIONAL
+                                   
+\firstname{Philip D.}            % REQUIRED
+\lastname{Nicholson}             % REQUIRED
+
+
+%\sponsor{}             % REQUIRED FOR NONMEMBERS
+
+
+\firstaddress{Space Sciences Building}        
+\secondaddress{Cornell University}
+\thirdaddress{}
+\fourthaddress{}
+\city{Ithaca}
+\state{NY}
+\zip{14853}
+\country{USA}
+
+\authorphone{607-255-8543}          % REQUIRED
+       
+\authorfax{607-255-5907}            % REQUIRED
+
+\authoremail{nicholson@astrosun.tn.cornell.edu}          % REQUIRED
+
+%     Special instructions can be specified through
+%     the \instructions command.  If you wish to
+%     identify any special instructions regarding
+%     your abstract, please type them in between the
+%     braces "{}" next to the word "\instructions"
+%     below and remove the "%" at the beginning of the 
+%     line. Special instructions are limited to 250 characters
+%     (approximately 50 words).    
+%     This item is optional and may be left commented
+%     out (i.e., don't enter any text, don't remove
+%     the percent sign at the beginning of the line).
+
+%\instructions{}        % OPTIONAL
+
+\sessionchair{yes}        % OPTIONAL
+
+\membertype{DPS}           % REQUIRED
+
+%  For NONMEMBERS ONLY:
+%  Is this your first DPS presentation?   Type in either "yes"
+%  or "no" in between the braces next to the word "\firstpresent".
+
+\firstpresent{no}         % REQUIRED FOR NONMEMBERS
+
+\begin{document}
+
+% Now you can input the information dealing with the scientific
+% content of your abstract.  The DPS category code is the numeric
+% identification of the subject matter; it is used by the program
+% organizers to keep related papers in sessions together.
+% Choices are:
+%
+%     1. Moon, Mercury                      
+%     2. Venus                 
+%     3. Mars (including MGS and Pathfinder)                           
+%     4. Jupiter (including Galileo)                  
+%     5. Saturn (except rings)       
+%     6. Uranus and Neptune                
+%     7. Triton and Pluto                            
+%     8. Kuiper Belt and the distant solar system                               
+%     9. Io (including Galileo)
+%    10. Europa, Callisto, and Ganymede (including Galileo)
+%    11. Titan  
+%    12. Other outer planet satellites (including Galileo)i
+%    13. Planetary rings                               
+%    14. Asteroids (including NEAR)           
+%    15. Comets (except Hale-Bopp and Hyakutake)                   
+%    16. Hale-Bopp and Hyakutake                            
+%    17. Meteorites (including ALH 84001)
+%    18. Solar-system formation
+%    19. Extrasolar planets
+%    20. Invited talk
+%    21. Education
+%    22. Other (describe in "\instructions" field above)
+%
+% Type in your ONE category code (the number only) between the braces 
+% next to the word "\category", e.g. "\category{5}".
+
+\category{13}            % REQUIRED
+
+% The title of your abstract should be typed in between the braces next
+% to the word "\title".  Please use upper- and lower-case letters,
+% e.g., "Large-Scale Topography on Main-Belt Asteroids".
+
+\title{Saturn ring profiles from the August 1995 HST data.}
+
+%  Type in YOUR author and affiliation information below, in the braces
+%  next to the words "\author" and "\affil".  Note that you can type in
+%  as many "\author" and "\affil" lines as it takes to complete your
+%  author list.
+
+\author{P. D. Nicholson}
+\affil{Cornell}
+
+\begin{abstract}
+During the second crossing of Saturn's ring plane by the Earth in August
+1995, HST observations were obtained with WFPC2 from August 10,
+13:15 UT through August 11, 1:30 UT (Nicholson {\it et al.,} [1996]
+{\sl Science} {\bf 272}, 509).  On each HST orbit, a pair of
+300~sec exposures was taken with the Wide Field camera which cover the
+entire ring system, plus a series of up to five 100~sec exposures with
+the Planetary Camera targeted to one ansa. All exposures were made
+with the FQCH4N 890~nm methane filter to suppress scattered light
+from Saturn.  Prior to the Earth's crossing the plane at $\sim21$~hr
+UT, the radial brightness profiles of both ring ansae are relatively
+flat and smooth, increasing slowly outwards until they terminate
+abruptly at the radius of the F Ring ($r=140,200$~km). 30-50\%
+increases in brightness at radii corresponding to the C Ring and the
+Cassini Division 7~hr before the crossing indicate a modest
+contribution from light diffusely transmitted through the main rings,
+but closer to the crossing time the profiles are essentially
+featureless and most of the edge-on ring brightness seems to be
+attributable to the F Ring.  The average vertically-integrated
+reflectivity (I/F) of the rings at this time was found to be
+$1.37\pm0.15$~km, with the the west ansa being $\sim25\%$ brighter
+than the east.  Within 45~min after the Earth had crossed the plane
+the central portion of the west ansa had brightened by a factor of
+two, while the east ansa had increased by less than 50\%. By 23:50~UT,
+however, this asymmetry had largely disappeared, and in our final set
+of images the west ansa is $\sim15\%$ {\it fainter} than the east
+ansa, an observation which it would be very interesting to confirm
+with ground-based observations.  Linear fits to the pre- and
+post-crossing brightness over different radial regions yield crossing
+times which are significantly earlier on the west ansa, with
+%range from 20:12 to 20:57~UT on the west ansa (the B Ring region
+%appearing to brighten first), and 20:54 to 21:17~UT on the east ansa.
+the largest asymmetry occuring in the B Ring region, where the
+difference between east and west amounts to $56\pm13$~min. An effect
+of this amplitude is much too large to be accounted for by the rings'
+Laplace plane warp of 140~m, and is most likely due to the F Ring's
+small inclination (Olkin \& Bosh [1996] {\sl BAAS}, {\bf 28}, 1125).
+\end{abstract}
+
+% The following two lines are REQUIRED.  Leave them alone.
+
+\admininfo
+\end{document}
+
+% Thank you for using this form, and for following the instructions.
+% You can submit the abstract via e-mail to dps97@cass.jsc.nasa.gov;
+% you will receive an electronic acknowledgment of your submission.
+% If you have any questions, please phone the LPI at
+% 281-486-2188, -2195, or -2161, or send an e-mail message to
+% publish@lpi.jsc.nasa.gov; DO NOT send questions
+% or queries to the abstract submission address.

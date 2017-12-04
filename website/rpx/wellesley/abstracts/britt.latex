@@ -1,0 +1,96 @@
+% Division of Planetary Sciences electronic abstract form.
+
+\documentstyle[11pt,dpsab]{article}
+\pagestyle{empty}
+
+\runningident{}
+\session{0}{00}
+\subdate{June 1, 1997}
+\societydiv{Division for Planetary Sciences}
+
+\presentationtype{oral}     % REQUIRED
+
+\firstname{Britt R.}            % REQUIRED
+\lastname{Scharringhausen}             % REQUIRED
+
+\sponsor{Philip D. Nicholson}             % REQUIRED FOR NONMEMBERS
+
+
+\firstaddress{518 Space Sciences}        
+\secondaddress{Cornell University}
+\thirdaddress{}
+\fourthaddress{}
+\city{Ithaca}
+\state{NY}
+\zip{14850}
+\country{USA}
+
+\authorphone{607-255-6472}          % REQUIRED
+       
+\authorfax{607-255-5907}            % REQUIRED
+
+\authoremail{brs@astrosun.tn.cornell.edu}          % REQUIRED
+
+\membertype{STUDENTNON}           % REQUIRED
+
+\firstpresent{YES}         % REQUIRED FOR NONMEMBERS
+
+\begin{document}
+
+\category{13}         % REQUIRED
+
+\title{Ground-Based Observations of the Saturn Ring-Plane Crossings
+of August and November 1995}     % REQUIRED
+
+\author{B. R. Scharringhausen, P. D. Nicholson}
+\affil{Cornell}
+
+\author{K. Matthews}
+\affil{Caltech}
+
+\author{P. McGregor}
+\affil{MSSSO}
+
+\author{R. G. French}
+\affil{Wellesley}
+
+\author{L. Lim}
+\affil{MIT}
+
+
+\begin{abstract}
+
+We present two sets of ground-based observations of the 1995 Saturn ring plane
+crossings.  Observations on the 5-meter Hale Telescope at Palomar were made 
+on August 13 - 17 (UT) and November 21, 22, and 23.  A 2.276~$\mu$m filter 
+with a bandpass of 0.17~$\mu$m was used.  This is in a methane absorption 
+band where the albedo of Saturn is low, reducing scattered light from the 
+planet.  The $256\times 256$ InSb Cassegrain Infrared Camera has a plate scale
+of $0.125''$ per pixel.  The August observations followed the Earth crossing
+on August 10, and the November observations were at the end of the November 
+17-21 Sun crossing with a ring opening angle of $2.7^\circ$.  Additional 
+observations were made on August 9, 10, and 11 (UT) with the CASPIR 
+camera on the ANU 2.3 meter telescope at Siding Spring Observatory (SSO), 
+Australia.  A 2.34~$\mu$m narrow band filter was used, and the plate scale 
+was $0.25''$ per pixel.  The August 10 SSO observations run up to 21:00 
+UT, just before the ring crossing.  
+
+The principal goal of the Palomar observations was to acquire accurate
+orbital data on both the ring moons and the classical satellites by observing 
+their eclipses and occultations by Saturn, as well as several mutual events 
+between larger satellites.  This program was very successful, resulting in
+good data for a total of 20 events involving Mimas, Enceladus, Tethys, Dione,
+Rhea, Titan, and Hyperion, as well as 4 eclipses of Janus and Epimetheus.
+[Nicholson, {\it et al.} {\sl BAAS} {\bf 23,} 1073 (1996)]  We present here
+radial profiles of ring brightness at 2.3~$\mu$m, their temporal evolution
+through the August ring plane crossing, and a search for any east-west 
+asymmetries such as are seen in the HST data [Nicholson, {\it et al.} 
+{\sl Science} {\bf 272,} 509 (1996)].  The Palomar observations on November
+21 were made under conditions of excellent ($0.3''$) seeing, and provide
+additional astrometric data for Janus, Epimetheus, Pandora and Prometheus,
+as well as high-quality profiles of brightness for the unlit side of the rings.
+
+\end{abstract}
+
+\admininfo
+\end{document}

@@ -1,0 +1,17 @@
+Inclined Features in Saturn's Rings
+C. B. Olkin, A. S. Bosh (Lowell Observatory)
+On 21 November 1995 just as the Sun was completing its passage through Saturn's 
+ring plane, the occultation of the star GSC5249-01240 by Saturn and its rings was 
+observed with the Faint Object Spectrograph on the Hubble Space Telescope (HST) and 
+from the Infrared Telescope Facility (IRTF). The low opening angle of Saturn’s rings (B ~ 
+3°) made these occultation observations unusually sensitive to ring inclinations.  We used 
+these data along with previous occultation data to determine a kinematic model for the F 
+ring and established a non-zero value for the inclination of the F ring with a 4-s 
+significance level.  This is the first detection of an inclined ring feature in the Saturn 
+system.  The inclined ring model predicts an eclipse of the F ring near the West ansa.  HST 
+images taken immediately after the stellar occultation show an abrupt decline in flux very 
+near the predicted location, providing support for the inclined ring model.  This model also 
+predicts an eclipse of the F ring on the East ansa closer to Saturn.  We will examine images 
+for evidence of any dimming on the East ansa.  We will also present results of a search for 
+other inclined features in Saturn's rings.
+

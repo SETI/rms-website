@@ -1,0 +1,14 @@
+Photometric analysis and modeling of the August 1995 Saturn ring HST data
+
+C. Roddier, F. Roddier (Institute for Astronomy, University of Hawaii)
+
+Abstract: A photometric analysis of the August 1995 HST data is presented.
+A model developed from adaptive optics observations is compared with the
+photometric profiles observed along the rings. The model is found to be in
+good agreement with the data apart from the East-West asymmetry.
+
+For the asymmetry, two possible effects are discussed. One is the
+occultation of the main rings by an inclined F ring. The other is a large
+scale distortion of the ring surface. An analytic model for a plausible
+distortion is fitted to the data. The implications of the result are
+discussed. 

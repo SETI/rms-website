@@ -1,0 +1,120 @@
+% HST observations of small saturnian satellites and F ring clumps
+% Colleen A. McGhee, Philip D. Nicholson, Cornell Univ., Richard G. 
+% French, Wellesley College
+
+\def\deg{$^{\circ}$}
+% DPSFORM.TEX -- DPS meeting abstract electronic form.
+
+% DON'T remove the following comment; it identifies the form.
+%
+% Division of Planetary Sciences electronic abstract form.
+
+% The following two lines are REQUIRED.  Leave them alone.
+
+\documentstyle[11pt,dpsab]{article}
+\pagestyle{empty}
+
+\runningident{}
+\session{0}{00}
+\subdate{}
+\societydiv{Division for Planetary Sciences}
+
+\presentationtype{oral}     % REQUIRED
+
+\newphd{no}               % OPTIONAL
+
+\pressabstract{}        % OPTIONAL
+
+\firstname{Colleen A.}            % REQUIRED
+\lastname{McGhee}             % REQUIRED
+
+\firstaddress{408 Space Sciences Building}        
+\secondaddress{Cornell University}
+\thirdaddress{}
+\fourthaddress{}
+\city{Ithaca}
+\state{NY}
+\zip{14850}
+\country{USA}
+
+\authorphone{(607) 255-6307}          % REQUIRED
+       
+\authorfax{(607) 255-5907}            % REQUIRED
+
+\authoremail{mcghee@astrosun.tn.cornell.edu}          % REQUIRED
+
+\instructions{Category:  Saturn RPX satellites/ring arcs}        % OPTIONAL
+
+\sessionchair{no}        % OPTIONAL
+
+\membertype{STUDENTDPS}           % REQUIRED
+
+\firstpresent{no}         % REQUIRED FOR NONMEMBERS
+
+\begin{document}
+
+%    22. Other (describe in "\instructions" field above)
+% Type in your ONE category code (the number only) between the braces 
+% next to the word "\category", e.g. "\category{5}".
+
+\category{22}            % REQUIRED
+
+
+\title{HST observations of small saturnian satellites and F ring clumps}               % REQUIRED
+
+\author{C. A. McGhee, P. D. Nicholson}
+\affil{Cornell Univ.}
+\author{R. G. French}
+\affil{Wellesley College}
+
+\begin{abstract}
+
+Hubble Space Telescope (HST) observations of Saturn's ring and satellite
+system during the August 1995 Earth ring plane crossing and
+during the November 1995 solar crossing are presented. Very low 
+ring brightnesses during these periods allowed 
+detections of faint satellites Pandora and Prometheus and
+lagrangian satellites Telesto, Calypso and Helene, and
+identification of objects
+determined to be in or near the F ring (Nicholson {\it et. al} [1996], 
+{\it Science} {\bf 272}, 509).
+In August, three objects identified as 1995S5-S7 were seen in multiple 
+HST orbits, while November's data show
+at least two elongated "clumps."   Attempts to correlate these objects
+with those found in the May Earth-crossing HST data of Bosh and
+Rivkin ([1996], {\it Science} {\bf 272}, 518) (1995S1-S4) have resulted 
+in the possible linking of
+1995S3 with 1995S6, if both objects are assumed to be exactly within the
+F ring.  While 1995S1 is not seen convincingly
+in subsequent data sets, this object may be present in some three August
+HST images and two November images.  
+Data taken with
+the Canada-France-Hawaii Telescope (CFHT) with an adaptive optics
+system during the August crossing resulted in the identification of 
+several new objects (Roddier et al [1996] IAUC 6407); 
+object 1995S9 has been recovered in five August HST images.
+
+The puzzling question of Prometheus' 18.8\deg lag has spurred
+the development of new analysis and measurement techniques for better
+determination of orbits of these bodies, and for
+the first time these techniques are applied consistently to all 
+three HST data sets. 
+The new techniques include subtraction of templates from the images, as 
+opposed
+to the ring-pair subtraction used formerly to identify and measure the new
+objects, and 
+the inclusion of orbital smear in modelling the image shapes, 
+rather than using a simple centroid
+procedure to measure the positions.  The template subtraction has
+several advantages, including a better ability to distinguish among
+the many small objects that are very close together in some of the
+frames. Our goals are to fit the remaining objects that were
+seen in the HST data, as well as to link the
+objects from all the HST data sets together with ground-based 
+observations.
+\end{abstract}
+
+% The following two lines are REQUIRED.  Leave them alone.
+
+\admininfo
+\end{document}

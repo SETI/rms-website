@@ -1,0 +1,43 @@
+Calar Alto Observations of Saturn's 1995 Ring Plane Crossings
+
+Lori M. Lanier, Douglas P. Hamilton (U. of Maryland)
+and Thomas M. Herbst (MPI fuer Astronomie, Heidelberg, Germany)
+
+        We report on Calar Alto data from the Saturn Ring Plane
+Crossings (RPX) that occurred in 1995.  Our data, which consists of
+infrared images and spectra taken from the 3.5 meter telescope at the
+Calar Alto Observatory in southern Spain, span the dates May 20-22,
+August 8-11, and November 20-23. Here we investigate images taken with
+a broad band filter covering the 2.1 to 2.4 micron region.  Methane in
+Saturn's atmosphere strongly absorbs at these wavelengths which
+greatly reduces scattered light from the planet. The camera's plate
+scale is 0.33"/pixel, and in our May observations, Saturn's diameter
+was 17", the rings spanned 42", atmospheric seeing was ~1".  The
+exposure times for our images varied from a few seconds to several
+minutes.
+
+        We have performed basic data reduction on our May data by
+subtracting a sky frame from each of our images and dividing by a
+flat field image. We also replaced all bad pixels with the median of
+the surrounding pixels in each image. Once the images were reduced, we
+developed IDL routines to calculate the flux from the ring ansae.
+Although Saturn's rings are 3 to 4 pixels wide in our images due to
+atmospheric seeing, the physical width of the rings is less than a
+pixel; accordingly, we produced a one-dimensional profile of the rings.
+We then extracted the brightest seven pixel segments of each ring ansa
+from the profile. Averaging over seven pixels improved signal to
+noise and minimized interference from the planet and nearby
+satellites.
+
+        Our analysis of the reduced data shows an asymmetry between
+the east and west sides (ansae) of Saturn's rings.  Our ground-based
+infrared data indicates that the west ansa is brighter than the east
+ansa for 30 hours prior to the RPX, which occurred on May 22 at
+5:35am.  This result is in agreement with, and extends, the optical
+HST results of Bosh etal. (1997), which show that the west ansa is
+brighter than the east for three hours prior to the May RPX. We are
+currently refining our data analysis in order to better quantify the
+asymmetry. We plan to present plots of the ring flux vs. time for our
+May, August, and November data sets.  We also hope to report on
+measurements of the positions of the small satellites visible in our
+data: Janus, Epimetheus, Prometheus, and Pandora.

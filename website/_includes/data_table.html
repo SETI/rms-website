@@ -44,7 +44,7 @@
             {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
 
             <th scope="col" id="{{ col | slugify }}" headers = "volume">
-              <a href = "/webapps/link/volumes/{{ base_dir }}/{{ col }}/">{{ col }}</a>
+              <a href = "/link/volumes/{{ base_dir }}/{{ col }}/">{{ col }}</a>
             </th>
           {% endif %}
 
@@ -80,7 +80,7 @@
       {% for col in column_labels %}
         {% if col == 'Volume' %}{% continue %}{% endif %}
         <td headers = "{{ col | slugify }} bundle">
-          <a href = "/webapps/link/archives-volumes/{{ base_dir }}/{{ col }}.tar.gz">
+          <a href = "/link/archives-volumes/{{ base_dir }}/{{ col }}.tar.gz">
               .tar.gz
           </a>
         </td>
@@ -165,7 +165,7 @@
                 {% if entry.section.nolinks == true %}
                     {{ row.table_row.id }}
                 {% else %}
-                  <a href = "/webapps/link/volumes/{{ base_dir }}/{{ row.table_row.id }}">
+                  <a href = "/link/volumes/{{ base_dir }}/{{ row.table_row.id }}">
                     {{ row.table_row.id }}
                   </a>
                 {% endif %}
@@ -183,14 +183,14 @@
                 {% else %}
 
                   {% if col contains "Bundled Volumes" %}
-                    <a href = "/webapps/link/archives-volumes/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
+                    <a href = "/link/archives-volumes/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
                         {{ row.table_row.id }}.tar.gz
                     </a>
                   {% endif %}
 
                   {% if col contains "Bundled Calibrated" %}
-                    <a href = "/webapps/link/archives-calibrated/{{ row.table_row.id }}.tar.gz">
-                        {{ row.table_row.id }}.tar.gz
+                    <a href = "/link/archives-calibrated/{{ base_dir }}/{{ row.table_row.id }}_calibrated.tar.gz">
+                        {{ row.table_row.id }}_calibrated.tar.gz
                     </a>
                   {% endif %}
 
@@ -212,14 +212,14 @@
                   {% if table_name contains "Voyager" %}
 
                     {% if row.table_row.browse_vol %}
-                      {% capture browse_link %}/webapps/link/previews/{{ base_dir }}/{{ row.table_row.browse_vol }}/BROWSE/{% endcapture %}
+                      {% capture browse_link %}/link/previews/{{ base_dir }}/{{ row.table_row.browse_vol }}/BROWSE/{% endcapture %}
                     {% else %}
-                      {% capture browse_link %}/webapps/link/previews/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/{% endcapture %}
+                      {% capture browse_link %}/link/previews/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/{% endcapture %}
                     {% endif %}
 
                   {% else %}
 
-                    {% capture browse_link %}/webapps/link/previews/{{ base_dir }}/{{ row.table_row.id }}/data/{% endcapture %}
+                    {% capture browse_link %}/link/previews/{{ base_dir }}/{{ row.table_row.id }}/data/{% endcapture %}
 
                   {% endif %}
 
@@ -240,7 +240,7 @@
                 {% if entry.section.nolinks == true %}
                     {{ col }}
                 {% else %}
-                  <a href = "/webapps/link/calibrated/{{ base_dir }}/{{ row.table_row.id }}/data/">
+                  <a href = "/link/calibrated/{{ base_dir }}/{{ row.table_row.id }}/data/">
                       {{ col }}
                   </a>
                 {% endif %}
@@ -257,7 +257,7 @@
                 {% if entry.section.nolinks == true %}
                     Footprints
                 {% else %}
-                  <a href = "/webapps/link/diagrams/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/">
+                  <a href = "/link/diagrams/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/">
                       Footprints
                   </a>
                 {% endif %}
@@ -285,7 +285,7 @@
                       {{ index_tab_name }}
                   {% else %}
 
-                    <a href = "/webapps/link/volumes/{{ base_dir }}/{{ row.table_row.id }}/index/{{ index_tab_name }}">
+                    <a href = "/link/volumes/{{ base_dir }}/{{ row.table_row.id }}/index/{{ index_tab_name }}">
                         {{ index_tab_name }}
                     </a>
                   {% endif %}
@@ -360,7 +360,7 @@
                     {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
 
                     <li>
-                        <a href = "/webapps/link/volumes/{{ base_dir }}/{{ volume_id }}/">{{ volume_id }}</a>
+                        <a href = "/link/volumes/{{ base_dir }}/{{ volume_id }}/">{{ volume_id }}</a>
                     </li>
 
                   {% endfor %}
@@ -429,7 +429,7 @@
                   {% if entry.section.nolinks == true %}
                       Enhanced Metadata
                   {% else %}
-                    <a href = "/webapps/link/metadata/{{ base_dir}}/{{ row.table_row.id }}">
+                    <a href = "/link/metadata/{{ base_dir}}/{{ row.table_row.id }}">
                       Enhanced Metadata
                     </a>
                   {% endif %}
@@ -454,7 +454,7 @@
               {% if col contains 'Data File' %}
 
                 <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-                  <a href = "/webapps/link/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.TAB">
+                  <a href = "/link/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.TAB">
                     {{ row.table_row.name }}.TAB
 
                   </a>
@@ -462,7 +462,7 @@
 
               {% elsif col contains 'Label File' %}
                 <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
-                  <a href = "/webapps/link/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.LBL">
+                  <a href = "/link/volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.LBL">
                     .LBL
                   </a>
                 </td>
