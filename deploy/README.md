@@ -1,33 +1,40 @@
-# Deploying the Website
+# Deploying the Website to Production
 
-This script will fetch the latest version from the remote repo,
-build the site locally, and rsync that into the web root.
+Deploying to production means first deploying to our Admin server,
+making sure all changes look ok, then deploying to production server.
 
 ## Deploying:
 
 _Note:_ If this is your first time, see **Initial Setup** below.
 
-Log into the webserver, pull the latest version from github, activate the virtualenv, and run the script:
+After you have reviewed/tested your changes locally and then pushed your
+changes to the github repo:
 
-    cd ~/ringsnode_website
-    git checkout production
-    git pull
-    cd deploy/
-    source venv/bin/activate
-    fab deploy
+1. Deploy to admin:
+
+    fab deploy admin
+
+2. Review the admin website:
+
+    http://admin.pds-rings.csc.seti.org/
+
+3. If admin site looks good, deploy the admin site to the production server:
+
+    fab deploy production
 
 
 ## Initial Setup:
 
-1. While logged into the web server, grab a local copy of the remote repo
+1. While logged into the admin server, grab a local copy of the remote repo
 
         cd ~/
         git clone https://github.com/basilleaf/ringsnode_website.git
-
+        cd ringsnode_website/
+        git checkout production
 
 2. Create the python virtual environment for the deploy script
 
-        cd ringsnode_website/deploy/
+        cd deploy/
         virtualenv venv --distribute
 
 3. Activate the virtualenv and install the requirements
@@ -39,12 +46,12 @@ Log into the webserver, pull the latest version from github, activate the virtua
 
         cp secrets_template.py secrets.py
 
-
 5. Edit the secrets.py file
 
     Edit the secrets.py to define the web root directory.
     (Web root must be accessible locally to this script)
 
-6. Try it out!
+6. On the production server, create the website_staging directory in your  
+   user root.
 
-    fab deploy
+    mkdir ~/website_staging/
