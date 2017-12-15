@@ -8,7 +8,7 @@ making sure all changes look ok, then deploying to production server.
 _Note:_ If this is your first time, see **Initial Setup** below.
 
 After you have reviewed/tested your changes locally and then pushed your
-changes to the github repo:
+changes to the github remote:
 
 1. Deploy to admin:
 
@@ -25,16 +25,17 @@ changes to the github repo:
 
 ## Initial Setup:
 
-1. While logged into the admin server, grab a local copy of the remote repo
+1. Log into the admin server, grab a local copy of the remote repo
 
         cd ~/
         git clone https://github.com/basilleaf/ringsnode_website.git
         cd ringsnode_website/
         git checkout production
 
-2. Create the python virtual environment for the deploy script
+2. On the machine where you will be working/making changes in the Jekyll repo,
+   Create the python virtual environment for the deploy script
 
-        cd deploy/
+        cd ringsnode_website/deploy/
         virtualenv venv --distribute
 
 3. Activate the virtualenv and install the requirements
@@ -48,10 +49,9 @@ changes to the github repo:
 
 5. Edit the secrets.py file
 
-    Edit the secrets.py to define the web root directory.
-    (Web root must be accessible locally to this script)
+    Edit the secrets.py to define the production web root directory.
 
-6. On the production server, create the website_staging directory in your  
+6. Log into the production server, create the website_staging directory in your  
    user root.
 
     mkdir ~/website_staging/
