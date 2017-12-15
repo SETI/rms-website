@@ -12,7 +12,10 @@ changes to the github remote:
 
 1. Deploy to admin:
 
+    cd ringsnode_website/deploy  
+    
     source venv/bin/activate
+
     fab deploy admin
 
 2. Review the admin website:
