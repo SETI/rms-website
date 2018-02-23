@@ -28,8 +28,8 @@ changes to the github repo:
 1. While logged into the admin server, grab a local copy of the remote repo
 
         cd ~/
-        git clone https://github.com/basilleaf/ringsnode_website.git
-        cd ringsnode_website/
+        git clone https://github.com/SETI/pds-website.git
+        cd pds-website/
         git checkout production
 
 2. Create the python virtual environment for the deploy script
