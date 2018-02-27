@@ -12,7 +12,7 @@ After you have reviewed/tested your changes locally and then pushed your changes
 
 1. Log into admin server and change directory to this repo
 
-        cd pds-website/
+        cd ~/ringsnode_website/deploy
 
 1. Deploy to admin:
 

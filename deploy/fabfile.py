@@ -90,7 +90,7 @@ def admin():
 
 
 def production():
-    """ rsyncs admin server from admin_repo to production server
+    """ rsyncs admin server from admin_repo to production server web root
     """
     if confirm("""
             -----
@@ -111,8 +111,11 @@ def production():
             rsync_cmd = "rsync -r {} --exclude=*.tif --exclude=*.tiff --exclude=*.tgz --exclude=*.tar.gz _site/ {}. "
 
             # move the site over to the production server staging directory
+            # this step is here bc server settings = you can't deploy remotely
+            # directly into web root
             local(rsync_cmd.format('', prod_staging_path))
 
+            # shell into production, rsync from home dir staging into web root
             local('ssh -t {} "sudo rsync -r {} {}."'.format(prod_login, prod_staging_dir, PROD_DIR))
 
             print("\n*** Admin Website Has Been Updated! ***\n Take a look: \n https://pds-rings.seti.org")
