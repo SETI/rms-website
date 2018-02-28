@@ -1,11 +1,10 @@
 # Ring-Moon Systems Node Website
 
-Built with [Jekyll](https://jekyllrb.com/). 
+Built with [Jekyll](https://jekyllrb.com/) and [Bootstrap](http://getbootstrap.com/)
 
-style guide:
-http://anitakhart.github.io/rings-node-style-guide/
-repo: https://github.com/anitakhart/rings-node-style-guide
+Our style guide made by [Anita Hart](http://anitahartweb.com/) is here: 
 
-design mockups:
-http://anitakhart.github.io/rings-node-style-guide/mockups/
+  guide: http://anitakhart.github.io/rings-node-style-guide/
+  
+  repo: https://github.com/anitakhart/rings-node-style-guide
 
