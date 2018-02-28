@@ -118,4 +118,4 @@ def production():
             # shell into production, rsync from home dir staging into web root
             local('ssh -t {} "sudo rsync -r {} {}."'.format(prod_login, prod_staging_dir, PROD_DIR))
 
-            print("\n*** Admin Website Has Been Updated! ***\n Take a look: \n https://pds-rings.seti.org")
+            print("\n*** Production Website Has Been Updated! ***\n Take a look: \n https://pds-rings.seti.org")
