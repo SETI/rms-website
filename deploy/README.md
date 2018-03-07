@@ -12,7 +12,7 @@ After you have reviewed/tested your changes locally and then pushed your changes
 
 1. Log into admin server and change directory to this repo
 
-        cd ~/ringsnode_website/deploy
+        cd ~/pds-website/deploy
 
 1. Deploy to admin:
 
@@ -40,6 +40,7 @@ After you have reviewed/tested your changes locally and then pushed your changes
 
 4. Create a secrets.py file
 
+        cd deploy/
         cp secrets_template.py secrets.py
 
 5. Edit the secrets.py file
