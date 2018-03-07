@@ -33,7 +33,7 @@ After you have reviewed/tested your changes locally and then pushed your changes
 
 2. grab a local copy of the remote repo
 
-        cd ~/
+        cd ~/ringsnode_website/
         git clone https://github.com/SETI/pds-website.git
         cd pds-website/
         git checkout production
