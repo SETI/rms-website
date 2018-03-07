@@ -32,7 +32,8 @@ After you have reviewed/tested your changes locally and then pushed your changes
 1. Log into the admin server, be in your home directory for the next steps
 
 2. grab a local copy of the remote repo
-
+        
+        mkdir ~/ringsnode_website/
         cd ~/ringsnode_website/
         git clone https://github.com/SETI/pds-website.git
         cd pds-website/
