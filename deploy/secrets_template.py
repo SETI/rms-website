@@ -1,1 +1,1 @@
-PROD_DIR = "FULL WEB DIRECTORY WITH TRAILING SLASH ie: /this/is/my/web/root/"
+PROD_DIR = "<PATH_TO_WEB_ROOT>"  # full path to web root directory including trailling slash 
