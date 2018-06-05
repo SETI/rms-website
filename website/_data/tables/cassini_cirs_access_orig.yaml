@@ -7,7 +7,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release April 1, 2018
+    - Next Release August 1, 2018
 
 # Edit Below:
 - section:   
@@ -1061,3 +1061,23 @@
             id:  COCIRS_1703
             clock_range: 1867036052 to 1869685715 
             date_range: 2017-03-01 to 2017-03-31   
+
+- section: 
+    heading2: April 1, 2018
+
+    section_rows: 
+
+        - table_row: 
+            id:  COCIRS_1704
+            clock_range: 1869714452 to 1872277716 
+            date_range: 2017-04-01 to 2017-04-30  
+
+        - table_row: 
+            id:  COCIRS_1705
+            clock_range: 1872306452 to 1874956180 
+            date_range: 2017-05-01 to 2017-05-31  
+
+        - table_row: 
+            id:  COCIRS_1706
+            clock_range: 1874984916 to 1877548180 
+            date_range: 2017-06-01 to 2017-06-30   
