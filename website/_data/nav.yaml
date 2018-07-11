@@ -21,7 +21,10 @@
   href: /
   submenu:
 
-    - title: Image Galleries
+    - title: New Image Galleries (beta)
+      href: /galleries_beta.html
+
+    - title: Old Image Galleries
       href: /galleries.html
 
     - title: ROSES Proposal Support
