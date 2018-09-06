@@ -8,7 +8,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release July 1, 2018
+    - This completes the scheduled releases from UVIS. 
 
 # Edit Below:
 - section: 
@@ -571,3 +571,13 @@
             id: COUVIS_0059 
             clock_range: 1869748418 to 1877557568 
             date_range: 2017-04-01 to 2017-06-30
+
+- section: 
+    heading2: July 1, 2018 Release
+
+    section_rows: 
+
+        - table_row: 
+            id: COUVIS_0060 
+            clock_range: 1877617293 to 1884137111 
+            date_range: 2017-07-01 to 2017-09-15

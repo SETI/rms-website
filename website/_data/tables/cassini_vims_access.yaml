@@ -8,7 +8,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release July 1, 2018
+    - This completes the scheduled releases from VIMS. 
 
 # Edit Below:
 - section:  
@@ -730,4 +730,19 @@
         - table_row: 
             id: COVIMS_0092
             clock_range: 1876373004 to 1877561816 
-            date_range: 2017-06-17 to 2017-06-30  
+            date_range: 2017-06-17 to 2017-06-30
+
+- section: 
+    heading1: July 1, 2018
+
+    section_rows: 
+
+        - table_row: 
+            id: COVIMS_0093
+            clock_range: 1869706653 to 1872150046 
+            date_range: 2017-07-01 to 2017-08-25  
+
+        - table_row: 
+            id: COVIMS_0094
+            clock_range: 1872269383 to 1876265683 
+            date_range: 2017-08-26 to 2017-09-14  
