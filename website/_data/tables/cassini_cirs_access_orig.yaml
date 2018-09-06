@@ -7,7 +7,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next Release July 1, 2018
+    - This completes the scheduled releases from CIRS. 
 
 # Edit Below:
 - section:   
@@ -1081,3 +1081,23 @@
             id:  COCIRS_1706
             clock_range: 1874984916 to 1877548180 
             date_range: 2017-06-01 to 2017-06-30   
+
+- section: 
+    heading2: July 1, 2018
+
+    section_rows: 
+
+        - table_row: 
+            id:  COCIRS_1707
+            clock_range: 1877576916 to 1880226602 
+            date_range: 2017-07-01 to 2017-07-31  
+
+        - table_row: 
+            id:  COCIRS_1708
+            clock_range: 1880255316 to 1882905002 
+            date_range: 2017-08-01 to 2017-08-31  
+
+        - table_row: 
+            id:  COCIRS_1709
+            clock_range: 1882933715 to 1884157843 
+            date_range: 2017-09-01 to 2017-09-15   

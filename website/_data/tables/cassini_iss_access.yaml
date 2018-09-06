@@ -10,7 +10,7 @@
     - Date Range (UTC)
 
 - footer_msg: 
-    - Next July 1, 2018
+    - This completes the scheduled releases from ISS. 
 
 # Edit Below:
 - section: 
@@ -882,3 +882,18 @@
             id: COISS_2114
             clock_range: 1876494253 to 1877471354 
             date_range: 2017-06-18 to 2017-06-29
+
+- section: 
+    heading1: July 1, 2018
+
+    section_rows: 
+
+        - table_row: 
+            id: COISS_2115
+            clock_range: 1877634459 to 1881830005 
+            date_range: 2017-07-01 to 2017-08-19
+
+        - table_row: 
+            id: COISS_2116
+            clock_range: 1881830414 to 1884114531 
+            date_range: 2017-08-19 to 2017-09-14
