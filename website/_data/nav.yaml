@@ -11,11 +11,11 @@
     - title: Browse Data Volumes
       href: /viewmaster/volumes/
 
-    - title: Browse Metadata
-      href: /viewmaster/metadata/
-
     - title: Quick Downloads
       href: /viewmaster/archives-volumes/
+
+    - title: Other PDS Search Options
+      href: //pds.nasa.gov/datasearch/data-search/
 
 - title: Node Resources
   href: /
