@@ -8,7 +8,7 @@
     - Date Range (UTC)
 
 - footer_msg:
-    - Next Release April 1, 2018
+    - This completes the scheduled releases from CIRS.
 
 # Edit Below:
 - section:
@@ -1063,17 +1063,17 @@
     section_rows: 
 
         - table_row: 
-            id:  COCIRS_1610
+            id:  COCIRS_6610
             clock_range: 1853989587 to 1856639252 
             date_range: 2016-10-01 to 2016-10-31  
 
         - table_row: 
-            id:  COCIRS_1611
+            id:  COCIRS_6611
             clock_range: 1856667988 to 1859235608 
             date_range: 2016-11-01 to 2016-11-30  
 
         - table_row: 
-            id:  COCIRS_1612
+            id:  COCIRS_6612
             clock_range: 1859259987 to 1861909652 
             date_range: 2016-12-01 to 2016-12-31  
 
@@ -1084,16 +1084,58 @@
     section_rows: 
 
         - table_row: 
-            id:  COCIRS_1701
+            id:  COCIRS_6701
             clock_range: 1861938388 to 1864588117 
             date_range: 2017-01-01 to 2017-01-31  
 
         - table_row: 
-            id:  COCIRS_1702
+            id:  COCIRS_6702
             clock_range: 1864616787 to 1867007316 
             date_range: 2017-02-01 to 2017-02-28  
 
         - table_row: 
-            id:  COCIRS_1703
+            id:  COCIRS_6703
             clock_range: 1867036052 to 1869685715 
             date_range: 2017-03-01 to 2017-03-31   
+
+- section: 
+    heading2: April 1, 2018
+    nolinks: true
+
+    section_rows: 
+
+        - table_row: 
+            id:  COCIRS_6704
+            clock_range: 1869714452 to 1872277716 
+            date_range: 2017-04-01 to 2017-04-30  
+
+        - table_row: 
+            id:  COCIRS_6705
+            clock_range: 1872306452 to 1874956180 
+            date_range: 2017-05-01 to 2017-05-31  
+
+        - table_row: 
+            id:  COCIRS_6706
+            clock_range: 1874984916 to 1877548180 
+            date_range: 2017-06-01 to 2017-06-30
+
+- section: 
+    heading2: July 1, 2018
+    nolinks: true
+
+    section_rows: 
+
+        - table_row: 
+            id:  COCIRS_6707
+            clock_range: 1877576916 to 1880226602 
+            date_range: 2017-07-01 to 2017-07-31  
+
+        - table_row: 
+            id:  COCIRS_6708
+            clock_range: 1880255316 to 1882905002 
+            date_range: 2017-08-01 to 2017-08-31  
+
+        - table_row: 
+            id:  COCIRS_6709
+            clock_range: 1882933715 to 1884157843 
+            date_range: 2017-09-01 to 2017-09-15      

@@ -10,46 +10,63 @@ tabs: cassini_iss
 
 ### 1\. VICAR Image Processing System
 
-**New and exciting news.**
 
-  * As of mid-October, 2015, the <a href="//www-mipl.jpl.nasa.gov/vicar_open.html" target="_blank">VICAR image processing system</a> is now available as Open Source software. 
-  * VICAR is an image processing system developed and used by the Multimission Image Processing Lab (MIPL) at JPL. With origins in 1966, it is quite possibly the oldest continuously used image processing system in the world. 
-  * VICAR was developed for use with JPL's planetary missions, from Surveyor up to the present day. The majority of JPL's planetary missions that have cameras use VICAR in some way, up to and including the current Mars landers/rovers (MER, MSL, InSight, Mars 2020).
-  * The VICAR format is compatible with both PDS3 and PDS4. VICAR formatted data in the PDS Ring-Moon Systems Node's holdings include image data from Cassini, Galileo, and Voyager.
+  * The <strong><a href="//www-mipl.jpl.nasa.gov/vicar_open.html" target="_blank">VICAR</a></strong> 
+    is an open source image processing system developed and used by the Multimission Image Processing 
+    Lab (MIPL) at JPL.  
+  * VICAR was developed for use with JPL's planetary missions, and the VICAR format is compatible with both PDS3 and PDS4. 
   * Questions regarding the installation and use of VICAR should be sent to: vicar_help@jpl.nasa.gov  
 
 ### 2\. Calibration Software
 
-  * The USGS has developed an <a href="https://isis.astrogeology.usgs.gov/fixit/projects/isis/wiki/Working_with_Cassini_ISS_Data" target="_blank">ISS calibration pipeline</a> using ISIS3 ( Integrated Software for Imagers and Spectrometers). 
-  * The USGS also offers a web service, <a href="https://astrocloud.wr.usgs.gov" target="_blank">Map Projection on the Web</a> (POW). POW provides users with calibrated cartographic images that can be used for geologic mapping, analysis in a Geographic Image System (GIS), change detection, merging of dissimilar instrument images, and use in a host of other scientific applications (e.g., ArcMAP, ENVI, Matlab, JMARS, etc.). Output formats currently supported include ISIS, PDS, GeoTiff, GeoJpeg2000, Jpeg, and PNG. POW supports Cassini ISS data. 
-  * Calibration software also is available on the [COISS_0011](/link/volumes/COISS_0xxx/COISS_0011/) volume. The entire volume can be downloaded by right clicking [ here](/link/archives-volumes/COISS_0xxx/COISS_0011.tar.gz) (.tar.gz format). Note: Establishing a local ISS calibration pipeline has proven challenging, users are encouraged to first consider using the calibrated images available from the Ring-Moon Systems Node (see [Accessing Data](access.html)), or the above options available from the USGS web site. 
+  * <strong><a href="https://isis.astrogeology.usgs.gov/fixit/projects/isis/wiki/Working_with_Cassini_ISS_Data" target="_blank">ISS calibration pipeline</a></strong> 
+    using ISIS3 ( Integrated Software for Imagers and Spectrometers). 
+    
+  * The USGS also offers a web service, <strong><a href="https://astrocloud.wr.usgs.gov" target="_blank">Map Projection on the Web</a></strong> 
+    (POW). POW provides users with calibrated cartographic images that can be used for geologic mapping, analysis in a Geographic Image System 
+    (GIS), change detection, merging of dissimilar instrument images, and use in a host of other scientific applications (e.g., ArcMAP, ENVI, 
+    Matlab, JMARS, etc.). Output formats currently supported include ISIS, PDS, GeoTiff, GeoJpeg2000, Jpeg, and PNG. POW supports Cassini ISS data. 
+    
+  * **[CISSCAL](/link/volumes/COISS_0xxx/COISS_0011/)** the ISS team developed, IDL based, calibration software also available in the COISS_0011 volume. 
+    The entire volume can be downloaded by right clicking **[here](/link/archives-volumes/COISS_0xxx/COISS_0011.tar.gz)** (.tar.gz format). 
+    Note: Establishing a local ISS calibration pipeline has proven challenging, users are encouraged to first consider using the calibrated 
+    images available from the Ring-Moon Systems Node (see [Accessing Data](access.html)), or the above options available from the USGS web site. 
 
-The volume contains a collection of calibration data files, calibration
-software processing files, sample calibrated images and related documentation.
-It also contains the source code for the Imaging Science Subsystem Calibration
-(CISSCAL) software, located in the [extras
-subdirectory](/link/volumes/COISS_0xxx/COISS_0011/extras/). This software, developed by
-the Cassini Imaging Team, allows the user to radiometrically and geometrically
-process the EDR-level images into higher level calibrated images. See the
-CISSCAL manual,
-[cisscal_manual.pdf](cisscal_manual.pdf) or
-[cisscal_manual.tex](cisscal_manual.tex), for
-more information.
+    * The volume contains a collection of calibration data files, calibration software processing files, sample calibrated images 
+    and related documentation.
+    
+    * It also contains the source code for the Imaging Science Subsystem Calibration(CISSCAL) software, located in the 
+      **[extras subdirectory](/link/volumes/COISS_0xxx/COISS_0011/extras/)**. This software, developed by the Cassini Imaging Team, 
+      allows the user to radiometrically and geometrically process the EDR-level images into higher level calibrated images. 
+      
+    * See the CISSCAL manual,**[cisscal_manual.pdf](cisscal_manual.pdf)** or **[cisscal_manual.tex](cisscal_manual.tex)**, for more information.
 
-For links to the complete calibration data set, see [ISS
-Calibration)](calibration.html).
+  * For links to the complete calibration data set, see **[ISS Calibration)](calibration.html)**.
 
 ### 3\. Data Analysis Software
 
-  * ISS images are compatible with the Integrated Software for Imagers and Spectrometers (ISIS) software package which is available through the <a href="//isis.astrogeology.usgs.gov/" target="_blank">USGS Flagstaff web site.</a>
+  * ISS images are compatible with the Integrated Software for Imagers and Spectrometers (ISIS) software package which is available 
+    through the <strong><a href="//isis.astrogeology.usgs.gov/" target="_blank">USGS Flagstaff web site.</a></strong>
 
-  * CASVU is designed specifically for ISS image data analysis. It operates under IDL and can be run under IDL VM software which is available at no cost. CASVU and its users' manual will be available soon. We will supply links to the appropriate pages when they become available. 
-
-  * Another data analysis tool, CAVIAR, is in development and will be made available in the near future. It too utilizes IDL and will operate under IDL VM software. It will be useful for both ISS and VIMS data analysis. We will supply links to the appropriate pages when they become available. 
+  * <strong><a href="ftp://ftp.imcce.fr/pub/softwares/caviar/" target="_blank">CAVIAR</a></strong> 
+    is an IDL based software package designed for the astrometric measurement of natural satellite positions in images taken using 
+    the Imaging Science Subsystem (ISS) of the Cassini spacecraft. For more information, see Cooper, et al., A&A 610, A2 (2018),
+    DOI: 10.1051/0004-6361/201731713.   
+    
+  * <strong><a href="https://github.com/nasa/ominas" target="_blank">OMINAS</a></strong> OMINAS (pronounced like 'ominous') is an 
+    IDL-based software environment for the reduction and analysis of data taken by any space-based or planet-based system. The 
+    linked github repository includes extensive documentation.           
+                                                                                                             
+  * CASVU is designed specifically for ISS image data analysis. It operates under IDL and can be run under IDL VM software 
+    which is available at no cost. CASVU and its users' manual will be available soon. We will supply links to the appropriate 
+    pages when they become available. 
 
 ### 4\. Image Viewing Software
 
-  * Images archived by the PDS, when accompanied by their respective label files, can be viewed using NASAView which is available through the <a href="//pds.nasa.gov/tools/index.shtml" target="_blank">PDS Software Download</a> web page.
+  * Images archived by the PDS, when accompanied by their respective label files, can be viewed using NASAView which is available through the 
+    <strong><a href="//pds.nasa.gov/tools/index.shtml" target="_blank">PDS Software Download</a></strong> web page.
 
-  * Piotr Masek has developed the <a href="//members.tripod.com/petermasek/cassini.html" target="_blank">Cassini Orbiter Image Viewer</a>, an easy to use viewer for Cassini ISS images. Although it is not designed for doing science, it does let you look at the images quickly and offers some toggles (no detailed control) to stretch & rotate images. 
+  * Piotr Masek has developed the <strong><a href="//members.tripod.com/petermasek/cassini.html" target="_blank">Cassini Orbiter Image Viewer</a></strong>,
+    an easy to use viewer for Cassini ISS images. Although it is not designed for doing science, it does let you look at the images 
+    quickly and offers some toggles (no detailed control) to stretch & rotate images. 
 

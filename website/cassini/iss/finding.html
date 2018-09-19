@@ -6,13 +6,16 @@ tabs: cassini_iss
 ## Finding the Data You Want
 
 ### 1\. Search Options
+  * Use **[OPUS](/search/)**
+    to search for specific Cassini data products using a wide range of criteria including enhanced geometric metadata produced at the Rings node. The enhanced geometric metadata includes information appropriate to planet and satellite searches as well as enhanced ring geometry.
 
-  * Use **[OPUS](/search#/instrumentid=Cassini+ISS&view=search&browse=gallery&colls_browse=gallery&page=1&gallery_data_viewer=true&limit=100&order=time1&cols=ringobsid,planet,target,phase1,phase2,time1,time2&widgets=instrumentid,planet,target&widgets2=&detail=)**
-to search for specific Cassini ISS data products using a wide range of criteria including enhanced geometric metadata produced at the Rings node. The enhanced geometric metadata includes information appropriate to planet and satellite searches as well as enhanced ring geometry.
-
+    * Supports CIRS (limited), ISS, UVIS, and VIMS.
+    
     * Search results include data files, tables of associated metadata, and browse thumbnails for each image. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading. 
 
-  * The <a href="//pdsimg.jpl.nasa.gov/search/?fq=ATLAS_MISSION_NAME%3Acassini&fq=ATLAS_INSTRUMENT_NAME%3Aiss&q=*%3A*" target="_blank">Planetary Atlas</a> at the <a href="//pds-imaging.jpl.nasa.gov/" target="_blank">PDS Imaging Node</a> has been significantly upgraded and supports a wide range of criteria for Cassini ISS data searches. 
+    * See section 4 below for additional hints on using OPUS.
+
+  * The <a href="//pdsimg.jpl.nasa.gov/search/?fq=ATLAS_MISSION_NAME%3Acassini&fq=ATLAS_INSTRUMENT_NAME%3Aiss&q=*%3A*" target="_blank">Planetary Atlas</a> at the <a href="//pds-imaging.jpl.nasa.gov/" target="_blank">PDS Imaging Node</a> has been significantly upgraded and supports a wide range of criteria for Cassini ISS and VIMS data searches. 
 
   * The [Access ISS Data](access.html) tab, provides links for each data volume, including links to the volume, to
 [tar.gz](/help/targz.html)
@@ -64,7 +67,14 @@ orbit number, the target code, a description of the observation, and instance
 number. For example, VIMS_000RI_RINGMOS103_PRIME is some of the data taken by
 VIMS during orbit 000 to produce a radial mosaic of the rings.
 
-Searching the index file for the substring RI_ will identify general ring
+"Observation Name" under "Cassin Mission Constraints" allows you to search in 
+**[OPUS](/search/)** 
+on the Cassini observation ID, or sub-strings within the observation ID. 
+In OPUS, first select either the mission or instrument host = cassini, or
+instrument name = any of the Cassini instruments. Either action will expose 
+the Cassini mission constraints. 
+ 
+Searching OPUS or the index file for the substring RI_ will identify general ring
 observations. Observations devoted to a specific ring (A through G) may be
 indicated by RA_, RB_, RC, RD_, RE_, RF_, and RG_ respectively
 

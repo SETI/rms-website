@@ -1,7 +1,5 @@
 ## Local deployment: 
 
-**Note** Some of this is likely deprecated #todo For deployment see [deploy/](deploy/)
-
 You will need 3 shell windows/tabs running 3 processes: 
 
 1. run a small local web server with python SimpleHTTPServer

@@ -1,0 +1,1 @@
+PROD_DIR = "FULL WEB DIRECTORY WITH TRAILING SLASH ie: /this/is/my/web/root/"

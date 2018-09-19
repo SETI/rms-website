@@ -5,7 +5,7 @@
     - Bundled Volumes
     - Browse Images
     - Enhanced Metadata
-    - Open Liens
+    - None
 
 - footer_msg:
     - ""
@@ -21,13 +21,13 @@
         - table_row:
             id: NHLALO_1001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Raw LORRI
 
         - table_row:
             id: NHLALO_2001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Calib LORRI
 
         - table_row:
@@ -50,13 +50,13 @@
         - table_row:
             id: NHJULO_1001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Raw LORRI
 
         - table_row:
             id: NHJULO_2001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Calib LORRI
 
         - table_row:
@@ -79,32 +79,31 @@
         - table_row:
             id: NHPCLO_1001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Raw LORRI
 
         - table_row:
             id: NHPCLO_2001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Calib LORRI
 
 
 - section:
-    heading1: Pluto Cruise - Unreleased
-    nolinks: true
+    heading1: Pluto Cruise 
 
     section_rows:
 
         - table_row:
             id: NHPCMV_1001
             base_dir:  NHxxMV_xxxx
-            liens: not released
+            liens: None
             description: Raw MVIC
 
         - table_row:
             id: NHPCMV_2001
             base_dir:  NHxxMV_xxxx
-            liens: not released
+            liens: None
             description: Calib MVIC
 
 - section:
@@ -115,23 +114,23 @@
         - table_row:
             id: NHPELO_1001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Raw LORRI
 
         - table_row:
             id: NHPELO_2001
             base_dir:  NHxxLO_xxxx
-            liens: Open Liens
+            liens: None
             description: Calib LORRI
 
         - table_row:
             id: NHPEMV_1001
             base_dir:  NHxxMV_xxxx
-            liens: Open Liens
+            liens: None
             description: Raw MVIC
 
         - table_row:
             id: NHPEMV_2001
             base_dir:  NHxxMV_xxxx
-            liens: Open Liens
+            liens: None
             description: Calib MVIC
