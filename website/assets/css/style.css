@@ -31,8 +31,9 @@ body {
 }
 .container {
   background-color: white;
-  width:92%;
-  padding:0;
+/*  width:92%; */
+  width: 100%;
+  padding: 0;
 }
 
 /*
@@ -86,8 +87,9 @@ h4 {
   .searchbox {
     display:block;
     position: absolute;
-    right:25px;
+    right:20px;
     top:90px;
+    width:400px
   }
 }
 
@@ -622,4 +624,20 @@ td.colgroup-seperator {
 .table-responsive {
   min-width: 768px;
   overflow: scroll;
+}
+
+.button {
+    background-color: #007bb3;
+    padding: 8px;
+    color: white;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #004361;
+}
+
+.button:active {
+    background-color: #004361;
+    transform: translate(1px,1px);
 }
