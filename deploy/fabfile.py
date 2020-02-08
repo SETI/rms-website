@@ -63,6 +63,8 @@ mark_website = 'http://{}'.format(mark_host)
 
 PROD_USR = getpass.getuser()  # expects same user name on all machines
                               # = local, admin, prod
+                              # This is not true for Matt, so...
+if PROD_USR == 'matthewt': PROD_USR = 'mtiscareno'
 env.hosts = [admin_host]      # only admin server has remote logins
 prod_login = '{}@{}'.format(PROD_USR, prod_host)
 prod_staging_path = '{}@{}:{}'.format(PROD_USR, prod_host, prod_staging_dir)
@@ -186,6 +188,8 @@ def production(suffix=""):
         with lcd(admin_repo + "website" + suffix + "/"):
 
             rsync_cmd = "rsync -r {} --exclude=*.tif --exclude=*.tiff --exclude=*.tgz --exclude=*.tar.gz _site/ {}. "
+            print(rsync_cmd.format('', prod_staging_path))
+            print(prod_staging_path)
 
             # move the site over to the production server staging directory
             # this step is here bc server settings = you can't deploy remotely
