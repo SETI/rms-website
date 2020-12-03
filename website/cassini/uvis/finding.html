@@ -8,22 +8,21 @@ tabs: cassini_uvis
 
 ###  1\. Search Options
 
-  * **Use [OPUS](/search#/missionid=Cassini&instrumentid=Cassini+UVIS&view=search&browse=gallery&colls_browse=gallery&page=1&gallery_data_viewer=true&limit=100&order=time1&cols=ringobsid,planet,target,phase1,phase2,time1,time2&widgets=missionid,instrumentid,planet,target&widgets2=&detail=)
+  * **Use [OPUS](//opus.pds-rings.seti.org/opus/#/instrument=Cassini+UVIS&mission=Cassini&widgets=mission,instrument,planet,target){:target="_blank"}
 to search for specific Cassini UVIS data products using a wide range of criteria including enhanced geometric metadata produced at the Rings node. The enhanced geometric metadata includes information appropriate to planet and satelllite searches as well as enhanced ring geometry.**
 
-    * Search results include data files, tables of associated metadata, and JPG previews for each observation. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading. 
+    * Search results include data files, tables of associated metadata, and JPG previews for each observation. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading.
 
-  * The [Access UVIS Data](access.html) tab, associates volumes with data sets, and for each volume gives the time interval covered by the volume and provides a link to the volume. 
+  * The [Access UVIS Data](access.html) tab, associates volumes with data sets, and for each volume gives the time interval covered by the volume and provides a link to the volume.
 
-**NOTE**: We provide links to individual volumes. Each volume contains data from several different UVIS data sets. 
+**NOTE**: We provide links to individual volumes. Each volume contains data from several different UVIS data sets.
 
-The <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini/uvis.html" target="_blank">PDS Atmospheres Node</a>
+The [PDS Atmospheres Node](//pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini/inst-uvis.html){:target="_blank"}
 provides links to individual data sets.
 
-For more information on UVIS data sets and data volumes, see the [About UVIS
-Data](about.html) tab.
+For more information on UVIS data sets and data volumes, see the [About UVIS Data](about.html) tab.
 
-  * For more detailed searching, you can use the DATASET_ID and Volume_ID, coupled with subdirectory and file names (browse the data directories), or the INDEX.TAB files to find specific data (see below). 
+  * For more detailed searching, you can use the DATASET_ID and Volume_ID, coupled with subdirectory and file names (browse the data directories), or the INDEX.TAB files to find specific data (see below).
 
 ###  2\. Interpreting the DATASET_ID
 
@@ -42,7 +41,7 @@ your search. It is in the form **CO-[T]-UVIS-2-[DESC]-V1.0**, where:
 
 **2** indicates the CODMAC data level (raw)
 
-**[DESC]** is one of the following abbreviated descriptions of the data set: 
+**[DESC]** is one of the following abbreviated descriptions of the data set:
 
     * **CALIB** \- Calibration data
     * **CUBE** \- A multi-band image (in PDS QUBE format)
@@ -69,10 +68,9 @@ a link to the volume.
 Each volume has an [INDEX](/link/volumes/COUVIS_0xxx/COUVIS_0004/) subdirectory
 containing several files including:
 
-  * <a href="INDXINFO.TXT" target="_blank">INDXINFO.TXT</a>: summarizes the structure and contents of the other two files in the INDEX subdirectory.
+  * [INDXINFO.TXT](INDXINFO.TXT){:target="_blank"}: summarizes the structure and contents of the other two files in the INDEX subdirectory.
 
 **Users are strongly encouraged to read an INDXINFO.TXT before working with the INDEX files.**
-  * <a href="COUVIS_0002_INDEX_TAB.txt" target="_blank">INDEX.TAB</a>: an ASCII table file with one row for each data file on the volume. For Cassini UVIS, each index table approximately 45 columns. This example is from disk COUVIS_0002.
+  * [INDEX.TAB](COUVIS_0002_INDEX_TAB.txt){:target="_blank"}: an ASCII table file with one row for each data file on the volume. For Cassini UVIS, each index table approximately 45 columns. This example is from disk COUVIS_0002.
 
-  * <a href="INDEX_LBL.txt" target="_blank">INDEX.LBL</a>: the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index.
-
+  * [INDEX.LBL](INDEX_LBL.txt){:target="_blank"}: the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index.
