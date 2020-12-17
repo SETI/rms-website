@@ -3,24 +3,24 @@ layout: base
 layout_style: default
 tabs: cassini_cirs
 ---
-  
+
 ### Getting the Data You Want
 
-  * Use **[OPUS](/search)**, our versatile search engine to find and retrieve specific Cassini CIRS data products using a wide range of criteria. However, OPUS currently only supports CIRS data submitted prior to July 2011.
+  * Use **[OPUS]({{ site.opus_url }}){:target="_blank"}**, our versatile search engine to find and retrieve specific Cassini CIRS data products using a wide range of criteria. However, OPUS currently only supports CIRS data submitted prior to July 2011.
 
-    * Search results include data files, tables of associated metadata, and footprint diagrams for each observation. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading. 
+    * Search results include data files, tables of associated metadata, and footprint diagrams for each observation. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading.
 
-    * **Note: The results returned by OPUS are the reformatted versions of CIRS.** However, users can use the returned tables of metadata to identify the corresponding original format data. 
+    * **Note: The results returned by OPUS are the reformatted versions of CIRS.** However, users can use the returned tables of metadata to identify the corresponding original format data.
 
-  * <strong><a href="/viewmaster/">Viewmaster</a></strong> is our new (2018) tool for browsing our on-line data volumes. This link takes you directly to the volumes directory. COCIRS_0xxx contains all CIRS observations through 2009. COCIRS_1xxx contains all CIRS observations in 2010 or later.
-  
-  * The table below contains links to all of the available data volumes from cruise, Jupiter, and Saturn. 
-  
-    * Clicking on the VOLUME_ID will allow you to browse the volume. 
+  * **[Viewmaster](/viewmaster/){:target="_blank"}** is our new (2018) tool for browsing our on-line data volumes. This link takes you directly to the volumes directory. COCIRS_0xxx contains all CIRS observations through 2009. COCIRS_1xxx contains all CIRS observations in 2010 or later.
 
-    * Clicking on TSDR_INDEX.TAB opens the index of Time Sequential Data Records products contained in the volume. This is an index of the calibrated files, but does not include entries for the highly derived CUBE products also included in the volumes beginning with the version 3.2 redelivery. 
+  * The table below contains links to all of the available data volumes from cruise, Jupiter, and Saturn.
 
-    * To download an entire volume, right click on that volume's "Bundled" link in the second column. 
+    * Clicking on the VOLUME_ID will allow you to browse the volume.
+
+    * Clicking on TSDR_INDEX.TAB opens the index of Time Sequential Data Records products contained in the volume. This is an index of the calibrated files, but does not include entries for the highly derived CUBE products also included in the volumes beginning with the version 3.2 redelivery.
+
+    * To download an entire volume, right click on that volume's "Bundled" link in the second column.
 
 The bundled volumes are provided in [tar.gz](/help/targz.html) format.
 
@@ -28,7 +28,7 @@ Be aware that even with a 4:1 compression ratio, the bundled versions can be
 on the order of 4GB and may take a few hours to download. Users are encouraged
 to download during the late night/early morning hours California time.
 
-  * We produced footprint diagrams for each CIRS Observation obtained during the Saturn encounter phase prior to the July 2010 observations. These are associated with the reformatted versions of the CIRS holdings and can be accessed from the table on the [Access Re-formatted Data](access_reform.html) tab. 
+  * We produced footprint diagrams for each CIRS Observation obtained during the Saturn encounter phase prior to the July 2010 observations. These are associated with the reformatted versions of the CIRS holdings and can be accessed from the table on the [Access Re-formatted Data](access_reform.html) tab.
 
 ### Available Volumes
 
@@ -43,4 +43,3 @@ to download during the late night/early morning hours California time.
 {% include data_table.html %}
 {% assign table_data = site.data.tables['cassini_cirs_access_orig'] %}
 {% include data_table.html %}
-

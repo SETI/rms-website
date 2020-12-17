@@ -5,15 +5,15 @@ tabs: cassini_cirs
 ---
 ### Getting the Data You Want
 
-  * Use **[OPUS](/search)**, our versatile search engine to find and retrieve specific Cassini CIRS data products using a wide range of criteria. However, OPUS currently only supports CIRS data submitted prior to July 2011.
+  * Use **[OPUS]({{ site.opus_url }}){:target="_blank"}**, our versatile search engine to find and retrieve specific Cassini CIRS data products using a wide range of criteria. However, OPUS currently only supports CIRS data submitted prior to July 2011.
 
-      * Search results include data files, tables of associated meta data, and footprint diagrams for each observation. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading. 
+      * Search results include data files, tables of associated meta data, and footprint diagrams for each observation. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading.
 
     * The table below contains links to all of the available data volumes from the Saturn encounter re-formatted into fixed length data files. For information on the re-formatted data, see [About Re-formatted Data.](reform_about.html)
 
-      * **Review** the Volume on-line by clicking the volume number. 
+      * **Review** the Volume on-line by clicking the volume number.
 
-      * **Download** an entire volume, by right clicking on that volume's "Bundled" link in the second column. 
+      * **Download** an entire volume, by right clicking on that volume's "Bundled" link in the second column.
 
 The bundled volumes are provided in [tar.gz](/help/targz.html) format.
 
@@ -21,7 +21,7 @@ Be aware that even with a 4:1 compression ratio, the Bundled versions can be
 on the order of 4GB and may take a few hours to download. Users are encouraged
 to download during the late night/early morning hours California time.
 
-  * **Footprint** will take you to a directory containing footprint diagrams of each CIRS observation in the volume. 
+  * **Footprint** will take you to a directory containing footprint diagrams of each CIRS observation in the volume.
 
 The footprint diagrams contain a wealth of information. The key for these diagrams is given in <a href="COCIRS_previews.txt" target="_blank">COCIRS_previews.txt</a>.
 
@@ -33,10 +33,9 @@ The footprint diagrams contain a wealth of information. The key for these diagra
 
   * **All reformtted volumes are based on version 2 of the original format data.**
 
-Data from Saturn Approach to End of Mission  
+Data from Saturn Approach to End of Mission
 
 {% assign table_name = "Cassini CIRS Reformated Releases" %}
 {% assign table_desc = "A listing of Cassini CIRS Reformated Releases" %}
 {% assign table_data = site.data.tables['cassini_cirs_access_reform'] %}
 {% include data_table.html %}
-
