@@ -6,55 +6,56 @@ tabs: cassini_uvis
 
 ### UVIS Occultations
 
-  * In addition to the raw data referenced below, the PDS RMS node has a data set of Saturn ring radial profiles 
-    derived from UVIS stellar occultation data obtained during the prime mission (2004-2008). 
-    The data include ring radial profiles at 1 and 10 km resolution from more than 50 UVIS stellar occultations. 
+  * In addition to the raw data referenced below, the PDS RMS node has a data set of Saturn ring radial profiles
+    derived from UVIS stellar occultation data obtained during the prime mission (2004-2008).
+    The data include ring radial profiles at 1 and 10 km resolution from more than 50 UVIS stellar occultations.
 
-  * You may browse the dataset [COUVIS_8001](/viewmaster/volumes/COUVIS_8xxx), or download the entire dataset 
-    [COUVIS_8001 tar.gz](/viewmaster/archives-volumes/COUVIS_8xxx/). 
-    
-  * Version 2 of this dataset, which corrects the known errors and expands the dataset coverage to the entire mission, 
-    is expected to be available in early 2019.    
+  * You may browse the dataset [COUVIS_8001](/viewmaster/volumes/COUVIS_8xxx), or download the entire dataset
+    [COUVIS_8001 tar.gz](/viewmaster/archives-volumes/COUVIS_8xxx/).
+
+  * Version 2 of this dataset, which corrects the known errors and expands the dataset coverage to the entire mission,
+    is expected to be available in early 2019.
 
 ### Getting the Data You Want
 
-You can **Search** for UVIS data using **[OPUS](/search/)** (Outer Planets Unified Search) 
+You can **Search** for UVIS data using **[OPUS]({{ site.opus_url }}){:target="_blank"}** (Outer Planets Unified Search)
 
-  * The tables below contain links to all of the available raw UVIS data, including all four 'phases': calibration, cruise, Jupiter, and Saturn data. This data is also available through the <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini/uvis.html" target="_blank">PDS Atmospheres Node</a>. 
+  * The tables below contain links to all of the available raw UVIS data, including all four 'phases': calibration, cruise,
+    Jupiter, and Saturn data. This data is also available through the [Atmospheres Node](//pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini/inst-uvis.html){:target="_blank"}.
 
-  * For each phase, individual observations are grouped by observation type into one of five virtual "data sets" (cruise and Jupiter calibration data are combined in a single data set). Here are the data product types associated with each data set identifier: 
+  * For each phase, individual observations are grouped by observation type into one of five virtual "data sets" (cruise and Jupiter calibration data are combined in a single data set). Here are the data product types associated with each data set identifier:
     * -calib-  Calibration data.
     * -cube-  Spatial spectral image cubes.
     * -spec-  Edited spectra.
     *  -ssb-   Solar and stellar occultation data.
     *  -wav-   Images taken at a single wavelength.
 
-  * However, the data are physically organized into chronological "volumes" that are mission phase and data set independent. Consequently, any given volume will contain data products from several data sets and in some instances from multiple mission phases. 
+  * However, the data are physically organized into chronological "volumes" that are mission phase and data set independent. Consequently, any given volume will contain data products from several data sets and in some instances from multiple mission phases.
 
-  * For more information about the organization and naming conventions used in the UVIS archive, see [About UVIS Data](about.html). 
+  * For more information about the organization and naming conventions used in the UVIS archive, see [About UVIS Data](about.html).
 
-  * The second table below includes links to preview images for all UVIS cubes. 
+  * The second table below includes links to preview images for all UVIS cubes.
 
   * Since UVIS observations contain a lot of information which is target
     dependent, representing that information with reasonable fidelity is complex.
-    Consequently we have provided a <a href="UVIS_previews.txt" target="_blank">key for the UVIS previews.</a>.
+    Consequently we have provided a [key for the UVIS previews](UVIS_previews.txt){:target="_blank"}.
 
-  * The following tables provide links to individual **volumes**. 
-  
+  * The following tables provide links to individual **volumes**.
+
     * The first table identifies which volumes which contain data products for each of the data set types.
 
     * The second table is arranged by volume and includes temporal coverage information and links to various options including directories of preview images.
 
-    * Browse a volume on-line by clicking the volume ID in either table. 
+    * Browse a volume on-line by clicking the volume ID in either table.
 
-    * Download an entire volume, by right clicking on that volume's "Bundled" link in the second table. 
+    * Download an entire volume, by right clicking on that volume's "Bundled" link in the second table.
 
 The bundled volumes are provided in [tar.gz](/help/targz.html) format.
 
-    * Browse Images will take you to a directory containing sub-directories of preview images for each UVIS cube in the volume. 
+    * Browse Images will take you to a directory containing sub-directories of preview images for each UVIS cube in the volume.
 
 The preview images contain a wealth of information. The key for the preview
-images is in <a href="UVIS_previews.txt" target="_blank">UVIS_previews.txt</a>.
+images is in [UVIS_previews.txt](UVIS_previews.txt){:target="_blank"}.
 
 ### Data sets and the volumes which contain them
 
@@ -74,9 +75,8 @@ images is in <a href="UVIS_previews.txt" target="_blank">UVIS_previews.txt</a>.
 
   * To determine which volumes meet the publicly available criteria for a specific ROSES Announcement please see the appropriate DAP page under our [Proposal Support](/roses) pages
 
- 
+
 {% assign table_name = "Cassini UVIS Releases" %}
 {% assign table_desc = "A listing of Cassini UVIS Releases" %}
 {% assign table_data = site.data.tables['cassini_uvis_access'] %}
 {% include data_table.html %}
-

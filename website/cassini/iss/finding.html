@@ -6,24 +6,26 @@ tabs: cassini_iss
 ## Finding the Data You Want
 
 ### 1\. Search Options
-  * Use **[OPUS](/search/)**
-    to search for specific Cassini data products using a wide range of criteria including enhanced geometric metadata produced at the Rings node. The enhanced geometric metadata includes information appropriate to planet and satellite searches as well as enhanced ring geometry.
+  * Use **[OPUS]({{ site.opus_url }}){:target="_blank"}**
+    to search for specific Cassini data products using a wide range of criteria including enhanced geometric metadata produced at the Rings node.
+    The enhanced geometric metadata includes information appropriate to planet and satellite searches as well as enhanced ring geometry.
 
     * Supports CIRS (limited), ISS, UVIS, and VIMS.
-    
-    * Search results include data files, tables of associated metadata, and browse thumbnails for each image. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading. 
+
+    * Search results include data files, tables of associated metadata, and browse thumbnails for each image. User selected data files can be bundled as [tar.gz](/help/targz.html) files for easy downloading.
 
     * See section 4 below for additional hints on using OPUS.
 
-  * The <a href="//pdsimg.jpl.nasa.gov/search/?fq=ATLAS_MISSION_NAME%3Acassini&fq=ATLAS_INSTRUMENT_NAME%3Aiss&q=*%3A*" target="_blank">Planetary Atlas</a> at the <a href="//pds-imaging.jpl.nasa.gov/" target="_blank">PDS Imaging Node</a> has been significantly upgraded and supports a wide range of criteria for Cassini ISS and VIMS data searches. 
+  * The [Planetary Atlas](//pds-imaging.jpl.nasa.gov/search/?fq=ATLAS_MISSION_NAME%3Acassini&fq=ATLAS_INSTRUMENT_NAME%3Aiss&fq=-ATLAS_THUMBNAIL_URL%3Abrwsnotavail.jpg&q=*%3A*){:target="_blank"}
+    at the [PDS Imaging Node](//pds-imaging.jpl.nasa.gov/){:target="_blank"} has been significantly upgraded and supports a wide range of criteria for Cassini ISS and VIMS data searches.
 
   * The [Access ISS Data](access.html) tab, provides links for each data volume, including links to the volume, to
-[tar.gz](/help/targz.html)
-files of the volume, and links to directories containing "thumbnail" previews of the images on the volume. 
+    [tar.gz](/help/targz.html)
+    files of the volume, and links to directories containing "thumbnail" previews of the images on the volume.
 
-  * The [ISS Calibration](calibration.html) tab, provides links for each calibration volume, including links to the volume and to [tar.gz](/help/targz.html) files of the volume. 
+  * The [ISS Calibration](calibration.html) tab, provides links for each calibration volume, including links to the volume and to [tar.gz](/help/targz.html) files of the volume.
 
-  * You can use the VOLUME_ID coupled with the index files provided on the ISS volumes to help you find specific data (see below). 
+  * You can use the VOLUME_ID coupled with the index files provided on the ISS volumes to help you find specific data (see below).
 
 ###  2\. Interpreting the VOLUME_ID
 
@@ -44,14 +46,14 @@ The volume ID takes the form **COISS_Nxxx**, where:
 Each volume has an [index](/link/volumes/COISS_2xxx/COISS_2001/index/) subdirectory
 containing three files:
 
-  * <a href="indxinfo.txt" target="_blank">indxinfo.txt</a>: summarizes the structure and contents of the other two files in the INDEX subdirectory.
+  * [indxinfo.txt](indxinfo.txt){:target="_blank"}: summarizes the structure and contents of the other two files in the INDEX subdirectory.
 
 **Users are strongly encouraged to read an indxinfo.txt before working with the INDEX files.**
-  * <a href="COISS_2001_index_tab.txt" target="_blank">index.tab</a>: an ASCII table file with one row for each image on the volume. For Cassini ISS, each index table contains 118 columns. Each row contains keyword values for one image. This example is from disk COISS_2001.
+  * [index.tab](COISS_2001_index_tab.txt){:target="_blank"}: an ASCII table file with one row for each image on the volume. For Cassini ISS, each index table contains 118 columns. Each row contains keyword values for one image. This example is from disk COISS_2001.
 
 **NOTE** that these files are large, typically, 12 Mbytes.
 
-  * <a href="index_lbl.txt" target="_blank">index.lbl</a>: the detached PDS label file for the indx.tab file. This is a text file giving names and definitions of all the columns in the index.
+  * [index.lbl](index_lbl.txt){:target="_blank"}: the detached PDS label file for the indx.tab file. This is a text file giving names and definitions of all the columns in the index.
 
 ### 4\. Useful Keywords for Ring searches
 
@@ -67,14 +69,13 @@ orbit number, the target code, a description of the observation, and instance
 number. For example, VIMS_000RI_RINGMOS103_PRIME is some of the data taken by
 VIMS during orbit 000 to produce a radial mosaic of the rings.
 
-"Observation Name" under "Cassin Mission Constraints" allows you to search in 
-**[OPUS](/search/)** 
-on the Cassini observation ID, or sub-strings within the observation ID. 
+"Observation Name" under "Cassin Mission Constraints" allows you to search in
+**[OPUS]({{ site.opus_url }}){:target="_blank"}**
+on the Cassini observation ID, or sub-strings within the observation ID.
 In OPUS, first select either the mission or instrument host = cassini, or
-instrument name = any of the Cassini instruments. Either action will expose 
-the Cassini mission constraints. 
- 
+instrument name = any of the Cassini instruments. Either action will expose
+the Cassini mission constraints.
+
 Searching OPUS or the index file for the substring RI_ will identify general ring
 observations. Observations devoted to a specific ring (A through G) may be
 indicated by RA_, RB_, RC, RD_, RE_, RF_, and RG_ respectively
-

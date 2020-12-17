@@ -8,14 +8,14 @@ tabs: cassini_vims
 
 ###  1\. Search Options
 
-  * **Use [OPUS](/search#/missionid=Cassini&instrumentid=Cassini+VIMS&view=search&browse=gallery&colls_browse=gallery&page=1&gallery_data_viewer=true&limit=100&order=time1&cols=ringobsid,planet,target,phase1,phase2,time1,time2&widgets=missionid,instrumentid,planet,target&widgets2=&detail=)
+  * **Use [OPUS]({{ site.opus_url }}/instrument=Cassini+VIMS&mission=Cassini&widgets=mission,instrument,planet,target){:target="_blank"}
 to search for specific Cassini VIMS data products using a wide range of criteria including enhanced geometric metadata produced at the Rings node. The enhanced geometric metadata includes information appropriate to planet and satelllite searches as well as enhanced ring geometry.**
 
-    * Search results include data files, tables of associated metadata, and JPG previews for each observation. User selected data files can be bundled as tar.gz files for easy downloading. 
+    * Search results include data files, tables of associated metadata, and JPG previews for each observation. User selected data files can be bundled as tar.gz files for easy downloading.
 
-  * The [Access Data](access.html) tab, for each volume gives the time interval covered by the volume and provides a link to the volume. 
+  * The [Access Data](access.html) tab, for each volume gives the time interval covered by the volume and provides a link to the volume.
 
-  * You can use the Volume_ID, coupled with subdirectory and file names (browse the data directories), or the INDEX.TAB files to find specific data (see below). 
+  * You can use the Volume_ID, coupled with subdirectory and file names (browse the data directories), or the INDEX.TAB files to find specific data (see below).
 
 ###  2\. Interpreting the VOLUME_ID
 
@@ -27,20 +27,20 @@ The volume ID takes the form **COVIMS_XXXX**, where:
 
 ###  3\. The Volume index Files
 
-Each volume has an [index](/link/volumes/COVIMS_0xxx/COVIMS_0001/index/) subdirectory
+Each volume has an [index](/link/volumes/COVIMS_0xxx/COVIMS_0001/index/){:target="_blank"} subdirectory
 containing these files:
 
-  * <a href="indxinfo.txt" target="_blank">indxinfo.txt</a>: summarizes the structure and contents of the files in the INDEX subdirectory.
+  * [indxinfo.txt](indxinfo.txt){:target="_blank"}: summarizes the structure and contents of the files in the INDEX subdirectory.
 
 **Users are encouraged to read an indxinfo.txt before working with the files in the index subdirectory.**
 
-  * <a href="COVIMS_0001_INDEX_TAB.txt" target="_blank">index.tab</a>: an ASCII table file with one row for each data file on the volume. For Cassini UVIS, each index table approximately 45 columns. This example is from disk COUVIS_0001. (Warning: 4.3 Mbytes!) 
+  * [index.tab](COVIMS_0001_INDEX_TAB.txt){:target="_blank"}: an ASCII table file with one row for each data file on the volume. For Cassini UVIS, each index table approximately 45 columns. This example is from disk COUVIS_0001. (Warning: 4.3 Mbytes!)
 
-  * <a href="COVIMS_0001_INDEX_LBL.txt" target="_blank">index.lbl</a>: the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index. 
+  * [index.lbl](COVIMS_0001_INDEX_LBL.txt){:target="_blank"}: the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index.
 
-  * CUMINDEX.TAB: a cumulative version of INDEX.TAB, encompassing all prior volumes. 
+  * CUMINDEX.TAB: a cumulative version of INDEX.TAB, encompassing all prior volumes.
 
-  * CUMINDEX.LBL: a detached PDS label for the cumulative index. 
+  * CUMINDEX.LBL: a detached PDS label for the cumulative index.
 
 ### 4\. Useful Keywords for Ring searches
 
@@ -62,8 +62,7 @@ indicated by RA_, RB_, RC, RD_, RE_, RF_, and RG_ respectively
 
 ### Calibrated VIMS data cubes for the Saturnian Satellites.
 
-  * The data submitted to PDS by the VIMS team is raw data. 
-  
-  * The LPG-NANTES maintains a <a href="https://vims.univ-nantes.fr/"><strong>Cassini VIMS Data Portal</Strong></a> 
-    with <strong>calibrated VIMS cubes for VIMS observations of Saturn's satellites</strong>.
+  * The data submitted to PDS by the VIMS team is raw data.
 
+  * The LPG-NANTES maintains a [Cassini VIMS Data Portal](//vims.univ-nantes.fr/){:target="_blank"}
+    with <strong>calibrated VIMS cubes for VIMS observations of Saturn's satellites</strong>.
