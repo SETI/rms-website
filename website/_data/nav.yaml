@@ -1,4 +1,4 @@
-# all internal links must end in a / 
+# all internal links must end in a /
 # so every href field that points inside
 # this drives the nav's active styles when on a matching page
 - title: Planetary Data
@@ -90,18 +90,14 @@
   href: /
   submenu:
 
-    - title: Mark Showalter
-      href: //www.seti.org/our-scientists/mark-showalter 
+    - title: Matt Tiscareno
+      href: //www.seti.org/our-scientists/matthew-tiscareno
 
     - title: Mitch Gordon
       href: //www.seti.org/our-scientists/mitchell-gordon
 
-    - title: Matt Tiscareno
-      href: //www.seti.org/our-scientists/matthew-tiscareno
-
-    - title: Mike Evans
-      href: //www.seti.org/our-scientists/michael-evans
+    - title: Mark Showalter
+      href: //www.seti.org/our-scientists/mark-showalter
 
     - title: Rob French
       href: //www.seti.org/our-scientists/robert-french
-
