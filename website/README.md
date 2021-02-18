@@ -1,6 +1,6 @@
-## Local deployment: 
+## Local deployment:
 
-You will need 3 shell windows/tabs running 3 processes: 
+You will need 3 shell windows/tabs running 3 processes:
 
 1. run a small local web server with python SimpleHTTPServer
 - run the jekyll watch command
@@ -24,16 +24,16 @@ You will need 3 shell windows/tabs running 3 processes:
         jekyll build --watch
 
 
-3. In another tab, in the same directory as step 2, start rsyncing that jekyll build directory to the local deployment directory served by SimpleHTTPServer (see __Note__ below) 
+3. In another tab, in the same directory as step 2, start rsyncing that jekyll build directory to the local deployment directory served by SimpleHTTPServer (see __Note__ below)
 
 	__On a Mac__:
 
         while :; do clear; rsync -a -v _site/ /Users/lballard/sites/ringsnode; sleep 2; done
 
 	In __Linux__ you have the watch command:
-	
+
 		watch -n 2 rsync -a -v _site/ /Users/lballard/sites/ringsnode
-		
+
 	In __Windows__ try something like this: write a small batch file, call it rsyncer.bat
 
 		@ECHO OFF
@@ -43,9 +43,18 @@ You will need 3 shell windows/tabs running 3 processes:
 		goto loop
 
 	then run it like so:
-	
+
 		rsyncer
 
-__Note:__ Before doing step 3 putting that rsync on repeat, make sure you've done the full rsync at least once: 
-	
+__Note:__ Before doing step 3 putting that rsync on repeat, make sure you've done the full rsync at least once:
+
 	rsync -a -v _site/ /Users/lballard/sites/ringsnode
+
+
+To run a simple DEBUG envinroment on windows:
+You will need 2 shell windows:
+1) cd website
+   jekyll build --watch
+
+2) cd website\_site
+   python -m http.server 4000   <or whatever socket you prefer>
