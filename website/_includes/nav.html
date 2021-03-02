@@ -12,7 +12,7 @@
       <b>&nbsp;&nbsp;&nbsp;<input type=submit class="button" value="Questions/Feedback"></b>
       </form>
     </p>
-    
+
     {% for section in site.data.nav %}
 
     <li class="subheading">
@@ -31,8 +31,10 @@
             {% if menu_url_path_split[1] == page_url_path_split[1] %}
               class = "active"
             {% endif %}
-          >
-            <a href = "{{ item.href }}">{{ item.title }}</a>
+            >
+            <a href = "{{ item.href }}"
+            {% if item.open contains 'new_tab' %}target="_blank"{% endif %}
+            >{{ item.title }}</a>
 
           </li>
 

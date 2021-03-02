@@ -6,16 +6,20 @@
   submenu:
 
     - title: Search (OPUS)
-      href: /search/
+      href: //opus.pds-rings.seti.org/opus/
+      open: new_tab
 
     - title: Browse Data Volumes
       href: /viewmaster/volumes/
+      open: new_tab
 
     - title: Quick Downloads
       href: /viewmaster/archives-volumes/
+      open: new_tab
 
     - title: PDS-Wide Search
       href: //pds.nasa.gov/datasearch/data-search/
+      open: new_tab
 
 - title: Node Resources
   href: /
@@ -89,12 +93,16 @@
 
     - title: Matt Tiscareno
       href: //www.seti.org/our-scientists/matthew-tiscareno
+      open: new_tab
 
     - title: Mitch Gordon
       href: //www.seti.org/our-scientists/mitchell-gordon
+      open: new_tab
 
     - title: Mark Showalter
       href: //www.seti.org/our-scientists/mark-showalter
+      open: new_tab
 
     - title: Rob French
       href: //www.seti.org/our-scientists/robert-french
+      open: new_tab
