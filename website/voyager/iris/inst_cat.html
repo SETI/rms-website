@@ -7,24 +7,26 @@ title: "IRIS Instrument Description"
 # IRIS Instrument Description
 
 ### Index
+{: index}
 
-Instrument Description  
-Scientific Objectives  
-Calibration  
-Operational Considerations  
-Detectors  
-Instrument Electronics  
-Optics  
-Instrument Offset  
-Parameters  
-Modes  
-References  
+* [ Instrument Description](#inst_desc)
+* [ Scientific Objectives](#sci_obj)
+* [ Calibration](#calib)
+* [ Operational Considerations](#op_con)
+* [ Detectors](#detector)
+* [ Instrument Electronics](#inst_elec)
+* [ Optics](#optics)
+* [ Instrument Offset](#inst_off)
+* [ Parameters](#param)
+* [ Modes](#modes)
+* [ References](#refs)
 
-Click for the <a href="inst_cat.txt" target="_blank">text</a> version of this file.
+Click for the [text](inst_cat.txt){:target="_blank"} version of this file.
 
 * * *
 
 ## Instrument Description
+{: #inst_desc }
 
 The Voyager IRIS instrument consists of a Michelson interferometer for
 measurements in the thermal infrared and a single channel radiometer that
@@ -63,53 +65,53 @@ of 8. These latter channels are sampled every 6 seconds and digitized. The
 timing of the samples, and their relationship to events in a single-frame read
 out of an image are given in Table 1.
 
-    
-    
-    
+
+
+
                      Table 1. IRIS and ISS Events
-    
+
             Event                         ISS line count
             ____________________________  ___________________
             ISS frame start               0 (0 seconds)
             IRIS frame start              167
             IRIS interferogram start      179
-            IRIS radiometer samples       217,317,...,717, 
-                                          and 017, 117 of 
+            IRIS radiometer samples       217,317,...,717,
+                                          and 017, 117 of
                                           the following frame
             IRIS pointing information #1  350
             IRIS interferogram peak       375 +/- 5
             IRIS pointing information #2  750
             ISS shutter close             767
             ISS frame end                 800(48 seconds)
-    
-    
+
+
 
 In order to visualize the effects of quantization uncertainties directly, it
 is sometimes useful to convert the radiometer watts at the detector back into
 data numbers (DN). The relationships are:
 
-    
-    
-    
+
+
+
             For Voyager 1:
-    
+
                Sampled data (normal gain):
                   DNn = (WADn * 1e+08 - 2.51937) / 3.39426
                Sampled data (high gain):
                   DNh = (WADh * 1e+09 - 1.55472) / 4.26206
                Integrated data:
                   DNi = WADi / 1.42145 * 1e+09
-    
+
             For Voyager 2:
-    
+
                Sampled data (normal gain):
                   DNn = (WADn * 1e+08 - 6.33020) / 3.40070
                Sampled data (high gain):
                   DNh = (WADh * 1e+09 + 6.57589) / 4.24459
                Integrated data:
                   DNi = WADi / 1.42047 * 1e+09
-    
-    
+
+
 
 Pairs of baseline levels are averaged at the beginning and at the end of the
 45.6 second integrations, occasionally resulting in half-integral DN values
@@ -139,41 +141,43 @@ warm the instrument during cruise periods to reverse a gradual change in the
 elastic properties of a silicone compound in the Michelson motor dampers and
 beam-splitter mounts.
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Scientific Objectives
+{: #sci_obj }
 
 The scientific objectives of the Voyager Infrared Interferometer Spectrometer
 (IRIS) investigation include the following:
 
-    
-    
-     (1)  Identification and determination of the abundances of 
-          gaseous atmospheric constituents;  
-     (2)  Determination of the helium abundance of the 
-          atmospheres of the giant planets;  
-     (3)  Determination of the energy balances of the giant 
-          planets through measurements of their total thermal 
-          emissions and Bond albedos; 
-     (4)  Determination of the three dimensional thermal 
-          structure of the atmospheres of the giant planets and 
-          Titan;  
-     (5)  Inference of information on atmospheric dynamics;  
-     (6)  Inference of the infrared optical properties of 
-          clouds and hazes;  
-     (7)  Determination of the temperature, composition, and 
-          structure of the surfaces of satellites without 
-          atmospheres;  
-     (8)  Determination of the thermal characteristics of 
-          Saturn's rings.  
-    
+
+
+     (1)  Identification and determination of the abundances of
+          gaseous atmospheric constituents;
+     (2)  Determination of the helium abundance of the
+          atmospheres of the giant planets;
+     (3)  Determination of the energy balances of the giant
+          planets through measurements of their total thermal
+          emissions and Bond albedos;
+     (4)  Determination of the three dimensional thermal
+          structure of the atmospheres of the giant planets and
+          Titan;
+     (5)  Inference of information on atmospheric dynamics;
+     (6)  Inference of the infrared optical properties of
+          clouds and hazes;
+     (7)  Determination of the temperature, composition, and
+          structure of the surfaces of satellites without
+          atmospheres;
+     (8)  Determination of the thermal characteristics of
+          Saturn's rings.
+
 
 These objectives are accomplished through the analysis of measurements of
 thermal emission spectra and broad band reflected solar energy.
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Calibration
+{: #calib }
 
 In-flight calibration of the data from the interferometer is accomplished
 using periodic observations of deep space along with a precise knowledge of
@@ -220,14 +224,14 @@ DNi x AU**2; this differs slightly from the published value 31152 +/- 312 DNi
 x AU**2 [PEARL&amp;CONRATH1991;]. The target signals for the integrating, x8
 sampling, and x1 sampling radiometer data are in the ratio 24:8:1.
 
-    
-    
-    Table 2. Target plate calibrations - integrating radiometer 
+
+
+    Table 2. Target plate calibrations - integrating radiometer
              (integrating:high_gain:normal_gain=24:8:1)
-    
+
                                  VG1 Jupiter     VG1 Jupiter
     Calibration Quantity         Pre-encounter   Post-encounter
-    ____________________________ _______________ _______________  
+    ____________________________ _______________ _______________
     Space before (DN)            9.5 +/- 1.0     17.0 +/- 1.5
     Space After (DN)             9.0 +/- 0.5     16.0 +/- 0.5
     Space weighted mean (DN) [1] 9.1 +/- 0.4     16.1 +/- 0.5
@@ -235,11 +239,11 @@ sampling, and x1 sampling radiometer data are in the ratio 24:8:1.
     Adjusted target (DN) [3]     1148.4 +/- 5.8  1013.4 +/- 5.2
     Distance to Sun (10e+8 km)   7.67024         8.10236
     DN x AU**2                   30190. +/- 150. 29730. +/- 150.
-    
-    
+
+
                                  VG1 Saturn      VG1 Saturn
     Calibration Quantity         Pre-encounter   Post-encounter
-    ____________________________ _______________ _______________  
+    ____________________________ _______________ _______________
     Space before (DN)            19.5 +/- 0.5    16.25 +/- 0.25
     Space After (DN)             17.5 +/- 0.5    16.5 +/- 0.5
     Space weighted mean (DN) [1] 18.5 +/- 1.0    16.3 +/- 0.2
@@ -247,11 +251,11 @@ sampling, and x1 sampling radiometer data are in the ratio 24:8:1.
     Adjusted target (DN) [3]     397.0 +/- 2.3   312.2 +/- 1.7
     Distance to Sun (10e+8 km)   12.93381        14.66979
     DN x AU**2                   29680. +/- 170. 30020. +/- 160.
-    
-    
+
+
                                  VG2 Jupiter     VG2 Jupiter
     Calibration Quantity         Pre-encounter   Post-encounter
-    ____________________________ _______________ _______________  
+    ____________________________ _______________ _______________
     Space before (DN)            59 +/- 2        49.0 +/- 0.5
     Space After (DN)             51 +/- 2        48.0 +/- 0.5
     Space weighted mean (DN) [1] 55 +/- 4        48.5 +/- 1.0
@@ -259,11 +263,11 @@ sampling, and x1 sampling radiometer data are in the ratio 24:8:1.
     Adjusted target (DN) [3]     1260.0 +/- 7.7  944.0 +/- 5.1
     Distance to Sun (10e+8 km)   7.43461         8.60397
     DN x AU**2 [4]               31120. +/- 190. 31230. +/- 170.
-    
-    
+
+
                                  VG2 Saturn      VG2 Saturn
     Calibration Quantity         Pre-encounter   Post-encounter
-    ____________________________ _______________ _______________  
+    ____________________________ _______________ _______________
     Space before (DN)            51.0 +/- 1.0          [5]
     Space After (DN)             47.0 +/- 1.5          [5]
     Space weighted mean (DN) [1] 49.0 +/- 2.0          [5]
@@ -271,11 +275,11 @@ sampling, and x1 sampling radiometer data are in the ratio 24:8:1.
     Adjusted target (DN) [3]     406.5 +/- 3.0         [5]
     Distance to Sun (10e+8 km)   13.08739              [5]
     DN x AU**2 [4]               31110. +/- 230.       [5]
-    
-    
+
+
                                  VG2 Uranus      VG2 Uranus
     Calibration Quantity         Pre-encounter   Post-encounter
-    ____________________________ _______________ _______________  
+    ____________________________ _______________ _______________
     Space before (DN)            52.0 +/- 0.5    53.0 +/- 0.5
     Space After (DN)             51.5 +/- 1.0    53.0 +/- 0.5
     Space weighted mean (DN) [1] 51.9 +/- 0.4    53.0 +/- 0.5
@@ -283,11 +287,11 @@ sampling, and x1 sampling radiometer data are in the ratio 24:8:1.
     Adjusted target (DN) [3]     91.6 +/- 0.8    85.0 +/- 0.9
     Distance to Sun (10e+8 km)   27.34484        28.88645
     DN x AU**2 [4]               30610. +/- 280. 31690. +/- 320.
-    
-    
+
+
                                  VG2 Neptune     VG2 Neptune
     Calibration Quantity         Pre-encounter   Post-encounter
-    ____________________________ _______________ _______________  
+    ____________________________ _______________ _______________
     Space before (DN)            53.0 +/- 0.5    52.5 +/- 0.5
     Space After (DN)             53.0 +/- 0.5    52.5 +/- 1.0
     Space weighted mean (DN) [1] 53.0 +/- 0.5    52.5 +/- 0.4
@@ -295,23 +299,23 @@ sampling, and x1 sampling radiometer data are in the ratio 24:8:1.
     Adjusted target (DN) [3]     42.8 +/- 0.7    33.8 +/- 0.9
     Distance to Sun (10e+8 km)   39.6584         45.2993
     DN x AU**2 [4]               30040. +/- 500. 30940. +/- 800.
-    
+
     ____________________________________________________________
     Notes:
-    [1] Where the difference between pre-encounter and 
-        post-encounter measurements of space exceeds the random 
-        baseline variation, the average is taken as the 
+    [1] Where the difference between pre-encounter and
+        post-encounter measurements of space exceeds the random
+        baseline variation, the average is taken as the
         arithmetic mean, with the difference as the uncertainty.
-    [2] Considers the larger of 0.5% (estimated maximum possible 
-        nonlinearity) or the baseline variation as the 
+    [2] Considers the larger of 0.5% (estimated maximum possible
+        nonlinearity) or the baseline variation as the
         uncertainty.
-    [3] All uncertainties are considered uncorrelated in 
+    [3] All uncertainties are considered uncorrelated in
         calculation of the adjusted target signal.
-    [4] For Voyager 2 only, the adopted mean value of 30960 +/- 
+    [4] For Voyager 2 only, the adopted mean value of 30960 +/-
         460 is entered for all cases in the calibration files.
-    [5] For Voyager 2 Saturn post-encounter, the instrument 
+    [5] For Voyager 2 Saturn post-encounter, the instrument
         platform jammed so the calibration maneuver was aborted.
-    
+
 
 Because the spectral transmission of the radiometer is not flat across the
 bandwidth, further calibration requires knowledge of the relative spectrum of
@@ -320,9 +324,10 @@ plates are 0.502 +/- 0.018 and 0.497 +/- 0.018, respectively. A detailed
 description of a technique for calibrating the radiometer is given in
 [HANELETAL1981A].
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Operational Considerations
+{: #op_con }
 
 The IRIS instruments on Voyager 1 and 2 operated normally throughout the
 mission. The infrared interferometers of both instruments experienced a
@@ -331,9 +336,10 @@ in silicon compounds used in the mirror mounts and motor dampers. However,
 this was partially reversed by using the flash off heaters to raise the
 temperature of the instrument periodically during cruise between encounters.
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Detectors
+{: #detector }
 
 The detector of the broadband reflected solar radiometer is an eighteen-
 junction thermopile with a 3 second thermal time constant and is operated at a
@@ -346,9 +352,10 @@ is operated at a temperature of 200 K. The thermopile used with the
 interferometer has a noise equivalent power of approximately 2E-10
 Watt/Hz**1/2.
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Instrument Electronics
+{: #inst_elec }
 
 The bulk of the analog and all of the digital circuitry is located in an
 electronics module separate form the interferometer module. The power supply
@@ -368,9 +375,10 @@ possible. The bulk of the instrument electronics consists of radiation-
 hardened integrated circuits. A description of the electronics, along with a
 block diagram, is given in [HANELETAL1980A].
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Optics
+{: #optics }
 
 The Cassegrain telescope has a parabolic primary mirror 50 cm in diameter with
 a 7.62 cm hyperbolic secondary mirror, and an effective focal length of 303.5
@@ -383,18 +391,20 @@ coated over a nickel plating. The secondary mirror has an aluminum coating
 over the nickel plating, and this in turn is overcoated with silicon monoxide
 for protection.
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Instrument Offset
+{: #inst_off }
 
 The instrument and the associated electronics and power supply modules are
 bolted to the scan platform. The telescope is approximately bore-sighted with
 the wide and narrow angle television cameras, and with the PPS and UVS
 instruments.
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Parameters
+{: #param }
 
 The following instrument parameters are measured.
 
@@ -409,9 +419,10 @@ data frame. The quantity given is power at the detector in Watts.
 Thermal Radiance - Radiance (W cm-2 ster-1) within a 4.3 cm-1 spectral
 interval.
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## Modes
+{: #modes }
 
 The instrument possesses only one operating mode. When turned on the
 instruments acquires one interferogram every 48 second data frame. In addition
@@ -420,9 +431,10 @@ The latter consist of a measurement integrated over 45.6 seconds as well as 8
 samples of both high and normal gain measurements distributed at 6 second
 intervals throughout the data frame."
 
-  * Back to the index.
+  * [Back to the index](#index).
 
 ## References
+{: #refs }
 
 Hanel, R. A., D. Crosby, L. W. Herath, D. Vanous, D. Collins, H. Creswick, C.
 Harris, and M. Rhodes, Infrared Spectrometer for Voyager, _Applied Optics_,
@@ -437,4 +449,4 @@ Albedo, Internal Heat, and Energy Balance of Jupiter: Preliminary Results of
 the Voyager Infrared Investigation, _J. Geophys. Res._, **86**, 8705-8712,
 1981.
 
-  * Back to the index.
+  * [Back to the index](#index).

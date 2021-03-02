@@ -6,87 +6,82 @@ title: "Voyager 2 Wide Angle Camera Description"
 
 # Voyager 2 Wide Angle Camera Description
 
-<h2 id="index">Index</h2>
+## Index
+{: #index }
 
-<ul>
-  <li>Instrument Information</li>
-  <li>Instrument Description</li>
-  <li>Science Objectives</li>
-  <li>Operational Considerations</li>
-  <li>Calibration Description</li>
-  <li>Field Of View</li>
-  <li>Parameters</li>
-  <li>Instrument Detector</li>
-  <li>Instrument Electronics</li>
-  <li>Instrument Filters
-    <ul>
-      <li>Methane “0”</li>
-      <li>Blue “1”</li>
-      <li>Clear “2”</li>
-      <li>Violet “3”</li>
-      <li>Sodium “4”</li>
-      <li>Green “5”</li>
-      <li>Methane “6”</li>
-      <li>Orange “7”</li>
-    </ul>
-  </li>
-  <li>Instrument Optics</li>
-  <li>Instrument Modes
-    <ul>
-      <li>IM2</li>
-      <li>IM2A</li>
-      <li>IM2C</li>
-      <li>IM2W</li>
-      <li>IM3</li>
-      <li>IM4</li>
-      <li>IM5</li>
-      <li>IM6</li>
-      <li>IM7</li>
-      <li>IM8</li>
-      <li>IM9</li>
-      <li>IM10</li>
-      <li>IM11</li>
-      <li>IM12</li>
-      <li>IM13</li>
-      <li>IM14</li>
-      <li>IM15</li>
-      <li>IM26</li>
-      <li>IMK</li>
-      <li>IMO</li>
-      <li>IMQ</li>
-      <li>OC3</li>
-      <li>PB8</li>
-    </ul>
-  </li>
-  <li>Scan Platform</li>
-  <li>References</li>
-</ul>
+  * [Instrument Information](#inst_info)
+  * [Instrument Description](#inst_desc)
+  * [Science Objectives](#sci_obj)
+  * [Operational Considerations](#op_con)
+  * [Calibration Description](#cal_desc)
+  * [Field Of View](#fov)
+  * [Parameters](#parameters)
+  * [Instrument Detector](#inst_det)
+  * [Instrument Electronics](#inst_elec)
+  * [Instrument Filters](#filters)
+      * [Methane “0”](#filter_0)
+      * [Blue “1”](#filter_1)
+      * [Clear “2”](#filter_2)
+      * [Violet “3”](#filter_3)
+      * [Sodium “4”](#filter_4)
+      * [Green “5”](#filter_5)
+      * [Methane “6”](#filter_6)
+      * [Orange “7”](#filter_7)
+  * [Instrument Optics](#inst_opt)
+  * [Instrument Operational Modes](#modes)
+      * [IM2](#im2)
+      * [IM2A](#im2a)
+      * [IM2C](#im2c)
+      * [IM2W](#im2w)
+      * [IM3](#im3)
+      * [IM4](#im4)
+      * [IM5](#im5)
+      * [IM6](#im6)
+      * [IM7](#im7)
+      * [IM8](#im8)
+      * [IM9](#im9)
+      * [IM10](#im10)
+      * [IM11](#im11)
+      * [IM12](#im12)
+      * [IM13](#im13)
+      * [IM14](#im14)
+      * [IM15](#im15)
+      * [IM26](#im26)
+      * [IMK](#imk)
+      * [IMO](#imo)
+      * [IMQ](#imq)
+      * [OC3](#oc3)
+      * [PB8](#pb8)
+  * [Scan Platform](#scan_plat)
+  * [References](#ref)
 
-<hr />
+***
 
-<h1 id="instrument-information">Instrument Information</h1>
+### Instrument Information
+{: #inst_info }
 
-<pre><code>      Instrument Id                  : ISSW 
-      Instrument Host Id             : VG2 
-      Pi Pds User Id                 : BASMITH 
-      Naif Data Set Id               : UNK 
-      Instrument Name                : IMAGING SCIENCE SUBSYSTEM - WIDE 
-                                         ANGLE 
-      Instrument Type                : VIDICON CAMERA 
-      Build Date                     : 1976-12-17 
-      Instrument Mass                : 13.300000 
-      Instrument Length              : 0.550000 
-      Instrument Width               : 0.200000 
-      Instrument Height              : 0.200000 
-      Instrument Serial Number       : SN04 
-      Instrument Manufacturer Name   : JET PROPULSION LABORATORY 
+<pre><code>      Instrument Id                  : ISSW
+      Instrument Host Id             : VG2
+      Pi Pds User Id                 : BASMITH
+      Naif Data Set Id               : UNK
+      Instrument Name                : IMAGING SCIENCE SUBSYSTEM - WIDE
+                                         ANGLE
+      Instrument Type                : VIDICON CAMERA
+      Build Date                     : 1976-12-17
+      Instrument Mass                : 13.300000
+      Instrument Length              : 0.550000
+      Instrument Width               : 0.200000
+      Instrument Height              : 0.200000
+      Instrument Serial Number       : SN04
+      Instrument Manufacturer Name   : JET PROPULSION LABORATORY
 </code></pre>
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="instrument-description">Instrument Description</h1>
+### Instrument Description
+{: #inst_desc }
 
-<p>The Voyager Imaging Science Subsystem (ISS) is a modified version of the slow
+The Voyager Imaging Science Subsystem (ISS) is a modified version of the slow
 scan vidicon camera designs that were used in the earlier Mariner flights. The
 system consists of two cameras, a high resolution Narrow Angle (NA) camera and
 a lower resolution, more sensitive Wide Angle (WA) camera. Unlike the other on
@@ -94,9 +89,9 @@ board instruments, operation of the cameras is not autonomous, but is
 controlled by an imaging parameter table residing in one of the spacecraft
 computers, the Flight Data Subsystem (FDS) (Science and Mission Systems
 Handbook, 1987, JPL D-498, an internal JPL document available from JPL vellum
-files).</p>
+files).
 
-<p>The original mission was to Jupiter and Saturn. Voyager surpassed expectations
+The original mission was to Jupiter and Saturn. Voyager surpassed expectations
 and went on to encounter Uranus and Neptune. As the Voyager mission progressed
 the objects photographed were further from the sun so they appeared more faint
 even though longer exposures were used. As the Voyager spacecrafts’ distance
@@ -108,30 +103,32 @@ use. Because of the diminished brightness of the objects being photographed,
 longer exposure times were used, many beyond the stated maximum of 15.360
 seconds. Longer exposure times were all 48-second increments added to the
 maximum. In addition, the camera was slewed in order to avoid smeared imaging.
-The light flood state (on/off) was independent of the instrument mode.</p>
+The light flood state (on/off) was independent of the instrument mode.
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="science-objectives">Science Objectives</h1>
+### Science Objectives
+{: #sci_obj }
 
-<p>The overall objective of this experiment is exploratory reconnaissance of
+The overall objective of this experiment is exploratory reconnaissance of
 Jupiter, Saturn, Uranus, Neptune and their satellites and rings. Such
 reconnaissance, at resolutions and phase angles unobtainable from Earth,
 provides much new data relevant to the atmospheric and/or surface properties
 of these bodies. The experiment also has the following specific objectives:
 observe and characterize global circulation and meteorology; determine the
 horizontal and vertical structure of visible clouds; characterize the nature
-of any colored material which may be in clouds.</p>
+of any colored material which may be in clouds.
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="operational-considerations">Operational Considerations</h1>
+### Operational Considerations
+{: #op_con }
 
-<p>To make full scientific use of the image collection, it is necessary to
+To make full scientific use of the image collection, it is necessary to
 understand the radiometric and geometric characteristics of the camera system
-and perform corrections to the data.</p>
+and perform corrections to the data.
 
-<p>Each Voyager camera is unique in terms of its calibrated characteristics. Each
+Each Voyager camera is unique in terms of its calibrated characteristics. Each
 has intrinsic shading (spatially non-uniform output DNs from flat field
 target) and exhibits barrel distortions typical of TV cameras flown on
 previous planetary missions. Because of these characteristics, the cameras
@@ -139,13 +136,14 @@ were calibrated before launch. The response of pixels to known targets,
 illumination, exposures, etc. was measured and Calibration Files were
 generated to remove radiometric and geometric distortions from the flight
 images. These Calibration Files and detailed information on their use are
-available through the Imaging Node.</p>
+available through the Imaging Node.
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="calibration-description">Calibration Description</h1>
+### Calibration Description
+{: #cal_desc }
 
-<p>The calibration program for the Voyager television cameras consisted of three
+The calibration program for the Voyager television cameras consisted of three
 parts: (1) component calibrations (‘Voyager Imaging Science Subsystem
 Calibration Report’ July 31, 1978, M. Benesh and P. Jepsen, D618-802); (2)
 subsystem calibrations; and, (3) system calibrations. In addition, provision
@@ -162,66 +160,69 @@ reconstruction. System calibrations were conducted after the cameras were
 installed on the spacecraft. Important tasks included measurement of the
 Field-Of-View (FOV) alignment and verification of the flat-field light
 transfer characteristics. Noise measurements were also made at the system
-level.</p>
+level.
 
-<p>A method for in-flight calibration was also available. It consisted of a flat
+A method for in-flight calibration was also available. It consisted of a flat
 reflective surface which is located about 2 m from the camera. A flat-field
 light transfer curve can be constructed by orienting the spacecraft so the at
 the plaque is illuminated by the sun and by photographing it at the proper
 exposure times. However, calibration data was collected but no new calibration
 files were generated during either the Jupiter, Saturn, or Uranus encounters
-or their related cruise periods.</p>
+or their related cruise periods.
 
-<p>Although the INSTRUMENT_PARAMETER_NAME has been provided as Radiance, the
+Although the INSTRUMENT_PARAMETER_NAME has been provided as Radiance, the
 Voyager Experiment Data Record (EDR) data set has not been radiometrically
 corrected, and thus images do not represent radiance units. In order to
 convert an image from Data Number (DN) to radiance units, the image must be
 calibrated. Radiometric calibration files, and selected radiometrically
-corrected images are available through the Imaging Node.</p>
+corrected images are available through the Imaging Node.
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="field-of-view-fov">Field Of View (FOV)</h1>
+### Field Of View (FOV)
+{: #fov}
 
-<pre><code>      Total Fovs                     : 1  
- 
-      Sample Bits                    : 8  
+<pre><code>      Total Fovs                     : 1
+
+      Sample Bits                    : 8
 </code></pre>
 
-<p>FOV (Field Of View) Shape ‘SQUARE’</p>
+FOV (Field Of View) Shape ‘SQUARE’
 
-<pre><code>        Section Id                     : ISSW 
-        Fovs                           : 1 
-        Horizontal Pixel Fov           : 0.003960 
-        Vertical Pixel Fov             : 0.003960 
-        Horizontal Fov                 : 3.169000 
-        Vertical Fov                   : 3.169000 
+<pre><code>        Section Id                     : ISSW
+        Fovs                           : 1
+        Horizontal Pixel Fov           : 0.003960
+        Vertical Pixel Fov             : 0.003960
+        Horizontal Fov                 : 3.169000
+        Vertical Fov                   : 3.169000
 </code></pre>
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="parameters">Parameters</h1>
+### Parameters
+{: #parameters }
 
-<p>Radiance is the amount of energy per time per projected area per steradian.</p>
+Radiance is the amount of energy per time per projected area per steradian.
 
-<pre><code>        Instrument Parameter Name      : RADIANCE 
-        Sampling Parameter Name        : PIXEL 
-        Instrument Parameter Unit      : DIMENSIONLESS 
-        Noise Level                    : UNK 
+<pre><code>        Instrument Parameter Name      : RADIANCE
+        Sampling Parameter Name        : PIXEL
+        Instrument Parameter Unit      : DIMENSIONLESS
+        Noise Level                    : UNK
 </code></pre>
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="instrument-detector">Instrument Detector</h1>
+### Instrument Detector
+{: #inst_det }
 
-<pre><code>      Detector Type                  : VIDICON 
-      Detector Aspect Ratio          : 1.000000 
-      Minimum Wavelength             : 0.280000 
-      Maximum Wavelength             : 0.640000 
-      Nominal Operating Temperature  : 282.000000 
+<pre><code>      Detector Type                  : VIDICON
+      Detector Aspect Ratio          : 1.000000
+      Minimum Wavelength             : 0.280000
+      Maximum Wavelength             : 0.640000
+      Nominal Operating Temperature  : 282.000000
 </code></pre>
 
-<p>The sensor used in the Voyager Imaging Science Subsystem ISS camera system is
+The sensor used in the Voyager Imaging Science Subsystem ISS camera system is
 a 25mm diameter magnetic deflection vidicon (number B41-003, General Electro-
 dynamics Co.). The vidicon storage surface (target) is selenium sulphur and
 can store a high resolution (1500 TV lines) picture for over 100 s at room
@@ -234,11 +235,11 @@ light flooding is used to remove any residual image that might remain from the
 previous frame. At the end of light flooding, 14 erase frames are used to
 stabilize and prepare the vidicon target for the next exposure sequence (VGR
 ISS Calibration Report, 1978, an internal JPL document available from JPL
-vellum files).</p>
+vellum files).
 
-<p><strong>Sensitivity</strong></p>
+**Sensitivity**
 
-<p>Calibration experiments show the gain map indicating higher sensitivity toward
+Calibration experiments show the gain map indicating higher sensitivity toward
 the top of the frame in a generally radial manner. Dark-current ratio results
 indicate a mean within plus-or-minus 3% of the true linearity of the light
 transfer function. The required accuracy of the light-transfer functions was
@@ -256,431 +257,455 @@ filters rather than to the vidicons. The color sensitivity is sufficient to
 require a separate decalibration file for each spectral filter, which has been
 done, but not gross enough to cause concern about the quality of the image
 itself (VGR ISS Calibration Report, 1978, an internal JPL document available
-from JPL vellum files).</p>
+from JPL vellum files).
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="instrument-electronics">Instrument Electronics</h1>
+### Instrument Electronics
+{: #inst_elec }
 
-<p>The Imaging Science Subsystem (ISS) electronics consist of the vidicon support
+The Imaging Science Subsystem (ISS) electronics consist of the vidicon support
 circuits and the signal chain. The vidicon support circuits are the vertical
 and horizontal sweep circuits, and the various power supplies for the vidicon
 filament, and the focus and alignment coils. The signal chain consists of the
 analog signal amplifiers, bandpass filters, and an eight bit analog-to-digital
 converter. The digital output is sent to the Flight Data Subsystem (FDS) for
-editing.</p>
+editing.
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="filters">Filters</h1>
+### Filters
+{: #filters }
 
-<p>Spectral measurements at the manufacturer were taken on Beckman spectro-
+Spectral measurements at the manufacturer were taken on Beckman spectro-
 photometers, and verifications at Jet Propulsion Laboratory (JPL) were made
 with a Cary 14 spectro-photometer. Each test scan was run from 2000 to 7000
 Angstroms to check for eventual leaks outside the passband (VGR ISS
 Calibration Report, 1978, an internal JPL document available from JPL vellum
 files). For spectral information on each filter, see Danielson, E. G., et al.
-Radiometric Performance of the Voyager Cameras, JGR, v. 86, Sept. 1981.</p>
+Radiometric Performance of the Voyager Cameras, JGR, v. 86, Sept. 1981.
 
-<p><strong>Instrument Filter ‘0 - METHANE-JST’</strong></p>
+**Instrument Filter ‘0 - METHANE-JST’**
+{: #filter_0 }
 
-<pre><code>      Filter Name                    : METHANE-JST 
-      Filter Type                    : INTERFERENCE 
-      Minimum Wavelength             : 0.614000 
-      Maximum Wavelength             : 0.624000 
-      Center Filter Wavelength       : 0.619000 
+<pre><code>      Filter Name                    : METHANE-JST
+      Filter Type                    : INTERFERENCE
+      Minimum Wavelength             : 0.614000
+      Maximum Wavelength             : 0.624000
+      Center Filter Wavelength       : 0.619000
 </code></pre>
 
 <ul>
   <li><a href="inst_cal/vg2_wa_ch4js.html"> Optics/filter response plots and data</a>.</li>
 </ul>
 
-<p><strong>Instrument Filter ‘1 - BLUE’</strong></p>
+**Instrument Filter ‘1 - BLUE’**
+{: #filter_1 }
 
-<pre><code>      Filter Name                    : BLUE 
-      Filter Type                    : INTERFERENCE 
-      Minimum Wavelength             : 0.430000 
-      Maximum Wavelength             : 0.530000 
-      Center Filter Wavelength       : 0.480000 
+<pre><code>      Filter Name                    : BLUE
+      Filter Type                    : INTERFERENCE
+      Minimum Wavelength             : 0.430000
+      Maximum Wavelength             : 0.530000
+      Center Filter Wavelength       : 0.480000
 </code></pre>
 
-<ul>
-  <li><a href="inst_cal/vg2_wa_blue.html"> Optics/filter response plots and data</a>.</li>
-</ul>
+* [Optics/filter response plots and data](inst_cal/vg2_wa_blue.html)
 
-<p><strong>Instrument Filter ‘2 - CLEAR’</strong></p>
+**Instrument Filter ‘2 - CLEAR’**
+{: #filter_2 }
 
-<pre><code>      Filter Name                    : CLEAR 
-      Filter Type                    : ABSORPTION 
-      Minimum Wavelength             : 0.280000 
-      Maximum Wavelength             : 0.640000 
-      Center Filter Wavelength       : 0.460000 
+<pre><code>      Filter Name                    : CLEAR
+      Filter Type                    : ABSORPTION
+      Minimum Wavelength             : 0.280000
+      Maximum Wavelength             : 0.640000
+      Center Filter Wavelength       : 0.460000
 </code></pre>
 
-<ul>
-  <li><a href="inst_cal/vg2_wa_clear.html"> Optics/filter response plots and data</a>.</li>
-</ul>
+* [Optics/filter response plots and data](inst_cal/vg2_wa_clear.html)
 
-<p><strong>Instrument Filter ‘3 - VIOLET’</strong></p>
+**Instrument Filter ‘3 - VIOLET’**
+{: #filter_3 }
 
-<pre><code>      Filter Name                    : VIOLET 
-      Filter Type                    : INTERFERENCE 
-      Minimum Wavelength             : 0.350000 
-      Maximum Wavelength             : 0.450000 
-      Center Filter Wavelength       : 0.400000 
+<pre><code>      Filter Name                    : VIOLET
+      Filter Type                    : INTERFERENCE
+      Minimum Wavelength             : 0.350000
+      Maximum Wavelength             : 0.450000
+      Center Filter Wavelength       : 0.400000
 </code></pre>
 
-<ul>
-  <li><a href="inst_cal/vg2_wa_violet.html"> Optics/filter response plots and data</a>.</li>
-</ul>
+* [Optics/filter response plots and data](inst_cal/vg2_wa_violet.html)
 
-<p><strong>Instrument Filter ‘4 - SODIUM-D’</strong></p>
+**Instrument Filter ‘4 - SODIUM-D’**
+{: #filter_4 }
 
-<pre><code>      Filter Name                    : SODIUM-D 
-      Filter Type                    : INTERFERENCE 
-      Minimum Wavelength             : 0.588000 
-      Maximum Wavelength             : 0.590000 
-      Center Filter Wavelength       : 0.589000 
+<pre><code>      Filter Name                    : SODIUM-D
+      Filter Type                    : INTERFERENCE
+      Minimum Wavelength             : 0.588000
+      Maximum Wavelength             : 0.590000
+      Center Filter Wavelength       : 0.589000
 </code></pre>
 
-<ul>
-  <li><a href="inst_cal/vg2_wa_sodium.html"> Optics/filter response plots and data</a>.</li>
-</ul>
+* [Optics/filter response plots and data](inst_cal/vg2_wa_sodium.html)
 
-<p><strong>Instrument Filter ‘5 - GREEN’</strong></p>
+**Instrument Filter ‘5 - GREEN’**
+{: #filter_5 }
 
-<pre><code>      Filter Name                    : GREEN 
-      Filter Type                    : INTERFERENCE 
-      Minimum Wavelength             : 0.530000 
-      Maximum Wavelength             : 0.640000 
-      Center Filter Wavelength       : 0.580000 
+<pre><code>      Filter Name                    : GREEN
+      Filter Type                    : INTERFERENCE
+      Minimum Wavelength             : 0.530000
+      Maximum Wavelength             : 0.640000
+      Center Filter Wavelength       : 0.580000
 </code></pre>
 
-<ul>
-  <li><a href="inst_cal/vg2_wa_green.html"> Optics/filter response plots and data</a>.</li>
-</ul>
+* [Optics/filter response plots and data](inst_cal/vg2_wa_green.html)
 
-<p><strong>Instrument Filter ‘6 - METHANE-U’</strong></p>
+**Instrument Filter ‘6 - METHANE-U’**
+{: #filter_6 }
 
-<pre><code>      Filter Name                    : METHANE-U 
-      Filter Type                    : INTERFERENCE 
-      Minimum Wavelength             : 0.536000 
-      Maximum Wavelength             : 0.546000 
-      Center Filter Wavelength       : 0.541000 
+<pre><code>      Filter Name                    : METHANE-U
+      Filter Type                    : INTERFERENCE
+      Minimum Wavelength             : 0.536000
+      Maximum Wavelength             : 0.546000
+      Center Filter Wavelength       : 0.541000
 </code></pre>
 
-<ul>
-  <li><a href="inst_cal/vg2_wa_ch4u.html"> Optics/filter response plots and data</a>.</li>
-</ul>
+* [Optics/filter response plots and data](inst_cal/vg2_wa_ch4u.html)
 
-<p><strong>Instrument Filter ‘7 - ORANGE’</strong></p>
+**Instrument Filter ‘7 - ORANGE’**
+{: #filter_7 }
 
-<pre><code>      Filter Name                    : ORANGE 
-      Filter Type                    : INTERFERENCE 
-      Minimum Wavelength             : 0.590000 
-      Maximum Wavelength             : 0.640000 
-      Center Filter Wavelength       : 0.615000 
+<pre><code>      Filter Name                    : ORANGE
+      Filter Type                    : INTERFERENCE
+      Minimum Wavelength             : 0.590000
+      Maximum Wavelength             : 0.640000
+      Center Filter Wavelength       : 0.615000
 </code></pre>
 
-<ul>
-  <li><a href="inst_cal/vg2_wa_orange.html"> Optics/filter response plots and data</a>.</li>
-</ul>
+* [Optics/filter response plots and data](inst_cal/vg2_wa_orange.html)
 
-<p>Click here to return to the Index.</p>
 
-<h1 id="instrument-optics-iss-na">Instrument Optics ‘ISS-NA’</h1>
+[Back to the index](#index)
 
-<pre><code>      Telescope Diameter             : 0.057143 
-      Telescope F Number             : 3.500000 
-      Telescope Focal Length         : 0.200770 
-      Telescope Resolution           : 0.000140 
-      Telescope Serial Number        : WAO-04 
-      Telescope T Number             : 4.260000 
-      Telescope T Number Error       : 0.020000 
-      Telescope Transmittance        : 0.800000 
+### Instrument Optics ‘ISS-WA’
+{: #inst_opt }
+
+<pre><code>      Telescope Diameter             : 0.057143
+      Telescope F Number             : 3.500000
+      Telescope Focal Length         : 0.200770
+      Telescope Resolution           : 0.000140
+      Telescope Serial Number        : WAO-04
+      Telescope T Number             : 4.260000
+      Telescope T Number Error       : 0.020000
+      Telescope Transmittance        : 0.800000
 </code></pre>
 
-<p>The Wide-Angle camera optics is a 200mm focal length six element lens of the
+The Wide-Angle camera optics is a 200mm focal length six element lens of the
 Petzval-type. It consists of five elements plus an additional dust lens,
 located between the shutter and the vidicon. The f number is 3.5 (VGR ISS
 Calibration Report, 1978, an internal JPL document available from the JPL
-vellum files).</p>
+vellum files).
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="instrument-modes">Instrument Modes</h1>
+### Instrument Operational Modes
+{: #modes }
 
-<p><strong>Instrument Mode ‘IM2’</strong></p>
+**Instrument Mode ‘IM2’**
+{: #im2 }
 
-<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, full frame image, 800 pix/line (Jupiter
-and Saturn only)</p>
+Scan rate (minor frame:line) is 1:1, full frame image, 800 pix/line (Jupiter
+and Saturn only)
 
-<p><strong>Instrument Mode ‘IM2A’</strong></p>
+**Instrument Mode ‘IM2A’**
+{: #im2a }
 
-<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, full frame, 800 pix/line (Uranus and
-Neptune only)</p>
+Scan rate (minor frame:line) is 1:1, full frame, 800 pix/line (Uranus and
+Neptune only)
 
-<p><strong>Instrument Mode ‘IM2C’</strong></p>
+**Instrument Mode ‘IM2C’**
+{: #im2c }
 
-<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 5:1, full frame, 800 pix/line, lines may be
-truncated (zero filled) on left or right - data dependent (Neptune only)</p>
+Scan rate (minor frame:line) is 5:1, full frame, 800 pix/line, lines may be
+truncated (zero filled) on left or right - data dependent (Neptune only)
 
-<p><strong>Instrument Mode ‘IM2W’</strong></p>
+**Instrument Mode ‘IM2W’**
+{: #im2w }
 
-<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, full frame, 800 pix/line, last 80 lines
-are zero (Neptune only)</p>
+Scan rate (minor frame:line) is 1:1, full frame, 800 pix/line, last 80 lines
+are zero (Neptune only)
 
-<p><strong>Instrument Mode ‘IM3’</strong></p>
+**Instrument Mode ‘IM3’**
+{: #im3 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, full frame, 800 pix/line (Jupiter and
-Saturn only)</p>
+Scan rate (minor frame:line) is 1:1, full frame, 800 pix/line (Jupiter and
+Saturn only)
 
-<p><strong>Instrument Mode ‘IM4’</strong></p>
+**Instrument Mode ‘IM4’**
+{: #im4 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, centered frame, 608 pix/line (Jupiter and
-Saturn only)</p>
+Scan rate (minor frame:line) is 1:1, centered frame, 608 pix/line (Jupiter and
+Saturn only)
 
-<p><strong>Instrument Mode ‘IM5’</strong></p>
+**Instrument Mode ‘IM5’**
+{: #im5 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 2:1, Top read out in frame #1, bottom read out
-in frame #2, 800 pix/line (Jupiter and Saturn only)</p>
+Scan rate (minor frame:line) is 2:1, Top read out in frame #1, bottom read out
+in frame #2, 800 pix/line (Jupiter and Saturn only)
 
-<p><strong>Instrument Mode ‘IM6’</strong></p>
+**Instrument Mode ‘IM6’**
+{: #im6 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, centered frame, 440 pix/line (Jupiter and
-Saturn only)</p>
+Scan rate (minor frame:line) is 1:1, centered frame, 440 pix/line (Jupiter and
+Saturn only)
 
-<p><strong>Instrument Mode ‘IM7’</strong></p>
+**Instrument Mode ‘IM7’**
+{: #im7 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 3:1, full frame, 800 pix/line (Jupiter and
-Saturn only)</p>
+Scan rate (minor frame:line) is 3:1, full frame, 800 pix/line (Jupiter and
+Saturn only)
 
-<p><strong>Instrument Mode ‘IM8’</strong></p>
+**Instrument Mode ‘IM8’**
+{: #im8 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, centered frame, 272 pix/line (Jupiter and
-Saturn only)</p>
+Scan rate (minor frame:line) is 1:1, centered frame, 272 pix/line (Jupiter and
+Saturn only)
 
-<p><strong>Instrument Mode ‘IM9’</strong></p>
+**Instrument Mode ‘IM9’**
+{: #im9 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 3:1, centered, approx. 480 pix/line (Jupiter
-and Saturn only)</p>
+Scan rate (minor frame:line) is 3:1, centered, approx. 480 pix/line (Jupiter
+and Saturn only)
 
-<p><strong>Instrument Mode ‘IM10’</strong></p>
+**Instrument Mode ‘IM10’**
+{: #im10 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, centered frame, approx. 160 pix/line
-(Jupiter and Saturn only)</p>
+Scan rate (minor frame:line) is 1:1, centered frame, approx. 160 pix/line
+(Jupiter and Saturn only)
 
-<p><strong>Instrument Mode ‘IM11’</strong></p>
+**Instrument Mode ‘IM11’**
+{: #im11 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 5:1, centered frame, 800 pix/line (Jupiter and
-Saturn only)</p>
+Scan rate (minor frame:line) is 5:1, centered frame, 800 pix/line (Jupiter and
+Saturn only)
 
-<p><strong>Instrument Mode ‘IM12’</strong></p>
+**Instrument Mode ‘IM12’**
+{: #im12 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 5:1, centered frame, approx. 440 pix/line
-(Jupiter and Saturn only)</p>
+Scan rate (minor frame:line) is 5:1, centered frame, approx. 440 pix/line
+(Jupiter and Saturn only)
 
-<p><strong>Instrument Mode ‘IM13’</strong></p>
+**Instrument Mode ‘IM13’**
+{: #im13 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 10:1, centered frame, 800 pix/line (Jupiter
-and Saturn only)</p>
+Scan rate (minor frame:line) is 10:1, centered frame, 800 pix/line (Jupiter
+and Saturn only)
 
-<p><strong>Instrument Mode ‘IM14’</strong></p>
+**Instrument Mode ‘IM14’**
+{: #im14 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 1:1, centered frame, approx. 80 pix/line
-(Jupiter and Saturn only)</p>
+Scan rate (minor frame:line) is 1:1, centered frame, approx. 80 pix/line
+(Jupiter and Saturn only)
 
-<p><strong>Instrument Mode ‘IM15’</strong></p>
+**Instrument Mode ‘IM15’**
+{: #im15 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 2:1, centered frame, top read out in frame #1,
-bottom read out in frame #2, 800 pix/line (Jupiter and Saturn only)</p>
+Scan rate (minor frame:line) is 2:1, centered frame, top read out in frame #1,
+bottom read out in frame #2, 800 pix/line (Jupiter and Saturn only)
 
-<p><strong>Instrument Mode ‘IM26’</strong></p>
+**Instrument Mode ‘IM26’**
+{: #im26 }
 
-<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 2:1, lines 271-536, 800 pix/line (Neptune
-only)</p>
+Scan rate (minor frame:line) is 2:1, lines 271-536, 800 pix/line (Neptune
+only)
 
-<p><strong>Instrument Mode ‘IMK’</strong></p>
+**Instrument Mode ‘IMK’**
+{: #imk }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 10:1, centered frame, 800 pix/line (Uranus and
-Neptune only)</p>
+Scan rate (minor frame:line) is 10:1, centered frame, 800 pix/line (Uranus and
+Neptune only)
 
-<p><strong>Instrument Mode ‘IMO’</strong></p>
+**Instrument Mode ‘IMO’**
+{: #imo }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 5:1, centered frame, 800 pix/line (Uranus and
-Neptune only)</p>
+Scan rate (minor frame:line) is 5:1, centered frame, 800 pix/line (Uranus and
+Neptune only)
 
-<p><strong>Instrument Mode ‘IMQ’</strong></p>
+**Instrument Mode ‘IMQ’**
+{: #imq }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 5:1, centered frame (Uranus only)</p>
+Scan rate (minor frame:line) is 5:1, centered frame (Uranus only)
 
-<p><strong>Instrument Mode ‘OC3’</strong></p>
+**Instrument Mode ‘OC3’**
+{: #oc3 }
 
-<pre><code>      Data Path Type                 : REALTIME 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : REALTIME
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 3:1, lines 301-510, samples 365-453 (Neptune
-only)</p>
+Scan rate (minor frame:line) is 3:1, lines 301-510, samples 365-453 (Neptune
+only)
 
-<p><strong>Instrument Mode ‘PB8’</strong></p>
+**Instrument Mode ‘PB8’**
+{: #pb8 }
 
-<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK 
-      Gain Mode Id                   : LOW 
-      Instrument Power Consumption   : 14.000000 
+<pre><code>      Data Path Type                 : RECORDED DATA PLAYBACK
+      Gain Mode Id                   : LOW
+      Instrument Power Consumption   : 14.000000
 </code></pre>
 
-<p>Scan rate (minor frame:line) is 5:1 or 1:1, data dependent may be IM2A, IM2C,
-IM2W (Uranus and Neptune only)</p>
+Scan rate (minor frame:line) is 5:1 or 1:1, data dependent may be IM2A, IM2C,
+IM2W (Uranus and Neptune only)
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<h1 id="scan-platform">Scan Platform</h1>
+### Scan Platform
+{: #scan_plat }
 
-<pre><code>      Cone Offset Angle              : -0.030800 
-      Cross Cone Offset Angle        : -0.006800 
-      Twist Offset Angle             : 0.171102 
+<pre><code>      Cone Offset Angle              : -0.030800
+      Cross Cone Offset Angle        : -0.006800
+      Twist Offset Angle             : 0.171102
 </code></pre>
 
-<p>The measurements recorded below are the coordinates representing the center of
+The measurements recorded below are the coordinates representing the center of
 the Wide Angle Field-Of-View (FOV) in relation to the center of the narrow
 angle FOV. As of 5/26/88 the Voyager 2 scan platform offset values were
 updated and the removal of all extraneous offset values for VG1 and VG2
 accomplished. Only the most recently input values remain in the database for
 each spacecraft. These values are effective for all periods of data inclusive
-from launch to present. (June 7, 1989).</p>
+from launch to present. (June 7, 1989).
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
 
-<hr />
+***
 
-<h1 id="references">References</h1>
+### References
+{: #ref }
 
-<p><a href="iss_refs.html#BARROS1988">BARROS1988</a><br />
-<a href="iss_refs.html#BENESH1978">BENESH1978</a><br />
-<a href="iss_refs.html#DANIELSONETAL1981">DANIELSONETAL1981</a><br />
-<a href="iss_refs.html#HARCH1987">HARCH1987</a><br />
-<a href="iss_refs.html#HARCH1988A">HARCH1988A</a><br />
-<a href="iss_refs.html#HARCH1988B">HARCH1988B</a><br />
-<a href="iss_refs.html#HARCH1988C">HARCH1988C</a><br />
-<a href="iss_refs.html#JPLD2468">JPL D-2468</a><br />
-<a href="iss_refs.html#JPLD498">JPL D-498</a><br />
-<a href="iss_refs.html#MARTINETAL1985">MARTINETAL1985</a><br />
-<a href="iss_refs.html#NAVE1980">NAVE1980</a><br />
-<a href="iss_refs.html#SCIENCEV204N4392">SCIENCEV204N4392</a><br />
-<a href="iss_refs.html#SCIENCEV206N4421">SCIENCEV206N4421</a><br />
-<a href="iss_refs.html#SCIENCEV212N4491">SCIENCEV212N4491</a><br />
-<a href="iss_refs.html#SCIENCEV215N4532">SCIENCEV215N4532</a><br />
-<a href="iss_refs.html#SCIENCEV233N4759">SCIENCEV233N4759</a><br />
-<a href="iss_refs.html#SCIENCEV246N4936">SCIENCEV246N4936</a><br />
-<a href="iss_refs.html#SNYDERL1979">SNYDER,L1979</a><br />
-<a href="iss_refs.html#SSRV21N2">SSRV21N2</a><br />
-<a href="iss_refs.html#SSRV21N3">SSRV21N3</a></p>
+[BARROS1988](iss_refs.html#BARROS1988)<br />
+[BENESH1978](iss_refs.html#BENESH1978)<br />
+[DANIELSONETAL1981](iss_refs.html#DANIELSONETAL1981)<br />
+[HARCH1987](iss_refs.html#HARCH1987)<br />
+[HARCH1988A](iss_refs.html#HARCH1988A)<br />
+[HARCH1988B](iss_refs.html#HARCH1988B)<br />
+[HARCH1988C](iss_refs.html#HARCH1988C)<br />
+[JPL D-2468](iss_refs.html#JPLD-2468)<br />
+[JPL D-498](iss_refs.html#JPLD-498)<br />
+[MARTINETAL1985](iss_refs.html#MARTINETAL1985)<br />
+[NAVE1980](iss_refs.html#NAVE1980)<br />
+[SCIENCEV204N4392](iss_refs.html#SCIENCEV204N4392)<br />
+[SCIENCEV206N4421](iss_refs.html#SCIENCEV206N4421)<br />
+[SCIENCEV212N4491](iss_refs.html#SCIENCEV212N4491)<br />
+[SCIENCEV215N4532](iss_refs.html#SCIENCEV215N4532)<br />
+[SCIENCEV233N4759](iss_refs.html#SCIENCEV233N4759)<br />
+[SCIENCEV246N4936](iss_refs.html#SCIENCEV246N4936)<br />
+[SNYDERL1979](iss_refs.html#SNYDERL1979)<br />
+[SSRV21N2](iss_refs.html#SSRV21N2)<br />
+[SSRV21N3](iss_refs.html#SSRV21N3)<br />
 
-<p>Click here to return to the Index.</p>
+[Back to the index](#index)
