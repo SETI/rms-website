@@ -10,7 +10,16 @@
 /* Large devices (large desktops, 1200px and up)
 @media (min-width: @screen-lg-min) { ... }
 */
+/* some PDS-rings specific styles */
+.pds-container {
+    overflow-x: hidden;
+}
 
+.nav-container {
+    padding-left: 0;
+}
+
+/* begin style */
 body {
   background-color: #585858;
   font-family: 'Open Sans', sans-serif;
@@ -162,7 +171,7 @@ p.superwide > a > img {
 .homebox .panel-heading {
   margin:0; padding:0;
   border: 1px solid black;
-  background: url(assets/PRN_home_heading_bg.png) no-repeat;
+  background: url(assets/PRN_home_heading_bg.png);
   background-color: #585858;
   color:white;
   font-family: 'Open Sans', sans-serif;
@@ -605,8 +614,7 @@ td.colgroup-seperator {
 .footer-lower {
   background-color: black;
   color:white;
-  padding:30px;
-  padding-bottom: 60px;
+  padding:20px 30px;
 }
 
 
