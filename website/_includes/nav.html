@@ -23,8 +23,10 @@
             {% if menu_url_path_split[1] == page_url_path_split[1] %}
               class = "active"
             {% endif %}
-          >
-            <a href = "{{ item.href }}">{{ item.title }}</a>
+            >
+            <a href = "{{ item.href }}"
+            {% if item.open contains 'new_tab' %}target="_blank"{% endif %}
+            >{{ item.title }}</a>
 
           </li>
 
