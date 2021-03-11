@@ -92,9 +92,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- NASA feedback widget -->
-  <script src="/feedback/js/modernizr-custom.js" type="text/javascript"></script>
-  <script src="/feedback/js/config.js" type="text/javascript"></script>
-  <script src="/feedback/js/feedback.js" type="text/javascript"></script>
+  <script src="{{ "/feedback/js/modernizr-custom.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ "/feedback/js/config.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ "/feedback/js/feedback.js" | prepend: site.baseurl }}" type="text/javascript"></script>
   <script>
     $(document).ready(function(){
         $(".feedbackTab").show();
