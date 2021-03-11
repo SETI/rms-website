@@ -5,16 +5,16 @@ var config = {
 		feedbackType: "Comment,Question,Problem/Bug,Kudos,Other",
 		additionalLinks: [
             {
-				title: "PDS-Wide Search",
-				url: "https://pds.nasa.gov/datasearch/data-search/"
-			},
-            {
 				title: "Browse Data Volumes",
 				url: "https://pds-rings.seti.org/viewmaster/volumes/"
 			},
             {
 				title: "OPUS Search",
 				url: "https://opus.pds-rings.seti.org/opus/#"
+			},
+            {
+				title: "PDS-Wide Search",
+				url: "https://pds.nasa.gov/datasearch/data-search/"
 			},
 		]
 	},
