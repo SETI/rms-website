@@ -124,7 +124,8 @@ document.addEventListener("DOMContentLoaded", function(){
 			// open send feedback modal window
 			open: function() {
 				options.page.render();
-				document.body.appendChild( glass );
+				var container = document.getElementsByClassName("pds-container")[0];
+                container.classList.add("feedback-glass");
 				button.disabled = true;
 
 				// modal close button
@@ -204,7 +205,9 @@ document.addEventListener("DOMContentLoaded", function(){
 				// remove feedback elements
 				emptyElements( modalHeader );
 				emptyElements( modalFooter );
-				removeElements( [ modal, glass ] );
+				removeElements( [modal, glass] );
+                var container = document.getElementsByClassName("pds-container")[0];
+                container.classList.remove("feedback-glass");
 
 				return false;
 			},
