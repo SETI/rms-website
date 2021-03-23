@@ -84,18 +84,21 @@
 
     </div><!-- /row -->
 
-    {% include footer.html %}
-
   </div><!-- /container -->
+  {% include footer.html %}
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- pds app bar -->
+  <script src="{{ "/assets/pds-app-bar/pds-app-bar.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 
   <!-- NASA feedback widget -->
   <script src="{{ "/feedback/js/modernizr-custom.js" | prepend: site.baseurl }}" type="text/javascript"></script>
   <script src="{{ "/feedback/js/config.js" | prepend: site.baseurl }}" type="text/javascript"></script>
   <script src="{{ "/feedback/js/feedback.js" | prepend: site.baseurl }}" type="text/javascript"></script>
- 
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

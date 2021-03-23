@@ -29,7 +29,6 @@ body {
   text-indent: -5000px;
 }
 .site-header  {
-  height: 150px;
   background-color: black;
   margin:0 15px 0 15px;
 }
@@ -288,7 +287,6 @@ p.superwide > a > img {
 .banner {
   background: url(assets/header%20banners/PRN_header1.jpg) no-repeat;
   background-position: right 0 top 0;
-  height: 150px;
   margin:0; padding:0;
   /*width: 1170px;
   height: 150px;*/
@@ -614,7 +612,7 @@ td.colgroup-seperator {
 .footer-lower {
   background-color: black;
   color:white;
-  padding:20px 30px;
+  padding:10px 30px;
 }
 
 
