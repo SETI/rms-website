@@ -72,8 +72,10 @@
       dropdown_caret = document.createElement("span"),
       dropdown_list = document.createElement("ul");
     dropdown_container.setAttribute("id", "pds-app-bar-dropdown");
+    dropdown_container.classList.add("dropdown-content");
     dropdown_link.textContent = "Find a Node";
     dropdown_link.setAttribute("tabindex", "0");
+    dropdown_link.classList.add("nav");
     dropdown_link.appendChild(dropdown_caret);
 
     var nodes = new Map();
@@ -102,10 +104,9 @@
       node.textContent = value[0];
       node.href = value[1];
       node.target = "_blank";
-      node.setAttribute("tabindex", "-1");
       let li = document.createElement("li");
-      li.setAttribute("tabindex", "-1");
       li.appendChild(node);
+      li.classList.add("node");
       dropdown_list.appendChild(li);
     }
     dropdown_container.appendChild(dropdown_link);
@@ -121,54 +122,81 @@
 
     var bar_first_style = bar_first.currentStyle || window.getComputedStyle(bar_first);
     info_text.style.left = (bar_first.offsetWidth + parseFloat(bar_first_style.marginRight)).toString() + "px";
-    
-    dropdown_link.onclick = function () {
-      dropdown_container.classList.toggle("active");
+
+    document.body.onclick = function (e) {
+        // if the user clicks on the dropdown menu and it's active, close it...
+        if (e.composedPath && e.composedPath().some((el) => el.id === "pds-app-bar-dropdown")) {
+            if (e.composedPath().some((el) => (el.classList !== undefined && el.classList.contains("node")))) {
+                 dropdown_container.classList.remove("active");
+            }
+        } else {
+            if (dropdown_container.classList.contains("active")) {
+                dropdown_container.classList.remove("active");
+            }
+        }
     };
-    dropdown_link.addEventListener("keydown", (evt) => {
-      if (evt.code === "Space" || evt.code === "Enter") {
-        dropdown_container.classList.add("active");
-        let list_elements = dropdown_list.children,
-          list_index = 0;
-        list_elements[list_index].setAttribute("tabindex", "0");
-        list_elements[list_index].focus();
-        dropdown_list.addEventListener("keydown", (e) => {
-          if (e.code === "Escape" || e.code === "Tab") {
-            list_elements[list_index].setAttribute("tabindex", "-1");
+
+    // dropdown the menu on both click and mouseover
+    document.body.addEventListener('mouseout', function(e) {
+        // if the mouse moves from th app bar dropdown out of that element space, then close the dropdown
+        if ((e.srcElement && e.srcElement.closest("#pds-app-bar-dropdown") !== null) &&
+            (e.relatedTarget && e.relatedTarget.closest("#pds-app-bar-dropdown") == null)) {
             dropdown_container.classList.remove("active");
-            dropdown_link.focus();
-          } else if (e.code === "ArrowUp") {
-            list_elements[list_index].setAttribute("tabindex", "-1");
-            if (list_index === 0) {
-              list_index = list_elements.length - 1;
-            } else {
-              list_index--;
-            }
-            list_elements[list_index].setAttribute("tabindex", "0");
-            list_elements[list_index].focus();
-          } else if (e.code === "ArrowDown") {
-            list_elements[list_index].setAttribute("tabindex", "-1");
-            if (list_index === list_elements.length - 1) {
-              list_index = 0;
-            } else {
-              list_index++;
-            }
-            list_elements[list_index].setAttribute("tabindex", "0");
-            list_elements[list_index].focus();
-          } else if (e.code === "Enter") {
-            window.open(
-              list_elements[list_index].firstElementChild.href,
-              "_blank"
-            );
-          }
-        });
-      } else if (
-        evt.code === "Escape" ||
-        (evt.shiftKey && evt.code === "Tab")
-      ) {
-        dropdown_container.classList.remove("active");
-      }
+        }
     });
+
+    dropdown_caret.onclick = function (e) {
+        dropdown_container.classList.toggle("active");
+        e.stopPropagation();
+        return false;
+    }
+
+    dropdown_link.onclick = function (e) {
+        dropdown_container.classList.add("active");
+        dropdown_link.focus();
+        let list_elements = dropdown_list.children;
+        for (let list_index = 0; list_index < list_elements.length; list_index++) {
+            list_elements[list_index].setAttribute("tabindex", list_index);
+        }
+    };
+
+    // add the event listner for the up/down/enter actions on the menu
+    dropdown_list.addEventListener("keydown", (e) => {
+        let list_index = e.target.getAttribute("tabindex");
+        let list_elements = dropdown_list.children;
+        switch (e.code) {
+            case "Escape":
+            case "Tab":
+                // close the dropdown
+                dropdown_container.classList.remove("active");
+                dropdown_link.focus();
+                break;
+            case "ArrowUp":
+                list_index--;
+                list_index = (list_index < 0 ? list_elements.length - 1 : list_index);
+                list_elements[list_index].focus();
+                break;
+            case "ArrowDown":
+                list_index++;
+                list_index = (list_index === list_elements.length ? 0 : list_index);
+                list_elements[list_index].focus();
+                break;
+            case "Enter":
+            case "NumpadEnter":
+                // select the menu item
+                window.open(list_elements[list_index].firstElementChild.href, "_blank");
+                dropdown_container.classList.remove("active");
+                dropdown_link.focus();
+                break;
+        }
+        e.preventDefault();
+        return false;
+    });
+
+    dropdown_link.onmouseover = function (e) {
+        dropdown_container.classList.add("active");
+        dropdown_link.focus();
+    };
 
     info_container.onmouseover = function () {
       info_container.classList.add("active");
@@ -187,15 +215,6 @@
         info_container.classList.remove("active");
       }
     });
-
-    document.body.onclick = function (e) {
-      if (
-        e.composedPath && !e.composedPath().some((el) => el.id === "pds-app-bar-dropdown") &&
-        dropdown_container.classList.contains("active")
-      ) {
-        dropdown_container.classList.remove("active");
-      }
-    };
   };
 
   // Initialize
