@@ -170,7 +170,7 @@ p.superwide > a > img {
 .homebox .panel-heading {
   margin:0; padding:0;
   border: 1px solid black;
-  background: url(assets/PRN_home_heading_bg.png) no-repeat;
+  background: url(assets/PRN_home_heading_bg.png);
   background-color: #585858;
   color:white;
   font-family: 'Open Sans', sans-serif;
