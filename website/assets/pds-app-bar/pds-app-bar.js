@@ -161,36 +161,40 @@
     };
 
     // add the event listner for the up/down/enter actions on the menu
-    dropdown_list.addEventListener("keydown", (e) => {
-        let list_index = e.target.getAttribute("tabindex");
-        let list_elements = dropdown_list.children;
-        switch (e.code) {
-            case "Escape":
-            case "Tab":
-                // close the dropdown
-                dropdown_container.classList.remove("active");
-                dropdown_link.focus();
-                break;
-            case "ArrowUp":
-                list_index--;
-                list_index = (list_index < 0 ? list_elements.length - 1 : list_index);
-                list_elements[list_index].focus();
-                break;
-            case "ArrowDown":
-                list_index++;
-                list_index = (list_index === list_elements.length ? 0 : list_index);
-                list_elements[list_index].focus();
-                break;
-            case "Enter":
-            case "NumpadEnter":
-                // select the menu item
-                window.open(list_elements[list_index].firstElementChild.href, "_blank");
-                dropdown_container.classList.remove("active");
-                dropdown_link.focus();
-                break;
+    document.body.addEventListener("keydown", (e) => {
+        let elem = e.target;
+        let list_index = elem.getAttribute("tabindex");
+        if (list_index !== undefined && dropdown_container.classList.contains("active")) {
+            let list_elements = dropdown_list.children;
+            list_elements[list_index].focus();
+            switch (e.code) {
+                case "Escape":
+                case "Tab":
+                    // close the dropdown
+                    dropdown_container.classList.remove("active");
+                    dropdown_link.focus();
+                    break;
+                case "ArrowUp":
+                    list_index--;
+                    list_index = (list_index < 0 ? list_elements.length - 1 : list_index);
+                    list_elements[list_index].focus();
+                    break;
+                case "ArrowDown":
+                    list_index++;
+                    list_index = (list_index === list_elements.length ? 0 : list_index);
+                    list_elements[list_index].focus();
+                    break;
+                case "Enter":
+                case "NumpadEnter":
+                    // select the menu item
+                    window.open(list_elements[list_index].firstElementChild.href, "_blank");
+                    dropdown_container.classList.remove("active");
+                    dropdown_link.focus();
+                    break;
+            }
+            e.preventDefault();
+            return false;
         }
-        e.preventDefault();
-        return false;
     });
 
     dropdown_link.onmouseover = function (e) {
