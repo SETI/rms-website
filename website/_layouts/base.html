@@ -85,11 +85,13 @@
     </div><!-- /row -->
 
   </div><!-- /container -->
+  <!--{% include confirm_modal.html %} -->
   {% include footer.html %}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" type="text/javascript"></script>
 
   <!-- pds app bar -->
   <script src="{{ "/assets/pds-app-bar/pds-app-bar.js" | prepend: site.baseurl }}" type="text/javascript"></script>
@@ -113,6 +115,23 @@
     </script>
     <!--End of Tawk.to Script-->
 
-  </body>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+        $.get( "/important_message.html", function( data, status, xhr ) {
+            //console.log( xhr.getResponseHeader("Last-Modified") );
+            // if the lastMod stored in the cookie is different than the
+            // current last mod of the file, display the message
+            if ($.cookie("msgLastMod") != xhr.getResponseHeader("Last-Modified")) {
+                //$("#pds-notification-modal .modal-body").html(data);
+                //$("#pds-notification-modal").modal("show");
+                $(".notification").html(data);
+            }
+        })
+        .fail(function() {
+            // and just null out the cookie if the file is gone...
+            $.cookie("msgLastMod", null);
+        });
+    });
+    </script>
 
 </html>

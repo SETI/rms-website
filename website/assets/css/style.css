@@ -120,6 +120,17 @@ h4 {
  }
 }
 
+.modal {
+    border-radius: 6px;
+    border-width: 3px;
+}
+
+.notification {
+    top: 10em;
+    position: fixed;
+    left: 2.8em;
+}
+
 /* content containers */
 .content {
   margin:0; padding:0;
@@ -474,6 +485,10 @@ nav {
   .brandtext {
     width: 80%;
     text-align: center;
+  }
+  /* for now, don't display any messages on a small screen */
+  .notification {
+      display: none;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) and (orientation:portrait) {
