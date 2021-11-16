@@ -114,7 +114,7 @@ def admin(suffix=""):
         local("jekyll {} build --config _config.yml,_config.production.yml".format(jekyll_version))
 
         # copy the website to the production directory
-        rsync_cmd = "sudo rsync -r %s --exclude=*.tif --exclude=*.tiff --exclude=*.tgz --exclude=*.tar.gz _site/ %s. "
+        rsync_cmd = "sudo rsync -r %s _site/ %s. "
 
         # first do a dry run:
         local(rsync_cmd % ('--dry-run --itemize-changes ', PROD_DIR))
@@ -128,6 +128,82 @@ def admin(suffix=""):
 def admin_galleries():
     admin(suffix="_galleries")
 
+def localhost(suffix=""):
+    """ Deploy script to the local server; no pull from the repo first.
+    """
+
+    # DON'T get the latest from github
+#     with lcd(ADMIN_REPO):
+#         local('git checkout {}'.format(branch))
+#         if git_revision:
+#             local('git checkout {}'.format(git_revision))
+#         local('git pull')
+
+    print('\nNote: This script does not pull from the repo first!\n')
+
+    # build the site and then move into web root
+    with lcd("../website" + suffix + "/"):
+
+        # Make sure necessary files or symlinks are present
+        if suffix:
+            for link in links:
+                dest = "../website" + suffix + "/" + link
+                if not os.path.exists(dest):
+                    os.symlink("../website/" + link, dest)
+
+        local("jekyll build --config _config.yml,_config.production.yml")
+
+        # copy the website to the production directory
+        rsync_cmd = "sudo rsync -r %s  _site/ %s. "
+        prod_dir = '/Library/WebServer/Documents/'
+
+        # first do a dry run:
+        local(rsync_cmd % ('--dry-run --itemize-changes ', prod_dir))
+        if confirm("The above was a dry run. If the above looks good, push to the local site:"):
+            local(rsync_cmd % ('', prod_dir))
+            print("\n*** Local website has been updated! ***")
+            sys.exit()
+        else:
+            print("\nDeployment Aborted\n")
+
+def localhost_8080(suffix=""):
+    """ Deploy script to the local Documents-8080 directory; no pull from the repo first.
+    """
+
+    # DON'T get the latest from github
+#     with lcd(ADMIN_REPO):
+#         local('git checkout {}'.format(branch))
+#         if git_revision:
+#             local('git checkout {}'.format(git_revision))
+#         local('git pull')
+
+    print('\nNote: This script does not pull from the repo first!\n')
+
+    # build the site and then move into web root
+    with lcd("../website" + suffix + "/"):
+
+        # Make sure necessary files or symlinks are present
+        if suffix:
+            for link in links:
+                dest = "../website" + suffix + "/" + link
+                if not os.path.exists(dest):
+                    os.symlink("../website/" + link, dest)
+
+        local("jekyll build --config _config.yml,_config.production.yml")
+
+        # copy the website to the production directory
+        rsync_cmd = "sudo rsync -r %s _site/ %s. "
+        prod_dir = '/Library/WebServer/Documents-8080/'
+
+        # first do a dry run:
+        local(rsync_cmd % ('--dry-run --itemize-changes ', prod_dir))
+        if confirm("The above was a dry run. If the above looks good, push to the local 8080 site:"):
+            local(rsync_cmd % ('', prod_dir))
+            print("\n*** Local website on ports 8080 and 8443 has been updated! ***")
+            sys.exit()
+        else:
+            print("\nDeployment Aborted\n")
+
 def mark(suffix=""):
     """ Deploy script for Mark's laptop
     """
@@ -138,6 +214,8 @@ def mark(suffix=""):
 #         if git_revision:
 #             local('git checkout {}'.format(git_revision))
 #         local('git pull')
+
+    print('\nNote: This script does not pull from the repo first!\n')
 
     mark_website = 'http://{}'.format(MARK_HOST)
 
@@ -191,7 +269,7 @@ def production(host=PRODUCTION_HOST, suffix=""):
 
         with lcd(ADMIN_REPO + "website" + suffix + "/"):
 
-            rsync_cmd = "rsync -r {} --exclude=*.tif --exclude=*.tiff --exclude=*.tgz --exclude=*.tar.gz _site/ {}. "
+            rsync_cmd = "rsync -r {} _site/ {}. "
             print(rsync_cmd.format('', server_staging_path))
             print(server_staging_path)
 
