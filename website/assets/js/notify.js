@@ -7,7 +7,7 @@ $("#pds-notification-modal").on("click", ".btn", function() {
 });
 
 $( document ).ready(function() {
-    $.get( "/news/important_message.html", function( data, status, xhr ) {
+    $.get( "/news/important_message.txt", function( data, status, xhr ) {
         //console.log( xhr.getResponseHeader("Last-Modified") );
         // if the lastMod stored in the cookie is different than the
         // current last mod of the file, display the message

@@ -160,8 +160,8 @@ h4 {
 }
 
 .notification {
-    top: 10em;
-    position: fixed;
+    top: -0.2em;
+    position: relative;
     left: 2.8em;
 }
 
