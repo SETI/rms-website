@@ -166,6 +166,9 @@ def localhost(suffix=""):
         else:
             print("\nDeployment Aborted\n")
 
+def localhost_galleries():
+    localhost(suffix="_galleries")
+
 def localhost_8080(suffix=""):
     """ Deploy script to the local Documents-8080 directory; no pull from the repo first.
     """
@@ -203,6 +206,9 @@ def localhost_8080(suffix=""):
             sys.exit()
         else:
             print("\nDeployment Aborted\n")
+
+def localhost_8080_galleries():
+    localhost_8080(suffix="_galleries")
 
 def mark(suffix=""):
     """ Deploy script for Mark's laptop
