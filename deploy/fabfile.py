@@ -257,7 +257,6 @@ def production(host=PRODUCTION_HOST, suffix=""):
     """
 
     server_login = '{}@{}'.format(USERNAME, host)
-    server_staging_path = '{}@{}:{}'.format(USERNAME, host, SERVER_STAGING_DIR)
 
     if confirm("""
             -----
@@ -273,24 +272,19 @@ def production(host=PRODUCTION_HOST, suffix=""):
 
             """.format(ADMIN_REPO, host, default=False)):
 
-        with lcd(ADMIN_REPO + "website" + suffix + "/"):
+        # move the site over to the production server staging directory
+        # this step is here bc server settings = you can't deploy remotely
+        # directly into web root
+        rsync_cmd = "rsync -r ../website{}/_site/ {}:{}".format(suffix, server_login, SERVER_STAGING_DIR)
+        print('\n' + rsync_cmd + '\n')
+        local(rsync_cmd)
 
-            rsync_cmd = "rsync -r {} _site/ {}. "
-            print(rsync_cmd.format('', server_staging_path))
-            print(server_staging_path)
+        # shell into production, rsync from home dir staging into web root
+        ssh_cmd = 'ssh -t {} "sudo rsync -r {} {}"'.format(server_login, SERVER_STAGING_DIR, PROD_DIR)
+        print('\n' + ssh_cmd + '\n')
+        local(ssh_cmd)
 
-            # move the site over to the production server staging directory
-            # this step is here bc server settings = you can't deploy remotely
-            # directly into web root
-            local(rsync_cmd.format('', server_staging_path))
-
-            # shell into production, rsync from home dir staging into web root
-            local('ssh -t {} "sudo rsync -r {} {}."'.format(server_login, SERVER_STAGING_DIR, PROD_DIR))
-
-            if host == PRODUCTION_HOST:
-                print("\n*** Production website has been updated! ***\n Take a look: \n https://pds-rings.seti.org")
-            else:
-                print("\n*** Website has been updated at " + host)
+        print("\n*** Website has been updated! ***: https://" + host)
 
 def server1(suffix=""):
     production(host=SERVER1_HOST, suffix=suffix)
@@ -300,4 +294,10 @@ def server2(suffix=""):
 
 def production_galleries():
     production(suffix="_galleries")
+
+def server1_galleries(suffix="_galleries"):
+    production(host=SERVER1_HOST, suffix=suffix)
+
+def server2_galleries(suffix="_galleries"):
+    production(host=SERVER2_HOST, suffix=suffix)
 
