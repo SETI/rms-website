@@ -5,7 +5,7 @@ import socket
 import time
 from fabric.api import env, lcd, run, abort, local
 from fabric.contrib.console import confirm
-from secrets import PROD_DIR
+# from secrets import PROD_DIR
 import getpass
 
 """
@@ -28,6 +28,9 @@ import getpass
 ################################################################################
 # Configuration
 ################################################################################
+
+# Was in secrets.py... but secret no more
+PROD_DIR = "/Library/WebServer/Documents/"  # full path to web root directory including trailing slash
 
 REPO = 'https://github.com/SETI/pds-website.git'
 branch = 'master'
