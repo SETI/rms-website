@@ -1,9 +1,3 @@
-import getpass
-import os
-import sys
-from fabric.api import env, lcd, run, abort, local
-from fabric.contrib.console import confirm
-
 """
     This must be run on the staging server.
 
@@ -14,18 +8,19 @@ from fabric.contrib.console import confirm
     To update the galleries and press release directories:
         fab deploy staging_galleries
         fab deploy production_galleries
-
-    * The reason this is run on staging is people work on different
-    local dev environments and it was getting tedious maintaining this
-    fabfile working on Windows machines.
-
 """
+
+import getpass
+import os
+import sys
+from fabric.api import env, lcd, run, abort, local
+from fabric.contrib.console import confirm
 
 ################################################################################
 # Configuration
 ################################################################################
 
-WEBROOT_DIR = '/var/www/documents/'  # full path to web root directory including trailing slash
+WEBROOT_DIR = '/var/www/documents'  # full path to web root directory, no trailing slash
 
 REPO = 'https://github.com/SETI/pds-website.git'
 branch = 'master'
@@ -47,7 +42,7 @@ MARK_REPO = '~/GitHub/pds-website/'
 
 # Where to deploy the new copy of the website to so that it can be copied to the
 # production servers
-STAGING_DIR = '/volumes/webserver_assets/documents'
+MASTER_DIR = '/volumes/webserver_assets/documents'
 
 git_revision = ''  # use this to roll back to past commit, leave blank for latest
 jekyll_version = '' #'_3.8.3_' # leave blank to go with system default
@@ -76,17 +71,17 @@ links = [
 ]
 
 def deploy():
-    """ do some setup things """
+    """Setup before deploy"""
     pass  # there are no setup things
 
 
 def staging(suffix=""):
-    """ This script will update a local repo in user home directory
-        to the branch and git_revision on github,
-        build the site in user local directory, then
-        deploy the website to staging server web root.
-        You must be logged into staging running this script on staging.
-    """
+    """Pull repo and deploy to local webroot"""
+    # This script will update a local repo in user home directory
+    # to the branch and git_revision on github,
+    # build the site in user local directory, then
+    # deploy the website to staging server web root.
+    # You must be logged into staging running this script on staging
 
     staging_website = f'https://{STAGING_HOST}'
 
@@ -109,10 +104,15 @@ def staging(suffix=""):
         local(f'jekyll {jekyll_version} build --config _config.yml,_config.production.yml')
 
         # first show differences using file contents
-        local(f'diff -rq _site/ {WEBROOT_DIR}|grep -v "Only in {WEBROOT_DIR}"|grep -v "Common subdirectories"')
-        if confirm('The above was a list of differences. If the above looks good, push to staging site:'):
+        print('-'*60)
+        local(f'diff -rq _site {WEBROOT_DIR} |'
+              f'grep -v "Only in {WEBROOT_DIR}" |'
+              f'grep -v "Common subdirectories"')
+        print('-'*60)
+        if confirm('The above was a list of differences. If the above looks good, '
+                   'push to staging site:'):
             local(f'rsync -av --checksum _site/ {WEBROOT_DIR}')
-            print(f'\n*** Staging Website Has Been Updated! ***\n Take a look: {staging_website}')
+            print(f'\n*** Staging website has been updated! ***\n Take a look: {staging_website}')
             sys.exit()
         else:
             print('\nDeployment Aborted\n')
@@ -120,160 +120,41 @@ def staging(suffix=""):
 def staging_galleries():
     staging(suffix='_galleries')
 
-def localhost(suffix=''):
-    """ Deploy script to the local server; no pull from the repo first.
-    """
-
-    # DON'T get the latest from github
-#     with lcd(ADMIN_REPO):
-#         local('git checkout {}'.format(branch))
-#         if git_revision:
-#             local('git checkout {}'.format(git_revision))
-#         local('git pull')
-
-    print('\nNote: This script does not pull from the repo first!\n')
-
-    # build the site and then move into web root
-    with lcd("../website" + suffix + "/"):
-
-        # Make sure necessary files or symlinks are present
-        if suffix:
-            for link in links:
-                dest = "../website" + suffix + "/" + link
-                if not os.path.exists(dest):
-                    os.symlink("../website/" + link, dest)
-
-        local("jekyll build --config _config.yml,_config.production.yml")
-
-        # copy the website to the production directory
-        rsync_cmd = "sudo rsync -r %s  _site/ %s. "
-        WEBROOT_DIR = '/Library/WebServer/Documents/'
-
-        # first do a dry run:
-        local(rsync_cmd % ('--dry-run --itemize-changes ', WEBROOT_DIR))
-        if confirm("The above was a dry run. If the above looks good, push to the local site:"):
-            local(rsync_cmd % ('', WEBROOT_DIR))
-            print("\n*** Local website has been updated! ***")
-            sys.exit()
-        else:
-            print("\nDeployment Aborted\n")
-
-def localhost_galleries():
-    localhost(suffix="_galleries")
-
-def localhost_8080(suffix=""):
-    """ Deploy script to the local Documents-8080 directory; no pull from the repo first.
-    """
-
-    # DON'T get the latest from github
-#     with lcd(ADMIN_REPO):
-#         local('git checkout {}'.format(branch))
-#         if git_revision:
-#             local('git checkout {}'.format(git_revision))
-#         local('git pull')
-
-    print('\nNote: This script does not pull from the repo first!\n')
-
-    # build the site and then move into web root
-    with lcd("../website" + suffix + "/"):
-
-        # Make sure necessary files or symlinks are present
-        if suffix:
-            for link in links:
-                dest = "../website" + suffix + "/" + link
-                if not os.path.exists(dest):
-                    os.symlink("../website/" + link, dest)
-
-        local("jekyll build --config _config.yml,_config.production.yml")
-
-        # copy the website to the production directory
-        rsync_cmd = "sudo rsync -r %s _site/ %s. "
-        WEBROOT_DIR = '/Library/WebServer/Documents-8080/'
-
-        # first do a dry run:
-        local(rsync_cmd % ('--dry-run --itemize-changes ', WEBROOT_DIR))
-        if confirm("The above was a dry run. If the above looks good, push to the local 8080 site:"):
-            local(rsync_cmd % ('', WEBROOT_DIR))
-            print("\n*** Local website on ports 8080 and 8443 has been updated! ***")
-            sys.exit()
-        else:
-            print("\nDeployment Aborted\n")
-
-def localhost_8080_galleries():
-    localhost_8080(suffix="_galleries")
-
-def mark(suffix=""):
-    """ Deploy script for Mark's laptop
-    """
-
-    # DON'T get the latest from github
-#     with lcd(ADMIN_REPO):
-#         local('git checkout {}'.format(branch))
-#         if git_revision:
-#             local('git checkout {}'.format(git_revision))
-#         local('git pull')
-
-    print('\nNote: This script does not pull from the repo first!\n')
-
-    mark_website = 'http://{}'.format(MARK_HOST)
-
-    # build the site and then move into web root
-    with lcd(MARK_REPO + "website" + suffix + "/"):
-
-        # Make sure necessary files or symlinks are present
-        if suffix:
-            for link in links:
-                dest = "../website" + suffix + "/" + link
-                if not os.path.exists(dest):
-                    os.symlink("../website/" + link, dest)
-
-        local("jekyll {} build --config _config.yml,_config.production.yml".format(jekyll_version))
-
-        # copy the website to the production directory
-        rsync_cmd = "sudo rsync -r %s --exclude=*.tif --exclude=*.tiff --exclude=*.tgz --exclude=*.tar.gz _site/ %s. "
-
-        # first do a dry run:
-        local(rsync_cmd % ('--dry-run --itemize-changes ', WEBROOT_DIR))
-        if confirm("The above was a dry run. If the above looks good, push to staging site:"):
-            local(rsync_cmd % ('', WEBROOT_DIR))
-            print("\n*** Website Has Been Updated! ***\n Take a look: {}".format(mark_website))
-            sys.exit()
-        else:
-            print("\nDeployment Aborted\n")
-
-def mark_galleries():
-    mark(suffix="_galleries")
-
 def production(suffix=""):
-    """Copy from staging server to master, then from master to each production server
-    """
+    """Copy from staging server to master copy to each production server"""
 
     server_login = '{}@{}'.format(USERNAME, host)
 
-    if confirm("""
+    if confirm(f"""
             -----
 
             You will be deploying the website from the staging server
-            generated in {}
-            to the website at {}.
+            generated in {STAGING_REPO}
+            to the website servers at {SERVER1_HOST} and {SERVER2_HOST}.
 
             Do you want to continue?
 
-            """.format(STAGING_REPO, host, default=False)):
+            """):
 
-        # move the site over to the production server staging directory
-        # this step is here bc server settings = you can't deploy remotely
-        # directly into web root
-        rsync_cmd = "rsync -r ../website{}/_site/ {}:{}".format(suffix, server_login, SERVER_STAGING_DIR)
-        print('\n' + rsync_cmd + '\n')
-        local(rsync_cmd)
+        # first show differences using file contents
+        print('-'*60)
+        local(f'diff -rq _site/ {MASTER_DIR}|'
+              f'grep -v "Only in {MASTER_DIR}"|'
+              f'grep -v "Common subdirectories"')
+        print('-'*60)
+        if not confirm('The above was a list of differences. If the above looks good, '
+                       'push to master directory:'):
+            print('\nDeployment Aborted\n')
+            sys.exit()
 
-        # shell into production, rsync from home dir staging into web root
-        ssh_cmd = 'ssh -t {} "sudo rsync -r {} {}"'.format(server_login, SERVER_STAGING_DIR, WEBROOT_DIR)
-        print('\n' + ssh_cmd + '\n')
-        local(ssh_cmd)
+        local(f'rsync -av --checksum _site/ {MASTER_DIR}')
+        print(f'\n*** Master directory has been updated!')
 
-        print("\n*** Website has been updated! ***: https://" + host)
+        print(f'Updating production servers...')
+        SerialGroup(SERVER1_HOST, SERVER2_HOST).run(
+            f'rsync -av {MASTER_DIR}/ {WEBROOT_DIR}')
+
+        print("\n*** Websites have been updated! ***)
 
 def server1(suffix=""):
     production(host=SERVER1_HOST, suffix=suffix)
@@ -289,3 +170,127 @@ def server1_galleries(suffix="_galleries"):
 
 def server2_galleries(suffix="_galleries"):
     production(host=SERVER2_HOST, suffix=suffix)
+
+# def localhost(suffix=''):
+#     """ Deploy script to the local server; no pull from the repo first.
+#     """
+#
+#     # DON'T get the latest from github
+# #     with lcd(ADMIN_REPO):
+# #         local('git checkout {}'.format(branch))
+# #         if git_revision:
+# #             local('git checkout {}'.format(git_revision))
+# #         local('git pull')
+#
+#     print('\nNote: This script does not pull from the repo first!\n')
+#
+#     # build the site and then move into web root
+#     with lcd("../website" + suffix + "/"):
+#
+#         # Make sure necessary files or symlinks are present
+#         if suffix:
+#             for link in links:
+#                 dest = "../website" + suffix + "/" + link
+#                 if not os.path.exists(dest):
+#                     os.symlink("../website/" + link, dest)
+#
+#         local("jekyll build --config _config.yml,_config.production.yml")
+#
+#         # copy the website to the production directory
+#         rsync_cmd = "sudo rsync -r %s  _site/ %s. "
+#         WEBROOT_DIR = '/Library/WebServer/Documents/'
+#
+#         # first do a dry run:
+#         local(rsync_cmd % ('--dry-run --itemize-changes ', WEBROOT_DIR))
+#         if confirm("The above was a dry run. If the above looks good, push to the local site:"):
+#             local(rsync_cmd % ('', WEBROOT_DIR))
+#             print("\n*** Local website has been updated! ***")
+#             sys.exit()
+#         else:
+#             print("\nDeployment Aborted\n")
+#
+# def localhost_galleries():
+#     localhost(suffix="_galleries")
+#
+# def localhost_8080(suffix=""):
+#     """ Deploy script to the local Documents-8080 directory; no pull from the repo first.
+#     """
+#
+#     # DON'T get the latest from github
+# #     with lcd(ADMIN_REPO):
+# #         local('git checkout {}'.format(branch))
+# #         if git_revision:
+# #             local('git checkout {}'.format(git_revision))
+# #         local('git pull')
+#
+#     print('\nNote: This script does not pull from the repo first!\n')
+#
+#     # build the site and then move into web root
+#     with lcd("../website" + suffix + "/"):
+#
+#         # Make sure necessary files or symlinks are present
+#         if suffix:
+#             for link in links:
+#                 dest = "../website" + suffix + "/" + link
+#                 if not os.path.exists(dest):
+#                     os.symlink("../website/" + link, dest)
+#
+#         local("jekyll build --config _config.yml,_config.production.yml")
+#
+#         # copy the website to the production directory
+#         rsync_cmd = "sudo rsync -r %s _site/ %s. "
+#         WEBROOT_DIR = '/Library/WebServer/Documents-8080/'
+#
+#         # first do a dry run:
+#         local(rsync_cmd % ('--dry-run --itemize-changes ', WEBROOT_DIR))
+#         if confirm("The above was a dry run. If the above looks good, push to the local 8080 site:"):
+#             local(rsync_cmd % ('', WEBROOT_DIR))
+#             print("\n*** Local website on ports 8080 and 8443 has been updated! ***")
+#             sys.exit()
+#         else:
+#             print("\nDeployment Aborted\n")
+#
+# def localhost_8080_galleries():
+#     localhost_8080(suffix="_galleries")
+#
+# def mark(suffix=""):
+#     """ Deploy script for Mark's laptop
+#     """
+#
+#     # DON'T get the latest from github
+# #     with lcd(ADMIN_REPO):
+# #         local('git checkout {}'.format(branch))
+# #         if git_revision:
+# #             local('git checkout {}'.format(git_revision))
+# #         local('git pull')
+#
+#     print('\nNote: This script does not pull from the repo first!\n')
+#
+#     mark_website = 'http://{}'.format(MARK_HOST)
+#
+#     # build the site and then move into web root
+#     with lcd(MARK_REPO + "website" + suffix + "/"):
+#
+#         # Make sure necessary files or symlinks are present
+#         if suffix:
+#             for link in links:
+#                 dest = "../website" + suffix + "/" + link
+#                 if not os.path.exists(dest):
+#                     os.symlink("../website/" + link, dest)
+#
+#         local("jekyll {} build --config _config.yml,_config.production.yml".format(jekyll_version))
+#
+#         # copy the website to the production directory
+#         rsync_cmd = "sudo rsync -r %s --exclude=*.tif --exclude=*.tiff --exclude=*.tgz --exclude=*.tar.gz _site/ %s. "
+#
+#         # first do a dry run:
+#         local(rsync_cmd % ('--dry-run --itemize-changes ', WEBROOT_DIR))
+#         if confirm("The above was a dry run. If the above looks good, push to staging site:"):
+#             local(rsync_cmd % ('', WEBROOT_DIR))
+#             print("\n*** Website Has Been Updated! ***\n Take a look: {}".format(mark_website))
+#             sys.exit()
+#         else:
+#             print("\nDeployment Aborted\n")
+#
+# def mark_galleries():
+#     mark(suffix="_galleries")
