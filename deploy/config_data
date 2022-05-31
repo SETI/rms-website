@@ -4,5 +4,5 @@ WEBMASTER_USERNAME=webmaster
 STAGING_REPO=~/pds-website
 STAGING_HOST=staging.pds.seti.org
 STAGING_WEBSITE=https://staging.pds.seti.org
-SERVER1_HOST=server3.pds-rings.seti.org
-SERVER2_HOST=server4.pds-rings.seti.org
+SERVER1_HOST=server1.pds-rings.seti.org
+SERVER2_HOST=server2.pds-rings.seti.org

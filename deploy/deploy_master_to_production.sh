@@ -11,8 +11,8 @@ if [ x$confirm != "xY" ] && [ x$confirm != "x" ] && [ x$confirm != "xy" ]
 then
   exit 0
 fi
-sudo rsync -av --checksum _site/ ${MASTER_DIR}
 echo "Updating ownership (takes awhile)"
+echo "(If asked for password, it is for staging server)"
 sudo chown -R webmaster:www-data ${MASTER_DIR}
 echo "Updating permissions (takes awhile)"
 sudo chmod -R g+w ${MASTER_DIR}
