@@ -48,7 +48,6 @@ website_galleries/_*
 *.PDF
 *.C
 *.H
-*.SH
 *.CMD
 *.map
 *.RPT
