@@ -1,0 +1,61 @@
+Date: Wed, 29 Sep 1999 17:51:06 -0700 (MST)
+From: Steve Larson <slarson@pirlmail.lpl.Arizona.EDU>
+To: SHOWALTER@ringside.arc.nasa.gov
+Subject: PDS RPX evaluation
+
+Mark-
+	I think the documentation and layout of the RPX PDS discs
+is excellent. I had some initial problems with permissions when
+copying to disc, but they were local problems that were fixed.
+Below are more specific comments. 
+
+	I looked at the RPX PDS discs with two systems:
+
+A. Sun Ultra running the current rev. of Solaris looking at GIF
+and FITS images with XV, FITS images with the current rev.of IRAF,
+pdf files with acrobat reader 4.0 and postscript files with ghostview
+and a level 1 printer.
+
+B. IBM Thinkpad 600 on the Windoze 98 side (I have not yet installed
+IRAF on the Linux side) looking at pdf files with Acrobat 2.1 (or
+trying to) and GIF images with MS Internet Explorer.
+
+	Here are my comments on the contents of the discs in order of
+use;
+	
+1. aareadme.txt (maybe aareadfirst.txt might be more explicit) This
+is well laid out and the obvious entry point for new users of this
+data. The discussions of file formats, file naming, and directory
+structure looks complete. It is sufficiently well done that I did not
+have any problem finding my way around (therefore it MUST be good!).
+
+2. errata.txt, voldesc.cat - useful for volume-specific information.
+
+3. document/tutorial.txt - good second level user information describing
+data sets, goals from the proposal abstracts (and therefore what to expect)
+and additional details defining file types, labels, and pointers to 
+documents on filters, etc. Had no trouble reading files on the Sun, but
+the Acrobat reader 2.1 on the Thinkpad could not read pdf files (I
+suspect this is a problem with Acrobat, but will have to look into this
+further to know.)
+
+4. The primary text files in the subdirectories were all helpful in
+describing the other files in their directories. The directories calib,
+catalog, geometry, index, label and software were all useful. I have not
+had time to test any of the SPICE data in geometry, but it looks pretty
+complete.
+
+5. The data files. I had no problem looking at the browse gif files and
+labels. Spot checks indicate that the labels looked consistent with the
+images. The calibrated images could be looked at with XV (in its limited
+way), but I had to use the IRAF task rfits to copy them to disc in IRAF
+format. IRAF would not display the images directly from the CD. The
+compressed raw files could be unzipped to disc from the destination
+directory.
+
+	So, except for the awkwardness of having to rfits images from
+cd in IRAF, things seemed to work. I would be interested in what others
+found.
+
+Cheers,
+	-Steve

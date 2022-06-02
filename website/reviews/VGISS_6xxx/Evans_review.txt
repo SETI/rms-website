@@ -1,0 +1,64 @@
+From: Mike Evans <m.w.evans...>
+Date: December 11, 2006 9:24:13 AM PST
+To: Mitch Gordon <mgordon...>
+Cc: Mark Showalter <mshowalter...>
+Subject: VGISS peer review comments
+
+Mitch & Mark,
+            here are my comments regarding the VGISS volumes -- until the telecon on the 19 th.
+
+Mike
+
+
+
+Image Labels
+***************
+
+The detached labels (.LBL files) accompanying the various image files appear to be an accurate concatenation of items from the VICAR image label and the relevant entry in the IMGINDEX.TAB file from the original archive release with appropriate changes made for the level of processing applied to the images.
+
+I was pleased to see that the detached labels had the following keywords
+
+HORIZONTAL_PIXEL_FOV
+VERTICAL_PIXEL_FOV
+HORIZONTAL_FOV
+VERTICAL_FOV
+
+and that the appropriate values had been used for the raw and geometrically corrected images. As far as I'm aware this information is not in the original VICAR image labels or the IMGINDEX.TAB files in the original release. Since extra information has already been included in the detached labels I think that the addition of several more keyword-value pairs would prove useful to future users of this dataset.
+
+1. the camera pointing for the image 2. the geometrical state of the spacecraft w.r.t Saturn at the image time (in terms of SPICE this corresponds
+ to cspice_spkez,sc,et,'J2000','NONE',699L,state,ltime)
+3. the light time corrected state of Saturn w.r.t to spacecraft at the image time (in terms of SPICE this
+ corresponds to cspice_spkez,699L,et,'J2000','LT',sc,state,ltime)
+4. the light time and stellar aberration corrected state of Saturn w.r.t the spacecraft (in terms of SPICE
+ this corresponds to cspice_spkez,699L,et,'J2000','CN+S',sc,state,ltime) at the image time
+
+The states are straitforward to obtain using Bob Jacobson's latest Voyager ephemerides, vgr1_saturn.bsp and vgr2_saturn.bsp. The camera pointing is trickier. I was lucky enough to inherit Voyager C-kernels that Mitch Gordon produced from SEDR tapes which I now notice finally appeared on the naif ftp site in March 2002. If I recall correctly Mitch's C-kernels aren't complete but have quite good coverage for the Voyager Saturn encounters.
+
+The arguement can be made that this ancilliary information is better obtained from the relevant SPICE kernels available at the NAIF ftp site. However, in say, 50 years time, who knows whether the files will still be easily obtainable. And the future user will also have to know that such information is available and where and how to obtain it. Its much easier and certainly more future-proof if at least basic information like states and pointing is contained within the released dataset itself.
+
+
+Reseau Removal with RESSAR77
+*******************************
+
+Dark current subtraction and blemish removal is good BUT reseau removal can introduce glaring anomalities when the reseau is near a boundary between 'bright' and 'dark' areas of an image. I'll use C3466732_CLEANED.IMG as an example. In this 'CLEANED' image use of RESSAR77 to remove reseaus has lead to reseau's being replaced by 'smudges' along the
+A ring outer edge, the shadow boundary on the ring and at various other ring edges. O.K., the blemishes don't really affect the science but then the science is also totally unaffected by leaving the reseaus in the image in the first place. Removing the reseaus is purely a cosmetic proceedure to make the images simply look better. I'd prefer that either the reseaus not be removed in the first place or that versions of the 'CLEANED', 'GEOMA' and 'CALIB' images be included that have the reseaus left intact as well as the reseau removed versions. A future user can always use the provided reseau locations in the provided 'RESLOC' files to remove the reseau marks themselves if their aim is to produce asthetically pleasing images.
+
+SPICE
+*******
+
+Today the easiest way to actually use Voyager images is in conjunction with the NAIF SPICE toolkit and associated SPICE kernels. Currently the complete SPICE suite is available from the NAIF FTP site. That may not be the case at some time in the future. It might be wise to actually include the appropriate SPICE kernels in this release along with the SPICE toolkit along with a note that the latest SPICE toolkit/kernels etc should be downloaded from the NAIF ftp site. I know Chuck is keen to have the NAIF site be the only place to obtain the SPICE toolkit and thats perfectly reasonable while NAIF is a going concern. There is no guarantee that at some point in the (far) future the SPICE kernels and toolkit won't become unavailable or difficult to find. Even if the SPICE toolkit isn't actually used by a future research the code would at least indicate how the various algorithms actually work.
+
+Thinking further along these lines to try and ensure futureproofing. Converting the information in binary SPICE .bsp and .bc state and pointing kernels into straightforward human readable text files of times and state vectors, quaternions or even RA,dec pointings might be considered.
+
+VICAR image files
+******************
+
+The image files themselves were easily read by the software I use for Cassini/Galileo/Voyager images. Never having done photometry I don't use radiometrically corrected images but I was able to make the necessary modifications to display the 'CALIB' images using the supplied information in the DOCUMENTs directory.
+
+Documentation
+****************
+
+The supplied documentation provided the required information. One comment is that when writing a port of VICAR to IDL I found having the VICAR documentation available a great help -- especially since the actual algorithms used to process images were given instead of simply instructions on how to use the VICAR package. A future user of this dataset might be interested in what algorithms were actually used to correct the images.
+
+
+Mike Evans  QMUL  11 Dec 2006

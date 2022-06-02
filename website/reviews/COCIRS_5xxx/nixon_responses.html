@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.35">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0600}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0600; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff; min-height: 14.0px}
+    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    span.s1 {letter-spacing: 0.0px}
+    span.s2 {font: 12.0px Symbol; letter-spacing: 0.0px}
+    span.s3 {letter-spacing: 0.0px color: #fd0000}
+    span.s4 {letter-spacing: 0.0px color: #4700ff}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">Review Panel Telecon notes.<span class="Apple-converted-space"> </span></span></p>
+<ul>
+  <li class="li1"><span class="s2"></span><span class="s3"><b>Red</b></span><span class="s1"> entries indicate actions to be taken to remove a lien.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li1"><span class="s2"></span><span class="s4"><b>Blue</b></span><span class="s1"> entries describe the steps taken to respond to the comment.</span></li>
+</ul>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Review submitted by Conor A Nixon 5 Apr 2007</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">I have now had the opportunity to browse the new archive, and it alllooks very good. I have not however had the opportunity to do any detailed validation of the spectral data versus the current archive - I presume that there are others doing this? Some comments and thoughts follow.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Comments On The Re-Formatted CIRS Data Archive (Peer Review)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Overall, my impression of the re-formatted CIRS Data Archive was</span></p>
+<p class="p1"><span class="s1">extremely positive: I commend the re-formatters on an excellent job. In particular, I was impressed by the LBL files which now contain much more information than previously.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><b>Thank you.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">A few comments:</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">1) REF.CAT: this is very far out of date. CIRS normally provides a file now called CIRSREF.CAT which is (almost) current. I will work on updating it.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1">We will update these files based on the corresponding COCIRS_0xxx files.</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><b>Resolution: Our re-formatting pipeline now automatically includes the version of CIRSREF.CAT found on the source volumes. Thus, it will always stay up to date.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">2) My second comment was going to be about the file naming convention: I was expecting that the re-formatted data, which adheres to Cassini observation boundaries, would therefore use the request name as part of the file name. However, I see that that the request name is included in the .LBL file as "OBSERVATION_ID" and I understand that custom PDS software is under development for browsing the CIRS dataset, so maybe it doesn't matter so much.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1">OK. Consensus is not to change this. Our on-line catalog (in development) will make it easier to locate files based on the CIMS request. The user can also search the index files for this purpose.</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><b>Resolution: Our search engine "OPUS" does in fact let you look up files based on the CIRS activity name.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">3) The minute part of the file name does not exactly correspond to the minute of the time of the first data item in the file. This is probably known to the data producers judging by the reference to "approximate minute" in the tutorial.txt file. Examples of such instances are ISPM0505280401_FP3.TAB which starts at 04:02:04 and</span></p>
+<p class="p1"><span class="s1">ISPM05050311800_FP1.TAB which starts at 18:01:04. This is hardly a major problem but I was curious as to why the difference exists.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1">The minute is the start time of the observation. Otherwise, files from different focal planes of the same CIMS request sometimes turned out to have different time tags, which was very confusing.<span class="Apple-converted-space">  </span>We will clarify this in TUTORIAL.TXT and DATAINFO.TXT.</span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>Comments during the review:<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">Would it be possible to include a FORTRAN script to convert the binary files?</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1">Yes. We will include such a program.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><b>Resolution: A new SOFTWARE directory contains simple sample programs written in C and FORTRAN, as well as sample data and representative results.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">All CIRS deliveries to PDS are identified as version 1. The calibration algorithm has been updated intermittently, so internal to the team, the volumes have different version numbers based on the version of the calibration algorithm used. It is not clear in the data volumes (either the original or the reformatted data sets) when this changed.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1">We will work with the team to identify the associations. We may attempt to incorporate the information in the data product labels, or post the information in our CIRS data web pages. However, to be useful information for the user, we also will need to know how the algorithm changed each time.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><b>Resolution: The file DOCUMENT/RELNOTES.TXT now indicates which version of the CIRS calibration pipeline has been applied. It also contains the release notes provided by the team. This is a copy of a file of the same name on the source CIRS volumes, but we have moved it from the DATA/APODSPEC subdirectory to DOCUMENT, where it is easier to find. The existence of this file is indicated in AAREADME.TXT and in DOCUMENT/DOCINFO.TXT.</b></span></p>
+<p class="p7"><span class="s1"><b></b></span><br></p>
+<p class="p3"><span class="s1"><b>We are extremely grateful to the CIRS team for releasing a new, consistently calibrated version of the data set.</b></span></p>
+</body>
+</html>

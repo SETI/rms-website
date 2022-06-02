@@ -1,0 +1,139 @@
+From: "rjoyner" <rsjoyner@jpl.nasa.gov>
+To: "Mark Showalter" <showalter@ringside.arc.nasa.gov>
+Subject: More comments
+Date: Thu, 30 Sep 1999 13:31:59 -0700
+
+Howdy,
+
+I guess I forgot to send these before the telecon.
+
+See Ya,
+  RJ
+
+Comments to: Mark Showalter
+             RINGS-PRX-0002
+                                                        29 Sept 99
+
+Peer review comments
+
+These are my initial comments on RPX_0002.  If you have any questions, 
+and I expect that you will, please call and we can work thru any issues.
+
+(1)  ...\CALIB\*.LBL
+
+     (a)  PRODUCT_TYPE: CHARACTER value too long. 
+                        (Must be less than 12 characters in length)
+
+
+(2)  ...\BROWSE\*.LBL
+
+     (a)  PUBLICATION_DATE: Inconsistent data type. 
+                            (Value should be of type DATE): 1998-12-31
+                            
+
+(3)  .../CALMASK/*.LBL
+
+     (a)  ENCODING_TYPE = ZIP 
+     
+          I have proposed that the new standard value be added.
+          
+
+(4)  .../CALIMAGE/*.LBL
+
+     (a)  Change:  SPACECRAFT_NAME = HUBBLE_SPACE_TELESCOPE
+              To:  SPACECRAFT_NAME = "HUBBLE SPACE TELESCOPE"
+          Change:  INSTRUMENT_NAME = WIDE_FIELD_PLANETARY_CAMERA_2
+              To:  INSTRUMENT_NAME = "WIDE FIELD PLANETARY CAMERA 2"
+              
+          Keywords of class NAME should not have embedded underscores.
+          But rather should contain blanks.
+              
+     (b)  In the INST.CAT file, you have the following:
+     
+         INSTRUMENT_NAME             = "HUBBLE SPACE TELESCOPE"
+         INSTRUMENT_TYPE             = "WIDE FIELD PLANETARY CAMERA 2"
+         
+         But, in the data file you specify the values differently or 
+         have used the wrong keyword ???
+         
+
+(5)  .../HEADER/*.LBL
+
+     (a)  The OBJECT and END_OBJECT values do not match:
+     
+     OBJECT                          = HEADER_TABLE
+       NAME                          = HEADER_PACKET
+       INTERCHANGE_FORMAT            = BINARY
+
+       OBJECT                        = COLUMN
+         NAME                        = PACKET_VALUES
+         DATA_TYPE                   = MSB_INTEGER
+         START_BYTE                  = 1
+         BYTES                       = 2
+       END_OBJECT                    = COLUMN
+     END_OBJECT                      = TABLE
+    
+          
+(6)  DOCUMENT/HSTHB.LBL
+
+     (a)  Change:  OBJECT = POSTSCRIPT_DOCUMENT
+              To:  OBJECT = PS_DOCUMENT
+              
+          Change:  END_OBJECT = POSTSCRIPT_DOCUMENT
+              To:  END_OBJECT = PS_DOCUMENT
+
+     (b)  Change:  DOCUMENT_FORMAT = PDF
+              To:  DOCUMENT_FORMAT = ADOBE PDF
+              
+     These are the changes that were made to the new Chapt 9 in the
+     Standards Reference.
+              
+     
+(7)  VOLDESC.CAT
+
+     (a)  FACILILTY_NAME = "RINGS NODE"  is not the value that I
+          would have chosen.  Please look at the other values in
+          our dictionary before using this choice.
+          
+          For example:  LABORATORY FOR ...
+          
+     (b)  Change: NASA AMES RESEARCH CENTER          
+              To: NASA/AMES RESEARCH CENTER
+              
+          This is already a standard value in our dictionary.
+          
+              
+(8)  CALIB/F675W.LBL
+
+     (a)  INSTITUTION_NAME = "LOWELL OBSERVATORY"
+     
+          Is there a university associated with the observatory.
+          I'm not sure that an observatory qualifies as an institution ????
+          
+
+(9)  CALIB/F130LP.TAB
+
+     (a)  Not all of the lines in the file are properly terminated.
+     
+------------------------------------------------------------------------     
+          
+Comments to: Mark Showalter
+             RINGS-PRX-0004
+                                                        29 Sept 99
+
+Peer review comments
+
+These are my initial comments on RPX_0004.  If you have any questions, 
+and I expect that you will, please call and we can work thru any issues.
+
+(1)  INDEX/OBSCMIDX.LBL: 2 errors found
+
+     (a)  line 241 has embedded TAB(s); 
+     (b)  line 255 has embedded TAB(s); 
+
+
+(2)  INDEX/OBSINDEX.LBL: 2 errors found
+
+     (a)  line 240 has embedded TAB(s); 
+     (b)  line 254 has embedded TAB(s); 
+

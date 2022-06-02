@@ -1,0 +1,819 @@
+From:	RING::SHOWALTER    "Mark Showalter" 30-SEP-1999 17:17:41.91
+To:	SMTP%"lhuber@nmsu.edu",SMTP%"rsjoyner@jpl.nasa.gov",SMTP%"croddier@fabry.ifa.hawaii.edu",SMTP%"amanda@lowell.Lowell.Edu",SMTP%"rfrench@ahab.wellesley.edu",SMTP%"slarson@pirlmail.lpl.Arizona.EDU",SMTP%"nicholso@astrosun.tn.cornell.edu"
+CC:	PETERM,SHOWALTER
+Subj:	Minutes of peer review telecon
+
+PDS Peer Review Telecon of RPX_000x
+1:30 PDT September 30, 1999
+Minutes
+
+The reviewers of the data set were:
+  Amanda Bosh
+  Dick French
+  Lyle Huber
+  Ron Joyner
+  Steve Larson
+  Claude Roddier
+  Phil Nicholson
+
+The telecon participants were all of the above except Steve Larson, who 
+provided written comments.  The Rings Node was represented by Mark
+Showalter and Peter Mariani. 
+
+A web site at
+  http://ringside.arc.nasa.gov/www/mark/review/review.html
+includes everyone's comments received by noon 9/30.  Mark had
+reorganized those comments by directory and topic, according to these
+categories: 
+  General comments
+  CALIB
+  CATALOG
+  Data
+  DOCUMENT
+  INDEX
+  LABEL
+
+All of the comments are appended below, along with discussion summaries
+and liens against the data set embedded in square brackets [].  They are
+also now available at the aforementioned web site. 
+
+The peer review panel voted unanimously to approve the data set, subject 
+to the liens listed below.
+
+Additional comments on the data set can be sent to the Rings Node until
+Wednesday, October 6. 
+
+--Mark Showalter
+
+======================================================================== 
+General comments
+========================================================================
+ 
+A. Bosh
+
+General
+  Why do data folder names end in XX?  Is it to pad out to some standard
+    length?
+
+[To indicate files are organized by month, and to match other PDS data
+sets.  No change.] 
+
+  What is the justification for releasing just HST/WFPC2?  I can see that
+    HST would be much simpler than various ground-based data sets because
+    it is auto-archived.  But why the constraint to WFPC2?  There are some
+    HRS and FOS data as well that are intimately tied to the RPX timing.
+
+[Other data are yet to be archived.]
+
+  What does "^" mean at the beginning of a header line?  Is it a new FITS
+    thing?
+
+[PDS notation for a pointer to another file.]
+
+------------------------------------------------------------------------
+C. Roddier
+
+Comments on the data set:
+
+My comments are very positive in the sense that I have been
+able without difficulty to understand the whole organisation
+of the data set and look at the files and labels. It seems to
+me that if I wanted now to use these data I could do it.
+
+------------------------------------------------------------------------
+L. Huber
+
+- Each disk had one file that was unreadable on my Solaris 2.6 and 2.7 
+  machines:
+    RPX_0001  DOCUMENT/FITS.TXT
+    RPX_0002  AAREADME.TXT
+    RPX_0003  AAREADME.TXT
+    RPX_0004  AAREADME.TXT
+    RPX_0005  AAREADME.TXT
+
+[Others did not have problems with these files.  We will send a final
+sample disk to Lyle for further testing.]
+
+- In all labels:
+    SPACECRAFT_NAME and INSTRUMENT_NAME values should be delimited by 
+    double quotes, not connected by underscores.
+
+[LIEN: We will fix]
+
+    The default unit for EXPOSURE_DURATION is milliseconds so these
+    values should be appended with <SECONDS>.
+
+[LIEN: We will fix]
+
+- /AAREADME.TXT
+  - e-mail address for John Caldwell is incorrect.
+
+[LIEN: We will fix]
+
+------------------------------------------------------------------------
+P. Nicholson
+
+I have browsed thru 3 of the CD's and not found anything amiss so far.
+The organization seems very logical & pretty easy to follow, and I like
+having all the documentation files on each CD.  The arrangement of datasets
+by ID number, while perhaps weird to most users, seems to make the most
+sense. (Perhaps the list of the PI and dates for each of these IDs
+which I found in the tutorial might be added to the aareadme file
+so that a novice user would find it immediately?) On balance, I think
+this is better than inventing completely ad hoc identifiers.
+
+[LIEN: A list of PIs and dates will be added to AAREADME.TXT.  This will
+be copied from DATASET.CAT.] 
+
+------------------------------------------------------------------------
+S. Larson
+
+Mark-
+	I think the documentation and layout of the RPX PDS discs
+is excellent. I had some initial problems with permissions when
+copying to disc, but they were local problems that were fixed.
+Below are more specific comments. 
+
+	I looked at the RPX PDS discs with two systems:
+
+A. Sun Ultra running the current rev. of Solaris looking at GIF
+and FITS images with XV, FITS images with the current rev.of IRAF,
+pdf files with acrobat reader 4.0 and postscript files with ghostview
+and a level 1 printer.
+
+B. IBM Thinkpad 600 on the Windoze 98 side (I have not yet installed
+IRAF on the Linux side) looking at pdf files with Acrobat 2.1 (or
+trying to) and GIF images with MS Internet Explorer.
+
+	Here are my comments on the contents of the discs in order of
+use;
+	
+1. aareadme.txt (maybe aareadfirst.txt might be more explicit) This
+is well laid out and the obvious entry point for new users of this
+data. The discussions of file formats, file naming, and directory
+structure looks complete. It is sufficiently well done that I did not
+have any problem finding my way around (therefore it MUST be good!).
+
+[AAREADME.TXT is a standard name required by the PDS.  No change.]
+
+2. errata.txt, voldesc.cat - useful for volume-specific information.
+
+3. document/tutorial.txt - good second level user information describing
+data sets, goals from the proposal abstracts (and therefore what to expect)
+and additional details defining file types, labels, and pointers to 
+documents on filters, etc. Had no trouble reading files on the Sun, but
+the Acrobat reader 2.1 on the Thinkpad could not read pdf files (I
+suspect this is a problem with Acrobat, but will have to look into this
+further to know.)
+
+4. The primary text files in the subdirectories were all helpful in
+describing the other files in their directories. The directories calib,
+catalog, geometry, index, label and software were all useful. I have not
+had time to test any of the SPICE data in geometry, but it looks pretty
+complete.
+
+[LIEN: We will take another look at the SPICE data directories to make
+sure there are no problems.] 
+
+------------------------------------------------------------------------
+P. Nicholson
+
+File formats:
+
+I looked
+at the CD-ROMs using a Sparc Ultra-1 running Solaris. I was able to
+display the GIF files from the browse directories directly with Sun's
+image viewer (ie, I just double-clicked on the icons in the File
+Manager window). However, SOLARIS did not recognise the .TXT files
+as text (it tried to run them...) so I looked at them with the UNIX 
+'more' command instead. I have not so far examined the pdf or ps files.
+I did unzip one of the label files using my local version of 'unzip',
+after copying the file to disk.
+
+[No change required.]
+
+------------------------------------------------------------------------
+R. French
+
+5) I have not read through the documentation to the level of trying to
+find typographical errors, but overall it seems extensive and quite
+thoroughly done.
+
+[No change required.]
+
+========================================================================
+CALIB directory
+========================================================================
+
+L. Huber
+
+- /CALIB/F130LP.TAB is not CR-LF delimited.
+
+------------------------------------------------------------------------
+R. Joyner
+
+(6)  CALIB/F130LP.TAB
+
+     (a)  This file is only terminated with <LF>.  Once the file is
+          terminated with <CR><LF>, and ROW_BYTES = 23 is set, then
+          the file displays correctly.  But, there is a problem with
+          NASAVIEW displaying this file for some reason.  It displays
+          correctly using TBTOOL.
+
+[LIEN: We will fix.]
+
+======================================================================== 
+CATALOG directory
+========================================================================
+ 
+A. Bosh
+
+CATALOG/MISSION.CAT
+  The mission statement describes satellite mutual events, but for the most
+    part they are not included in this cd distribution.  Some were observed
+    during the HST campaigns, but as I recall, no observations were
+    specifically targeted to them.
+
+[MISSION.CAT is a general file, intended to describe this data set and 
+others yet to be archived.]
+
+------------------------------------------------------------------------
+L. Huber
+
+- /CATALOG/DATASET.CAT
+  - Data Set Overview, 1st para., taken taken --> taken
+  - Data Set Overview, 2nd para., images original --> original
+  - Data, 4th para., Zip 2.1 was used to create the zipfiles but UnZip 5.32
+                     should be used to unzip them. That seems really strange
+                     to have such different versions.
+  - Data Coverage & Quality, 1st para., data is --> data are
+  - Data Coverage & Quality, 2nd para., Titan is --> Titan are
+
+- /CATALOG/MISSION.CAT
+  - Mission Overview, 4th para., RPXs --> RPX
+  - SUN-RPX section, 1998 --> 1995
+
+- /CATALOG/REF.CAT
+  - BOSH&RIVKIN1996, Rivkin --> Rivkin,
+  - BIRETTAETAL1996, Baggaett --> Baggett
+
+- /CATALOG/SOFTWARE.CAT
+  - Programming Language, ANSII_C --> ANSI_C
+
+[LIEN: We will make all changes recommended.  We will check to confirm
+that the Zip and Unzip version numbers are correct.] 
+
+------------------------------------------------------------------------
+R. Joyner
+
+(2)  CATALOG/SOFTWARE.LBL
+
+     (a)  The template is missing END_OBJECT = SOFTWARE_INFORMATION
+          See enclosure
+
+[LIEN: We will fix.]
+
+(3)  CATALOG/REF.CAT
+
+     (a)  The following REFKEYID is present in the INSTHOST.CAT
+          but not in the REF.CAT.  Please add to REF.CAT:
+
+          VOELS1995
+
+[LIEN: This reference is a web page.  We will get if from Lyle and add
+it to our DOCUMENT directory.  Then we will add it to REF.CAT.] 
+
+     (b)  See the enclosure for the updated file.
+          I have made minor corrections once again.
+
+          It is not a good idea to enclose ref titles in single or
+          double quotes because some titles include single quotes
+          within the description.  The best way is to not quote these
+          expressions:
+
+		OBJECT                          = REFERENCE
+  		REFERENCE_KEY_ID              = "MACROBERT1995A"
+  		REFERENCE_DESC                = "MacRobert, A.M., Ed., Saturn's
+			rings turn edge on, Sky and Telescope 89, 68-71, May 1995."
+		END_OBJECT                      = REFERENCE
+
+[LIEN: We will change.]
+
+(8)  CATALOG/DATASET.CAT
+
+     (a)  Under CONFIDENCE_LEVEL_NOTE you include [BIRETTAETAL1993]
+          as a reference.  It might be more useful to summarize the
+          paper, or include the paper in the documents directory.
+
+[LIEN: We will change the reference to BIRETTAETAL1996, which is better.
+This is in the DOCUMENT directory as WFPC2*.*.  WFPC2.LBL will be
+updated to indicate that the document corresponds to this reference.] 
+ 
+======================================================================== 
+Data directories
+========================================================================
+ 
+A. Bosh
+
+RPX_000n:1995nnXX/whatever/CALIMAGE/*.LBL
+  SC_TARGET_POSITION_VECTOR:  the TUTORIAL.TXT says that these are actually
+    geocentric.  Is this information included anywhere else closer to the
+    data files (people may not read or remember the tutorial).  The keyword
+    is confusing given the definition of the value provided.  It would be
+    better to either change the keyword to be accurate, or to include the
+    spacecraft ephemeris.  The definitive ephemerides are easy to get and
+    use (I have a tutorial if you need one).
+
+[LIEN: We will add a comment in the label to indicate the offset of HST
+from the center of Earth has not been included.] 
+
+  CELESTIAL_NORTH_CLOCK_ANGLE:  is this from the header keywords?  If so, it
+    may not be correct.  Why not just call it position angle?
+
+[LIEN: It's based on PA_V3, which was always correct in the Nicholson
+data. We will do some spot checks to make sure values look reasonable
+for data from other PIs.  We will note that this is what we did in
+TUTORIAL.TXT, and that ORIENTAT is unreliable.] 
+
+  BODY_POLE_CLOCK_ANGLE:  does this include pole precession, and if so, what
+    reference.  Either way, what is the reference for the pole position?
+
+[LIEN: The information will be added to TUTORIAL.TXT.]
+
+RPX_000n:1995nnXX/whatever/CALIMAGE/*.IMG
+  Just a note:  I was unable to get these files to open with GraphicConverter
+    unless I first unchecked "Detect only clear Formats" in Preferences:Open,
+    otherwise it thought it was a different type of file because of the
+    suffix.  GraphicConverter is used to seeing *.fits if it's a FITS file,
+    I guess.  [Mac PBG3]
+
+[No change]
+
+RPX_000n:1995nnXX/whatever/RAWIMAGE/*.ZIP
+  I unable to unzip this with the program Unzip (I grabbed the compiled one
+    from the website rather than compile one using the files on the CD).
+    Error message:  "cannot find either 010A_D0F.ZIP or 010A_DOF.ZIP.zip"
+    It worked if I used StuffIt Expander.
+
+[No change]
+
+RPX_0005:199511XX/U2ZYXXXX/
+  Technically, A301 and A302 were Phil's, but we split an orbit so they
+    assigned them to me.  It's not a hugely important thing, but if anyone
+    cares we can move them over to Phil's directory.  Although they'll then
+    be inconsistent between HST naming and this CD directory structure, so 
+    it's probably better to leave them where they are.
+
+[LIEN: We will update labels to indicate correct PIs.  We will add a
+note to TUTORIAL.TXT indicating that some images were traded between
+PIs.  Phil will provide the list of images that were traded.] 
+
+------------------------------------------------------------------------
+C. Roddier
+
+The first one is in the display of the GIF files in the
+subdirectories "browse". The images of PC1 have been rescaled
+and rotated to show the whole image of Saturn when the image
+has been taken on PC1 and WF4. This is a good idea but this
+should be explained in the tutorial in the fourth paragraph
+(4. HST/WFPC2 Images and Filters). If you have never seen the
+images, it is difficult to realize why the PC1 images are so
+small whereas the pixel size is twice smaller than the pixel
+size of the WF.
+
+[LIEN: This will be noted in TUTORIAL.TXT and in the labels of the GIF
+files.] 
+
+------------------------------------------------------------------------
+R. Joyner
+
+These are my initial comments on RPX_0001.  If you have any questions,
+and I expect that you will, please call and we can work thru any issues.
+
+(1)  ...\CALMASK\*.LBL
+
+     (a)  The COMPRESSED_FILE object is required to have a FILE_RECORDS
+          keyword.  I believe we talked about this in one of our
+          meetings ???
+
+[Ron agreed this keyword is not really needed.  No change.]
+
+(9)  DATA directories
+
+     (a)  You might consider including a DATA directory at the root
+          and making the data directories subdirectories of this one.
+          It definitely makes the CD cleaner and it is very obvious
+          where to find the data.
+
+[People had differences of opinion over the need for a DATA directory.  
+We finally decided not to make this change.]
+
+(10)  DATA/CALIMAGE/*.LBL
+          /CALMASK/*.LBL
+          /ENGDATA/*.LBL
+          /ENGMASK/*.LBL
+          /HEADER/*.LBL
+          /RAWIMAGE/*.LBL
+          /RAWMASK/*.LBL
+
+      (a)  Within these label files, byte offsets are lowercase.
+           The standards are unclear on this point.  But, CN has
+           decided that the <bytes> units should be either uppercase
+           or lowercase.  However, NasaView currently crashes when
+           encountering lowercase units.  So, please convert the
+           <bytes>  --->>> <BYTES>.  We will fix NasaView later.
+
+[LIEN: We will change.]
+
+(11)  DATA/BROWSE/*.GIF					 - able to view in Internet Explorer
+          /CALIMAGE/*.IMG				 - able to view in NasaView
+          /CALMASK/*.ZIP				 - able to explode and view
+          /ENGDATA/*.ZIP				 - able to explode and view
+          /ENGMASK/*.ZIP				 - able to explode and view
+          /HEADER/*.ZIP					 - able to explode and view
+          /RAWIMAGE/*.ZIP				 - able to explode and view
+          /RAWMASK/*.ZIP				 - able to explode and view
+
+      (a) Unzip - when I unzip the files in the RAWMASK directory
+          the PKUNZIP program displayes the file names in lowercase.
+          The NT operating system displays the unzipped files in
+          uppercase.  I have not tested this on UNIX, but I am
+          concerned that the files may be created with lowercase
+          names ???
+
+[LIEN: We will convert internal file names to upper case.]
+
+      (b) All of the label files require extensive editing in order
+          to get NasaView to process the label/data.  None of these
+          problems are due to label errors.  The new compressed
+          objects are of course a problem that needs to be fixed
+          within NasaView.  Other problems include:
+
+          - if the NOTE keyword-value exceeds 60 characters, NasaView
+            will crash.
+          - some of the other extraneous keywords (either placement
+            of or inclusion of) crashes NasaView.
+
+          I think we should include a note in the ERRATA.TXT file
+          that the current version of NasaView (2.5.2) cannot
+          display the data.
+
+[LIEN: We will make this addition to ERRATA.TXT.]
+
+------------------------------------------------------------------------
+S. Larson
+
+5. The data files. I had no problem looking at the browse gif files and
+labels. Spot checks indicate that the labels looked consistent with the
+images. The calibrated images could be looked at with XV (in its limited
+way), but I had to use the IRAF task rfits to copy them to disc in IRAF
+format. IRAF would not display the images directly from the CD. The
+compressed raw files could be unzipped to disc from the destination
+directory.
+
+	So, except for the awkwardness of having to rfits images from
+cd in IRAF, things seemed to work. I would be interested in what others
+found.
+
+[No change]
+
+------------------------------------------------------------------------
+P. Nicholson
+
+I really like all the geometric & photometric parameters you have added
+to the PDS labels. I will check some of the photometry numbers tomorrow
+against my own notes. Ditto for a few geometry numbers, which Dick
+generated for our data. These labels
+are also easier to read than the original FITS headers, as they have
+all the important info (filter, etc.) up front. 
+
+I also like the mini-images in the browse directory, and the fact
+that you have included a solar spectrum and filter profiles.
+
+So far the **ONLY** thing I have found which might be slightly
+misleading concerns the methane quad filters with which the bulk of
+these data were taken. Strictly, this leads to a different wavelength
+for each chip, as the 890 nm portion only covers one chip at a time.
+Since sometimes part of Saturn is in an adjacent chip (eg., WF3), this
+is seen thru a different methane filter. Is this worth including?
+We could figure out from the HST WFPC2 handbook which filter is on
+each chip for PC1 or WF3 observations. Right now, your headers
+seem to allow for just 1 filter for the whole 4 frames in a file.
+Also I presume the calibration data is for the 890 nm filter only;
+Pat may not even have that for the other quad segments.
+
+[LIEN: We will change the labels on methane-filter images to indicate
+that calibration factors are unknown on un-targeted frames.] 
+
+------------------------------------------------------------------------
+P. Nicholson
+
+FITS images:
+
+Since others used IRAF, I should report that I was able to read the
+FITS image files in IDL 5.1 using the 'readfits' command, directly from
+the disk and with no problems.  
+
+I carefully compared several
+specific images from our own Aug and Nov data sets against my own
+copies of these images, just to see that everything was labelled
+correctly. All checked out OK.  I even found some images I had forgotten
+were taken, so the set seems to be very complete.
+
+GIF images:
+
+I think the fact that you have reassembled all 4 images from each
+original HST files with their correct orientation and scale in the
+GIF images is a good thing. I found a sketch of the WFPC2 layout in one
+of the documentation files. Otherwise the 90 deg rotations of the 
+individual PC or WF images could be very confusing.  Perhaps you
+could note somewhere (in the volume description?) that the
+orientation on the sky of the HST FOV switches 180 deg at opposition,
+so the May and Aug images are oppositely oriented to the Nov images.
+(This is implicit in the CLOCK_ANGLE values, of course.)
+
+[LIEN: We will add a comment about the change in orientation around
+opposition to TUTORIAL.TXT.] 
+
+------------------------------------------------------------------------
+R. French
+
+1) as I understand it, each of the four images in a WFPC2 exposure has
+its own header information, so that Phil's question about different
+filters for the four chips is handled header by header, along with the
+plate scale for that chip, right?
+
+2) I agree with Amanda that some of the keywords in the headers from
+STSCI are not just a little off, but can be VERY far off. THere needs to
+be a way to flag this. ORIENTAT is one of these.
+
+[LIEN: We will include warnings about the ORIENTAT keyword in
+TUTORIAL.TXT, along with warnings about PHOTFLAM.] 
+
+3) I'd like to compare the I/F conversion factors in the files to what I
+computed by integrating over the solar spectrum and using Pat's information
+about the filters. I am having trouble reading those headers at the
+moment but will check them when I can read them. 
+
+4) I like the idea of having a data directory at the root level. 
+
+[Panel decided not to make this change.]
+ 
+======================================================================== 
+DOCUMENT directory
+========================================================================
+ 
+A. Bosh
+
+  It would be nice if the DOCUMENT/TUTORIAL.TXT could be moved somewhat
+    higher to make it easier to find.
+
+[LIEN: We will add comments in AAREADME.TXT to highlight the existence
+of this particular file.] 
+
+------------------------------------------------------------------------
+L. Huber
+
+- /DOCUMENT/DOCINFO.TXT
+  - FITSINFO.*, LaTex --> LaTeX
+  - HSTHB*.*, Institute --> Science Institute
+
+[LIEN: We will fix.]
+
+- /DOCUMENT/FITSDEFS.TXT
+  - FDMEANAN, anomly --> anomaly
+  - PSTPTIME, yyyy.ddd --> yyyy:ddd
+  - RTAMATCH, ???
+
+[LIEN: We will fix "anomly".  The format of PSTPTIME has the period, not
+the colon, so we will not make this change.  We agree that the
+definition of RTAMATCH is cryptic.  However it only appears in header
+files and appears unimportant for our purposes.  We will leave it
+unchanged but will add a note to the file overall indicating that these
+definitions come directly out of the FITS data files and that further
+information can be found at the HST web site.] 
+
+- /DOCUMENT/TUTORIAL.TXT
+  - Data Set Overview, 1st para., taken taken --> taken
+                                , data was --> data were
+  - FITS Labels, next to last para. is cut off.
+  - Image Geometry, users wishes --> user wishes
+  - Image Calibration, normalize --> normalized
+
+[LIEN: We will fix.]
+
+========================================================================
+INDEX directory
+========================================================================
+ 
+C. Roddier
+
+My second remark is more important. I think an easy index to
+the files is missing. There is an index for each disk and an
+index for the whole set in the subdirectories "index", but
+they are quite impossible to read. If you display them on the
+screen of your computer you have to make an enormous window,
+and even like this each image is described in several lines
+on the screen. I would call this index the "formal" index and
+I think it has to be there. But I am sure potential users would
+find useful another index which gives only the most useful
+information, so that it is much smaller and easier to read.
+In the headers the main part of the information has already been
+given many times, and after a while you don't even look at it,
+but since it is there, it hides the particular information which
+has to be given just for the image described. I have tried to
+write down such an index with the information taken in the headers.
+I think this index should be in the "browse" directories
+for each of these directories and a general one somewhere
+on the disks.
+
+I did it for the cd 5 but in fact I realised it was missing when
+I looked at the images of the cd3 which are the images of the
+August ring plane crossing. Since I had reduced these data,
+I had my own notes and images and I compared them to the gif files
+of RPX_0003/199508XX/U2TFXXXX which are the images of the proposal
+5836 by Nicholson. I was unable to find some of the files that you
+(Mark Showalter) had sent to me. When I looked carefully, I found
+that these images had been taken in the proposal 6216 by Trauger.
+So I had to go to another directory and look at the labels. If I
+had not known that these images were in fact taken at the same time
+as the Nicholson images I am not sure I would have found them.
+
+I wrote the "easy index" for the CD 5 that I did not know.
+Here is an attempt of what I think would be useful:
+
+
+
+RPX_0005
+
+199511XX/U2OOXXXX/BROWSE TRAUGER 1995-11-20
+0401      ,"U2OO0401T.GIF","SATURN "
+START_TIME                      = 1995-11-20T07:11:17
+STOP_TIME                       = 1995-11-20T07:32:57
+FILTER_NAME                     = F300W
+EXPOSURE_DURATION               = 1300.00
+Aperture type: WF2-FIX
+NO APPARENT PROBLEMS
+.
+.
+.
+
+199511XX/U2TFXXXX/BROWSE NICHOLSON 1995-11-21
+0301       ,"U2TF0301T.GIF","SATURN "
+START_TIME                      = 1995-11-21T10:40:17
+STOP_TIME                       = 1995-11-21T10:45:17
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 300.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+MUCH OF SATURN
+
+0302        ,""U2TF0302T.GIF","SATURN "
+START_TIME                      = 1995-11-21T10:48:17
+STOP_TIME                       = 1995-11-21T10:53:17
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 300.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+MUCH OF SATURN
+
+0303        ,"U2TF0303T.GIF","SATURN "
+START_TIME                      = 1995-11-21T11:00:17
+STOP_TIME                       = 1995-11-21T11:06:07
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 350.00
+HST Target name: SATURN-WEST-ANSA
+Aperture type: PC1-FIX  (PC1)
+MUCH OF SATURN
+THERE WAS ONE 4 SECOND RECENTERING
+
+0304        ,"U2TF0304T.GIF","SATURN "
+START_TIME                      = 1995-11-21T11:09:17
+STOP_TIME                       = 1995-11-21T11:15:07
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 350.00
+HST Target name: SATURN-WEST-ANSA
+Aperture type: PC1-FIX  (PC1)
+MUCH OF SATURN
+
+0305        ,"U2TF0305T.GIF","SATURN "
+START_TIME                      = 1995-11-21T12:07:17
+STOP_TIME                       = 1995-11-21T12:15:37
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 500.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+Data quality: UNKNOWN
+MUCH OF SATURN
+BAD TELEMETRY FOR FIRST 150 SECONDS OF EXPOSURE
+
+0306        ,"U2TF0306T.GIF","SATURN "
+START_TIME                      = 1995-11-21T12:18:17
+STOP_TIME                       = 1995-11-21T12:26:37
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 500.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+MUCH OF SATURN
+
+0307        ,"U2TF0307T.GIF","SATURN "
+TART_TIME                      = 1995-11-21T12:34:17
+STOP_TIME                       = 1995-11-21T12:40:57
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 400.00
+HST Target name: SATURN-WEST-ANSA
+Aperture type: PC1-FIX  (PC1)
+MUCH OF SATURN
+
+.
+.
+.
+
+199511XX/U2TFXXXX/BROWSE NICHOLSON 1995-11-27
+.
+.
+.
+
+
+I think that if you have such an index you can easily see which
+are the dates and the filters. A problem is "where are the
+images". With all the informations given in the header you
+cannot find this information anywhere and you are obliged to
+look at the images. In fact if you realize that there is some
+kind of code you can derive this information. Here for instance
+on some images is written "HST Target name: SATURN-WEST-ANSA".
+That means that the image has been taken on PC1 only. On others
+is written "HST Target name: SATURN-EAST-ANSA": the image is taken
+also on WF4. But the label "SATURN-EAST-ANSA" is wrong since you
+have both ansae. I think that since the kind of index I am
+proposing is not a "legal" one you could change the legal
+appelation "PC1-FIX" which gives only the information that the
+image has been taken on the right side of the mosaick by the
+appelations "PC1" or "PC1-WF4".
+
+[LIEN: We will create a simpler index file containing only these
+critical parameters.  Our goal is to make it less than 132 characters
+wide.  More expanded capabilities for selecting images will be available
+from the Rings Node catalog.] 
+
+------------------------------------------------------------------------
+R. Joyner
+
+(4)  INDEX/INDEX.LBL
+           CUMINDEX.LBL
+
+     (a)  You must either rename the FILE_NAME column to
+FILE_SPECIFICATION_NAME.
+          OR you must separate the directory information from the file name
+          and add a column for PATH_NAME.
+
+[LIEN: We will change the name to FILE_SPECIFICATION_NAME.]
+
+(5)  INDEX/OBSCMIDX.LBL
+           OBSINDEX.LBL
+
+     (a)  Both of these files contain illegal characters which in
+          this case are TABs.
+
+[LIEN: We will fix.]
+
+(7)  Keyword / Value search
+
+     The following invalid keyword-values were found.
+
+     (1)   DATA_SET_ID       HST-S-WFPC2-4-V1.0
+
+		----------------------------------------
+		Find 'HST-S-WFPC2-4-V1.0' in 'F:\INDEX\OBSCMIDX.LBL' :
+		F:\INDEX\OBSCMIDX.LBL(7): DATA_SET_ID = "HST-S-WFPC2-4-V1.0"
+		Found 'HST-S-WFPC2-4-V1.0' 1 time(s).
+		----------------------------------------
+		Find 'HST-S-WFPC2-4-V1.0' in 'F:\INDEX\OBSINDEX.LBL' :
+		F:\INDEX\OBSINDEX.LBL(7): DATA_SET_ID = "HST-S-WFPC2-4-V1.0"
+		Found 'HST-S-WFPC2-4-V1.0' 1 time(s).
+		Search complete, found 'HST-S-WFPC2-4-V1.0' 2 time(s).
+
+[LIEN: We will fix.]
+ 
+========================================================================
+LABEL directory
+========================================================================
+ 
+A. Bosh
+
+LABEL/EXTTAB.FMT
+  Is there a way to indicate somewhere that we have found that some header
+    keyword values are not correct.  I think ORIENTAT is one of them.  It
+    would be a shame to make others go through this exercise when we already
+    know it.
+
+[LIEN: We will warn users about ORIENTAT in TUTORIAL.TXT.]
+
+------------------------------------------------------------------------
+L. Huber
+
+- /LABEL/EXTTAB.FMT
+  - ATOSDAT --> ATODSAT
+
+[LIEN: We will fix.]
+ 

@@ -1,0 +1,24 @@
+A. Bosh
+
+  It would be nice if the DOCUMENT/TUTORIAL.TXT could be moved somewhat
+    higher to make it easier to find.
+
+------------------------------------------------------------------------
+L. Huber
+
+- /DOCUMENT/DOCINFO.TXT
+  - FITSINFO.*, LaTex --> LaTeX
+  - HSTHB*.*, Institute --> Science Institute
+
+- /DOCUMENT/FITSDEFS.TXT
+  - FDMEANAN, anomly --> anomaly
+  - PSTPTIME, yyyy.ddd --> yyyy:ddd
+  - RTAMATCH, ???
+
+- /DOCUMENT/TUTORIAL.TXT
+  - Data Set Overview, 1st para., taken taken --> taken
+                                , data was --> data were
+  - FITS Labels, next to last para. is cut off.
+  - Image Geometry, users wishes --> user wishes
+  - Image Calibration, normalize --> normalized
+

@@ -1,0 +1,365 @@
+From: "rjoyner" <rsjoyner@jpl.nasa.gov>
+To: "Mark Showalter" <showalter@ringside.arc.nasa.gov>
+Subject: Comments on RPX_0001
+Date: Thu, 26 Aug 1999 07:25:11 -0700
+
+Comments to: Mark Showalter
+             RINGS-RPX-0001
+                                                        5 Aug 99
+
+Peer review comments
+
+These are my initial comments on RPX_0001.  If you have any questions,
+and I expect that you will, please call and we can work thru any issues.
+
+(1)  ...\CALMASK\*.LBL
+
+     (a)  The COMPRESSED_FILE object is required to have a FILE_RECORDS
+          keyword.  I believe we talked about this in one of our
+          meetings ???
+
+
+(2)  CATALOG/SOFTWARE.LBL
+
+     (a)  The template is missing END_OBJECT = SOFTWARE_INFORMATION
+          See enclosure
+
+
+(3)  CATALOG/REF.CAT
+
+     (a)  The following REFKEYID is present in the INSTHOST.CAT
+          but not in the REF.CAT.  Please add to REF.CAT:
+
+          VOELS1995
+
+     (b)  See the enclosure for the updated file.
+          I have made minor corrections once again.
+
+          It is not a good idea to enclose ref titles in single or
+          double quotes because some titles include single quotes
+          within the description.  The best way is to not quote these
+          expressions:
+
+		OBJECT                          = REFERENCE
+  		REFERENCE_KEY_ID              = "MACROBERT1995A"
+  		REFERENCE_DESC                = "MacRobert, A.M., Ed., Saturn's
+			rings turn edge on, Sky and Telescope 89, 68-71, May 1995."
+		END_OBJECT                      = REFERENCE
+
+
+(4)  INDEX/INDEX.LBL
+           CUMINDEX.LBL
+
+     (a)  You must either rename the FILE_NAME column to
+FILE_SPECIFICATION_NAME.
+          OR you must separate the directory information from the file name
+          and add a column for PATH_NAME.
+
+
+(5)  INDEX/OBSCMIDX.LBL
+           OBSINDEX.LBL
+
+     (a)  Both of these files contain illegal characters which in
+          this case are TABs.
+
+
+(6)  CALIB/F130LP.TAB
+
+     (a)  This file is only terminated with <LF>.  Once the file is
+          terminated with <CR><LF>, and ROW_BYTES = 23 is set, then
+          the file displays correctly.  But, there is a problem with
+          NASAVIEW displaying this file for some reason.  It displays
+          correctly using TBTOOL.
+
+
+(7)  Keyword / Value search
+
+     The following invalid keyword-values were found.
+
+     (1)   DATA_SET_ID       HST-S-WFPC2-4-V1.0
+
+		----------------------------------------
+		Find 'HST-S-WFPC2-4-V1.0' in 'F:\INDEX\OBSCMIDX.LBL' :
+		F:\INDEX\OBSCMIDX.LBL(7): DATA_SET_ID = "HST-S-WFPC2-4-V1.0"
+		Found 'HST-S-WFPC2-4-V1.0' 1 time(s).
+		----------------------------------------
+		Find 'HST-S-WFPC2-4-V1.0' in 'F:\INDEX\OBSINDEX.LBL' :
+		F:\INDEX\OBSINDEX.LBL(7): DATA_SET_ID = "HST-S-WFPC2-4-V1.0"
+		Found 'HST-S-WFPC2-4-V1.0' 1 time(s).
+		Search complete, found 'HST-S-WFPC2-4-V1.0' 2 time(s).
+
+
+(8)  CATALOG/DATASET.CAT
+
+     (a)  Under CONFIDENCE_LEVEL_NOTE you include [BIRETTAETAL1993]
+          as a reference.  It might be more useful to summarize the
+          paper, or include the paper in the documents directory.
+
+
+(9)  DATA directories
+
+     (a)  You might consider including a DATA directory at the root
+          and making the data directories subdirectories of this one.
+          It definitely makes the CD cleaner and it is very obvious
+          where to find the data.
+
+
+(10)  DATA/CALIMAGE/*.LBL
+          /CALMASK/*.LBL
+          /ENGDATA/*.LBL
+          /ENGMASK/*.LBL
+          /HEADER/*.LBL
+          /RAWIMAGE/*.LBL
+          /RAWMASK/*.LBL
+
+      (a)  Within these label files, byte offsets are lowercase.
+           The standards are unclear on this point.  But, CN has
+           decided that the <bytes> units should be either uppercase
+           or lowercase.  However, NasaView currently crashes when
+           encountering lowercase units.  So, please convert the
+           <bytes>  --->>> <BYTES>.  We will fix NasaView later.
+
+
+(11)  DATA/BROWSE/*.GIF					 - able to view in Internet Explorer
+          /CALIMAGE/*.IMG				 - able to view in NasaView
+          /CALMASK/*.ZIP				 - able to explode and view
+          /ENGDATA/*.ZIP				 - able to explode and view
+          /ENGMASK/*.ZIP				 - able to explode and view
+          /HEADER/*.ZIP					 - able to explode and view
+          /RAWIMAGE/*.ZIP				 - able to explode and view
+          /RAWMASK/*.ZIP				 - able to explode and view
+
+      (a) Unzip - when I unzip the files in the RAWMASK directory
+          the PKUNZIP program displayes the file names in lowercase.
+          The NT operating system displays the unzipped files in
+          uppercase.  I have not tested this on UNIX, but I am
+          concerned that the files may be created with lowercase
+          names ???
+
+      (b) All of the label files require extensive editing in order
+          to get NasaView to process the label/data.  None of these
+          problems are due to label errors.  The new compressed
+          objects are of course a problem that needs to be fixed
+          within NasaView.  Other problems include:
+
+          - if the NOTE keyword-value exceeds 60 characters, NasaView
+            will crash.
+          - some of the other extraneous keywords (either placement
+            of or inclusion of) crashes NasaView.
+
+          I think we should include a note in the ERRATA.TXT file
+          that the current version of NasaView (2.5.2) cannot
+          display the data.
+
+
+
+====================
+SOFTWARE.CAT
+====================
+PDS_VERSION_ID                  = PDS3
+LABEL_REVISION_NOTE             = "M.R. SHOWALTER, 1998-10-01"
+RECORD_TYPE                     = STREAM
+
+OBJECT                          = SOFTWARE
+  SOFTWARE_ID                   = UNZIP
+  SOFTWARE_VERSION_ID           = "5.32"
+
+  OBJECT                        = SOFTWARE_INFORMATION
+
+  SOFTWARE_NAME                 = "Unzip 5.32"
+  DATA_FORMAT                   = ZIP
+  SOFTWARE_LICENSE_TYPE         = PUBLIC_DOMAIN
+  TECHNICAL_SUPPORT_TYPE        = NONE
+  REQUIRED_STORAGE_BYTES        = 3.1MB
+  PDS_USER_ID                   = MSHOWALTER
+  NODE_ID                       = RINGS
+  SOFTWARE_DESC                 = "
+
+  Software Overview
+  =================
+    From the Info-ZIP web site,
+        http://www.cdrom.com/pub/infozip/UnZip.html
+    in September 1998:
+
+    UnZip is an extraction utility for archives compressed in .zip
+    format (also called 'zipfiles').  Although highly compatible
+    both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and
+    with Info-ZIP's own Zip program, our primary objectives have
+    been portability and non-MSDOS functionality.
+
+    UnZip will list, test, or extract files from a .zip archive,
+    commonly found on MS-DOS systems.  The default behavior (with
+    no options) is to extract into the current directory (and
+    subdirectories below it) all files from the specified zipfile.
+    A companion program, Zip, creates .zip archives; both programs
+    are compatible with archives created by PKZIP and PKUNZIP for
+    MS-DOS, but in many cases the program options or default
+    behaviors differ.  (For example, UnZip recreates the stored
+    directory structure by default; PKUNZIP unpacks all files in
+    the current directory by default.)
+
+
+  Available Support Material
+  ==========================
+    BINARIES, SOURCE_CODE
+
+
+  Programming Language
+  ====================
+    ANSII_C, OTHER
+
+
+  Platforms Supported
+  ===================
+    Amiga
+    AOS/VS
+    Atari
+    BeOS
+    FlexOS
+    Human68K (X68000)
+    Macintosh
+    MS-DOS/PC-DOS/DR-DOS
+    MVS / OS/390 OpenEdition
+    Novell Netware
+    OS/2
+    QDOS/SMSQ
+    Tandem NSK
+    Unix: AIX, CLIX, Convex, Digital Unix (OSF/1)/Ultrix, FreeBSD,
+    HP/UX, Linux, QNX, SCO Unix, SGI Irix, Solaris/SunOS
+    VM/CMS
+    VMS
+    Windows 3.x
+    Windows 95/Windows NT
+    Windows CE
+
+
+  Support Software Required/Used
+  ==============================
+    NONE "
+
+  END_OBJECT                    = SOFTWARE_INFORMATION
+
+  OBJECT                        = SOFTWARE_ONLINE
+    ON_LINE_IDENTIFICATION      = "http://www.cdrom.com/pub/infozip/"
+    ON_LINE_NAME                = "Unzip 5.32"
+    NODE_ID                     = "N/A"
+    PROTOCOL_TYPE               = URL
+    PLATFORM                    = "ANY"
+  END_OBJECT                    = SOFTWARE_ONLINE
+
+  OBJECT                        = SOFTWARE_PURPOSE
+    SOFTWARE_PURPOSE            = DECOMPRESSION
+  END_OBJECT                    = SOFTWARE_PURPOSE
+
+END_OBJECT                      = SOFTWARE
+END
+
+
+
+
+===========
+REF.CAT
+===========
+PDS_VERSION_ID                  = PDS3
+LABEL_REVISION_NOTE             = "M.R. SHOWALTER, 1998-10-01"
+RECORD_TYPE                     = STREAM
+
+/* References describing results from Saturn RPX observations using */
+/* WFPC2 */
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "BIRETTAETAL1993"
+  REFERENCE_DESC                = "Biretta, J.A., S.M. Baggett,
+J.W. MacKenty, C.E. Ritchie, and W.B. Sparks, The WFPC Calibration
+Pipeline, Proceedings of the HST Calibration Workshop (Baltimore:
+STScI), 8-19, November, 1993."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "BIRETTAETAL1996"
+  REFERENCE_DESC                = "Biretta, J.A., C. Burrows, J.
+Holtzman, I. Heyer, M. Stevens, S. Baggaett, S. Casertano, M. Clampin,
+A. Fruchter, H. Ferguson, R. Gilliland, R. Griffiths, J. Krist, K.
+Noll, C. O'Dea, M. Stiavelli, A.Suchkov, J. Surdej, and B. Whitmore,
+The WFPC Instrument Handbook, Version 4.0 (Baltimore: STScI), June,
+1996."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "BOSH&RIVKIN1996"
+  REFERENCE_DESC                = "Bosh, A.S., and A.S. Rivkin,
+Observations of Saturn's inner satellites during the May 1995
+ring-plane crossing, Science 272, 518-521, 1996."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "BURROWS1994"
+  REFERENCE_DESC                = "Burrows, C.J., ed., Wide Field
+and Planetary Camera 2 Instrument Handbook, Version 2.0,
+(Baltimore: STScI), May, 1994."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "BURROWSETAL1991"
+  REFERENCE_DESC                = "Burrows, C.J., J.A. Holtzman,
+S.M. Faber, P.Y. Bely, H. Hasan, C.R. Lynds, and D. Schroeder, The
+Imaging Performance of the Hubble Space Telescope, Ap. J. Lett. 369,
+L21-L25, 1991."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "HOLTZMANETAL1995A"
+  REFERENCE_DESC                = "Holtzman, J., J.J. Hester,
+S. Casertano, J.T. Trauger, A.M. Watson, G.E. Ballester, C.J.
+Burrows, J.T. Clarke, D. Crisp, R.W. Evans, J.S. Gallagher III,
+R.E. Griffiths, J.G. Hoessel, L.D. Matthews, J.R. Mould,
+P.A. Scowen, K.R. Stapelfeldt, and J.A. Westphal, The Performance
+and Calibration of WFPC2 on the Hubble Space Telescope, Publ. Astron.
+Soc. Pacific 107, 156-178, 1995."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "HOLTZMANETAL1995B"
+  REFERENCE_DESC                = "Holtzman, J.A., C.J. Burrows,
+S. Casertano, J.J. Hester, J.T. Trauger, A.M. Watson, and
+G. Worthey, The Photometric Performance and Calibration of WFPC2,
+Publ. Astron. Soc. Pacific 107, 1065-1093, 1995."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "KARKOSCHKA&LOREN1997"
+  REFERENCE_DESC                = "Karkoschka, E., and R.D. Lorenz,
+Latitudinal variation of aerosol sizes inferred from Titan's shadow,
+Icarus 125, 369-379, 1997."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "LORENZETAL1997"
+  REFERENCE_DESC                = "Lorenz, R.D., P.H. Smith, M.T.
+Lemmon, E. Karkoschka, G.W. Lockwood, and J. Caldwell, Titan's
+north-south asymmetry from HST and Voyager imaging: Comparison with
+models and ground-based photometry, Icarus 127, 173-189, 1997."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "MACROBERT1995A"
+  REFERENCE_DESC                = "MacRobert, A.M., Ed., Saturn's
+rings turn edge on, Sky and Telescope 89, 68-71, May, 1995."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "MACROBERT1995B"
+  REFERENCE_DESC                = "MacRobert, A.M., Ed., Saturn
+again turns ringless, Sky and Telescope 90, 72-77, August, 1995."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+  REFERENCE_KEY_ID              = "NICHOLSONETAL1996"
+  REFERENCE_DESC                = "Nicholson, P.D., M.R. Showalter,
+L. Dones, R.G. French, S.M. Larson, J.J. Lissauer, C.A. McGhee,
+P. Seitzer, B. Sicardy, and G.E. Danielson, Observations of Saturn's
+ring plane crossings in August and November 1995, Science 272,
+509-515, 1996."
+END_OBJECT                      = REFERENCE
+END
+

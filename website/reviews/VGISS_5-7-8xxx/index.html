@@ -1,0 +1,260 @@
+<html>
+<head><title>VGISS_5,7,8xxx Saturn Peer Review</title></head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>VGISS_5,7,8xxx Jupiter, Uranus, Neptune</h1>
+Mark Showalter and Mitch Gordon<br>
+<b>Update:</b> November 8, 2013
+
+<h2>Responses to Reviewers' Comments</h2>
+
+<p>
+The data set has gone through substantial revisions since the peer review.
+The major changes are as follows:
+</p>
+<ol>
+
+ <li>A review of the process revealed that our copy of input file 
+    “VGRSCF.DAT” contained the exact same scaling factors for 
+    Neptune as for Uranus, so that all I/Fs from the Neptune 
+    encounter were small by a factor of ~ 2.5. We have repaired 
+    the error in VGRSCF.DAT and have re-calibrated the entire 
+    Neptune data set. We have also run the quality tests and the 
+    end again to ensure everything is OK. Checks of the image in 
+    question confirm that I/Fs for Uranus and Neptune are now 
+    similar. The correction is documented in PROCESSING.TXT, and 
+    we have also archived the corrected version of VGRSCF.DAT in 
+    the CALIB subdirectory on the last Neptune volume.</li>
+
+ <li>It was found that many of the Uranus and Neptune images had 
+    inadvertently been calibrated using ADESPIKE instead of 
+    DESPIKE. he latter is newer and produces superior results. 
+    Also, some Uranus and Neptune images were not processed using 
+    VGRFILLIN, which resulted in horizontal stripes near the edges 
+    of some images. All Uranus and Neptune images were re-
+    processed using VGRFILLIN and DESPIKE. Note that the Neptune 
+    images were also calibrated using the corrected version of 
+    VGRSCF.DAT, as discussed above. All quality tests were then 
+    repeated. Side-by-side comparisons of the new and old versions 
+    of selected images confirm that the new versions are 
+    distinctly cleaner and that the Neptune scale factors are 
+    correct.</li>
+
+ <li>The labels for the raw files did not include the 
+    (undocumented) ENGINEERING_TABLE object, which occupies the 
+    second and third record of each file. The labels have been 
+    corrected.</li>
+
+ <li>We transcribed the tables from Danielson et al. 1981 and 
+    added them to the DOCUMENT/REPORTS subdirectory. We also 
+    standardized the DOCUMENT directory across all volumes except 
+    for the encounter-specific files PROCESSING.TXT and 
+    TUTORIAL.TXT. This is explained in DOCINFO.TXT.</li>
+
+<li> PRODUCT_CREATION_TIMES were updated to reflect the new processing.</li>
+
+<li>Numerous documentation files were updated, including TUTORTIAL.TXT, 
+	PROCESSING.TXT, AAREADME.TXT, DATASET.CAT, INDEX.TAB, ERRATA.TXT, 
+	and most of the PDS .LBL files.</li>
+
+</ol>
+A few things are not part of this release:
+<ol>
+<li>We have not yet augmented the geometric information about the images. 
+This is the subject of ongoing work at the Rings Node, along with similar work 
+for the Cassini mission. This work is incomplete at this time but will be 
+included in a future update to the data sets.
+</li>
+<li>We have not yet corrected targets currently identified as "UNK_SAT". These
+will be corrected along with the augmented geometry information.
+</li>
+<li>We have not yet documented a few very old file formats that are 
+archived primarily to support current users of VICAR. Charlie Avis has 
+agreed to provide some of this information, and we will include it in an 
+update.
+</li>
+</ol>
+
+
+<h3>The Data</h3>
+
+<p><b>The new archival versions of these volumes are on line here:</b>
+</p>
+  <ul>
+  	<p>Jupiter</p>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5101/">VGISS_5101</a> (<a href="/archives/VGISS_5xxx/VGISS_5101.tar.gz">.tar.gz</a>): Voyager 1, FDS 13854.55 -- 14998.32</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5102/">VGISS_5102</a> (<a href="/archives/VGISS_5xxx/VGISS_5102.tar.gz">.tar.gz</a>): Voyager 1, FDS 15000.55 -- 15199.31</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5103/">VGISS_5103</a> (<a href="/archives/VGISS_5xxx/VGISS_5103.tar.gz">.tar.gz</a>): Voyager 1, FDS 15201.54 -- 15400.00</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5104/">VGISS_5104</a> (<a href="/archives/VGISS_5xxx/VGISS_5104.tar.gz">.tar.gz</a>): Voyager 1, FDS 15400.02 -- 15449.58</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5105/">VGISS_5105</a> (<a href="/archives/VGISS_5xxx/VGISS_5105.tar.gz">.tar.gz</a>): Voyager 1, FDS 15450.00 -- 15498.38</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5106/">VGISS_5106</a> (<a href="/archives/VGISS_5xxx/VGISS_5106.tar.gz">.tar.gz</a>): Voyager 1, FDS 15508.28 -- 15598.27</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5107/">VGISS_5107</a> (<a href="/archives/VGISS_5xxx/VGISS_5107.tar.gz">.tar.gz</a>): Voyager 1, FDS 15600.34 -- 15699.58</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5108/">VGISS_5108</a> (<a href="/archives/VGISS_5xxx/VGISS_5108.tar.gz">.tar.gz</a>): Voyager 1, FDS 15700.00 -- 15799.26</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5109/">VGISS_5109</a> (<a href="/archives/VGISS_5xxx/VGISS_5109.tar.gz">.tar.gz</a>): Voyager 1, FDS 15801.30 -- 15898.42</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5110/">VGISS_5110</a> (<a href="/archives/VGISS_5xxx/VGISS_5110.tar.gz">.tar.gz</a>): Voyager 1, FDS 15900.49 -- 15997.57</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5111/">VGISS_5111</a> (<a href="/archives/VGISS_5xxx/VGISS_5111.tar.gz">.tar.gz</a>): Voyager 1, FDS 16000.03 -- 16099.34</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5112/">VGISS_5112</a> (<a href="/archives/VGISS_5xxx/VGISS_5112.tar.gz">.tar.gz</a>): Voyager 1, FDS 16100.05 -- 16199.59</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5113/">VGISS_5113</a> (<a href="/archives/VGISS_5xxx/VGISS_5113.tar.gz">.tar.gz</a>): Voyager 1, FDS 16200.00 -- 16249.25</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5114/">VGISS_5114</a> (<a href="/archives/VGISS_5xxx/VGISS_5114.tar.gz">.tar.gz</a>): Voyager 1, FDS 16250.03 -- 16299.59</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5115/">VGISS_5115</a> (<a href="/archives/VGISS_5xxx/VGISS_5115.tar.gz">.tar.gz</a>): Voyager 1, FDS 16300.01 -- 16349.55</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5116/">VGISS_5116</a> (<a href="/archives/VGISS_5xxx/VGISS_5116.tar.gz">.tar.gz</a>): Voyager 1, FDS 16350.03 -- 16399.59</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5117/">VGISS_5117</a> (<a href="/archives/VGISS_5xxx/VGISS_5117.tar.gz">.tar.gz</a>): Voyager 1, FDS 16400.00 -- 16448.00</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5118/">VGISS_5118</a> (<a href="/archives/VGISS_5xxx/VGISS_5118.tar.gz">.tar.gz</a>): Voyager 1, FDS 16450.47 -- 16495.24</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5119/">VGISS_5119</a> (<a href="/archives/VGISS_5xxx/VGISS_5119.tar.gz">.tar.gz</a>): Voyager 1, FDS 16501.03 -- 16983.05</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5120/">VGISS_5120</a> (<a href="/archives/VGISS_5xxx/VGISS_5120.tar.gz">.tar.gz</a>): Voyager 1, FDS 17182.42 -- 17574.27</li>
+
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5201/">VGISS_5201</a> (<a href="/archives/VGISS_5xxx/VGISS_5201.tar.gz">.tar.gz</a>): Voyager 2, FDS 18110.30 -- 18798.52</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5202/">VGISS_5202</a> (<a href="/archives/VGISS_5xxx/VGISS_5202.tar.gz">.tar.gz</a>): Voyager 2, FDS 18801.17 -- 19198.24</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5203/">VGISS_5203</a> (<a href="/archives/VGISS_5xxx/VGISS_5203.tar.gz">.tar.gz</a>): Voyager 2, FDS 19200.49 -- 19399.59</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5204/">VGISS_5204</a> (<a href="/archives/VGISS_5xxx/VGISS_5204.tar.gz">.tar.gz</a>): Voyager 2, FDS 19400.02 -- 19594.52</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5205/">VGISS_5205</a> (<a href="/archives/VGISS_5xxx/VGISS_5205.tar.gz">.tar.gz</a>): Voyager 2, FDS 19602.10 -- 19798.25</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5206/">VGISS_5206</a> (<a href="/archives/VGISS_5xxx/VGISS_5206.tar.gz">.tar.gz</a>): Voyager 2, FDS 19800.23 -- 19999.26</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5207/">VGISS_5207</a> (<a href="/archives/VGISS_5xxx/VGISS_5207.tar.gz">.tar.gz</a>): Voyager 2, FDS 20001.33 -- 20195.57</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5208/">VGISS_5208</a> (<a href="/archives/VGISS_5xxx/VGISS_5208.tar.gz">.tar.gz</a>): Voyager 2, FDS 20209.44 -- 20301.26</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5209/">VGISS_5209</a> (<a href="/archives/VGISS_5xxx/VGISS_5209.tar.gz">.tar.gz</a>): Voyager 2, FDS 20301.29 -- 20399.57</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5210/">VGISS_5210</a> (<a href="/archives/VGISS_5xxx/VGISS_5210.tar.gz">.tar.gz</a>): Voyager 2, FDS 20400.00 -- 20498.07</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5211/">VGISS_5211</a> (<a href="/archives/VGISS_5xxx/VGISS_5211.tar.gz">.tar.gz</a>): Voyager 2, FDS 20501.24 -- 20549.59</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5212/">VGISS_5212</a> (<a href="/archives/VGISS_5xxx/VGISS_5212.tar.gz">.tar.gz</a>): Voyager 2, FDS 20550.03 -- 20593.54</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5213/">VGISS_5213</a> (<a href="/archives/VGISS_5xxx/VGISS_5213.tar.gz">.tar.gz</a>): Voyager 2, FDS 20603.35 -- 20649.58</li>
+    <li><a href="/volumes/VGISS_5xxx/VGISS_5214/">VGISS_5214</a> (<a href="/archives/VGISS_5xxx/VGISS_5214.tar.gz">.tar.gz</a>): Voyager 2, FDS 20650.01 -- 20863.06</li>
+   </li>
+   
+<p>Uranus</p>
+
+    <li><a href="/volumes/VGISS_7xxx/VGISS_7201/">VGISS_7201</a> (<a href="/archives/VGISS_7xxx/VGISS_7201.tar.gz">.tar.gz</a>): Voyager 2, FDS 24476.54 -- 24987.59</li>
+    <li><a href="/volumes/VGISS_7xxx/VGISS_7202/">VGISS_7202</a> (<a href="/archives/VGISS_7xxx/VGISS_7202.tar.gz">.tar.gz</a>): Voyager 2, FDS 25027.59 -- 25992.59</li>
+    <li><a href="/volumes/VGISS_7xxx/VGISS_7203/">VGISS_7203</a> (<a href="/archives/VGISS_7xxx/VGISS_7203.tar.gz">.tar.gz</a>): Voyager 2, FDS 26002.27 -- 26288.57</li>
+    <li><a href="/volumes/VGISS_7xxx/VGISS_7204/">VGISS_7204</a> (<a href="/archives/VGISS_7xxx/VGISS_7204.tar.gz">.tar.gz</a>): Voyager 2, FDS 26302.41 -- 26594.14</li>
+    <li><a href="/volumes/VGISS_7xxx/VGISS_7205/">VGISS_7205</a> (<a href="/archives/VGISS_7xxx/VGISS_7205.tar.gz">.tar.gz</a>): Voyager 2, FDS 26602.52 -- 26799.52</li>
+    <li><a href="/volumes/VGISS_7xxx/VGISS_7206/">VGISS_7206</a> (<a href="/archives/VGISS_7xxx/VGISS_7206.tar.gz">.tar.gz</a>): Voyager 2, FDS 26800.06 -- 26999.54</li>
+    <li><a href="/volumes/VGISS_7xxx/VGISS_7207/">VGISS_7207</a> (<a href="/archives/VGISS_7xxx/VGISS_7207.tar.gz">.tar.gz</a>): Voyager 2, FDS 27000.00 -- 27628.47</li>
+  
+<p>Neptune</p>
+
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8201/">VGISS_8201</a> (<a href="/archives/VGISS_8xxx/VGISS_8201.tar.gz">.tar.gz</a>): Voyager 2, FDS &nbsp;&nbsp;8966.31 -- &nbsp;&nbsp;9497.48</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8202/">VGISS_8202</a> (<a href="/archives/VGISS_8xxx/VGISS_8202.tar.gz">.tar.gz</a>): Voyager 2, FDS &nbsp;&nbsp;9505.56 -- &nbsp;&nbsp;9998.46</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8203/">VGISS_8203</a> (<a href="/archives/VGISS_8xxx/VGISS_8203.tar.gz">.tar.gz</a>): Voyager 2, FDS 10002.47 -- 10378.23</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8204/">VGISS_8204</a> (<a href="/archives/VGISS_8xxx/VGISS_8204.tar.gz">.tar.gz</a>): Voyager 2, FDS 10404.40 -- 10798.16</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8205/">VGISS_8205</a> (<a href="/archives/VGISS_8xxx/VGISS_8205.tar.gz">.tar.gz</a>): Voyager 2, FDS 10826.20 -- 10999.59</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8206/">VGISS_8206</a> (<a href="/archives/VGISS_8xxx/VGISS_8206.tar.gz">.tar.gz</a>): Voyager 2, FDS 11000.05 -- 11199.50</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8207/">VGISS_8207</a> (<a href="/archives/VGISS_8xxx/VGISS_8207.tar.gz">.tar.gz</a>): Voyager 2, FDS 11200.00 -- 11399.51</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8208/">VGISS_8208</a> (<a href="/archives/VGISS_8xxx/VGISS_8208.tar.gz">.tar.gz</a>): Voyager 2, FDS 11400.02 -- 11599.59</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8209/">VGISS_8209</a> (<a href="/archives/VGISS_8xxx/VGISS_8209.tar.gz">.tar.gz</a>): Voyager 2, FDS 11600.06 -- 11935.40</li>
+    <li><a href="/volumes/VGISS_8xxx/VGISS_8210/">VGISS_8210</a> (<a href="/archives/VGISS_8xxx/VGISS_8210.tar.gz">.tar.gz</a>): Voyager 2, FDS 12009.27 -- 12457.33</li>
+  </ul>
+
+<p><b>The archival versions contain significant changes over the peer review versions, and 
+	should be used for research activities. For continuity, the peer review volumes remain on line here:</b>
+</p>
+  <ul>
+  	<p>Jupiter</p>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5101/">VGISS_5101</a> Voyager 1, FDS 13854.55 -- 14998.32</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5102/">VGISS_5102</a> Voyager 1, FDS 15000.55 -- 15199.31</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5103/">VGISS_5103</a> Voyager 1, FDS 15201.54 -- 15400.00</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5104/">VGISS_5104</a> Voyager 1, FDS 15400.02 -- 15449.58</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5105/">VGISS_5105</a> Voyager 1, FDS 15450.00 -- 15498.38</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5106/">VGISS_5106</a> Voyager 1, FDS 15508.28 -- 15598.27</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5107/">VGISS_5107</a> Voyager 1, FDS 15600.34 -- 15699.58</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5108/">VGISS_5108</a> Voyager 1, FDS 15700.00 -- 15799.26</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5109/">VGISS_5109</a> Voyager 1, FDS 15801.30 -- 15898.42</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5110/">VGISS_5110</a> Voyager 1, FDS 15900.49 -- 15997.57</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5111/">VGISS_5111</a> Voyager 1, FDS 16000.03 -- 16099.34</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5112/">VGISS_5112</a> Voyager 1, FDS 16100.05 -- 16199.59</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5113/">VGISS_5113</a> Voyager 1, FDS 16200.00 -- 16249.25</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5114/">VGISS_5114</a> Voyager 1, FDS 16250.03 -- 16299.59</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5115/">VGISS_5115</a> Voyager 1, FDS 16300.01 -- 16349.55</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5116/">VGISS_5116</a> Voyager 1, FDS 16350.03 -- 16399.59</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5117/">VGISS_5117</a> Voyager 1, FDS 16400.00 -- 16448.00</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5118/">VGISS_5118</a> Voyager 1, FDS 16450.47 -- 16495.24</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5119/">VGISS_5119</a> Voyager 1, FDS 16501.03 -- 16983.05</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5120/">VGISS_5120</a> Voyager 1, FDS 17182.42 -- 17574.27</li>
+
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5201/">VGISS_5201</a> Voyager 2, FDS 18110.30 -- 18798.52</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5202/">VGISS_5202</a> Voyager 2, FDS 18801.17 -- 19198.24</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5203/">VGISS_5203</a> Voyager 2, FDS 19200.49 -- 19399.59</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5204/">VGISS_5204</a> Voyager 2, FDS 19400.02 -- 19594.52</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5205/">VGISS_5205</a> Voyager 2, FDS 19602.10 -- 19798.25</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5206/">VGISS_5206</a> Voyager 2, FDS 19800.23 -- 19999.26</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5207/">VGISS_5207</a> Voyager 2, FDS 20001.33 -- 20195.57</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5208/">VGISS_5208</a> Voyager 2, FDS 20209.44 -- 20301.26</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5209/">VGISS_5209</a> Voyager 2, FDS 20301.29 -- 20399.57</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5210/">VGISS_5210</a> Voyager 2, FDS 20400.00 -- 20498.07</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5211/">VGISS_5211</a> Voyager 2, FDS 20501.24 -- 20549.59</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5212/">VGISS_5212</a> Voyager 2, FDS 20550.03 -- 20593.54</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5213/">VGISS_5213</a> Voyager 2, FDS 20603.35 -- 20649.58</li>
+    <li><a href="/superseded/VGISS_5xxx_peer_review/VGISS_5214/">VGISS_5214</a> Voyager 2, FDS 20650.01 -- 20863.06</li>
+   </li>
+   
+<p>Uranus</p>
+
+    <li><a href="/superseded/VGISS_7xxx_peer_review/VGISS_7201/">VGISS_7201</a> Voyager 2, FDS 24476.54 -- 24987.59</li>
+    <li><a href="/superseded/VGISS_7xxx_peer_review/VGISS_7202/">VGISS_7202</a> Voyager 2, FDS 25027.59 -- 25992.59</li>
+    <li><a href="/superseded/VGISS_7xxx_peer_review/VGISS_7203/">VGISS_7203</a> Voyager 2, FDS 26002.27 -- 26288.57</li>
+    <li><a href="/superseded/VGISS_7xxx_peer_review/VGISS_7204/">VGISS_7204</a> Voyager 2, FDS 26302.41 -- 26594.14</li>
+    <li><a href="/superseded/VGISS_7xxx_peer_review/VGISS_7205/">VGISS_7205</a> Voyager 2, FDS 26602.52 -- 26799.52</li>
+    <li><a href="/superseded/VGISS_7xxx_peer_review/VGISS_7206/">VGISS_7206</a> Voyager 2, FDS 26800.06 -- 26999.54</li>
+    <li><a href="/superseded/VGISS_7xxx_peer_review/VGISS_7207/">VGISS_7207</a> Voyager 2, FDS 27000.00 -- 27628.47</li>
+  
+<p>Neptune</p>
+
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8201/">VGISS_8201</a> Voyager 2, FDS &nbsp;&nbsp;8966.31 -- &nbsp;&nbsp;9497.48</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8202/">VGISS_8202</a> Voyager 2, FDS &nbsp;&nbsp;9505.56 -- &nbsp;&nbsp;9998.46</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8203/">VGISS_8203</a> Voyager 2, FDS 10002.47 -- 10378.23</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8204/">VGISS_8204</a> Voyager 2, FDS 10404.40 -- 10798.16</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8205/">VGISS_8205</a> Voyager 2, FDS 10826.20 -- 10999.59</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8206/">VGISS_8206</a> Voyager 2, FDS 11000.05 -- 11199.50</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8207/">VGISS_8207</a> Voyager 2, FDS 11200.00 -- 11399.51</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8208/">VGISS_8208</a> Voyager 2, FDS 11400.02 -- 11599.59</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8209/">VGISS_8209</a> Voyager 2, FDS 11600.06 -- 11935.40</li>
+    <li><a href="/supseded/VGISS_8xxx_peer_review/VGISS_8210/">VGISS_8210</a> Voyager 2, FDS 12009.27 -- 12457.33</li>
+  </ul>
+
+<h3>Reviewers' Submitted Comments</h3>
+
+  <ul>
+    <li><a href="Avis_review.txt">Charlie Avis</a></li>
+    <li><a href="Chen_review.txt">Richard Chen</a></li>    	
+      <ul>
+        <li><a href="Chen-VGISS_7207_vtool.txt">Chen vtool report</a></li>
+      </ul>
+    <li><a href="Culver_review.txt">Amy Culver</a></li>
+    <li><a href="Rages_review.txt">Kathy Rages</a></li>
+    	<ul>
+        <li><a href="Rages_1139221.tiff">comparison tiff image</a></li>
+      </ul>
+    <li><a href="West_review.pdf">Bob West (PDF)</a>
+    	(<a href="West_review.docx">.docx</a>)</li>
+  </ul>
+
+<h3>Responses to Review Comments</h3>
+
+<p>Consolidated review comments annotated with Rings Node responses in 
+	<font color="#009900">green</font>.
+</p>
+  <ul>
+    <li><a href="vgiss_5-7-8_reviewSum-annotated.pdf">Review summary (PDF)<a> with responses in
+<font color="#009900">green</font>.</a>
+    </li>
+  </ul>
+
+<p>Individual reviews with responses in <font color="#009900">green</font>.</p>
+
+  <ul>
+    <li><a href="Avis_annotated.pdf">Charlie Avis (PDF)</a></li>
+    <li><a href="Chen_annotated.pdf">Richard Chen (PDF)</a></li>
+    <li><a href="Culver_annotated.pdf">Amy Culver (PDF)</a></li>
+    <li><a href="Rages_annotated.pdf">Kathy Rages (PDF)</a></li>
+    	<ul>
+        <li><a href="Rages/1139221.tiff">comparison tiff image</a></li>
+      </ul>
+    <li><a href="West_annotated.pdf">Bob West (PDF)</a></li>
+  </ul>
+
+
+<hr>
+<a href="/">Rings Node Home</a>
+</body>
+</html>

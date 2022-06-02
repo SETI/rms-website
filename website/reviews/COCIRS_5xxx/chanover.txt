@@ -1,0 +1,48 @@
+From: Nancy Chanover
+Date: April 9, 2007 8:11:37 AM PDT
+To: Mitch Gordon, Mark Showalter
+Cc: Huber Lyle
+Subject: reformatted CIRS data review
+
+Hi,
+
+Here are my comments regarding my review of the reformatted CIRS data.
+
+Compliance with PDS standards:
+
+I didn't find anything wrong here, although I am by no means an expert in the PDS standards so I defer to Lyle on this.  The data volumes were structured as I expected, and with some familiarity with the STRUCTURE of PDS data sets, I had no trouble navigating through the volumes and finding what I need.
+
+Scientific Merit of the Data:
+
+Very high!!  Yes, these are definitely the proper data to be archived, and yes, the reformatted data are MUCH easier to work with!  I am not a Vanilla user - I tried it once and got very frustrated very quickly - so this is a welcome addition to the CIRS data archive.  After reading over the documentation I was able to read in some data using IDL and make plots of spectra with very little trouble.  I liked that you broke up a given observation by focal plane - this made it much easier to work with.
+
+Usability of the Data:
+
+Formats are appropriate.  Data set is very complete.  Documentation is comprehensive.  I wonder about the utility of providing sample software for reading in the data?  Or does that get too complicated because it is dependent on what sort of processor/platform the user has?  I thought of this because in going through some of the Huygens data, I noticed that some of the instrument teams did provide software in a SOFTWARE directory, even when the data were provided in ASCII format.  [They would say "we know it is not required to provide this software since the data are in ASCII format, but here it is anyway..."]
+
+Comments on the documentation:
+- In both the TUTORIAL.TXT and AAREADME.TXT files, in the section on file naming convention, you discuss the additional bbb suffix in the GEO data.  You define bbb as "the NAIF body ID indicating which moon's position and viewing geometry is described by the file..."  Since one of the options is 699 (Saturn), might it be better to replace the word "moon" with "target?"
+- Calibration: is there a way of determining which calibration data were used to generate the "calibrated" spectra?  You may have said this somewhere, but I don't remember where.  As we all know, instrument calibrations change (improve?), and if someone is going to be accessing this calibrated data many years from now, it would be useful to know what "vintage" calibration files were used to reduce the data.
+
+OK, that's it for now.  I did find a misspelling in one of the CATALOG files, but I'll have to dig back and find it.  It was "Rayleigh peack" instead of peak, but I don't remember which file it was in.  I can tell you tomorrow during the telecon.
+
+Talk to you soon,
+
+Nancy
+
+
+
+
+********************************************************
+Nancy Chanover, College Asst. Professor
+Box 30001/MSC 4500
+New Mexico State University
+Las Cruces, NM 88003-0001
+phone: (505) xxx-xxxx
+FAX:   (505) xxx-xxxx
+email: xxxxxxxx@nmsu.edu
+
+Office: Astronomy Bldg, Frenger and Williams Sts, Rm 210
+********************************************************
+
+

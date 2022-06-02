@@ -1,0 +1,33 @@
+Mitch/Mark, I've completed my review of this new collection.  I 
+couldn't be as thorough as with Saturn, but I got to review all 
+the documentation, labels, links, catalogs, etc..  I think it is a 
+magnificent collection and future users will appreciate the 
+comprehensive and careful approach you've taken.  Personally, now 
+I don't have to remember all that stuff anymore, you've documented 
+it all!
+
+Here are a few comments:
+
+  *   There are a few misspellings:  'metadata' in PROCESSING.TXT 
+      (in the last section, I think), 'discrepancy' in ERRATA.TXT 
+      section 6, and 'intrinsic' in the _GEOMED.LBL's.
+      
+  *   The TUTORIAL and DATASET.CAT indicate that 'ADESPIKE' was 
+      used.  PROCESSING.TXT says 'DESPIKE'.
+      
+  *   I was impressed by the thorough understanding and handling 
+      of the dark current issue.  The techniques used to provide 
+      the proper dark currents for all conditions were very well 
+      thought out and implemented.  The description of the complexity 
+      of the issue (particularly with Neptune) was well done.
+      
+  *   The usage of quality control steps was good to see (I don't 
+      remember that from Saturn).  The method used was good and 
+      this gives me confidence that the set has consistent quality 
+      and that special cases have been caught/handled.
+
+I know this report is kinda slim, but there was not much to take 
+issue with.  Congratulations to the team for a great job!
+
+Charlie
+

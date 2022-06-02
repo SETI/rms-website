@@ -1,0 +1,73 @@
+Are you sure the "Note" field will do more good than harm?  
+
+  "(5) Target mis-identifications"
+
+  "Please be aware that some targets have been found to be mis-
+  identified in the index files. We have corrected those that have 
+  been brought to our attention, but some mis-identifications are 
+  likely to remain. Please report any known errors to the PDS Rings 
+  Node."
+
+  I've looked at three Uranus images so far (admittedly all from the 
+  same sequence), and they all contained the same egregiously wrong 
+  information in the Note field of the .LBL file.
+
+  NOTE                            =
+  "1 OF 46 FRAMES IMAGING RING STRUCTURE AND SHEPHERD SATELLITES." 
+
+  Noooo.
+
+  2681942, 2681948, and 2681954 are 3 of 6 frames imaging Uranus at 19 
+  deg phase angle.  2682000, 2682006, and 2682012 are the other three, 
+  and yes, I just checked, their NOTE field is wrong too.
+
+High-pass-filtered Uranus images  
+
+  I've put two Uranus images with the average of an 11x11 surrounding 
+  box subtracted from each pixel in the krages/public directory on 
+  files.seti.org.  And if you remember how to get to krages/public 
+  without first logging in as krages and giving my password, would you 
+  please remind me, because I've forgotten.
+
+  The files are boxc2681948.fits and boxc2681954.fits.  That's right. 
+  FITS.  For reasons that pass understanding, xv has decided to stop 
+  working for real and halfword VICAR images; I have no intention of 
+  actually trying to install VICAR; and don't get me started on 
+  Nasaview. If I want to create them and then look at them, they have 
+  to be .fits.
+
+  The images show the "instrumental" structure that is not removed by 
+  the standard calibration.  (They also show a bright feature at 35deg 
+  S  which may have lasted until 2011, but that's another subject.) 
+  The part that is relevant here is the noticeable quasi-periodic 
+  line-to-line and column-to-column variation.
+
+There are images Nasaview won't open properly 
+
+  C1138739_GEOMED
+  C1138746_GEOMED
+  C1138755_GEOMED
+
+  These images open with a severely wrong stretch -- essentially all 
+  black.  Attempting to obtain a histogram frequently causes Nasaview 
+  to crash.
+
+  I've already mentioned my lack of enamoration with Nasaview.  I 
+  can't see any significant difference between the .LBL files for 
+  these images and 1138727 or 1138733, which it opens fine.  But if 
+  you know anybody involved with Nasaview, you might want to try and 
+  find out what it's choking on.
+
+What are all the bright specks?  
+
+  Image on the right: your C1139221_GEOMED.IMG
+  Image on the left:  my own copy of the same image
+
+  Both have the same stretch (-0.02 to 0.32).
+
+  Same region of both is shown [_FITS_ coordinates 200,625 (upper 
+  left) to 400,500 (lower right); also shown by the blue rectangle in 
+  the thumbnail at the upper right of the window].
+
+  Your version has a lot of bright speckles in it that don't have to 
+  be there.  The region I selected contains three.

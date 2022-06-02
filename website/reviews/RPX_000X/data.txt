@@ -1,0 +1,200 @@
+A. Bosh
+
+RPX_000n:1995nnXX/whatever/CALIMAGE/*.LBL
+  SC_TARGET_POSITION_VECTOR:  the TUTORIAL.TXT says that these are actually
+    geocentric.  Is this information included anywhere else closer to the
+    data files (people may not read or remember the tutorial).  The keyword
+    is confusing given the definition of the value provided.  It would be
+    better to either change the keyword to be accurate, or to include the
+    spacecraft ephemeris.  The definitive ephemerides are easy to get and
+    use (I have a tutorial if you need one).
+  CELESTIAL_NORTH_CLOCK_ANGLE:  is this from the header keywords?  If so, it
+    may not be correct.  Why not just call it position angle?
+  BODY_POLE_CLOCK_ANGLE:  does this include pole precession, and if so, what
+    reference.  Either way, what is the reference for the pole position?
+
+RPX_000n:1995nnXX/whatever/CALIMAGE/*.IMG
+  Just a note:  I was unable to get these files to open with GraphicConverter
+    unless I first unchecked "Detect only clear Formats" in Preferences:Open,
+    otherwise it thought it was a different type of file because of the
+    suffix.  GraphicConverter is used to seeing *.fits if it's a FITS file,
+    I guess.  [Mac PBG3]
+
+RPX_000n:1995nnXX/whatever/RAWIMAGE/*.ZIP
+  I unable to unzip this with the program Unzip (I grabbed the compiled one
+    from the website rather than compile one using the files on the CD).
+    Error message:  "cannot find either 010A_D0F.ZIP or 010A_DOF.ZIP.zip"
+    It worked if I used StuffIt Expander.
+
+RPX_0005:199511XX/U2ZYXXXX/
+  Technically, A301 and A302 were Phil's, but we split an orbit so they
+    assigned them to me.  It's not a hugely important thing, but if anyone
+    cares we can move them over to Phil's directory.  Although they'll then
+    be inconsistent between HST naming and this CD directory structure, so 
+    it's probably better to leave them where they are.
+------------------------------------------------------------------------
+C. Roddier
+
+The first one is in the display of the GIF files in the
+subdirectories "browse". The images of PC1 have been rescaled
+and rotated to show the whole image of Saturn when the image
+has been taken on PC1 and WF4. This is a good idea but this
+should be explained in the tutorial in the fourth paragraph
+(4. HST/WFPC2 Images and Filters). If you have never seen the
+images, it is difficult to realize why the PC1 images are so
+small whereas the pixel size is twice smaller than the pixel
+size of the WF.
+
+------------------------------------------------------------------------
+R. Joyner
+
+These are my initial comments on RPX_0001.  If you have any questions,
+and I expect that you will, please call and we can work thru any issues.
+
+(1)  ...\CALMASK\*.LBL
+
+     (a)  The COMPRESSED_FILE object is required to have a FILE_RECORDS
+          keyword.  I believe we talked about this in one of our
+          meetings ???
+
+(9)  DATA directories
+
+     (a)  You might consider including a DATA directory at the root
+          and making the data directories subdirectories of this one.
+          It definitely makes the CD cleaner and it is very obvious
+          where to find the data.
+
+
+(10)  DATA/CALIMAGE/*.LBL
+          /CALMASK/*.LBL
+          /ENGDATA/*.LBL
+          /ENGMASK/*.LBL
+          /HEADER/*.LBL
+          /RAWIMAGE/*.LBL
+          /RAWMASK/*.LBL
+
+      (a)  Within these label files, byte offsets are lowercase.
+           The standards are unclear on this point.  But, CN has
+           decided that the <bytes> units should be either uppercase
+           or lowercase.  However, NasaView currently crashes when
+           encountering lowercase units.  So, please convert the
+           <bytes>  --->>> <BYTES>.  We will fix NasaView later.
+
+
+(11)  DATA/BROWSE/*.GIF					 - able to view in Internet Explorer
+          /CALIMAGE/*.IMG				 - able to view in NasaView
+          /CALMASK/*.ZIP				 - able to explode and view
+          /ENGDATA/*.ZIP				 - able to explode and view
+          /ENGMASK/*.ZIP				 - able to explode and view
+          /HEADER/*.ZIP					 - able to explode and view
+          /RAWIMAGE/*.ZIP				 - able to explode and view
+          /RAWMASK/*.ZIP				 - able to explode and view
+
+      (a) Unzip - when I unzip the files in the RAWMASK directory
+          the PKUNZIP program displayes the file names in lowercase.
+          The NT operating system displays the unzipped files in
+          uppercase.  I have not tested this on UNIX, but I am
+          concerned that the files may be created with lowercase
+          names ???
+
+      (b) All of the label files require extensive editing in order
+          to get NasaView to process the label/data.  None of these
+          problems are due to label errors.  The new compressed
+          objects are of course a problem that needs to be fixed
+          within NasaView.  Other problems include:
+
+          - if the NOTE keyword-value exceeds 60 characters, NasaView
+            will crash.
+          - some of the other extraneous keywords (either placement
+            of or inclusion of) crashes NasaView.
+
+          I think we should include a note in the ERRATA.TXT file
+          that the current version of NasaView (2.5.2) cannot
+          display the data.
+
+------------------------------------------------------------------------
+S. Larson
+
+5. The data files. I had no problem looking at the browse gif files and
+labels. Spot checks indicate that the labels looked consistent with the
+images. The calibrated images could be looked at with XV (in its limited
+way), but I had to use the IRAF task rfits to copy them to disc in IRAF
+format. IRAF would not display the images directly from the CD. The
+compressed raw files could be unzipped to disc from the destination
+directory.
+
+	So, except for the awkwardness of having to rfits images from
+cd in IRAF, things seemed to work. I would be interested in what others
+found.
+
+------------------------------------------------------------------------
+P. Nicholson
+
+I really like all the geometric & photometric parameters you have added
+to the PDS labels. I will check some of the photometry numbers tomorrow
+against my own notes. Ditto for a few geometry numbers, which Dick
+generated for our data. These labels
+are also easier to read than the original FITS headers, as they have
+all the important info (filter, etc.) up front. 
+
+I also like the mini-images in the browse directory, and the fact
+that you have included a solar spectrum and filter profiles.
+
+So far the **ONLY** thing I have found which might be slightly
+misleading concerns the methane quad filters with which the bulk of
+these data were taken. Strictly, this leads to a different wavelength
+for each chip, as the 890 nm portion only covers one chip at a time.
+Since sometimes part of Saturn is in an adjacent chip (eg., WF3), this
+is seen thru a different methane filter. Is this worth including?
+We could figure out from the HST WFPC2 handbook which filter is on
+each chip for PC1 or WF3 observations. Right now, your headers
+seem to allow for just 1 filter for the whole 4 frames in a file.
+Also I presume the calibration data is for the 890 nm filter only;
+Pat may not even have that for the other quad segments.
+
+------------------------------------------------------------------------
+P. Nicholson
+
+FITS images:
+
+Since others used IRAF, I should report that I was able to read the
+FITS image files in IDL 5.1 using the 'readfits' command, directly from
+the disk and with no problems.  
+
+I carefully compared several
+specific images from our own Aug and Nov data sets against my own
+copies of these images, just to see that everything was labelled
+correctly. All checked out OK.  I even found some images I had forgotten
+were taken, so the set seems to be very complete.
+
+GIF images:
+
+I think the fact that you have reassembled all 4 images from each
+original HST files with their correct orientation and scale in the
+GIF images is a good thing. I found a sketch of the WFPC2 layout in one
+of the documentation files. Otherwise the 90 deg rotations of the 
+individual PC or WF images could be very confusing.  Perhaps you
+could note somewhere (in the volume description?) that the
+orientation on the sky of the HST FOV switches 180 deg at opposition,
+so the May and Aug images are oppositely oriented to the Nov images.
+(This is implicit in the CLOCK_ANGLE values, of course.)
+
+------------------------------------------------------------------------
+R. French
+
+1) as I understand it, each of the four images in a WFPC2 exposure has
+its own header information, so that Phil's question about different
+filters for the four chips is handled header by header, along with the
+plate scale for that chip, right?
+
+2) I agree with Amanda that some of the keywords in the headers from
+STSCI are not just a little off, but can be VERY far off. THere needs to
+be a way to flag this. ORIENTAT is one of these.
+
+3) I'd like to compare the I/F conversion factors in the files to what I
+computed by integrating over the solar spectrum and using Pat's information
+about the filters. I am having trouble reading those headers at the
+moment but will check them when I can read them. 
+
+4) I like the idea of having a data directory at the root level. 
+

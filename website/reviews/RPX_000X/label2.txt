@@ -1,0 +1,17 @@
+A. Bosh
+
+LABEL/EXTTAB.FMT
+  Is there a way to indicate somewhere that we have found that some header
+    keyword values are not correct.  I think ORIENTAT is one of them.  It
+    would be a shame to make others go through this exercise when we already
+    know it.
+
+[LIEN: We will warn users about ORIENTAT in TUTORIAL.TXT.]
+
+------------------------------------------------------------------------
+L. Huber
+
+- /LABEL/EXTTAB.FMT
+  - ATOSDAT --> ATODSAT
+
+[LIEN: We will fix.]

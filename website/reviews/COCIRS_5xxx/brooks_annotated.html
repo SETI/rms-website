@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="824.42">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #ff0600}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #ff0600; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">From: "Shawn M Brooks"</p>
+<p class="p1">Date: April 10, 2007 12:45:28 AM PDT</p>
+<p class="p1">To: "Mitch Gordon"</p>
+<p class="p1">Cc: "Mark Showalter"</p>
+<p class="p1">Subject: A Few Comments on the PDS CIRS Rings Volume</p>
+<p class="p2"><br></p>
+<p class="p1">Mitch,</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">     </span>My apologies for the last second comments.<span class="Apple-converted-space">  </span>It's been a</p>
+<p class="p1">little crazy for me lately and, unfortunately, I don't get paid</p>
+<p class="p1">to do this sorta stuff anymore (not that I ever really did, I</p>
+<p class="p1">guess ...).</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">     </span>These comments are far from exhaustive.<span class="Apple-converted-space">  </span>I really only had</p>
+<p class="p1">time to take a cursory look at the data set.<span class="Apple-converted-space">  </span>And, because of</p>
+<p class="p1">time limitations and my computer set up, I wasn't able to play</p>
+<p class="p1">with the data as I would have liked.<span class="Apple-converted-space">  </span>But, here's a brief,</p>
+<p class="p1">bulleted list of comments and questions.<span class="Apple-converted-space">  </span>I can expound upon them</p>
+<p class="p1">at the telecon.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>- As with most every PDS Rings Node product I've reviewed, the</p>
+<p class="p1">PDS Cassini CIRS data set is well organized with a consistent,</p>
+<p class="p1">easily understood hierarchical structure.<span class="Apple-converted-space">  </span>There is a wealth of</p>
+<p class="p1">detail to be found among this archive (e.g. description of the</p>
+<p class="p1">CIRS instrument, noise and spike discussion).<span class="Apple-converted-space">  </span>However, it seems</p>
+<p class="p1">that the hierarchical nature of the archive leads to a lot of</p>
+<p class="p1">unnecessary repetition.<span class="Apple-converted-space">  </span>For example, is it really necessary to</p>
+<p class="p1">have identical descriptions of the volume in each subdirectory?</p>
+<p class="p2"><br></p>
+<p class="p3">The files *INFO.TXT are a PDS requirement.<span class="Apple-converted-space">  </span>We can do a better job of explaining which files are duplicated from one volume and directory to another.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>- Would it be possible to include a file containing a list of</p>
+<p class="p1">observations and the start and end times of those observations?<span class="Apple-converted-space"> </span></p>
+<p class="p1">The data are organized using a YY-MM-DD format, whereas I am used</p>
+<p class="p1">to thinking of them in a YY-DOY format.<span class="Apple-converted-space">  </span>The inclusion of such a</p>
+<p class="p1">file would help a user such as myself navigate this data volume.</p>
+<p class="p2"><br></p>
+<p class="p3">This is found in some of the index files.<span class="Apple-converted-space">  </span>We will document it better and may also reorganize some of the indices (see notes to Mark Rose's comments) to simplify this problem.</p>
+<p class="p4"><br></p>
+<p class="p3">We also note that a set of cumulative index files will make the process of searching the data set simpler.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>- Exactly how were variable length records turned into fixed</p>
+<p class="p1">length records?<span class="Apple-converted-space">  </span>(Dumb question, I know, but I can't quite tell.)</p>
+<p class="p1"><span class="Apple-converted-space"> </span>Was it something as simple as segregating spectra by their</p>
+<p class="p1">record length?</p>
+<p class="p2"><br></p>
+<p class="p3">Yes. This will be clarified in the documentation.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>- Over what wavenumber range have the integrated radiances</p>
+<p class="p1">described in the ISPM_ASCII.FMT file been taken?<span class="Apple-converted-space">  </span>I know that,</p>
+<p class="p1">particularly in the case of FP1 data, noise at the long</p>
+<p class="p1">wavenumber end of the spectra degrade the utility of this</p>
+<p class="p1">parameter.<span class="Apple-converted-space">  </span>If the size of this data volume is a problem, I might</p>
+<p class="p1">suggest cutting this parameter.</p>
+<p class="p2"><br></p>
+<p class="p3">This information was copied from the corresponding original CIRS volumes and we're not really in a position to change it.<span class="Apple-converted-space">  </span>Consensus was to leave this information alone but clarify this matter in the tutorial.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>- I personally dislike the YY format of the file names,</p>
+<p class="p1">particularly the YY+50 for the re-formatted data.<span class="Apple-converted-space">  </span>I realize,</p>
+<p class="p1">however, that this may be necessary due to PDS conventions.<span class="Apple-converted-space">  </span>I</p>
+<p class="p1">just thought I'd point it out, though.</p>
+<p class="p2"><br></p>
+<p class="p3">This was required for conformance to PDS volume naming standards.<span class="Apple-converted-space">  </span>No change.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>- Just what are the origins of Vanilla?<span class="Apple-converted-space">  </span>I thought that it had</p>
+<p class="p1">something to do with previous Mars missions, but the discussion</p>
+<p class="p1">in TUTORIAL.TXT implies to me that it was created for Cassini.</p>
+<p class="p2"><br></p>
+<p class="p3">We will note the Mars TES origins of Vanilla in the documentation.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>- It seems that geometry data referring to Saturn's rings are</p>
+<p class="p1">referenced with the number 699, the NAIF ID for Saturn.<span class="Apple-converted-space">  </span>That</p>
+<p class="p1">this is so should be explicitly mentioned.<span class="Apple-converted-space">  </span>Maybe it is, but I</p>
+<p class="p1">couldn't find it.</p>
+<p class="p2"><br></p>
+<p class="p3">Yes, the NAIF ID refers to the center of a body, so the rings and planet share ID = 699.<span class="Apple-converted-space">  </span>This will be noted in the tutorial.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">     </span>As I said, I couldn't actually plot up the data.<span class="Apple-converted-space">  </span>But, I</p>
+<p class="p1">know that some of the observations have had problems where the</p>
+<p class="p1">data files were calibrated inconsistently.<span class="Apple-converted-space">  </span>This showed up in our</p>
+<p class="p1">analysis as a sudden jump in ring temperature.<span class="Apple-converted-space">  </span>I remember this</p>
+<p class="p1">particularly for a SHAD or a SCAN earlier in the mission (it</p>
+<p class="p1">would be included withthis release of the CIRS data).<span class="Apple-converted-space">  </span>I don't</p>
+<p class="p1">know if this problem has been solved, but I should probably take</p>
+<p class="p1">the time to look for it in this data set and report back if I</p>
+<p class="p1">find it.</p>
+<p class="p2"><br></p>
+<p class="p3">We can note that these sudden jumps occasionally occur.<span class="Apple-converted-space">  </span>They can be recognized by a sudden jump in the time tag associated with the calibration data, which is also recorded in the files.<span class="Apple-converted-space">  </span>We will explain this in the tutorial and warn users to beware of discontinuities.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">     </span>And, that's about it.<span class="Apple-converted-space">  </span>Sorry for the brevity.<span class="Apple-converted-space">  </span>I can get</p>
+<p class="p1">back to you with more thorough comments later, if you wish.<span class="Apple-converted-space">  </span>I'm</p>
+<p class="p1">about to head off to bed.<span class="Apple-converted-space">  </span>Talk to y'all in the morning!</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                                                      </span>--- Shawn</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+</body>
+</html>

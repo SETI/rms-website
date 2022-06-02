@@ -1,0 +1,136 @@
+Hi, Mitch, here are my comments. If these datasets pass peer review,
+please let me know, as it will be my job to update the data dictionary as
+described at the bottom.
+
+Richard
+
+*/CATALOG/*INST.CAT
+INSTRUMENT_TYPE =3D "VIDICON CAMERA". EN currently has this as "CAMERA". Not
+sure which is better.
+
+*/CATALOG/MISSION.CAT
+The current version at EN has many more targets (e.g. the various moons)
+and
+1 more reference, KOHLHASE&PENZO1977. If you want the latest version, I can
+retrieve it.
+
+*/DATA/*/*.LBL
+INSTRUMENT_NAME =3D "IMAGING SCIENCE SUBSYSTEM - WIDE ANGLE CAMERA" should be
+INSTRUMENT_NAME =3D "IMAGING SCIENCE SUBSYSTEM - WIDE ANGLE", and
+INSTRUMENT_NAME =3D "IMAGING SCIENCE SUBSYSTEM - NARROW ANGLE CAMERA" should
+be INSTRUMENT_NAME =3D "IMAGING SCIENCE SUBSYSTEM - NARROW ANGLE"
+Keyword INSTRUMENT_HOST_NAME is required but missing.
+
+*/DATA/C14993XX/C14993_GEOMA.LBL (and maybe all _GEOMA.LBL)
+ROWS =3D 576 for both the binary and the ascii tables. However, the ascii
+file has only 552 rows. The binary file also has odd values starting in
+row 551, very likely wrong especially at row 576.
+
+*/DOCUMENT/VICAR.LBL
+Line 13: DOCUMENT_FORMAT =3D ASCII is legal but new. Use TEXT?
+
+VGISS_5*/CATALOG/DATASET.CAT
+TARGET_NAME =3D "THETACAR": this target is unknown, i.e. it needs a
+target.cat
+
+VGISS_5*/CATALOG/REF.CAT
+- "and" before final author of SMITHETAL1979A, SMITHETAL1979B,
+SMITHETAL1981,
+SMITHETAL1982, SMITHETAL1986B, SMITHETAL1989
+- SMITHETAL1989 has an extra comma right after the first author
+
+VGISS_5119_peer_review/DATA/C16730XX/C1673012_CALIB.LBL and 800+ others
+VGISS_5120_peer_review/DATA/C17363XX/C1736313_CALIB.LBL and 800+ others
+VGISS_5214_peer_review/DATA/C20759XX/C2075939_CALIB.LBL and 900+ others
+TARGET_NAME =3D "CALLAMPS" is unknown. Probably replace with "CAL LAMPS"
+
+VGISS_5120_peer_review
+VGISS_5214_peer_review
+VGISS_7207_peer_review
+VGISS_8210_peer_review
+To verify, only these volumes have directory CALIB/
+
+VGISS_5214_peer_review/CALIB/MIPL/FICOR77_VG2_WA_CH4_U.LBL
+FILTER_NAME =3D "CH4_U". I assume this is correct, but please verify since
+no other labels in VGISS_5* use this.
+
+VGISS_7*/CATALOG/DATASET.CAT
+TARGET_NAME =3D "1985U1" is unknown. Create a TARGET.CAT.
+TARGET_NAME =3D "CALLAMPS" is unknown. Probably replace with "CAL LAMPS"
+TARGET_NAME =3D "OTHER" is also unknown. Can you choose an existing one?
+
+VGISS_7*/DOCUMENT/FILTERS/DOCINFO.TXT
+Line 43: VGn_cc_name.HTM
+Line 45: VGn_cc_name.GIF
+You could change to VG2_..., as VGISS_8*/DOCUMENT/FILTERS/DOCINFO.TXT have
+
+VGISS_720[567]_peer_review/DATA/.../*.LBL
+TARGET_NAME =3D "U_RINGS" should be "U RINGS"
+
+VGISS_7207_peer_review/DATA/C27190XX/C2719055_CALIB.LBL and many others
+TARGET_NAME =3D "CALLAMP" should be "CAL LAMPS"
+
+VGISS_8*/CATALOG/DATASET.CAT
+TARGET_NAME =3D "1985N1" is unknown. Create a TARGET.CAT
+TARGET_NAME =3D "1985N2" is unknown. Create a TARGET.CAT
+TARGET_NAME =3D "BETACMA" is unknown. Probably replace with "BETA CMA"
+TARGET_NAME =3D "CALLAMPS" is unknown. Probably replace with "CAL LAMPS"
+TARGET_NAME =3D "SIGMASGR" is unknown. Probably replace with "SIGMA SGR"
+
+VGISS_8*/CATALOG/REF.CAT
+- SMITHETAL1989 has a space between some authors' initials and is missing
+"and" before the final author.
+- SCIENCEV246N4936 was published in 1989, not 1986
+
+VGISS_8201_peer_review/DATA/C09027XX/C0902741_CLEANED.LBL & 7 others
+VGISS_82*/DATA/* have ~150 other such files
+REFLECTANCE_SCALING_FACTOR =3D 2.3900E+00 exceeds max of 1.0
+
+VGISS_8207_peer_review/DATA/C11384XX/C1138406_CALIB.LBL & 173 others
+TARGET_NAME =3D "SIGMASG" is unknown. Replace with "SIGMA SGR"?
+
+VGISS_8207_peer_review/DATA/C11396XX/C1139643_CALIB.LBL & 29 others
+TARGET_NAME =3D "BETACMA" is unknown. Probably replace with "BETA CMA"
+
+VGISS_8210_peer_review/CALIB/MIPL/CALINFO.TXT
+DATA_SET_ID =3D "VG1/VG2-N-ISS-2/3/4/6-PROCESSED-V1.0" should be
+DATA_SET_ID =3D "VG2-N-ISS-2/3/4/6-PROCESSED-V1.0"
+
+VGISS_8210_peer_review/DATA/C12048XX/C1204820_CALIB.LBL & others
+TARGET_NAME =3D "SCORPIU" is unknown. Replace with "SCORPIUS"?
+
+VGISS_8210_peer_review/DATA/C12050XX/C1205010_CALIB.LBL & others
+TARGET_NAME =3D "PLEIADE" is unknown. Replace with "PLEIADES"?
+
+VGISS_8210_peer_review/DATA/C12414XX/C1241445_CALIB.LBL & others
+TARGET_NAME =3D "CALLAMP" is unknown. Probably replace with "CAL LAMPS"
+
+
+new data dictionary values:
+
+
+DOCUMENT_TOPIC_TYPE:
+"FILE DESCRIPTION"
+"FILTER DESCRIPTION"
+
+FILTER_NAME:
+"CH4_JS"
+"CH4_U"
+"SODIUM"
+"UV"
+
+PRODUCT_TYPE:
+"BLEMISH_TABLE"
+"CALIBRATION_CORRECTION"
+"DARK_CURRENT_IMAGE"
+"GEOMETRICALLY_CORRECTED_IMAGE"
+"RESEAU_TABLE"
+"TIEPOINT_TABLE"
+
+SCAN_MODE_ID
+"1:1"
+"2:1"
+"3:1"
+"5:1"
+"10:1"
+

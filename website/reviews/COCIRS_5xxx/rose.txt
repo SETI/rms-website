@@ -1,0 +1,97 @@
+From: Mark Rose
+Date: April 9, 2007 4:23:46 PM PDT
+To: Mitch Gordon, Mark Showalter
+Subject: Comments on CIRS reformatted data set
+
+Hi Mitch and Mark,
+
+I failed to get this to you guys on Friday, sorry. I've just put the comments in-line in this email, but I could reformat them into a spreadsheet or Word document, whatever's easiest for you guys.
+
+Also, it looks like all the problems I reported to Mark early last summer have been fixed.
+
+-- Mark
+
+-----
+
+Scope of comments
+
+I have necessarily limited my comments to the data structure and the contents of descriptive files. I have looked over a number of the volumes, but have pulled all examples from COCIRS_5509, the last volume in the set.
+
+General data organization
+
+The organization is nice. If you don't need to read GEO files, it's very straightforward to step through the data by reading files in parallel. If you need the GEO data, it's a little trickier, but manageable.
+
+I checked a couple of the volumes to ensure that all the data rows had the right SCET values, but did not do this exhaustively on all volumes. (I presumed you had already done that.)
+
+DATA directory
+
+1. FP3 data files have non-FP3 detector numbers. E.g., on COCIRS_5509:
+- APODSPEC/ISPM0509160800_FP3.TAB line 6 has detector 12
+- POIDATA/POI0509160800_FP3.TAB line 6 has detector 12
+- RINDATA/RIN0509160800_FP3.TAB line 6 has detector 12
+- TARDATA/TAR0509160800_FP3.TAB line 6 has detector 12 (= FP4 pixel 2)
+
+2. Different focal planes sometimes have different target sets. This may be correct (since the three focal planes have slightly different pointing), but I wanted to make sure. Sometimes it's just a target missing from one or more focal planes, but sometimes there is a completely different satellite, which may be correct but looks suspect. E.g., on COCIRS_5509 at 0509022120, we have:
+- FP1 targets: 602, 611, 699
+- FP3, FP4 targets: 602, 603, 699
+
+(another example is at 0509160800)
+
+3. Targets are not identified correctly via TARGET_NAME in label files. For example, on COCIRS_5509 at 0509022120:
+- APODSPEC/ISPM0509022120_FP1.LBL, _FP3.LBL, and _FP4.LBL all show TETHYS as the only target in TARGET_NAME keyword. However, there are 3 targets according to GEO files.
+- Corresponding POIDATA, RINDATA, and TARDATA files also show only TETHYS.
+
+4. ISPM*.LBL: SAMPLING_PARAMETER_UNIT = "INVERSE CENTIMETER". Is this correct? It is different from the "CM^-1" which would be used in a unit expression. If "CM^-1" is legal here, it would be better to be consistent.
+
+CALIB directory
+
+5. All the calibration files are really table files rather than text files. They should be made more like tables via one of these two fixes:
+a. change to a real PDS TABLE, remove the header lines and add column specifications to the label;
+b. or, keep as text, but make the headers line up with the data. (There are extra spaces in the header line that cause the header labels not to line up with the data columns.)
+
+CATALOG directory
+
+All examples from COCIRS_5509.
+
+6. CATINFO.TXT has a PUBLICATION_DATE that is prior to the publication date of the original publication date of COCIRS_0509 (2006-04-28 vs. 2006-07-01).
+
+7. DATASET.CAT
+- DATA_SET_TERSE_DESC: Should mention "Saturn" to help with full-text search and to make result rows more readable.
+- ABSTRACT_DESC: Should mention "Saturn" to help with full-text search and to make result rows more readable.
+- DATA_SET_TARGET descriptions: These are identical with original volumes. Do original volumes include satellites discovered during the observations for the volume? If not, need to augment them here.
+- START_TIME doesn't match the value of the original volume (COCIRS_0509).
+- line 533: "This dataset is composed of CIRS Time Sequential Data Records": TDSR is deemphasized elsewhere within this file (data set description, etc.). Are the reformatted tables also supposed to be called TDSRs, or does that imply Vanilla formatting?
+
+DOCUMENT directory
+
+8. Publication dates in the labels are sometimes less then the publication date in the corresponding file from the original CIRS volume.
+- E.g., COCIRS_5509, CASSINI-RSP.LBL: COCIRS_0509=2006-06-08, COCIRS_5509=2006-03-08
+
+9. CIRS_FOV_OVERVIEW.TXT: It appears that all \r\n newline sequences in the original file have been replaced with \n\n. I think this is wrong, since the PDS standard (I think) is to have \r\n. Secondly, the new file prints double-spaced.
+
+10. DATASIS.TEXT: It appears that all \r\n newline sequences in the original file have been replaced with \n\n. I think this is wrong, since the PDS standard (I think) is to have \r\n. Secondly, the new file prints double-spaced.
+
+11. DATASIS_OCR.PDF and .LBL: Perhaps merge this label information into DATASIS.LBL, as is done for the TEX and PDF files, to make more explicit the fact that this is a 3rd, alternate format.
+
+CALIB directory
+
+12. Publication dates in the labels are sometimes less then the publication date in the corresponding file from the original CIRS volume.
+
+INDEX directory
+
+13. Publication dates in the labels are sometimes less then the publication date in the corresponding file from the original CIRS volume.
+
+14. It would be more convenient if the bandwidth and resolution were in the POIINDEX.TAB and RININDEX.TAB files, as well as the ISPMINDEX.TAB file. Reason: Since some ISPM files won't be in the RININDEX.TAB file (and perhaps not in the POIINDEX.TAB file either, since some ISPM files are just SKY or, perhaps, just rings), correlating the files is more complicated. As well, some indication of the mode might be nice, but a single character, as in the original CIRS volumes (A/C/E/O/P/B) would be better than the separate flag approach.
+
+15. ISPMINDEX.TAB: It would be better to have a single mode flag (all/even/odd/pairs/centers/blinking), rather than the 6 separate flags.
+
+16. The original volumes included tables of the CIRS requests and their times. This by itself is not that useful for the reformatted volumes, since the products are arranged around the CIRS requests. However, some other information from the science kernel might be appropriate, such as a table of CIRS request IDs and their description or science objective. (Or perhaps a scientist could tell me what would be appropriate. And as I mentioned, the info is in the science kernel, so a sophisticated user could get the info anyway by using INSPEKT or writing a SPICE program.)
+
+
+
+--
+Mark Rose
+PSGS / NASA Ames Research Center
+650.xxx.xxxx
+
+

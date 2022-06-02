@@ -1,0 +1,72 @@
+Date: Fri, 24 Sep 1999 10:02:54 -0600 (MDT)
+From: lhuber@nmsu.edu
+To: showalter@ringside.arc.nasa.gov
+Subject: RPX Review Comments
+
+Mark,
+
+Here are the review comments for RPX_000x.
+
+Lyle
+
+RPX_000x Review
+===============
+
+- Each disk had one file that was unreadable on my Solaris 2.6 and 2.7 
+  machines:
+    RPX_0001  DOCUMENT/FITS.TXT
+    RPX_0002  AAREADME.TXT
+    RPX_0003  AAREADME.TXT
+    RPX_0004  AAREADME.TXT
+    RPX_0005  AAREADME.TXT
+
+- In all labels:
+    SPACECRAFT_NAME and INSTRUMENT_NAME values should be delimited by 
+    double quotes, not connected by underscores.
+
+    The default unit for EXPOSURE_DURATION is milliseconds so these
+    values should be appended with <SECONDS>.
+
+- /AAREADME.TXT
+  - e-mail address for John Caldwell is incorrect.
+
+- /CALIB/F130LP.TAB is not CR-LF delimited.
+
+- /CATALOG/DATASET.CAT
+  - Data Set Overview, 1st para., taken taken --> taken
+  - Data Set Overview, 2nd para., images original --> original
+  - Data, 4th para., Zip 2.1 was used to create the zipfiles but UnZip 5.32
+                     should be used to unzip them. That seems really strange
+                     to have such different versions.
+  - Data Coverage & Quality, 1st para., data is --> data are
+  - Data Coverage & Quality, 2nd para., Titan is --> Titan are
+
+- /CATALOG/MISSION.CAT
+  - Mission Overview, 4th para., RPXs --> RPX
+  - SUN-RPX section, 1998 --> 1995
+
+- /CATALOG/REF.CAT
+  - BOSH&RIVKIN1996, Rivkin --> Rivkin,
+  - BIRETTAETAL1996, Baggaett --> Baggett
+
+- /CATALOG/SOFTWARE.CAT
+  - Programming Language, ANSII_C --> ANSI_C
+
+- /DOCUMENT/DOCINFO.TXT
+  - FITSINFO.*, LaTex --> LaTeX
+  - HSTHB*.*, Institute --> Science Institute
+
+- /DOCUMENT/FITSDEFS.TXT
+  - FDMEANAN, anomly --> anomaly
+  - PSTPTIME, yyyy.ddd --> yyyy:ddd
+  - RTAMATCH, ???
+
+- /DOCUMENT/TUTORIAL.TXT
+  - Data Set Overview, 1st para., taken taken --> taken
+                                , data was --> data were
+  - FITS Labels, next to last para. is cut off.
+  - Image Geometry, users wishes --> user wishes
+  - Image Calibration, normalize --> normalized
+
+- /LABEL/EXTTAB.FMT
+  - ATOSDAT --> ATODSAT

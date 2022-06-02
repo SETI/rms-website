@@ -1,0 +1,17 @@
+L. Huber
+
+- /CALIB/F130LP.TAB is not CR-LF delimited.
+
+------------------------------------------------------------------------
+R. Joyner
+
+(6)  CALIB/F130LP.TAB
+
+     (a)  This file is only terminated with <LF>.  Once the file is
+          terminated with <CR><LF>, and ROW_BYTES = 23 is set, then
+          the file displays correctly.  But, there is a problem with
+          NASAVIEW displaying this file for some reason.  It displays
+          correctly using TBTOOL.
+
+[LIEN: We will fix.]
+

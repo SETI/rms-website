@@ -1,0 +1,374 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf420
+{\fonttbl\f0\froman\fcharset77 TimesNewRomanPSMT;\f1\froman\fcharset77 TimesNewRomanPS-BoldMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red0\green255\blue0;}
+{\info
+{\title Note: This file summarizes major issues it does repeat any of the comments reporting successful use of the archive, nor does i}
+{\author Mitch Gordon}
+{\*\company UVA-W}}\vieww12240\viewh15840\viewkind1\viewscale100
+\deftab720
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\fs24 \cf0 Note: This file summarizes major issues; it does repeat any of the comments reporting successful use of the archive, nor does it include identified minor editorial comments nor incidences of PDS noncompliance although all of  these will be addressed during lien resolution.\
+\
+Reviewers & panel members:  Steven Adams \{sa\}, Charlie Avis \{ca\}, Bonnie Buratti & Joel Mosher\{bb-jm\},  Nancy Chanover \{nc\}, John Diehl \{jd\}, Mike Evans\{me\}, Kathy Rages \{kr\},  Mark Showalter \{ms\}, Mitch Gordon \{mg\}.\
+\
+Discussions and our proposed responses are interspersed in \cf2 blue\cf0 .\
+\
+\pard\pardeftab720\li-288\ri0\ql\qnatural
+
+\f1\b\fs28 \cf0 \
+I.  \ul Data Files.\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0\fs24 \cf0 \ulnone \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 General comments.\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 1.	It is clear that archive transfer to the reviewers was not 100% effective. Many of the comments appear to arise from files corrupted in the transfer. \{mg\}\
+\
+\cf2 This was our first experience with distributing a 160-Gb data set and it is clear that we need to refine the process. PDS in general is well aware of issues surrounding data integrity, but we cut corners at the Rings Node because of the amount of time it was taking to create so many disks. All corruption issues arose during the duplication process; we are confident that the copies held at the Rings Node are OK. We apologize for the inconvenience some of you encountered.\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 2.	Strong desire by two reviewers \{ca, kr\} to correct target misidentification in labels inherited from the previous data set.\
+\
+\cf2 We did correct some target identifications, and we will update any other errors that are identified.  However, be aware that most target identifications were provided by the Voyager ISS team, and we have no obvious method for correcting their errors short of examining every image.\
+\
+We will add warnings to ERRATA.TXT, AAREADME.TXT and anywhere else that is appropriate asking that any identified target errors be reported to the Rings Node. We propose to issue index updates on line if future errors are identified.  \
+\
+Is this an acceptable approach to dealing with misidentified targets?\
+\cf0 \
+3.	Two reviewers \{ca, jm\} questioned the utility of paralleling the original file structure and naming conventions. One \{ca\} points out that file naming constraints have changed. One \{bb-jm\} requested that the archive be organized as a single data set, not by CDROM volume. \
+\
+\cf2 We checked with the Engineering Node about appropriate volume sizes, and the consensus is that a current, practical limit is ~10 Gbytes. For this reason, we have concluded that issuing the data set as a single logical volume remains impractical.\
+\
+Nevertheless, we agree that the file organization may be worth re-thinking. Most modern PDS data sets are organized by time, not target. It would be relatively easy to reorganize the volumes in this manner. This would also mitigate the problems that arise from the confusing directory tree structure and those that arise when a misidentified target places a file in the wrong directory.\
+\
+Is there a consensus of the review panel that we should undertake this reorganization?\
+\
+Note that most users obtain Voyager data via downloads from the PDS, not physical volumes. (The Rings Node's existing catalog distributes raw Voyager images, but a much more powerful catalog is in development.) Such a download system tends to make the precise path to a file irrelevant. Does on-line availabililty reduce the need for the proposed reorganization?\
+\cf0 \
+4.	Two reviewers \{me, kr\} noted that while reseau removal is generally good, it can introduce glaring anomalies when the reseau is near a boundary between 'bright' and 'dark' areas of an image. One reviewer \{me\} proposed that either the reseaus not be removed, or that additional versions of the 'CLEANED',  'GEOMED' and 'CALIB' images be included that have the reseaus left intact.\
+\
+\cf2 Mark finds that reseau removal is generally beneficial. For example, photometry of a bland region is much simpler if you don't have to mask out or overwrite potentially hundreds of black dots. However, it is certainly true that VICAR's reseau removal algorithm leaves much to be desired, particularly near abrupt brightness transitions.\
+\
+Each image in the data set is accompanied by a file *GEOMA.TAB that provides the "before" and "after" coordinates of each reseau marking. Hence, a quick check of the table should always enable the user to find out if a feature is a reseau or not.\
+\
+Perhaps we have not highlighted these files sufficently in our documentation, in which case the problem could be easily remedied.\
+\
+The alternative is to to include nearly identical images but with the reseau markings intact. However, this would essentially double the size of an already large data set. Does the review panel believe that these additional versions of the files are needed?\
+\cf0 \
+5.	One reviewer \{bb-jm\} recommends a browse directory.\
+\
+\cf2 Browse directories for these volumes would be effectively the same as the browse directories that already exist on the original PDS volumes---smaller versions of all the images. This is the reason we opted to leave them out.\
+\
+Our expectation is that on-line catalogs will have the capability to provide preview of images, in the process of a user's search through these extensive collections. Most of PDS's on-line catalogs, including those at the Rings Node and Imaging Node's, provide this capability.\
+\
+Does the review panel believe that we should add browse directories to the archived volumes? \cf0 \
+\
+6.	\'d4The archive needs a picture catalog to help the user select images.\'d5 \{bb-jm\}\
+\
+\cf2 We are not entirely clear on what is meant by a picture catalog. Perhaps it is something like our image browsing tool for Cassini ISS. See\
+      http://pds-rings.seti.org/browse/COISS_1002/data/1351738505_1351858128/\
+for an example. (We note that this particular image browsing system is not currently up to date.)\
+\
+Is this the sort of picture catalog that one would want?  If yes, is it acceptable for it to exist on-line rather than on the archival volumes?\
+\cf0 \
+7.	Two reviewers \{me\}, \{bb-jm\}, requested SEDR data, NAIF kernels, and Voyager specific SPICE routines be included.\
+\
+\cf2 Mark is happy to report that a reconstructed C-kernel for the Voyager 1 Saturn encounter is nearly complete. This corrects many (but perhaps not all) of the largest pointing errors in the original SEDR. The Voyager 2 C-kernel should follow shortly.\
+\
+We agree in the importance of geometric information and would like to find a workable solution for providing it with the data set.  Here are some possible solutions, in order from easiest to hardest:\
+\
+(a) Add the derived C kernels (pointing information) and also to SP kernels (ephemeris and trajectory information) to the data volumes.\
+\
+(b) Derive tables of pointing, position and velocity information and add them to the volumes (in addition to the kernels).\
+\
+(c) Incorporate the tables of geometry information into the existing INDEX.TAB files rather than including them as separate files. (Note that the INDEX files repeat information for each type of file---RAW, CLEANED, etc.---so this would be a less efficient solution.)\
+\
+(d) Add the relevant geometry information to each label file.\
+\
+Note that all geometry information is approximate and it will always be possible for errors to arise after the volume is published. This means that the Rings Node will need to maintain an up-to-date index, and possibly revised kernels, on line.\
+\
+What is the panel's recommended solution?\
+\cf0 \
+8.	One reviewer \{me\} requested additional keywords in the image labels: \
+\pard\pardeftab720\li360\ri0\ql\qnatural
+\cf0 a.  the camera pointing for the image \
+b. the geometrical state of the spacecraft with respect to Saturn at the image time (in \
+    terms of SPICE this corresponds \
+    cspice_spkez,sc,et,'J2000','NONE',699L,state,ltime)\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0       c.  the light time corrected state of Saturn with respect to spacecraft at the image time \
+           (in terms of SPICE this corresponds to \
+           cspice_spkez,699L,et,'J2000','LT',sc,state,ltime)\
+      d.  the light time and stellar aberration corrected state of Saturn with respect to the \
+           spacecraft (in terms of SPICE this corresponds to  \
+           cspice_spkez,699L,et,'J2000','CN+S',sc,state,ltime) at the image time\
+\
+\cf2 See above.\
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 Image: VGISS_0027 \\SATURN\\C3419XXX \\3419147 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \ul \ulc0 Label issues\
+\pard\pardeftab720\li720\ri0\ql\qnatural
+\cf0 \ulnone \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 1.	How did you get a PIXEL FOV=5.225x10-4 deg (and FOV=.418) for the RAW data? \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 These numbers are similar to those found in the instrument catalog file at:\
+    http://pds-rings.seti.org/voyager/iss/inst_cat_na1.txt\
+The difference probably arises from the fact that the field of view is distorted, so one can choose an average pixel size, a central pixel size, etc. Note that the values are labeled with the comment "/* approximate */"  Nevertheless, we could change all the labels to make them consistent with the catalog file. Does the peer review panel think this change is worth making?\
+\
+A simpler alternative would be to provide a clarification in , say, TUTORIAL.TXT.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+2.	What is REFLECTANCE_SCALING_FACTOR doing in RAW/CLEANED image label? Seems like it would be N/A but you\'d5ve got 6.487x10-3 for pixel value to I/F? \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 Calibration factors for the RAW and CLEANED files are based on Danielson et al., with subsequent updates. They are labeled  "/* approximate */". Should we change anything?  A simple approach would be to add some details in TUTORIAL.TXT.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+3.	REFLECTANCE_SCALING_FACTOR is 3.3445x10-4 in CALIB version PDS label, but is 1.0 in VICAR label. \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 A VICAR label value of 1 really means that DN=10,000 matches I/F=1, so that gives the factor of 1e-4. Also, VICAR calibrates all Voyager 1 images as if they were at Jupiter's distance from the Sun, hence the additional factor of ~ 3.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \ul Reseau  Blemish removal\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \ulnone \
+1.	BLEMLOC.DAT label says format is undocumented.\cf3  \cf0 I can supply the format description. Otherwise OK. Why no .TAB? \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 The Voyager calibration files were provided mainly to ensure that they would not be lost to human history.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 We would be happy to provide any documentation describing the formats of these files. We could then assess the feasibility of converting them to PDS format. Is this a reasonable approach?\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+2.	Format and content of blemish file is unknown. Do you want that information? \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 Same answer as above.
+\fs20 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\fs24 \cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \ul Radiometric Processing\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \ulnone \
+Cal file FICOR77_VG1_NA_VIOLET.DAT: LBL says format is undocumented. Do you want the documentation? FICOR77 files are in VAX-format.  Do you want unix-format versions? \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 Yes and yes.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+1.	FICOR77 results:\
+\pard\pardeftab720\li360\ri0\ql\qnatural
+\cf0  a. DC's are averages (not sums) of 6, so used NUMDC=100 to compensate \
+     for scaling \{ca\}\
+\
+\pard\pardeftab720\li360\ri0\ql\qnatural
+\cf2 This is a shortcoming of the documentation. An update of PROCESSING.TXT would seem to be a reasonable solution.\
+\pard\pardeftab720\li360\ri0\ql\qnatural
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0        b. Using DC of DC1_NA_31_C3458239_06.IMG & Cal file \
+           FICOR77_VG1_NA_VIOLET.DAT with local FICOR77, gives exact match \
+           of  DNs when using NUMDC=100 and no IOF value. But DC is bad after \
+           line ~480.  (see below). \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 We regret it if an error in a dark current slipped through and are grateful that it was caught. We will correct the file (if possible) and re-process any images that used it.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 Image: E:\\VGISS_0029 \\SATURN\\C3492XXX\\3492126 \{kr\}\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 \
+1.	Target incorrectly identified as Saturn, should be Titan.\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 See discussion of misidentified targets above.\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 \
+Dark current subtraction: \
+\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 1.	Many files have bad dark current subtraction (4 out of 8 selected by reviewer). Possibly because JUPITER calibration was set in FICOR. \{kr\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 Dark currents were chosen via an automated procedure that identified the one with matching camera and scan rate taken closest in time to the image being calibrated. The selection is listed in the PDS label as the second entry under SOURCE_PRODUCT_ID. At least based on the criteria specified above, the dark currents chosen for Kathy's four bad images appear to be reasonable. However, Mark has also identified a few other images for which the dark current was not very good. Please let us know if any other images were found with questionable dark currents or other calibration parameters. We will investigate the source of the problem.\
+\
+By the way, FICOR77 adds SCALE='JUPITER' to the VICAR header of EVERY Voyager 1 image. We correct for this in our own calibration but it is certainly confusing to anyone reading the VICAR header. We will need to address this in our documentation so as to minimize confusion. We propose to discuss this, and any other quirks of the VICAR headers, in TUTORIAL.TXT, PROCESSING.TXT and/or ERRATA.TXT.\
+\
+However, it is not our policy to change information in the VICAR headers. FICOR77 does not have scaling for Voyager 2 at Saturn, so the information in the header is accurate, if somewhat bizarre. \
+\
+Nevertheless, Kathy's issue is a serious one because it raises the issue of whether this data set should or should not pass peer review. Our goal is to calibrate the Voyager images one last time, so that no one every has to calibrate them again. We do not regard 4/8 as a successful track record. We will attempt to understand what step in the procedures went wrong and will re-process any images that need to be re-processed. Further comments are welcome. Is this a show-stopper?\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 \
+Dark current file: DC1_NA_31_C3465802_06.IMG\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 \
+1.	VICAR complains of bad label \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 We'll investigate.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+2.	PDS label looks good. Properly shows 16 bits, but scale factor of 100 is   only in description, not a keyword. \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 The factor of 100 was applied via VICAR program F2, so that we could coadd integer images without too much lost precision. We then treated each dark current in FICOR77 as if it were the sum of 100 images. So the label may be deceiving but the processing was valid. Some of this is already noted in PROCESSING.TXT but it should be clarified.\
+\
+Are any changes to the data file required?  \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 Dark current file: DC1_NA_31_C3458239_06.IMG\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 \
+1.	VICAR likes label \{ca\}\
+\
+2.	PDS label looks good - 16 bits, but scale factor of 100 is only in description, not a keyword \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 See above.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+3.	Missing and corrupted data after ~line 480 \{ca\}  
+\f1\b Note: I viewed with NASAView & looks like in my version first 20 lines are bad; my version same as version in /volumes/ on-line. \{mg\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf2 We'll fix this dark current or remove it, and re-process any affected images.\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f1\b \cf0 \ul \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \ulnone Tables: VGISS_0038_peer_review\\MIPL\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 \
+1.	I was able to view the images using NASAView.   However, I was unable to use NASAView to look at the tables (e.g. the *.DAT files in VGISS_0038_peer_review/MIPL).  I could open them in NASAView and it would tell me how many rows and columns the table contained (correctly, as compared with the LBL files), but it displayed all numbers in the table as 0.  \{nc\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 As noted above, the Voyager calibration files were provided just to ensure they would not be lost to human history. Charlie Avis is apparently able to provide more details about the file structure, which we will include. However, it is our preference to provide only minimal labels and text description of the MIPL-specific files. Is this an acceptable approach?\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+2.	Section 5.4 of the TUTORIAL.TXT file  deals with VICAR tables, and suggests that the user read DOCUMENT/VICAR.HTML or .ASC to learn more about VICAR tables.  I did that, and I didn't find too much information in that document that helped me with this problem. \{nc\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 We have found the web site that appears to describe the format of VICAR format tables, aka "IBIS":\
+      http://www-mipl.jpl.nasa.gov/ibis/section6.html\
+We correct the reference and will try to get permission to include this document in the data set.
+\f1\b\fs28 \cf0 \
+\
+II.  \ul Documentation Files.\
+\pard\pardeftab720\li-288\ri0\ql\qnatural
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\fs24 \cf0 \ulnone General comments.\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 1.	All the documentation should be in one directory and not duplicated in many directories. \{bb-jm\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 PDS standards require that documentation appear on each volume of a data set. Beyond our meeting that requirement, are there any specific recommendations for changes?\
+\pard\pardeftab720\li-288\ri0\ql\qnatural
+
+\f1\b\fs28 \cf0 \ul \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0\fs24 \cf0 \ulnone 2.	A future user of this dataset might be interested in what algorithms were actually used to correct the images. \{me\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 A very valid point. We have little information on these procedures.\
+\
+(a) We have a digitized copy of the original ISS calibration report, Benesh & Jepsen, that provides more details than any other document. However, we have not yet received permission from JPL to distribute it. We will pursue this further because it would be silly not to include such a valuable document.\
+\
+(b) We could provide the FICOR77 source code "as is" if (1) that's helpful and (2) we can get permission. Both are uncertain. We welcome other ideas and suggestions.\
+\pard\pardeftab720\li-288\ri0\ql\qnatural
+
+\f1\b\fs28 \cf2 \ul \ulc2 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\fs24 \cf0 \ulnone Specific comments.\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\f0\b0 \cf0 1.	VICAR label description - document review is noted but have ITAR issues been addressed? \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 We believe yes but will confirm.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+2.	Tutorial:\
+\pard\pardeftab720\li360\ri0\ql\qnatural
+\cf0 a.  Could mention that byte swapping is not necessary if VICAR s/w is \
+     processing  these VICAR files. \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 Will do.\
+\pard\pardeftab720\li360\ri0\ql\qnatural
+\cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0       b.  Section 5.4 1st paragraph says IBIS format is covered in VICAR.HTML. \
+           It\'d5s not. \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 See note above about IBIS documentation.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+3.	ERRATA.TXT\
+      a.  Are the two column_name examples reversed? \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 Yes.  We'll fix it.\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf0 \
+      b. How about known problems with data corruption, satellite names, etc.? \
+         \{ca\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 We'll add an appropriate note.\
+\pard\pardeftab720\ri0\ql\qnatural
+
+\fs20 \cf0 \
+\pard\pardeftab720\ri0\ql\qnatural
+
+\fs24 \cf0 4.	Voyager Calibration Report should be included. \{bb-jm\} \{cn\}. Also consider including other (unspecified) documents. \{bb-jm\}\
+\
+\pard\pardeftab720\ri0\ql\qnatural
+\cf2 A very valid point but somewhat problematic.\
+\
+See note above about Benesh and Jepsen.\
+\
+Danielson et al. was published in JGR which, last we've heard, NEVER provides permission to distribute digital copies of their articles.\
+\
+}
