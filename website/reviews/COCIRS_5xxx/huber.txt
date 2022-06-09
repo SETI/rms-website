@@ -1,0 +1,33 @@
+From: lhuber@nmsu.edu
+Date: April 5, 2007 10:22:06 AM PDT
+To: lhuber@nmsu.edu, mgordon@seti.org
+Cc: MSHOWALTER@seti.org, nchanove@nmsu.edu
+Subject: CIRS comments
+
+
+Mitch and Mark,
+
+I have taken a not-as-detailed-as-I-would-like look at a sample of the 
+reformatted CIRS data. My main comment is that it looks like it's in 
+really good shape and I want to thank you guys for putting forth the 
+effort to get the CIRS data into something more usable for the community.
+
+A couple random PDS comments:
+
+- As I noted to Mitch yesterday, there are some double quotes in DATASET.CAT
+  that should be single quotes.
+
+- I really don't think FMT files should be used for INDEX TABLEs. You're
+  using a separate FMT for each index anyway so why bother?
+
+- I'm not all that thrilled with the explicit FILE object labelling method.
+  Are you trying to be consistent with the original labels or is it just
+  because you wanted to have both ASCII and BINARY tables for everything?
+  If it's the second, then I could come up with a reasonable alternative
+  to using the FILE object but I'll raise that in a telecon.
+
+Again, well done.
+
+Lyle Huber
+PDS Atmospheres Node
+

@@ -1,0 +1,21 @@
+From: Kathy Rages <krages...>
+Date: December 18, 2006 2:29:41 PM PST
+To: Mitch Gordon <mgordon...>
+Cc: Mark Showalter <mshowalter...>
+Subject: Last-minute update to my VGISS comments
+
+I see you're using the standard calibration for the WA MeJ filter:
+
+ABSOLUTE CALIBRATION NOT GOOD,SHADING CORRECTION ONLY WAS DONE
+                         PICTURE MULTIPLIED BY    3.35      FICOR 2/02/86 VERSION
+                        SCALE='SATURN '
+
+I suppose this gets into philosophy, but everybody who was there now knows the standard calibration factor for that filter was about 30% low.  Maybe you have a copy of the "New Calibration Factors" memo from Torrance Johnson dated 8-18-89 (i.e. Neptune encounter), which gives  4.782  for this (VGR2) filter.
+
+So do you go with ABSOLUTE CALIBRATION NOT GOOD and a factor you know should be increased by ~50%, or do you put in a value you know is better, but is less well documented?
+
+-- 
+Kathy Rages                         Mail Stop 245-3
+650-xxx-xxxx                        NASA Ames Research Center
+650-xxx-xxxx FAX                    Moffett Field, CA  94035-1000
+krages@...

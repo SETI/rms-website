@@ -1,0 +1,124 @@
+A. Bosh
+
+General
+  Why do data folder names end in XX?  Is it to pad out to some standard
+    length?
+
+  What is the justification for releasing just HST/WFPC2?  I can see that
+    HST would be much simpler than various ground-based data sets because
+    it is auto-archived.  But why the constraint to WFPC2?  There are some
+    HRS and FOS data as well that are intimately tied to the RPX timing.
+
+  What does "^" mean at the beginning of a header line?  Is it a new FITS
+    thing?
+
+------------------------------------------------------------------------
+C. Roddier
+
+Comments on the data set:
+
+My comments are very positive in the sense that I have been
+able without difficulty to understand the whole organisation
+of the data set and look at the files and labels. It seems to
+me that if I wanted now to use these data I could do it.
+
+------------------------------------------------------------------------
+L. Huber
+
+- Each disk had one file that was unreadable on my Solaris 2.6 and 2.7 
+  machines:
+    RPX_0001  DOCUMENT/FITS.TXT
+    RPX_0002  AAREADME.TXT
+    RPX_0003  AAREADME.TXT
+    RPX_0004  AAREADME.TXT
+    RPX_0005  AAREADME.TXT
+
+- In all labels:
+    SPACECRAFT_NAME and INSTRUMENT_NAME values should be delimited by 
+    double quotes, not connected by underscores.
+
+    The default unit for EXPOSURE_DURATION is milliseconds so these
+    values should be appended with <SECONDS>.
+
+- /AAREADME.TXT
+  - e-mail address for John Caldwell is incorrect.
+
+------------------------------------------------------------------------
+P. Nicholson
+
+I have browsed thru 3 of the CD's and not found anything amiss so far.
+The organization seems very logical & pretty easy to follow, and I like
+having all the documentation files on each CD.  The arrangement of datasets
+by ID number, while perhaps weird to most users, seems to make the most
+sense. (Perhaps the list of the PI and dates for each of these IDs
+which I found in the tutorial might be added to the aareadme file
+so that a novice user would find it immediately?) On balance, I think
+this is better than inventing completely ad hoc identifiers.
+
+------------------------------------------------------------------------
+S. Larson
+
+Mark-
+	I think the documentation and layout of the RPX PDS discs
+is excellent. I had some initial problems with permissions when
+copying to disc, but they were local problems that were fixed.
+Below are more specific comments. 
+
+	I looked at the RPX PDS discs with two systems:
+
+A. Sun Ultra running the current rev. of Solaris looking at GIF
+and FITS images with XV, FITS images with the current rev.of IRAF,
+pdf files with acrobat reader 4.0 and postscript files with ghostview
+and a level 1 printer.
+
+B. IBM Thinkpad 600 on the Windoze 98 side (I have not yet installed
+IRAF on the Linux side) looking at pdf files with Acrobat 2.1 (or
+trying to) and GIF images with MS Internet Explorer.
+
+	Here are my comments on the contents of the discs in order of
+use;
+	
+1. aareadme.txt (maybe aareadfirst.txt might be more explicit) This
+is well laid out and the obvious entry point for new users of this
+data. The discussions of file formats, file naming, and directory
+structure looks complete. It is sufficiently well done that I did not
+have any problem finding my way around (therefore it MUST be good!).
+
+2. errata.txt, voldesc.cat - useful for volume-specific information.
+
+3. document/tutorial.txt - good second level user information describing
+data sets, goals from the proposal abstracts (and therefore what to expect)
+and additional details defining file types, labels, and pointers to 
+documents on filters, etc. Had no trouble reading files on the Sun, but
+the Acrobat reader 2.1 on the Thinkpad could not read pdf files (I
+suspect this is a problem with Acrobat, but will have to look into this
+further to know.)
+
+4. The primary text files in the subdirectories were all helpful in
+describing the other files in their directories. The directories calib,
+catalog, geometry, index, label and software were all useful. I have not
+had time to test any of the SPICE data in geometry, but it looks pretty
+complete.
+
+------------------------------------------------------------------------
+P. Nicholson
+
+File formats:
+
+I looked
+at the CD-ROMs using a Sparc Ultra-1 running Solaris. I was able to
+display the GIF files from the browse directories directly with Sun's
+image viewer (ie, I just double-clicked on the icons in the File
+Manager window). However, SOLARIS did not recognise the .TXT files
+as text (it tried to run them...) so I looked at them with the UNIX 
+'more' command instead. I have not so far examined the pdf or ps files.
+I did unzip one of the label files using my local version of 'unzip',
+after copying the file to disk.
+
+------------------------------------------------------------------------
+R. French
+
+5) I have not read through the documentation to the level of trying to
+find typographical errors, but overall it seems extensive and quite
+thoroughly done.
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="824.42">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #ff0600}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #ff0600; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">From: Conor A Nixon</p>
+<p class="p1">Date: April 5, 2007 11:34:00 AM PDT</p>
+<p class="p1">To: Mitch Gordon</p>
+<p class="p1">Cc: Mark Showalter</p>
+<p class="p1">Subject: Re: telecon information - peer review of re-formatted CIRS data</p>
+<p class="p2"><br></p>
+<p class="p1">Mitch and Mark,</p>
+<p class="p2"><br></p>
+<p class="p1">I have now had the opportunity to browse the new archive, and it all</p>
+<p class="p1">looks very good. I have not however had the opportunity to do any</p>
+<p class="p1">detailed validation of the spectral data versus the current archive - I</p>
+<p class="p1">presume that there are others doing this? Some comments and thoughts</p>
+<p class="p1">follow, and I look forward to speaking with you on Tuesday.</p>
+<p class="p2"><br></p>
+<p class="p1">regards</p>
+<p class="p1">Conor Nixon</p>
+<p class="p2"><br></p>
+<p class="p1">PS - I am on vacation tomorrow, back Monday.</p>
+<p class="p2"><br></p>
+<p class="p1">------------------------------------------------------------------</p>
+<p class="p2"><br></p>
+<p class="p1">Comments On The Re-Formatted CIRS Data Archive (Peer Review)</p>
+<p class="p2"><br></p>
+<p class="p1">by Conor A. Nixon, Univ. MD. 04/05/07.</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Overall, my impression of the re-formatted CIRS Data Archive was</p>
+<p class="p1">extremely positive: I commend the re-formatters on an excellent job. In</p>
+<p class="p1">particular, I was impressed by the LBL files which now contain much more</p>
+<p class="p1">information than previously.</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">A few comments:</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">1) REF.CAT: this is very far out of date. CIRS normally provides a file</p>
+<p class="p1">now called CIRSREF.CAT which is (almost) current. I will work on</p>
+<p class="p1">updating it.</p>
+<p class="p2"><br></p>
+<p class="p3">We will update these files based on the corresponding COCIRS_0xxx files.</p>
+<p class="p2"><br></p>
+<p class="p1">2) My second comment was going to be about the file naming convention: I</p>
+<p class="p1">was expecting that the re-formatted data, which adheres to Cassini</p>
+<p class="p1">observation boundaries, would therefore use the request name as part of</p>
+<p class="p1">the file name. However, I see that that the request name is included in</p>
+<p class="p1">the .LBL file as "OBSERVATION_ID" and I understand that custom PDS</p>
+<p class="p1">software is under development for browsing the CIRS dataset, so maybe it</p>
+<p class="p1">doesn't matter so much.</p>
+<p class="p2"><br></p>
+<p class="p3">OK.<span class="Apple-converted-space">  </span>Consensus is not to change this.<span class="Apple-converted-space">  </span>Our on-line catalog (in development) will make it easier to locate files based on the CIMS request.<span class="Apple-converted-space">  </span>The user can also search the index files for this purpose.</p>
+<p class="p2"><br></p>
+<p class="p1">3) The minute part of the file name does not exactly correspond to the</p>
+<p class="p1">minute of the time of the first data item in the file. This is probably</p>
+<p class="p1">known to the data producers judging by the reference to "approximate</p>
+<p class="p1">minute" in the tutorial.txt file. Examples of such instances are</p>
+<p class="p1">ISPM0505280401_FP3.TAB which starts at 04:02:04 and</p>
+<p class="p1">ISPM05050311800_FP1.TAB which starts at 18:01:04. This is hardly a major</p>
+<p class="p1">problem but I was curious as to why the difference exists.</p>
+<p class="p2"><br></p>
+<p class="p3">The minute is the start time of the observation. Otherwise, files from different focal planes of the same CIMS request sometimes turned out to have different time tags, which was very confusing.<span class="Apple-converted-space">  </span>We will clarify this in TUTORIAL.TXT and DATAINFO.TXT.</p>
+<p class="p4"><br></p>
+<p class="p1">-------------------------------------------------------------------</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>Conor A. Nixon</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Univ. Maryland /NASA GSFC</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>-+-</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Solar System Exploration Division</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Planetary Systems Lab -Code 693</p>
+<p class="p1"><span class="Apple-converted-space">       </span>NASA Goddard Space Flight Center</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Greenbelt, MD 20771, USA</p>
+<p class="p1"><span class="Apple-converted-space">             </span>tel. 301-xxx-xxxx</p>
+<p class="p1"><span class="Apple-converted-space">             </span>fax. 301-xxx-xxxx</p>
+<p class="p2"><br></p>
+</body>
+</html>

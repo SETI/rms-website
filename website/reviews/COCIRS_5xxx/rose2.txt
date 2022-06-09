@@ -1,0 +1,95 @@
+From: Mark Rose
+Date: April 10, 2007 3:13:24 PM PDT
+To: Mitch Gordon, Mark Showalter
+Subject: Detector # label problems
+
+Hi Mark and Mitch,
+
+Thanks for all your work. I think the reformatted volumes look very good. I hope I gave you guys some useful comments. (I feel a little hampered in my ability to comment since I can't give very good feedback on the science side of things.)
+
+A little more info on a few of the issues we discussed today:
+
+1. FP3 data files have non-FP3 detector numbers.
+
+It looks like the detector number problems are all in the .FMT files. All these files have bad docs for the detector numbers:
+        APODSPEC/ISPM_ASCII.FMT
+        POIDATA/POI_ASCII.FMT
+        RINDATA/RIN_ASCII.FMT
+        TARDATA/TAR_ASCII.FMT
+
+It looks like the documentation in these files was copied from the original CIRS volumes. All have the following as the documentation for the "DET" column. You'll notice that this description doesn't match the SIS. The SIS in table 1 on page 11 correctly states that 1-20=FP3 and 21-40=FP4, as Conor noted.
+
+OBJECT                          = COLUMN
+    NAME                        = DET
+    DATA_TYPE                   = ASCII_INTEGER
+    START_BYTE                  = 12
+    BYTES                       = 2
+    FORMAT                      = "I2"
+    DESCRIPTION                 = "Detector ID. Values are:
+
+                 0: FP1, pixel 0
+
+                 1: FP3, pixel 1
+                 2: FP3, pixel 2
+                 3: FP3, pixel 3
+                 4: FP3, pixel 4
+                 5: FP3, pixel 5
+                 6: FP3, pixel 6
+                 7: FP3, pixel 7
+                 8: FP3, pixel 8
+                 9: FP3, pixel 9
+                10: FP3, pixel 10
+
+                11: FP4, pixel 1
+                12: FP4, pixel 2
+                13: FP4, pixel 3
+                14: FP4, pixel 4
+                15: FP4, pixel 5
+                16: FP4, pixel 6
+                17: FP4, pixel 7
+                18: FP4, pixel 8
+                19: FP4, pixel 9
+                20: FP4, pixel 10
+
+                21: FP3, pixels 1+2
+                22: FP3, pixels 3+4
+                23: FP3, pixels 5+6
+                24: FP3, pixels 7+8
+                25: FP3, pixels 9+10
+
+                26: FP4, pixels 1+2
+                27: FP4, pixels 3+4
+                28: FP4, pixels 5+6
+                29: FP4, pixels 7+8
+                30: FP4, pixels 9+10
+"
+END_OBJECT                      = COLUMN
+
+I checked all files on COCIRS_5509, and all have the expected ranges (0=FP1, 1-20=FP3, 21-40=FP4).
+
+14. It would be more convenientif the bandwidth and resolution were in the POIINDEX.TAB and RININDEX.TAB files, as well as the ISPMINDEX.TAB file.
+
+I looked over the INDEX directory contents again, and I think I understand how it's designed. I was expecting something slightly different, which was the basis for my original comment.
+
+What I was expecting: A way to look up observations, by geometry, time, or observation ID, and get the set of products in the observation.
+
+What I think is there: A way to look up products based on geometry, time, instrument mode, and/or observation ID, depending on the index file used.
+
+(I'm not sure if I'm making this clear.)
+
+Now that I've thought about this, I also don't like the layout of the POI, RIN, and TAR files as much as I did previously. I think I'd find them more useful if they had the same suffix structure as the binary ISPM files. In fact, if all the files in an observation were broken up by instrument mode and focal plane, I think they'd be the most useful. To tie everything together, it might be nice to have an index file, perhaps in an OBS directory, that lists all files for an observation, broken up by time and instrument mode. I think it's too late to consider this structure, but if you're interested, I'd be glad to either flesh this out with an example, or stop by SETI and draw on a whiteboard for a few minutes.
+
+In any case, you can probably ignore my original comment (#14), as I think what's there is sufficient.
+
+One new comment
+
+- There is a slight problem with ISPMINDEX.TAB in the INDEX directory: there is a space after the FILE_SPECIFICATION_NAME in column 2, before the closing quote. This should be fixed.
+
+
+Mark
+--
+Mark Rose
+PSGS / NASA Ames Research Center
+650.xxx,xxxx
+
+

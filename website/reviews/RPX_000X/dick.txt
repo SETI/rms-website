@@ -1,0 +1,32 @@
+Date: Thu, 30 Sep 1999 14:52:23 -0400 (EDT)
+From: "Richard G. French" <rfrench@ahab.wellesley.edu>
+To: showalter@ringside.arc.nasa.gov
+Subject: PDS data
+
+Mark - I have looked over the PDS distribution of RPX images and the
+comments of the other reviewers. I have just a few things to add:
+
+1) as I understand it, each of the four images in a WFPC2 exposure has
+its own header information, so that Phil's question about different
+filters for the four chips is handled header by header, along with the
+plate scale for that chip, right?
+
+2) I agree with Amanda that some of the keywords in the headers from
+STSCI are not just a little off, but can be VERY far off. THere needs to
+be a way to flag this. ORIENTAT is one of these.
+
+3) I'd like to compare the I/F conversion factors in the files to what I
+computed by integrating over the solar spectrum and using Pat's information
+about the filters. I am having trouble reading those headers at the
+moment but will check them when I can read them. 
+
+4) I like the idea of having a data directory at the root level. 
+
+5) I have not read through the documentation to the level of trying to
+find typographical errors, but overall it seems extensive and quite
+thoroughly done.
+
+
+More comments to follow, but wanted to get in on the conversation.
+Dick
+

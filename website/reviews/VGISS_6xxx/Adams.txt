@@ -1,0 +1,267 @@
+Subject: Re: VGISS peer review telecon instructions
+Date: Mon, 18 Dec 2006 15:00:05 -0800
+From: Steven L. Adams <steven@...>
+To: Mitch Gordon <mgordon@...>
+CC: Emily S. Law <emily.s.law@...>, steven-adams@...
+References: <45836572.6090509@seti.org>
+
+Mitch,
+
+Attached are my comments.  I'll keep looking,
+but don't expect to find much more.  All in all,
+pretty clean.  Data looks fine.  If I have any
+additional comments, will mention them in the
+morning at the telecon.  Talk with you then.
+
+-Steven
+
+Validation coments below apply to all 'volumes' of disk
+
+0.	general 'volume' comments
+
+	root level files/ - CATALOG - DOCUMENT - INDEX/SUMDARKS.*
+
+	A.	These files are the same across ALL 'volumes'.  
+		Should this be so?
+
+		Expecially the VOLDESC.CAT files?  Considering the
+		VOLUME_NAME and VOLUME_ID keywords on the different
+		'volumes'.
+
+1.	root level files
+
+	A.	AAREADME.TXT
+
+		1.	Section 4.4 DIRECTORY STRUCTURE
+
+			a.	ASCII directory tree in the AAREADME.TXT 
+				does not match the directory structure on 
+				the volumes
+
+	B.	ERRATA.TXT
+
+		1.	typo, line 21, change "e.g." to "e.g.,"
+
+	C.	VOLDESC.CAT
+
+		1.	lines 7 and 8,
+
+			VOLUME_SET_ID = USA_NASA_PDS_VGISS_0001_TO_VGISS_0038
+			VOLUMES       = 38
+
+			However, 'volumes' 1 through 3 and 6 through 25 are
+			'missing'.  There are not 38 'volumes'.
+
+		2.	line 10,
+
+			VOLUME_ID = "VGISS_0004"
+
+			Same VOLUME_ID for all 'volumes' on this disk.
+
+		3.	line 22,
+
+			INSTITUTION_NAME = "SETI INSTITUTE"
+
+			Keyword is of type DYNAMIC and will require an 
+			update to the data dictionary for the inclusion of 
+			"SETI INSTITUTE".
+
+		4.	line 23,
+
+			FACILITY_NAME = "SETI INSTITUTE"
+
+			As above, 3.D.
+
+		5.	line 37,
+
+			^INSTRUMENT_HOST_CATALOG = {"VG1HOST.CAT", "VG2HOST.CAT"}
+
+			VG1WINST.CAT and VG2WINST.CAT on volume, but not 
+			listed in the ^INSTRUMENT_HOST_CATALOG keyword 
+			pointer
+
+2.	/CATALOG/ directory files
+
+	A.	missing CATINFO.TXT file
+
+	B.	PERSON.CAT
+
+		1.	lines 14, 40, and 66,
+
+			INSTITUTION_NAME = "SETI INSTITUTE"
+
+			"SETI INSTITUTE", not a standard value, will need
+			to be added to the data dictionary
+
+		2.	line 120,
+
+			INSTITUTION_NAME = "U.S. GEOLOGICAL SURVEY"
+
+			"U.S. GEOLOGICAL SURVEY" is not a standard value,
+			change to the following, existing standard value,
+
+			"UNITED STATES GEOLOGICAL SURVEY"
+
+		3.	line 37 and line 39,
+
+			Same phone number listed for Mitch's voice phone
+			and facsimile number.  Is this correct?  This is
+			as it is currently in the data dictionary.
+
+	C.	DATASET.CAT
+
+		1.	line 24+,
+		
+			a.	ABSTRACT_TEXT = "blah, blah, blah"
+
+				ABSTRACT_TEXT is a 'boo boo' keyword and 
+				should have never been added to the data 
+				dictionary. The required keyword, 
+				ABSTRACT_DESC is missing from this 
+				DATA_SET_INFORMATION object.
+
+				Rename ABSTRACT_TEXT to ABSTRACT_TEXT and 
+				all will be well.
+
+			b.	Make appropriate change in
+				/DOCUMENT/PDSDD.TXT
+
+		2.	line 13
+
+			ARCHIVE_STATUS = "PEER REVIEW"
+			
+			Correct keyword value should be one of the
+			following, as appropriate for the current status
+			of the dataset:
+			
+			ARCHIVE_STATUS = "PRE PEER REVIEW"
+			ARCHIVE_STATUS = "IN PEER REVIEW"
+			ARCHIVE_STATUS = "IN LIEN RESOLUTION"
+
+			Or, whatever value is appropriate.  "PEER REVIEW"
+			is not a valid value for this keyword.
+
+		3.	line 487-489,
+
+			REFERENCE_KEY_ID = "JGRV88"
+			
+			This reference is not listed in the REF.CAT file
+			of this volume.
+
+	D.	REF.CAT
+
+		1.	lines 158 - 160
+
+			missing valid REFERENCE_KEY_ID and REFERENCE_DESC
+			keyword/value pair.
+
+			Current REFERENCE_KEY_ID value should really 
+			be the REFERENCE_DESC value, and the correct 
+			REFERENCE_KEY_ID is missing.
+
+		2.	Add JGRV88 to the file.  It is referenced by the
+			DATASET.CAT file, but not included in the REF.CAT
+			file.
+
+		3.	Two listings of SCIENCEV206N4421 exist in this file.
+			First listing at lines 141-146 is correct, second
+			listing at lines 162-165 is incorrect.  Remove the
+			second listing from the file.
+
+		4.	SCIENCEV233N4759
+
+			This reference is listed in VG1NINST.CAT, 
+			VG2NINST.CAT, VG1WINST.CAT, AND VG2WINST.CAT files
+			in the 'OBJECT = INSTRUMENT_REFERENCE_INFO', but is
+			not listed in the REF.CAT file, (nor in the body of
+			the respective INST.CAT files).
+
+			Either delete OBJECT from the four instrument files,
+			(as they are not referenced within the file), or add
+			to the REF.CAT file.
+
+		5.	SCIENCEV246N4936
+
+			As above, 2.D.4.
+
+		6.	SIS4-7008-2
+
+			This reference is listed in the DATASET.CAT file in
+			the 'OBJECT = INSTRUMENT_REFERENCE_INFO', but is
+			not listed in the REF.CAT file, (nor in the body of
+			file).
+
+			Either delete the OBJECT from the DATASET.CAT file,
+			(as it is not referenced within the file), or add
+			to the REF.CAT file.
+
+	E.	VG1WINST.CAT and VG2WINST.CAT
+
+		1.	Please add a more complete LABEL_REVISION_NOTE,
+			(instead of the perfectly valid, but uninspired,
+			"NULL").
+
+		2.	lines 835-837,
+
+			REFERENCE_KEY_ID = "SNYDER,L1979"
+
+			Ill-formed keyword value, could not decipher what it
+			should have been, but since no SNYDER references are
+			refered to within the file, perhaps just delete this
+			object.
+
+3.	/DOCUMENT/ directory
+
+	A.	PDSDD.TXT
+
+		1.	change 'NAME = ABSTRACT_TEXT' to 'ABSTRACT_DESC'
+			and make appropriate text changes to description.
+
+	B.	PROCESSING.TXT
+
+		1.	line 25,
+
+			Referenced file, DOCUMENT/VICAR.TXT, does not 
+			exist on this volume.  Should it be: 
+			DOCUMENT/VICAR_ASC/TXT?
+
+	C.	VICAR.LBL
+
+		1.	line 3, ^ASCII_DOCUMENT = "VICAR.ASC"
+		
+			Change "VICAR.ASC"
+			To	"VICAR.ASC.TXT"
+
+		2.	^HTML_DOCUMENT = ("VICAR.HTML",
+                                          "VICAR001.GIF",
+                                          "VICAR002.GIF",
+                                          "VICAR003.GIF")
+
+			line 32, OBJECT - HTML_DOCUMENT
+			but, GIF files are not HTML files, but image files.
+			Should be GIF_DOCUMENT (see PDS stds, section 9.1.2)
+
+	D.	TUTORIAL.TXT
+
+		1.	typo, line 81, change "i.e." to "i.e.,"
+
+	E.	VICAR.ASC.TXT
+
+		1.	typo, lines 62 and 196, change "e.g." to "e.g.,"
+
+		2.	typo, lines 109, 111, 497, and 549,
+			change "i.e." to "i.e.,"
+
+4.	/INDEX/ directory
+
+	A.	Why is CUMINDEX only on VGISS_0038 and not the others?
+
+5.	/data/ directories
+
+	A.	DATAINFO.TXT files refer to /DOCUMENTS/ directory as the
+		location of the PROCESSING.TXT file.  This should be listed
+		as the /DOCUMENT/ directory (singular, not plural).  (Last
+		paragraph of each file.)
+
+<eof>
+

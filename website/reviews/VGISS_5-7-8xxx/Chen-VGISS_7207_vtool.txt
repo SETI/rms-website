@@ -1,0 +1,14 @@
+ "10:1" is not in the list of valid values for "SCAN_MODE_ID". It may be that the value needs to be added to the dictionary.
+ "1:1" is not in the list of valid values for "SCAN_MODE_ID". It may be that the value needs to be added to the dictionary.
+ "5:1" is not in the list of valid values for "SCAN_MODE_ID". It may be that the value needs to be added to the dictionary.
+ "CALLAMP" is not in the list of valid values for "TARGET_NAME". It may be that the value needs to be added to the dictionary.
+ "CH4_JS" is not in the list of valid values for "FILTER_NAME". It may be that the value needs to be added to the dictionary.
+ "CH4_U" is not in the list of valid values for "FILTER_NAME". It may be that the value needs to be added to the dictionary.
+ "GEOMETRICALLY_CORRECTED_IMAGE" is not in the list of valid values for "PRODUCT_TYPE". It may be that the value needs to be added to the dictionary.
+ "IMAGING SCIENCE SUBSYSTEM - NARROW ANGLE CAMERA" is not in the list of valid values for "INSTRUMENT_NAME". It may be that the value needs to be added to the dictionary.
+ "IMAGING SCIENCE SUBSYSTEM - WIDE ANGLE CAMERA" is not in the list of valid values for "INSTRUMENT_NAME". It may be that the value needs to be added to the dictionary.
+ "RESEAU_TABLE" is not in the list of valid values for "PRODUCT_TYPE". It may be that the value needs to be added to the dictionary.
+ "The value, "U_RINGS", for "TARGET_NAME" is only valid when changed to "U RINGS".
+ "TIEPOINT_TABLE" is not in the list of valid values for "PRODUCT_TYPE". It may be that the value needs to be added to the dictionary.
+ "UV" is not in the list of valid values for "FILTER_NAME". It may be that the value needs to be added to the dictionary.
+ "VG2-U-ISS-2/3/4/6-PROCESSED-V1.0" is not in the list of valid values for "DATA_SET_ID". It may be that the value needs to be added to the dictionary.

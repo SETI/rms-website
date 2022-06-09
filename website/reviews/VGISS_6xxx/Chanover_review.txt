@@ -1,0 +1,102 @@
+I.  Compliance with PDS Standards
+
+As far as I could tell, the data are in compliance with the PDS  
+standards.  The file naming conventions, file formats, directory  
+structures, and header keywords all followed the PDS standards, and  
+were easy to navigate given some familiarity with PDS data in general.
+
+II.  Scientific Merit of Data
+
+These are definitely appropriate data to be archiving in the PDS.   
+As the "corporate memory" from the Voyager mission slowly fades, it  
+is critical that the Voyager data be preserved in a format that is  
+easier to use than the original format.  The fact that the data  
+also have added scientific value, since they have been recalibrated  
+(using new-and-improved calibration files in some cases) is a  
+second and equally strong argument for archiving these data.  Now  
+that data volumes from more recent spacecraft tend to be much  
+bigger in size, the storage of large data sets is less of an issue  
+and hence is not a concern for these data.
+
+While some might question the utility of archiving the files  
+corresponding to the intermediate stages of the data processing, I  
+concur with the decision to include them in these volumes.   
+Although it will likely be a rare occurrence, there COULD be  
+instances where users would want to redo some of the calibration  
+steps but not necessarily all of them.  Including the intermediate  
+files would enable this kind of application.
+
+I would argue that this data set is SO relevant that parallel data  
+sets for the other 3 Voyager encounters should be developed and  
+archived in the PDS.  Is the software that you used for this task  
+general enough that it could be applied to the Jupiter/Uranus/ 
+Neptune data sets?  [As you know, I had a student working on this  
+for the Jupiter data.  She didn't complete the project and has  
+since moved on to another position, so I need to pick up where she  
+left off... or find another student to do so.]
+
+III.  Usability of Data
+
+Here are some specific issues that I identified in my examination  
+of the VGISS data set.  VGISS_0004_peer_review/AAREADME.TXT - file  
+is empty.  The AAREADME files in the other directories looked fine.
+VGISS_0038_peer_review/VOLDESC.CAT - file is garbage.  I was able  
+to open and read the other VOLDESC.CAT files with no problem, but  
+when I try to read this one (using BBEdit on a Mac), it comes up as  
+gobbledy-gook.
+
+I was able to view the images using NASAView.   However, I was  
+unable to use NASAView to look at the tables (e.g. the *.DAT files  
+in VGISS_0038_peer_review/MIPL).  I could open them in NASAView and  
+it would tell me how many rows and columns the table contained  
+(correctly, as compared with the LBL files), but it displayed all  
+numbers in the table as 0.  I may be doing something wrong as I am  
+not a seasoned NASAView user, but from the perspective of the user  
+it was a little tough to figure out.  Section 5.4 of the  
+
+TUTORIAL.TXT file  deals with VICAR tables, and suggests that the  
+user read DOCUMENT/VICAR.HTML or .ASC to learn more about VICAR  
+tables.  I did that, and I didn't find too much information in that  
+document that helped me with this problem.
+Comments on documentation are below.
+
+AAREADME.TXT:
+
+- global search and replace:  DOCUMENTS -> DOCUMENT for the name of  
+the documentation directory
+
+- in 3rd paragraph of Introduction: "... as found in the  
+aforementioned document."  This statement is a little bit ambiguous  
+since you mention two documents in the previous paragraph.  Which  
+one are you referring to here?
+
+- in 4th paragraph of Introduction: why not include the Smith et  
+al. Voyager references, at least for Saturn?
+
+- Section 3.4, 2nd paragraph, last sentence: two -> to
+
+- Section 4.3, 1st paragraph: why not include an example dark file  
+name in addition to describing the naming convention?
+
+- Section 4.4: why is the MIPL directory included only on volume  
+VGISS_0038?  I'm just curious, actually.  I don't think it NEEDS to  
+be in every volume, but I wondered whether the decision to include  
+in the last volume of the data set is standard practice or whether  
+you had some other reason for putting it there.
+
+PROCESSING.TXT:
+
+In step (6), ADESPIKE:  "... identifying pixels that differ by too  
+much from their neighbors..."  How much is too much?  Is there a  
+specific sigma cutoff that you used?  If so, I think it should be  
+included in this documentation.  If it varied a lot from image to  
+image then I guess it's OK not to include it (could you instead  
+include a RANGE of sigma cutoff values?).
+
+TUTORIAL.TXT
+
+Section 6, last paragraph before 6.1 starts: you cite a document  
+that is "unfortunately not widely available."  Can you provide the  
+user with suggestions of where one MIGHT go to get it?  Does the  
+Rings Node have a copy?   Surely JPL also has a copy archived  
+somewhere?

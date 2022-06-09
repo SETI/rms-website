@@ -1,0 +1,24 @@
+Recommendations:
+
+1) The disk should be organized by target body, not by CDROM  
+volume. I wanted to copy all the Iapetus images and had to hunt for  
+the Iapetus directories and change directory several times in order  
+to copy the files.
+
+2) All the documentation should be in one directory and not  
+duplicated in many directories. Reference is made to the Voyager  
+Calibration Report. This document could be easily scanned and  
+included on the disk as could other documents.
+
+3) The disk needs a picture catalog to help the user select the  
+images he wants to use. The disk also needs SEDR data to help with  
+further processing.
+
+4) It would be handy to have an file of each image in a common  
+computer format, like jpg or gif.
+
+5) It would be handy to include some Voyager-specific NAIF routines  
+and kernels if space permits. There was 27GB of free space on the  
+hard drive.
+
+Joel Mosher

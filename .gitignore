@@ -70,6 +70,7 @@ website_galleries/_*
 *.pic
 *.CAT
 *.old
+*.swp
 website/cassini/*/SOFTWARE
 website/cassini/iss/COISS_0011_DOCUMENT/REPORT/
 website/cassini/sis/

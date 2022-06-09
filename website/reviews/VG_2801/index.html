@@ -1,0 +1,116 @@
+<html>
+<head><title>VG_2801 Peer Review Summary</title></head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>VG_2801 Peer Review Summary</h1>
+Voyager PPS Ring Occultation Data Set<br>
+Mark Showalter<br>
+September 30, 2003<br>
+
+<p>
+This data set has just been delivered to the Central Node for 
+final ingestion into the PDS. Thank you very much to the hardy 
+souls who submitted peer reviews.
+
+The final version is on line as an expanded directory tree
+<a href="/cds/VG_2801/">VG_2801</a> or as a single, downloadable zip file
+<a href="/zips/VG_2801.zip">VG_2801.zip</a> (75 Mbytes).
+
+<h2>Overview of Changes</h2>
+
+The most extensive set of changes since the peer review release
+have been as follows:
+<p>
+In support of a user's request, we created a new
+VECTORS directory. It contains tables of positional information about
+the ring intercept point and the spacecraft position as a function
+of time during each occultation experiment.  The vectors are
+provided in several useful coordinate frames:
+<ul>
+<li> Celestial coordinates (B1950 and J2000).
+<li> Planet equator coordinates (Z along the planet's rotation pole;
+longitudes measured from the equator plane's ascending node on Earth's
+equator of B1950 and J2000).
+<li> Ring plane coordinates for the rings of Uranus (Z along the ring's
+normal, longitudes matching the planet equator coordinates).
+<li> Ring anomaly coordinates for the rings of Uranus (Z along the
+ring's normal, longitudes measured from the ring's pericenter.
+</ul>
+These files can be used to generate geometric information not otherwise
+found in the geometry footprint models provided earlier. For example, it
+becomes easy to figure out the true anomaly of the ring intercept point on
+an eccentric/inclined ring.
+<p>
+Software tools have been cleaned up and better documented, so that users
+can build them more easily.
+In addition, we have provided some very simple FORTRAN and C programs in
+the SOFTWARE directory for reading data records from the binary EDITDATA files.
+<p>
+Labels have been extensively rewritten to contain more information and to
+show greater consistency from directory to directory.
+The labels are also now much more consistent across all three Voyager ring
+occultation data sets: PPS, UVS and RSS.
+<p>
+Additional changes reflect issues that have come up more recently in the
+Central Node's pre-peer review of the UVS and RSS data sets. Although
+these issues were not raised in the Central Node's PPS review (from the
+distant past), they are clearly issues that should be addressed now.
+<ul>
+<li>PRODUCT_IDs have been added to all labels. In addition, SOURCE_PRODUCT_IDs
+now provide the connection between each product and the products that were used
+in its creation.
+<li>ITEM_BYTES had been added to all columns that have multiple items.
+<li>CATALOG/TARGET.CAT now provides the missing target information for
+Neptune's small inner satellites. This came up because these moons are listed
+as targets of the Voyager Neptune SPICE kernel, archived on the
+volume.
+<li>ASCII format table files have been converted from STREAM to FIXED_LENGTH
+format.
+<li>Embedded underscores have been removed from all *NAME keywords except
+column NAMEs and SAMPLING_PARAMETER_NAMEs.  These exceptions are needed to
+support Rings Node software tools.  The minor deviation from PDS standards
+has been noted in ERRATA.TXT.
+</ul>
+
+<h2>Detailed Responses to Reviewers' Comments</h2>
+
+Follow these links for each reviewer's comments and my detailed, point-by-point
+response. I believe we have responded to essentially every criticism and have
+adopted nearly every suggestion.
+<ul>
+
+<li>
+<b>Dick Simpson</b>:
+<a href="simpson_review.txt">Review</a> |
+<a href="simpson_response.txt">Annotated review with responses</a>
+</li>
+
+<li>
+<b>Josh Colwell</b>:
+<a href="colwell_review.txt">Review</a> |
+<a href="colwell_response.txt">Annotated review with responses</a>
+</li>
+
+<li>
+<b>Amara Graps</b>:
+<a href="graps_review.txt">Review</a> |
+<a href="graps_response.txt">Annotated review with responses</a>
+<ul>
+<li>
+<a href="graps_review.txt">Detailed evaluation</a> |
+<a href="graps_DetailedEvaluation_response.txt">Annotated evaluation with responses</a>
+</li>
+
+<li>
+<a href="graps_WorkingPastExample.txt">Working past example</a>
+</li>
+</ul>
+
+</ul>
+<hr>
+<a href="/">Rings Node Home</a>
+</body>
+</html>

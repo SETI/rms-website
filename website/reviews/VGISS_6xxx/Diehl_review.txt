@@ -1,0 +1,35 @@
+Subject: Voyager Volume Comments
+Date: Fri, 8 Dec 2006 13:24:49 -0800
+From: John Diehl <john.m.diehl...>
+To: Mitch Gordon <mgordon...>
+
+December 8, 2006
+
+Dear Mitch,
+
+I have completed my review of the Voyager volumes.
+
+On every volume, there was no CATINFO.TXT file in the DOCUMENT
+sub-directory.  This is required.
+
+On every volume there was no cumulative index.  This is required.
+
+As far as the format of the files. I have attached a zipped tar file
+with what I found on each volume.  The file names on the tar file are
+of the form testlinVgIssxx, where the xx inidcates the volume number
+for which the comments are intended.
+
+Let me know if you have any questions.
+
+Sincerely,
+
+John Diehl
+-- 
+John Martin Diehl                  Software Architect
+John.M.Diehl.....                  168-514 Jet Propulsion Laboratory
+Tel: 818.xxx.xxxx                  California Institute of Technology
+Fax: 818.xxx.xxxx                  4800 Oak Grove Drive
+Cell: 818.xxx.xxxx                 Pasadena, CA 91109
+JPL Disclaimer - All personal and professional opinions presented herein
+are my own and do not, in any way, represent the opinion or policy of JPL.
+ 

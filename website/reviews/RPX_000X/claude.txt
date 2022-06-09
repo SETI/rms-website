@@ -1,0 +1,183 @@
+Date: Wed, 21 Jul 1999 16:32:59 -1000 (HST)
+From: Claude Roddier <croddier@fabry.ifa.hawaii.edu>
+To: SHOWALTER@ringside.arc.nasa.gov
+
+Mark,
+
+I followed your recommendation and here are my comments on
+the disks. I am leaving tomorrow and I am not sure that I'll
+be able to read my e-mail until end of August. I am going
+to a small French village and until recently there was no
+access to the internet!
+
+Best regards
+
+Claude
+
+************************
+Comments on the data set:
+
+My comments are very positive in the sense that I have been
+able without difficulty to understand the whole organisation
+of the data set and look at the files and labels. It seems to
+me that if I wanted now to use these data I could do it.
+There are only two points I'd like to comment.
+
+The first one is in the display of the GIF files in the
+subdirectories "browse". The images of PC1 have been rescaled
+and rotated to show the whole image of Saturn when the image
+has been taken on PC1 and WF4. This is a good idea but this
+should be explained in the tutorial in the fourth paragraph
+(4. HST/WFPC2 Images and Filters). If you have never seen the
+images, it is difficult to realize why the PC1 images are so
+small whereas the pixel size is twice smaller than the pixel
+size of the WF.
+
+My second remark is more important. I think an easy index to
+the files is missing. There is an index for each disk and an
+index for the whole set in the subdirectories "index", but
+they are quite impossible to read. If you display them on the
+screen of your computer you have to make an enormous window,
+and even like this each image is described in several lines
+on the screen. I would call this index the "formal" index and
+I think it has to be there. But I am sure potential users would
+find useful another index which gives only the most useful
+information, so that it is much smaller and easier to read.
+In the headers the main part of the information has already been
+given many times, and after a while you don't even look at it,
+but since it is there, it hides the particular information which
+has to be given just for the image described. I have tried to
+write down such an index with the information taken in the headers.
+I think this index should be in the "browse" directories
+for each of these directories and a general one somewhere
+on the disks.
+
+I did it for the cd 5 but in fact I realised it was missing when
+I looked at the images of the cd3 which are the images of the
+August ring plane crossing. Since I had reduced these data,
+I had my own notes and images and I compared them to the gif files
+of RPX_0003/199508XX/U2TFXXXX which are the images of the proposal
+5836 by Nicholson. I was unable to find some of the files that you
+(Mark Showalter) had sent to me. When I looked carefully, I found
+that these images had been taken in the proposal 6216 by Trauger.
+So I had to go to another directory and look at the labels. If I
+had not known that these images were in fact taken at the same time
+as the Nicholson images I am not sure I would have found them.
+
+I wrote the "easy index" for the CD 5 that I did not know.
+Here is an attempt of what I think would be useful:
+
+
+
+RPX_0005
+
+199511XX/U2OOXXXX/BROWSE TRAUGER 1995-11-20
+0401      ,"U2OO0401T.GIF","SATURN "
+START_TIME                      = 1995-11-20T07:11:17
+STOP_TIME                       = 1995-11-20T07:32:57
+FILTER_NAME                     = F300W
+EXPOSURE_DURATION               = 1300.00
+Aperture type: WF2-FIX
+NO APPARENT PROBLEMS
+.
+.
+.
+
+199511XX/U2TFXXXX/BROWSE NICHOLSON 1995-11-21
+0301       ,"U2TF0301T.GIF","SATURN "
+START_TIME                      = 1995-11-21T10:40:17
+STOP_TIME                       = 1995-11-21T10:45:17
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 300.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+MUCH OF SATURN
+
+0302        ,""U2TF0302T.GIF","SATURN "
+START_TIME                      = 1995-11-21T10:48:17
+STOP_TIME                       = 1995-11-21T10:53:17
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 300.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+MUCH OF SATURN
+
+0303        ,"U2TF0303T.GIF","SATURN "
+START_TIME                      = 1995-11-21T11:00:17
+STOP_TIME                       = 1995-11-21T11:06:07
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 350.00
+HST Target name: SATURN-WEST-ANSA
+Aperture type: PC1-FIX  (PC1)
+MUCH OF SATURN
+THERE WAS ONE 4 SECOND RECENTERING
+
+0304        ,"U2TF0304T.GIF","SATURN "
+START_TIME                      = 1995-11-21T11:09:17
+STOP_TIME                       = 1995-11-21T11:15:07
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 350.00
+HST Target name: SATURN-WEST-ANSA
+Aperture type: PC1-FIX  (PC1)
+MUCH OF SATURN
+
+0305        ,"U2TF0305T.GIF","SATURN "
+START_TIME                      = 1995-11-21T12:07:17
+STOP_TIME                       = 1995-11-21T12:15:37
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 500.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+Data quality: UNKNOWN
+MUCH OF SATURN
+BAD TELEMETRY FOR FIRST 150 SECONDS OF EXPOSURE
+
+0306        ,"U2TF0306T.GIF","SATURN "
+START_TIME                      = 1995-11-21T12:18:17
+STOP_TIME                       = 1995-11-21T12:26:37
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 500.00
+HST Target name: SATURN-EAST-ANSA
+Aperture type: PC1-FIX  (PC1-WF4)
+MUCH OF SATURN
+
+0307        ,"U2TF0307T.GIF","SATURN "
+TART_TIME                      = 1995-11-21T12:34:17
+STOP_TIME                       = 1995-11-21T12:40:57
+FILTER_NAME                     = FQCH4P15
+EXPOSURE_DURATION               = 400.00
+HST Target name: SATURN-WEST-ANSA
+Aperture type: PC1-FIX  (PC1)
+MUCH OF SATURN
+
+.
+.
+.
+
+199511XX/U2TFXXXX/BROWSE NICHOLSON 1995-11-27
+.
+.
+.
+
+
+I think that if you have such an index you can easily see which
+are the dates and the filters. A problem is "where are the
+images". With all the informations given in the header you
+cannot find this information anywhere and you are obliged to
+look at the images. In fact if you realize that there is some
+kind of code you can derive this information. Here for instance
+on some images is written "HST Target name: SATURN-WEST-ANSA".
+That means that the image has been taken on PC1 only. On others
+is written "HST Target name: SATURN-EAST-ANSA": the image is taken
+also on WF4. But the label "SATURN-EAST-ANSA" is wrong since you
+have both ansae. I think that since the kind of index I am
+proposing is not a "legal" one you could change the legal
+appelation "PC1-FIX" which gives only the information that the
+image has been taken on the right side of the mosaick by the
+appelations "PC1" or "PC1-WF4".
+
+Otherwise I am very impressed by the amount of excellent work
+made to help people to use this data set.
+
+
+

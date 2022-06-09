@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.35">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0600}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0600; min-height: 14.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4600ff}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4600ff; min-height: 14.0px}
+    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    span.s1 {letter-spacing: 0.0px}
+    span.s2 {font: 12.0px Symbol; letter-spacing: 0.0px}
+    span.s3 {letter-spacing: 0.0px color: #fd0000}
+    span.s4 {letter-spacing: 0.0px color: #4700ff}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">Review Panel Telecon notes.<span class="Apple-converted-space"> </span></span></p>
+<ul>
+  <li class="li1"><span class="s2"></span><span class="s3"><b>Red</b></span><span class="s1"> entries indicate actions to be taken to remove a lien.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li1"><span class="s2"></span><span class="s4"><b>Blue</b></span><span class="s1"> entries describe the steps taken to respond to the comment.</span></li>
+</ul>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Review submitted by Mark Rose 9 Apr 2007</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Scope of comments</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">I have necessarily limited my comments to the data structure and the contents of descriptive files. I have looked over a number of the volumes, but have pulled all examples from COCIRS_5509, the last volume in the set.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">General data organization</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">The organization is nice. If you don't need to read GEO files, it's very straightforward to step through the data by reading files in parallel. If you need the GEO data, it's a little trickier, but manageable.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">I checked a couple of the volumes to ensure that all the data rows had the right SCET values, but did not do this exhaustively on all volumes. (I presumed you had already done that.)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">DATA directory</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">1. FP3 data files have non-FP3 detector numbers. E.g., on COCIRS_5509:</span></p>
+<p class="p1"><span class="s1">- APODSPEC/ISPM0509160800_FP3.TAB line 6 has detector 12</span></p>
+<p class="p1"><span class="s1">- POIDATA/POI0509160800_FP3.TAB line 6 has detector 12</span></p>
+<p class="p1"><span class="s1">- RINDATA/RIN0509160800_FP3.TAB line 6 has detector 12</span></p>
+<p class="p1"><span class="s1">- TARDATA/TAR0509160800_FP3.TAB line 6 has detector 12 (= FP4 pixel 2)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We believe that this may be related to the distinction between detector number and pixel number. We will investigate this and clean it up. If appropriate, we will update the documentation to clarify this distinction.</span></p>
+<p class="p4"><span class="s1"><b></b></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: This was due to an error in the description field of the .FMT files, which mis-identified the relationships between some detector IDs and pixel numbers. The labels and .FMT files have all been fixed. The detector IDs were correct.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">2. Different focal planes sometimes have different target sets. This may be correct (since the three focal planes have slightly different pointing), but I wanted to make sure. Sometimes it's just a target missing from one or more focal planes, but sometimes there is a completely different satellite, which may be correct but looks suspect. E.g., on COCIRS_5509 at 0509022120, we have:</span></p>
+<p class="p1"><span class="s1">- FP1 targets: 602, 611, 699</span></p>
+<p class="p1"><span class="s1">- FP3, FP4 targets: 602, 603, 699</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">(another example is at 0509160800)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: This situation arises when a moon passes through the field of view of one focal plane but not another. We have confirmed that it is not an error.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">3. Targets are not identified correctly via TARGET_NAME in label files. For example, on COCIRS_5509 at 0509022120:</span></p>
+<p class="p1"><span class="s1">- APODSPEC/ISPM0509022120_FP1.LBL, _FP3.LBL, and _FP4.LBL all show TETHYS as the only target in TARGET_NAME keyword. However, there are 3 targets according to GEO files.</span></p>
+<p class="p1"><span class="s1">- Corresponding POIDATA, RINDATA, and TARDATA files also show only TETHYS.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">PDS standards require that TARGET_NAME be a single-valued parameter. However, TARGET_LIST can have multiple values. We propose to add this to the labels but not necessarily to the index.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: We have added a multi-valued TARGET_LIST parameter to the relevant labels (in the TARDATA, ISPMDATA, and APODSPEC subdirectories).</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">4. ISPM*.LBL: SAMPLING_PARAMETER_UNIT = "INVERSE CENTIMETER". Is this correct? It is different from the "CM^-1" which would be used in a unit expression. If "CM^-1" is legal here, it would be better to be consistent.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">The correct expression, according to PDS standards, is "CM**-1".<span class="Apple-converted-space">  </span>We will make this change.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: These have all been changed.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">CALIB directory</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">5. All the calibration files are really table files rather than text files. They should be made more like tables via one of these two fixes:</span></p>
+<p class="p1"><span class="s1">a. change to a real PDS TABLE, remove the header lines and add column specifications to the label;</span></p>
+<p class="p1"><span class="s1">b. or, keep as text, but make the headers line up with the data. (There are extra spaces in the header line that cause the header labels not to line up with the data columns.)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We believe that these files were copied directly from the original CIRS volumes. However, it should be possible to change them to TABLE objects with minimal effort.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: In the re-formatted CALIB directory, the files have been transformed into standard PDS table files, with detached, informative labels. This is a standard step now in the re-formatting pipeline, so any future changes to the CALIB directory by the CIRS team will also propagate forward to the new volumes.</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">CATALOG directory</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">All examples from COCIRS_5509.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">6. CATINFO.TXT has a PUBLICATION_DATE that is prior to the publication date of the original publication date of COCIRS_0509 (2006-04-28 vs. 2006-07-01).</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix this.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: The CATALOG directories in all the new volumes are current. Our volume re-formatting procedure includes a check to confirm that the CATALOG files have not changed since the team’s previous delivery. Changes to CATALOG files are handled manually. This procedure ensures that both sets of CATALOG files will stay in sync.</b></span></p>
+<p class="p4"><span class="s1"><b></b></span><br></p>
+<p class="p5"><span class="s1"><b>(Note that CIRSREF.CAT changes with every delivery; updates to this file are handled automatically.)</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">7. DATASET.CAT</span></p>
+<p class="p1"><span class="s1">- DATA_SET_TERSE_DESC: Should mention "Saturn" to help with full-text search and to make result rows more readable.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: The DATA_SET_TERSE_DESC now mentions Saturn."<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">- ABSTRACT_DESC: Should mention "Saturn" to help with full-text search and to make result rows more readable.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: The ABSTRACT_DESC now mentions Saturn."<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">- DATA_SET_TARGET descriptions: These are identical with original volumes. Do original volumes include satellites discovered during the observations for the volume? If not, need to augment them here.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">Consensus was that this change is unnecessary, because none of the new satellites are large enough to be detectable in the data set.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1"><b>Resolution: No change.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">- START_TIME doesn't match the value of the original volume (COCIRS_0509).</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1"><b>Resolution: This series of volumes begins with COCIRS_5401, and the START_TIME corresponds to the first volume, 2004-01-01. Earlier data is from the cruise phase and is not useful for Saturn system science. No change.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">- line 533: "This dataset is composed of CIRS Time Sequential Data Records": TDSR is deemphasized elsewhere within this file (data set description, etc.). Are the reformatted tables also supposed to be called TDSRs, or does that imply Vanilla formatting?</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will investigate the precise meaning of "TSDR"---perhaps it is just another name for the Vanilla format. We'll update the documentation as appropriate.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: This section of the file is copied directly from the team’s DATASET.CAT file (as is noted in the file itself). In the latest update, the CIRS team appears to have eliminated all use of the acronym to "TSDR". No further action is needed on our part.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">DOCUMENT directory</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">8. Publication dates in the labels are sometimes less then the publication date in the corresponding file from the original CIRS volume.</span></p>
+<p class="p1"><span class="s1">- E.g., COCIRS_5509, CASSINI-RSP.LBL: COCIRS_0509=2006-06-08, COCIRS_5509=2006-03-08</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: Our version of the DOCUMENT directory is currently up to date. Our re-formatting procedure now simply duplicates the directory as delivered by the team, and then adds or updates a few files, so there is no danger of these directories going out of sync in the future.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">9. CIRS_FOV_OVERVIEW.TXT: It appears that all \r\n newline sequences in the original file have been replaced with \n\n. I think this is wrong, since the PDS standard (I think) is to have \r\n. Secondly, the new file prints double-spaced.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: This was fixed by the team and the change has propagated into the re-formatted volumes.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">10. DATASIS.TEXT: It appears that all \r\n newline sequences in the original file have been replaced with \n\n. I think this is wrong, since the PDS standard (I think) is to have \r\n. Secondly, the new file prints double-spaced.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: This was fixed by the team and the change has propagated into the re-formatted volumes.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">11. DATASIS_OCR.PDF and .LBL: Perhaps merge this label information into DATASIS.LBL, as is done for the TEX and PDF files, to make more explicit the fact that this is a 3rd, alternate format.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">This is a new file added to the directory by the Rings Node. It overcomes the fact that the original file originated in TeX and therefore uses a non-standard font, which prevents the user from copying text out of the original DATASIS.PDF. We prefer not to modify the other files in the directory. This is already noted in DOCINFO.TXT. We will make sure it is explained more clearly.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: The panel decided this approach is more appropriate. No change.</b></span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">CALIB directory</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">12. Publication dates in the labels are sometimes less then the publication date in the corresponding file from the original CIRS volume.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: Current volumes are up to date. As with the CATALOG directory, our pipeline automatically checks for changes from the CIRS team’s previous delivery. If any changes are identified, they are handled manually.</b></span></p>
+<p class="p4"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">INDEX directory</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">13. Publication dates in the labels are sometimes less then the publication date in the corresponding file from the original CIRS volume.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: Publication dates in the INDEX directory now indicate the date when the file was generated.</b></span></p>
+<p class="p4"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">14. It would be more convenient if the bandwidth and resolution were in the POIINDEX.TAB and RININDEX.TAB files, as well as the ISPMINDEX.TAB file. Reason: Since some ISPM files won't be in the RININDEX.TAB file (and perhaps not in the POIINDEX.TAB file either, since some ISPM files are just SKY or, perhaps, just rings), correlating the files is more complicated. As well, some indication of the mode might be nice, but a single character, as in the original CIRS volumes (A/C/E/O/P/B) would be better than the separate flag approach.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">It was our intention that each file have exactly the same sequence of rows, and Mark agreed that this change is unnecessary if the records do match. We will confirm that the file records match as intended. We will make this point clearer in the tutorial file, including the note that some records are filled with values of -200, which means that they do not contain any valid information.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1"><b>Resolution: We have merged the separate index files for the RIN, POI, GEO and TAR files into a single OBSINDEX.TAB file, with one row per ISPM file. This eliminates the problem.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">15. ISPMINDEX.TAB: It would be better to have a single mode flag (all/even/odd/pairs/centers/blinking), rather than the 6 separate flags.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">Because the mode can change within a single file, Mark retracted this suggestion.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: No change.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">16. The original volumes included tables of the CIRS requests and their times. This by itself is not that useful for the reformatted volumes, since the products are arranged around the CIRS requests. However, some other information from the science kernel might be appropriate, such as a table of CIRS request IDs and their description or science objective. (Or perhaps a scientist could tell me what would be appropriate. And as I mentioned, the info is in the science kernel, so a sophisticated user could get the info anyway by using INSPEKT or writing a SPICE program.)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">This is not intended as a replacement for the original volume, so we did not attempt to duplicate all the information.<span class="Apple-converted-space">  </span>Nevertheless, we agree that a table of CIRS requests with their times and science objectives would be useful. We'll include it if practical.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">It was also suggested that the volume indicate more clearly the absence of raw data on this volume. This will be better documented in AAREADME.TXT and TUTORIAL.TXT, with references back to the original CIRS volume from which the re-formatted data files were derived.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: The introductions to AAREADME.TXT and TUTORIAL.TXT have been updated.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">--</span></p>
+<p class="p1"><span class="s1">Mark Rose</span></p>
+<p class="p1"><span class="s1">PSGS / NASA Ames Research Center</span></p>
+<p class="p1"><span class="s1">650.xxx.xxxx</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">=====================================================</span></p>
+<p class="p3"><span class="s1">FOLLOW-UP MESSAGE...</span></p>
+<p class="p3"><span class="s1">=====================================================</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">From: Mark Rose</span></p>
+<p class="p1"><span class="s1">Date: April 10, 2007 3:13:24 PM PDT</span></p>
+<p class="p1"><span class="s1">To: Mitch Gordon, Mark Showalter</span></p>
+<p class="p1"><span class="s1">Subject: Detector # label problems</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Hi Mark and Mitch,</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Thanks for all your work. I think the reformatted volumes look very good. I hope I gave you guys some useful comments. (I feel a little hampered in my ability to comment since I can't give very good feedback on the science side of things.)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">A little more info on a few of the issues we discussed today:</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">1. FP3 data files have non-FP3 detector numbers.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">It looks like the detector number problems are all in the .FMT files. All these files have bad docs for the detector numbers:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>APODSPEC/ISPM_ASCII.FMT</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>POIDATA/POI_ASCII.FMT</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>RINDATA/RIN_ASCII.FMT</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>TARDATA/TAR_ASCII.FMT</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">It looks like the documentation in these files was copied from the original CIRS volumes. All have the following as the documentation for the "DET" column. You'll notice that this description doesn't match the SIS. The SIS in table 1 on page 11 correctly states that 1-20=FP3 and 21-40=FP4, as Conor noted.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">OBJECT                          = COLUMN</span></p>
+<p class="p1"><span class="s1">    NAME                        = DET</span></p>
+<p class="p1"><span class="s1">    DATA_TYPE                   = ASCII_INTEGER</span></p>
+<p class="p1"><span class="s1">    START_BYTE                  = 12</span></p>
+<p class="p1"><span class="s1">    BYTES                       = 2</span></p>
+<p class="p1"><span class="s1">    FORMAT                      = "I2"</span></p>
+<p class="p1"><span class="s1">    DESCRIPTION                 = "Detector ID. Values are:</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">                 0: FP1, pixel 0</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">                 1: FP3, pixel 1</span></p>
+<p class="p1"><span class="s1">                 2: FP3, pixel 2</span></p>
+<p class="p1"><span class="s1">                 3: FP3, pixel 3</span></p>
+<p class="p1"><span class="s1">                 4: FP3, pixel 4</span></p>
+<p class="p1"><span class="s1">                 5: FP3, pixel 5</span></p>
+<p class="p1"><span class="s1">                 6: FP3, pixel 6</span></p>
+<p class="p1"><span class="s1">                 7: FP3, pixel 7</span></p>
+<p class="p1"><span class="s1">                 8: FP3, pixel 8</span></p>
+<p class="p1"><span class="s1">                 9: FP3, pixel 9</span></p>
+<p class="p1"><span class="s1">                10: FP3, pixel 10</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">                11: FP4, pixel 1</span></p>
+<p class="p1"><span class="s1">                12: FP4, pixel 2</span></p>
+<p class="p1"><span class="s1">                13: FP4, pixel 3</span></p>
+<p class="p1"><span class="s1">                14: FP4, pixel 4</span></p>
+<p class="p1"><span class="s1">                15: FP4, pixel 5</span></p>
+<p class="p1"><span class="s1">                16: FP4, pixel 6</span></p>
+<p class="p1"><span class="s1">                17: FP4, pixel 7</span></p>
+<p class="p1"><span class="s1">                18: FP4, pixel 8</span></p>
+<p class="p1"><span class="s1">                19: FP4, pixel 9</span></p>
+<p class="p1"><span class="s1">                20: FP4, pixel 10</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">                21: FP3, pixels 1+2</span></p>
+<p class="p1"><span class="s1">                22: FP3, pixels 3+4</span></p>
+<p class="p1"><span class="s1">                23: FP3, pixels 5+6</span></p>
+<p class="p1"><span class="s1">                24: FP3, pixels 7+8</span></p>
+<p class="p1"><span class="s1">                25: FP3, pixels 9+10</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">                26: FP4, pixels 1+2</span></p>
+<p class="p1"><span class="s1">                27: FP4, pixels 3+4</span></p>
+<p class="p1"><span class="s1">                28: FP4, pixels 5+6</span></p>
+<p class="p1"><span class="s1">                29: FP4, pixels 7+8</span></p>
+<p class="p1"><span class="s1">                30: FP4, pixels 9+10</span></p>
+<p class="p1"><span class="s1">"</span></p>
+<p class="p1"><span class="s1">END_OBJECT                      = COLUMN</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">I checked all files on COCIRS_5509, and all have the expected ranges (0=FP1, 1-20=FP3, 21-40=FP4).</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">OK, thanks for looking into this.<span class="Apple-converted-space">  </span>We will fix it.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: This section of every .LBL and .FMT file has been corrected.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">14. It would be more convenient if the bandwidth and resolution were in the POIINDEX.TAB and RININDEX.TAB files, as well as the ISPMINDEX.TAB file.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">I looked over the INDEX directory contents again, and I think I understand how it's designed. I was expecting something slightly different, which was the basis for my original comment.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">What I was expecting: A way to look up observations, by geometry, time, or observation ID, and get the set of products in the observation.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">What I think is there: A way to look up products based on geometry, time, instrument mode, and/or observation ID, depending on the index file used.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">(I'm not sure if I'm making this clear.)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">The fact this is confusing means that, at minimum, that we must clarify the documentation. It also means we should consider a better way to index the data set. To explain...</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">INDEX.TAB is a required file for all PDS volumes, and it contains one record per labeled PDS data file. That means that it mixes information about files of different types (POI, RIN, ISPM, etc.) so it is of limited utility for searching. However, it does contain a complete list of all the data files on the volume.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">The other index files, RININDEX, POIINDEX and ISPMINDEX, are the ones intended to support searches. However, as you've noted, they do not match well. RININDEX and POIINDEX contain one record per {CIRS request + focal plane}, whereas ISPMINDEX contains one record per {CIRS request + focal plane + resolution change}.<span class="Apple-converted-space">  </span>This, as you note, makes the files difficult to read in parallel and use for searching.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">I think the natural solution is to produce a single index that contains one record per {request + focal plane}. It could also note the range of resolutions used. That is the key information that I would want to load into a database. Another index could summarize all the binary files associated with a particular {request + focal plane}, and this is the file that would indicate the distinct resolution found in each of the A,B,C... suffixed binary files.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Now that I've thought about this, I also don't like the layout of the POI, RIN, and TAR files as much as I did previously. I think I'd find them more useful if they had the same suffix structure as the binary ISPM files. In fact, if all the files in an observation were broken up by instrument mode and focal plane, I think they'd be the most useful. To tie everything together, it might be nice to have an index file, perhaps in an OBS directory, that lists all files for an observation, broken up by time and instrument mode. I think it's too late to consider this structure, but if you're interested, I'd be glad to either flesh this out with an example, or stop by SETI and draw on a whiteboard for a few minutes.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">In any case, you can probably ignore my original comment (#14), as I think what's there is sufficient.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">This represents a radical departure from our design and would also require an almost complete rewrite of our re-formatting code.<span class="Apple-converted-space">  </span>Furthermore, we think that {request + focal plane} is the more natural way to divide up the data set from the viewpoint of a scientist; resolution changes are a secondary consideration, except that they have the unfortunate side-effect of forcing us to start a new binary file.<span class="Apple-converted-space">  </span>We hope that a more unified approach to indexing, as discussed above, would solve the key problem that concerns you.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: The lien-resolved version of the data no longer uses the A,B,C,... suffixes or the combined-detached labels. A new file begins every time the CIRS activity changes OR the spectral sampling changes. As a result, there can be multiple sets of files per CIRS activity. However, we believe that it resolves the issues raised in the above discussion. In practice, it is also much simpler to use.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">One new comment</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">- There is a slight problem with ISPMINDEX.TAB in the INDEX directory: there is a space after the FILE_SPECIFICATION_NAME in column 2, before the closing quote. This should be fixed.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Resolution: In PDS standards, trailing blanks are included inside the quotes of COLUMN objects with DATA_TYPE = CHARACTER. The quote characters are always aligned vertically. No change has been made.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Mark</span></p>
+<p class="p1"><span class="s1">--</span></p>
+<p class="p1"><span class="s1">Mark Rose</span></p>
+<p class="p1"><span class="s1">PSGS / NASA Ames Research Center</span></p>
+<p class="p1"><span class="s1">650.xxx.xxxx</span></p>
+</body>
+</html>

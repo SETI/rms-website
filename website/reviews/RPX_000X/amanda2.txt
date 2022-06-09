@@ -1,0 +1,20 @@
+Date: Thu, 30 Sep 1999 14:56:40 -0700 (MST)
+From: "Amanda S. Bosh" <amanda@lowell.edu>
+To: showalter@ringside.arc.nasa.gov
+Subject: Other info for RPX CD review
+
+RTAMATCH:  FYI, I found this on the HST website.  Phil is correct, is deals
+with Real Time Analysis.  It says:  "Real Time Analysis files are no longer
+sent to PODPS.  This is an obsolete item.  This keyword should alway be
+"NO RTA FI AVAILABL"".  So maybe add a comment to the /DOCUMENT/FITSDEFS.TXT
+file that this is obsolete, and used to deal with real-time analysis files.
+
+Another reference for the CATALOG/REF.CAT:
+Bosh, A. S., A. S. Rivkin, J. W. Percival, M. Taylor, and G. W. van Citters 
+1997. Saturn ring-plane crossing, May 1995: Pole precession and Ring thickness. 
+Icarus 129, 555-561.
+
+My FGS contact has disappeared, I have an email in to him, I'll get back
+to you about PA_V3 when I hear back from Larry.
+
+--a

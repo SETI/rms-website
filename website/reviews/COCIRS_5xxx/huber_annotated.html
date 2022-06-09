@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="824.42">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #ff0600}
+  </style>
+</head>
+<body>
+<p class="p1">From: Lyle Huber</p>
+<p class="p1">Date: April 5, 2007 10:22:06 AM PDT</p>
+<p class="p1">To: Lyle Huber, Mitch Gordon</p>
+<p class="p1">Cc: Mark Showalter, Nancy Chanover</p>
+<p class="p1">Subject: CIRS comments</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Mitch and Mark,</p>
+<p class="p2"><br></p>
+<p class="p1">I have taken a not-as-detailed-as-I-would-like look at a sample of the<span class="Apple-converted-space"> </span></p>
+<p class="p1">reformatted CIRS data. My main comment is that it looks like it's in<span class="Apple-converted-space"> </span></p>
+<p class="p1">really good shape and I want to thank you guys for putting forth the<span class="Apple-converted-space"> </span></p>
+<p class="p1">effort to get the CIRS data into something more usable for the community.</p>
+<p class="p2"><br></p>
+<p class="p1">A couple random PDS comments:</p>
+<p class="p2"><br></p>
+<p class="p1">- As I noted to Mitch yesterday, there are some double quotes in DATASET.CAT</p>
+<p class="p1"><span class="Apple-converted-space">  </span>that should be single quotes.</p>
+<p class="p2"><br></p>
+<p class="p3">We will fix this.</p>
+<p class="p2"><br></p>
+<p class="p1">- I really don't think FMT files should be used for INDEX TABLEs. You're</p>
+<p class="p1"><span class="Apple-converted-space">  </span>using a separate FMT for each index anyway so why bother?</p>
+<p class="p2"><br></p>
+<p class="p3">A valid point.<span class="Apple-converted-space">  </span>We will fold the format information into the labels.</p>
+<p class="p2"><br></p>
+<p class="p1">- I'm not all that thrilled with the explicit FILE object labelling method.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Are you trying to be consistent with the original labels or is it just</p>
+<p class="p1"><span class="Apple-converted-space">  </span>because you wanted to have both ASCII and BINARY tables for everything?</p>
+<p class="p1"><span class="Apple-converted-space">  </span>If it's the second, then I could come up with a reasonable alternative</p>
+<p class="p1"><span class="Apple-converted-space">  </span>to using the FILE object but I'll raise that in a telecon.</p>
+<p class="p2"><br></p>
+<p class="p3">We discussed the various options on the telecon without reaching a clear consensus.<span class="Apple-converted-space">  </span>One option is to add "_ASCII" and "_BINARY" suffixes to the file names, so that the label files can be distinguished.<span class="Apple-converted-space">  </span>Another is to populate separate directory trees with binary and ASCII data---but this has the disadvantage of separating files that logically belong together.<span class="Apple-converted-space">  </span>We will consider these options further and consult with Lyle.</p>
+<p class="p2"><br></p>
+<p class="p1">Again, well done.</p>
+<p class="p2"><br></p>
+<p class="p1">Lyle Huber</p>
+<p class="p1">PDS Atmospheres Node</p>
+<p class="p2"><br></p>
+</body>
+</html>
