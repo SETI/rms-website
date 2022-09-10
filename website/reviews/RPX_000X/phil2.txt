@@ -1,0 +1,59 @@
+From:	SMTP%"nicholso@astrosun.tn.cornell.edu" 30-SEP-1999 09:08:45.11
+To:	SHOWALTER
+CC:	
+Subj:	Re: RPX review comments
+
+Message-Id: <199909301603.MAA22299@bilbo.tn.cornell.edu>
+Date: Thu, 30 Sep 1999 12:03:35 -0400 (EDT)
+From: Phil Nicholson <nicholso@astrosun.tn.cornell.edu>
+Reply-To: Phil Nicholson <nicholso@astrosun.tn.cornell.edu>
+Subject: Re: RPX review comments
+To: SHOWALTER@ringside.arc.nasa.gov
+MIME-Version: 1.0
+Content-Type: TEXT/plain; charset=us-ascii
+Content-MD5: JA/N5PGtUnPZKg7HVm/VCQ==
+X-Mailer: dtmail 1.3.0 CDE Version 1.3 SunOS 5.7 sun4u sparc 
+
+Mark:
+
+After reading the other reports, perhaps I should add some additional
+comments.
+
+File formats:
+
+I looked
+at the CD-ROMs using a Sparc Ultra-1 running Solaris. I was able to
+display the GIF files from the browse directories directly with Sun's
+image viewer (ie, I just double-clicked on the icons in the File
+Manager window). However, SOLARIS did not recognise the .TXT files
+as text (it tried to run them...) so I looked at them with the UNIX 
+'more' command instead. I have not so far examined the pdf or ps files.
+I did unzip one of the label files using my local version of 'unzip',
+after copying the file to disk.
+
+FITS images:
+
+Since others used IRAF, I should report that I was able to read the
+FITS image files in IDL 5.1 using the 'readfits' command, directly from
+the disk and with no problems.  
+
+I carefully compared several
+specific images from our own Aug and Nov data sets against my own
+copies of these images, just to see that everything was labelled
+correctly. All checked out OK.  I even found some images I had forgotten
+were taken, so the set seems to be very complete.
+
+GIF images:
+
+I think the fact that you have reassembled all 4 images from each
+original HST files with their correct orientation and scale in the
+GIF images is a good thing. I found a sketch of the WFPC2 layout in one
+of the documentation files. Otherwise the 90 deg rotations of the 
+individual PC or WF images could be very confusing.  Perhaps you
+could note somewhere (in the volume description?) that the
+orientation on the sky of the HST FOV switches 180 deg at opposition,
+so the May and Aug images are oppositely oriented to the Nov images.
+(This is implicit in the CLOCK_ANGLE values, of course.)
+
+-- phil.
+

@@ -1,0 +1,73 @@
+Date: Mon, 27 Sep 1999 18:58:41 -0700
+From: amanda@lowell.Lowell.Edu (Amanda S. Bosh)
+To: showalter@ringside.arc.nasa.gov
+Subject: RPX CDs
+
+Comments/questions on distributed RPX CDs:
+I looked through these CDs on a Mac Powerbook G3 only.  In general the
+documentation is good, as I wrote down about 10 questions and later crossed
+them off as I found the answers while looking through the documentation.
+I didn't compare individual data values or anything like that.  Here are
+some questions that remain.
+
+--Amanda
+
+General
+  Why do data folder names end in XX?  Is it to pad out to some standard
+    length?
+
+  What is the justification for releasing just HST/WFPC2?  I can see that
+    HST would be much simpler than various ground-based data sets because
+    it is auto-archived.  But why the constraint to WFPC2?  There are some
+    HRS and FOS data as well that are intimately tied to the RPX timing.
+
+  What does "^" mean at the beginning of a header line?  Is it a new FITS
+    thing?
+
+  It would be nice if the DOCUMENT/TUTORIAL.TXT could be moved somewhat
+    higher to make it easier to find.
+
+CATALOG/MISSION.CAT
+  The mission statement describes satellite mutual events, but for the most
+    part they are not included in this cd distribution.  Some were observed
+    during the HST campaigns, but as I recall, no observations were
+    specifically targeted to them.
+
+LABEL/EXTTAB.FMT
+  Is there a way to indicate somewhere that we have found that some header
+    keyword values are not correct.  I think ORIENTAT is one of them.  It
+    would be a shame to make others go through this exercise when we already
+    know it.
+
+RPX_000n:1995nnXX/whatever/CALIMAGE/*.LBL
+  SC_TARGET_POSITION_VECTOR:  the TUTORIAL.TXT says that these are actually
+    geocentric.  Is this information included anywhere else closer to the
+    data files (people may not read or remember the tutorial).  The keyword
+    is confusing given the definition of the value provided.  It would be
+    better to either change the keyword to be accurate, or to include the
+    spacecraft ephemeris.  The definitive ephemerides are easy to get and
+    use (I have a tutorial if you need one).
+  CELESTIAL_NORTH_CLOCK_ANGLE:  is this from the header keywords?  If so, it
+    may not be correct.  Why not just call it position angle?
+  BODY_POLE_CLOCK_ANGLE:  does this include pole precession, and if so, what
+    reference.  Either way, what is the reference for the pole position?
+
+RPX_000n:1995nnXX/whatever/CALIMAGE/*.IMG
+  Just a note:  I was unable to get these files to open with GraphicConverter
+    unless I first unchecked "Detect only clear Formats" in Preferences:Open,
+    otherwise it thought it was a different type of file because of the
+    suffix.  GraphicConverter is used to seeing *.fits if it's a FITS file,
+    I guess.  [Mac PBG3]
+
+RPX_000n:1995nnXX/whatever/RAWIMAGE/*.ZIP
+  I unable to unzip this with the program Unzip (I grabbed the compiled one
+    from the website rather than compile one using the files on the CD).
+    Error message:  "cannot find either 010A_D0F.ZIP or 010A_DOF.ZIP.zip"
+    It worked if I used StuffIt Expander.
+
+RPX_0005:199511XX/U2ZYXXXX/
+  Technically, A301 and A302 were Phil's, but we split an orbit so they
+    assigned them to me.  It's not a hugely important thing, but if anyone
+    cares we can move them over to Phil's directory.  Although they'll then
+    be inconsistent between HST naming and this CD directory structure, so 
+    it's probably better to leave them where they are.

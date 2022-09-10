@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.35">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0600}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0000; min-height: 14.0px}
+    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    span.s1 {letter-spacing: 0.0px}
+    span.s2 {font: 12.0px Symbol; letter-spacing: 0.0px}
+    span.s3 {letter-spacing: 0.0px color: #fd0000}
+    span.s4 {letter-spacing: 0.0px color: #4700ff}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">Review Panel Telecon notes.<span class="Apple-converted-space"> </span></span></p>
+<ul>
+  <li class="li1"><span class="s2"></span><span class="s3"><b>Red</b></span><span class="s1"> entries indicate actions to be taken to remove a lien.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li1"><span class="s2"></span><span class="s4"><b>Blue</b></span><span class="s1"> entries describe the steps taken to respond to the comment.</span></li>
+</ul>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Review submitted by Lyle Huber 5 Apr 2007</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">I have taken a not-as-detailed-as-I-would-like look at a sample of the reformatted CIRS data. My main comment is that it looks like it's in really good shape and I want to thank you guys for putting forth the effort to get the CIRS data into something more usable for the community.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">A couple random PDS comments:</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">- As I noted to Mitch yesterday, there are some double quotes in DATASET.CAT that should be single quotes.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix this.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: Fixed. The volumes now pass the PDS volume validator with no syntax errors.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">- I really don't think FMT files should be used for INDEX TABLEs. You're using a separate FMT for each index anyway so why bother?</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">A valid point.<span class="Apple-converted-space">  </span>We will fold the format information into the labels.</span></p>
+<p class="p5"><span class="s1"><b></b></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: We no longer use .FMT files for any index files.</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">- I'm not all that thrilled with the explicit FILE object labeling method. Are you trying to be consistent with the original labels or is it just because you wanted to have both ASCII and BINARY tables for everything? If it's the second, then I could come up with a reasonable alternative to using the FILE object but I'll raise that in a telecon.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">During the discussion, Lyle suggested splitting the DATA directory tree into two branches: ASCI and BINARY. This avoids the need for combined detached labels by avoiding two data products with the same file name root in the same directory.</span><span class="s3"><b><span class="Apple-converted-space"> </span></b></span></p>
+<p class="p6"><span class="s1"><b></b></span><br></p>
+<p class="p3"><span class="s1">We discussed the various options on the telecon without reaching a clear consensus.<span class="Apple-converted-space">  </span>One option is to add "_ASCII" and "_BINARY" suffixes to the file names, so that the label files can be distinguished.<span class="Apple-converted-space">  </span>Another is to populate separate directory trees with binary and ASCII data---but this has the disadvantage of separating files that logically belong together.<span class="Apple-converted-space">  </span>We will consider these options further and consult with Lyle.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: We eventually found that it was unnecessary, wasteful and cumbersome to include both ASCII and binary versions of data files. Most users prefer ASCII except where the size of the file becomes prohibitive. Now, all metadata is archived in ASCII tables. The spectra are archived only in binary. Sample software provided should help most users understand how to read the binary spectra.</b></span></p>
+</body>
+</html>

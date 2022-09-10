@@ -1,0 +1,36 @@
+VG_2803 Review
+==============
+
+- Does not seem to be ISO_9660 compliant. I had some trouble opening files
+  directly from the CD. It worked when I copied the files onto hard disk 
+  though.
+
+RESPONSE: We cannot reproduce this error. We will ensure ISO compliance when
+we submit to the NSSDC.
+
+- S_RINGS/RAWDATA/RS*R1BFV.LBL have erroneous ^STRUCTURE pointers. Should
+  point to RS_R1BFV.FMT instead of RS_R1BFT.FMT.
+
+RESPONSE: Fixed.
+
+- U_RINGS/EASYDATA/KM00_025 has 94 labels that are missing their .TAB files.
+
+RESPONSE: Fixed. These label files had been placed in the wrong directory.
+
+- CATALOG/REF.CAT has non-ASCII characters in NICHOLSONETAL1990 entry.
+  (The same characters appear in DOCUMENT/TUTORIAL.TXT line 895.)
+
+RESPONSE: Fixed.
+
+- DOCUMENT/TUTORIAL.TXT has TAB characters in lines 794, 798, 801, and 802.
+
+RESPONSE: Fixed.
+
+- *TIME label values should remove the trailing Z.
+
+RESPONSE: Fixed.
+
+- You have some files with the extension .FIT. While this is not a reserved
+  extension, you might have some users who will think it's a FITS file.
+
+RESPONSE: Good point. These are binary files and have been renamed to ".DAT".

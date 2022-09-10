@@ -1,0 +1,21 @@
+Testing for Errors in ASCII Files:
+==================================
+
+==> OCUMENT/TUTORIAL.TXT: 17 errors found
+lines 777 - 783 have line length = 82; 
+lines 797 - 805 have line length = 82; 
+line 806 has line length = 164; 
+Number of lines = 1026
+
+==> _RINGS/C3517XXX/._C3517118_RAW.LBL: 6 errors found
+line 1 has wrong terminator; line length = 1408; embedded TAB(s); embedded ASCII 0 character; 
+line 2 has wrong terminator; embedded ASCII 0 character; 
+Number of lines = 2
+
+==> _RINGS/C3517XXX/._C3517118_GEOMA.LBL: 4 errors found
+line 1 has wrong terminator; line length = 83; embedded TAB(s); embedded ASCII 0 character; 
+Number of lines = 1
+
+Number of files with ASCII errors = 3
+
+

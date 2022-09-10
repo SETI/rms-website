@@ -1,0 +1,47 @@
+Date: Wed, 29 Sep 1999 23:06:30 -0400 (EDT)
+From: Phil Nicholson <nicholso@astrosun.tn.cornell.edu>
+Subject: HST/RPX CD-roms
+To: showalter@ringside.arc.nasa.gov
+
+Hi Mark:
+
+You will be happy to know that, with just a little help from Brian,
+I have finally learned how to use that "cup-holder" on my Ultra!
+
+I have browsed thru 3 of the CD's and not found anything amiss so far.
+The organization seems very logical & pretty easy to follow, and I like
+having all the documentation files on each CD.  The arrangement of datasets
+by ID number, while perhaps weird to most users, seems to make the most
+sense. (Perhaps the list of the PI and dates for each of these IDs
+which I found in the tutorial might be added to the aareadme file
+so that a novice user would find it immediately?) On balance, I think
+this is better than inventing completely ad hoc identifiers.
+
+I really like all the geometric & photometric parameters you have added
+to the PDS labels. I will check some of the photometry numbers tomorrow
+against my own notes. Ditto for a few geometry numbers, which Dick
+generated for our data. These labels
+are also easier to read than the original FITS headers, as they have
+all the important info (filter, etc.) up front. 
+
+I also like the mini-images in the browse directory, and the fact
+that you have included a solar spectrum and filter profiles.
+
+So far the **ONLY** thing I have found which might be slightly
+misleading concerns the methane quad filters with which the bulk of
+these data were taken. Strictly, this leads to a different wavelength
+for each chip, as the 890 nm portion only covers one chip at a time.
+Since sometimes part of Saturn is in an adjacent chip (eg., WF3), this
+is seen thru a different methane filter. Is this worth including?
+We could figure out from the HST WFPC2 handbook which filter is on
+each chip for PC1 or WF3 observations. Right now, your headers
+seem to allow for just 1 filter for the whole 4 frames in a file.
+Also I presume the calibration data is for the 890 nm filter only;
+Pat may not even have that for the other quad segments.
+
+All in all, a beautiful job, Mark!
+
+Speak to you tomorrow at 4:30 pm EDT.
+
+-- phil.
+

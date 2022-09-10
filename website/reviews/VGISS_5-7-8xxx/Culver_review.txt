@@ -1,0 +1,78 @@
+Hi Mitch,
+
+Thanks for including me in this peer review.  I'm impressed at all the 
+work that has gone into these volumes!  Overall I think they look very 
+good.  Here are my detailed findings.  Feel free to contact me if 
+anything isn't clear, or you have questions.
+
+Amy
+
+Completeness & Documentation:
+
+  *   The documentation, seems clear, accessible, consistent and 
+      complete.    It's very comprehensive given the age of the data, 
+      and processing descriptions are accessible and useful,  both now 
+      and for future image-processing savvy users.  I found it very 
+      easy to get familiar with the data set layout and dig into the 
+      data.
+      
+  *   The ancillary data provided with the data sets seems complete. 
+      From browse products to calibration support files, the files are 
+      easy to locate and straightforward to use.
+
+  *   In the TUTORIAL.TXT, user is directed to ignore the 224 line 
+      prefix bytes in RAW files as not useful, but perhaps a reference 
+      to the documentation on the raw CD volumes would be helpful 
+      (especially because that structure isn't described elsewhere on 
+      the new volumes.)
+
+  *   MIPL is now the Multimission "Instrument" Processing Lab, no 
+      longer "Image".  Several documents need to be updated.
+
+Compliance with PDS Standards:
+
+  *   I ran vtool on VGISS_7207.  When using pdsdd.text from the 
+      DOCUMENT directory, Vtool failed due to  theTEXT object starting 
+      on line 6.  When that object was removed, there were still 
+      numerous warnings (see attached, uniquely sorted list of 
+      warnings).  Given that keywords aren't explicitly addressed 
+      elsewhere in the documentation (as would otherwise occur in a 
+      modern Software Interface Specification (SIS) ), I suggest these 
+      warnings be resolved.  For reference, here's how I called Vtool 
+      (the pdsdd.full is the 7/11/13 version):
+
+      vtool-2.3.0/bin/VTool VGISS_7207_peer_review/DATA/C27*/*LBL -d pdsdd.full, VGISS_7207_peer_review/DOCUMENT/PDSDD.TXT -I VGISS_7207_peer_review/DOCUMENT/ -a -v 2 -r VGISS_7207_peer_review_vtool.rpt
+
+  *    In the INDEX.TAB, the *RESLOC.DAT/.TAB products are mis-
+      identified as *RESLOC.IMG.  Recommend they be handled the way 
+      the *GEOMA.DAT/.TAB products are treated in the index (I.e. a 
+      single entry for the .DAT file), or somehow explained.   Also, 
+      it would be helpful to clarify the single index entry for the 
+      .DAT/.TAB products in the INDXINFO.TXT.
+
+Compatibility with VICAR software:
+
+  *   I tested a sampling of  .IMG, .DAT and blemish files using 
+      VICAR.  All worked as expected with a variety of programs.
+
+Assessment of image processing:
+
+  *   Sometimes the "cleaned" version of the image exacerbates 
+      artifacts and removes detailed information due to interpolation. 
+      For example,
+
+     *   on VGISS_7207, the C2700224* cleaned image (and those 
+         subsequently processed) include smear along limb of Uranus due 
+         to reseau removal
+
+     *   on VGISS_5106, the C1559058* cleaned image (and those 
+         subsequently processed)  intensify the corrupted lines at the 
+         top of the image, replace good pixels with edge effects in the 
+         lower left of the image, and remove the moon (or possible Death 
+         Star) in the lower right of the image.
+
+      These flaws are not too surprising, given the difficulty involved in 
+      this type of systematic processing, and as long as the raw image 
+      is preserved, the information isn't lost.  However, a warning to 
+      the user about this should be included somewhere on the volume, 
+      perhaps  in the processing notes or errata.

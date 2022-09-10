@@ -1,0 +1,78 @@
+From: "Shawn M Brooks"
+Date: April 10, 2007 12:45:28 AM PDT
+To: "Mitch Gordon"
+Cc: "Mark Showalter"
+Subject: A Few Comments on the PDS CIRS Rings Volume
+
+Mitch,
+
+     My apologies for the last second comments.  It's been a
+little crazy for me lately and, unfortunately, I don't get paid
+to do this sorta stuff anymore (not that I ever really did, I
+guess ...).
+
+     These comments are far from exhaustive.  I really only had
+time to take a cursory look at the data set.  And, because of
+time limitations and my computer set up, I wasn't able to play
+with the data as I would have liked.  But, here's a brief,
+bulleted list of comments and questions.  I can expound upon them
+at the telecon.
+
+ - As with most every PDS Rings Node product I've reviewed, the
+PDS Cassini CIRS data set is well organized with a consistent,
+easily understood hierarchical structure.  There is a wealth of
+detail to be found among this archive (e.g. description of the
+CIRS instrument, noise and spike discussion).  However, it seems
+that the hierarchical nature of the archive leads to a lot of
+unnecessary repetition.  For example, is it really necessary to
+have identical descriptions of the volume in each subdirectory?
+
+ - Would it be possible to include a file containing a list of
+observations and the start and end times of those observations? 
+The data are organized using a YY-MM-DD format, whereas I am used
+to thinking of them in a YY-DOY format.  The inclusion of such a
+file would help a user such as myself navigate this data volume.
+
+ - Exactly how were variable length records turned into fixed
+length records?  (Dumb question, I know, but I can't quite tell.)
+ Was it something as simple as segregating spectra by their
+record length?
+
+ - Over what wavenumber range have the integrated radiances
+described in the ISPM_ASCII.FMT file been taken?  I know that,
+particularly in the case of FP1 data, noise at the long
+wavenumber end of the spectra degrade the utility of this
+parameter.  If the size of this data volume is a problem, I might
+suggest cutting this parameter.
+
+ - I personally dislike the YY format of the file names,
+particularly the YY+50 for the re-formatted data.  I realize,
+however, that this may be necessary due to PDS conventions.  I
+just thought I'd point it out, though.
+
+ - Just what are the origins of Vanilla?  I thought that it had
+something to do with previous Mars missions, but the discussion
+in TUTORIAL.TXT implies to me that it was created for Cassini.
+
+ - It seems that geometry data referring to Saturn's rings are
+referenced with the number 699, the NAIF ID for Saturn.  That
+this is so should be explicitly mentioned.  Maybe it is, but I
+couldn't find it.
+
+     As I said, I couldn't actually plot up the data.  But, I
+know that some of the observations have had problems where the
+data files were calibrated inconsistently.  This showed up in our
+analysis as a sudden jump in ring temperature.  I remember this
+particularly for a SHAD or a SCAN earlier in the mission (it
+would be included withthis release of the CIRS data).  I don't
+know if this problem has been solved, but I should probably take
+the time to look for it in this data set and report back if I
+find it.
+
+     And, that's about it.  Sorry for the brevity.  I can get
+back to you with more thorough comments later, if you wish.  I'm
+about to head off to bed.  Talk to y'all in the morning!
+
+                                                      --- Shawn
+
+

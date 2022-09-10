@@ -1,0 +1,12 @@
+Testing for Errors in ASCII Files:
+==================================
+
+==> OCUMENT/TUTORIAL.TXT: 17 errors found
+lines 777 - 783 have line length = 82; 
+lines 797 - 805 have line length = 82; 
+line 806 has line length = 164; 
+Number of lines = 1026
+
+Number of files with ASCII errors = 1
+
+

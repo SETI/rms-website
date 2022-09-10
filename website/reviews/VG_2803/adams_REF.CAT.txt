@@ -1,0 +1,521 @@
+PDS_VERSION_ID                  = PDS3
+RECORD_TYPE                     = STREAM
+LABEL_REVISION_NOTE             = "M.K. GORDON, 2002-12-14
+				   S.L. Adams, 2003-06-11: edited to 
+				   conform to AGU and PDS standards"
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ALLAN1966"
+ REFERENCE_DESC                 = "Allan, D.W., Statistics of
+Atomic Frequency Standards, Proceedings of the IEEE, 54,
+221-230, 1966."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ANDERSONETAL1987B"
+ REFERENCE_DESC                 = "Anderson, J.D., J.K. Campbell,
+R.A. Jacobson, D.N. Sweetnam, A.H. Taylor, A.J.R. Prentice, and
+G.L. Tyler, Radio Science with Voyager 2 at Uranus: Preliminary
+Results on Masses and Densities of the Planet and Five Principal
+Satellites, Journal of Geophysical Research, 92, 14877-14883,
+1987."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ANDERSONETAL1987"
+ REFERENCE_DESC                 = "Anderson, J.D., T.P. Krisher,
+S.E. Borutzki, M.J. Connally, P.E. Eshe, H.B. Hotz, S. Kinslow,
+E.R. Kursinski, L.B. Light, S.E. Matousek, K.I. Moyd, D.C. Roth,
+D.N. Sweetnam, A.H. Taylor, G.L. Tyler, D.L. Gresh, and
+P.A. Rosen, Radio Range Measurements of Coronal Electron Densities
+at 13 and 3.6 Centimeter Wavelengths During the 1985 Solar
+Conjunction of Voyager 2, Astrophysical Journal, 323, 141-143,
+1987."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ASMAR&HERRERA1993"
+ REFERENCE_DESC                 = "Asmar, S.W., and R.G.
+Herrera, Radio Science Handbook, JPL D-7938, Volume 4, Jet
+Propulsion Laboratory, Pasadena, CA, 22 January 1993."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ASMARETAL1995"
+ REFERENCE_DESC                 = "Asmar, S.W., R.G. Herrera,
+and T. Priest, Radio Science Handbook, JPL D-7938 Volume 6, Jet
+Propulsion Laboratory, Pasadena, CA, 1995."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ASMAR&RENZETTI1993"
+ REFERENCE_DESC                 = "Asmar, S.W., and N.A.
+Renzetti, The Deep Space Network as an Instrument for Radio
+Science Research, Jet Propulsion Laboratory Publication 80-93,
+Rev. 1, 15 April 1993."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "BACHMAN1993"
+ REFERENCE_DESC                 = "Bachman, N.,
+P_constants (PcK) SPICE kernel file, Planetary Data System -
+Navigation Ancillary Information Facility,
+Jet Propulsion Laboratory, 11 August 1993."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "BENNER1997"
+ REFERENCE_DESC                 = "Benner, L.A.M., Triton, in 
+Encyclopedia of Planetary Sciences, edited by J.H. Shirley and 
+R.W. Fairbridge, Chapman and Hall, London, 836-840, 1997."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "BIRDETAL1997"
+ REFERENCE_DESC                 = "Bird, M.K., R. Dutta-Roy,
+S.W. Asmar, and T.A. Rebold, Detection of Titan's Ionosphere from
+Voyager 1 Radio Occultation Observations, Icarus, 130, 426-436,
+1997."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "BURATTI1997"
+ REFERENCE_DESC                 = "Buratti, B.J., Satellite, Natural, 
+in Encyclopedia of Planetary Sciences, edited by J.H. Shirley and R.W. 
+Fairbridge, Chapman and Hall, London, 705-708, 1997."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "CUNNINGHAM1997"
+ REFERENCE_DESC                 = "Cunningham, C.C., Titan, in 
+Encyclopedia of Planetary Sciences, edited by J.H. Shirley and R.W. 
+Fairbridge, Chapman and Hall, London, 831-833, 1997."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "CUZZIETAL1984"
+ REFERENCE_DESC                 = "Cuzzi, J.N., J.J. Lissauer,
+L.W. Esposito, J.B. Holberg, E.A. Marouf, G.L. Tyler, and A.
+Boischot, Saturn's Rings: Properties and Processes, in Planetary
+Rings, edited by R. Greenberg and A. Brahic, University of Arizona
+Press, Tucson, 73-199, 1984."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "DAVIESETAL1996A"
+ REFERENCE_DESC                 = "Davies, M.J., V.K. Abalakin,
+M. Bursa, J.H. Lieske, B. Morando, D. Morrison, P.K. Seidelmann,
+A.T. Sinclair, B. Yallop, and Y.S. Tjuflin, Report of the
+IAU/IAG/COSPAR Working Group on Cartographic Coordinates and
+Rotational Elements of the Planets and Satellites: 1994,
+Celestial Mechanics and Dynamical Astronomy, 63, 127-148, 1996."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "DSN810-5"
+ REFERENCE_DESC                 = "Deep Space Network / Flight
+Project Interface Design Book, Document 810-5, Jet Propulsion
+Laboratory, Pasadena, CA."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ESHLEMANETAL1977"
+ REFERENCE_DESC                 = "Eshleman, V.R., G.L. Tyler,
+J.D. Anderson, G. Fjeldbo, G.S. Levy, G.E. Wood, and T.A. Croft,
+Radio Science Investigations with Voyager, Space Science Reviews,
+21, 207-232, 1977."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ESHLEMANETAL1979"
+ REFERENCE_DESC                 = "Eshleman, V.R., G.L. Tyler,
+G.E. Wood, G.F. Lindal, J.D. Anderson, G.S. Levy, and T.A. Croft,
+Radio Science with Voyager 1 at Jupiter: Preliminary Profiles of
+the Atmosphere and Ionosphere, Science, 204, 976-978, 1979."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ESHLEMANETAL1979B"
+ REFERENCE_DESC                 = "Eshleman, V.R., G.L. Tyler,
+G.E. Wood, G.F. Lindal, J.D. Anderson, G.S. Levy, and T.A. Croft,
+Radio Science with Voyager at Jupiter: Initial Voyager 2 Results
+and a Voyager 1 Measure of the Io Torus, Science, 206,959-962,
+1979."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ESHLEMANETAL1983"
+ REFERENCE_DESC                 = "Eshleman, V.R., J.V. Breakwell,
+G.L. Tyler, and E.A. Marouf, W-shaped Occultation Signatures -
+Inference of Entwined Particle Orbits in Charged Planetary Ringlets,
+Icarus, 54, 212-226, 1983."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+REFERENCE_KEY_ID                = "ESPOSITOETAL1983A"
+REFERENCE_DESC                  = "Esposito, L.W., N. Borderies, P.
+Goldreich, J.N. Cuzzi, J.B. Holberg, A.L. Lane, R.B. Pomphrey, R.J.
+Terrile, J.J. Lissauer, E.A. Marouf, and G.L. Tyler, Eccentric
+Ringlet in the Maxwell Gap at 1.45 Saturn Radii: Multi-Instrument
+Voyager Observations, Science, 222, 57-60, 1983."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+REFERENCE_KEY_ID                = "ESPOSITOETAL1991"
+REFERENCE_DESC                  = "Esposito, L.W., A. Brahic, J.A.
+Burns and E.A. Marouf, Particle Properties and Processes in Uranus'
+Rings, in Uranus, edited by J.T. Bergstralh, E.D. Miner and M.S. Matthews, 
+University of Arizona Press, Tucson, 410-465, 1991."
+END_OBJECT                      = REFERENCE
+?????
+OBJECT                          = REFERENCE
+REFERENCE_KEY_ID                = "FRENCHETAL1991"
+REFERENCE_DESC                  = "French, R.G., P.D. Nicholson, C.C.
+Porco and E.A. Marouf, Dynamics and Structure of the Uranian Rings,
+in Uranus, edited by J.T. Bergstralh, E.D. Miner and M.S. Matthews, 
+University of Arizona Press, Tucson, 327-409, 1991."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+REFERENCE_KEY_ID                = "FRENCHETAL1993"
+REFERENCE_DESC                  = "French, R.G., P.D. Nicholson, M.L.
+Cooke, J.L. Elliot, K. Matthews, O. Perkovic, E. Tollestrup, P.
+Harvey, N.J. Chanover, M.A. Clark, E.W. Dunham, W. Forrest, J.
+Harrington, J. Pipher, A. Brahic, I. Grenier, F. Roques, and M. Arndt,
+Geometry of the Saturn system from the 3 July 1989 Occultation of 28
+Sgr and Voyager observations, Icarus, 103, 163-214, 1993."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "GEO-10REVD"
+ REFERENCE_DESC                 = "DSN Geometry and Spacecraft
+Visibility, Document 810-5, Rev. D, Vol. 1, DSN/Flight Project
+Interface Design, Jet Propulsion Laboratory, Pasadena, CA, 1987."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+REFERENCE_KEY_ID                = "GRAPSETAL1995"
+REFERENCE_DESC                  = "Graps, A.L., M.R. Showalter, J.J.
+Lissauer, and D.M. Kary, Optical Depth Profiles and Streamlines of
+the Uranian Epsilon Ring, Astron. J., 109, 2262-2273, 1995."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "GRESHETAL1989"
+ REFERENCE_DESC                 = "Gresh, D.L., E.A. Marouf,
+G.L. Tyler, P.A. Rosen, and R.A. Simpson, Voyager Radio
+Occultation by Uranus' Rings I: Observational Results, Icarus,
+78, 131-168, 1989."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "GURROLA1995"
+ REFERENCE_DESC                 = "Gurrola, E.M., Interpretation
+of Radar Data from the Icy Galilean Satellites and Triton, Ph.D.
+dissertation, Stanford University, Palo Alto, CA, 126 pp., 1995."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "HINSON1984"
+ REFERENCE_DESC                 = "Hinson, D.P., Magnetic Field
+Orientations in Saturn's Upper Ionosphere Inferred from Voyager
+Radio Occultations, Journal of Geophysical Research, 89, 65-73,
+1984."
+END_OBJECT                      = REFERENCE
+
+REFERENCE_KEY_ID                = "HUIETAL1991"
+REFERENCE_DESC                  = "Hui, J., L. Horn, and A. Lane,
+Particle Sizes of the Delta Ring's Inner Diffuse Companion through
+Comparison of RSS and PPS Equivalent Depths, Icarus, 93, 347-353,
+1991."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "JPLPD618-128"
+ REFERENCE_DESC                 = "Voyager Neptune/Interstellar
+Mission: Flight Science Office Science and Mission Systems
+Handbook, JPL Project Document 618-128, Jet Propulsion Laboratory,
+Pasadena, CA, 1987."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "KOHLHASE1989"
+ REFERENCE_DESC                 = "Kohlhase, C., The Voyager
+Neptune Travel Guide, JPL Publication 89-24, 276 pp., Jet
+Propulsion Laboratory, Pasadena, CA, 1989."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "KRISHERETAL1990"
+ REFERENCE_DESC                 = "Krisher, T.P., J.D. Anderson,
+and J.K. Campbell, Test of the Gravitational Redshift Effect at
+Saturn, Physical Review Letters, 64, 1322-1325, 1990."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "LEVYETAL1981"
+ REFERENCE_DESC                 = "Levy, G.S., D.W. Green,
+H.N. Royden, G.E. Wood, and G.L. Tyler, Dispersive Doppler
+Measurement of the Electron Content of the Torus of Io,
+Journal of Geophysical Research, 86, 8467-8470, 1981."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "LINDALETAL1981"
+ REFERENCE_DESC                 = "Lindal, G.F., G.E. Wood,
+G.S. Levy, J.D. Anderson, D.N. Sweetnam, H.B. Hotz, B.J. Buckles,
+D.P. Holmes, P.E. Doms, V.R. Eshleman, G.L. Tyler, and T.A. Croft,
+The Atmosphere of Jupiter - An Analysis of the Voyager Radio
+Occultation Measurements, Journal of Geophysical Research, 86,
+8721-8727, 1981."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "LINDALETAL1983"
+ REFERENCE_DESC                 = "Lindal, G.F., G.E. Wood,
+H.B. Hotz, D.N. Sweetnam, V.R. Eshleman, and G.L. Tyler, The
+Atmosphere of Titan: An Analysis of the Voyager 1 Radio Occultation
+Measurements, Icarus, 53, 348-363, 1983."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "LINDALETAL1985"
+ REFERENCE_DESC                 = "Lindal, G.F., D.N. Sweetnam,
+and V.R. Eshleman, The Atmosphere of Saturn: An Analysis of the
+Voyager Radio Occultation Measurements, Astronomical Journal, 90,
+1136-1146, 1985."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "LINDALETAL1987"
+ REFERENCE_DESC                 = "Lindal, G.F., J.R. Lyons,
+D.N. Sweetnam, V.R. Eshleman, D.P. Hinson, and G.L. Tyler,
+The Atmosphere of Uranus: Results of Radio Occultation
+Measurements with Voyager 2, Journal of Geophysical Research,
+92, 14987-15001, 1987."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "LINDALETAL1990"
+ REFERENCE_DESC                 = "Lindal, G.F., J.R. Lyons,
+D.N. Sweetnam, V.R. Eshleman, D.P. Hinson, and G.L. Tyler,
+The Atmosphere of Neptune: Results of Radio Occultation
+Measurements with the Voyager 2 Spacecraft, Geophysical Research
+Letters, 17, 1733-1736, 1990."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "MAROUF&TYLER1982"
+ REFERENCE_DESC                 = "Marouf, E.A., and G.L. Tyler,
+Microwave Edge Diffraction by Features in Saturn's Rings: Observations
+with Voyager 1, Science, 217, 243-245, 1982."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "MAROUFETAL1982"
+ REFERENCE_DESC                 = "Marouf, E.A., G.L. Tyler, and
+V.R. Eshleman, Theory of Radio Occultation by Saturn's rings, Icarus,
+49, 161-193, 1982."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "MAROUFETAL1983"
+ REFERENCE_DESC                 = "Marouf, E.A., G.L. Tyler, H.A.
+Zebker, R.A. Simpson, and V.R. Eshleman, On Obtaining the Forward
+Phase Functions of Saturn Ring Features from Radio Occultation
+Observations, Icarus, 54, 189-211, 1983."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "MAROUF&TYLER1985"
+ REFERENCE_DESC                 = "Marouf, E.A., and G.L. Tyler,
+Radio Occultation by Saturn's Rings: Observation of Structure
+and Particle Size with Voyager 1, Advances in Space Research,
+5, 117-120, 1985."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "MAROUFETAL1986"
+ REFERENCE_DESC                 = "Marouf, E.A., G.L. Tyler, and
+P.A. Rosen, Profiling Saturn's Rings by Radio Occultation, Icarus,
+68, 120-166, 1986."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "MORRISON1982"
+ REFERENCE_DESC                 = "Morrison, D., Voyages to Saturn,
+NASA SP-451, 227 pp., National Aeronautics and Space Administration,
+Washington, DC, 1982."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ROSENETAL1991A"
+ REFERENCE_DESC                 = "Rosen, P.A., G.L. Tyler, and
+E.A. Marouf, Resonance Structures in Saturn's Rings Probed by Radio
+Occultation. I - Methods and Examples, Icarus,93, 3-24, 1991."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ROSENETAL1991B"
+ REFERENCE_DESC                 = "Rosen, P.A., G.L. Tyler, E.A.
+Marouf,and J.J. Lissauer, Resonance Structures in Saturn's Rings
+Probed by Radio Occultation. II - Results and Interpretation, Icarus,
+93, 25-44, 1991."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "SIMPSONETAL1984"
+ REFERENCE_DESC                 = "Simpson, R.A., G.L. Tyler, E.A.
+ Marouf, H.A. Zebker, and V.R. Eshleman, Saturn's rings - Voyager 1
+radio occultation experiment results, ITGRS, 22, 656-665, 1984."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "SIMPSONETAL1983B"
+ REFERENCE_DESC                 = "Simpson, R.A., G.L. Tyler, E.A.
+Marouf, H.A. Zebker, and V.R. Eshleman, Characterization of
+Particles in Saturn's Rings - Voyager 1 Radio Occultation Experiment,
+IGARSS, 1, 8, 1983."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "STONE&LANE1979A"
+ REFERENCE_DESC                 = "Stone, E.C., and A.L. Lane,
+Voyager 1 Encounter with the Jovian System, Science, 204, 945-948,
+1979."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "STONE&LANE1979B"
+ REFERENCE_DESC                 = "Stone, E.C., and A.L. Lane,
+Voyager 2 Encounter with the Jovian System, Science, 206, 925-927,
+1979."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "STONE&MINER1981"
+ REFERENCE_DESC                 = "Stone, E.C., and E.D. Miner,
+Voyager 1 Encounter with the Saturnian System, Science, 212, 159-163,
+1981."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "STONE&MINER1982"
+ REFERENCE_DESC                 = "Stone, E.C., and E.D. Miner,
+Voyager 2 Encounter with the Saturnian System, Science, 215, 499-504,
+1982."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "STONE&MINER1986"
+ REFERENCE_DESC                 = "Stone, E.C., and E.D. Miner,
+Voyager 2 Encounter with the Uranian System, Science, 233, 39-43,
+1986."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "STONE&MINER1989"
+ REFERENCE_DESC                 = "Stone, E.C., and E.D. Miner,
+Voyager 2 Encounter with the Neptunian System, Science, 246,
+1417-1421, 1989."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLERETAL1981B"
+ REFERENCE_DESC                 = "Tyler, G. L., V.R. Eshleman,
+J.D. Anderson, G.S. Levy, G.F. Lindal, G.E. Wood, and T.A. Croft,
+Radio Science Investigation of the Saturn System with Voyager 1:
+Preliminary Results, Science, 212, 201-206, 1981."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLERETAL1981"
+ REFERENCE_DESC                 = "Tyler, G. L., E.A. Marouf,
+and G.E. Wood, Radio Occultation of Jupiter's Rings: Bounds on
+Optical Depth and Particle Size, Journal of Geophysical Research,
+86, 8699-8703, 1981."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLERETAL1982"
+ REFERENCE_DESC                 = "Tyler, G. L., V.R. Eshleman,
+J.D. Anderson, G.S. Levy, G.F. Lindal, G.E. Wood, and T.A. Croft,
+Radio Science with Voyager 2 at Saturn: Atmosphere and Ionosphere
+and the Masses of Mimas, Tethys, and Iapetus, Science, 215,
+553-558, 1982."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLERETAL1983"
+ REFERENCE_DESC                 = "Tyler, G.L., E.A. Marouf,
+R.A. Simpson, H. A. Zebker, and V.R. Eshleman, The Microwave Opacity
+of Saturn's Rings at Wavelengths of 3.6 and 13 cm from Voyager 1
+Radio Occultation, Icarus, 54, 160-188, 1983."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLERETAL1986"
+ REFERENCE_DESC                 = "Tyler, G.L., D.N. Sweetnam,
+J.D. Anderson, J.K. Campbell, V.R. Eshleman, D.P. Hinson, G.S. Levy,
+G.F. Lindal, E.A. Marouf, and R.A. Simpson, Voyager 2 Radio Science
+Observations of the Uranian System: Atmosphere, Rings, and
+Satellites, Science, 233, 79-84, 1986."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLER1987"
+ REFERENCE_DESC                 = "Tyler, G. L., Radio Propagation
+Experiments in the Outer Solar System with Voyager, Proceedings of
+the IEEE, 75, 1404-1431, 1987."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLERETAL1989"
+ REFERENCE_DESC                 = "Tyler, G.L., D.N. Sweetnam,
+J.D. Anderson, S.E. Borutzki, J.K. Campbell, V.R. Eshleman,
+D.L. Gresh, E.M. Gurrola, D.P. Hinson, N. Kawashima, E.R. Kursinski,
+G.S. Levy, G.F. Lindal, J.R. Lyons, E.A. Marouf, P.A. Rosen,
+R.A. Simpson, and G.E. Wood, Voyager Radio Science Observations
+of Neptune and Triton, Science, 246, 1466-1473, 1989."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "TYLERETAL1992"
+ REFERENCE_DESC                 = "Tyler, G.L., G. Balmino,
+D.P. Hinson, W.L. Sjogren, D.E. Smith, R. Woo, S.W. Asmar, M.J.
+Connally, C.L. Hamilton, and R.A. Simpson, Radio Science
+Investigations with Mars Observer, Journal of Geophysical
+Research, 97, 7759-7779, 1992."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "WOO1993"
+ REFERENCE_DESC                 = "Woo, R., Spacecraft Radio
+Scintillation and Solar System Exploration, Wave Propagation
+in Random Media (Scintillation), Society of Photo-Optical
+Instrumentation Engineers, Bellingham, WA, 1993."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ZEBKERETAL1983"
+ REFERENCE_DESC                 = "Zebker, H.A., G.L. Tyler, and
+E.A. Marouf, On Obtaining the Forward Phase Functions of Saturn
+Ring Features from Radio Occultation Observations, Icarus, 56,
+209-228, 1983."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ZEBKER&TYLER1984"
+ REFERENCE_DESC                 = "Zebker, H.A., and
+G.L. Tyler, Thickness of Saturn's Rings Inferred from Voyager 1
+Observations of Microwave Scatter, Science, 223, 396-398, 1984."
+END_OBJECT                      = REFERENCE
+
+OBJECT                          = REFERENCE
+ REFERENCE_KEY_ID               = "ZEBKERETAL1985"
+ REFERENCE_DESC                 = "Zebker, H.A., E.A. Marouf, and
+G.L. Tyler, Saturn's Rings: Particle Size Distributions for Thin
+Layer Models, Icarus, 64, 531-548, 1985."
+END_OBJECT                      = REFERENCE
+
+END

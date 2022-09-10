@@ -1,0 +1,98 @@
+From: Conor A Nixon
+Date: April 5, 2007 11:34:00 AM PDT
+To: Mitch Gordon
+Cc: Mark Showalter
+Subject: Re: telecon information - peer review of re-formatted CIRS data
+
+Mitch and Mark,
+
+I have now had the opportunity to browse the new archive, and it all
+looks very good. I have not however had the opportunity to do any
+detailed validation of the spectral data versus the current archive - I
+presume that there are others doing this? Some comments and thoughts
+follow, and I look forward to speaking with you on Tuesday.
+
+regards
+Conor Nixon
+
+PS - I am on vacation tomorrow, back Monday.
+
+------------------------------------------------------------------
+
+Comments On The Re-Formatted CIRS Data Archive (Peer Review)
+
+by Conor A. Nixon, Univ. MD. 04/05/07.
+
+
+Overall, my impression of the re-formatted CIRS Data Archive was
+extremely positive: I commend the re-formatters on an excellent job. In
+particular, I was impressed by the LBL files which now contain much more
+information than previously.
+
+
+A few comments:
+
+
+1) REF.CAT: this is very far out of date. CIRS normally provides a file
+now called CIRSREF.CAT which is (almost) current. I will work on
+updating it.
+
+
+2) My second comment was going to be about the file naming convention: I
+was expecting that the re-formatted data, which adheres to Cassini
+observation boundaries, would therefore use the request name as part of
+the file name. However, I see that that the request name is included in
+the .LBL file as "OBSERVATION_ID" and I understand that custom PDS
+software is under development for browsing the CIRS dataset, so maybe it
+doesn't matter so much.
+
+
+3) The minute part of the file name does not exactly correspond to the
+minute of the time of the first data item in the file. This is probably
+known to the data producers judging by the reference to "approximate
+minute" in the tutorial.txt file. Examples of such instances are
+ISPM0505280401_FP3.TAB which starts at 04:02:04 and
+ISPM05050311800_FP1.TAB which starts at 18:01:04. This is hardly a major
+problem but I was curious as to why the difference exists.
+
+-------------------------------------------------------------------
+
+
+
+
+On Wed, 2007-04-04 at 08:29, Mitch Gordon wrote:
+> Hello all,
+>
+> Thanks to everyone for being flexible on the schedule.
+>
+> Please set aside Tuesday morning April 10, 8:00-10:00 PDT for the
+> telecon review panel.
+>
+> For those who have not already done so, please submit your written
+> comments by email to both Mark and me by Friday April 6th, sooner  
+> would
+> be better. We'll attempt to consolidate them all prior to the
+> discussion.  Generally that enables us to complete the telecon more
+> efficiently.
+>
+> Here is the call-in information:
+>
+> Date & Time: Tuesday morning April 10, 8:00-10:00 PDT
+>
+> call 1-866-581-2314
+> enter code 240929
+>
+> Thanks again for your support,
+>
+> Mitch
+-- 
+                Conor A. Nixon
+          Univ. Maryland /NASA GSFC
+                     -+-
+      Solar System Exploration Division
+      Planetary Systems Lab -Code 693
+       NASA Goddard Space Flight Center
+          Greenbelt, MD 20771, USA
+             tel. 301-xxx-xxxx
+             fax. 301-xxx-xxxx
+

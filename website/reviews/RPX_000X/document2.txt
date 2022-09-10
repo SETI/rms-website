@@ -1,0 +1,39 @@
+A. Bosh
+
+  It would be nice if the DOCUMENT/TUTORIAL.TXT could be moved somewhat
+    higher to make it easier to find.
+
+[LIEN: We will add comments in AAREADME.TXT to highlight the existence
+of this particular file.] 
+
+------------------------------------------------------------------------
+L. Huber
+
+- /DOCUMENT/DOCINFO.TXT
+  - FITSINFO.*, LaTex --> LaTeX
+  - HSTHB*.*, Institute --> Science Institute
+
+[LIEN: We will fix.]
+
+- /DOCUMENT/FITSDEFS.TXT
+  - FDMEANAN, anomly --> anomaly
+  - PSTPTIME, yyyy.ddd --> yyyy:ddd
+  - RTAMATCH, ???
+
+[LIEN: We will fix "anomly".  The format of PSTPTIME has the period, not
+the colon, so we will not make this change.  We agree that the
+definition of RTAMATCH is cryptic.  However it only appears in header
+files and appears unimportant for our purposes.  We will leave it
+unchanged but will add a note to the file overall indicating that these
+definitions come directly out of the FITS data files and that further
+information can be found at the HST web site.] 
+
+- /DOCUMENT/TUTORIAL.TXT
+  - Data Set Overview, 1st para., taken taken --> taken
+                                , data was --> data were
+  - FITS Labels, next to last para. is cut off.
+  - Image Geometry, users wishes --> user wishes
+  - Image Calibration, normalize --> normalized
+
+[LIEN: We will fix.]
+

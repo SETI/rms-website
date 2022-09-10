@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.35">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0600}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #4700ff; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; color: #fd0600; min-height: 14.0px}
+    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    span.s1 {letter-spacing: 0.0px}
+    span.s2 {font: 12.0px Symbol; letter-spacing: 0.0px}
+    span.s3 {letter-spacing: 0.0px color: #fd0000}
+    span.s4 {letter-spacing: 0.0px color: #4700ff}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">Review Panel Telecon notes.<span class="Apple-converted-space"> </span></span></p>
+<ul>
+  <li class="li1"><span class="s2"></span><span class="s3"><b>Red</b></span><span class="s1"> entries indicate actions to be taken to remove a lien.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li1"><span class="s2"></span><span class="s4"><b>Blue</b></span><span class="s1"> entries describe the steps taken to respond to the comment.</span></li>
+</ul>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Review submitted by Nancy Chanover 9 Apr 2007</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Here are my comments regarding my review of the reformatted CIRS data.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Compliance with PDS standards:</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">I didn't find anything wrong here, although I am by no means an expert in the PDS standards so I defer to Lyle on this.<span class="Apple-converted-space">  </span>The data volumes were structured as I expected, and with some familiarity with the STRUCTURE of PDS data sets, I had no trouble navigating through the volumes and finding what I need.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Scientific Merit of the Data:</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Very high!!<span class="Apple-converted-space">  </span>Yes, these are definitely the proper data to be archived, and yes, the reformatted data are MUCH easier to work with!<span class="Apple-converted-space">  </span>I am not a Vanilla user - I tried it once and got very frustrated very quickly - so this is a welcome addition to the CIRS data archive.<span class="Apple-converted-space">  </span>After reading over the documentation I was able to read in some data using IDL and make plots of spectra with very little trouble.<span class="Apple-converted-space">  </span>I liked that you broke up a given observation by focal plane - this made it much easier to work with.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Usability of the Data:</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Formats are appropriate.<span class="Apple-converted-space">  </span>Data set is very complete.<span class="Apple-converted-space">  </span>Documentation is comprehensive.<span class="Apple-converted-space">  </span>I wonder about the utility of providing sample software for reading in the data?<span class="Apple-converted-space">  </span>Or does that get too complicated because it is dependent on what sort of processor/platform the user has?<span class="Apple-converted-space">  </span>I thought of this because in going through some of the Huygens data, I noticed that some of the instrument teams did provide software in a SOFTWARE directory, even when the data were provided in ASCII format.<span class="Apple-converted-space">  </span>[They would say "we know it is not required to provide this software since the data are in ASCII format, but here it is anyway..."]</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will provide sample FORTRAN code for (at minimum) reading the binary files.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: A new SOFTWARE directory contains simple sample programs written in C and FORTRAN, as well as sample data and representative results.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p5"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">Comments on the documentation:</span></p>
+<p class="p1"><span class="s1">- In both the TUTORIAL.TXT and AAREADME.TXT files, in the section on file naming convention, you discuss the additional bbb suffix in the GEO data.<span class="Apple-converted-space">  </span>You define bbb as "the NAIF body ID indicating which moon's position and viewing geometry is described by the file..."<span class="Apple-converted-space">  </span>Since one of the options is 699 (Saturn), might it be better to replace the word "moon" with "target?"</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: The text now says "body" instead of "moon".</b></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">- Calibration: is there a way of determining which calibration data were used to generate the "calibrated" spectra?<span class="Apple-converted-space">  </span>You may have said this somewhere, but I don't remember where.<span class="Apple-converted-space">  </span>As we all know, instrument calibrations change (improve?), and if someone is going to be accessing this calibrated data many years from now, it would be useful to know what "vintage" calibration files were used to reduce the data.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">A column of the ISPM files provides the approximate or mean time of the the sky calibration data used for a particular spectrum.<span class="Apple-converted-space">  </span>We will note this in the documentation.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: This is noted (briefly) in Section 8 of TUTORIAL.TXT.</b></span></p>
+<p class="p5"><span class="s1"><b></b></span><br></p>
+<p class="p3"><span class="s1">Conor noted that the calibration software continues to evolve at GSFC.<span class="Apple-converted-space">  </span>We will attempt to document the version of the software that was used to process each volume.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: The file DOCUMENT/RELNOTES.TXT now indicates which version of the CIRS calibration pipeline has been applied. It also contains the release notes provided by the team. The existence of this file is indicated in AAREADME.TXT and in DOCUMENT/DOCINFO.TXT.</b></span></p>
+<p class="p5"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1">OK, that's it for now.<span class="Apple-converted-space">  </span>I did find a misspelling in one of the CATALOG files, ispm_binary.fmt.<span class="Apple-converted-space">  </span>It was "Rayleigh peack" instead of peak, but I don't remember which file it was in.<span class="Apple-converted-space">  </span>I can tell you tomorrow during the telecon.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">We will fix the typo.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"><b>Resolution: Fixed. It was in peer-review file DATA/APODSPEC/ISPM_ASCII.FMT (which is now renamed DATA/ISPMDATA/ISPMDATA.FMT).</b></span></p>
+</body>
+</html>

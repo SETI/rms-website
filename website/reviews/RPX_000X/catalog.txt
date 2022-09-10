@@ -1,0 +1,68 @@
+A. Bosh
+
+CATALOG/MISSION.CAT
+  The mission statement describes satellite mutual events, but for the most
+    part they are not included in this cd distribution.  Some were observed
+    during the HST campaigns, but as I recall, no observations were
+    specifically targeted to them.
+
+------------------------------------------------------------------------
+L. Huber
+
+- /CATALOG/DATASET.CAT
+  - Data Set Overview, 1st para., taken taken --> taken
+  - Data Set Overview, 2nd para., images original --> original
+  - Data, 4th para., Zip 2.1 was used to create the zipfiles but UnZip 5.32
+                     should be used to unzip them. That seems really strange
+                     to have such different versions.
+  - Data Coverage & Quality, 1st para., data is --> data are
+  - Data Coverage & Quality, 2nd para., Titan is --> Titan are
+
+- /CATALOG/MISSION.CAT
+  - Mission Overview, 4th para., RPXs --> RPX
+  - SUN-RPX section, 1998 --> 1995
+
+- /CATALOG/REF.CAT
+  - BOSH&RIVKIN1996, Rivkin --> Rivkin,
+  - BIRETTAETAL1996, Baggaett --> Baggett
+
+- /CATALOG/SOFTWARE.CAT
+  - Programming Language, ANSII_C --> ANSI_C
+
+------------------------------------------------------------------------
+R. Joyner
+
+(2)  CATALOG/SOFTWARE.LBL
+
+     (a)  The template is missing END_OBJECT = SOFTWARE_INFORMATION
+          See enclosure
+
+
+(3)  CATALOG/REF.CAT
+
+     (a)  The following REFKEYID is present in the INSTHOST.CAT
+          but not in the REF.CAT.  Please add to REF.CAT:
+
+          VOELS1995
+
+     (b)  See the enclosure for the updated file.
+          I have made minor corrections once again.
+
+          It is not a good idea to enclose ref titles in single or
+          double quotes because some titles include single quotes
+          within the description.  The best way is to not quote these
+          expressions:
+
+		OBJECT                          = REFERENCE
+  		REFERENCE_KEY_ID              = "MACROBERT1995A"
+  		REFERENCE_DESC                = "MacRobert, A.M., Ed., Saturn's
+			rings turn edge on, Sky and Telescope 89, 68-71, May 1995."
+		END_OBJECT                      = REFERENCE
+
+
+(8)  CATALOG/DATASET.CAT
+
+     (a)  Under CONFIDENCE_LEVEL_NOTE you include [BIRETTAETAL1993]
+          as a reference.  It might be more useful to summarize the
+          paper, or include the paper in the documents directory.
+
