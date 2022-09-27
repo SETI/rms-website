@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+echo '### Deploying local pds-website repo to staging server'
 source config_data
 branch=${1:master}
 cd ~/pds-website
@@ -21,4 +22,3 @@ sudo chown -R webmaster:www-data ${WEBROOT_DIR}
 sudo chmod -R g+w ${WEBROOT_DIR}
 echo "*** Staging website has been updated! ***"
 echo Take a look: ${STAGING_WEBSITE}
-
