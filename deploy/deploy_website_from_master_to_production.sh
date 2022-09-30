@@ -12,15 +12,19 @@ then
   exit 0
 fi
 echo "Updating ownership (takes awhile)"
-echo "(If asked for password, it is for staging server)"
+echo "(If asked for password, it is for the staging server)"
 sudo chown -R webmaster:www-data ${MASTER_DIR}
+if [ $? -ne 0 ]; then exit -1; fi
 echo "Updating permissions (takes awhile)"
 sudo chmod -R g+w ${MASTER_DIR}
-echo "The above was a list of differences."
+if [ $? -ne 0 ]; then exit -1; fi
 echo
 echo "Dry run..."
 echo
-ssh ${WEBMASTER_USERNAME}@${SERVER1_HOST} "rsync -avn ${MASTER_DIR}/ ${WEBROOT_DIR}"
+ssh ${WEBMASTER_USERNAME}@${SERVER1_HOST} "rsync -avn ${EXCLUDE} ${MASTER_DIR}/ ${WEBROOT_DIR}"
+if [ $? -ne 0 ]; then exit -1; fi
+echo
+echo "The above was a list of differences on ${SERVER1_HOST}."
 echo
 read -p "If it looks good, copy to production sites: [Y/n]" confirm
 if [ x$confirm != "xY" ] && [ x$confirm != "x" ] && [ x$confirm != "xy" ]
@@ -28,9 +32,11 @@ then
   exit 0
 fi
 echo Updating ${SERVER1_HOST} ...
-ssh ${WEBMASTER_USERNAME}@${SERVER1_HOST} "rsync -av ${MASTER_DIR}/ ${WEBROOT_DIR}"
+ssh ${WEBMASTER_USERNAME}@${SERVER1_HOST} "rsync -av ${EXCLUDE} ${MASTER_DIR}/ ${WEBROOT_DIR}"
+if [ $? -ne 0 ]; then exit -1; fi
 echo
 echo Updating ${SERVER2_HOST} ...
-ssh ${WEBMASTER_USERNAME}@${SERVER2_HOST} "rsync -av ${MASTER_DIR}/ ${WEBROOT_DIR}"
+ssh ${WEBMASTER_USERNAME}@${SERVER2_HOST} "rsync -av ${EXCLUDE} ${MASTER_DIR}/ ${WEBROOT_DIR}"
+if [ $? -ne 0 ]; then exit -1; fi
 echo
 echo "*** Production servers have been updated! ***"
