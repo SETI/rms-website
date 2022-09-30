@@ -21,6 +21,7 @@ then
   exit 0
 fi
 sudo rsync -av --checksum _site/ ${MASTER_DIR}
+if [ $? -ne 0 ]; then exit -1; fi
 echo "Updating ownership (takes awhile)"
 sudo chown -R webmaster:www-data ${MASTER_DIR}
 echo "Updating permissions (takes awhile)"
@@ -30,8 +31,10 @@ echo "*** Master directory has been updated! ***"
 echo
 echo Updating ${SERVER1_HOST} ...
 ssh ${WEBMASTER_USERNAME}@${SERVER1_HOST} "rsync -av ${MASTER_DIR}/ ${WEBROOT_DIR}"
+if [ $? -ne 0 ]; then exit -1; fi
 echo
 echo Updating ${SERVER2_HOST} ...
 ssh ${WEBMASTER_USERNAME}@${SERVER2_HOST} "rsync -av ${MASTER_DIR}/ ${WEBROOT_DIR}"
+if [ $? -ne 0 ]; then exit -1; fi
 echo
 echo "*** Production servers have been updated! ***"
