@@ -87,22 +87,53 @@
     - title: Resonances
       href: /resonance/
 
-- title: Contacts
-  href: /
+- title: Contact Us 
+  href: / <!--Can we make this a link that brings up the Questions/Feedback widget?  Or should we simply delete this?-->
+
+- title: Who We Are
+  href: / 
   submenu:
 
-    - title: Matt Tiscareno
+    - title: Manager: Matt Tiscareno <!--Can the titles be excluded from the links?-->
       href: //www.seti.org/our-scientists/matthew-tiscareno
       open: new_tab
 
-    - title: Mitch Gordon
+    - title: Deputy Manager: Mitch Gordon
       href: //www.seti.org/our-scientists/mitchell-gordon
       open: new_tab
 
-    - title: Mark Showalter
+    - title: Associate Deputy Manager: Mia Mace
+      href: //www.seti.org/our-scientists/mia-mace
+      open: new_tab
+
+    - title: Manager Emeritus: Mark Showalter
       href: //www.seti.org/our-scientists/mark-showalter
       open: new_tab
 
-    - title: Rob French
+    - title: Lead Developer: Rob French
       href: //www.seti.org/our-scientists/robert-french
+      open: new_tab
+
+    - title: Senior Research Scientist: Joe Spitale
+      href: / <!--Does Joe not currently have a page?-->
+      open: new_tab
+
+    - title: Software Developer: Debby Stopp
+      href: / 
+      open: new_tab
+
+    - title: Software Developer: Yu-Jen David Chang
+      href: / 
+      open: new_tab
+
+    - title: Research Associate: Emilie Simpson
+      href: / 
+      open: new_tab
+
+    - title: PDS Radio Science Advisor: Dick Simpson
+      href: / 
+      open: new_tab
+
+    - title: PDS Radio Science Sub-Node Manager: Danny Kahan (JPL)
+      href: / 
       open: new_tab
