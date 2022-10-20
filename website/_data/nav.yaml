@@ -87,9 +87,6 @@
     - title: Resonances
       href: /resonance/
 
-- title: Contact Us 
-  href: / <!--Can we make this a link that brings up the Questions/Feedback widget?  Or should we simply delete this?-->
-
 - title: Who We Are
   href: / 
   submenu:
