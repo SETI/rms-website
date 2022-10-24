@@ -87,50 +87,22 @@
     - title: Resonances
       href: /resonance/
 
-- title: Who We Are
-  href: / 
+- title: Contacts
+  href: /
   submenu:
 
-    - title: Manager: Matt Tiscareno <!--Can the titles be excluded from the links?-->
+    - title: Matt Tiscareno
       href: //www.seti.org/our-scientists/matthew-tiscareno
       open: new_tab
 
-    - title: Deputy Manager: Mitch Gordon
+    - title: Mitch Gordon
       href: //www.seti.org/our-scientists/mitchell-gordon
       open: new_tab
 
-    - title: Associate Deputy Manager: Mia Mace
-      href: //www.seti.org/our-scientists/mia-mace
-      open: new_tab
-
-    - title: Manager Emeritus: Mark Showalter
+    - title: Mark Showalter
       href: //www.seti.org/our-scientists/mark-showalter
       open: new_tab
 
-    - title: Lead Developer: Rob French
+    - title: Rob French
       href: //www.seti.org/our-scientists/robert-french
-      open: new_tab
-
-    - title: Senior Research Scientist: Joe Spitale
-      href: / <!--Does Joe not currently have a page?-->
-      open: new_tab
-
-    - title: Software Developer: Debby Stopp
-      href: / 
-      open: new_tab
-
-    - title: Software Developer: Yu-Jen David Chang
-      href: / 
-      open: new_tab
-
-    - title: Research Associate: Emilie Simpson
-      href: / 
-      open: new_tab
-
-    - title: PDS Radio Science Advisor: Dick Simpson
-      href: / 
-      open: new_tab
-
-    - title: PDS Radio Science Sub-Node Manager: Danny Kahan (JPL)
-      href: / 
       open: new_tab
