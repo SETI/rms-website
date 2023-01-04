@@ -257,7 +257,7 @@
                 {% if entry.section.nolinks == true %}
                     Footprints
                 {% else %}
-                  <a href = "{{ site.holdings_url }}diagrams/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/" target="_blank">
+                  <a href = "{{ site.viewmaster_url }}diagrams/{{ base_dir }}/{{ row.table_row.id }}/BROWSE/" target="_blank">
                       Footprints
                   </a>
                 {% endif %}
@@ -360,7 +360,7 @@
                     {% capture base_dir %}{{ instrument[0] }}_{{ instrument[1] | split: "" | first }}xxx{% endcapture %}
 
                     <li>
-                        <a href = "{{ site.holdings_url }}volumes/{{ base_dir }}/{{ volume_id }}/" target="_blank">{{ volume_id }}</a>
+                        <a href = "{{ site.viewmaster_url }}volumes/{{ base_dir }}/{{ volume_id }}/" target="_blank">{{ volume_id }}</a>
                     </li>
 
                   {% endfor %}
@@ -429,7 +429,7 @@
                   {% if entry.section.nolinks == true %}
                       Enhanced Metadata
                   {% else %}
-                    <a href = "{{ site.holdings_url }}metadata/{{ base_dir}}/{{ row.table_row.id }}" target="_blank">
+                    <a href = "{{ site.viewmaster_url }}metadata/{{ base_dir}}/{{ row.table_row.id }}" target="_blank">
                       Enhanced Metadata
                     </a>
                   {% endif %}
