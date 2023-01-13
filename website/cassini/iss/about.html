@@ -18,7 +18,7 @@ The ISS archive is composed of four, multi-volume data sets.
   * One data set devoted to calibration files. These volumes are numbered COISS_0nnn. 
   * One data set for all of the ISS raw images from launch through Saturn approach. These volumes are numbered COISS_1nnn. 
   * One data set for all of the ISS raw images from the Saturn tour. These volumes are numbered COISS_2nnn. 
-  * One data set for cartographic map products. These volumes are numbered COISS_3nnn, and are available from [Cassini cartographic volumes.](/link/volumes/COISS_3xxx/)
+  * One data set for cartographic map products. These volumes are numbered COISS_3nnn, and are available from [Cassini cartographic volumes.]({{ site.viewmaster_url }}volumes/COISS_3xxx/){:target="_blank"}
 
 ###  2\. Directory and file naming.
 
@@ -44,38 +44,34 @@ File names are in the form **Annnnnnnnnn_v.IMG**, where:
 
 ### 3\. Documentation
 
-The <a href="iss_data_user_guide_180916.pdf" target="_blank">**ISS Users Guide**</a>, in PDF format, was updated September 2018. It provides a substantial amount of information reguarding the instrument and its data in a single document. 
+The **[ISS Users Guide]({{ site.holdings_url }}documents/COISS_0xxx/ISS-Users-Guide.pdf){:target="_blank"}**, in PDF format, was updated September 2018. It provides a substantial amount of information reguarding the instrument and its data in a single document. 
 
-**Users are strongly encouraged to review an ISS <a href="aareadme.txt" target="_blank">aareadme.txt</a> file.** This file appears in the root directory of every volume. (Some of the header information in the aareadme.txt files varies from one volume to the next, but the body of information in the files is the same.) 
+**Users are strongly encouraged to review an ISS [aareadme.txt]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0011/aareadme.txt){:target="_blank"} file.** This file appears in the root directory of every volume. (Some of the header information in the aareadme.txt files varies from one volume to the next, but the body of information in the files is the same.) 
 
 Further details of the ISS archive volumes can be found in the "Software
 Interface Specification" (SIS) Documents. These are found in the document
 directory on each data volume.
 
-  * The Data Product and Label SIS is available as <a href="edrsis.pdf" target="_blank">document/edrsis.pdf</a> and <a href="edrsis.txt" target="_blank">document/edrsis.txt</a>. 
+  * The Data Product and Label SIS is available as [documents/COISS_0xxx/Data-Product-SIS.pdf]({{ site.holdings_url }}documents/COISS_0xxx/Data-Product-SIS.pdf){:target="_blank"} and [documents/COISS_0xxx/Data-Product-SIS.txt]({{ site.holdings_url }}documents/COISS_0xxx/Data-Product-SIS.txt){:target="_blank"}. 
+{:target="_blank"}
+  * The Volume Organization SIS is available as [documents/COISS_0xxx/Archive-SIS.pdf]({{ site.holdings_url }}documents/COISS_0xxx/Archive-SIS.pdf){:target="_blank"} and [documents/COISS_0xxx/Archive-SIS.txt]({{ site.holdings_url }}documents/COISS_0xxx/Archive-SIS.txt){:target="_blank"}. 
 
-  * The Volume Organization SIS is available as <a href="archsis.pdf" target="_blank">document/archsis.pdf</a> and <a href="archsis.txt" target="_blank">document/archsis.txt</a>. 
+  * The image files are archived in VICAR2 format. Each data volume contains a file [COISS_xxxx/label/vicar2.txt]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0001/label/vicar2.txt){:target="_blank"} providing the details of this file format. 
 
-  * The image files are archived in VICAR2 format. Each data volume contains a file <a href="vicar2.txt" target="_blank">COISS_xxxx/label/vicar2.txt</a> providing the details of this file format. 
-
-The [catalog](/link/volumes/COISS_2xxx/COISS_2001/catalog/) subdirectory on each volume
+The [catalog]({{ site.viewmaster_url }}volumes/COISS_2xxx/COISS_2001/catalog/){:target="_blank"} subdirectory on each volume
 contains a wealth of information about the ISS instrument, team and data set.
 See, in particular:
 
-  * <a href="JUPITERDS.txt" target="_blank">COISS_1xxx/catalog/jupiterds.cat</a>: Description of the Jupiter data set.
-<a href="SATURNDS.txt" target="_blank">COISS_2xxx/catalog/saturnds.cat</a>: Description of the Saturn
-data set.
+  * [COISS_1xxx/catalog/jupiterds.cat]({{ site.holdings_url }}volumes/COISS_1xxx/COISS_1001/catalog/jupiterds.cat){:target="_blank"}: Description of the Jupiter data set.
+  * [COISS_2xxx/catalog/saturnds.cat]({{ site.holdings_url }}volumes/COISS_2xxx/COISS_2001/catalog/saturnds.cat){:target="_blank"}: Description of the Saturn data set.
+  * [COISS_xxxx/catalog/issna_inst.cat]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0001/catalog/issna_inst.cat){:target="_blank"}: Description of the narrow-angle camera.
+  * [COISS_xxxx/catalog/isswa_inst.cat]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0001/catalog/isswa_inst.cat){:target="_blank"}: Description of the wide-angle camera.
+  * [COISS_xxxx/catalog/insthost.cat]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0001/catalog/insthost.cat){:target="_blank"}: Description of the Cassini spacecraft.
+  * [COISS_xxxx/catalog/mission.cat]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0001/catalog/mission.cat){:target="_blank"}: Description of the Cassini mission.
 
-  * <a href="ISSNA_INST.txt" target="_blank">COISS_xxxx/catalog/issna_inst.cat</a>: Description of the narrow-angle camera.
-  * <a href="ISSWA_INST.txt" target="_blank">COISS_xxxx/catalog/isswa_inst.cat</a>: Description of the wide-angle camera.
-  * <a href="INSTHOST.txt" target="_blank">COISS_xxxx/catalog/insthost.cat</a>: Description of the Cassini spacecraft.
-  * <a href="MISSION.txt" target="_blank">COISS_xxxx/catalog/mission.cat</a>: Description of the Cassini mission.
-
-A file, <a href="errata.txt" target="_blank">errata.txt</a>, in the root directory of each volume
+A file, [errata.txt]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0001/errata.txt){:target="_blank"}, in the root directory of each volume
 documents any known anomalies or deviations from PDS standards, and identifies
 potential problems with the calibration files and their use.
 
-
-Additional descriptions of the instrument can be found at the <a href="//saturn.jpl.nasa.gov/imaging-science-subsystem/" target="_blank">Cassini ISS
-web page.</a>
+Additional descriptions of the instrument can be found at the [Cassini ISS web page.](//saturn.jpl.nasa.gov/imaging-science-subsystem/){:target="_blank"}
 

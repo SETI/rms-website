@@ -9,7 +9,7 @@ git pull
 if [ $? -ne 0 ]; then exit -1; fi
 umask 002
 cd website
-jekyll build --config _config.yml,_config.production.yml
+jekyll build --incremental --config _config.yml,_config.production.yml
 if [ $? -ne 0 ]; then exit -1; fi
 echo '--- START DIFFS ---'
 diff -rq _site ${WEBROOT_DIR} | grep -v "Only in ${WEBROOT_DIR}" | grep -v "Common subdirectories"

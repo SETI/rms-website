@@ -82,5 +82,6 @@ website_galleries
 
 new 4.txt
 website/.jekyll-cache/
+website/.jekyll-metadata
 
 website/news/
