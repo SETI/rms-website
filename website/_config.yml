@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 # github_username:  jekyll
 opus_url: "//opus.pds-rings.seti.org/opus/#"
 holdings_url: "//pds-rings.seti.org/holdings/"
+viewmaster_url: "//pds-rings.seti.org/viewmaster/"
 
 # Build settings
 markdown: kramdown
