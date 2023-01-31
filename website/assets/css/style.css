@@ -44,40 +44,6 @@ body {
   padding: 0;
 }
 
-/*
-h1, h2, h3, h4 {
-  font-family: 'Open Sans', sans-serif;
-  color: #222222;
-
-}
-h1 {
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0 0 .4em;
-}
-
-h2 {
-  font-size: 30px;
-  font-weight:400;
-  line-height: 1.2;
-  margin: 1em 0 .7em 0;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight:400;
-  line-height: 1.2;
-  margin: 1em 0 .6em 0;
-}
-h4 {
-  font-size: 18px;
-  font-weight:600;
-  line-height: 1.2;
-  margin: 1em 0 .6em 0;
-}
-*/
-
 /* searchbox */
 .searchbox {
   width:320px;
@@ -86,6 +52,7 @@ h4 {
   top:90px;
 
 }
+
 @media only screen and (max-width: 768px) {
   .searchbox {
     display:none;  /* hiding it for now, hard to layout this thing in phone-size screens */
@@ -100,7 +67,6 @@ h4 {
     width:400px
   }
 }
-
 
 .mission_statement {
   padding: 0px 40px 0px 5px;
