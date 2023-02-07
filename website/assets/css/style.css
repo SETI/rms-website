@@ -13,6 +13,7 @@
 /* some PDS-rings specific styles */
 .pds-container {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .nav-container {
@@ -156,8 +157,6 @@ body {
   overflow: visible;
 }
 
-
-
 /* .content container customizations for pages */
 p.superwide > a > img {
   overflow:visible;
@@ -166,7 +165,15 @@ p.superwide > a > img {
   width: 100%;
 }
 
+.rss  {
+  max-height: 272px;
+  max-width: 1124px;
+}
 
+.ringocc {
+  max-height: 461px;
+  max-width: 1209px;
+}
 
 /* homepage boxes */
 .homebox {
