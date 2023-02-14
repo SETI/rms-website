@@ -166,13 +166,19 @@ p.superwide > a > img {
 }
 
 .rss  {
-  max-height: 272px;
   max-width: 1124px;
 }
 
+.rss img {
+  max-height: 272px;
+}
+
 .ringocc {
-  max-height: 461px;
   max-width: 1209px;
+}
+
+.ringocc img {
+  max-height: 461px;
 }
 
 /* homepage boxes */
