@@ -20,7 +20,7 @@ if [ x$confirm != 'xY' ] && [ x$confirm != 'x' ] && [ x$confirm != 'xy' ]
 then
   exit 0
 fi
-rsync -av --checksum _site/ ${WEBROOT_DIR}
+rsync -av ${EXCLUDE} --checksum _site/ ${WEBROOT_DIR}
 if [ $? -ne 0 ]; then exit -1; fi
 #sudo chown -R webmaster:www-data ${WEBROOT_DIR}
 #sudo chmod -R g+w ${WEBROOT_DIR}
