@@ -13,6 +13,7 @@
 /* some PDS-rings specific styles */
 .pds-container {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .nav-container {
@@ -147,7 +148,7 @@ body {
     max-width: 60em;
   }
   .content li {
-    max-width: 50em;
+    max-width: 60em;
   }
 }
 .content p.superwide {
@@ -155,8 +156,6 @@ body {
   width: 100%;
   overflow: visible;
 }
-
-
 
 /* .content container customizations for pages */
 p.superwide > a > img {
@@ -168,6 +167,22 @@ p.superwide > a > img {
 
 p.logo {
   display: inline-flex;
+}
+
+.rss  {
+  max-width: 1124px;
+}
+
+.rss img {
+  max-height: 272px;
+}
+
+.ringocc {
+  max-width: 1209px;
+}
+
+.ringocc img {
+  max-height: 461px;
 }
 
 /* homepage boxes */
