@@ -183,13 +183,15 @@
                 {% else %}
 
                   {% if col contains "Bundled Volumes" %}
-                    <a href = "{{ site.holdings_url }}archives-volumes/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
+                    <a href = "{{ site.holdings_url }}archives-volumes/{{ base_dir }}/{{ row.table_row.id }}.tar.gz" 
+                        {% if row.table_row.file_size  %} title="({{ row.table_row.file_size }})" {% endif %}>
                         {{ row.table_row.id }}.tar.gz
                     </a>
                   {% endif %}
 
                   {% if col contains "Bundled Calibrated" %}
-                    <a href = "{{ site.holdings_url }}archives-calibrated/{{ base_dir }}/{{ row.table_row.id }}_calibrated.tar.gz">
+                    <a href = "{{ site.holdings_url }}archives-calibrated/{{ base_dir }}/{{ row.table_row.id }}_calibrated.tar.gz"
+                        {% if row.table_row.calib_file_size  %} title="({{ row.table_row.calib_file_size }})" {% endif %}>
                         {{ row.table_row.id }}_calibrated.tar.gz
                     </a>
                   {% endif %}
