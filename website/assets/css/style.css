@@ -166,7 +166,9 @@ p.superwide > a > img {
   width: 100%;
 }
 
-
+p.logo {
+  display: inline-flex;
+}
 
 /* homepage boxes */
 .homebox {
