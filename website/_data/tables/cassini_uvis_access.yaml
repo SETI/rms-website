@@ -18,16 +18,19 @@
 
         - table_row: 
             id: COUVIS_0001 
+            file_size: 452 MB
             clock_range: 1294420183 to 1356956400 
             date_range: 1999-01-07 to 2000-12-31  
 
         - table_row: 
-            id: COUVIS_0002 
+            id: COUVIS_0002
+            file_size: 361 MB
             clock_range: 1357007021 to 1364774880 
             date_range: 2001-01-01 to 2001-04-01  
 
         - table_row: 
             id: COUVIS_0003 
+            file_size: 358 MB
             clock_range: 1364775615 to 1392458352 
             date_range: 2001-04-01 to 2002-02-15  
 
@@ -39,26 +42,31 @@
 
         - table_row: 
             id: COUVIS_0004 
+            file_size: 388 MB
             clock_range: 1392337464 to 1420052434 
             date_range: 2002-02-14 to 2003-01-01  
 
         - table_row: 
-            id: COUVIS_0005 
+            id: COUVIS_0005
+            file_size: 361 MB 
             clock_range: 142010 Release4057 to 1450974152 
             date_range: 2003-01-01 to 2003-12-25  
 
         - table_row: 
             id: COUVIS_0006 
+            file_size: 1.6 GB
             clock_range: 1450938117 to 1463592274 
             date_range: 2003-12-24 to 2004-05-19  
 
         - table_row: 
             id: COUVIS_0007 
+            file_size: 628 MB
             clock_range: 1463624099 to 1466514410 
             date_range: 2004-05-19 to 2004-06-21  
 
         - table_row: 
-            id: COUVIS_0008 
+            id: COUVIS_0008
+            file_size: 595 MB 
             clock_range: 1467343910 to 1475280248 
             date_range: 2004-07-01 to 2004-10-01  
 
@@ -69,6 +77,7 @@
 
         - table_row: 
             id: COUVIS_0009 
+            file_size: 299 MB
             clock_range: 14752010 Release91 to 1483226339 
             date_range: 2004-09-30 to 2005-01-01  
 
@@ -78,7 +87,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0010 
+            id: COUVIS_0010
+            file_size: 263 MB 
             clock_range: 1483223180 to 1490959294 
             date_range: 2005-12-31 to 2005-03-31  
 
@@ -89,6 +99,7 @@
 
         - table_row: 
             id: COUVIS_0011 
+            file_size: 308 MB
             clock_range: 1491022376 to 1498835186 
             date_range: 2005-04-01 to 2005-07-01  
 
@@ -99,6 +110,7 @@
 
         - table_row: 
             id: COUVIS_0012 
+            file_size: 340 MB
             clock_range: 1498835186 to 1506847245 
             date_range: 2005-06-30 to 2005-10-01  
 
@@ -109,6 +121,7 @@
 
         - table_row: 
             id: COUVIS_0013 
+            file_size: 254 MB
             clock_range: 1506689171 to 1514703243 
             date_range: 2005-10-01 to 2005-12-31  
 
@@ -119,6 +132,7 @@
 
         - table_row: 
             id: COUVIS_0014 
+            file_size: 352 MB
             clock_range: 1514781983 to 1522540571 
             date_range: 2006-01-01 to 2006-03-31  
 
@@ -129,6 +143,7 @@
 
         - table_row: 
             id: COUVIS_0015 
+            file_size: 226 MB
             clock_range: 1522544806 to 1530386267 
             date_range: 2006-04-01 to 2006-07-01  
 
@@ -138,7 +153,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0016 
+            id: COUVIS_0016
+            file_size: 336 MB 
             clock_range: 1530435183 to 1538305897 
             date_range: 2006-07-01 to 2006-09-30  
 
@@ -148,7 +164,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0017 
+            id: COUVIS_0017
+            file_size: 522 MB 
             clock_range: 1538365194 to 1546290674 
             date_range: 2006-10-01 to 2006-12-31  
 
@@ -159,6 +176,7 @@
 
         - table_row: 
             id: COUVIS_0018 
+            file_size: 622 MB
             clock_range: 1546310745 to 1554074554 
             date_range: 2007-01-01 to 2007-03-31  
 
@@ -169,6 +187,7 @@
 
         - table_row: 
             id: COUVIS_0019 
+            file_size: 521 MB
             clock_range: 1554074627 to 1561922823 
             date_range: 2007-03-31 to 2007-07-01  
 
@@ -179,6 +198,7 @@
 
         - table_row: 
             id: COUVIS_0020 
+            file_size: 509 MB
             clock_range: 1561952973 to 1569879943 
             date_range: 2007-07-01 to 2007-09-30  
 
@@ -189,6 +209,7 @@
 
         - table_row: 
             id: COUVIS_0021 
+            file_size: 361 MB
             clock_range: 1570149867 to 1577779343 
             date_range: 2007-10-03 to 2007-12-31  
 
@@ -199,6 +220,7 @@
 
         - table_row: 
             id: COUVIS_0022 
+            file_size: 458 MB
             clock_range: 1577860749 to 1585697418 
             date_range: 2008-01-01 to 2008-04-01  
 
@@ -209,6 +231,7 @@
 
         - table_row: 
             id: COUVIS_0023 
+            file_size: 379 MB
             clock_range: 1585736813 to 1593368263 
             date_range: 2008-04-01 to 2008-06-29  
 
@@ -219,6 +242,7 @@
 
         - table_row: 
             id: COUVIS_0024 
+            file_size: 518 MB
             clock_range: 1593564831 to 1601481892 
             date_range: 2008-07-01 to 2008-09-30  
 
@@ -228,7 +252,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0025 
+            id: COUVIS_0025
+            file_size: 588 MB 
             clock_range: 1601567205 to 1609435849 
             date_range: 2008-10-01 to 2008-12-31  
 
@@ -239,6 +264,7 @@
 
         - table_row: 
             id: COUVIS_0026 
+            file_size: 581 MB
             clock_range: 1609572386 to 1617176831 
             date_range: 2009-01-02 to 2009-03-31  
 
@@ -249,6 +275,7 @@
 
         - table_row: 
             id: COUVIS_0027 
+            file_size: 1.07 GB
             clock_range: 1617239749 to 1625080037 
             date_range: 2009-04-01 to 2009-07-01  
 
@@ -259,6 +286,7 @@
 
         - table_row: 
             id: COUVIS_0028 
+            file_size: 528 MB
             clock_range: 1625117322 to 1633044544 
             date_range: 2009-07-01 to 2009-10-01  
 
@@ -268,7 +296,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0029 
+            id: COUVIS_0029
+            file_size: 1.09 GB 
             clock_range: 1633050431 to 1640947593 
             date_range: 2009-10-01 to 2009-12-31  
 
@@ -279,6 +308,7 @@
 
         - table_row: 
             id: COUVIS_0030 
+            file_size: 1.82 GB
             clock_range: 1641073059 to 1648666204 
             date_range: 2010-01-01 to 2010-03-31  
 
@@ -289,6 +319,7 @@
 
         - table_row: 
             id: COUVIS_0031 
+            file_size: 316 MB
             clock_range: 1648802013 Release to 1656556018 
             date_range: 2010-04-01 to 2010-06-30  
 
@@ -298,7 +329,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0032 
+            id: COUVIS_0032
+            file_size: 343 MB 
             clock_range: 1656936571 to 1664492775 
             date_range: 2010-07-04 to 2010-09-30  
 
@@ -309,6 +341,7 @@
 
         - table_row: 
             id: COUVIS_0033 
+            file_size: 935 MB
             clock_range: 1664806708 to 1672459209 
             date_range: 2010-10-03 to 2010-12-31  
 
@@ -319,6 +352,7 @@
 
         - table_row: 
             id: COUVIS_0034 
+            file_size: 338 MB
             clock_range: 1672536439 to 1680307270 
             date_range: 2011-01-01 to 2011-04-01  
 
@@ -329,6 +363,7 @@
 
         - table_row: 
             id: COUVIS_0035 
+            file_size: 804 MB
             clock_range: 1680427269 to 1688016768 
             date_range: 2011-04-02 to 2011-06-29  
 
@@ -338,7 +373,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0036 
+            id: COUVIS_0036
+            file_size: 732 MB 
             clock_range: 1692103081 to 1696094678 
             date_range: 2011-08-15 to 2011-09-30  
 
@@ -348,7 +384,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0037 
+            id: COUVIS_0037
+            file_size: 379 MB 
             clock_range: 1696121672 to 1704055620 
             date_range: 2011-10-01 to 2011-12-31  
 
@@ -358,7 +395,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0038 
+            id: COUVIS_0038
+            file_size: 622 MB 
             clock_range: 1704078010 to 1711916700 
             date_range: 2012-01-01 to 2012-04-01  
 
@@ -368,7 +406,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0039 
+            id: COUVIS_0039
+            file_size: 315 MB 
             clock_range: 1712030009 to 1719783289 
             date_range: 2012-04-02 to 2012-07-01  
 
@@ -379,6 +418,7 @@
 
         - table_row: 
             id: COUVIS_0040 
+            file_size: 808 MB
             clock_range: 1719818180 to 1727742422 
             date_range: 2012-07-01 to 2012-10-01  
 
@@ -388,7 +428,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0041 
+            id: COUVIS_0041
+            file_size: 269 MB 
             clock_range: 1727856550 to 1735622211 
             date_range: 2012-10-02 to 2012-12-31  
 
@@ -399,6 +440,7 @@
 
         - table_row: 
             id: COUVIS_0042 
+            file_size: 262 MB
             clock_range: 1735786741 to 1743397041 
             date_range: 2013-01-02 to 2013-03-31  
 
@@ -409,6 +451,7 @@
 
         - table_row: 
             id: COUVIS_0043 
+            file_size: 451 MB
             clock_range: 1743475671 to 1751270765 
             date_range: 2013-04-01 to 2013-06-30  
 
@@ -419,6 +462,7 @@
 
         - table_row: 
             id: COUVIS_0044 
+            file_size: 1.3 GB
             clock_range: 1751345559 to 1759273132 
             date_range: 2013-07-01 to 2013-09-30  
 
@@ -429,6 +473,7 @@
 
         - table_row: 
             id: COUVIS_0045 
+            file_size: 664 MB
             clock_range: 1759280403 to 1767211390 
             date_range: 2013-10-01 to 2014-01-01  
 
@@ -439,6 +484,7 @@
 
         - table_row: 
             id: COUVIS_0046 
+            file_size: 278 MB
             clock_range: 1767265209 to 1775004450 
             date_range: 2014-01-01 to 2014-03-31  
 
@@ -448,7 +494,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0047 
+            id: COUVIS_0047
+            file_size: 699 MB 
             clock_range: 1775005271 to 1782861212 
             date_range: 2014-04-01 to 2014-07-01  
 
@@ -459,6 +506,7 @@
 
         - table_row: 
             id: COUVIS_0048 
+            file_size: 1.34 GB
             clock_range: 1782868936 to 1790797721 
             date_range: 2014-07-01 to 2014-10-01  
 
@@ -469,6 +517,7 @@
 
         - table_row: 
             id: COUVIS_0049 
+            file_size: 339 MB
             clock_range: 1790898351 to 1798741092 
             date_range: 2014-10-01 to 2015-01-01
 
@@ -479,6 +528,7 @@
 
         - table_row: 
             id: COUVIS_0050 
+            file_size: 434 MB
             clock_range: 1798829803 to 1806533009 
             date_range: 2015-01-01 to 2015-03-31
 
@@ -488,7 +538,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0051 
+            id: COUVIS_0051
+            file_size: 636 MB 
             clock_range: 1806541807 to 1814401072 
             date_range: 2015-04-01 to 2015-06-30
 
@@ -499,6 +550,7 @@
 
         - table_row: 
             id: COUVIS_0052 
+            file_size: 1.09 GB
             clock_range: 1814509882 to 1822351553 
             date_range: 2015-07-02 to 2015-10-01
 
@@ -509,6 +561,7 @@
 
         - table_row: 
             id: COUVIS_0053 
+            file_size: 948 MB
             clock_range: 1822366078 to 1830279934 
             date_range: 2015-10-01 to 2016-01-01
 
@@ -519,6 +572,7 @@
 
         - table_row: 
             id: COUVIS_0054 
+            file_size: 439 MB
             clock_range: 1830306971 to 1838163650 
             date_range: 2016-01-01 to 2016-04-01
 
@@ -529,6 +583,7 @@
 
         - table_row: 
             id: COUVIS_0055 
+            file_size: 416 MB
             clock_range: 1838164487 to 1846016348 
             date_range: 2016-04-02 to 2016-07-02
 
@@ -538,7 +593,8 @@
     section_rows: 
 
         - table_row: 
-            id: COUVIS_0056 
+            id: COUVIS_0056
+            file_size: 1.95 GB
             clock_range: 1846029873 to 1853974816 
             date_range: 2016-07-01 to 2016-09-30
 
@@ -549,6 +605,7 @@
 
         - table_row: 
             id: COUVIS_0057 
+            file_size: 711 MB
             clock_range: 1853975456 to 1861772866 
             date_range: 2016-10-01 to 2016-12-30
 
@@ -559,6 +616,7 @@
 
         - table_row: 
             id: COUVIS_0058 
+            file_size: 746 MB
             clock_range: 1861943868 to 1869672278 
             date_range: 2017-01-01 to 2017-03-31
 
@@ -569,6 +627,7 @@
 
         - table_row: 
             id: COUVIS_0059 
+            file_size: 753 MB
             clock_range: 1869748418 to 1877557568 
             date_range: 2017-04-01 to 2017-06-30
 
@@ -579,5 +638,6 @@
 
         - table_row: 
             id: COUVIS_0060 
+            file_size: 713 MB
             clock_range: 1877617293 to 1884137111 
             date_range: 2017-07-01 to 2017-09-15

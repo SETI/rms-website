@@ -65,12 +65,7 @@ a link to the volume.
 
 ###  4\. Volume INDEX Files
 
-Each volume has an [INDEX](/link/volumes/COUVIS_0xxx/COUVIS_0004/){:target="_blank"} subdirectory
-containing several files including:
+All instruments provide some form of metadata index files in the folder called INDEX within each PDS3 volume. 
 
-  * [INDXINFO.TXT](INDXINFO.TXT){:target="_blank"}: summarizes the structure and contents of the other two files in the INDEX subdirectory.
-
-**Users are strongly encouraged to read an INDXINFO.TXT before working with the INDEX files.**
-  * [INDEX.TAB](COUVIS_0002_INDEX_TAB.txt){:target="_blank"}: an ASCII table file with one row for each data file on the volume. For Cassini UVIS, each index table approximately 45 columns. This example is from disk COUVIS_0002.
-
-  * [INDEX.LBL](INDEX_LBL.txt){:target="_blank"}: the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index.
+However, RMS Node using later available SPICE kernels, provides extensive metadata tables for this instrument. 
+They are available here: [metadata/COUVIS_0xxx]({{ site.viewmaster_url }}metadata/COUVIS_0xxx/COUVIS_0999){:target="_blank"}.
