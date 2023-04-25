@@ -13,53 +13,62 @@
         - table_row:
             telescope: Hubble Space Telescope (HST) 
             id: RPX_0001
+            file_size: 443 MB
             status: Archived 
             date: 2000-03-10  
 
         - table_row:
             telescope: Hubble Space Telescope (HST) 
             id: RPX_0002
+            file_size: 511 MB
             status: Archived 
             date: 2000-03-10  
 
         - table_row:
             telescope: Hubble Space Telescope (HST) 
             id: RPX_0003
+            file_size: 516 MB
             status: Archived 
             date: 2000-03-10  
 
         - table_row: 
             telescope: Hubble Space Telescope (HST) 
             id: RPX_0004
+            file_size: 550 MB
             status: Archived 
             date: 2000-03-10  
 
         - table_row: 
             telescope: Hubble Space Telescope (HST) 
             id: RPX_0005
+            file_size: 444 MB
             status: Archived 
             date: 2000-03-10  
 
         - table_row: 
             telescope: William Herschel Telescope (WHT) 
             id: RPX_0101
+            file_size: 258 MB
             status: Archived 
             date: 2004-04-02  
 
         - table_row: 
             telescope: NASA Infra Red Telescope Facility (IRTF) 
             id: RPX_0201
+            file_size: 866 MB
             status: Locally Archived  
             date: 2009-01-05  
 
         - table_row:
             telescope: Canada France Hawaii Telescope (CFHT) 
             id: RPX_0301
+            file_size: 1.28 GB
             status: Locally Archived 
             date: 2008-02-18  
 
         - table_row: 
             telescope: Wisconsin-Indiana-Yale-NOAO Telescope(WIYN) 
             id: RPX_0401
+            file_size: 1.81 GB
             status: Archived  
             date: 2010-11-23  

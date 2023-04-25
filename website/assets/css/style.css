@@ -165,6 +165,10 @@ p.superwide > a > img {
   width: 100%;
 }
 
+p.logo {
+  display: inline-flex;
+}
+
 .rss  {
   max-width: 1124px;
 }
