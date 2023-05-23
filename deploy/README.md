@@ -147,9 +147,17 @@ The steps performed by this step are:
 
 5. Verify the changes on the main website: [https://pds-rings.seti.org/](https://pds-rings.seti.org/)
 
-## Updating and Deploying non-git Assets
+## Updating and Deploying non-Jekyll Websites
 
-The general process for deployment of non-git content is:
+Certain parts of the website (specifically the Reviews directory, containing websites intended for doing the work of peer review that are then kept for posterity) are not currently part of the Jekyll workflow.  We edit these HTML files directly, rather than using Markdown.  **However,** these websites are still in the `pds-website` repo.
+
+Therefore, revisions to non-Jekyll websites should be done by way of the GitHub repo, and should be deployed according to the instructions **above**. 
+
+## Updating and Deploying non-Git Assets
+
+Examples of non-Git assets include graphics and other files that support the websites.  Because these assets are not primarily composed of text, GitHub is not suited as a platform for managing them.  Instead, the following instructions are to be used when changing these files. 
+
+The general process for deployment of non-Git content is:
 
 1. Update the non-jekyll files as necessary on the staging server under `/var/www/documents`.
 2. Test the results, ideally asking someone else to verify the changes.
