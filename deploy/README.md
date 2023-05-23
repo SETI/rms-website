@@ -155,7 +155,7 @@ Therefore, revisions to non-Jekyll websites should be done by way of the GitHub 
 
 ## Updating and Deploying non-Git Assets
 
-Examples of non-Git assets include graphics and other files that support the websites.  Because these assets are not primarily composed of text, GitHub is not suited as a platform for managing them.  Instead, the following instructions are to be used when changing these files. 
+Examples of non-Git assets include graphics and PDFs and other files that support the websites.  Because these assets are not primarily composed of text, GitHub is not suited as a platform for managing them.  Instead, the following instructions are to be used when changing these files. 
 
 The general process for deployment of non-Git content is:
 
