@@ -149,7 +149,7 @@ The steps performed by this step are:
 
 ## Updating and Deploying non-Jekyll Websites
 
-Certain parts of the website (specifically the Reviews directory, containing websites intended for doing the work of peer review that are then kept for posterity) are not currently part of the Jekyll workflow.  We edit these HTML files directly, rather than using Markdown.  **However,** these websites are still in the `pds-website` repo.
+Certain parts of the website (specifically the Reviews directory, containing websites intended for doing the work of peer review that are then kept for posterity) are not currently part of the Jekyll workflow.  We edit these HTML files directly, rather than using Markdown.  **However,** these website source files are still in the `pds-website` repo!
 
 Therefore, revisions to non-Jekyll websites should be done by way of the GitHub repo, and should be deployed according to the instructions **above**. 
 
