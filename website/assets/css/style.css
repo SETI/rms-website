@@ -600,6 +600,10 @@ ol.breadcrumb {
   margin-bottom:-20px;
 }
 
+.breadcrumb > .active {
+    color: initial;
+}
+
 
 /* data tables */
 table {

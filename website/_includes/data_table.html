@@ -31,13 +31,6 @@
         {% if custom_code == 'cassini_iss_calibration' %}
 
           <!-- custom table headers for Cassini Ground Calibration table -->
-          {% if col == 'Volume' %}
-            <th scope="row" id="volume">
-              {{ col }}
-            </th>
-
-          {% endif %}
-
           {% if col contains "COISS" %}
 
             {% assign instrument = col | split: '_' %}
