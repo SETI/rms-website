@@ -22,24 +22,63 @@
 
 /* begin style */
 body {
-  background-color: #585858;
   font-family: 'Open Sans', sans-serif;
-  color: #404040;
+  color: #033333;
 }
+
+a {
+  color: #317ab9;
+  background-color: transparent;
+}
+
+nav a, .tab-pill a, .footer-lower a {
+  text-decoration: none !important;
+}
+
+.tab-pill a {
+    color: #2D6FA9;
+}
+
+.tab-pill:hover, .tab-pill:focus {
+    background-color: #D9D9D9;
+}
+
+a:hover, a:focus {
+  color: #224f77;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
 .hidden {  /* a11y way to present only to screen readers */
   text-indent: -5000px;
 }
+
 .site-header  {
   background-color: black;
   margin:0 15px 0 15px;
 }
+
 @media only screen and (max-width: 768px) {
   .site-header  {
     margin:0;  /* hiding it for now, hard to layout this thing in phone-size screens */
   }
 }
+
+.content > h2 {
+    font-size: 172%;
+}
+
+.content > h3 {
+    font-size: 128%;
+}
+
 .container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 /*  width:92%; */
   width: 100%;
   padding: 0;
@@ -47,10 +86,10 @@ body {
 
 /* searchbox */
 .searchbox {
-  width:320px;
+  width: 25em;
   position: absolute;
-  right:55px;
-  top:90px;
+  right: 2.2em;
+  top: 7.4em;
 
 }
 
@@ -59,6 +98,7 @@ body {
     display:none;  /* hiding it for now, hard to layout this thing in phone-size screens */
   }
 }
+
 @media only screen and (min-width: 480px) and (max-width: 768px) and (orientation : portrait) {
   .searchbox {
     display:block;
@@ -74,7 +114,7 @@ body {
   margin:0;
   line-height: 1.5;
   font-size:1.4em;
-  color: #404040;
+  color: #262626;
 }
 @media only screen and (max-width: 320px) {
   .mission_statement {
@@ -130,6 +170,7 @@ body {
     top: -0.2em;
     position: relative;
     left: 2.8em;
+    width: 75%;
 }
 
 /* content containers */
@@ -198,7 +239,7 @@ p.logo {
 .homebox .panel-heading {
   margin:0; padding:0;
   border: 1px solid black;
-  background: url(assets/PRN_home_heading_bg.png);
+  background-image: url(assets/PRN_home_heading_bg.png);
   background-color: #585858;
   color:white;
   font-family: 'Open Sans', sans-serif;
@@ -222,18 +263,6 @@ p.logo {
 	line-height: 1.4em;
 	margin-bottom: 13px;
 }
-.homebox ul a {
-	color: #435ca4;
-}
-.homebox ul a:visited {
-	color: #4e4a92;
-}
-.homebox ul a:hover {
-	color: #5a72b7;
-}
-.homebox ul a:active {
-	color: #31488d;
-}
 
 .homebox .panel-body p strong {
   font-size: 1.5em;
@@ -249,19 +278,28 @@ p.logo {
 .homebox_row {
  -moz-column-width: 40em;
  -webkit-column-width: 40em;
+ -ms-column-width: 40em;
+ column-width: 40em;
  -moz-column-gap: 1em;
- -webkit-column-gap:1em;
+ -webkit-column-gap: 1em;
+ -ms-column-gap: 1em;
+ column-gap: 1em;
 }
+
 @media (min-width: 768px) and (max-width: 1050px) {
   .homebox_row {
      -moz-column-width: 23em;
      -webkit-column-width: 23em;
+     -ms-column-width: 23em;
+     column-width: 23em;
   }
 }
 @media (min-width: 1050px) and (max-width: 1150px) {
   .homebox_row {
      -moz-column-width: 20em;
      -webkit-column-width: 20em;
+     -ms-column-width: 20em;
+     column-width: 20em;
   }
 }
 
@@ -269,13 +307,17 @@ p.logo {
   .homebox_row {
      -moz-column-width: 30em;
      -webkit-column-width: 30em;
+     -ms-column-width: 30em;
+     column-width: 30em;
   }
 }
 @media (min-width: 1950px) {
   .homebox_row {
      -moz-column-width: 45em;
      -webkit-column-width: 45em;
-     max-width:100em;
+     -ms-column-width: 45em;
+     column-width: 45em;
+     max-width: 100em;
   }
 }
 .homebox_item {
@@ -285,16 +327,13 @@ p.logo {
 }
 
 
-
-
-
-
 @media only screen and (max-width: 768px) {
   div.row {
     padding:0;
   }
   .homebox {
-    margin:0; padding:0;
+    margin:0; 
+    padding:0;
     margin-bottom:10px;
   }
   .content, .container, .row {
@@ -302,7 +341,8 @@ p.logo {
     width:100%;
   }
   div.col-xm-12 {
-    margin:0; padding:0;
+    margin:0; 
+    padding:0;
   }
   .mission_statement {
     padding:10px 10px 10px 20px;
@@ -340,7 +380,8 @@ p.logo {
 }
 /* mobile hamburger menu is inside banner */
 .hamburger-container {
-  padding:0; margin:0;
+  padding:0; 
+  margin:0;
   padding-top:5px;
   word-wrap:nowrap;
   font-size: 1.3em;
@@ -370,6 +411,9 @@ p.logo {
   position: relative;
   display: inline-block;
   margin: 20px 37px 20px 37px;
+  }
+  .searchbox {
+    display: none;
   }
 }
 
@@ -413,7 +457,7 @@ nav {
 	display:block;
 	width:100%;
 	font: 1.1em 'Open Sans', sans-serif;
-  color: #435ca4;
+    color: #435ca4;
 	font-weight: 600;
 	line-height: 1.2em;
 	border-top: 1px solid #cccccc;
@@ -484,17 +528,14 @@ nav {
     font: 1.3em 'Open Sans', sans-serif;
     padding:5px;
     overflow: visible;
-
   }
 }
-
-
-
 
 
 .mobile {
   display:none;
 }
+
 @media only screen and (max-width: 768px) {
   .mobile {
     display:block;
@@ -508,24 +549,6 @@ nav {
       display: none;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation:portrait) {
-  .mobile {
-    display:none;
-  }
-}
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
-  .mobile {
-    display:block;
-  }
-  .brandtext {
-    display:block;
-    width:100%;
-    text-align: center;
-    margin:20px auto;
-
-  }
-}
-
 
 
 /* tabs */
@@ -635,12 +658,17 @@ td.colgroup-seperator {
 .navbar-default .navbar-nav>li>a,
 .navbar-default .navbar-nav>li>a:visited,
 .footer-blue {
-  color: #c8d6fc;
+  color: #34b9db;
 }
 .navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:active{
+.navbar-default .navbar-nav>li>a:active {
   color: white;
 }
+
+.footer-blue>a:hover, .footer-blue>a:active {
+  color: #6f99ce;
+}
+
 .footer-lower {
   background-color: black;
   color:white;
