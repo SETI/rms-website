@@ -5,7 +5,6 @@
     - Bundled Volumes
     - Browse Images
     - Enhanced Metadata
-    - None
 
 - footer_msg:
     - ""
@@ -87,12 +86,6 @@
             base_dir:  NHxxLO_xxxx
             liens: None
             description: Calib LORRI
-
-
-- section:
-    heading1: Pluto Cruise 
-
-    section_rows:
 
         - table_row:
             id: NHPCMV_1001

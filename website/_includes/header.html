@@ -1,4 +1,4 @@
-<header class="site-header">
+<div class="site-header" role="heading" aria-level="1">
 
     <div class="banner">
 
@@ -7,7 +7,7 @@
         </div>
 
         <div class = "mobile hamburger-container">
-            <a href = "#nav">
+            <a href = "#pds-nav">
                 MENU <span class="hamburger glyphicon glyphicon-menu-hamburger"></span>
             </a>
         </div>
@@ -15,22 +15,11 @@
 
         <div class="searchbox">
 
-              <script>
-                (function() {
-                  var cx = '007870209983431604483:hux2hfzwefc';
-                  var gcse = document.createElement('script');
-                  gcse.type = 'text/javascript';
-                  gcse.async = true;
-                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                      '//www.google.com/cse/cse.js?cx=' + cx;
-                  var s = document.getElementsByTagName('script')[0];
-                  s.parentNode.insertBefore(gcse, s);
-                })();
-              </script>
+            <script async src="https://cse.google.com/cse.js?cx=61f5f564833204578">
+            </script>
+            <div class="gcse-search"></div>
 
-             <gcse:search linktarget="_parent"></gcse:search>
-
-             <style>
+            <style>
                  .cse .gsc-control-cse, .gsc-control-cse {
                     border:0;
                     background: rgba(54, 25, 25, 0);
@@ -42,14 +31,24 @@
                 .gsc-input-box-focus,
                 .gsc-search-button {
                     box-sizing: content-box;
-                    line-height: normal;
-                }
+                 }
                 input.gsc-input,
                 .gsc-input-box {
                     margin-right: -40px;
-                    width: 240px
+                    width: 13.5em;
                 }
 
+                .gsc-input {
+                    border: none;
+                }
+
+                .gsc-search-button {
+                    border: none;
+                }
+
+                .gsib_a, .gsib_b {
+                    padding: 3px 0px;
+                }
             </style>
 
         </div><!-- /google search box -->
@@ -60,4 +59,4 @@
      </div>
 
 
-</header>
+    </div>
