@@ -2,43 +2,15 @@
 layout: base
 layout_style: default
 title: "Galileo SSI Ring Images from the G8 Encounter"
+opus_share: /view=detail&detail=go-ssi-
 ---
 
-<div class="breadcrumb" style="background:white; border-width:0px; padding-left:0px">
-  <li><a href="/galileo/">Galileo</a></li>
-  <li style="color:gray">G8 Encounter</li>
-</div>
+{% include breadcrumbs.html %}
 
-#  Galileo SSI Ring Images from the G8 Encounter
+# Galileo SSI Ring Images from the G8 Encounter
+{% assign image_table = site.data.tables['ssi_g8_img'] %}
+{% include image-gallery.html %}
 
-<table>
- <tr>
-  <td>
-    <a href="c0394449168.html">
-      <img src="c0394449168r_s1.gif" alt="Galileo SSI image C0394449168" />
-      C0394449168
-    </a>
-  </td>
-  <td>
-    <a href="c0394449169.html">
-      <img src="c0394449169r_s1.gif" alt="Galileo SSI image C0394449169" />
-      C0394449169
-    </a>
-  </td>
-  <td>
-    <a href="c0394458268.html">
-      <img src="c0394458268r_s1.gif" alt="Galileo SSI image C0394458268" />
-      C0394458268
-    </a>
-  </td>
-  <td>
-    <a href="c0394458269.html">
-      <img src="c0394458269r_s1.gif" alt="Galileo SSI image C0394458269" />
-      C0394458269
-    </a>
-  </td>
- </tr>
-</table>
 
 * * *
 
@@ -47,7 +19,7 @@ title: "Galileo SSI Ring Images from the G8 Encounter"
 Image ID |  Filter |  Exposure | Elevation | Range     | Phase Angle | Observation
          |         |  (ms)     | (deg)     | (1000 km) | (deg)       |
 ---|---|---|---|---|---|---
-[C0394449168](c0394449168.html) |  CLEAR |  395.83 |  -0.623 | 1507 |  84.178 |  G8SSADRAST01  
-[C0394449169](c0394449169.html) |  CLEAR |  395.83 |  -0.623 | 1507 |  84.178 |  G8SSADRAST01  
-[C0394458268](c0394458268.html) |  CLEAR |  395.83 |  -0.514 | 1463 |  83.049 |  G8SSADRAST01  
-[C0394458269](c0394458269.html) |  CLEAR |  395.83 |  -0.514 | 1463 |  83.049 |  G8SSADRAST01  
+[C0394449168]({{ site.opus_url }}{{ page.opus_share }}c0394449168){:target="_blank"} |  CLEAR |  395.83 |  -0.623 | 1507 |  84.178 |  G8SSADRAST01  
+[C0394449169]({{ site.opus_url }}{{ page.opus_share }}c0394449169){:target="_blank"} |  CLEAR |  395.83 |  -0.623 | 1507 |  84.178 |  G8SSADRAST01  
+[C0394458268]({{ site.opus_url }}{{ page.opus_share }}c0394458268){:target="_blank"} |  CLEAR |  395.83 |  -0.514 | 1463 |  83.049 |  G8SSADRAST01  
+[C0394458269]({{ site.opus_url }}{{ page.opus_share }}c0394458269){:target="_blank"} |  CLEAR |  395.83 |  -0.514 | 1463 |  83.049 |  G8SSADRAST01  

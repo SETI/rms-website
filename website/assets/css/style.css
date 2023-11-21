@@ -31,6 +31,10 @@ a {
   background-color: transparent;
 }
 
+pre {
+    padding-left: 2em;
+}
+
 nav a, .tab-pill a, .footer-lower a {
   text-decoration: none !important;
 }
@@ -67,6 +71,10 @@ a:focus {
   .site-header  {
     margin:0;  /* hiding it for now, hard to layout this thing in phone-size screens */
   }
+}
+
+#breadcrumbs {
+    text-transform: capitalize;
 }
 
 .content > h2 {
