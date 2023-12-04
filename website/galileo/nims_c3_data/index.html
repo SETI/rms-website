@@ -4,50 +4,13 @@ layout_style: default
 title: "Galileo NIMS C3 Ring Data"
 ---
 
-<div class="breadcrumb" style="background:white; border-width:0px; padding-left:0px">
-  <li><a href="/galileo/">Galileo</a></li>
-  <li style="color:gray">NIMS C3 Encounter</li>
-</div>
+{% include breadcrumbs.html %}
 
-#  Galileo NIMS C3 Ring Data
+# Galileo NIMS C3 Ring Data
 
 ## C3 Encounter
 
-<table>
- <tr>
-  <td>
-    <a href="c3r001.html">
-      <img src="c3r001.edr.jpg" alt="NIMS footprint for C3R001" />
-      C3R001
-    </a>
-  </td>
-  <td>
-    <a href="c3r002.html">
-      <img src="c3r002.edr.jpg" alt="NIMS footprint for C3R002" />
-      C3R002
-    </a>
-  </td>
-  <td>
-    <a href="c3r003.html">
-      <img src="c3r003.edr.jpg" alt="NIMS footprint for C3R003" />
-      C3R003
-    </a>
-  </td>
- </tr>
- <tr>
-  <td>
-    <a href="c3r004.html">
-      <img src="c3r004.edr.jpg" alt="NIMS footprint for C3R004" />
-      C3R004
-    </a>
-  </td>
-  <td>
-    <a href="c3r005.html">
-      <img src="c3r005.edr.jpg" alt="NIMS footprint for C3R005" />
-      C3R005
-    </a>
-  </td>
-  <td>
-  </td>
- </tr>
-</table>
+{% assign image_table = site.data.tables['nims_c3_img'] %}
+{% include image-gallery.html %}
+
+

@@ -1,0 +1,23 @@
+<style>
+    .image-gallery {overflow: auto; padding-inline-start: 0; margin-left: -5%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 5%;}
+    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
+    .image-gallery li a span {display: inline-grid; text-overflow: ellipsis; overflow: hidden; padding: 3px 0; width:100px; text-align: center}
+    .image-gallery li a img {display: block;}
+</style>
+
+<ul class="image-gallery">
+    {% for image in image_table %}
+         <li>           
+            {% if image.href != nil %}
+                <a href="{{ image.href }}">
+                <img src="{{ site.assets_url }}{{ image.src }}" alt="{{ image.alt }}" />
+                <span>{{ image.title }}</span></a>
+            {% else %} 
+                <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank"> 
+                <img src="{{ site.assets_url }}holdings/previews/{{ image.src }}" alt="{{ image.alt }}" />
+                <span>{{ image.filename }}</span></a>
+             {% endif %}         
+        </li>
+    {% endfor %}
+</ul>
