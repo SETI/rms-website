@@ -2,24 +2,21 @@
 layout: base
 layout_style: default
 title: "Galileo NIMS Spectral Image E4R001"
+asset_location: galileo/nims_e4_data/
 ---
 
-<div class="breadcrumb" style="background:white; border-width:0px; padding-left:0px">
-  <li><a href="/galileo/">Galileo</a></li>
-  <li><a href="index.html">NIMS E4 Encounter</a></li>
-  <li style="color:gray">E4R001</li>
-</div>
+{% include breadcrumbs.html %}
 
-![Galileo NIMS footprint for e4r001](e4r001.edr.jpg)
+![Galileo NIMS footprint for e4r001]({{ site.assets_url }}{{ page.asset_location }}e4r001.edr.jpg)
 
 #  Galileo NIMS Spectral Image E4R001
 
 ##  Download the Image Cube:
 
-  * [Raw (EDR) data, PDS format](e4r001.edr) (87040 bytes) 
-  * [Calibrated (I/F units), PDS format](e4r001ti.qub) (295936 bytes) 
-  * [Calibrated (radiance units), PDS format](e4r001tr.qub) (382976 bytes) 
-  * Diagram, JPEG format: [256 x 256](e4r001.edr.jpg), (8171 bytes) 
+  * [Raw (EDR) data, PDS format]({{ site.assets_url }}{{ page.asset_location }}e4r001.edr) (87040 bytes) 
+  * [Calibrated (I/F units), PDS format]({{ site.assets_url }}{{ page.asset_location }}e4r001ti.qub) (295936 bytes) 
+  * [Calibrated (radiance units), PDS format]({{ site.assets_url }}{{ page.asset_location }}e4r001tr.qub) (382976 bytes) 
+  * Diagram, JPEG format: [256 x 256]({{ site.assets_url }}{{ page.asset_location }}e4r001.edr.jpg), (8171 bytes) 
 
 ## PDS Label Information:
 

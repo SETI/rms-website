@@ -1,0 +1,37 @@
+- row:
+  src: GO_0xxx/GO_0023/G29/RINGS/C0584346700R_thumb.jpg
+  alt: Galileo SSI C0584346700
+  filename: C0584346700
+
+- row:
+  src: GO_0xxx/GO_0023/G29/RINGS/C0584432800R_thumb.jpg
+  alt: Galileo SSI C0584432800
+  filename: C0584432800
+  
+- row:
+  src: GO_0xxx/GO_0023/G29/RINGS/C0584713100R_thumb.jpg
+  alt: Galileo SSI C0584713100
+  filename: C0584713100
+
+- row:
+  src: GO_0xxx/GO_0023/G29/RINGS/C0584718100R_thumb.jpg
+  alt: Galileo SSI C0584718100
+  filename: C0584718100
+
+- row:
+  src: GO_0xxx/GO_0023/G29/RINGS/C0584718101R_thumb.jpg
+  alt: Galileo SSI C0584718101
+  filename: C0584718101
+
+
+- row:
+  src: galileo/ssi_g29_data/c0584718100r_merge_s1.gif
+  alt: Galileo SSI C0584718100 merged
+  title: C0584718100 merged
+  href: c0584718100_merge.html
+
+
+- row:
+  src: GO_0xxx/GO_0023/G29/RINGS/C0584720500R_thumb.jpg
+  alt: Galileo SSI C0584720500
+  filename: C0584720500

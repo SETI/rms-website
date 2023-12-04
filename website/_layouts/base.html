@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
   {% include head.html %}
 
-  <body ontouchstart=""><a name="top"></a>
+  <body ontouchstart="">
 
-    <div class="container pds-container">
-
-    {% if page.url == '/index.html' %}  <!-- homepage -->
-
-      <h1 class = "hidden">
-        {{ site.title }}
-      </h1>
-
-    {% endif %}
-
+    <div class="container pds-container" role="main">
       <div class = "row">
         {% include header.html %}
       </div>
@@ -24,26 +15,12 @@
         <!-- main content area -->
 
         <div class = "col-md-10 col-md-push-2 col-sm-9 col-sm-push-3 col-xm-12">
-          {% if page.tabs %}
-            {% include tabs.html %}
-          {% endif %}
+			{% if page.tabs %}
+				{% include tabs.html %}
+			{% endif %}
 
-            {% if page.layout_style == 'wide' %}
-              {% assign custom_layout = true %}
-
-              <div class = "col-md-12 col-sm-12">
-
-            {% else %}
-
-              <div class = "col-md-12 col-sm-12">
-
-            {% endif %}
-
-
-              <span class = "hidden">
-                <a href = "#nav">skip to navigation</a>
-              </span>
-
+			<div class = "col-md-12 col-sm-12">
+           
               {% assign page_url_path_split = page.url | split: "/" %}
               {% assign page_class = page_url_path_split[1] %}
 
@@ -51,7 +28,6 @@
                 {% assign page_class = 'homepage' %}
               {% endif %}
 
-              <a name = "content"></a>
               <div class = "content {{page_class}}">
                 {% if page.format == 'html' %}
 
@@ -63,9 +39,9 @@
 
                 {% endif %}
 
-                </div><!-- wde/normal -->
+              </div><!-- content -->
 
-            </div><!-- /content -->
+            </div>
 
         </div>
 
@@ -74,8 +50,8 @@
         <div class = "col-md-2 col-md-pull-10 col-sm-3 col-sm-pull-9 col-xm-12 nav-container">
 
           {% if page.url != '/index.html' %}  <!-- homepage -->
-            <div class = "mobile toplink">
-              <a href = "#top">back to top</a>
+            <div class="mobile toplink">
+              <a href="#">back to top</a>
             </div>
           {% endif %}
 
@@ -85,8 +61,7 @@
     </div><!-- /row -->
 
   </div><!-- /container -->
-  {% include confirm_modal.html %}
-  {% include footer.html %}
+    {% include footer.html %}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

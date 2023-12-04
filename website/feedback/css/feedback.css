@@ -612,7 +612,7 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
   cursor: pointer;
 
   background-color: #007bb3; /* pds-rings */
-  color: #ffffffc0; /* pds-rings */
+  color: rgb(255, 255, 252); /* pds-rings */
   border: 1px solid transparent;
   font-family: Arial;
   line-height: 20px;
@@ -660,7 +660,7 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
 }
 .feedbackTab p:before {
     background-image: url(../image/envelope.jpg);
-    opacity: 0.5; /* OPUS - Added to agree with text opacity */
+    opacity: 1.5; /* OPUS - Added to agree with text opacity */
     background-size: 18px 18px;
     background-repeat: no-repeat;
     display: inline-block;

@@ -31,13 +31,6 @@
         {% if custom_code == 'cassini_iss_calibration' %}
 
           <!-- custom table headers for Cassini Ground Calibration table -->
-          {% if col == 'Volume' %}
-            <th scope="row" id="volume">
-              {{ col }}
-            </th>
-
-          {% endif %}
-
           {% if col contains "COISS" %}
 
             {% assign instrument = col | split: '_' %}
@@ -161,7 +154,7 @@
 
             <!-- Volume ID -->
             {% if col == "Volume ID" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 {% if entry.section.nolinks == true %}
                     {{ row.table_row.id }}
                 {% else %}
@@ -176,20 +169,22 @@
 
             <!-- Bundled Volumes -->
             {% if col contains "Bundled" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
 
                 {% if entry.section.nolinks == true %}
                     {{ row.table_row.id }}.tar.gz
                 {% else %}
 
                   {% if col contains "Bundled Volumes" %}
-                    <a href = "{{ site.holdings_url }}archives-volumes/{{ base_dir }}/{{ row.table_row.id }}.tar.gz">
+                    <a href = "{{ site.holdings_url }}archives-volumes/{{ base_dir }}/{{ row.table_row.id }}.tar.gz" 
+                        {% if row.table_row.file_size  %} title="({{ row.table_row.file_size }})" {% endif %}>
                         {{ row.table_row.id }}.tar.gz
                     </a>
                   {% endif %}
 
                   {% if col contains "Bundled Calibrated" %}
-                    <a href = "{{ site.holdings_url }}archives-calibrated/{{ base_dir }}/{{ row.table_row.id }}_calibrated.tar.gz">
+                    <a href = "{{ site.holdings_url }}archives-calibrated/{{ base_dir }}/{{ row.table_row.id }}_calibrated.tar.gz"
+                        {% if row.table_row.calib_file_size  %} title="({{ row.table_row.calib_file_size }})" {% endif %}>
                         {{ row.table_row.id }}_calibrated.tar.gz
                     </a>
                   {% endif %}
@@ -203,7 +198,7 @@
 
             <!-- Browse Images -->
             {% if col == "Browse Images" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
 
                 {% if entry.section.nolinks == true %}
                     {{ col }}
@@ -235,7 +230,7 @@
 
             <!-- Calibrated Images -->
             {% if col == "Calibrated Images" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
 
                 {% if entry.section.nolinks == true %}
                     {{ col }}
@@ -252,7 +247,7 @@
 
             <!-- Footprint Link -->
             {% if col == "Footprint Link" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
 
                 {% if entry.section.nolinks == true %}
                     Footprints
@@ -269,7 +264,7 @@
 
             <!-- Index File -->
             {% if col == "Index File" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
 
                   {% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
                     {% assign index_tab_name = "TSDR_INDEX.TAB" %}
@@ -296,7 +291,7 @@
 
             <!-- Spacecraft Clock (SCLK) range -->
             {% if col == "Spacecraft Clock (SCLK) range" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 {{ row.table_row.clock_range | replace: ' ', '<br>' }}
               </td>
             {% endif %}
@@ -304,7 +299,7 @@
 
             <!-- FDS range -->
             {% if col == "FDS Range" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 {{ row.table_row.fds_range | replace: ' ', '<br>' }}
               </td>
             {% endif %}
@@ -312,7 +307,7 @@
 
             <!-- Status -->
             {% if col == "Status" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 {{ row.table_row.status }}
               </td>
             {% endif %}
@@ -320,14 +315,14 @@
 
             <!-- FDS range -->
             {% if col == "Date" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 {{ row.table_row.date }}
               </td>
             {% endif %}
 
             <!-- Date Range (UTC) -->
             {% if col contains "Date Range" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 <span style = "white-space:nowrap">{{ row.table_row.date_range | replace: ' ', '</span><br><span class = "white-space:nowrap">' }}</span>
               </td>
             {% endif %}
@@ -335,14 +330,14 @@
 
             <!-- Telescope  -->
             {% if col == "Telescope" %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 {{ row.table_row.telescope }}
               </td>
             {% endif %}
 
           <!-- volume_id_list -->
           {% if col == "Data Set" %}
-            <td scope="row" id = "dataset-{{ row.table_row.dataset }}" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+            <td scope="row" id = "dataset-{{ row.table_row.dataset }}" headers="{{ col | slugify }}">
               <span style = "white-space:nowrap">{{ row.table_row.dataset }}</span>
             </td>
           {% endif %}
@@ -351,7 +346,7 @@
 
             <!-- volume_id_list -->
             {% if col == 'Volume ID List' %}
-              <td headers="{{ col | slugify }} dataset-{{ row.table_row.dataset }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }} dataset-{{ row.table_row.dataset }}">
                 <ul class = "list-inline" style = "text-align:left">
 
                   {% for volume_id in row.table_row.volume_id_list %}
@@ -391,19 +386,19 @@
 
             <!-- Astrometry Tables -->
             {% if table_name contains 'Astrometry' and col contains 'Satellite' %}
-              <td style = "white-space: normal" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td style = "white-space: normal" headers="{{ col | slugify }}">
                 {{ row.table_row.sats }}
               </td>
             {% endif %}
 
             {% if table_name contains 'NAIF ID' and col contains 'Satellite' %}
-              <td style = "white-space: normal" headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td style = "white-space: normal" headers="{{ col | slugify }}">
                 {{ row.table_row.sat }}
               </td>
             {% endif %}
 
             {% if table_name contains 'NAIF ID' and col contains 'NAIF' %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                 {{ row.table_row.naif_id }}
               </td>
             {% endif %}
@@ -415,7 +410,7 @@
 
               <!-- table cell -->
               {% if col contains 'Description' %}
-              <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+              <td headers="{{ col | slugify }}">
                     {{ row.table_row.description }}
                   </td>
               {% endif %}
@@ -424,7 +419,7 @@
 
               <!-- table cell -->
               {% if col contains 'Enhanced Metadata' %}
-                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                <td headers="{{ col | slugify }}">
 
                   {% if entry.section.nolinks == true %}
                       Enhanced Metadata
@@ -439,7 +434,7 @@
 
               <!-- table cell -->
               {% if col contains 'Open Liens' %}
-                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                <td headers="{{ col | slugify }}">
                   {{ row.table_row.liens }}
                 </td>
               {% endif %}
@@ -453,7 +448,7 @@
 
               {% if col contains 'Data File' %}
 
-                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                <td headers="{{ col | slugify }}">
                   <a href = "{{ site.holdings_url }}volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.TAB" target="_blank">
                     {{ row.table_row.name }}.TAB
 
@@ -461,7 +456,7 @@
                 </td>
 
               {% elsif col contains 'Label File' %}
-                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                <td headers="{{ col | slugify }}">
                   <a href = "{{ site.holdings_url }}volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.LBL" target="_blank">
                     .LBL
                   </a>
@@ -471,7 +466,7 @@
 
                 {% capture field_name %}{{ col | downcase }}{% endcapture %}
 
-                <td headers="{{ col | slugify }} section-{{ entry.section.heading1 | slugify}} {{ entry.section.heading2 | slugify}}">
+                <td headers="{{ col | slugify }}">
 
                     <span style = "white-space:nowrap">
                       {{ row.table_row[field_name] }}

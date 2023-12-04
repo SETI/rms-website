@@ -36,6 +36,7 @@
       bar_first = document.createElement("div"),
       bar_second = document.createElement("div");
     app_bar.setAttribute("id", "pds-app-bar");
+    app_bar.setAttribute("role", "navigation");
     bar_first.className = "pds-app-bar-section";
     bar_second.className = "pds-app-bar-section";
 
@@ -75,6 +76,7 @@
     dropdown_container.classList.add("dropdown-content");
     dropdown_link.textContent = "Find a Node";
     dropdown_link.setAttribute("tabindex", "0");
+    dropdown_link.setAttribute("role", "button");
     dropdown_link.classList.add("nav");
     dropdown_link.appendChild(dropdown_caret);
 

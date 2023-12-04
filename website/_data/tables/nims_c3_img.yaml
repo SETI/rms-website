@@ -1,0 +1,34 @@
+- row:
+  src: galileo/nims_c3_data/c3r001.edr.jpg
+  alt: NIMS footprint for C3R001
+  title: C3R001
+  href: c3r001.html
+
+- row:
+  src: galileo/nims_c3_data/c3r002.edr.jpg
+  alt: NIMS footprint for C3R002
+  title: C3R002
+  href: c3r002.html
+
+- row:
+  src: galileo/nims_c3_data/c3r003.edr.jpg
+  alt: NIMS footprint for C3R003
+  title: C3R003
+  href: c3r003.html
+
+- row:
+  src: galileo/nims_c3_data/c3r004.edr.jpg
+  alt: NIMS footprint for C3R004
+  title: C3R004
+  href: c3r004.html
+
+- row:
+  src: galileo/nims_c3_data/c3r005.edr.jpg
+  alt: NIMS footprint for C3R005
+  title: C3R005
+  href: c3r005.html
+
+
+
+
+
