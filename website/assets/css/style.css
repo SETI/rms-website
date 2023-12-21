@@ -234,6 +234,10 @@ p.logo {
   max-height: 461px;
 }
 
+.tools img {
+  width: 100%;
+}
+
 /* homepage boxes */
 .homebox {
   font:1.0em 'Open Sans', sans-serif;
