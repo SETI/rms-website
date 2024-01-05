@@ -523,7 +523,7 @@
 
 - section:
     heading1: July 1, 2011
-    heading2: "Due to data file format changes beginning with the July 2011 data delivery,<br>reformatted versions are not yet available."
+    heading2: "Due to changing data file formats, reformatted versions were not produced beyond July 2011.<br>As of 2024, a definitive version of the CIRS data set is actively in process, and reformatted data volumes will be published subsequently."
     nolinks: true
 
     section_rows:
