@@ -2,7 +2,10 @@
 layout: base
 layout_style: default
 tabs: voyager_iss
+directory: voyager/iss
 ---
+
+{% assign asset_url = site.assets_url | append: page.directory | append: "/" %}
 
 ## Voyager Imaging Science Subsystem (ISS)
 
@@ -29,7 +32,7 @@ provided here.
   * [ Scan Platform](inst_cat_wa1.html#scan_plat)
   * [ References](inst_cat_wa1.html#ref)
 
-Click [here](inst_cat_wa1.txt){:target="_blank"} to see the PDS-formatted version of this file.
+Click [here]({{ site.holdings_url }}volumes/VGISS_6xxx/VGISS_6215/CATALOG/VG1WINST.CAT){:target="_blank"} to see the PDS-formatted version of this file.
 
 ### [Voyager 1 Narrow Angle Camera](inst_cat_na1.html)
 
@@ -48,7 +51,7 @@ Click [here](inst_cat_wa1.txt){:target="_blank"} to see the PDS-formatted versio
   * [ Scan Platform](inst_cat_na1.html#scan_plat)
   * [ References](inst_cat_na1.html#ref)
 
-Click [here](inst_cat_na1.txt){:target="_blank"} to see the PDS-formatted version of this file.
+Click [here]({{ site.holdings_url }}volumes/VGISS_6xxx/VGISS_6215/CATALOG/VG1NINST.CAT){:target="_blank"} to see the PDS-formatted version of this file.
 
 ### [Voyager 2 Wide Angle Camera](inst_cat_wa2.html)
 
@@ -68,7 +71,7 @@ Click [here](inst_cat_na1.txt){:target="_blank"} to see the PDS-formatted versio
   * [ References](inst_cat_wa2.html#ref)
 
 
-Click [here](inst_cat_wa2.txt){:target="_blank"} to see the PDS-formatted version of this file.
+Click [here]({{ site.holdings_url }}volumes/VGISS_6xxx/VGISS_6215/CATALOG/VG2WINST.CAT){:target="_blank"} to see the PDS-formatted version of this file.
 
 ### [Voyager 2 Narrow Angle Camera](inst_cat_na2.html)
 
@@ -87,7 +90,7 @@ Click [here](inst_cat_wa2.txt){:target="_blank"} to see the PDS-formatted versio
 * [ Scan Platform](inst_cat_na2.html#scan_plat)
 * [ References](inst_cat_na2.html#ref)
 
-Click [here](inst_cat_na2.txt){:target="_blank"} to see the PDS-formatted version of this file.
+Click [here]({{ site.holdings_url }}volumes/VGISS_6xxx/VGISS_6215/CATALOG/VG2NINST.CAT){:target="_blank"} to see the PDS-formatted version of this file.
 
 * * *
 
@@ -95,7 +98,7 @@ Click [here](inst_cat_na2.txt){:target="_blank"} to see the PDS-formatted versio
 {: #calib }
 
 The standard, published reference for how to calibrate the Voyager images is
-[Danielson et al. 1981](https://ui.adsabs.harvard.edu/abs/1981JGR....86.8683D){:target="_blank"}:
+[Danielson et al. 1981](//ui.adsabs.harvard.edu/abs/1981JGR....86.8683D){:target="_blank"}:
 
 Danielson, G. E., P. N. Kupferman, T. V. Johnson, and L. A. Soderblom 1981.
 Radiometric Performance of the Voyager Cameras. _Journal of Geophysical
@@ -105,7 +108,7 @@ It describes the image calibration as understood following the Jupiter
 encounters.
 
 The [Voyager Imaginig Science Subsystem Calibration
-Report](Benesh_Jepsen_1978.pdf){:target="_blank"}: Benesh and Jepsen, 1978, is now available for
+Report]({{ asset_url }}Benesh_Jepsen_1978.pdf){:target="_blank"}: Benesh and Jepsen, 1978, is now available for
 general use. It was produced as a JPL document and compiles the results of
 calibrations and tests performed on the ISS cameras.
 
@@ -113,14 +116,14 @@ Additional memos were distributed to the ISS team prior to the Uranus and
 Neptune encounters. They have been transcribed here.
 
 [ T. V. Johnson, January 16, 1986](memo_1986_01_16.html){:target="_blank"}: (just before the
-Uranus encounter).  [Plain text](memo_1986_01_16.txt){:target="_blank"} version and separate
-[figure](figure_1986_01_16.gif){:target="_blank"}.{:target="_blank"}
+Uranus encounter).  [Plain text]({{ asset_url }}memo_1986_01_16.txt){:target="_blank"} version and separate
+[figure]({{ asset_url }}figure_1986_01_16.gif){:target="_blank"}.
 
 [ T. V. Johnson, August 18, 1989](memo_1989_08_18.html){:target="_blank"} (just before the
-Neptune encounter).  [Plain text](memo_1989_08_18.txt){:target="_blank"} version.
+Neptune encounter).  [Plain text]({{ asset_url }}memo_1989_08_18.txt){:target="_blank"} version.
 
 [ G. E. Danielson, May 14, 1990](memo_1990_05_14.html){:target="_blank"} (final post-Neptune
-calibration memo).  [Plain text](memo_1990_05_14.txt){:target="_blank"} version.
+calibration memo).  [Plain text]({{ asset_url }}memo_1990_05_14.txt){:target="_blank"} version.
 
 Note that these subsequent memos only refer to the Voyager 2 instrument. No
 re-calibration of the Voyager 1 cameras was ever performed. Nevertheless, it
@@ -128,7 +131,7 @@ is widely believed that these calibration correction factors are probably
 reasonable for Voyager 1 images as well.
 
 Plots and information about the various filters, based on the work of
-[Danielson et al. 1981](https://ui.adsabs.harvard.edu/abs/1981JGR....86.8683D){:target="_blank"}, can be found here.
+[Danielson et al. 1981](//ui.adsabs.harvard.edu/abs/1981JGR....86.8683D){:target="_blank"}, can be found here.
 
   * Voyager 1, Wide angle camera: [Methane-JST](inst_cal/vg1_wa_ch4js.html), [Blue](inst_cal/vg1_wa_blue.html), [Clear](inst_cal/vg1_wa_clear.html), [Violet](inst_cal/vg1_wa_violet.html) [Sodium-D](inst_cal/vg1_wa_sodium.html), [Green](inst_cal/vg1_wa_green.html), [Methane-U](inst_cal/vg1_wa_ch4u.html), [Orange](inst_cal/vg1_wa_orange.html)
   * Voyager 1, Narrow angle camera: [Clear(0)](inst_cal/vg1_na_clear0.html), [Violet](inst_cal/vg1_na_violet.html), [Blue](inst_cal/vg1_na_blue.html), [Orange](inst_cal/vg1_na_orange.html) [Clear(4)](inst_cal/vg1_na_clear4.html), [Green(5)](inst_cal/vg1_na_green5.html), [Green(6)](inst_cal/vg1_na_green6.html), [UV](inst_cal/vg1_na_uv.html)

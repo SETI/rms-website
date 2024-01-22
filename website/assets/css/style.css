@@ -238,6 +238,17 @@ p.logo {
   width: 100%;
 }
 
+img.thumbnail {
+    float: left;
+    width: 50%;
+}
+
+img.diagram {
+    float: none !important;
+}
+
+img.
+
 /* homepage boxes */
 .homebox {
   font:1.0em 'Open Sans', sans-serif;
