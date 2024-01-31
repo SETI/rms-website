@@ -2,39 +2,17 @@
 layout: base
 layout_style: default
 title: "Galileo SSI Ring Images from the I32 Encounter"
+opus_share: /view=detail&detail=go-ssi-
 ---
 
-<div class="breadcrumb" style="background:white; border-width:0px; padding-left:0px">
-  <li><a href="/galileo/">Galileo</a></li>
-  <li style="color:gray">I32 Encounter</li>
-</div>
+{% include breadcrumbs.html %}
 
 #  Galileo SSI Ring Images from the I32 Encounter
+{% assign image_table = site.data.tables['ssi_i32_img'] %}
+{% include image-gallery.html %}
+
 
 NOTE: GALSOSed images not yet available.
-
-<table>
- <tr>
-  <td>
-    <a href="c0626030645.html">
-      <img src="c0626030645r_s1.gif" alt="Galileo SSI image C0626030645" />
-      C0626030645
-    </a>
-  </td>
-  <td>
-    <a href="c0626030646.html">
-      <img src="c0626030646r_s1.gif" alt="Galileo SSI image C0626030646" />
-      C0626030646
-    </a>
-  </td>
-  <td>
-    <a href="c0626030845.html">
-      <img src="c0626030845r_s1.gif" alt="Galileo SSI image C0626030845" />
-      C0626030845
-    </a>
-  </td>
- </tr>
-</table>
 
 * * *
 
@@ -43,6 +21,6 @@ NOTE: GALSOSed images not yet available.
 Image ID |  Filter |  Exposure | Elevation | Range     | Phase Angle | Observation
          |         |  (ms)     | (deg)     | (1000 km) | (deg)       |
 ---|---|---|---|---|---|---
-[C0626030645](c0626030645.html)|  CLEAR |  4262.50 |  0.219 | 2887 |  19.692 |  32RSGOSRNG01  
-[C0626030646](c0626030646.html)|  CLEAR |  4262.50 |  0.219 | 2887 |  19.692 |  32RSGOSRNG01  
-[C0626030845](c0626030845.html)|  CLEAR |  3195.83 |  0.219 | 2888 |  19.687 |  32RSGOSRNG01  
+[C0626030645]({{ site.opus_url }}{{ page.opus_share }}c0626030645){:target="_blank"}|  CLEAR |  4262.50 |  0.219 | 2887 |  19.692 |  32RSGOSRNG01  
+[C0626030646]({{ site.opus_url }}{{ page.opus_share }}c0626030646){:target="_blank"}|  CLEAR |  4262.50 |  0.219 | 2887 |  19.692 |  32RSGOSRNG01  
+[C0626030845]({{ site.opus_url }}{{ page.opus_share }}c0626030845){:target="_blank"}|  CLEAR |  3195.83 |  0.219 | 2888 |  19.687 |  32RSGOSRNG01  

@@ -1,7 +1,9 @@
 {% assign all_tabs = site.data.tabs[page.tabs] %}
 
 {% for tab in all_tabs %}
-	{% if tab.href == page.url %}
+    {% assign tab_href = (tab.href | relative_url) %}
+    {% assign page_path = (page.path | relative_url) %}
+    {% if tab_href == page_path %}
 		{% assign active_tab = tab %}
 		{% break %}
 	{% endif %}

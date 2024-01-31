@@ -18,21 +18,25 @@
 
         - table_row: 
             id: COVIMS_0001
+            file_size: 381 MB
             clock_range: 1294638283 to 1347975366 
             date_range: 1999-01-10 to 2000-09-18  
 
         - table_row: 
             id: COVIMS_0002
+            file_size: 699 MB
             clock_range: 1351738505 to 1361942552 
             date_range: 2000-11-15 to 2001-02-27  
 
         - table_row: 
             id: COVIMS_0003
+            file_size: 1.08 GB
             clock_range: 1364267566 to 1463070060 
             date_range: 2001-03-26 to 2004-05-12  
 
         - table_row: 
             id: COVIMS_0004
+            file_size: 1.01 GB
             clock_range: 1463282505 to 1475279810 
             date_range: 2004-05-15 to 2004-09-30  
 
@@ -43,6 +47,7 @@
 
         - table_row: 
             id: COVIMS_0005
+            file_size: 853 MB
             clock_range: 1475285219 to 1483237480 
             date_range: 2004-10-01 to 2005-01-01  
 
@@ -53,6 +58,7 @@
 
         - table_row: 
             id: COVIMS_0006
+            file_size: 844 MB
             clock_range: 1484504505 to 1491005430 
             date_range: 2005-01-15 to 2005-04-01  
 
@@ -63,6 +69,7 @@
 
         - table_row: 
             id: COVIMS_0007
+            file_size: 951 MB
             clock_range: 1491009137 to 1498752813 
             date_range: 2005-04-01 to 2005-06-29  
 
@@ -73,6 +80,7 @@
 
         - table_row: 
             id: COVIMS_0008
+            file_size: 1.19 GB
             clock_range: 1499045873 to 1506582846 
             date_range: 2005-07-03 to 2005-09-28  
 
@@ -83,6 +91,7 @@
 
         - table_row: 
             id: COVIMS_0009
+            file_size: 1.12 GB
             clock_range: 1506820469 to 1514574137 
             date_range: 2005-10-01 to 2005-12-29  
 
@@ -93,11 +102,13 @@
 
         - table_row: 
             id: COVIMS_0010
+            file_size: 762 MB
             clock_range: 1514910706 to 1518204618 
             date_range: 2006-01-02 to 2006-02-09  
 
         - table_row: 
             id: COVIMS_0011
+            file_size: 1.17 GB
             clock_range: 1518266879 to 1521668770 
             date_range: 2006-02-10 to 2006-03-21  
 
@@ -108,6 +119,7 @@
 
         - table_row: 
             id: COVIMS_0012
+            file_size: 739 MB
             clock_range: 1523383626 to 1530491420 
             date_range: 2006-04-10 to 2006-07-01  
 
@@ -118,6 +130,7 @@
 
         - table_row: 
             id: COVIMS_0013
+            file_size: 1.25 GB
             clock_range: 1530409854 to 1538299356 
             date_range: 2006-07-01 to 2006-09-30  
 
@@ -128,11 +141,13 @@
 
         - table_row: 
             id: COVIMS_0014
+            file_size: 969 MB
             clock_range: 1538944737 to 1542414869 
             date_range: 2006-10-07 to 2006-11-17  
 
         - table_row: 
             id: COVIMS_0015
+            file_size: 877 MB
             clock_range: 1542414882 to 1546295237 
             date_range: 2006-11-17 to 2006-12-31  
 
@@ -143,16 +158,19 @@
 
         - table_row: 
             id: COVIMS_0016
+            file_size: 1.39 GB
             clock_range: 1546355125 to 1550156068 
             date_range: 2007-01-01 to 2007-02-14  
 
         - table_row: 
             id: COVIMS_0017
+            file_size: 933 MB
             clock_range: 1550192765 to 1552178129 
             date_range: 2007-02-15 to 2007-03-10  
 
         - table_row: 
             id: COVIMS_0018
+            file_size: 640 MB
             clock_range: 1552178188 to 1554072060 
             date_range: 2007-03-10 to 2007-03-31  
 
@@ -163,11 +181,13 @@
 
         - table_row: 
             id: COVIMS_0019
+            file_size: 1.13 GB
             clock_range: 1554455503 to 1557859081 
             date_range: 2007-04-05 to 2007-05-14  
 
         - table_row: 
             id: COVIMS_0020
+            file_size: 1.01 GB
             clock_range: 1558072759 to 1561897181 
             date_range: 2007-05-17 to 2007-06-30  
 
@@ -178,11 +198,13 @@
 
         - table_row: 
             id: COVIMS_0021
+            file_size: 952 MB
             clock_range: 1561952683 to 1565267518 
             date_range: 2007-07-01 to 2007-08-08  
 
         - table_row: 
             id: COVIMS_0022
+            file_size: 1.07 GB
             clock_range: 1565326865 to 1569855124 
             date_range: 2007-08-09 to 2007-09-30  
 
@@ -193,6 +215,7 @@
 
         - table_row: 
             id: COVIMS_0023
+            file_size: 1.44 GB
             clock_range: 1569961087 to 1577839172 
             date_range: 2007-10-01 to 2008-01-01  
 
@@ -203,11 +226,13 @@
 
         - table_row: 
             id: COVIMS_0024
+            file_size: 1.54 GB
             clock_range: 1577839173 to 1584060291 
             date_range: 2008-01-01 to 2008-03-13  
 
         - table_row: 
             id: COVIMS_0025
+            file_size: 835 MB
             clock_range: 1584170140 to 1585587888 
             date_range: 2008-03-14 to 2008-03-30  
 
@@ -218,16 +243,19 @@
 
         - table_row: 
             id: COVIMS_0026
+            file_size: 1.74 GB
             clock_range: 1585708643 to 1588550238 
             date_range: 2008-04-01 to 2008-05-03  
 
         - table_row: 
             id: COVIMS_0027
+            file_size: 1 GB
             clock_range: 1588665206 to 1590713039 
             date_range: 2008-05-05 to 2008-05-29  
 
         - table_row: 
             id: COVIMS_0028
+            file_size: 1.08 GB
             clock_range: 1590713040 to 1593518869 
             date_range: 2008-05-29 to 2008-06-30  
 
@@ -238,11 +266,13 @@
 
         - table_row: 
             id: COVIMS_0029
+            file_size: 970 MB
             clock_range: 1593650507 to 1596452499 
             date_range: 2008-07-02 to 2008-08-03  
 
         - table_row: 
             id: COVIMS_0030
+            file_size: 1.03 GB
             clock_range: 1596456682 to 1601513396 
             date_range: 2008-08-03 to 2008-10-01  
 
@@ -253,11 +283,13 @@
 
         - table_row: 
             id: COVIMS_0031
+            file_size: 1.07 GB
             clock_range: 1601513398 to 1605800381 
             date_range: 2008-10-01 to 2008-11-19  
 
         - table_row: 
             id: COVIMS_0032
+            file_size: 1.2 GB
             clock_range: 1605802708 to 1609461638 
             date_range: 2008-11-19 to 2009-01-01  
 
@@ -268,16 +300,19 @@
 
         - table_row: 
             id: COVIMS_0033
+            file_size: 1.35 GB
             clock_range: 1609461638 to 1611427383 
             date_range: 2009-01-01 to 2009-01-23  
 
         - table_row: 
             id: COVIMS_0034
+            file_size: 1.18 GB
             clock_range: 1611476358 to 1615510945 
             date_range: 2009-01-24 to 2009-03-12  
 
         - table_row: 
             id: COVIMS_0035
+            file_size: 508 MB
             clock_range: 1616051220 to 1617062169 
             date_range: 2009-03-18 to 2009-03-29  
 
@@ -288,6 +323,7 @@
 
         - table_row: 
             id: COVIMS_0036
+            file_size: 1.24 GB
             clock_range: 1617449566 to 1624835777 
             date_range: 2009-04-03 to 2009-06-27  
 
@@ -298,11 +334,13 @@
 
         - table_row: 
             id: COVIMS_0037
+            file_size: 1.6 GB
             clock_range: 1625234636 to 1630865951 
             date_range: 2009-07-02 to 2009-09-05  
 
         - table_row: 
             id: COVIMS_0038
+            file_size: 414 MB
             clock_range: 1630912046 to 1632191960 
             date_range: 2009-09-06 to 2009-09-21  
 
@@ -313,11 +351,13 @@
 
         - table_row: 
             id: COVIMS_0039
+            file_size: 1.24 GB
             clock_range: 1633412144 to 1638666830 
             date_range: 2009-10-05 to 2009-12-05  
 
         - table_row: 
             id: COVIMS_0040
+            file_size: 643 MB
             clock_range: 1638723713 to 1640819301 
             date_range: 2009-12-05 to 2009-12-29  
 
@@ -328,6 +368,7 @@
 
         - table_row: 
             id: COVIMS_0041
+            file_size: 1.11 GB
             clock_range: 1641049788 to 1648774238 
             date_range: 2010-01-01 to 2010-04-01  
 
@@ -338,6 +379,7 @@
 
         - table_row: 
             id: COVIMS_0042
+            file_size: 1.29 GB
             clock_range: 1648776217 to 1656073934 
             date_range: 2010-04-01 to 2010-06-24  
 
@@ -348,6 +390,7 @@
 
         - table_row: 
             id: COVIMS_0043
+            file_size: 1.38 GB
             clock_range: 1656912111 to 1664264309 
             date_range: 2010-07-04 to 2010-09-27  
 
@@ -358,6 +401,7 @@
 
         - table_row: 
             id: COVIMS_0044
+            file_size: 567 MB
             clock_range: 1665639833 to 1671887559 
             date_range: 2010-10-13 to 2010-12-24  
 
@@ -368,11 +412,13 @@
 
         - table_row: 
             id: COVIMS_0045
+            file_size: 1.52 GB
             clock_range: 1673261204 to 1678845042 
             date_range: 2011-01-09 to 2011-03-15  
 
         - table_row: 
             id: COVIMS_0046
+            file_size: 609 MB
             clock_range: 1678890279 to 1680310097 
             date_range: 2011-03-15 to 2011-04-01  
 
@@ -383,6 +429,7 @@
 
         - table_row: 
             id: COVIMS_0047
+            file_size: 856 MB
             clock_range: 1680310140 to 1687660625 
             date_range: 2011-04-01 to 2011-06-25  
 
@@ -393,11 +440,13 @@
 
         - table_row: 
             id: COVIMS_0048
+            file_size: 1.36 GB
             clock_range: 1688392537 to 1694661181 
             date_range: 2011-07-03 to 2011-09-14  
 
         - table_row: 
             id: COVIMS_0049
+            file_size: 256 MB
             clock_range: 1694663063 to 1696077692 
             date_range: 2011-09-14 to 2011-09-30  
 
@@ -408,6 +457,7 @@
 
         - table_row: 
             id: COVIMS_0050
+            file_size: 987 MB
             clock_range: 1696121510 to 1704028761 
             date_range: 2011-10-01 to 2011-12-31  
 
@@ -418,6 +468,7 @@
 
         - table_row: 
             id: COVIMS_0051
+            file_size: 1.63 GB
             clock_range: 1704073944 to 1711795733 
             date_range: 2012-01-01 to 2012-03-30  
 
@@ -428,6 +479,7 @@
 
         - table_row: 
             id: COVIMS_0052
+            file_size: 816 MB
             clock_range: 1712022868 to 1719708729 
             date_range: 2012-04-02 to 2012-06-29  
 
@@ -438,6 +490,7 @@
 
         - table_row: 
             id: COVIMS_0053
+            file_size: 1.39 GB
             clock_range: 1719818119 to 1727552808 
             date_range: 2012-07-01 to 2012-09-28  
 
@@ -448,11 +501,13 @@
 
         - table_row: 
             id: COVIMS_0054
+            file_size: 1.21 GB
             clock_range: 1727787247 to 1733631486 
             date_range: 2012-10-01 to 2012-12-08  
 
         - table_row: 
             id: COVIMS_0055
+            file_size: 994 MB
             clock_range: 1733636297 to 1735601501 
             date_range: 2012-12-08 to 2012-12-30  
 
@@ -463,11 +518,13 @@
 
         - table_row: 
             id: COVIMS_0056
+            file_size: 1.01 GB
             clock_range: 1735908241 to 1739511052 
             date_range: 2013-01-03 to 2013-02-14  
 
         - table_row: 
             id: COVIMS_0057
+            file_size: 845 MB
             clock_range: 1739615660 to 1743456020 
             date_range: 2013-02-15 to 2013-03-31  
 
@@ -478,16 +535,19 @@
 
         - table_row: 
             id: COVIMS_0058
+            file_size: 916 MB
             clock_range: 1743476686 to 1745489393 
             date_range: 2013-04-01 to 2013-04-24  
 
         - table_row: 
             id: COVIMS_0059
+            file_size: 1.33 GB
             clock_range: 1745866100 to 1749088857 
             date_range: 2013-04-28 to 2013-06-05  
 
         - table_row: 
             id: COVIMS_0060
+            file_size: 1.33 GB
             clock_range: 1749109405 to 1751229451 
             date_range: 2013-06-05 to 2013-06-29  
 
@@ -498,11 +558,13 @@
 
         - table_row: 
             id: COVIMS_0061
+            file_size: 1.21 GB
             clock_range: 1751426920 to 1754291750 
             date_range: 2013-07-02 to 2013-08-04  
 
         - table_row: 
             id: COVIMS_0062
+            file_size: 1.41 GB
             clock_range: 1754396859 to 1758282366 
             date_range: 2013-08-05 to 2013-09-19  
 
@@ -513,11 +575,13 @@
 
         - table_row: 
             id: COVIMS_0063
+            file_size: 1.19 GB
             clock_range: 1759652590 to 1766584654 
             date_range: 2013-10-05 to 2013-12-24  
 
         - table_row: 
             id: COVIMS_0064
+            file_size: 334 MB
             clock_range: 1766654697 to 1767195097 
             date_range: 2013-12-25 to 2013-12-31  
 
@@ -528,11 +592,13 @@
 
         - table_row: 
             id: COVIMS_0065
+            file_size: 1.05 GB
             clock_range: 1767238939 to 1772963676 
             date_range: 2014-01-01 to 2014-03-08  
 
         - table_row: 
             id: COVIMS_0066
+            file_size: 1.02 GB
             clock_range: 1772965488 to 1774984709 
             date_range: 2014-03-08 to 2014-03-31  
 
@@ -543,11 +609,13 @@
 
         - table_row: 
             id: COVIMS_0067
+            file_size: 1.84 GB
             clock_range: 1775057905 to 1781228507 
             date_range: 2014-04-01 to 2014-06-12  
 
         - table_row: 
             id: COVIMS_0068
+            file_size: 511 MB
             clock_range: 1781539231 to 1782853204 
             date_range: 2014-06-15 to 2014-06-30  
 
@@ -558,11 +626,13 @@
 
         - table_row: 
             id: COVIMS_0069
+            file_size: 1.37 GB
             clock_range: 1782983152 to 1787811705 
             date_range: 2014-07-02 to 2014-08-27  
 
         - table_row: 
             id: COVIMS_0070
+            file_size: 1.08 GB
             clock_range: 1787814151 to 1790610818 
             date_range: 2014-08-27 to 2014-09-28  
 
@@ -573,6 +643,7 @@
 
         - table_row: 
             id: COVIMS_0071
+            file_size: 1.29 GB
             clock_range: 1790962371 to 1798609708 
             date_range: 2014-10-02 to 2014-12-30  
 
@@ -583,11 +654,13 @@
 
         - table_row: 
             id: COVIMS_0072
+            file_size: 1.65 GB
             clock_range: 1798847382 to 1804941501 
             date_range: 2015-01-01 to 2015-03-13  
 
         - table_row: 
             id: COVIMS_0073
+            file_size: 583 MB
             clock_range: 1804941502 to 1806538559 
             date_range: 2015-03-13 to 2015-03-31  
 
@@ -598,11 +671,13 @@
 
         - table_row: 
             id: COVIMS_0074
+            file_size: 1.49 GB
             clock_range: 1806548991 to 1811483402 
             date_range: 2015-04-01 to 2015-05-28  
 
         - table_row: 
             id: COVIMS_0075
+            file_size: 508 MB
             clock_range: 1811544302 to 1813428167 
             date_range: 2015-05-28 to 2015-06-19  
 
@@ -613,6 +688,7 @@
 
         - table_row: 
             id: COVIMS_0076
+            file_size: 1.37 GB
             clock_range: 1814628218 to 1822341926 
             date_range: 2015-07-03 to 2015-09-30  
 
@@ -623,6 +699,7 @@
 
         - table_row: 
             id: COVIMS_0077
+            file_size: 1.45 GB
             clock_range: 1822390734 to 1830233435 
             date_range: 2015-10-01 to 2015-12-31  
 
@@ -633,6 +710,7 @@
 
         - table_row: 
             id: COVIMS_0078
+            file_size: 2.11 GB
             clock_range: 1830405567 to 1838163914 
             date_range: 2016-01-02 to 2016-04-01  
 
@@ -643,11 +721,13 @@
 
         - table_row: 
             id: COVIMS_0079
+            file_size: 1.61 GB
             clock_range: 1838164234 to 1843181185 
             date_range: 2016-04-01 to 2016-05-29  
 
         - table_row: 
             id: COVIMS_0080
+            file_size: 1.13 GB
             clock_range: 1843195446 to 1845993296 
             date_range: 2016-05-29 to 2016-06-30  
 
@@ -659,16 +739,19 @@
 
         - table_row: 
             id: COVIMS_0081
+            file_size: 1.24 GB
             clock_range: 1846032724 to 1850137325 
             date_range: 2016-07-01 to 2016-08-17  
 
         - table_row: 
             id: COVIMS_0082
+            file_size: 1.43 GB
             clock_range: 1850219010 to 1852624924 
             date_range: 2016-08-18 to 2016-09-15  
 
         - table_row: 
             id: COVIMS_0083
+            file_size: 681 MB
             clock_range: 1852626266 to 1853973656 
             date_range: 2016-09-15 to 2016-09-30  
 
@@ -679,16 +762,19 @@
 
         - table_row: 
             id: COVIMS_0084
+            file_size: 828 MB
             clock_range: 1854009215 to 1856896440 
             date_range: 2016-10-01 to 2016-11-03  
 
         - table_row: 
             id: COVIMS_0085
+            file_size: 1.56 GB
             clock_range: 1856977062 to 1861436124 
             date_range: 2016-11-04 to 2016-12-26  
 
         - table_row: 
             id: COVIMS_0086
+            file_size: 367 MB
             clock_range: 1861464723 to 1861918752 
             date_range: 2016-12-26 to 2016-12-31  
 
@@ -699,16 +785,19 @@
 
         - table_row: 
             id: COVIMS_0087
+            file_size: 1.33 GB
             clock_range: 1861976049 to 1865100518 
             date_range: 2017-01-01 to 2017-02-06  
 
         - table_row: 
             id: COVIMS_0088
+            file_size: 1.42 GB
             clock_range: 1865112812 to 1867530683 
             date_range: 2017-02-06 to 2017-03-06  
 
         - table_row: 
             id: COVIMS_0089
+            file_size: 886 MB
             clock_range: 1867544439 to 1869662881 
             date_range: 2017-03-07 to 2017-03-31  
 
@@ -719,16 +808,19 @@
 
         - table_row: 
             id: COVIMS_0090
+            file_size: 1.14 GB
             clock_range: 1869706653 to 1872150046 
             date_range: 2017-04-01 to 2017-04-29  
 
         - table_row: 
             id: COVIMS_0091
+            file_size: 1.4 GB
             clock_range: 1872269383 to 1876265683 
             date_range: 2017-04-30 to 2017-06-15  
 
         - table_row: 
             id: COVIMS_0092
+            file_size: 641 MB
             clock_range: 1876373004 to 1877561816 
             date_range: 2017-06-17 to 2017-06-30
 
@@ -739,10 +831,12 @@
 
         - table_row: 
             id: COVIMS_0093
+            file_size: 1.39 GB
             clock_range: 1869706653 to 1872150046 
             date_range: 2017-07-01 to 2017-08-25  
 
         - table_row: 
             id: COVIMS_0094
+            file_size: 906 MB
             clock_range: 1872269383 to 1876265683 
             date_range: 2017-08-26 to 2017-09-14  

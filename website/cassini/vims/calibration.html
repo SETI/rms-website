@@ -7,15 +7,20 @@ tabs: cassini_vims
 ## Calibration
 
   * In September 2012, the USGS released and subsequently maintains a comprehensive [ISIS3 VIMS pipeline](http://web.archive.org/web/20161212165420/https://isis.astrogeology.usgs.gov/IsisWorkshop/index.php/Working_with_Cassini_VIMS){:target="_blank"}. This pipeline is derived from the software provided by the team, upgraded to be compatible with ISIS3.
-    * **NOTE:** Developing a local VIMS calibration pipeline based on the software provided on the VIMS volumes (see below) has proven challenging. Consequently, users are strongly encouraged to explore the suitability of the USGS ISIS3 VIMS pipeline.
-  * The [calibration](/link/volumes/COVIMS_0xxx/COVIMS_0001/CALIB/) directory on each volume provides calibration files and sample calibrated VIMS Qubes.
+    * **NOTE:** Developing a local VIMS calibration pipeline based on the software provided on the VIMS volumes (see below) 
+       has proven challenging. Consequently, users are strongly encouraged to explore the suitability of the USGS ISIS3 VIMS pipeline.
 
-  * The [software](/link/volumes/COVIMS_0xxx/COVIMS_0001/SOFTWARE/) directory on each volume provides calibration softward details of the calibration process.
+  * The [calibration]({{ site.viewmaster_url }}volumes/COVIMS_0xxx/COVIMS_0001/CALIB/){:target="_blank"} directory on each volume 
+    provides calibration files and sample calibrated VIMS Qubes.
 
-  * A complete set of VIMS software and calibration directories is available as a [.tar.gz bundle](./vims_calib.tar.gz).
+  * The [software]({{ site.viewmaster_url }}volumes/COVIMS_0xxx/COVIMS_0001/SOFTWARE/){:target="_blank"} directory on each volume 
+    provides calibration software details of the calibration process.
+
+  * A complete set of VIMS software and calibration directories is available as a [.tar.gz bundle]({{ site.assets_url }}cassini/vims/vims_calib.tar.gz) (64.9 MB).
 
     * This bundle collects the information needed to establish a local VIMS calibration pipeline.
 
-    * The software provided by the team requires the use of the Integrated Software for Imagers and Spectrometers (ISIS) software package which is available through the <a href="//isis.astrogeology.usgs.gov/" target="_blank">USGS Flagstaff</a> web site.
+    * The software provided by the team requires the use of the Integrated Software for Imagers and Spectrometers (ISIS) software 
+      package which is available through the [USGS Flagstaff](//isis.astrogeology.usgs.gov/){:target="_blank"} web site.
 
     * **WARNING: The pipeline scripts included in the software directory are compatible with ISIS2. They are not compatible with ISIS3**.

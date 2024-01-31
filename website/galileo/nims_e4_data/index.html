@@ -4,22 +4,13 @@ layout_style: default
 title: "Galileo NIMS E4 Ring Data"
 ---
 
-<div class="breadcrumb" style="background:white; border-width:0px; padding-left:0px">
-  <li><a href="/galileo/">Galileo</a></li>
-  <li style="color:gray">NIMS E4 Encounter</li>
-</div>
+{% include breadcrumbs.html %}
 
-#  Galileo NIMS E4 Ring Data
+# Galileo NIMS E4 Ring Data
 
 ## E4 Encounter
 
-<table>
- <tr>
-  <td>
-    <a href="e4r001.html">
-      <img src="e4r001.edr.jpg" alt="NIMS footprint for E4R001" />
-      E4R001
-    </a>
-  </td>
- </tr>
-</table>
+{% assign image_table = site.data.tables['nims_e4_img'] %}
+{% include image-gallery.html %}
+
+
