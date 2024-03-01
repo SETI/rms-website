@@ -632,6 +632,7 @@ ol.breadcrumb {
 table {
   border-collapse: separate;
   background-color: white;
+  border: 1px solid black;
 }
 /* Zebra striping */
 /*
