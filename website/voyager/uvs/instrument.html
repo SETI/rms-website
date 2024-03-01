@@ -2,9 +2,12 @@
 layout: base
 layout_style: default
 tabs: voyager_uvs
+holdings_folder: volumes/VG_28xx/VG_2802/
 ---
 
-![](uvs.gif)
+{% assign holdings = site.holdings_url | append: page.holdings_folder %}
+
+![]({{ site.assets_url }}voyager/uvs/uvs.gif)
 
 The UVS is a light meter that is sensitive to ultraviolet light. It determines
 when certain atoms or ions are present, or when certain physical processes are
@@ -36,9 +39,9 @@ or compounds by atomic absorption.
 
 For more information, consult the CATALOG files:
 
-  * [VG1INST.CAT](vg1inst.html): UVS instrument description for Voyager 1. 
-  * [VG2INST.CAT](vg2inst.html): UVS instrument description for Voyager 2. 
-  * [VG1HOST.CAT](vg1host.html): Voyager 1 spacecraft description. 
-  * [VG2HOST.CAT](vg2host.html): Voyager 2 spacecraft description. 
-  * [MISSION.CAT](mission.html): Description of the Voyager mission overall. 
+  * [VG1INST.CAT]({{ holdings }}CATALOG/VG1INST.CAT){:target="_blank"}: UVS instrument description for Voyager 1. 
+  * [VG2INST.CAT]({{ holdings }}CATALOG/VG2INST.CAT){:target="_blank"}: UVS instrument description for Voyager 2. 
+  * [VG1HOST.CAT]({{ holdings }}CATALOG/VG1HOST.CAT){:target="_blank"}: Voyager 1 spacecraft description. 
+  * [VG2HOST.CAT]({{ holdings }}CATALOG/VG2HOST.CAT){:target="_blank"}: Voyager 2 spacecraft description. 
+  * [MISSION.CAT]({{ holdings }}CATALOG/MISSION.CAT){:target="_blank"}: Description of the Voyager mission overall. 
 
