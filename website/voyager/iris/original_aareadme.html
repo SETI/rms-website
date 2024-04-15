@@ -4,89 +4,271 @@ layout_style: default
 title: 'Voyager IRIS Data Set Overview ("AAREADME" file)'
 ---
 
-# Voyager IRIS Data Set Overview ("AAREADME" file)
+# {{ page.title }}
 
 ### Index
 
 * [Introduction](#intro)
-* ["Tape" Contents](#tape_contents)
+* [Volume Information](#information)
+* [Disc Format](#disc_format)
 * [File Format](#file_format)
-* [On-Line Analysis and Ordering Capabilities](#on_line)
-* [Whom to Contact for Information](#whom)
-* [Cognizant Persons](#cog)
+* [Acknowledgments](#acknowledgments)
 * [Peer Review](#peer)
+* [Disclaimer](#disclaimer)
+* [Whom to Contact for Information](#whom)
 
-Click for the original text version of [AAREADME.TXT](original_aareadme.txt){:target="_blank"}.
+Click for the original text version of [AAREADME.TXT]({{ site.holdings_url }}volumes/VG_20xx/VG_2001/AAREADME.TXT){:target="_blank"}.
 
 * * *
 
 ## Introduction
 {: #intro }
 
-This tape volume contains IRIS full resolution spectra data and associated
-pointing and geometric information for both the Voyager 1 and Voyager 2
-Jupiter encounters. Also included in this volume is calibration information
-for the IRIS instrument on each spacecraft, PDS catalog information describing
-the IRIS instrument and Jupiter data set, and PDS labels and record structure
-information for the data set.
+This volume contains IRIS full resolution spectral data and associated        
+pointing and geometric information for the Voyager 1 and 2 Jupiter, Saturn,   
+Uranus, and Neptune encounters.  Data contained here were obtained between    
+1979 and 1989.
+
 
 [Back to the index](#index)
 
-## Tape Contents
-{: #tape_contents }
+## Volume Information   
+{: #information }
 
-This tape contains the following files, created with the VAX/VMS Backup
-utility as a single save-set. The following directories/files are included:
+This disc contains full-resolution (RDR) spectral observations produced  
+by the Voyager IRIS experiments for each encounter of the Voyager mission.    
+Data are grouped in subdirectories for each of the Outer Planets;  within     
+each subdirectory are the data files, PDS label files, and associated         
+calibration files available for that planet. For Jupiter and Saturn, there    
+are separate files for Voyager 1 and 2.
 
+    This volume follows the structure outlined below:                         
+                                                                              
+    root                                                                      
+     |                                                                        
+     |- AAREADME.TXT          The file you are reading.                       
+     |                                                                        
+     |- ERRATA.TXT            Description of known anomalies and              
+     |                        errors present on this volume.                  
+     |                                                                        
+     |- VOLDESC.CAT           A description of the contents of this           
+     |                        CD_ROM volume in a format readable by           
+     |                        both humans and computers.                      
+     |                                                                        
+     |- [CATALOG]             A directory containing information              
+     |     |                  about the data set.                             
+     |     |                                                                  
+     |     |- CATINFO.TXT     Description of files in this directory.         
+     |     |                                                                  
+     |     |- MISSION.CAT     Description of the Voyager missions.            
+     |     |                                                                  
+     |     |- VG1HOST.CAT     Description of the Voyager 1                    
+     |     |- VG2HOST.CAT     and 2 spacecraft.                               
+     |     |                                                                  
+     |     |- VG1INST.CAT     Description of the VG1 IRIS instrument.         
+     |     |- VG2INST.CAT     Description of the VG2 IRIS instrument.         
+     |     |                                                                  
+     |     |- JIRIS_DS.CAT    Description of the data set(s) and              
+     |     |- SIRIS_DS.CAT    a list of pertinent references for              
+     |     |- UIRIS_DS.CAT    each of the Outer Planets.                      
+     |     |- NIRIS_DS.CAT                                                    
+     |     |                                                                  
+     |     |- PERS.CAT        A listing of the people involved in the         
+     |     |                  production of this data set and CD-ROM.         
+     |     |                                                                  
+     |     |- REFS.CAT        A list of pertinent references.                 
+     |                                                                        
+     |- [JUPITER]             A directory containing the data, calibration,   
+     |     |                  and PDS label files for the Voyager 1 and 2     
+     |     |                  Jupiter encounters.                             
+     |     |                                                                  
+     |     |- VG1_JUP.DAT     VG1 IRIS Jupiter data.                          
+     |     |                                                                  
+     |     |- VG1_JUP.LBL     PDS label describing VG1_JUP.DAT.               
+     |     |                                                                  
+     |     |- VG2_JUP.DAT     VG2 IRIS Jupiter data.                          
+     |     |                                                                  
+     |     |- VG2_JUP.LBL     PDS label describing VG2_JUP.DAT.               
+     |     |                                                                  
+     |     |- IRISHEDR.FMT    PDS label format file describing header         
+     |     |                  fields that preceed each IRIS spectral          
+     |     |                  record.  This file is required to accompany     
+     |     |                  the PDS labels for these data.                  
+     |     |                                                                  
+     |     |- [CALIB]         A directory containing the calibration          
+     |     |     |            files and associated labels.                    
+     |     |     |                                                            
+     |     |     |- VG1JNESR.DAT Voyager 1 interferometer noise equivalent    
+     |     |     |               spectral radiance data file.                 
+     |     |     |                                                            
+     |     |     |- VG2JNESR.DAT Voyager 2 interferometer noise equivalent    
+     |     |     |               spectral radiance data file.                 
+     |     |     |                                                            
+     |     |     |- VG1PREJT.LBL PDS label for Voyager 1 target plate         
+     |     |     |               calibration for radiometer pre-Jupiter       
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG1PREJT.DAT Voyager 1 target plate calibration data      
+     |     |     |               for pre-Jupiter encounter period.            
+     |     |     |                                                            
+     |     |     |- VG2PREJT.LBL PDS label for Voyager 2 target plate         
+     |     |     |               calibration for radiometer pre-Jupiter       
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG2PREJT.DAT Voyager 2 target plate calibration data      
+     |     |     |               for pre-Jupiter encounter period.            
+     |     |     |                                                            
+     |     |     |- VG1PSTJT.LBL PDS label for Voyager 1 target plate         
+     |     |     |               calibration for radiometer post-Jupiter      
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG1PSTJT.DAT Voyager 1 target plate calibration data      
+     |     |     |               for post-Jupiter encounter period.           
+     |     |     |                                                            
+     |     |     |- VG2PSTJT.LBL PDS label for Voyager 2 target plate         
+     |     |     |               calibration for radiometer post-Jupiter      
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG2PSTJT.DAT Voyager 2 target plate calibration data      
+     |     |     |               for post-Jupiter encounter period.           
+     |     |     |               record.                                      
+     |     |     |                                                            
+     |     |     |- IRISTRGP.FMT PDS label format file describing fields      
+     |     |     |               in target plate calibration data files.      
+     |                                                                        
+     |- [SATURN]              A directory containing the data, calibration,   
+     |     |                  and PDS label files for the Voyager 1 and 2     
+     |     |                  Saturn encounters.                              
+     |     |                                                                  
+     |     |- VG1_SAT.DAT     VG1 IRIS Saturn data.                           
+     |     |                                                                  
+     |     |- VG1_SAT.DAT     describing VG1_SAT.DAT.                         
+     |     |                                                                  
+     |     |- VG2_SAT.DAT     VG2 IRIS Saturn data.                           
+     |     |                                                                  
+     |     |- VG2_SAT.LBL     PDS label describing VG2_SAT.DAT.               
+     |     |                                                                  
+     |     |- IRISHEDR.FMT    PDS label format file describing header         
+     |     |                  fields that preceed each IRIS spectral          
+     |     |                  record.  This file is required to accompany     
+     |     |                  the PDS labels for these data.                  
+     |     |                                                                  
+     |     |- [CALIB]        A directory containing the calibration           
+     |     |     |           files and associated labels.                     
+     |     |     |                                                            
+     |     |     |- VG1SNESR.DAT Voyager 1 interferometer noise equivalent    
+     |     |     |               spectral radiance data file.                 
+     |     |     |                                                            
+     |     |     |- VG2SNESR.DAT Voyager 2 interferometer noise equivalent    
+     |     |     |               spectral radiance data file.                 
+     |     |     |                                                            
+     |     |     |- VG1PREST.LBL PDS label for Voyager 1 target plate         
+     |     |     |               calibration for radiometer pre-Saturn        
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG1PREST.DAT Voyager 1 target plate calibration data      
+     |     |     |               for pre-Saturn encounter period.             
+     |     |     |                                                            
+     |     |     |- VG2PREST.LBL PDS label for Voyager 2 target plate         
+     |     |     |               calibration for radiometer pre-Saturn        
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG2PREST.DAT Voyager 2 target plate calibration data      
+     |     |     |               for pre-Saturn encounter period.             
+     |     |     |                                                            
+     |     |     |- VG1PSTST.LBL PDS label for Voyager 1 target plate         
+     |     |     |               calibration for radiometer post-Saturn       
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG1PSTST.DAT Voyager 1 target plate calibration data      
+     |     |     |               for post-Saturn encounter period.            
+     |     |     |                                                            
+     |     |     |- IRISTRGP.FMT PDS label format file describing fields      
+     |     |     |               in target plate calibration data files.      
+     |                                                                        
+     |- [URANUS]              A directory containing the data,                
+     |     |                  calibration, and PDS label files                
+     |     |                  for the Voyager 2 Uranus encounter.             
+     |     |                                                                  
+     |     |- VG2_URA.DAT     VG2 IRIS Uranus data.                           
+     |     |                                                                  
+     |     |- VG2_URA.LBL     PDS label describing VG2_URA.DAT.               
+     |     |                                                                  
+     |     |- IRISHEDR.FMT    PDS label format file describing header         
+     |     |                  fields that preceed each IRIS spectral          
+     |     |                  record.  This file is required to accompany     
+     |     |                  the PDS labels for these data.                  
+     |     |                                                                  
+     |     |- [CALIB]        A directory containing the calibration           
+     |     |     |           files and associated labels.                     
+     |     |     |                                                            
+     |     |     |- VG2UNESR.DAT Voyager 2 interferometer noise equivalent    
+     |     |     |               spectral radiance data file.                 
+     |     |     |                                                            
+     |     |     |- VG2PREUT.LBL PDS label for Voyager 2 target plate         
+     |     |     |               calibration for radiometer pre-Uranus        
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG2PREUT.DAT Voyager 2 target plate calibration data      
+     |     |     |               for pre-Uranus encounter period.             
+     |     |     |                                                            
+     |     |     |- VG2PSTUT.LBL PDS label for Voyager 2 target plate         
+     |     |     |               calibration for radiometer post-Uranus       
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG2PSTUT.DAT Voyager 2 target plate calibration data      
+     |     |     |               for post-Uranus encounter period.            
+     |     |     |                                                            
+     |     |     |- IRISTRGP.FMT PDS label format file describing fields      
+     |     |     |               in target plate calibration data files.      
+     |                                                                        
+     |- [NEPTUNE]             A directory containing the data,                
+     |     |                  calibration, and PDS label files                
+     |     |                  for the Voyager 2 Neptune encounter.            
+     |     |                                                                  
+     |     |- VG2_NEP.DAT     VG2 IRIS Neptune data.                          
+     |     |                                                                  
+     |     |- VG2_NEP.LBL     PDS label describing VG2_NEP.DAT.               
+     |     |                                                                  
+     |     |- IRISHEDR.FMT    PDS label format file describing header         
+     |     |                  fields that preceed each IRIS spectral          
+     |     |                  record.  This file is required to accompany     
+     |     |                  the PDS labels for these data.                  
+     |     |                                                                  
+     |     |- [CALIB]        A directory containing the calibration           
+     |     |     |           files and associated labels.                     
+     |     |     |                                                            
+     |     |     |- VG2NNESR.DAT Voyager 2 interferometer noise equivalent    
+     |     |     |               spectral radiance data file.                 
+     |     |     |                                                            
+     |     |     |- VG2PRENT.LBL PDS label for Voyager 2 target plate         
+     |     |     |               calibration for radiometer pre-Neptune       
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG2PRENT.DAT Voyager 2 target plate calibration data      
+     |     |     |               for pre-Neptune encounter period.            
+     |     |     |                                                            
+     |     |     |- VG2PSTNT.LBL PDS label for Voyager 2 target plate         
+     |     |     |               calibration for radiometer post-Neptune      
+     |     |     |               encounter period.                            
+     |     |     |                                                            
+     |     |     |- VG2PSTNT.DAT Voyager 2 target plate calibration data      
+     |     |     |               for post-Neptune encounter period.           
+     |     |     |                                                            
+     |     |     |- IRISTRGP.FMT PDS label format file describing fields      
+     |     |     |               in target plate calibration data files.      
+                                                                              
+                                                                              
+[Back to the index](#index)
 
+## Disc Format
+{: #disc_format }           
 
-    Directory/Filename                          Description
-    -----------------------------     ----------------------------------------
-    VOLDESC.CAT                       PDS Volume Object description.
-    AAREADME.TXT                      This file.
-      [CATALOG]JUP_DS.CAT             PDS catalog object describing the VGR
-                                      IRIS Jupiter data set.
-      [CATALOG]VG1_IRIS.CAT           PDS catalog object describing the VGR 1
-                                      IRIS instrument.
-      [CATALOG]VG2_IRIS.CAT           PDS catalog object describing the VGR 2
-                                      IRIS instrument.
-      [CALIB]VG1JNESR.DAT             Voyager 1 interferometer noise equivalent
-                                      spectral radience data file.
-      [CALIB]VG2JNESR.DAT             Voyager 2 interferometer noise equivalent
-                                      spectral radience data file.
-      [CALIB]VG1PREJT.LBL             PDS label for Voyager 1 target plate
-                                      calibration for radiometer pre-Jupiter
-                                      encounter period.
-      [CALIB]VG1PREJT.DAT             Voyager 1 target plate calibration data
-                                      for pre-Jupiter encounter period.
-      [CALIB]VG2PREJT.LBL             PDS label for Voyager 2 target plate
-                                      calibration for radiometer pre-Jupiter
-                                      encounter period.
-      [CALIB]VG2PREJT.DAT             Voyager 2 target plate calibration data
-                                      for pre-Jupiter encounter period.
-      [CALIB]VG1PSTJT.LBL             PDS label for Voyager 1 target plate
-                                      calibration for radiometer post-Jupiter
-                                      encounter period.
-      [CALIB]VG1PSTJT.DAT             Voyager 1 target plate calibration data
-                                      for post-Jupiter encounter period.
-      [CALIB]VG2PSTJT.LBL             PDS label for Voyager 2 target plate
-                                      calibration for radiometer post-Jupiter
-                                      encounter period.
-      [CALIB]VG2PSTJT.DAT             Voyager 2 target plate calibration data
-                                      for post-Jupiter encounter period.
-      [LABEL]IRISHEDR.FMT             PDS label format file describing header
-                                      fields that preceed each IRIS spectral
-                                      record.
-      [LABEL]IRISTRGP.FMT             PDS label format file describing fields
-                                      in target plate calibration data files.
-      [DATA]VG1_JUP.LBL               PDS label describing VG1 IRIS Jupiter
-                                      data file and associated NESR file.
-      [DATA]VG1_JUP.DAT               VG1 IRIS Jupiter data, approximately
-                                      43 MB. The data are ordered by FDS count.
-      [DATA]VG2_JUP.LBL               PDS label describing VG2 IRIS Jupiter
-                                      data file and associated NESR file.
-      [DATA]VG2_JUP.DAT               VG2 IRIS Jupiter data, approximately
-                                      55 MB. The data are ordered by FDS count.
+This disk has been formatted so that a variety of computer systems        
+(e.g. IBM PC, Macintosh, Sun, VAX) may access the data.  Specifically,        
+the disk is formatted according to the ISO 9660 level 1 Interchange           
+Standard.  For further information, refer to the ISO 9660 Standard            
+Document: RF# ISO 9660-1988, 15 April 1988.
 
 
 [Back to the index](#index)
@@ -94,85 +276,118 @@ utility as a single save-set. The following directories/files are included:
 ## File Format
 {: #file_format }
 
-Most files on this tape have a label encoded in the Object Description
-Language (ODL) developed by the Planetary Data System (PDS). An ODL label is
-readable by both humans and computers. It provides a formal description of the
-format and content of a file. For some files the ODL label appears at the
-beginning of the file (as is the case for this file). Binary data files
-provided on this tape are described by detached ODL labels. The detached
-labels end in a .lbl extension and the associated data file ends in a .dat
-extension.
+All data files on this disc are accompanied by detached                  
+PDS labels, which describe their contents.  PDS TEXT                          
+objects include attached labels.  All PDS labels include an SFDU              
+label in the first record.  Labels have the same file name as the             
+primary data file but have a suffix ".LBL" appended.                          
+                                                                              
+Each of the data and calibration files included here are in binary       
+form, with the number of records and record structure documented in the       
+associated PDS label files. 
+ 
+To use the data files on VAX/VMS computer systems, the file              
+characteristics will need to be modified using the VMS FILE utility.          
+File modification should take the following form:
 
-PDS label formats and documentation conform to standards as defined by the
-Planetary Data System Standards Reference (JPL D-7669, Part 2, November 1992,
-Version 3.0) and the Planetary Science Data Dictionary (JPL D-7116, November
-1992, Rev. C) with the following exceptions. Data product labels for the
-products were approved prior to the release of the Version 3.0 Standards
-Reference, so do not strictly conform to the Data Product Label standard in
-Ch. 5 of the PDS Standards Reference, Version 3.0. In particular, the Standard
-Formatted Data Unit (SFDU) standard from Chapter 17 of the Planetary Data
-System Data Preparation Workbook - Volume 2, Standards, May 3, 1991, Version
-2.0 is used.
+$ FILE data_file.dat/RECORD_SIZE=rrrr/MAXIMUM_RECORD_SIZE=rrrr
 
-[Back to the index](#index)
+Following is a list of record sizes for each of the encounters' data          
+and calibration files:                                                        
+                                                                              
+	Encounter	Record Size                                                        
+        =========       ===========                                           
+         Jupiter           4736                                               
+         Saturn            4736                                               
+         Uranus            1576                                               
+         Neptune           1760                                               
+                                                                              
+For example, to convert the data file VG1_SAT.DAT, issue the following        
+command:
 
-## On-line Analysis and Ordering Capabilities
-{: #on_line }
+$ FILE VG1_SAT.DAT/RECORD_SIZE=4736/MAXIMUM_RECORD_SIZE=4736 
 
-Portions of this data set are available on-line through the Planetary
-Atmospheres Node Data Analysis (PANDA) system at the PDS Atmospheres node, and
-a variety of data analysis services are available. In addition, subsets of
-this data set meeting various user-supplied selection criteria are also
-available for electronic delivery.
-
-[Back to the index](#index)
-
-## Whom to Contact for Information
-{: #whom }
-
-PDS Atmospheres Node Manager
-
-Dr. Steven W. Lee
-Laboratory for Atmospheric and Space Physics
-University of Colorado
-Campus Box 392
-Boulder, CO 80309
-
-SPAN: ARIES::LEE Internet: lee@aries.colorado.edu
 
 [Back to the index](#index)
 
-## Cognizant Persons
-{: #cog }
+## Acknowledgments
+{: #acknowledgments }
 
-IRIS data and calibration information were prepared by Barney Conrath (GSFC),
-John Pearl (GSFC), and Carolyn Staub (GSFC). Catalog templates were prepared
-by Barney Conrath and Steve Lee (LASP). Labels and documentation were prepared
-by Sally Lasater (LASP), Steve Lee (LASP), Randy Davis (LASP) and Sue Hess
-(JPL).
+This archiving project was initiated by Steve Lee of the                 
+Planetary Data System (PDS) Atmospheres (ATM) Discipline Node (DN)            
+at the University of Colorado.  Assistance in preparing the data set          
+and associated documentation was provided by Sally Lasater and Andrew         
+Weir at the University of Colorado, and Barney Conrath, John Pearl, and       
+Carolyn Martin at Goddard Space Flight Center.  The archival products which   
+result from this activity will be delivered to the PDS ATM DN.  Assistance    
+in developing the structure of this volume and format of the catalog          
+files was provided principally by Ron Joyner of PDS at JPL.
 
 [Back to the index](#index)
 
 ## Peer Review
 {: #peer }
 
-This data was peer reviewed under the direction of the PDS Atmospheres Node in
-April of 1993. The following persons participated in this review:
+These data were peer reviewed under the direction of the PDS Atmospheres      
+Node in April of 1993.  The following persons participated in this            
+review: 
 
-* Chris Barnet
-* Reta Beebe
-* Barney Conrath
-* Luke Dones
-* Peter Gierasch
-* Sue Hess
-* Sally Lasater
-* Steve Lee
-* Julio Magalhaes
-* Glen Orton
-* John Pearl
-* Bill Sandel
-* Mark Showalter
-* Andrew Weir
+  Chris Barnet                                                                
+  Reta Beebe                                                                  
+  Barney Conrath                                                              
+  Luke Dones                                                                  
+  Peter Gierasch                                                              
+  Sue Hess                                                                    
+  Sally Lasater                                                               
+  Steve Lee                                                                   
+  Julio Magalhaes                                                             
+  Glen Orton                                                                  
+  John Pearl                                                                  
+  Bill Sandel                                                                 
+  Mark Showalter                                                              
+  Andrew Weir
+  
 
+[Back to the index](#index)
+
+## Disclaimer
+{: #disclaimer }                                                                               
+                                                                              
+Although consderable care has gone into making this volume              
+set, errors are both possible and likely.  Users of the data are              
+advised to exercise the same caution as they would when dealing with          
+any other unknown data set.                                                   
+                                                                              
+Reports of errors or difficulties would be appreciated.  Please          
+contact one of the persons listed below.
+
+
+[Back to the index](#index)
+
+## Whom to Contact for Information
+{: #whom }
+
+For questions concerning this volume or the data sets and documentation       
+contained herein, contact:
+
+Steven W. Lee                                                                 
+Laboratory for Atmospheric and Space Physics                                  
+Campus Box 392                                                                
+University of Colorado                                                        
+Boulder, CO  80309-0392                                                       
+Phone: 303-492-5348                                                           
+Email: lee@syrtis.colorado.edu
+
+
+For questions concerning how to read this CD_ROM or about PDS standards,
+contact:
+
+Jason Hyon                                                                    
+MS 525-389                                                                    
+Jet Propulsion Laboratory                                                     
+4800 Oak Grove Drive                                                          
+Pasadena, CA  91109                                                           
+Phone: 818-306-6054                                                           
+Email: jhyon@jplpds.jpl.nasa.gov 
 
 [Back to the index](#index)
