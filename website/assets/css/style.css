@@ -22,12 +22,12 @@
 
 /* begin style */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inclusive Sans', sans-serif;
   color: #033333;
 }
 
 a {
-  color: #317ab9;
+  color: #2b498e;
   background-color: transparent;
 }
 
@@ -39,8 +39,14 @@ nav a, .tab-pill a, .footer-lower a {
   text-decoration: none !important;
 }
 
+.content a {
+    text-decoration: none;
+    border-bottom: 1px outset;
+    font-size: 15px;
+}
+
 .tab-pill a {
-    color: #2D6FA9;
+    color: #00538a;
 }
 
 .tab-pill:hover, .tab-pill:focus {
@@ -49,7 +55,9 @@ nav a, .tab-pill a, .footer-lower a {
 
 a:hover, a:focus {
   color: #224f77;
+  border-bottom: none;
   text-decoration: underline;
+  text-underline-offset: .3em;
 }
 
 a:focus {
@@ -116,6 +124,19 @@ a:focus {
     width:400px
   }
 }
+
+.alert-info {
+    color: #0c5876;
+    background-color: #EBF5F7;
+    border-color: #d0dadc;
+}
+
+.alert-danger {
+    color: #842326;
+    background-color: #F2DEDE;
+    border-color: #a94442;
+}
+
 
 .mission_statement {
   padding: 0px 40px 0px 5px;
@@ -198,6 +219,7 @@ a:focus {
   }
   .content li {
     max-width: 60em;
+    min-height: 24px;   /* for accessibility */
   }
 }
 .content p.superwide {
@@ -236,7 +258,7 @@ p.logo {
 
 /* homepage boxes */
 .homebox {
-  font:1.0em 'Open Sans', sans-serif;
+  font:1.0em 'Inclusive Sans', sans-serif;
 	border: 1px solid #cccccc;
 	background-color: #ffffff;
 	margin-top: 20px;
@@ -250,7 +272,7 @@ p.logo {
   background-image: url(assets/PRN_home_heading_bg.png);
   background-color: #585858;
   color:white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inclusive Sans', sans-serif;
   font-weight: 400;
   font-size:1.3em;
   text-align: center;
@@ -369,7 +391,7 @@ p.logo {
 }
 
 .banner .brandtext {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
     font-size: 42px;
     font-weight: 300;
     color: #ffffff;
@@ -464,8 +486,8 @@ nav {
 .nav-container .subheading > a, .nav-container .subheading > p {  /* nav menu section headings */
 	display:block;
 	width:100%;
-	font: 1.1em 'Open Sans', sans-serif;
-    color: #435ca4;
+	font: 1.1em 'Inclusive Sans', sans-serif;
+    color: #2b498e;
 	font-weight: 600;
 	line-height: 1.2em;
 	border-top: 1px solid #cccccc;
@@ -490,10 +512,10 @@ nav {
 }
 
 .nav-container .submenu li a {
-	font: 0.9em 'Open Sans', sans-serif;
+	font: 0.9em 'Inclusive Sans', sans-serif;
 	display:block;
 	width:100%;
-	color: #435ca4;
+	color: #2b498e;
 	padding: 5px 5px 5px 15px;
 	line-height: 1.2em;
 	margin-bottom: 2px;
@@ -533,7 +555,7 @@ nav {
     margin:0 auto;
     white-space: nowrap;
     text-align: center;
-    font: 1.3em 'Open Sans', sans-serif;
+    font: 1.3em 'Inclusive Sans', sans-serif;
     padding:5px;
     overflow: visible;
   }
@@ -573,7 +595,7 @@ li.tab-pill a {
 
 }
 li.tab-pill {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
     background: #efefef;
     border: 1px solid #cccccc;
     box-shadow: none;
@@ -594,7 +616,7 @@ li.tab-pill.active {
     border-radius: .25em;
     float: left;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
     font-weight:600;
     color: #222222;
     margin-right: 6px;
