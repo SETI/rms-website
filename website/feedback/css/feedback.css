@@ -611,7 +611,7 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
   z-index: 2;
   cursor: pointer;
 
-  background-color: #007bb3; /* pds-rings */
+  background-color: #005c91; /* pds-rings */
   color: rgb(255, 255, 252); /* pds-rings */
   border: 1px solid transparent;
   font-family: Arial;

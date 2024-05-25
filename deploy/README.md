@@ -120,6 +120,8 @@ This is the basic flow for making changes to the website files that are stored i
 
 This procedure will deploy the current “master” branch on the pds-website repo to staging, then copy them to `/volumes/webserver_assets`, then deploy them to `server1` and `server2`.
 
+Note: This procedure pertains only to HTML source documents.  For other “asset” files, which are not controlled by Git, see instructions **below**.
+
 1. Login to `staging` as webmaster. **NOTE: Do not attempt to do this procedure logged in as anyone else!**
 2. Deploy changes to the local apache directory. This script will automatically pull the changes from GitHub and checkout the **master** branch.
 
