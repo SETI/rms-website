@@ -1,42 +1,39 @@
 ---
 layout: base
 layout_style: default
-title: "Ring-Moon Systems Node Open-Source Software"
+title: Ring-Moon Systems Node Open-Source Software
 ---
 
-# Ring-Moon Systems Node Open-Source Software
+# {{ page.title }}
 
 ## Open Source Python on GitHub
 
-We provide a variety of useful tools in our
-GitHub repository.
-Browse the entire collection at:
-* [SETI/pds-tools](//github.com/SETI/pds-tools){:target="_blank"}
+We provide a variety of useful tools in our GitHub repository. Modules may be installed by running the pip install command.
 
-All are written in Python 2.7. Download these files and put them in a directory
-that is part of your PYTHONPATH environment variable.
+Name | Description | How to Install | Supported Python Versions
+---|---|:---|:---
+[cspyce](//github.com/SETI/rms-cspyce){:target="_blank"} | Python interface to the SPICE toolkit | pip install cspyce | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cspyce)](//pypi.org/project/cspyce)
+[interval](//github.com/SETI/rms-interval){:target="_blank"} | Dictionary keyed by ranges of floating-point numbers | pip install rms-interval | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-interval)](//pypi.org/project/rms-interval)
+[julian](//github.com/SETI/rms-julian){:target="_blank"} | Calendar time and date calculations | pip install rms-julian | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-julian)](//pypi.org/project/rms-julian)
+[pdslogger](//github.com/SETI/rms-pdslogger){:target="_blank"} | Extension to the Python logging module | pip install rms-pdslogger | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdslogger)](//pypi.org/project/rms-pdslogger)
+[pdsparser](//github.com/SETI/rms-pdsparser){:target="_blank"} | Read and manipulate PDS3 label files | pip install rms-pdsparser | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdsparser)](//pypi.org/project/rms-pdsparser)
+[pdstable](//github.com/SETI/rms-pdstable){:target="_blank"} | Read and manipulate ASCII tables with PDS3 labels | pip install rms-pdstable | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdstable)](//pypi.org/project/rms-pdstable) 
+[pdstemplate](//github.com/SETI/rms-pdstemplate){:target="_blank"} | Generate PDS labels based on templates | pip install rms-pdstemplate | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdstemplate)](//pypi.org/project/rms-pdstemplate)  
+[polymath](//github.com/SETI/rms-polymath){:target="_blank"} | Wrapper for NumPy that adds easy masks and vector computation | pip install rms-polymath | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-polymath)](//pypi.org/project/rms-polymath)  
+[solar](//github.com/SETI/rms-solar){:target="_blank"} | Tabulates the solar spectrum vs. wavelength | pip install rms-solar | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-solar)](//pypi.org/project/rms-solar)  
+[tabulation](//github.com/SETI/rms-tabulation){:target="_blank"} | A class that performs linear interpolation | pip install rms-tabulation | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-tabulation)](//pypi.org/project/rms-tabulation)
+[textkernel](//github.com/SETI/rms-textkernel){:target="_blank"} | Reads SPICE text kernels, creating a Python dictionary | pip install rms-textkernel | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-textkernel)](//pypi.org/project/rms-textkernel)  
+[translator](//github.com/SETI/rms-translator){:target="_blank"} | Abstract class and subclasses for mapping strings such as file paths to other information | pip install rms-translator | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-translator)](//pypi.org/project/rms-translator)
+[vax](//github.com/SETI/rms-vax){:target="_blank"} | Converts Vax-format floats to IEEE | pip install rms-vax | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-vax)](//pypi.org/project/rms-vax)
+[vicar](//github.com/SETI/rms-vicar){:target="_blank"} | Reads and manipulates [VICAR](//www-mipl.jpl.nasa.gov/external/VICAR_file_fmt.pdf){:target="_blank"} formated files and their labels | pip install rms-vicar | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-vicar)](//pypi.org/project/rms-vicar)  
 
-Name | Description | Also requires
----|---
-[cspyce](//github.com/SETI/pds-cspyce){:target="_blank"}* | Python interface to the SPICE toolkit | [NAIF's 'C' implementation of SPICE](//naif.jpl.nasa.gov/naif/toolkit_C.html){:target="_blank"}, [SWIG](//www.swig.org){:target="_blank"}
-[gravity](//github.com/SETI/pds-tools/blob/master/gravity.py){:target="_blank"} | Tools for calculating orbital elements around an oblate planet |
-[julian](//github.com/SETI/pds-tools/blob/master/julian.py){:target="_blank"} | Calendar time and date calculations | [julian_dateparser.py](//github.com/SETI/pds-tools/blob/master/julian_dateparser.py){:target="_blank"}
-[pdsparser](//github.com/SETI/pds-tools/blob/master/pdsparser.py){:target="_blank"} | Read and manipulate PDS3 label files |
-[pdstable](//github.com/SETI/pds-tools/blob/master/pdstable.py){:target="_blank"} | Read and manipulate ASCII tables with PDS3 labels | [julian](//github.com/SETI/pds-tools/blob/master/julian.py){:target="_blank"}, [julian_dateparser.py](//github.com/SETI/pds-tools/blob/master/julian_dateparser.py){:target="_blank"}, [pdsparser](//github.com/SETI/pds-tools/blob/master/pdsparser.py){:target="_blank"}
-[picmaker](//github.com/SETI/pds-tools/blob/master/picmaker.py){:target="_blank"} | Creates views of PDS images in many formats such as JPEG | [colornames](//github.com/SETI/pds-tools/blob/master/colornames.py){:target="_blank"}, [tiff16](//github.com/SETI/pds-tools/blob/master/tiff16.py){:target="_blank"}, [pdsparser](//github.com/SETI/pds-tools/blob/master/pdsparser.py){:target="_blank"}, [tabulation](//github.com/SETI/pds-tools/blob/master/tabulation.py){:target="_blank"}
-[solar](//github.com/SETI/pds-tools/blob/master/solar.py){:target="_blank"} | Tabulates the solar spectrum vs. wavelength | [tabulation](//github.com/SETI/pds-tools/blob/master/tabulation.py){:target="_blank"}
-[textkernel](//github.com/SETI/pds-tools/blob/master/textkernel.py){:target="_blank"} | Reads SPICE text kernels, creating a Python dictionary | [julian](//github.com/SETI/pds-tools/blob/master/julian.py){:target="_blank"}, [julian_dateparser.py](//github.com/SETI/pds-tools/blob/master/julian_dateparser.py){:target="_blank"}
-[tiff16](//github.com/SETI/pds-tools/blob/master/tiff16.py){:target="_blank"} | Reads and writes 16-bit TIFF files |
-[vax](//github.com/SETI/pds-tools/blob/master/vax.py){:target="_blank"} | Converts Vax-format floats to IEEE |
-[vicar](//github.com/SETI/pds-tools/blob/master/vicar.py){:target="_blank"} | Reads and manipulates [VICAR](/help/VICAR_file_fmt.pdf){:target="_blank"} format files and their labels |
-
-[*] Although our cspyce library is well maintained, we recommend [spiceypy](//github.com/AndrewAnnex/SpiceyPy){:target="_blank"}
-as a more widely used alternative.
+&nbsp;  
+The Astropy-affiliated astroquery package provides a Python interface to the ephemeris tools provided by the RMS Node via the [astroquery.solarsystem.pds](//astroquery.readthedocs.io/en/latest/solarsystem/pds/pds.html){:target="_blank"} submodule  
 
 ## Legacy C Libraries
 
-{% include warning.html content="These toolkits are no longer supported and may in some cases no longer compile
-without modification." %}
+{% include warning.html content="These toolkits are deprecated and no longer supported and may not compile without 
+modification. In most cases, you should use the Python modules listed above." %}
 
 This is a set of downloadable software tools developed at the PDS Ring-Moon Systems Node.
 They enable users to perform a variety of common tasks related to planning
@@ -58,9 +55,9 @@ A set of routines for performing calculations related to orbital motion around
 an oblate planet. Routines can be used to predict satellite locations and to
 calculate arbitrary resonance locations in planetary rings.
 
-  * Read the [AAREADME](kepler_102/aareadme.txt){:target="_blank"} file for more information.
-  * [Browse](kepler_102/){:target="_blank"}  the delivery package including source code.
-  * Go to the [software order form](order.html){:target="_blank"}. (It's free!)
+  * Read the [AAREADME]({{ site.assets_url }}toolkits/kepler_102/aareadme.txt){:target="_blank"} file for more information.
+  * [Browse]({{ site.assets_url }}toolkits/kepler_102/){:target="_blank"}  the delivery package including source code.
+  * Download the Kepler Library 1.0.2: [.zip]({{ site.assets_url }}toolkits/kepler_102.zip), [.tar]({{ site.assets_url }}toolkits/kepler_102.tar), or [.tgz]({{ site.assets_url }}toolkits/kepler_102.tgz)
 
 ### Julian Library
 
@@ -69,9 +66,9 @@ conversions between Universal Time (UTC), Atomic Time (TAI), and Ephemeris
 Time (ET). It also performs conversions between calendar dates and Julian
 dates, and interprets or formats dates and times in a variety of styles.
 
-  * Read the [AAREADME](julian_133_html/aareadme.html){:target="_blank"} file for more information.
-  * [Browse](julian_133/){:target="_blank"} the delivery package including source code.
-  * Go to the [software order form](order.html){:target="_blank"}. (It's free!)
+  * Read the [AAREADME]({{ site.assets_url }}toolkits/julian_133/aareadme.txt){:target="_blank"} file for more information.
+  * [Browse]({{ site.assets_url }}toolkits/julian_133/){:target="_blank"} the delivery package including source code.
+  * Download the Julian Library 1.3.3: [.zip]({{ site.assets_url }}toolkits/julian_133.zip), [.tar]({{ site.assets_url }}toolkits/julian_133.tar), or [.tgz]({{ site.assets_url }}toolkits/julian_133.tgz)
 
 ### Profile Library
 
@@ -82,13 +79,12 @@ occultation data archived by the Ring-Moon Systems Node.
 
 This toolkit is built upon the PDS's Object Access Library (OAL).
 
-  * Read the [AAREADME](profile_13_html/aareadme.html){:target="_blank"} file for more information.
-  * [Browse](profile_13/){:target="_blank"} the delivery package version 1.3.1, as optimized by the Ring-Moon Systems Node for this toolkit.
-  * Read the [AAREADME](oal_131/aareadme.txt){:target="_blank"} file for the Object Access Library.
-  * Download the [OAL Users' Guide](oal_131/oalguide.pdf){:target="_blank"} (PDF format).
-  * [Browse](oal_131/){:target="_blank"} the OAL delivery package.
-  * Go to the [software order form](order.html){:target="_blank"}.
+  * Read the [AAREADME]({{ site.assets_url }}toolkits/profile_13/aareadme.txt){:target="_blank"} file for more information.
+  * [Browse]({{ site.assets_url }}toolkits/profile_13/){:target="_blank"} the delivery package version 1.3.1, as optimized by the Ring-Moon Systems Node for this toolkit.
+  * Download the Profile Library 1.3: [.zip]({{ site.assets_url }}toolkits/profile_13.zip), [.tar]({{ site.assets_url }}toolkits/profile_13.tar), or [.tgz]({{ site.assets_url }}toolkits/profile_13.tgz)
 
-### Toolkit Order Form
+Object Access LIbrary (OAL) (strongly recommended if you also download the Profile Library).
 
-Click [here](order.html){:target="_blank"} to download any or all of the toolkits.
+  * Read the [OAL Users' Guide]({{ site.assets_url }}toolkits/oal_131/oalguide.pdf){:target="_blank"} (PDF format).
+  * [Browse]({{ site.assets_url }}toolkits/oal_131/){:target="_blank"} the OAL delivery package.
+  * Download the Object Access Library 1.3.1: [.zip]({{ site.assets_url }}toolkits/oal_131.zip), [.tar]({{ site.assets_url }}toolkits/oal_131.tar), or [.tgz]({{ site.assets_url }}toolkits/oal_131.tgz)
