@@ -25,7 +25,16 @@
 				{% endif %}
 			{% endfor %}
 
-			<li class = "active">{{ tab.this_page_label }}</li>
+            {% if tab.this_page_label %}
+                {% assign label = tab.this_page_label %}
+            {% else %}
+                {% assign label = page.title %}
+            {% endif %}
+            {% if page.breadcrumb %}
+                <li class = "active"><a href="{{ page.breadcrumb }}">{{ label }}</a></li>
+            {% else %}
+			    <li class = "active">{{ label }}</li>
+            {% endif %}
 
 		</ol>
 		{% break %}

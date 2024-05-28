@@ -1,0 +1,1130 @@
+# do not edit columns without first reading cassini.README.md in this directory
+- column_labels: 
+    - Sampling
+    - Star
+    - Direction
+    - Range
+    - Data file
+    - Size
+    - Label file
+
+# Edit Below:
+- section: 
+
+    heading2: Ring 6
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,660-42,020 km
+            data_file:
+              - PU2P016I.TAB
+              - PU2P016E.TAB
+            size:
+              - 18 K
+              - 18 K
+            label_file:
+              - PU2P016I.LBL
+              - PU2P016E.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,660-42,020 km
+            data_file:
+              - PU2P016I.TAB
+              - PU2P016E.TAB
+            size:
+              - 9 K
+              - 9 K
+            label_file:
+              - PU2P016I.LBL
+              - PU2P016E.LBL
+
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,660-42,020 km
+            data_file:
+              - PU2P016I.TAB
+              - PU2P016E.TAB
+            size:
+              - 4 K
+              - 4 K
+            label_file:
+              - PU2P016I.LBL
+              - PU2P016E.LBL
+
+- section:
+    heading2: Ring 5
+
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,050-42,010 km
+            data_file:
+              - PU2P015I.TAB
+              - PU2P015I.TAB
+            size:
+              - 18 K
+              - 18 K
+            label_file:
+              - PU2P015I.LBL
+              - PU2P015I.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,050-42,010 km
+            data_file:
+              - PU2P015I.TAB
+              - PU2P015I.TAB
+            size:
+              - 9 K
+              - 9 K
+            label_file:
+              - PU2P015I.LBL
+              - PU2P015I.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,050-42,010 km
+            data_file:
+              - PU2P015I.TAB
+              - PU2P015I.TAB
+            size:
+              - 4 K
+              - 4 K
+            label_file:
+              - PU2P015I.LBL
+              - PU2P015I.LBL
+
+- section:
+    heading2: Ring 4
+
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,400-42,770 km
+            data_file:
+              - PU2P014I.TAB
+              - PU2P014E.TAB
+            size:
+              - 18 K
+              - 18 K
+            label_file:
+              - PU2P014I.LBL
+              - PU2P014E.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,400-42,770 km
+            data_file:
+              - PU2P014I.TAB
+              - PU2P014E.TAB
+            size:
+              - 9 K
+              - 9 K
+            label_file:
+              - PU2P014I.LBL
+              - PU2P014E.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,400-42,770 km
+            data_file:
+              - PU2P014I.TAB
+              - PU2P014E.TAB
+            size:
+              - 4 K
+              - 4 K
+            label_file:
+              - PU2P014I.LBL
+              - PU2P014E.LBL
+
+- section:
+    heading2: Ring alpha
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 44,530-44,930 km
+            data_file:
+              - PU2P01AI.TAB
+              - PU2P01AE.TAB
+            size:
+              - 20 K
+              - 20 K
+            label_file:
+              - PU2P01AI.LBL
+              - PU2P01AE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 44,530-44,930 km
+            data_file:
+              - PU2P01AI.TAB
+              - PU2P01AE.TAB
+            size:
+              - 10 K
+              - 10 K
+            label_file:
+              - PU2P01AI.LBL
+              - PU2P01AE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 44,530-44,930 km
+            data_file:
+              - PU2P01AI.TAB
+              - PU2P01AE.TAB
+            size:
+              - 4 K
+              - 4 K
+            label_file:
+              - PU2P01AI.LBL
+              - PU2P01AE.LBL
+
+- section:
+    heading2: Ring beta
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 45,430-45,860 km
+            data_file:
+              - PU2P01BI.TAB
+              - PU2P01BE.TAB
+            size:
+              - 21 K
+              - 21 K
+            label_file:
+              - PU2P01BI.LBL
+              - PU2P01BE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 45,430-45,860 km
+            data_file:
+              - PU2P01BI.TAB
+              - PU2P01BE.TAB
+            size:
+              - 11 K
+              - 11 K
+            label_file:
+              - PU2P01BI.LBL
+              - PU2P01BE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 41,400-42,770 km
+            data_file:
+              - PU2P01BI.TAB
+              - PU2P01BE.TAB
+            size:
+              - 4 K
+              - 4 K
+            label_file:
+              - PU2P01BI.LBL
+              - PU2P01BE.LBL
+
+- section:
+    heading2: Ring eta
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 46,970-47,430 km
+            data_file:
+              - PU2P01NI.TAB
+              - PU2P01NE.TAB
+            size:
+              - 23 K
+              - 23 K
+            label_file:
+              - PU2P01NI.LBL
+              - PU2P01NE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 46,970-47,430 km
+            data_file:
+              - PU2P01NI.TAB
+              - PU2P01NE.TAB
+            size:
+              - 11 K
+              - 11 K
+            label_file:
+              - PU2P01NI.LBL
+              - PU2P01NE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 46,970-47,430 km
+            data_file:
+              - PU2P01NI.TAB
+              - PU2P01NE.TAB
+            size:
+              - 5 K
+              - 5 K
+            label_file:
+              - PU2P01NI.LBL
+              - PU2P014E.LBL
+
+- section:
+    heading2: Ring gamma
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 47,390-47,840 km
+            data_file:
+              - PU2P01GI.TAB
+              - PU2P01GE.TAB
+            size:
+              - 22 K
+              - 22 K
+            label_file:
+              - PU2P01GI.LBL
+              - PU2P01GE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 47,390-47,840 km
+            data_file:
+              - PU2P01GI.TAB
+              - PU2P01GE.TAB
+            size:
+              - 11 K
+              - 11 K
+            label_file:
+              - PU2P01GI.LBL
+              - PU2P01GE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - beta Per
+            direction:
+              - ingress
+              - egress
+            range:
+              - 47,390-47,840 km
+            data_file:
+              - PU2P01GI.TAB
+              - PU2P01GE.TAB
+            size:
+              - 4 K
+              - 4 K
+            label_file:
+              - PU2P01GI.LBL
+              - PU2P01GE.LBL
+
+- section:
+    heading2: Ring delta
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 0.1 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 48,150-48,525 km
+            data_file:
+              - PU1P01DI.TAB
+              - PU1P01DE.TAB
+            size:
+              - 183 K
+              - 183 K
+            label_file:
+              - PU1P01DI.LBL
+              - PU1P01DE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 0.2 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 48,150-48,525 km
+            data_file:
+              - PU1P01DI.TAB
+              - PU1P01DE.TAB
+            size:
+              - 92 K
+              - 92 K
+            label_file:
+              - PU1P01DI.LBL
+              - PU1P01DE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 0.5 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 48,150-48,525 km
+            data_file:
+              - PU1P01DI.TAB
+              - PU1P01DE.TAB
+            size:
+              - 37 K
+              - 37 K
+            label_file:
+              - PU1P01DI.LBL
+              - PU1P01DE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 48,150-48,525 km
+              -
+              - 48,150-48,550 km
+            data_file:
+              - PU1P01DI.TAB
+              - PU1P01DE.TAB
+              - PU2P01DI.TAB
+              - PU2P01DE.TAB
+            size:
+              - 18 K
+              - 18 K
+              - 20 K
+              - 20 K
+            label_file:
+              - PU1P01DI.LBL
+              - PU1P01DE.LBL
+              - PU2P01DI.LBL
+              - PU2P01DE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 48,150-48,525 km
+              -
+              - 48,150-48,550 km
+            data_file:
+              - PU1P01DI.TAB
+              - PU1P01DE.TAB
+              - PU2P01DI.TAB
+              - PU2P01DE.TAB
+            size:
+              - 9 K
+              - 9 K
+              - 10 K
+              - 10 K
+            label_file:
+              - PU1P01DI.LBL
+              - PU1P01DE.LBL
+              - PU2P01DI.LBL
+              - PU2P01DE.LBL
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 48,150-48,525 km
+              -
+              - 48,150-48,550 km
+            data_file:
+              - PU1P01DI.TAB
+              - PU1P01DE.TAB
+              - PU2P01DI.TAB
+              - PU2P01DE.TAB
+            size:
+              - 4 K
+              - 4 K
+              - 4 K
+              - 4 K
+            label_file:
+              - PU1P01DI.LBL
+              - PU1P01DE.LBL
+              - PU2P01DI.LBL
+              - PU2P01DE.LBL
+
+- section:
+    heading2: Ring lambda
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_1
+            sampling: 
+              - 0.1 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 49,880-50,200 km
+              - 49,850-50,200 km
+            data_file:
+              - PU1P01LI.TAB
+              - PU1P01LE.TAB
+            size:
+              - 156 K
+              - 171 K
+            label_file:
+              - PU1P01LI.LBL
+              - PU1P01LE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/
+            sampling: 
+              - 0.2 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 49,880-50,200 km
+              - 49,850-50,200 km
+            data_file:
+              - PU1P01LI.TAB
+              - PU1P01LE.TAB
+            size:
+              - 78 K
+              - 85 K
+            label_file:
+              - PU1P01LI.LBL
+              - PU1P01LE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/
+            sampling: 
+              - 0.5 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 49,880-50,200 km
+              - 49,850-50,200 km
+            data_file:
+              - PU1P01LI.TAB
+              - PU1P01LE.TAB
+            size:
+              - 31 K
+              - 31 K
+            label_file:
+              - PU1P01LI.LBL
+              - PU1P01LE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 49,880-50,200 km
+              - 49,850-50,200 km
+            data_file:
+              - PU1P01LI.TAB
+              - PU1P01LE.TAB
+            size:
+              - 16 K
+              - 17 K
+            label_file:
+              - PU1P01LI.LBL
+              - PU1P01LE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 49,880-50,200 km
+              - 49,850-50,200 km
+            data_file:
+              - PU1P01LI.TAB
+              - PU1P01LE.TAB
+            size:
+              - 8 K
+              - 9 K
+            label_file:
+              - PU1P01LI.LBL
+              - PU1P01LE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 49,880-50,200 km
+              - 49,850-50,200 km
+            data_file:
+              - PU1P01LI.TAB
+              - PU1P01LE.TAB
+            size:
+              - 3 K
+              - 3 K
+            label_file:
+              - PU1P01LI.LBL
+              - PU1P01LE.LBL
+
+- section:
+    heading2: Ring epsilon
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/
+            sampling: 
+              - 0.1 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 450,400-51,800 km
+            data_file:
+              - PU1P01EI.TAB
+              - PU1P01EE.TAB
+            size:
+              - 684 K
+              - 684 K
+            label_file:
+              - PU1P01EI.LBL
+              - PU1P01EE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/
+            sampling: 
+              - 0.2 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 50,400-51,800 km
+            data_file:
+              - PU1P01EI.TAB
+              - PU1P01EE.TAB
+            size:
+              - 342 K
+              - 342 K
+            label_file:
+              - PU1P01EI.LBL
+              - PU1P01EE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/
+            sampling: 
+              - 0.5 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 50,400-51,800 km
+            data_file:
+              - PU1P01EI.TAB
+              - PU1P01EE.TAB
+            size:
+              - 137 K
+              - 137 K
+            label_file:
+              - PU1P01EI.LBL
+              - PU1P01EE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 50,400-51,800 km
+              -
+              - 50,400-51,800 km
+            data_file:
+              - PU1P01EI.TAB
+              - PU1P01EE.TAB
+              - PU2P01EI.TAB
+              - PU2P01EE.TAB
+            size:
+              - 68 K
+              - 68 K
+              - 68 K
+              - 68 K
+            label_file:
+              - PU1P01EI.LBL
+              - PU1P01EE.LBL
+              - PU2P01EI.LBL
+              - PU2P01EE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 50,400-51,800 km
+              -
+              - 50,400-51,800 km
+            data_file:
+              - PU1P01EI.TAB
+              - PU1P01EE.TAB
+              - PU2P01EI.TAB
+              - PU2P01EE.TAB
+            size:
+              - 34 K
+              - 34 K
+              - 34 K
+              - 34 K
+            label_file:
+              - PU1P01EI.LBL
+              - PU1P01EE.LBL
+              - PU2P01EI.LBL
+              - PU2P01EE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 50,400-51,800 km
+              -
+              - 50,400-51,800 km
+            data_file:
+              - PU1P01EI.TAB
+              - PU1P01EE.TAB
+              - PU2P01EI.TAB
+              - PU2P01EE.TAB
+            size:
+              - 14 K
+              - 14 K
+              - 14 K
+              - 14 K
+            label_file:
+              - PU1P01EI.LBL
+              - PU1P01EE.LBL
+              - PU2P01EI.LBL
+              - PU2P01EE.LBL
+
+- section:
+    heading2: Full Ring System (assuming equatorial geometry)
+    
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/
+            sampling: 
+              - 0.1 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 48,000-53,595 km
+              - 48,000-51,820 km
+            data_file:
+              - PU1P01XI.TAB
+              - PU1P01XE.TAB
+            size:
+              - 2.7 M
+              - 1.8 M
+            label_file:
+              - PU1P01XI.LBL
+              - PU1P01XE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_2/
+            sampling: 
+              - 0.2 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 48,000-53,595 km
+              - 48,000-51,820 km
+            data_file:
+              - PU1P01XI.TAB
+              - PU1P01XE.TAB
+            size:
+              - 1.3 M
+              - 933 K
+            label_file:
+              - PU1P01XI.LBL
+              - PU1P01XE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_5/
+            sampling: 
+              - 0.5 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+              - egress
+            range:
+              - 48,000-53,595 km
+              - 48,000-51,820 km
+            data_file:
+              - PU1P01XI.TAB
+              - PU1P01XE.TAB
+            size:
+              - 546 K
+              - 373 K
+            label_file:
+              - PU1P01XI.LBL
+              - PU1P01XE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 48,000-53,595 km
+              - 48,000-51,820 km
+              - 36,400-53,000 km
+              - 37,750-53,500 km
+            data_file:
+              - PU1P01XI.TAB
+              - PU1P01XE.TAB
+              - PU2P01XI.TAB
+              - PU2P01XE.TAB
+            size:
+              - 273 K
+              - 187 K
+              - 811 K
+              - 769 K
+            label_file:
+              - PU1P01XI.LBL
+              - PU1P01XE.LBL
+              - PU2P01XI.LBL
+              - PU2P01XE.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 48,000-53,595 km
+              - 48,000-51,820 km
+              - 36,400-53,000 km
+              - 37,750-53,500 km
+            data_file:
+              - PU1P01XI.TAB
+              - PU1P01XE.TAB
+              - PU2P01XI.TAB
+              - PU2P01XE.TAB
+            size:
+              - 137 K
+              - 93 K
+              - 405 K
+              - 385 K
+            label_file:
+              - PU1P01XI.LBL
+              - PU1P01XE.LBL
+              - PU2P01XI.LBL
+              - PU2P01XE.LBL
+              
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - sigma Sgr
+              -
+              - beta Per
+            direction:
+              - ingress
+              - egress
+              - ingress
+              - egress
+            range:
+              - 48,000-53,595 km
+              - 48,000-51,820 km
+              - 36,400-53,000 km
+              - 37,750-53,500 km
+            data_file:
+              - PU1P01XI.TAB
+              - PU1P01XE.TAB
+              - PU2P01XI.TAB
+              - PU2P01XE.TAB
+            size:
+              - 55 K
+              - 37 K
+              - 162 K
+              - 154 K
+            label_file:
+              - PU1P01XI.LBL
+              - PU1P01XE.LBL
+              - PU2P01XI.LBL
+              - PU2P01XE.LBL

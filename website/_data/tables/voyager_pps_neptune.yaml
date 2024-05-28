@@ -1,0 +1,76 @@
+# do not edit columns without first reading cassini.README.md in this directory
+- column_labels: 
+    - Sampling
+    - Star
+    - Direction
+    - Range
+    - Data file
+    - Size
+    - Label file
+
+# Edit Below:
+- section:  
+    section_rows: 
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM001/
+            sampling: 
+              - 1 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+            range:
+              - 42,500-49,999 km
+              - 50,000-59,999 km
+              - 60,000-69,999 km
+              - 70,000-76,000 km
+            data_file:
+              - PN1P0104.TAB
+              - PN1P0105.TAB
+              - PN1P0106.TAB
+              - PN1P0107.TAB
+            size:
+              - 368 K
+              - 492 K
+              - 492 K
+              - 296 K
+            label_file:
+              - PN1P0104.LBL
+              - PN1P0105.LBL
+              - PN1P0106.LBL
+              - PN1P0107.LBL
+
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM002/
+            sampling: 
+              - 2 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+            range:
+              - 42,500-76,000 km
+            data_file:
+              - PN1P01.TAB
+            size:
+              - 689 K
+            label_file:
+              - PN1P01.LBL
+              
+        - table_row: 
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM005/
+            sampling: 
+              - 5 km
+            star:
+              - sigma Sgr
+            direction:
+              - ingress
+            range:
+              - 42,500-76,000 km
+            data_file:
+              - PN1P01.TAB
+            size:
+              - 689 K
+            label_file:
+              - PN1P01.LBL

@@ -260,6 +260,17 @@ p.logo {
   width: 100%;
 }
 
+img.thumbnail {
+    float: left;
+    width: 50%;
+}
+
+img.diagram {
+    float: none !important;
+}
+
+img.
+
 /* homepage boxes */
 .homebox {
   font:1.0em 'Inclusive Sans', sans-serif;
@@ -643,6 +654,7 @@ ol.breadcrumb {
 table {
   border-collapse: separate;
   background-color: white;
+  border: 1px solid black;
 }
 /* Zebra striping */
 /*

@@ -19,7 +19,7 @@
   <h3>{{ custom_heading }}:</h3>
 {% endif %}
 
-<table summary ="A list of {{ table_name }}">
+<table class="table" summary ="A list of {{ table_name }}">
   <caption class = "hidden">{{ table_name }}</caption>
 
   <!-- table header row -->
@@ -39,6 +39,11 @@
             <th scope="col" id="{{ col | slugify }}" headers = "volume">
               <a href = "{{ site.viewmaster_url }}volumes/{{ base_dir }}/{{ col }}/" target="_blank">{{ col }}</a>
             </th>
+          {% else %}
+
+            <!-- default table header -->
+            <th scope="col" id="{{ col | slugify }}">{{ col }}</th>
+  
           {% endif %}
 
         {% else %}
@@ -94,11 +99,9 @@
 
 
   {% for entry in table_data %}
-
-    {% if entry.section.column_labels | entry.section.column_labels %}
+    {% if entry.column_labels | entry.section.column_labels %}
       {% continue %}
     {% endif %}
-
 
     <tbody>
       <!-- volume group separator rows -->
@@ -117,7 +120,6 @@
           </th>
         </tr>
       {% endif %}
-
 
       {% comment %}
 
@@ -446,36 +448,31 @@
             <!-- Voyager pps tables -->
             {% if table_name contains 'Voyager PPS' %}
 
-              {% if col contains 'Data File' %}
+                {% capture field_name %}{{ col | downcase | replace: " ", "_"}}{% endcapture %}
+                {% assign data_size = row.table_row[field_name].size %}
+                {% assign base_dir =  row.table_row.base_dir %}
 
-                <td headers="{{ col | slugify }}">
-                  <a href = "{{ site.holdings_url }}volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.TAB" target="_blank">
-                    {{ row.table_row.name }}.TAB
+                {% if data_size != nil %}
 
-                  </a>
-                </td>
+                 <td headers="{{ col | slugify }}">
+                        {% for data in row.table_row[field_name] %}
+                             {% if col contains 'Data file' %}
+                                <a href = "{{ site.holdings_url }}{{ base_dir }}{{ data }}" target="_blank">
+                                    {{ data }}     
+                                </a>
+                            {% elsif col contains 'Label file' %}
+                                <a href = "{{ site.holdings_url }}{{ base_dir }}{{ data }}" target="_blank">
+                                    .LBL
+                                </a>
+                             {% else %}
+                                <span>{{ data }}</span>
+                            {% endif %}
 
-              {% elsif col contains 'Label File' %}
-                <td headers="{{ col | slugify }}">
-                  <a href = "{{ site.holdings_url }}volumes/VG_28xx/{{ row.table_row.id }}/EASYDATA/{{ row.table_row.sub_dir }}/{{ row.table_row.name }}.LBL" target="_blank">
-                    .LBL
-                  </a>
-                </td>
-
-              {% else %}
-
-                {% capture field_name %}{{ col | downcase }}{% endcapture %}
-
-                <td headers="{{ col | slugify }}">
-
-                    <span style = "white-space:nowrap">
-                      {{ row.table_row[field_name] }}
-                    </span>
-                  </a>
-                </td>
-
-              {% endif %}
-
+                            {% if data_size > 1 %}<br>{% endif %}
+                            {% assign data_size = data_size - 1 %}
+                        {% endfor %}
+                    </td>
+                {% endif %}
             {% endif %}
 
           {% endfor %} <!-- end row -->
