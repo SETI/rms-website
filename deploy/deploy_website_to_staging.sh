@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 source config_data
-branch=${1:-master}
+branch=${1:-main}
 echo "### Deploying pds-website repo, branch ${branch}, to staging server"
 cd ~/pds-website
 git checkout $branch

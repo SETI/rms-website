@@ -32,8 +32,8 @@ import getpass
 # Was in secrets.py... but secret no more
 PROD_DIR = "/Library/WebServer/Documents/"  # full path to web root directory including trailing slash
 
-REPO = 'https://github.com/SETI/pds-website.git'
-branch = 'master'
+REPO = 'https://github.com/SETI/rms-website.git'
+branch = 'main'
 
 ADMIN_HOST = 'admin.pds-rings.csc.seti.org'
 # PRODUCTION_HOST = 'server2.pds-rings.seti.org'
