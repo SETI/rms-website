@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 source config_data
 branch=${1:-main}
-echo "### Deploying pds-website repo, branch ${branch}, to staging server"
-cd ~/pds-website
+echo "### Deploying rms-website repo, branch ${branch}, to staging server"
+cd ~/rms-website
 git checkout $branch
 if [ $? -ne 0 ]; then exit -1; fi
 git pull
