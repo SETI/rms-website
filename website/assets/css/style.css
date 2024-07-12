@@ -23,6 +23,7 @@
 /* begin style */
 body {
   font-family: 'Inclusive Sans', sans-serif;
+  font-size: 16px;
   color: #033333;
 }
 
@@ -42,7 +43,6 @@ nav a, .tab-pill a, .footer-lower a {
 .content a {
     text-decoration: none;
     border-bottom: 1px outset;
-    font-size: 15px;
 }
 
 .tab-pill a {
