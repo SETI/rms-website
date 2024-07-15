@@ -16,11 +16,11 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="/{{ tab.parent_tabs_yaml }}">{{ tab.parent_label }}</a></li>
+			<li><a href="/{{ tab.parent_tabs_yaml | relative_url}}">{{ tab.parent_label }}</a></li>
 
 			{% for p_tab in parent_tabs %}
 				{% if p_tab.title == tab.parent_tab %}
-					<li><a href="{{ p_tab.href }}">{{ tab.parent_tab }}</a></li>
+					<li><a href="{{ p_tab.href | relative_url }}">{{ tab.parent_tab }}</a></li>
 					{% continue %}
 				{% endif %}
 			{% endfor %}
@@ -31,7 +31,7 @@
                 {% assign label = page.title %}
             {% endif %}
             {% if page.breadcrumb %}
-                <li class = "active"><a href="{{ page.breadcrumb }}">{{ label }}</a></li>
+                <li class = "active"><a href="{{ page.breadcrumb | relative_url }}">{{ label }}</a></li>
             {% else %}
 			    <li class = "active">{{ label }}</li>
             {% endif %}
@@ -46,15 +46,14 @@
 	{% for tab in all_tabs %}
 
 		{% if tab.title %}
-		  <li class="tab-pill 
+		  <li class="tab-pill
 		  		{% if active_tab.title == tab.title %}
 		  			active
 		  		{% endif %}
 
-		  	" >	<a href="{{ tab.href }}">{{ tab.title }}</a>
+		  	" >	<a href="{{ tab.href | relative_url }}">{{ tab.title }}</a>
 		  </li>
 		{% endif %}
 	{% endfor %}
 
 </ul>
-
