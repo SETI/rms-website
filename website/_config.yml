@@ -3,7 +3,6 @@ title: Ring-Moon Systems Node
 email: pds-admin@seti.org
 description: > # this means to ignore newlines until "baseurl:"
     The Ring-Moon Systems Node of NASA's Planetary Data System is devoted to archiving, cataloging, and distributing scientific data sets relevant to planetary rings and moons, and the ways they interact.
-baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
