@@ -2,7 +2,7 @@
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 <a href="{{ site.baseurl }}/">Home</a>
 {% if page.breadcrumb %}
-    / <a href="/{{ site.baseurl}}{{ page.breadcrumb }}">{{ page.breadcrumb | replace: "_", " " | capitalize }}</a> / {{ page.title }}
+    / <a href="/{{ site.baseurl }}{{ page.breadcrumb }}">{{ page.breadcrumb | replace: "_", " " | capitalize }}</a> / {{ page.title }}
 {% else %}
     {% for crumb in crumbs offset: 1 %}
         {% if forloop.last %}
