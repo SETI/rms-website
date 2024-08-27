@@ -127,3 +127,83 @@
             base_dir:  NHxxMV_xxxx
             liens: None
             description: Calib MVIC
+
+- section:
+    heading1: Arrokoth Cruise
+
+    section_rows:
+
+        - table_row:
+            id: NHKCLO_1001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Raw LORRI
+
+        - table_row:
+            id: NHKCLO_2001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Calib LORRI
+
+        - table_row:
+            id: NHKCMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Raw MVIC
+
+        - table_row:
+            id: NHKCMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Calib MVIC
+
+- section:
+    heading1: Arrokoth Flyby & Cruise
+
+    section_rows:
+
+        - table_row:
+            id: NHKELO_1001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Raw LORRI
+
+        - table_row:
+            id: NHKELO_2001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Calib LORRI
+
+- section:
+    heading1: Arrokoth Flyby
+
+    section_rows:
+
+        - table_row:
+            id: NHKEMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Raw MVIC
+
+        - table_row:
+            id: NHKEMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Calib MVIC
+
+- section:
+    heading1: KEM2 extended Kuiper Belt mission
+
+    section_rows:
+
+        - table_row:
+            id: NHK2LO_1001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Raw LORRI
+
+        - table_row:
+            id: NHK2LO_2001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Calib LORRI

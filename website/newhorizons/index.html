@@ -8,7 +8,7 @@ tabs: newhorizons
 
 ##  Introduction
 
-**Last updated: 12/24/2018**
+**Last updated: 08/24/2024**
 
 While all of the New Horizons data are available from the [PDS Small Bodies Node (SBN)](//pds-smallbodies.astro.umd.edu/data_sb/missions/newhorizons/index.shtml){:target="_blank"},
 the Ring-Moon Systems
@@ -28,6 +28,8 @@ Mission phases are:
   * JU - Jupiter Encounter
   * PC - Pluto Cruise
   * PE - Pluto Encounter
+  * KC - Arrokoth Cruise
+  * K2 - KEM2 Extended Kuiper Belt Mission
 
 For the Pluto Encounter, because of the long transfer time from the spacecraft, data are
 being released incrementally. The spacecraft downloads are prioritized by content, not chronology.
@@ -60,15 +62,15 @@ these documents in the DOCUMENT sub-directory of each volume.
 
 As a minimum, users of the LORRI data should review the following documents:
 
-  * [AAREADME](nh_AAREADME.TXT){:target="_blank"}. Provides an overview of the data set.
-  * [ICD](SOC_INST_ICD.PDF){:target="_blank"}. Contains general information and details of the LORRI instrument and data.
-  * [LORRI SR](LORRI_SSR.PDF){:target="_blank"}. The LORRI article submitted to <i>Space Science Reviews</i>.
-  * [LORRI Distortion](owen_lorri_distortion_nhcal06-1.pdf){:target="_blank"}. Provides additional information regarding the Distortion Model for LORRI (not included in the volumes).
+  * aareadme.txt - Provides an overview of the data set.
+  * soc_inst_icd/soc_inst_icd.pdf - Contains general information and details of the LORRI instrument and data.
+  * lorri_ssr/lorri_ssr.pdf - The LORRI article submitted to <i>Space Science Reviews</i>.
+  * [LORRI Distortion]({{ site.assets_url }}owen_lorri_distortion_nhcal06-1.pdf){:target="_blank"} - Provides additional information regarding the Distortion Model for LORRI (not included in the volumes).
 
 For information on the geometry data included in the labels and metadata, see
 the
 
-  * [Quaternion description](QUAT_AXYZ_J2K_TO_INSTR.ASC){:target="_blank"} file and its associated [label file.](QUAT_AXYZ_J2K_TO_INSTR.LBL){:target="_blank"}
+  * quat_axyz_instr_to_j2k.asc - Quaternion description file and its associated label file quat_axyz_instr_to_j2k.lbl.
 
 
 ## Ring Observation "Tour Guide"
@@ -76,9 +78,9 @@ the
 Mark Showalter has assembled a table of all the LORRI Jupiter ring observations, including a
 brief description of the targeting and the science goals.
 
-  * PDS-formatted table: [lorri_jring_images.tab](lorri_jring_images.tab){:target="_blank"}
-  * PDS3 label: [lorri_jring_images.lbl](lorri_jring_images.lbl){:target="_blank"}
-  * Zip file of all the diagrams: [lorri_jring_image_diagrams.zip](lorri_jring_image_diagrams.zip)
+  * PDS-formatted table: [lorri_jring_images.tab]({{ site.assets_url }}newhorizons/lorri_jring_images.tab){:target="_blank"}
+  * PDS3 label: [lorri_jring_images.lbl]({{ site.assets_url }}newhorizons/lorri_jring_images.lbl){:target="_blank"}
+  * Zip file of all the diagrams: [lorri_jring_image_diagrams.zip]({{ site.assets_url }}newhorizons/lorri_jring_image_diagrams.zip)
 
 
 ## Other Links
@@ -94,5 +96,3 @@ Observational geometry is available from the PDS NAIF Node:
 
 Information on the spacecraft and its instruments is available from the New
 Horizons Mission [Home page](//www.nasa.gov/mission_pages/newhorizons/main/index.html){:target="_blank"}.
-
-If you are unfamiliar with scientific image formats, consider taking Emily Lakdawalla's free on-line course, [Basics of Digital Imaging](//courses.planetary.org/p/imageclass){:target="_blank"}.
