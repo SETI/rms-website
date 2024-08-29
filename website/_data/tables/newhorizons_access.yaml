@@ -174,11 +174,6 @@
             liens: None
             description: Calib LORRI
 
-- section:
-    heading1: Arrokoth Flyby
-
-    section_rows:
-
         - table_row:
             id: NHKEMV_1001
             base_dir:  NHxxMV_xxxx
