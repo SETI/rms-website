@@ -13,7 +13,7 @@
 
 # Edit Below:
 - section:
-    heading1: Post Launch Cruise
+    heading1: Cruise to Jupiter
 
     section_rows:
 
@@ -42,7 +42,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: Jupiter Encounter
+    heading1: Jupiter Flyby
 
     section_rows:
 
@@ -71,7 +71,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: Pluto Cruise
+    heading1: Cruise to Pluto
 
     section_rows:
 
@@ -100,7 +100,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: Pluto Encounter
+    heading1: Pluto Flyby & Cruise
 
     section_rows:
 
@@ -129,7 +129,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: Arrokoth Cruise
+    heading1: Cruise to Arrokoth
 
     section_rows:
 
@@ -187,7 +187,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: KEM2 extended Kuiper Belt mission
+    heading1: “KEM2” Extended Kuiper Belt Mission
 
     section_rows:
 
