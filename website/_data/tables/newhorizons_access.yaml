@@ -13,7 +13,7 @@
 
 # Edit Below:
 - section:
-    heading1: Post Launch Cruise
+    heading1: Cruise to Jupiter
 
     section_rows:
 
@@ -42,7 +42,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: Jupiter Encounter
+    heading1: Jupiter Flyby
 
     section_rows:
 
@@ -71,7 +71,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: Pluto Cruise
+    heading1: Cruise to Pluto
 
     section_rows:
 
@@ -100,7 +100,7 @@
             description: Calib MVIC
 
 - section:
-    heading1: Pluto Encounter
+    heading1: Pluto Flyby & Cruise
 
     section_rows:
 
@@ -127,3 +127,78 @@
             base_dir:  NHxxMV_xxxx
             liens: None
             description: Calib MVIC
+
+- section:
+    heading1: Cruise to Arrokoth
+
+    section_rows:
+
+        - table_row:
+            id: NHKCLO_1001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Raw LORRI
+
+        - table_row:
+            id: NHKCLO_2001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Calib LORRI
+
+        - table_row:
+            id: NHKCMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Raw MVIC
+
+        - table_row:
+            id: NHKCMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Calib MVIC
+
+- section:
+    heading1: Arrokoth Flyby & Cruise
+
+    section_rows:
+
+        - table_row:
+            id: NHKELO_1001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Raw LORRI
+
+        - table_row:
+            id: NHKELO_2001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Calib LORRI
+
+        - table_row:
+            id: NHKEMV_1001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Raw MVIC
+
+        - table_row:
+            id: NHKEMV_2001
+            base_dir:  NHxxMV_xxxx
+            liens: None
+            description: Calib MVIC
+
+- section:
+    heading1: “KEM2” Extended Kuiper Belt Mission
+
+    section_rows:
+
+        - table_row:
+            id: NHK2LO_1001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Raw LORRI
+
+        - table_row:
+            id: NHK2LO_2001
+            base_dir:  NHxxLO_xxxx
+            liens: None
+            description: Calib LORRI

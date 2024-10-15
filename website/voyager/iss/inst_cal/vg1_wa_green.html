@@ -2,21 +2,22 @@
 layout: base
 layout_style: default
 title: "Voyager 1, Wide Angle Camera, Green Filter"
+directory: /voyager/iss/inst_cal/
 ---
+{% assign asset_url = site.assets_url | append: page.directory  %}
 
-# Voyager 1, Wide Angle Camera, Green Filter
+# {{ page.title }}
 
-![Filter response plot for vg1_wa_green](images/vg1_wa_green.gif)
+![Filter response plot for vg1_wa_green]({{ asset_url }}images/vg1_wa_green.gif)
 
 * Convolution of filter, optics and vidicon responses, renormalized.  
 ** Filter transmissivity alone. 
 
-Download [data file](data/vg1_wa.tab) used to generate plot or
-[diagram](images/vg1_wa_green.ps) (Postscript format).
+Download the [data file]({{ asset_url }}data/vg1_wa.tab){:target="_blank"} used to generate plot or
+[diagram]({{ asset_url }}images/vg1_wa_green.ps) (Postscript format).
 
 From Danielson, G. E., _et al_., [ Radiometric Performance of the Voyager
-Cameras](//adsabs.harvard.edu/cgi-bin/nph-
-bib_query?1981JGR%2E%2E%2E%2E86%2E8683D&db_key=l), _Journal of Geophysical
+Cameras](//adsabs.harvard.edu/cgi-bin/nph-bib_query?1981JGR%2E%2E%2E%2E86%2E8683D&db_key=l){:target="_blank"}, _Journal of Geophysical
 Research_, **86**, 8683-8689, 1981.
 
 Filter Number |  5  

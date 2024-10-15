@@ -1,15 +1,14 @@
 ---
 layout: base
 layout_style: default
-title: "Voyager ISS CDROM Volume Information"
+title: Voyager ISS CDROM Volume Information
 ---
 
-# Voyager ISS CDROM Volume Information
+# {{ page.title }}
 
-This is a hypertext version of the file <a href="raw_volinfo.txt" target="_blank">VOLINFO.TXT</a> from
-CDROM VG_0021. Minor changes and revisions to this file have appeared from
-time to time. If you are using another volume, you may wish to check its own
-VOLINFO.TXT file for possible differences.
+This is a hypertext version of the file [VOLINFO.TXT]({{ site.holdings_url }}volumes/VG_0xxx/VG_0021/DOCUMENT/VOLINFO.TXT){:target="_blank"} from
+CDROM VG_0021. Minor changes and revisions to this file have appeared from time to time. If you are using another volume, 
+you may wish to check its own VOLINFO.TXT file for possible differences.
 
 ## Index
 
@@ -96,7 +95,7 @@ VOLINFO.TXT file for possible differences.
                               Flagstaff, Arizona
     
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 1\. Introduction
 
@@ -120,7 +119,7 @@ information on how to access files stored on a CD-ROM, and gives details on
 the format and contents of the image files and their supporting supplemental
 files.
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 2\. Voyager Images
 
@@ -150,7 +149,7 @@ and perform corrections to the data. A number of image processing systems are
 available which provide radiometric and geometric corrections, display
 capabilities, and analysis tools for Voyager images (7, 8).
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 3\. Voyager Image Files
 
@@ -170,7 +169,7 @@ example, on a VAX-750 it takes about one minute of CPU time to decompress an
 image. The one minute time delay for decompressing an image can be frustrating
 when a planetary scientist wants to browse an image collection.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 3.2 Browse Format
 
@@ -183,7 +182,7 @@ the original image size. The small size of a Browse image in an uncompressed
 format allows images to be rapidly retrieved from a CD-ROM and displayed on a
 screen.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 3.3 File Naming Conventions
 
@@ -198,7 +197,7 @@ file name extension IMQ. Sub-sampled Browse images have the file name
 extension IBG. For example, the file name C1574959.IMQ is a full-resolution
 compressed image acquired when the FDS clock count was 1574959.
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 4\. Disk Directory Structure
 
@@ -256,7 +255,7 @@ the subdirectory C1574XXX within the JUPITER subdirectory of the BROWSE
 directory contains all of the Browse images of Jupiter which fall in the range
 C1574000.IBG to C1574959.IBG.
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 5\. Image Files in Compressed Format
 
@@ -340,7 +339,7 @@ value of the pixel can be computed from the leaf node value and the previous
 pixel. The search is reset to start from the root on the next input bit and
 the process continues for the whole line.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 5.2 Decompression Software
 
@@ -377,7 +376,7 @@ A cautionary note is in order. The first-difference histogram stored in the
 image files consist of 32-bit VAX integers (11). Users of other computer
 hardware environments may need to swap integer byte pairs.
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 6\. Compressed Image File Organization
 
@@ -396,7 +395,7 @@ the file objects: Image Histogram, Encoding Histogram, Engineering Table, and
 Image. The sections which follow provide a description of the image labels and
 the data objects within the file.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 6.1 Image Label Area
 
@@ -532,7 +531,7 @@ detailed description of each keyword found in the example.
     END
     
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 6.2 Image Histogram Object
 
@@ -547,7 +546,7 @@ image histogram. Each item is a 32-bit VAX integer (11). The first element of
 the histogram contains the frequency of occurrences for the pixel value of 0,
 the last element contains the frequency for the pixel value 255.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 6.3 Encoding Histogram Object
 
@@ -562,7 +561,7 @@ of -255. The last element contains the frequency for the value 255. Software
 will need to read the Encoding Histogram from the Encoding Histogram Object,
 and then pass it to the DECMPINIT subroutine for initialization.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 6.4 Engineering Table Object
 
@@ -577,7 +576,7 @@ information. A description of the Engineering Table Object can be found in
 Appendix E. The file ENGTAB.LBL in the LABEL directory provides an ODL label
 describing the engineering table.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 6.5 Image Object
 
@@ -604,7 +603,7 @@ after decompression, are described in Appendix D. The file LINESUFX.LBL in the
 LABEL directory provides an ODL label describing the line suffix after
 decompression.
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 7\. Browse Image File Organization
 
@@ -629,7 +628,7 @@ files. Also, there are no Line Suffix Bytes present. The sections which follow
 provide a description of the image labels and the data objects within the
 file.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 7.1 Image Label Area
 
@@ -695,7 +694,7 @@ provides a detailed description of each keyword found in the example.
     END
     
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 7.2 Image Histogram Object
 
@@ -713,7 +712,7 @@ object.) The image histogram will occupy the first 1024 bytes of the 1200
 bytes which make up the six concatenated records. The remaining 176 bytes at
 the end of the Image Histogram Object are to be ignored.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## 7.3 Image Object
 
@@ -727,7 +726,7 @@ Unlike standard image files, there are no Line Suffix Bytes so the
 LINE_SUFFIX_BYTES keyword is not found in the label. Each sample is an 8-bit
 unsigned integer (SAMPLE_BITS and SAMPLE_TYPE keywords).
 
-  * Back to the index.
+[Back to the index](#index)
 
 # 8\. Image Index File
 
@@ -744,7 +743,7 @@ describes the contents of the index file. The label file consists of keyword
 statements in the Object Description Language (ODL) developed by the PDS
 project (10).
 
-  * Back to the index.
+[Back to the index](#index)
 
 # References
 
@@ -794,7 +793,7 @@ information interchange", ISO/DIS document number 9660, International
 Organization for Standardization, 1 Rue de Varembe, Case Postale 56, CH-1121
 Geneva 20, Switzerland, (April 15, 1987)
 
-  * Back to the index.
+[Back to the index](#index)
 
 # Appendix A - ISO Volume and Directory Standard
 
@@ -826,7 +825,7 @@ standard, the extended attribute record is considered part of a file. The
 extended attribute record will be located in the first 2048 bytes of the file
 and should be bypassed by the I/O routines which access the data.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## A.1 Variable-Length Records
 
@@ -851,7 +850,7 @@ level I/O routines to access the file. For systems which do not support the
 level-1 ISO standard or do not support variable-length records, software will
 need to be developed for handling these files.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## A.2 Direct Access Files
 
@@ -872,7 +871,7 @@ can be made:
                  len = length of record in bytes
     
 
-  * Back to the index.
+[Back to the index](#index)
 
 # Appendix B - Syntactic Rules of Keyword Entries
 
@@ -897,7 +896,7 @@ The comment begins with a slash character followed by an asterisk character
 Values associated with a keyword represent integers, real numbers, unitized
 real numbers, literals, time, or character text strings.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## B.1 Integer Numbers
 
@@ -907,7 +906,7 @@ language convention: b#nnnnnnn#, where 'b' represents the base of the number,
 and '#' delimits the number 'nnnnnnnn'. As an example, the number expressed as
 2#111# represents the binary number 111 (7 in base 10).
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## B.2 Real Numbers
 
@@ -928,7 +927,7 @@ A unitized real number is a real number with a unit of measurement associated
 with the number. The units are enclosed in angle brackets (< >). As an
 example, 1.234  indicates the measurement 1.234 seconds.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## B.3 Time
 
@@ -957,7 +956,7 @@ where:
                       as universal time corrected.
     
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## B.4 Literal Values
 
@@ -979,7 +978,7 @@ might look like the example shown below:
 In this example the statement says the BLUE filter of the camera was used to
 acquire an image.
 
-  * Back to the index.
+[Back to the index](#index)
 
 ## B.5 Text Character Strings
 
@@ -988,7 +987,7 @@ ASCII characters, tabs, blanks, carriage-control, or line-feed characters
 enclosed in double-quote characters. The string continues until a double-quote
 character is encountered.
 
-  * Back to the index.
+[Back to the index](#index)
 
 # Appendix C - Keyword Assignments For Images
 
@@ -1399,7 +1398,7 @@ they do not contain Line Suffix Bytes.
 The keyword entries terminate with a line that contains only the word END.
 Bytes in the label area after the END line are ignored.
 
-  * Back to the index.
+[Back to the index](#index)
 
 # Appendix D - Supplemental Line Engineering Data
 
@@ -1458,7 +1457,7 @@ bit 7 as the most significant bit.
                           not artificially set to zeroed.
     
 
-  * Back to the index.
+[Back to the index](#index)
 
 # Appendix E - Engineering Table Object
 
@@ -1777,7 +1776,7 @@ bit 7 as the most significant bit.
                                       ETAP.
     
 
-  * Back to the index.
+[Back to the index](#index)
 
 # Appendix F - Image Index File Format
 
@@ -1834,4 +1833,4 @@ double-quote marks and commas which separate the fields.
          366-412    Directory location and name of Browse image file
     
 
-  * Back to the index.
+[Back to the index](#index)

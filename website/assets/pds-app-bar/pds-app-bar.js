@@ -37,6 +37,7 @@
       bar_second = document.createElement("div");
     app_bar.setAttribute("id", "pds-app-bar");
     app_bar.setAttribute("role", "navigation");
+    app_bar.setAttribute("aria-label", "PDS Navigation");
     bar_first.className = "pds-app-bar-section";
     bar_second.className = "pds-app-bar-section";
 

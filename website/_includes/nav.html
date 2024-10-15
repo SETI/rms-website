@@ -20,7 +20,7 @@
               class = "active"
             {% endif %}
             >
-            <a href = "{{ item.href }}"
+            <a href = "{{ site.baseurl }}{{ item.href }}"
             {% if item.open contains 'new_tab' %}target="_blank"{% endif %}
             >{{ item.title }}</a>
 

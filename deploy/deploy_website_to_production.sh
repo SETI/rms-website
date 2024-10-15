@@ -10,7 +10,7 @@ if [ x$confirm != "xY" ] && [ x$confirm != "x" ] && [ x$confirm != "xy" ]
 then
   exit 0
 fi
-cd ~/pds-website/website
+cd ~/rms-website/website
 echo "--- START DIFFS ---"
 diff -rq _site ${MASTER_DIR} | grep -v "Only in ${MASTER_DIR}" | grep -v "Common subdirectories"
 echo "--- END DIFFS ---"

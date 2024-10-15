@@ -2,16 +2,18 @@
 layout: base
 layout_style: default
 tabs: voyager
+title: Voyager Pointing Information
+asset_location: voyager/ck/
 redirect_from:
   - /voyager/ck.html
 ---
 
-## Voyager Pointing Information
+# {{ page.title }}
 
 SPICE C kernels contain the pointing and orientation history of spacecrafts.
 
-For more information about SPICE visit the home page of PDS's <a href="https://naif.jpl.nasa.gov/naif/" target="_blank">Navigation and
-Ancillary Information Facility</a> (NAIF).
+For more information about SPICE visit the home page of PDS's [Navigation and
+Ancillary Information Facility](//naif.jpl.nasa.gov/naif/){:target="_blank"} (NAIF).
 
 ## SEDR Files
 
@@ -23,14 +25,14 @@ tapes contained the direction in space that the instrument was pointed. Today,
 many of the SEDR tapes have been lost.
 
 The one major exception is Voyager's Imaging Science Subsystem
-([ISS](/voyager/iss/index.html)), for which the SEDR files were later converted to
+([ISS]({{ site.baseurl }}/voyager/iss/index.html)), for which the SEDR files were later converted to
 Vax binary format and are still widely available. However, the ISS SEDR files
 only describe the camera direction and orientation at the time when images
 were taken, leaving large intervals during each flyby when the pointing is
 unknown.
 
 The Ring-Moon Systems Node has recently obtained SEDR files for the Ultraviolet
-Spectrometer ([UVS](/voyager/uvs/index.html)), which have the advantage that they
+Spectrometer ([UVS]({{ site.baseurl }}/voyager/uvs/index.html)), which have the advantage that they
 provide nearly complete temporal coverage of each encounter. However, the
 accuracy is not as good as that of the ISS SEDR files.
 
@@ -42,9 +44,9 @@ would like any of these files.
 
 Unfortunately, because the Voyager mission pre-dates the PDS and the SPICE
 toolkit, reliable C kernels were never generated for the scan platform, which
-carried the four remote sensing instruments: [ISS](/voyager/iss/index.html),
-[IRIS](/voyager/iris/index.html), [PPS](/voyager/pps/index.html), and
-[UVS](/voyager/uvs/index.html). The Ring-Moon Systems Node has recently undertaken the project
+carried the four remote sensing instruments: [ISS]({{ site.baseurl }}/voyager/iss/index.html),
+[IRIS]({{ site.baseurl }}/voyager/iris/index.html), [PPS]({{ site.baseurl }}/voyager/pps/index.html), and
+[UVS]({{ site.baseurl }}/voyager/uvs/index.html). The Ring-Moon Systems Node has recently undertaken the project
 of generating reliable C kernels for all of the Voyager flybys.
 
 To date, we have generated C kernels for the Voyager 1 flyby of Saturn. Other
@@ -94,13 +96,16 @@ appropriate for users only interested in the Voyager images.
 
 Planet  |  Spacecraft  |  Kernel Version  |  Reference Instrument  |  C-smithed?  |  Type  |  Links
 ---|---|---|---|---|---|---
-Jupiter  |  Voyager 1  |  1  |  ISS  |  No  |  Type 1  | [Info](vg1_jup_version1_type1_iss_sedr.txt ) [Download](vg1_jup_version1_type1_iss_sedr.bc )
-Jupiter  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | <a href="vg2_jup_version1_type1_iss_sedr.txt" target="_blank">Info</a> [Download](vg2_jup_version1_type1_iss_sedr.bc)
-Saturn  |  Voyager 1  |  1  |  ISS  |  No  |  Type 1  | <a href="vg1_sat_version1_type1_iss_sedr.txt" target="_blank">Info</a> [Download](vg1_sat_version1_type1_iss_sedr.bc)
-Saturn  |  Voyager 1  |  2  |  UVS  |  No  |  **Type 3** | <a href="V1SAT_VERSION2_TYPE3_UVS_SEDR.txt" target="_blank">Info</a> [Download](V1SAT_VERSION2_TYPE3_UVS_SEDR.ck)
-Saturn  |  Voyager 1  |  3  |  ISS + UVS  |  No  |  **Type 3** | <a href="V1SAT_VERSION3_TYPE3_MERGED_SEDR.txt" target="_blank">Info</a> [Download](V1SAT_VERSION3_TYPE3_MERGED_SEDR.ck)
-Saturn  |  Voyager 1  |  4  |  ISS  |  **Yes** |  Type 1  | <a href="V1SAT_VERSION4_TYPE1_ISS_CSMITHED.txt" target="_blank">Info</a> [Download](V1SAT_VERSION4_TYPE1_ISS_CSMITHED.ck)
-Saturn  |  Voyager 1  |  5  |  ISS + UVS  |  **Yes** |  **Type 3** | <a href="V1SAT_VERSION5_TYPE3_MERGED_CSMITHED.txt" target="_blank">Info</a> [Download](V1SAT_VERSION5_TYPE3_MERGED_CSMITHED.ck)
-Saturn  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | <a href="vg2_sat_version1_type1_iss_sedr.txt" target="_blank">Info</a> [Download](vg2_sat_version1_type1_iss_sedr.bc)
-Uranus  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | <a href="vg2_ura_version1_type1_iss_sedr.txt" target="_blank">Info</a> [Download](vg2_ura_version1_type1_iss_sedr.bc)
-Neptune  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | <a href="vg2_nep_version1_type1_iss_sedr.txt" target="_blank">Info</a> [Download](vg2_nep_version1_type1_iss_sedr.bc)
+Jupiter  |  Voyager 1  |  1  |  ISS  |  No  |  Type 1  | [Info]({{ site.assets_url }}{{ page.asset_location }}vg1_jup_version1_type1_iss_sedr.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}vg1_jup_version1_type1_iss_sedr.bc)
+Jupiter  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | [Info]({{ site.assets_url }}{{ page.asset_location }}vg2_jup_version1_type1_iss_sedr.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}vg2_jup_version1_type1_iss_sedr.bc)
+Saturn   |  Voyager 1  |  1  |  ISS  |  No  |  Type 1  | [Info]({{ site.assets_url }}{{ page.asset_location }}vg1_sat_version1_type1_iss_sedr.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}vg1_sat_version1_type1_iss_sedr.bc)
+Saturn   |  Voyager 1  |  2  |  UVS  |  No  |  **Type 3** | [Info]({{ site.assets_url }}{{ page.asset_location }}V1SAT_VERSION2_TYPE3_UVS_SEDR.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}V1SAT_VERSION2_TYPE3_UVS_SEDR.ck)
+Saturn   |  Voyager 1  |  3  |  ISS + UVS  |  No  |  **Type 3** | [Info]({{ site.assets_url }}{{ page.asset_location }}V1SAT_VERSION3_TYPE3_MERGED_SEDR.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}V1SAT_VERSION3_TYPE3_MERGED_SEDR.ck)
+Saturn   |  Voyager 1  |  4  |  ISS  |  **Yes** |  Type 1  | [Info]({{ site.assets_url }}{{ page.asset_location }}V1SAT_VERSION4_TYPE1_ISS_CSMITHED.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}V1SAT_VERSION4_TYPE1_ISS_CSMITHED.ck)
+Saturn   |  Voyager 1  |  5  |  ISS + UVS  |  **Yes** |  **Type 3** | [Info]({{ site.assets_url }}V1SAT_VERSION5_TYPE3_MERGED_CSMITHED.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}V1SAT_VERSION5_TYPE3_MERGED_CSMITHED.ck)
+Saturn   |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | [Info]({{ site.assets_url }}{{ page.asset_location }}vg2_sat_version1_type1_iss_sedr.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}vg2_sat_version1_type1_iss_sedr.bc)
+Uranus   |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | [Info]({{ site.assets_url }}{{ page.asset_location }}vg2_ura_version1_type1_iss_sedr.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}vg2_ura_version1_type1_iss_sedr.bc)
+Neptune  |  Voyager 2  |  1  |  ISS  |  No  |  Type 1  | [Info]({{ site.assets_url }}{{ page.asset_location }}vg2_nep_version1_type1_iss_sedr.txt){:target="_blank"}, [Download]({{ site.assets_url }}{{ page.asset_location }}vg2_nep_version1_type1_iss_sedr.bc)
+
+
+&nbsp;
