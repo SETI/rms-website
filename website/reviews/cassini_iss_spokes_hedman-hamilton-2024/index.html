@@ -1,0 +1,232 @@
+<html>
+<head>
+<title>PDS4 Data Peer Review</title>
+   <style>
+        /* Styling for directory tree */
+        .directory-tree {
+            font-family: monospace;
+            white-space: pre;
+            line-height: 0.6;
+        }
+        .directory-tree ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 0;
+            margin-bottom: -10px;
+        }
+        .directory-tree li::before {
+            content: "|__ ";
+            margin-top:0px;
+        }
+        .directory-tree li {
+            position: relative;
+            margin-bottom: -10px;
+        }
+        .directory-tree li:last-child::before {
+            content: "|__ ";
+            #margin-bottom:-20px;
+        }
+        .directory-tree li > ul::before {
+            #content: "|";
+            position: absolute;
+            left: -10px;
+            #top: -5px;
+            bottom: 0px;
+            #border-left: 1px solid #000;
+            margin-bottom:10px;
+        }
+        /* Reducing the space between nested li elements */
+        .directory-tree li > ul > li >ul {
+        margin-top: -15px; /* Adjust this value as needed */
+        }
+        .description {
+            color: #555;
+            margin-left: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>Cassini ISS Derived Spoke Images Data Peer Review</h1>
+Mia Mace, Matt Tiscareno, and Mitch Gordon<br>
+November, 2024
+
+<h3>Background</h3>
+<p>
+This bundle contains maps of Saturn's B ring derived from images obtained with
+the Wide-Angle Camera of the Cassini Imaging Science Subsystem (ISS) that can
+be used to more easily quantify signals from spokes, by M.M. Hedman et al.
+<b>Reviewers should begin by reading the readme.txt file (top level of the bundles).</b>
+</p>
+
+<h3>Data Bundle</h3>
+
+<p>The directory structure of the PDS4 bundle is illustrated below:</p>
+    <div class="directory-tree">
+        <ul>
+            <li>cassini_iss_spokes_hedman-hamilton-2024/
+                <ul>
+                    <li>readme.txt <span class="description">High-level overview of data set</span></li>
+                    <li>bundle.lblx <span class="description">Label for bundle, describing members of the bundle and references etc</span></li>
+                    <li>browse_derived/ <span class="description">Directory containing browse products (images)</span>
+                        <ul>
+                            <li>collection_browse_derived.csv <span class="description">List of browse product LIDs, with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_browse_derived.lblx <span class="description">Label for the associated collection file</span></li>
+                            <li>*_rprj_browse.png <span class="description">Images showing the maps of ring brightness derived from each data product</span></li>
+                            <li>*_rprj_browse.lblx <span class="description">Labels for associated browse product</span></li>
+                        </ul>
+                    </li>
+                    <li>context/ <span class="description">Directory containing context information related to the archive; such as spacecraft, instruments, targets etc.</span>
+                        <ul>
+                            <li>collection_context.csv <span class="description">List of context product LIDs, with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_context.lblx <span class="description">Label for the associated collection file</span></li>
+                        </ul>
+                    </li>
+                    <li>data_derived/ <span class="description">Directory containing the derived maps</span>
+                        <ul>
+                            <li>collection_data_derived.csv <span class="description">List of derived data product LIDs, with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_data_derived.lblx <span class="description">Label for the associated collection file</span></li>
+                            <li>*_rprj.fits <span class="description">FITS files containing the brightness maps derived from each image</span></li>
+                            <li>*_rprj.suppl <span class="description">ASCII supplementary file providing information about c-kernels used to navigate each image</span></li>
+                            <li>*_rprj.lblx <span class="description">Labels for the associated data files</span></li>
+                        </ul>
+                    </li>
+                    <li>document/ <span class="description">Directory containing documentation</span>
+                        <ul>
+                            <li>collection_document.csv <span class="description">List of members of the document collection, with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_document.lblx <span class="description">Label for the associated collection file</span></li>
+                            <li>*.pdf/*.txt <span class="description">Documents</span></li>
+                            <li>*.lblx/*.xml <span class="description">Labels for the associated documents</span></li>
+                        </ul>
+                    </li>
+                    <li>spice kernels/ <span class="description">Directory containing information about SPICE kernels used in this study</span>
+                        <ul>
+                            <li>collection_spice_kernels.csv <span class="description">List of SPICE product LIDs, with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_spice_kernels.lblx <span class="description">Label for the associated collection file</span></li>
+                            <li>kernels.ker <span class="description">ASCII file specifying the kernels used</span></li>
+                            <li>kernels.lblx <span class="description">Label for the associated kernel file</span></li>
+                        </ul>
+                    </li>
+                    <li>xml_schema/ <span class="description">Directory identifying the XML schema products associated with this bundle</span>
+                        <ul>
+                            <li>collection_xml_schema.csv <span class="description">List of members of the XML schema collection, with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_xml_schema.lblx <span class="description">Label for the associated collection file</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<p>The complete peer review bundle (cassini_iss_spokes_hedman-hamilton-2024.tar.gz) and accompanying journal article are online <a href="/review-data/cassini_iss_spokes_hedman-hamilton-2024">here</a>. Also provided are the checksum manifest and validation report; these latter two files are primarily for reviewers concerned with PDS4-compliance (see instructions below).
+
+<h3>Instructions for Reviewers</h3>
+<p>
+Here are guidelines and some information to help you produce an effective review with a reasonable level of effort.
+</p>
+
+All reviewers must address two general areas:
+<ul>
+<li> Scientific merit of data (are these the proper data to be archived?),
+<li> Usability of the data (appropriate formats; completeness of data set, including ancillary data; comprehensive documentation).
+</ul>
+
+Furthermore, if you are one of the panel members with a direct affiliation with the PDS, please also address a third general area:
+<ul>
+<li> Compliance with PDS4 Standards.
+</ul>
+If you are <b>not</b> one of the panel members with a direct affiliation with the PDS, then you do <b>not</b> need to address compliance with PDS4 standards. Rather, you should focus on the data (including ancillary data) and documentation.
+<p>
+While it is not realistic for you to analyze every data file, please check enough to convince yourself of the quality and consistency of the data and of any errors that you encounter.
+</p>
+<p>
+Please also evaluate the documentation provided in individual table labels, and referenced journal articles. Much of the information contained in the referenced articles is not duplicated in the data sets.
+</p>
+<p>
+Questions for reviewers to address are:
+<ul>
+<li> Documentation:
+<ul>
+<li> Does the documentation explain the data and how they were produced?
+<li> Does the documentation explain how to use the data?
+<li> Is the documentation (including referenced journal articles) sufficient to ensure the data will be intelligible to a scientist 10, 20, or 50 years in the future?
+</ul>
+<li> Data:
+<ul>
+<li> Are you able to manipulate and plot the data, interpret columns into tables, and understand the context and relationships of the data products?
+<li> Are there any concerns about the creation/generation, calibration (if appropriate), or general usability of the data? 
+<li> Is the archive design suitable (is the directory tree structured in a reasonable way)?
+</ul>
+</ul>
+The review panel submits written reviews by email and then, if the RMS Node thinks it is necessary, participates in a teleconference (date TBD) to discuss the reviews, including strengths and weaknesses of the data set. Specific shortcomings and errors will be identified as "liens" &ndash; questions about or requests for change &ndash;  which will need to be corrected. The review panel is responsible for making a recommendation on whether:
+<ul>
+<li> The bundle/s passed peer review and can be archived, once a set of panel identified liens have been resolved.
+<li> The material did not pass peer review, and must undergo an incremental (delta) review in certain specified areas.
+<li> The material did not pass peer review, and must undergo another full peer review.
+<li> The material did not pass peer review, and does not merit a second peer review.
+</ul>
+
+<p>
+In addition to an overall recommendation, the RMS Node will compile a list of liens in the archive design or sample products/bundle. The liens must be resolved before the associated data set can be archived.
+</p>
+
+<p></p> 
+
+<h3>Known Issues</h3>
+
+The following warnings/errors appear in the bundle: <br/>
+<code>
+  &nbsp;&nbsp;9882 product(s)<br/>
+  &nbsp;&nbsp;408 error(s)<br/>
+  &nbsp;&nbsp;5 warning(s)<br/>
+
+  Product Validation Summary:<br/>
+    &nbsp;&nbsp;9656       product(s) passed <br/>
+    &nbsp;&nbsp;226        product(s) failed <br/>
+    &nbsp;&nbsp;0          product(s) skipped <br/>
+    &nbsp;&nbsp;9882       product(s) total <br/>
+
+  Referential Integrity Check Summary: <br/>
+    &nbsp;&nbsp;9887       check(s) passed <br/>
+    &nbsp;&nbsp;0          check(s) failed <br/>
+    &nbsp;&nbsp;0          check(s) skipped <br/>
+    &nbsp;&nbsp;9887       check(s) total <br/>
+
+  Message Types: <br/>
+    &nbsp;&nbsp;46           error.label.checksum_mismatch <br/>
+    &nbsp;&nbsp;362          error.label.schema <br/>
+    &nbsp;&nbsp;5            warning.file.not_referenced_in_label <br/>
+</code>
+
+<ul>
+<li> The 362 <code>error.label.schema</code> reported refer to 181 (=362/2) labels that contain a negative value for the <code>&lt;rings:minimum_inertial_ring_longitude&gt;</code>. The negative longitude value triggers a second error in each case:<br/>
+<code>Element 'rings:minimum_inertial_ring_longitude' must have no element [children], and the value must be valid.</code><br/>
+This affects approximately 4% of the data labels, and is because of the ring longitude range convention used by the data provider: [-180deg, 180deg] instead of the PDS4-compliant [0deg, 360deg]. During lien resolution, these negative longitude values will be corrected by having 360 added to them. 
+</li>
+<li>
+The 46 <code>error.label.checksum_mismatch</code> are as it sounds, a mismatch between the actual data file's checksum and that reported in the data label. These will be corrected during lien resolution.
+</li>
+
+<li>
+The 5 <code>warning.file.not_referenced_in_label</code> refer to documents that need to be referenced by the data labels, which will be corrected by including <code>Internal_References</code>/<code>External_References</code> in each of the <code>data_derived</code> labels, and <code>bundle.lblx</code>.
+</li>
+<li>
+The <code>readme.txt</code> states "List for the associated collection file" beside collection_browse_derived.lblx in the directory tree diagram. This should say "Label for the associated collection file."
+</li>
+</ul>
+
+<h3>Reviewers' Submitted Comments and Responses</h3>
+
+<!--The responses from the reviewers and data provider are documented in the <a href="./yet-to-be-written_liens_resolved.pdf" target="_blank">lien resolution document</a>.-->
+
+<h3>Review Outcome</h3>
+<!-- TBD-->
+
+<hr>
+<a href="/">Ring-Moon Systems Node Home</a>
+</body>
+</html>
