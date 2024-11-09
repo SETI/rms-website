@@ -1,26 +1,24 @@
 ---
 layout: base
 layout_style: default
-tabs: cassini_cirs
+tabs: cassini_cirs_reform
 title: "Finding the CIRS Data You Want"
 ---
 
-  * [About Re-formatted Data](reform_about.html)
-  * [Naming Conventions](reform_dir_names.html)
-  * [Finding Data](reform_finding.html)
-  * [Documentation](reform_doc.html)
-
-## Finding the Data You Want
+## {{ page.title }}
 
 ###  1\. Search Options
 
-  * **Use our search engine, [OPUS]({{ site.opus_url }}){:target="_blank"} to search for specific Cassini CIRS data products using a wide range of criteria.**
+  * **Use our search engine, [OPUS]({{ site.opus_url }}){:target="_blank"} to search for specific Cassini CIRS data 
+   using a wide range of criteria.**
 
-    * Search results include data files, tables of associated metadata, and footprint diagrams for each observation. User selected data files can be bundled as [tar.gz]({{ site.baseurl }}/help/targz.html) files for easy downloading.
+    * Search results include data files, tables of associated metadata, and footprint diagrams for each observation. 
+    User selected data files can be bundled as [tar.gz]({{ site.baseurl }}/help/targz.html) files for easy downloading.
 
-  * The [Access Re-formatted Data](access_reform.html) tab, provides a link to each volume and gives the time interval covered by the volume.
+  * The [Access Re-formatted Data](access_reform.html) page provides a link to each volume and gives the time interval 
+  covered by the volume.
 
-  * As you develop your personal search strategies, you may wish to refer to the [TUTORIAL.TXT](TUTORIAL.TXT){:target="_blank"} file which contains the definitive documentation on the contents and structure of the re-formatted CIRS data.
+  * As you develop your personal search strategies, you may wish to refer to the  [TUTORIAL.TXT]({{site.holdings_url}}documents/COCIRS_5xxx/Tutorial.txt){:target="_blank"} file which contains the definitive documentation on the contents and structure of the re-formatted CIRS data.
 
 ###  2\. Using Indices
 
@@ -29,20 +27,27 @@ volume. You can use the index files to refine a search within the volume.
 Index files have PDS labels, and those labels refer to .FMT files in the same
 directory that describe the column structure in each index.
 
-  * The master index file INDEX/INDEX.TAB contains the general information about every data file on the volume (one data file per line). One keyword reported in the INDEX.TAB files is OBSERVATION_ID which contains the unique CIMS request ID associated with a given file. For information about how to interpret the CIMS ID, see section [3\. Introduction to the Cassini Timeline](reform_about.html#cims) under the About Re-formtted Data tab.
+  * The master index file INDEX/INDEX.TAB contains the general information about every data file on the volume 
+  (one data file per line). One keyword reported in the INDEX.TAB files is OBSERVATION_ID which contains the unique 
+  CIMS request ID associated with a given file. For information about how to interpret the CIMS ID, see section
+  [3\. Introduction to the Cassini Timeline](reform_about.html#cims) under the About CIRS Re-formtted Data tab.
 
-  * Supplemental index files INDEX/RININDEX.TAB, INDEX/POIINDEX.TAB and INDEX/ISPMINDEX.TAB contain tables of these additional parameters. They can be used for identifying, for example, which observation captured a particular latitude, longitude and incidence angle on the surface of Enceladus.
+  * Supplemental index files INDEX/RININDEX.TAB, INDEX/POIINDEX.TAB and INDEX/ISPMINDEX.TAB contain tables of 
+  these additional parameters. They can be used for identifying, for example, which observation captured a particular 
+  latitude, longitude and incidence angle on the surface of Enceladus.
 
-  * More detailed searches can be conducted by reading the metadata files row by row, which will enable you to identify the specific detectors that captured a target under the desired circumstances.
+  * More detailed searches can be conducted by reading the metadata files row by row, which will enable you to identify 
+  the specific detectors that captured a target under the desired circumstances.
 
 ###  3\. Directory and File Names
 
-  * Another option is to use the VOLUME_ID, coupled with subdirectory and file names and browse the data directories. See the [Naming Conventions: Re-formtted Data](reform_dir_names.html) tab for insights into the naming structures for the re-formatted data set.
+  * Another option is to use the VOLUME_ID, coupled with subdirectory and file names and browse the data directories. 
+  See the [Naming Conventions: Re-formtted Data](reform_dir_names.html) tab for insights into the naming structures for the re-formatted data set.
 
 ### 4\. Where to go next
 
   * Use the tabs at the top of this page to obtain more information about the re-formatted data.
 
-  * Access [ the re-formatted data](access_reform.html)
+  * Access [the re-formatted data](access_reform.html)
 
   * Return to [About CIRS Data](about.html)
