@@ -1,31 +1,28 @@
 ---
 layout: base
 layout_style: default
-title: "CIRS Directory and File Naming"
+tabs: cassini_cirs_orig
+title: "CIRS Directory and File Naming Conventions"
 ---
 
-  * [About Original Format Data](orig_about.html)
-  * [Naming Conventions](orig_dir_names.html)
-  * [Finding Data](orig_finding.html)
-  * [Documentation](orig_doc.html)
+## {{ page.title }}
 
-  
-##  1\. Directory and File Naming
+###  1\. Directory and File Naming
 
 In this section, we give a brief overview of the rather complicated CIRS file
 structure.
 
-  * A summary of the various file types is given in the <a href="orig_DATAINFO.TXT" target="_blank">DATAINFO.TXT</a> file in the DATA directory of each volume.
+  * A summary of the various file types is given in the **DATAINFO.TXT** file in the DATA directory of each volume.
 
   * A comprehensive description of the file structure and various data 'fragments' is given in the Data Product and Label SIS, found in the DOCUMENTS directory on every volume:
 
-    * <a href="DATASIS.PDF" target="_blank">DOCUMENT/DATASIS.PDF</a> and <a href="DATASIS.txt" target="_blank">DOCUMENT/DATASIS.TEX</a>. 
+    * [DATASIS.PDF]({{ site.holdings_url }}documents/COCIRS_0xxx/Data-Product-SIS.pdf){:target="_blank"} and DOCUMENT/DATASIS.TEX. 
 
-##  2\. Directory Structure
+###  2\. Directory Structure
 
 * All of the data is in subdirectories of the DATA directory. Sub-directories typically are named for the type of fragment they contain (e.g., FRV contains FRV files, HSK contains HSK tables, etc.). See the next section for more details on fragments. 
 
-## 3\. File Structure Overview
+### 3\. File Structure Overview
 
 * The CIRS data set is conceptually one huge table, with time-ordered records ('rows'), containing many fields ('columns'). In practice, this large 'virtual' table is stored in multple files, known as fragments. The 'physical' table is fragmented both in the row and column sense. 
 
@@ -54,7 +51,7 @@ files are described in a single detached label file.
 
 **YYMMDDHH** is time at the start of the data period covered. CIRS data typically is divided into 4-hour blocks at the uncalibrated level and 24-hour blocks at the calibrated level. 
 
-## 4\. Where to go next
+### 4\. Where to go next
 
   * Use the tabs at the top of this page to obtain more information about the original format CIRS data.
 

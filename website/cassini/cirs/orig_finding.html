@@ -1,16 +1,11 @@
 ---
 layout: base
 layout_style: default
+tabs: cassini_cirs_orig
 title: "Finding the CIRS Data You Want"
 ---
 
-  * [About Original Format Data](orig_about.html)
-  * [Naming Conventions](orig_dir_names.html)
-  * [Finding Data](orig_finding.html)
-  * [Documentation](orig_doc.html)
-
-
-## Finding the Data You Want
+## {{ page.title }}
 
 ###  1\. Search Options
 
@@ -29,26 +24,23 @@ The volume ID takes the form **COCIRS_XXXX**, where
   * **COCIRS** is the PDS abbreviation for Cassini Orbiter, Composite Infrared Spectrometer.
   * **XXXX** is the beginning month for the data volume, in the form YYMM starting with 0010. The data volume IDs are not sequential, particularly for the pre-SOI phase.
 
-A brief overview of the various file types is given in a file
-[DATAINFO.TXT](orig_DATAINFO.TXT){:target="_blank"} in the DATA directory of each volume.
+A brief overview of the various file types is given in a file **DATAINFO.TXT** in the DATA directory of each volume.
 
 A comprehensive description of the file structure and various data 'fragments'
 is given in the Data Product and Label SIS, found in the DOCUMENTS directory
 on every volume:
 
-  * [DOCUMENT/DATASIS.PDF](DATASIS.PDF){:target="_blank"} and [DOCUMENT/DATASIS.TXT](DATASIS.txt){:target="_blank"}.
+  * [DATASIS.PDF]({{ site.holdings_url }}documents/COCIRS_0xxx/Data-Product-SIS.pdf){:target="_blank"} and DOCUMENT/DATASIS.TEX.
 
 ###  3\. Volume INDEX files
 
-Each volume has an [INDEX](/link/volumes/COCIRS_0xxx/COCIRS_0010/INDEX/){:target="_blank"} subdirectory
-containing several files including:
-
-  * [INDXINFO.TXT](COCIRS_0010_INDXINFO_TXT.txt){:target="_blank"}: summarizes the structure and contents of the files in the INDEX subdirectory.
+Each volume has an **COCIRS_0xxx/COCIRS_0xxx/INDEX/** subdirectory
+containing several files including **INDXINFO.TXT**, which summarizes the structure and contents of the files in the **INDEX** subdirectory.
 
 **Users are encouraged to read an INDXINFO.TXT before working with the files in the INDEX subdirectory.**
-  * [INDEX.TAB](COCIRS_0010_INDEX_TAB.txt){:target="_blank"}: an ASCII table file with one row for each data file on the volume. For Cassini CIRS, each index table contains only 8 columns and has limited utility for narrowing a search unless you know the time associated with the data for which you are searching. This example is from volume COCIRS_0010.
+  * INDEX.TAB: an ASCII table file with one row for each data file on the volume. For Cassini CIRS, each index table contains only 8 columns and has limited utility for narrowing a search unless you know the time associated with the data for which you are searching. This example is from volume COCIRS_0010.
 
-  * [INDEX.LBL](COCIRS_0010_INDEX_LBL.txt){:target="_blank"}: the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index.
+  * INDEX.LBL: the detached PDS label file for the INDEX.TAB file. This is a text file giving names and definitions of all the columns in the index.
 
   * C*_TOL.ASC and S*_TOL.ASC: Text tables listing all the spacecraft activities during the period (C23, S01 etc). C = (C)ruise sequence (prior to SOI); S = tour (S)equence. These may be used for determining the times of individual observations.
 
@@ -56,6 +48,6 @@ containing several files including:
 
   * Use the tabs at the top of this page to obtain more information about the original format CIRS data.
 
-  * Access [ the original format data](access_orig.html)
+  * Access [the original format data](access_orig.html)
 
   * Return to [About CIRS Data](about.html)
