@@ -1,0 +1,287 @@
+<html>
+<head>
+<title>PDS4 Data Peer Review</title>
+   <style>
+        /* Styling for directory tree */
+        .directory-tree {
+            font-family: monospace;
+            white-space: pre;
+            line-height: 0.6;
+        }
+        .directory-tree ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 0;
+            margin-bottom: -10px;
+        }
+        .directory-tree li::before {
+            content: "|__ ";
+            margin-top:0px;
+        }
+        .directory-tree li {
+            position: relative;
+            margin-bottom: -10px;
+        }
+        .directory-tree li:last-child::before {
+            content: "|__ ";
+            #margin-bottom:-20px;
+        }
+        .directory-tree li > ul::before {
+            #content: "|";
+            position: absolute;
+            left: -10px;
+            #top: -5px;
+            bottom: 0px;
+            #border-left: 1px solid #000;
+            margin-bottom:10px;
+        }
+        /* Reducing the space between nested li elements */
+        .directory-tree li > ul > li >ul {
+        margin-top: -15px; /* Adjust this value as needed */
+        }
+        .description {
+            color: #555;
+            margin-left: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>Raw Radio Science Data from the Voyager 2 Radio Occultation at Uranus, collected at Parkes Observatory</h1>
+Mia Mace, Matt Tiscareno, and Mitch Gordon<br>
+November, 2024
+
+<h3>Background</h3>
+<p>
+The bundle contains raw radio science data from the Voyager 2 radio occultation at Uranus,
+collected at Parkes Observatory (Australia). Data include sampled output from an X-band
+receiver connected to a right-circularly polarized antenna feed on the 64-m antenna.
+Also included are receiver tuning data, files containing reconstructed pointing of the
+spacecraft high-gain antenna, a trajectory reconstruction, and documentation.</br>
+
+<br>The data provider is Richard A. Simpson.</br>
+
+</p>
+
+<h3>Data Bundle</h3>
+
+<p><b>The complete peer review bundle (voyager2_rss_uranus_49xr_raw.tar.gz) is online <a href="/review-data/voyager2_rss_uranus_49xr_raw">here</a>. Also provided are the checksum manifest and validation report; these latter two files are primarily for reviewers concerned with PDS4-compliance (see instructions below).</b>
+
+<p><b>Reviewers should begin by reading the bundle_readme.txt file (top level of the bundle). The Software Interface Specification (SIS) is included in the document collection and provides detailed descriptions of the archive bundle.</b>
+
+
+<p>The directory structure of the PDS4 bundle is illustrated below:
+    <div class="directory-tree">
+        <ul>
+            <li>voyager2_rss_uranus_49xr_raw/
+                <ul>
+                    <li>bundle_readme.txt <span class="description">High-level overview of data set</span></li>
+                    <li>bundle_voyager2_rss_uranus_49xr_raw.xml<span class="description">Label for bundle, describing members of the bundle and references etc</span></li>
+                    <li>browse/<span class="description">Directory containing browse products (images)</span>
+                        <ul>
+                            <li>collection_browse.csv <span class="description">List of browse product LIDVIDs (logical identifier with version ID), with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_browse.xml <span class="description">Label for the associated collection file</span></li>
+                            <li>vg2u_49xr_*.jpg <span class="description">Quick-look plots of radio occultation data</span></li>
+                            <li>vg2u_49xr_*.xml <span class="description">Labels for associated browse products</span></li>
+                        </ul>
+                    </li>
+                    <li>calib_freq/<span class="description">Directory containing estimates of USO frequency for Vgr 1 &amp 2</span>
+                        <ul>
+                            <li>collection_calib_freq.csv<span class="description">List of calibration frequency LIDVIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_calib_freq.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>vgr_uso.txt<span class="description">Text file containing the USO frequency estimates for Vgr 1, 2</span></li>
+                            <li>vgr_uso.xml<span class="description">Label for Vgr 1,2 USO frequency estimates</span></li>
+                        </ul>
+                   </li>
+                   <li>context/<span class="description">Directory containing context information related to the archive; such as spacecraft, instruments, targets etc.</span>
+                        <ul>
+                            <li>collection_context.csv<span class="description">List of context product LIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_context.xml<span class="description">Label for the associated collection file</span></li>
+                        </ul>
+                    </li>
+                    <li>data_podr/<span class="description">Directory containing raw radio ocultation data acquired at Parkes during Vgr 2 Uranus encounter</span>
+                        <ul>
+                            <li>collection_data_podr.csv<span class="description">List of data product LIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_data_podr.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>ul*.dat<span class="description">Original binary raw data files with sampled output from X-band receiver</span></li>
+                            <li>vg2u_49xr_*.hdr<span class="description">ASCII translations of the binary headers</span></li>
+                            <li>vg2u_49xr_*.tab<span class="description">Parkes Original Data Records (PODR) X-band ASCII raw data samples</span></li>
+                            <li>vg2u_49xr_*.txt<span class="description">Small ASCII files containing field headers (titles) for the header file</span></li>
+                            <li>vg2u_49xr_*.xml<span class="description">Labels for the associated data files</span></li>
+                        </ul>
+                    </li>
+                   <li>document/<span class="description">Directory containing documentation</span>
+                        <ul>
+                            <li>collection_document.csv<span class="description">List of members of the document collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_document.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>*.docx/*.pdf/*.txt <span class="description">Documents</span></li>
+                            <li>*.xml <span class="description">Labels for the associated documents</span></li>
+                        </ul>
+                    </li>
+                    <li>geometry/<span class="description">Directory containing the non-SPICE trajectory and high-gain antenna pointing reconstructions for this bundle</span>
+                        <ul>
+                            <li>collection_geometry.csv <span class="description">List of members of the geometry collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_geometry.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>u*.dat<span class="description">Trajectory and pointing files</span></li>
+                            <li>u*.xml<span class="description">Labels for the associated geometry file</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<h3>Instructions for Reviewers</h3>
+<p>
+Here are guidelines and some information to help you produce an effective review with a reasonable level of effort.
+</p>
+
+All reviewers must address two general areas:
+<ul>
+<li> Scientific merit of data (are these the proper data to be archived?),
+<li> Usability of the data (appropriate formats; completeness of data set, including ancillary data; comprehensive documentation).
+</ul>
+
+Furthermore, if you are one of the panel members with a direct affiliation with the PDS, please also address a third general area:
+<ul>
+<li> Compliance with PDS4 Standards.
+</ul>
+If you are <b>not</b> one of the panel members with a direct affiliation with the PDS, then you do <b>not</b> need to address compliance with PDS4 standards. Rather, you should focus on the data (including ancillary data) and documentation.
+<p>
+While it is not realistic for you to analyze every data file, please check enough to convince yourself of the quality and consistency of the data and of any errors that you encounter.
+</p>
+<p>
+Please also evaluate the documentation provided in individual table labels, and referenced journal articles. Much of the information contained in the referenced articles is not duplicated in the data sets.
+</p>
+<p>
+Questions for reviewers to address are:
+<ul>
+<li> Documentation:
+<ul>
+<li> Does the documentation explain the data and how they were produced?
+<li> Does the documentation explain how to use the data?
+<li> Is the documentation (including referenced journal articles) sufficient to ensure the data will be intelligible to a scientist 10, 20, or 50 years in the future?
+</ul>
+<li> Data:
+<ul>
+<li> Are you able to manipulate and plot the data, interpret columns into tables, and understand the context and relationships of the data products?
+<li> Are there any concerns about the creation/generation, calibration (if appropriate), or general usability of the data? 
+<li> Is the archive design suitable (is the directory tree structured in a reasonable way)?
+</ul>
+</ul>
+The review panel submits written reviews by email and then, if the RMS Node thinks it is necessary, participates in a teleconference (date TBD) to discuss the reviews, including strengths and weaknesses of the data set. Specific shortcomings and errors will be identified as "liens" &ndash; questions about or requests for change &ndash;  which will need to be corrected. The review panel is responsible for making a recommendation on whether:
+<ul>
+<li> The bundle/s passed peer review and can be archived, once a set of panel identified liens have been resolved.
+<li> The material did not pass peer review, and must undergo an incremental (delta) review in certain specified areas.
+<li> The material did not pass peer review, and must undergo another full peer review.
+<li> The material did not pass peer review, and does not merit a second peer review.
+</ul>
+
+<p>
+In addition to an overall recommendation, the RMS Node will compile a list of liens in the archive design or sample products/bundle. The liens must be resolved before the associated data set can be archived.
+</p>
+
+<p></p> 
+
+<h3>Known Issues</h3>
+
+RMS have run Validate v3.6.1 on the bundle; the following warnings/errors appear: <br/>
+<code>
+&nbsp;&nbsp;  128 product(s) <br/>
+&nbsp;&nbsp;  62 error(s) <br/>
+&nbsp;&nbsp;  64640 warning(s) <br/>
+
+  Product Validation Summary: <br/>
+&nbsp;&nbsp;    66         product(s) passed <br/>
+&nbsp;&nbsp;    62         product(s) failed <br/>
+&nbsp;&nbsp;    0          product(s) skipped <br/>
+&nbsp;&nbsp;    128        product(s) total <br/>
+
+  Referential Integrity Check Summary: <br/>
+&nbsp;&nbsp;    128        check(s) passed <br/>
+&nbsp;&nbsp;    0          check(s) failed <br/>
+&nbsp;&nbsp;    0          check(s) skipped <br/>
+&nbsp;&nbsp;    128        check(s) total <br/>
+
+  Message Types: <br/>
+&nbsp;&nbsp;    62           error.label.context_ref_not_found  <br/>
+&nbsp;&nbsp;    10           warning.integrity.member_not_found <br/>
+&nbsp;&nbsp;    9            warning.integrity.unreferenced_member <br/>
+&nbsp;&nbsp;    145          warning.label.context_ref_mismatch <br/>
+&nbsp;&nbsp;    64476        warning.table.field_value_format_specifier_mismatch <br/>
+</code>
+
+<ul>
+<li><b>64476 <code>warning.table.field_value_format_specifier_mismatch</code></b></br> 
+This affects two files: <code>geometry/uh0003a.xml, geometry/uk0015a.xml</code>.</br>
+Seems to be because many fields in the table described by <code>Table_Character</code> have an incorrect specifier, for instance <code>&lt;field_format&gt;%18.6d&lt;/field_format&gt;</code> instead of <code>&lt;field_format&gt;%18.6f&lt;/field_format&gt;</code> for a floating point number such as "1138128900.000000". Refer to section 4B.1.2 Field Formats in the <a href="https://pds.nasa.gov/datastandards/documents/sr/v1/StdRef_1.22.0.pdf">PDS4 Standards Reference</a> for details of specifiers.
+</li>
+<li><b>145 <code>warning.label.context_ref_mismatch</b></br>
+&nbsp;Value: ‘Voyager Mission’ Expected one of: ‘[VOYAGER]’</br>
+&nbsp;Value: ‘NASA Deep Space Network’ Expected one of: ‘[Deep Space Network]’</br>
+&nbsp;Value: ‘DSN Radio Science Instrumentation’ Expected one of: ‘[NASA Deep Space Network Radio Science]’</br>
+&nbsp;Value: ‘DSN Instrumentation’ Expected one of: ‘[NASA Deep Space Network Radio Science]’</br>
+&nbsp;Value: ‘Voyager 2 Radio Science Instrumentation’ Expected one of: ‘[RADIO SCIENCE SUBSYSTEM]’</br>
+&nbsp;Value: ‘Voyager 2 Spacecraft Sensors’ Expected one of: ‘[Voyager 2 Engineering]’</br>
+</code>
+
+These are due to discrepancies between what the <code>&lt;name&gt;</code> attribute in the <code>&lt;Investigation_Area&gt;/&lt;Observing_System_Component&gt;</code>s of the labels and what the corresponding context products have for their <code>&lt;Instrument&gt;/&lt;name&gt; , &lt;Facility&gt;/&lt;name&gt;</code> or <code>&lt;Instrument_Host&gt;/&lt;name&gt;</code>. <a href="https://github.com/NASA-PDS/validate/issues/1013#issuecomment-2400754427">PDS Engineering Node have said</a> that they only match the <code>&lt;Instrument_Host&gt;/&lt;name&gt;</code> value in order to encourage the highest level of consistency across the archive (this applies to Instruments and Facilities etc too). For example, the NASA Deep Space Network context product with LID <code>urn:nasa:pds:context:facility:observatory.dsn</code> states <code>&lt;Facility&gt;/&lt;name&gt;= "Deep Space Network"</code> (not "NASA Deep Space Network", which is the <code>&lt;Identification_Area&gt;/&lt;title&gt;</code>).
+</li>
+<li><b>9 <code>warning.integrity.unreferenced_member</code></b></br>
+&nbsp;The following product flags a warning due to an incorrect <code>&lt;Bundle_Member_Entry&gt;</code> in the bundle label, erroneously stating "urn:nasa:pds:voyager2_rss_uranus_49xr_raw:data" (no suffix "_podr"):</br>
+&nbsp;       <code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:data_podr::1.0</code></br>
+The following warnings appear to be due to errors in the collection_document.csv , which references "urn:nasa:pds:voyager2_rss_uranus_raw:document" instead of  "urn:nasa:pds:voyager2_rss_uranus_<b>49xr_</b>raw:document"; and the crs_notes LID has "_1" suffix;</br> 
+
+&nbsp;	<code>urn:nasa:pds:voyager2_rss_uranus_raw:document:mission::1.0</code></br>
+&nbsp;	<code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:document:hga_doc::1.0</code></br>
+&nbsp;	<code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:document:ops_plan::1.0</code></br>
+&nbsp;	<code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:document:crs_notes_1.0::1.0</code></br>
+
+The following warnings appear due to the <code>&lt;logical_identifier&gt;</code>s for the products in the collection_geometry erroneously stating "voyager1_…." instead of "voyager2_…":</br>
+&nbsp;	<code>urn:nasa:pds:voyager1_rss_uranus_49xr_raw:geometry:uh0003b::1.0</code></br>
+&nbsp;	<code>urn:nasa:pds:voyager1_rss_uranus_49xr_raw:geometry:uh0003a::1.0</code></br>
+&nbsp;	<code>urn:nasa:pds:voyager1_rss_uranus_49xr_raw:geometry:uk0015b::1.0</code></br>
+&nbsp;	<code>urn:nasa:pds:voyager1_rss_uranus_49xr_raw:geometry:uk0015a::1.0</code></br>
+</li>
+<li><b>10 warning.integrity.member_not_found</b></br>
+Likewise, the following warning appears to be due to an incorrect <code>&lt;Bundle_Member_Entry&gt;</code> missing suffix "_podr" for the data_podr collection:</br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:data</code></br>
+And the following warnings appear to be due to errors in the collection_document.csv – it should reference "urn:nasa:pds:voyager2_rss_uranus_49xr_raw" and the crs_notes file has a  "_1" suffix: </br>
+
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_raw:document:mission::1.0</code></br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_raw:document:ops_plan::1.0</code></br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_raw:document:sis_vgr_rs::1.0</code></br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_raw:document:hga_doc::1.0</code></br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_raw:document:crs_notes::1.0</code> </br>	
+
+And the following warnings appear to be due to the <code>&lt;logical_identifier&gt;</code>s for the products in the geometry collection erroneously stating "voyager1_…." instead of "voyager2_…":</br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:geometry:uk0015a::1.0</code></br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:geometry:uk0015b::1.0</code></br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:geometry:uh0003a::1.0</code></br>
+&nbsp;  <code>urn:nasa:pds:voyager2_rss_uranus_49xr_raw:geometry:uh0003b::1.0</code></br>
+<b>NOTE:</b> The SIS files (docx, pdf, xml) were initially missing from the document collection. RMS requested the files and transferred them for the data provider, and verified checksums.	
+
+</li>
+<li><b>62 error.label.context_ref_not_found</b></br>
+All of these errors refer to  <code>"Context product not found: urn:nasa:pds:context:telescope:parkes.dss49_64m".</code> However, that context product *does* <a href="https://pds.nasa.gov/data/pds4/context-pds4/telescope/parkes.dss49_64m_1.0.xml">exist</a>. PDS Engineering Node are in the process of fixing the bug: https://github.com/NASA-PDS/validate/issues/1066. This should now be fixed in the updated version of Validate.
+</li>
+</ul>
+
+These known issues will be resolved during lien resolution, along with any other issues raised by the reviewers and deemed reasonable/necessary. 
+
+
+<h3>Reviewers' Submitted Comments and Responses</h3>
+
+<!--The responses from the reviewers and data provider are documented in the <a href="./yet-to-be-written_liens_resolved.pdf" target="_blank">lien resolution document</a>.-->
+
+<h3>Review Outcome</h3>
+<!-- TBD-->
+
+<hr>
+<a href="/">Ring-Moon Systems Node Home</a>
+</body>
+</html>
