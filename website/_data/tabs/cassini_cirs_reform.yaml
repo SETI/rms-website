@@ -1,0 +1,19 @@
+- parent_tabs_yaml: cassini
+  parent_label: Cassini
+  parent_tab: Instruments and Data
+  this_page_label: CIRS
+
+- title: CIRS Intro
+  href: /cassini/cirs/index.html
+
+- title: About CIRS Re-formatted Data
+  href: /cassini/cirs/reform_about.html
+
+- title: Naming Conventions
+  href: /cassini/cirs/reform_dir_names.html
+
+- title: Find Re-formatted Data
+  href: /cassini/cirs/reform_finding.html
+
+- title: Documentation
+  href: /cassini/cirs/reform_doc.html
