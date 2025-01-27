@@ -17,25 +17,20 @@ tabs: cassini_cirs
 
 The bundled volumes are provided in [tar.gz]({{ site.baseurl }}/help/targz.html) format.
 
-Be aware that even with a 4:1 compression ratio, the Bundled versions can be
-on the order of 4GB and may take a few hours to download. Users are encouraged
-to download during the late night/early morning hours California time.
+  * **Footprint Link** will take you to a directory containing footprint diagrams of each CIRS observation in the volume.
 
-  * **Footprint** will take you to a directory containing footprint diagrams of each CIRS observation in the volume.
+The footprint diagrams contain a wealth of information. The key for these diagrams is given in [CIRS-Diagram-Interpretation-Guide.txt]({{ site.holdings_url }}documents/COCIRS_5xxx/CIRS-Diagram-Interpretation-Guide.txt){:target="_blank"}.
 
-The footprint diagrams contain a wealth of information. The key for these diagrams is given in <a href="COCIRS_previews.txt" target="_blank">COCIRS_previews.txt</a>.
+## Available volumes
 
-## Available Volumes
-
-  * The dates at the beginning of each section in the table below correspond to **the scheduled delivery to PDS.**
-
-  * To determine which volumes meet the publicly available criteria for a specific ROSES Announcement please see the appropriate DAP page under our [Proposal Support]({{ site.baseurl }}/roses) pages.
+All reformatted volumes are based on version 2 of the original format data.
 
   * **All reformtted volumes are based on version 2 of the original format data.**
-
 Data from Saturn Approach to End of Mission
 
 {% assign table_name = "Cassini CIRS Reformated Releases" %}
 {% assign table_desc = "A listing of Cassini CIRS Reformated Releases" %}
 {% assign table_data = site.data.tables['cassini_cirs_access_reform'] %}
 {% include data_table.html %}
+
+Due to data file format changes beginning with the July 2011 data delivery, reformatted versions are not yet available.
