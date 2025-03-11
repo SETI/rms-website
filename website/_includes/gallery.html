@@ -1,0 +1,52 @@
+{% if page.page_menu != nil %}
+<div class="gallery page_menu">
+  <ul>
+    <li>
+        {% if page.page_menu.first_link != nil %}
+        <a href="{{page.page_menu.first_link}}">&lt;&lt; oldest </a>
+        {% else %}
+            &lt;&lt; oldest
+        {% endif %}
+    </li>
+    <li>
+        {% if page.page_menu.previous_link != nil %}
+            <a href="{{page.page_menu.previous_link}}">&lt; previous </a>
+        {% else %}
+            &lt; previous
+        {% endif %}
+    </li>
+    <li>
+        {% if page.page_menu.next_link != nil %}
+            <a href="{{page.page_menu.next_link}}">next &gt;</a>
+        {% else %}
+            next &gt;
+        {% endif %}
+    </li>
+    <li>
+        {% if page.page_menu.last_link != nil %}
+            <a href="{{page.page_menu.last_link}}">latest &gt;&gt;</a>
+        {% else %}
+            latest &gt;&gt;
+        {% endif %}
+    </li>
+  </ul>
+</div>
+{% endif %}
+
+{% if page.jump != nil %}
+<div class="gallery jumpto">
+    <b>Jump to</b>:
+    <ul>
+        {% for link in page.jump_to %}
+            {% if link.url == null %}
+                <li><b>{{link.title}}</b></li>
+            {% else %}
+                <li><a href="{{link.url}}">{{link.title}}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% assign image_table = page.image_table %}
+{% include image-gallery.html %}

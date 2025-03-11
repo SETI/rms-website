@@ -1,23 +1,36 @@
 <style>
-    .image-gallery {overflow: auto; padding-inline-start: 0; margin-left: -5%!important;}
-    .image-gallery li {float: left; display: block; margin: 0 0 1% 5%;}
-    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
-    .image-gallery li a span {display: inline-grid; text-overflow: ellipsis; overflow: hidden; padding: 3px 0; width:100px; text-align: center}
-    .image-gallery li a img {display: block;}
+    .image-gallery {overflow: hidden; padding-inline-start: 0;text-wrap:nowrap;}
+    .image-gallery gallery-object {text-align: center; margin: 1%; width: 12.5em; min-height: 150px;}
+    .image-gallery gallery-object a {text-decoration: none!important; color: #777;}
+    .image-gallery gallery-object a figcaption {font-size: 10pt; overflow: hidden; padding: 3px 0; text-align: center; text-wrap: auto}
+    .image-gallery gallery-object a img {margin-left: auto; margin-right: auto; padding-top: .75em; text-wrap: wrap; font-size: 75%;}
+
+    gallery {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
 </style>
 
-<ul class="image-gallery">
+<gallery class="image-gallery">
     {% for image in image_table %}
-         <li>           
+         <gallery-object>
+            <figure class="thumbnail">          
             {% if image.href != nil %}
                 <a href="{{ image.href }}">
                 <img src="{{ site.assets_url }}{{ image.src }}" alt="{{ image.alt }}" />
-                <span>{{ image.title }}</span></a>
+                <figcaption>{{ image.title }}</figcaption></a>
             {% else %} 
                 <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank"> 
                 <img src="{{ site.assets_url }}holdings/previews/{{ image.src }}" alt="{{ image.alt }}" />
-                <span>{{ image.filename }}</span></a>
-             {% endif %}         
-        </li>
+                <figcaption>{{ image.filename }}</figcaption></a>
+             {% endif %}  
+            </figure>        
+        </gallery-object>
     {% endfor %}
-</ul>
+    </gallery>

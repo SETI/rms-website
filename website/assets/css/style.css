@@ -269,8 +269,6 @@ img.diagram {
     float: none !important;
 }
 
-img.
-
 /* homepage boxes */
 .homebox {
   font:1.0em 'Inclusive Sans', sans-serif;
@@ -694,6 +692,40 @@ td.colgroup-seperator {
      margin-top:0;
 }
 
+/* galleries specific */
+.gallery {
+    max-width: 60em;
+}
+
+.gallery.page_menu {
+    text-align: center;
+}
+
+.gallery.jumpto ul {
+    padding-left: 0;
+}
+
+.gallery li {
+    list-style: none;
+    display: inline;
+    padding: .5em .1em;
+}
+
+.gallery ul li:after {
+    content: ' | ';
+}
+    
+.gallery li:last-child:after {
+    content: none;
+}
+
+.galleries .image-gallery gallery-object {
+    outline: thin solid;
+}
+
+.galleries .image-gallery .thumbnail {
+    border: none;
+}
 
 /* footer */
 .navbar-nav.nav-justified > li{
