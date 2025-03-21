@@ -54,7 +54,7 @@ __Note:__ Before doing step 3 putting that rsync on repeat, make sure you've don
 To run a simple DEBUG envinroment on windows:
 You will need 2 shell windows:
 1) cd website
-   jekyll build --watch
+   jekyll build --watch --baseurl //127.0.0.1:4000
 
 2) cd website\_site
    python -m http.server 4000   <or whatever socket you prefer>

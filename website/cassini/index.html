@@ -1,53 +1,56 @@
 ---
 layout: base
 layout_style: default
+assets_location: cassini
 tabs: cassini
+title: Cassini Data at the PDS Ring-Moon Systems Node
 ---
-# Cassini Data at the PDS Ring-Moon Systems Node
+{% assign assets_url = site.assets_url | append: page.assets_location | append: "/" %}
 
-[ ![\[Grand Finale Orbits Diagram\]](ringpic-s.jpg)](ringpic.jpg)
+# {{ page.title }}
 
+[ ![\[Grand Finale Orbits Diagram\]]({{ assets_url }}ringpic-s.jpg)]({{ assets_url }}ringpic.jpg)
 
 ## Science Overview
 
 Cassini was a NASA spacecraft that orbited Saturn from 2004 to 2017.  The science
 output of the mission is summarized in Volume 1 of the Cassini Mission’s final
-report to NASA. [Click here](report/Cassini Final Report - Volume 1.pdf){:target="_blank"} if you
+report to NASA. [Click here]({{ assets_url }}report/Cassini Final Report - Volume 1.pdf){:target="_blank"} if you
 want the entire 1759 pages; 192 MB.
 
 Section 3 of the report, covering **Science Mission Results**, is organized as a
 series of stand-alone documents:
 
   * Discipline Science Results
-    * **[Huygens Probe](report/Cassini Final Report - Volume 1 - Huygens.pdf){:target="_blank"}**
-    * **[Icy Satellites](report/Cassini Final Report - Volume 1 - Icy Satellites.pdf){:target="_blank"}**
-    * **[Magnetospheres and Plasma Science (MAPS)](report/Cassini Final Report - Volume 1 - MAPS.pdf){:target="_blank"}**
-    * **[Rings](report/Cassini Final Report - Volume 1 - Rings.pdf){:target="_blank"}**
-    * **[Saturn](report/Cassini Final Report - Volume 1 - Saturn.pdf){:target="_blank"}**
-    * **[Titan](report/Cassini Final Report - Volume 1 - Titan.pdf){:target="_blank"}**
+    * **[Huygens Probe]({{ assets_url }}report/Cassini Final Report - Volume 1 - Huygens.pdf){:target="_blank"}**
+    * **[Icy Satellites]({{ assets_url }}report/Cassini Final Report - Volume 1 - Icy Satellites.pdf){:target="_blank"}**
+    * **[Magnetospheres and Plasma Science (MAPS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - MAPS.pdf){:target="_blank"}**
+    * **[Rings]({{ assets_url }}report/Cassini Final Report - Volume 1 - Rings.pdf){:target="_blank"}**
+    * **[Saturn]({{ assets_url }}report/Cassini Final Report - Volume 1 - Saturn.pdf){:target="_blank"}**
+    * **[Titan]({{ assets_url }}report/Cassini Final Report - Volume 1 - Titan.pdf){:target="_blank"}**
 
   * Instrument Science Results - Optical Remote Sensing
-      * **[Composite Infrared Spectrometer (CIRS)](report/Cassini Final Report - Volume 1 - CIRS.pdf){:target="_blank"}**
-      * **[Imaging Science Subsystem (ISS)](report/Cassini Final Report - Volume 1 - ISS.pdf){:target="_blank"}**
-      * **[Ultraviolet Imaging Spectrograph (UVIS)](report/Cassini Final Report - Volume 1 - UVIS.pdf){:target="_blank"}**
-      * **[Visual and Infrared Mapping Spectrometer (VIMS)](report/Cassini Final Report - Volume 1 - VIMS.pdf){:target="_blank"}**
+      * **[Composite Infrared Spectrometer (CIRS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - CIRS.pdf){:target="_blank"}**
+      * **[Imaging Science Subsystem (ISS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - ISS.pdf){:target="_blank"}**
+      * **[Ultraviolet Imaging Spectrograph (UVIS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - UVIS.pdf){:target="_blank"}**
+      * **[Visual and Infrared Mapping Spectrometer (VIMS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - VIMS.pdf){:target="_blank"}**
 
   * Instrument Science Results - Fields, Particles, and Waves Sensing
-      * **[Cassini Plasma Spectrometer (CAPS)](report/Cassini Final Report - Volume 1 - CAPS.pdf){:target="_blank"}**
-      * **[Cosmic Dust Analyzer (CDA)](report/Cassini Final Report - Volume 1 - CDA.pdf){:target="_blank"}**
-      * **[Ion and Neutral Mass Spectrometer (INMS)](report/Cassini Final Report - Volume 1 - INMS.pdf){:target="_blank"}**
-      * **[Magnetometer (MAG)](report/Cassini Final Report - Volume 1 - MAG.pdf){:target="_blank"}**
-      * **[Magnetospheric Imaging Instrument (MIMI)](report/Cassini Final Report - Volume 1 - MIMI.pdf){:target="_blank"}**
-      * **[Radio and Plasma Wave Science (RPWS)](report/Cassini Final Report - Volume 1 - RPWS.pdf){:target="_blank"}**
+      * **[Cassini Plasma Spectrometer (CAPS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - CAPS.pdf){:target="_blank"}**
+      * **[Cosmic Dust Analyzer (CDA)]({{ assets_url }}report/Cassini Final Report - Volume 1 - CDA.pdf){:target="_blank"}**
+      * **[Ion and Neutral Mass Spectrometer (INMS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - INMS.pdf){:target="_blank"}**
+      * **[Magnetometer (MAG)]({{ assets_url }}report/Cassini Final Report - Volume 1 - MAG.pdf){:target="_blank"}**
+      * **[Magnetospheric Imaging Instrument (MIMI)]({{ assets_url }}report/Cassini Final Report - Volume 1 - MIMI.pdf){:target="_blank"}**
+      * **[Radio and Plasma Wave Science (RPWS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - RPWS.pdf){:target="_blank"}**
 
   * Instrument Science Results - Microwave Remote Sensing
-      * **[Titan Radar Mapper (RADAR)](report/Cassini Final Report - Volume 1 - RADAR.pdf){:target="_blank"}**
-      * **[Radio Science Subsystem (RSS)](report/Cassini Final Report - Volume 1 - RSS.pdf){:target="_blank"}**
+      * **[Titan Radar Mapper (RADAR)]({{ assets_url }}report/Cassini Final Report - Volume 1 - RADAR.pdf){:target="_blank"}**
+      * **[Radio Science Subsystem (RSS)]({{ assets_url }}report/Cassini Final Report - Volume 1 - RSS.pdf){:target="_blank"}**
 
   * Attachments
-      * **[Glossary of Acronyms](report/Cassini Final Report - Attachment A - Glossary of Acronyms.pdf){:target="_blank"}**
-      * **[References & Bibliographies](report/Cassini Final Report - Attachment B - References and Bibliographies.pdf){:target="_blank"}**
-      * **[Cassini Science Bibliographies](report/Cassini Final Report - Attachment C - Cassini Science Bibliographies.pdf){:target="_blank"}**
+      * **[Glossary of Acronyms]({{ assets_url }}report/Cassini Final Report - Attachment A - Glossary of Acronyms.pdf){:target="_blank"}**
+      * **[References & Bibliographies]({{ assets_url }}report/Cassini Final Report - Attachment B - References and Bibliographies.pdf){:target="_blank"}**
+      * **[Cassini Science Bibliographies]({{ assets_url }}report/Cassini Final Report - Attachment C - Cassini Science Bibliographies.pdf){:target="_blank"}**
 
 
 ## Archive Overview
@@ -93,29 +96,29 @@ planet and satellite searches as well as enhanced ring geometry.
     * Search results include data files, tables of associated metadata, and browse products.
       Selected data files can be bundled as [tar.gz]({{ site.baseurl }}/help/targz.html) files for easy downloading.
 
-  * Use **[Viewmaster](/viewmaster/volumes/)**
+  * Use **[Viewmaster]({{ site.viewmaster_url }}volumes/)**
 to explore the PDS3 delivery volumes directly. Products are generally in chronological order.
 
-    * CIRS: [2000-2009](/viewmaster/volumes/COCIRS_0xxx){:target="_blank"} and
-      [2010-2017](/viewmaster/volumes/COCIRS_1xxx){:target="_blank"}.
+    * CIRS: [2000-2009]({{ site.viewmaster_url }}volumes/COCIRS_0xxx){:target="_blank"} and
+      [2010-2017]({{ site.viewmaster_url }}volumes/COCIRS_1xxx){:target="_blank"}.
 
-    * ISS: [calibration data](/viewmaster/volumes/COISS_0xxx){:target="_blank"},
-      [cruise and Jupiter images](/viewmaster/volumes/COISS_1xxx){:target="_blank"}, and
-      [Saturn images](/viewmaster/volumes/COISS_2xxx){:target="_blank"}.
+    * ISS: [calibration data]({{ site.viewmaster_url }}volumes/COISS_0xxx){:target="_blank"},
+      [cruise and Jupiter images]({{ site.viewmaster_url }}volumes/COISS_1xxx){:target="_blank"}, and
+      [Saturn images]({{ site.viewmaster_url }}volumes/COISS_2xxx){:target="_blank"}.
 
-    * UVIS: [raw data](/viewmaster/volumes/COUVIS_0xxx){:target="_blank"} and
-      [derived ring occultation profiles](/viewmaster/volumes/COUVIS_8xxx){:target="_blank"}.
+    * UVIS: [raw data]({{ site.viewmaster_url }}volumes/COUVIS_0xxx){:target="_blank"} and
+      [derived ring occultation profiles]({{ site.viewmaster_url }}volumes/COUVIS_8xxx){:target="_blank"}.
 
-    * VIMS: [raw data](/viewmaster/volumes/COVIMS_0xxx){:target="_blank"} and
-      [derived ring occultation profiles](/viewmaster/volumes/COVIMS_8xxx){:target="_blank"}.
+    * VIMS: [raw data]({{ site.viewmaster_url }}volumes/COVIMS_0xxx){:target="_blank"} and
+      [derived ring occultation profiles]({{ site.viewmaster_url }}volumes/COVIMS_8xxx){:target="_blank"}.
 
-    * RSS: [derived ring occultation profiles](/viewmaster/volumes/CORSS_8xxx){:target="_blank"}.
+    * RSS: [derived ring occultation profiles]({{ site.viewmaster_url }}volumes/CORSS_8xxx){:target="_blank"}.
 
-  * Cassini's **[Master Schedule](master-as-planned-9-15-18.csv){:target="_blank"}** (14 MB)
+  * Cassini's **[Master Schedule]({{ assets_url }}master-as-planned-9-15-18.csv){:target="_blank"}** (14 MB)
 is the "as-planned" listing of observations spanning the entire Saturn tour. It contains 63,022 rows
 and may be downloaded and sliced and diced to identify observations of interest.
 
-    * A tab-delimited [text version](Final-Cassini-TOL.txt){:target="_blank"} has **99,848 rows**,
+    * A tab-delimited [text version]({{ assets_url }}Final-Cassini-TOL.txt){:target="_blank"} has **99,848 rows**,
       including everything in the Master Schedule, plus additional "milestone" events such as
       closest approach times and ring plane crossings.  <br/><br/>
 

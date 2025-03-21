@@ -269,21 +269,28 @@
               <td headers="{{ col | slugify }}">
 
                   {% if base_dir == 'COCIRS_0xxx' or base_dir == 'COCIRS_1xxx' %}
-                    {% assign index_tab_name = "TSDR_INDEX.TAB" %}
+                    {% assign index_tab_name = "INDEX/TSDR_INDEX.TAB" %}
+                    {% assign index_tab_label = "TSDR_INDEX.TAB" %}
 
                   {% elsif table_name contains "Voyager ISS Raw" %}
-                    {% assign index_tab_name = "IMGINDEX.TAB" %}
+                    {% assign index_tab_name = "INDEX/IMGINDEX.TAB" %}
+                    {% assign index_tab_label = "IMGINDEX.TAB" %}
+
+                  {% elsif base_dir == 'COISS_1xxx' or base_dir == 'COISS_2xxx' or base_dir == 'COVIMS_0xxx' %}
+                    {% assign index_tab_name = "index/index.tab" %}
+                    {% assign index_tab_label = "index.tab" %}
 
                   {% else %}
-                    {% assign index_tab_name = "index.tab" %}
+                    {% assign index_tab_name = "INDEX/INDEX.TAB" %}
+                    {% assign index_tab_label = "INDEX.TAB" %}
                   {% endif %}
 
                   {% if entry.section.nolinks == true %}
-                      {{ index_tab_name }}
+                      {{ index_tab_label }}
                   {% else %}
 
-                    <a href = "{{ site.holdings_url }}volumes/{{ base_dir }}/{{ row.table_row.id }}/index/{{ index_tab_name }}" target="_blank">
-                        {{ index_tab_name }}
+                    <a href = "{{ site.holdings_url }}volumes/{{ base_dir }}/{{ row.table_row.id }}/{{ index_tab_name }}" target="_blank">
+                        {{ index_tab_label }}
                     </a>
                   {% endif %}
               </td>

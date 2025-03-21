@@ -20,7 +20,12 @@
               class = "active"
             {% endif %}
             >
-            <a href = "{{ site.baseurl }}{{ item.href }}"
+            <a href = 
+            {% if item.external_href != nil %}
+                "{{ item.external_href }}"
+            {% else %}
+                "{{ site.baseurl }}{{ item.href }}"
+            {% endif %}
             {% if item.open contains 'new_tab' %}target="_blank"{% endif %}
             >{{ item.title }}</a>
 

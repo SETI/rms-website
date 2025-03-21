@@ -1,10 +1,12 @@
 ---
 layout: base
 layout_style: default
+assets_location: rpx/
 title: "The 1995-1996 Saturn Ring Plane Crossings"
 ---
+{% assign assets_url = site.assets_url | append: page.assets_location | append: "/" %}
 
-[ ![\[RPX LOGO\]]({{ site.assets_url }}rpx/rpxlogo_t.gif)](rpxlogo.html)
+[ ![\[RPX LOGO\]]({{ assets_url }}rpxlogo_t.gif)](rpxlogo.html)
 
 # The 1995-1996 Saturn Ring Plane Crossings
 
@@ -44,6 +46,6 @@ us.
 
   * [On-line facilities](campaign.html) from the 1995-6 observing campaign are still available but no longer supported. Included are diagrams, planning tools, ephemerides and workshop proceedings.
 
-  * [Proceedings](tucson_1994/proceedings) from the [1994 planning workshop](tucson_1994) in Tucson.
+  * [Proceedings]({{ assets_url }}tucson_1994/proceedings) from the [1994 planning workshop]({{ assets_url }}tucson_1994) in Tucson.
 
-  * [Announcement and Program](wellesley_1997) for the 1997 Wellesley Workshop.
+  * [Announcement and Program]({{ assets_url }}wellesley_1997) for the 1997 Wellesley Workshop.
