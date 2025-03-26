@@ -1,10 +1,8 @@
 ---
 layout: base
 layout_style: default
-assets_location: /tools
 title: Ring-Moon Systems Node On-line Tools
 ---
-{% assign assets_url = site.assets_url | append: page.assets_location | append: "/" %}
 
 # {{ page.title }}
 
@@ -30,14 +28,14 @@ the [Juno mission](#juno).
 
 ## Planet Viewers
 
-These forms enable you to generate a diagram showing the appearance of a
+These forms enable you to generate a diagram showing the appearance of a 
 planetary system at a specified time. Bodies and rings are rendered with
 terminators and shadows as appropriate. The viewpoint can be Earth's center, a
 particular Earth-based observatory, JWST, HST, or a planetary spacecraft.
 
-Click for [Jupiter]({{ assets_url }}viewer3_jup.shtml), [Saturn]({{ assets_url }}viewer3_sat.shtml),
-[Uranus]({{ assets_url }}viewer3_ura.shtml), [Neptune]({{ assets_url }}viewer3_nep.shtml),
-[Pluto]({{ assets_url }}viewer3_plu.shtml), or [Mars]({{ assets_url }}viewer3_mar.shtml).
+Click for [Jupiter]({{ site.tools_url }}tools/viewer3_jup.shtml), [Saturn]({{ site.tools_url }}tools/viewer3_sat.shtml),
+[Uranus]({{ site.tools_url }}tools/viewer3_ura.shtml), [Neptune]({{ site.tools_url }}tools/viewer3_nep.shtml),
+[Pluto]({{ site.tools_url }}tools/viewer3_plu.shtml), or [Mars]({{ site.tools_url }}tools/viewer3_mar.shtml).
 
 </div>
 </div>
@@ -47,7 +45,7 @@ Click for [Jupiter]({{ assets_url }}viewer3_jup.shtml), [Saturn]({{ assets_url }
 <div class = "col-xl-2 col-lg-2 col-md-3 col-sm-3 col-xs-3">
     <img src="{{ site.assets_url }}tools/tracker_thumb.gif" alt="Moon Trackers" aria-hidden="true">
 </div>
-<div class = "col-xl-10 col-lg-10 col-md-9{{ assets_url }} col-sm-9 col-xs-9" markdown="1">
+<div class = "col-xl-10 col-lg-10 col-md-9 col-sm-9 col-xs-9" markdown="1">
 
 
 ## Moon Trackers
@@ -56,9 +54,9 @@ These forms enable you to generate a diagram showing the apparent east-west
 motion of one or moons relative to the disk of a planet, within a specified
 time period.
 
-Click for [Jupiter]({{ assets_url }}tracker3_jup.shtml), [Saturn]({{ assets_url }}tracker3_sat.shtml),
-[Uranus]({{ assets_url }}tracker3_ura.shtml), [Neptune]({{ assets_url }}tracker3_nep.shtml), [Pluto]({{ assets_url }}tracker3_plu.shtml), or
-[Mars]({{ assets_url }}tracker3_mar.shtml).
+Click for [Jupiter]({{ site.tools_url }}tools/tracker3_jup.shtml), [Saturn]({{ site.tools_url }}tools/tracker3_sat.shtml),
+[Uranus]({{ site.tools_url }}tools/tracker3_ura.shtml), [Neptune]({{ site.tools_url }}tools/tracker3_nep.shtml), [Pluto]({{ site.tools_url }}tools/tracker3_plu.shtml), or
+[Mars]({{ site.tools_url }}tools/tracker3_mar.shtml).
 
 
 </div>
@@ -81,9 +79,9 @@ time. You are free to specify which of a variety of useful quantities to
 tabulate (e.g. RA and dec, phase angle, ring opening angle, distance, lunar
 phase, etc.).
 
-Click for [Jupiter]({{ assets_url }}ephem3_jup.shtml), [Saturn]({{ assets_url }}ephem3_sat.shtml),
-[Uranus]({{ assets_url }}ephem3_ura.shtml), [Neptune]({{ assets_url }}ephem3_nep.shtml),
-[Pluto]({{ assets_url }}ephem3_plu.shtml), or [Mars]({{ assets_url }}ephem3_mar.shtml).
+Click for [Jupiter]({{ site.tools_url }}tools/ephem3_jup.shtml), [Saturn]({{ site.tools_url }}tools/ephem3_sat.shtml),
+[Uranus]({{ site.tools_url }}tools/ephem3_ura.shtml), [Neptune]({{ site.tools_url }}tools/ephem3_nep.shtml),
+[Pluto]({{ site.tools_url }}tools/ephem3_plu.shtml), or [Mars]({{ site.tools_url }}tools/ephem3_mar.shtml).
 
 
 </div>
@@ -95,44 +93,44 @@ Click for [Jupiter]({{ assets_url }}ephem3_jup.shtml), [Saturn]({{ assets_url }}
 {: #juno }
 ## Juno Tools
 
-  * [Jupiter Viewer]({{ assets_url }}viewer3_jupj.shtml)
-  * [Jupiter Moon Tracker]({{ assets_url }}tracker3_jupj.shtml)
-  * [Jupiter Ephemeris Generator]({{ assets_url }}ephem3_jupj.shtml)
+  * [Jupiter Viewer]({{ site.tools_url }}tools/viewer3_jupj.shtml)
+  * [Jupiter Moon Tracker]({{ site.tools_url }}tools/tracker3_jupj.shtml)
+  * [Jupiter Ephemeris Generator]({{ site.tools_url }}tools/ephem3_jupj.shtml)
 
 
 {: #newhorizons}
 ## New Horizons Tools
 
-  * [Pluto Viewer]({{ assets_url }}viewer3_plunh.shtml)
-  * [Pluto Moon Tracker]({{ assets_url }}tracker3_plunh.shtml)
-  * [Pluto Ephemeris Generator]({{ assets_url }}ephem3_plunh.shtml)
-  * [Jupiter Viewer]({{ assets_url }}viewer3_jupnh.shtml)
-  * [Jupiter Moon Tracker]({{ assets_url }}tracker3_jupnh.shtml)
-  * [Jupiter Ephemeris Generator]({{ assets_url }}ephem3_jupnh.shtml)
+  * [Pluto Viewer]({{ site.tools_url }}tools/viewer3_plunh.shtml)
+  * [Pluto Moon Tracker]({{ site.tools_url }}tools/tracker3_plunh.shtml)
+  * [Pluto Ephemeris Generator]({{ site.tools_url }}tools/ephem3_plunh.shtml)
+  * [Jupiter Viewer]({{ site.tools_url }}tools/viewer3_jupnh.shtml)
+  * [Jupiter Moon Tracker]({{ site.tools_url }}tools/tracker3_jupnh.shtml)
+  * [Jupiter Ephemeris Generator]({{ site.tools_url }}tools/ephem3_jupnh.shtml)
 
 
 {: #cassini}
 ## Cassini Tools
 
-  * [Saturn Viewer]({{ assets_url }}viewer3_satc.shtml)
-  * [Saturn Moon Tracker]({{ assets_url }}tracker3_satc.shtml)
-  * [Saturn Ephemeris Generator]({{ assets_url }}ephem3_satc.shtml)
-  * [Jupiter Viewer]({{ assets_url }}viewer3_jupc.shtml)
-  * [Jupiter Moon Tracker]({{ assets_url }}tracker3_jupc.shtml)
-  * [Jupiter Ephemeris Generator]({{ assets_url }}ephem3_jupc.shtml)
+  * [Saturn Viewer]({{ site.tools_url }}tools/viewer3_satc.shtml)
+  * [Saturn Moon Tracker]({{ site.tools_url }}tools/tracker3_satc.shtml)
+  * [Saturn Ephemeris Generator]({{ site.tools_url }}tools/ephem3_satc.shtml)
+  * [Jupiter Viewer]({{ site.tools_url }}tools/viewer3_jupc.shtml)
+  * [Jupiter Moon Tracker]({{ site.tools_url }}tools/tracker3_jupc.shtml)
+  * [Jupiter Ephemeris Generator]({{ site.tools_url }}tools/ephem3_jupc.shtml)
 
 
 {: #clipper}
 ## Europa Clipper Tools
 
-  * [Jupiter Viewer]({{ assets_url }}viewer3_jupec.shtml)
-  * [Jupiter Moon Tracker]({{ assets_url }}tracker3_jupec.shtml)
-  * [Jupiter Ephemeris Generator]({{ assets_url }}ephem3_jupec.shtml)
+  * [Jupiter Viewer]({{ site.tools_url }}tools/viewer3_jupec.shtml)
+  * [Jupiter Moon Tracker]({{ site.tools_url }}tools/tracker3_jupec.shtml)
+  * [Jupiter Ephemeris Generator]({{ site.tools_url }}tools/ephem3_jupec.shtml)
 
 
 {: #juice}
 ## JUICE Tools
 
-  * [Jupiter Viewer]({{ assets_url }}viewer3_jupjc.shtml)
-  * [Jupiter Moon Tracker]({{ assets_url }}tracker3_jupjc.shtml)
-  * [Jupiter Ephemeris Generator]({{ assets_url }}ephem3_jupjc.shtml)
+  * [Jupiter Viewer]({{ site.tools_url }}tools/viewer3_jupjc.shtml)
+  * [Jupiter Moon Tracker]({{ site.tools_url }}tools/tracker3_jupjc.shtml)
+  * [Jupiter Ephemeris Generator]({{ site.tools_url }}tools/ephem3_jupjc.shtml)
