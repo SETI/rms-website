@@ -12,7 +12,11 @@
 
         {% for item in section.submenu %}
 
-          {% assign menu_url_path_split = item.href | split: "/" %}
+          {% if item.external_href != nil %}
+            {% assign menu_url_path_split = item.external_href | split: "/" %}
+          {% else %}
+            {% assign menu_url_path_split = item.href | split: "/" %}
+          {% endif %}
           {% assign page_url_path_split = page.url | split: "/" %}
 
           <li
