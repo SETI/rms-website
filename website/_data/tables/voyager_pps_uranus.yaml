@@ -658,7 +658,7 @@
     section_rows: 
 
         - table_row: 
-            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_1
+            base_dir: volumes/VG_28xx/VG_2801/EASYDATA/KM000_1/
             sampling: 
               - 0.1 km
             star:
