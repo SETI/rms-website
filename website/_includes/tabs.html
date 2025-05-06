@@ -16,7 +16,7 @@
 
 		<ol class="breadcrumb">
 
-			<li><a href="/{{ tab.parent_tabs_yaml | relative_url}}">{{ tab.parent_label }}</a></li>
+			<li><a href="{{ tab.parent_tabs_yaml | relative_url}}">{{ tab.parent_label }}</a></li>
 
 			{% for p_tab in parent_tabs %}
 				{% if p_tab.title == tab.parent_tab %}
