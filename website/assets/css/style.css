@@ -681,6 +681,14 @@ td.colgroup-seperator {
       font-weight: bold;
 }
 
+.fit_col1_col2 table {
+    table-layout: auto;
+}
+
+.fit_col1_col2 td:nth-child(1), td:nth-child(2) {
+    white-space: nowrap;
+}
+
 
 /* tools page */
 .tools > .container {
