@@ -9,12 +9,12 @@
 - title: Instrument
   href: /voyager/iss/instrument.html
 
-- title: Calibrated Images
+- title: Data
   href: /voyager/iss/calib_images.html
-
-- title: Raw Images
-  href: /voyager/iss/raw_images.html
 
 - title: Derived Products
   href: /voyager/iss/derived.html
+
+- title: Legacy Data
+  href: /voyager/iss/raw_images.html
 
