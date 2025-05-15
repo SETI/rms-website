@@ -1,0 +1,286 @@
+<html>
+<head>
+<title>PDS4 Data Peer Review</title>
+   <style>
+        /* Styling for directory tree */
+        .directory-tree {
+            font-family: monospace;
+            white-space: pre;
+            line-height: 0.6;
+        }
+        .directory-tree ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 0;
+            margin-bottom: -10px;
+        }
+        .directory-tree li::before {
+            content: "|__ ";
+            margin-top:0px;
+        }
+        .directory-tree li {
+            position: relative;
+            margin-bottom: -10px;
+        }
+        .directory-tree li:last-child::before {
+            content: "|__ ";
+            #margin-bottom:-20px;
+        }
+        .directory-tree li > ul::before {
+            #content: "|";
+            position: absolute;
+            left: -10px;
+            #top: -5px;
+            bottom: 0px;
+            #border-left: 1px solid #000;
+            margin-bottom:10px;
+        }
+        /* Reducing the space between nested li elements */
+        .directory-tree li > ul > li >ul {
+        margin-top: -15px; /* Adjust this value as needed */
+        }
+        .description {
+            color: #555;
+            margin-left: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>Raw Radio Science Data from the Voyager 2 Radio Occultation at Uranus, collected at Canberra Observatory</h1>
+Review facilitated by the Ring-Moon Systems Node of NASA PDS: Mia Mace, Matt Tiscareno.<br>
+May, 2025
+</br>
+The data provider is Richard A. Simpson.
+</br>
+<h3>Background</h3>
+
+<p>This bundle contains open-loop radio science raw data collected using
+NASA Deep Space Network antennas near Canberra, Australia, on
+January 24-25, 1986.  The 64-m antenna (DSS-43) and the 34-m antenna
+(DSS-42) both received S-Band (13.1 cm wavelength) and X-band (3.6 cm
+wavelength) transmissions in right circular polarization from Voyager 2
+during its encounter with Uranus (and its satellite Miranda).</p>
+
+<p>The data include samples from all four receivers during the flyby of
+Miranda and during the occultations by the Uranian rings, ionosphere,
+and neutral atmosphere.  Also included are calibration measurements
+collected a few hours prior to the Miranda and Uranus observations.</p>
+
+<p>55 original binary data tapes -- known as Original Data Records (ODRs)
+-- were delivered to the Voyager Radio Science Team in a format
+specified by the DSN RSC-11-9 Software Interface Specification (SIS)
+(version dated 1 March 1985).</p>
+
+<p>Each original ODR tape forms the basis for a PDS4 product in the bundle.
+The binary file is the first part of the product; but the binary data
+are in an archaic binary format, so they have been converted to ASCII
+tables for easier reading.  In addition there is one ASCII table with
+record header data and a separate ASCII file with header labels for the
+ASCII record header data.  Together, they can be used to create a
+spreadsheet with record header data.</p>
+
+<p>There is a separate ASCII table/file for samples from each receiver --
+43SR, 42SR, 43XR, and 42XR. Future users will likely prefer to work with
+the ASCII files rather than the original binary file.  Each product also
+includes a detached PDS4 label file written in XML.  For example, the
+following eight files constitute one PDS4 product (from original tape
+UC0475):</p>
+
+&nbsp;&nbsp;  vg2u_40mr_1986025t001902.dat  –   original ODR file (Unisys binary)</br>
+&nbsp;&nbsp;  vg2u_40mr_1986024t001902.hdr  –   record header data (ASCII)</br>
+&nbsp;&nbsp;  vg2u_40mr_1986024t001902.txt  –   field headers for the hdr file (ASCII)</br>
+&nbsp;&nbsp;  vg2u_40mr_1986024t001902.xml  –   PDS4 XML label (ASCII)</br>
+&nbsp;&nbsp;  vg2u_42sr_1986024t001902.tab  –   DSS-42 S-band receiver samples (ASCII)</br>
+&nbsp;&nbsp;  vg2u_42xr_1986024t001902.tab  –   DSS-42 X-band receiver samples (ASCII)</br>
+&nbsp;&nbsp;  vg2u_43sr_1986024t001902.tab  –   DSS-43 S-band receiver samples (ASCII)</br>
+&nbsp;&nbsp;  vg2u_43xr_1986024t001902.tab  –   DSS-43 X-band receiver samples (ASCII)</br>
+
+<p>Each *.tab file has been processed to give a 'browse' product -- a figure
+in JPEG format providing a snapshot of tape content and data quality.
+Each figure contains a histogram of data sample values, a line drawing of
+average sample power versus time, a waterfall plot of time-averaged power
+spectra, and labeling information.</p>
+
+<em> Note: Further information is provided in the bundle's readme.txt </em>
+
+<h3>Data Bundle</h3>
+
+<p><b>The complete peer review bundle (voyager2_rss_uranus_40mr_raw.tar.gz) is online <a href="/review-data/voyager2_rss_uranus_40mr_raw">here</a>. Also provided are the checksum manifest and validation report; these latter two files are primarily for reviewers concerned with PDS4-compliance (see instructions below).</b>
+
+<p><b>Reviewers should begin by reading the readme.txt file (top level of the bundle). The Software Interface Specification (SIS) is included in the document collection and provides detailed descriptions of the archive bundle.</b>
+
+
+<p>The directory structure of the PDS4 bundle is illustrated below:
+    <div class="directory-tree">
+        <ul>
+            <li>voyager2_rss_uranus_40mr_raw/
+                <ul>
+                    <li>readme.txt <span class="description">High-level overview of data set</span></li>
+                    <li>bundle_voyager2_rss_uranus_40mr_raw.xml<span class="description">Label for bundle, describing members of the bundle and references etc</span></li>
+                    <li>browse/<span class="description">Directory containing browse products (images)</span>
+                        <ul>
+                            <li>collection_browse.csv <span class="description">List of browse product LIDVIDs (logical identifier with version ID), with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_browse.xml <span class="description">Label for the associated collection file</span></li>
+                            <li>42sr/<span class="description">Directory of 34-m antenna (DSS-42) in S-band (13.1 cm wavelength) right circular polarization</span></li>
+                            <ul>
+				<li>vg2u_42sr_19860**.jpg <span class="description">Quick-look plots of radio occultation data</span></li>
+                            	<li>vg2u_42sr_19860**.xml <span class="description">Labels for associated browse products</span></li>
+                            </ul>
+			    <li>42xr/<span class="description">Directory of 34-m antenna (DSS-42) in X-band (3.6 cm wavelength) right circular polarization</li>
+			    <ul>
+                            <li>...etc...<span class="description"></span></li>
+			    </ul>
+                        </ul>
+                    </li>
+                    <li>calib_freq/<span class="description">Directory containing estimates of USO frequency for Vgr 1 &amp 2</span>
+                        <ul>
+                            <li>collection_calib_freq.csv<span class="description">List of calibration frequency LIDVIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_calib_freq.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>vgr_uso.txt<span class="description">Text file containing the USO frequency estimates for Vgr 1, 2</span></li>
+                            <li>vgr_uso.xml<span class="description">Label for Vgr 1,2 USO frequency estimates</span></li>
+                        </ul>
+                   </li>
+                   <li>context/<span class="description">Directory containing context information related to the archive; such as spacecraft, instruments, targets etc.</span>
+                        <ul>
+                            <li>collection_context.csv<span class="description">List of context product LIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_context.xml<span class="description">Label for the associated collection file</span></li>
+                        </ul>
+                    </li>
+                    <li>data/<span class="description">Directory containing raw radio ocultation data acquired at Parkes during Vgr 2 Uranus encounter</span>
+                        <ul>
+                            <li>collection_data.csv<span class="description">List of data product LIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_data_podr.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>ul*.dat<span class="description">Original binary raw data files</span></li>
+                            <li>vg2u_*.tab<span class="description">ASCII translations of the binary headers</span></li>
+                            <li>vg2u_*.txt<span class="description">ASCII files containing field headers (titles) for the header files</span></li>
+                            <li>vg2u_*.xml<span class="description">Labels for the associated data files</span></li>
+                        </ul>
+                    </li>
+                   <li>document/<span class="description">Directory containing documentation</span>
+                        <ul>
+                            <li>collection_document.csv<span class="description">List of members of the document collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_document.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>*.docx/*.pdf/*.txt <span class="description">Documents</span></li>
+                            <li>*.xml <span class="description">Labels for the associated documents</span></li>
+                        </ul>
+                    </li>
+                    <li>geometry/<span class="description">Directory containing the non-SPICE trajectory and high-gain antenna pointing reconstructions for this bundle</span>
+                        <ul>
+                            <li>collection_geometry.csv <span class="description">List of members of the geometry collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_geometry.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>u*.dat/u*.tab<span class="description">Trajectory and pointing files</span></li>
+                            <li>u*.xml<span class="description">Labels for the associated geometry file</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<h3>Instructions for Reviewers</h3>
+<p>
+Here are guidelines and some information to help you produce an effective review with a reasonable level of effort.
+</p>
+
+All reviewers must address two general areas:
+<ul>
+<li> Scientific merit of data (are these the proper data to be archived?),
+<li> Usability of the data (appropriate formats; completeness of data set, including ancillary data; comprehensive documentation).
+</ul>
+
+Furthermore, if you are one of the panel members with a direct affiliation with the PDS, please also address a third general area:
+<ul>
+<li> Compliance with PDS4 Standards.
+</ul>
+If you are <b>not</b> one of the panel members with a direct affiliation with the PDS, then you do <b>not</b> need to address compliance with PDS4 standards. Rather, you should focus on the data (including ancillary data) and documentation.
+<p>
+While it is not realistic for you to analyze every data file, please check enough to convince yourself of the quality and consistency of the data and of any errors that you encounter.
+</p>
+<p>
+Please also evaluate the documentation provided in individual table labels, and referenced journal articles. Much of the information contained in the referenced articles is not duplicated in the data sets.
+</p>
+<p>
+Questions for reviewers to address are:
+<ul>
+<li> Documentation:
+<ul>
+<li> Does the documentation explain the data and how they were produced?
+<li> Does the documentation explain how to use the data?
+<li> Is the documentation (including referenced journal articles) sufficient to ensure the data will be intelligible to a scientist 10, 20, or 50 years in the future?
+</ul>
+<li> Data:
+<ul>
+<li> Are you able to manipulate and plot the data, interpret columns into tables, and understand the context and relationships of the data products?
+<li> Are there any concerns about the creation/generation, calibration (if appropriate), or general usability of the data? 
+<li> Is the archive design suitable (is the directory tree structured in a reasonable way)?
+</ul>
+</ul>
+The review panel submits written reviews by email and then, if the RMS Node thinks it is necessary, participates in a teleconference (date TBD) to discuss the reviews, including strengths and weaknesses of the data set. Specific shortcomings and errors will be identified as "liens" &ndash; questions about or requests for change &ndash;  which will need to be corrected. The review panel is responsible for making a recommendation on whether:
+<ul>
+<li> The bundle/s passed peer review and can be archived, once a set of panel identified liens have been resolved.
+<li> The material did not pass peer review, and must undergo an incremental (delta) review in certain specified areas.
+<li> The material did not pass peer review, and must undergo another full peer review.
+<li> The material did not pass peer review, and does not merit a second peer review.
+</ul>
+
+<p>
+In addition to an overall recommendation, the RMS Node will compile a list of liens in the archive design or sample products/bundle. The liens must be resolved before the associated data set can be archived.
+</p>
+
+<p></p> 
+
+<h3>Known Issues</h3>
+
+The full Validate (v3.7.0) report can be found <a href="/review-data/voyager2_rss_uranus_40mr_raw">here</a>. In summary the following warnings appear: <br/>
+<code>
+&nbsp;&nbsp;  294 product(s) <br/>
+&nbsp;&nbsp;  0 error(s) <br/>
+&nbsp;&nbsp;  11 warning(s) <br/>
+
+  Product Validation Summary: <br/>
+&nbsp;&nbsp;    295         product(s) passed <br/>
+&nbsp;&nbsp;    0         product(s) failed <br/>
+&nbsp;&nbsp;    0          product(s) skipped <br/>
+&nbsp;&nbsp;    294        product(s) total <br/>
+
+  Referential Integrity Check Summary: <br/>
+&nbsp;&nbsp;    296        check(s) passed <br/>
+&nbsp;&nbsp;    0          check(s) failed <br/>
+&nbsp;&nbsp;    0          check(s) skipped <br/>
+&nbsp;&nbsp;    296        check(s) total <br/>
+
+  Message Types: <br/>
+&nbsp;&nbsp; 1            warning.integrity.pds4_version_mismatch<br/>
+&nbsp;&nbsp; 10           warning.label.context_ref_mismatch    <br/>
+</code>
+
+<ul>
+<li><b>10 <code>warning.label.context_ref_mismatch</b></code></br>
+Four of these refer to Voyager 1 being described as 'Equipment' rather than 'Spacecraft'. This is because Voyager 1 is the 'target' of spacecraft engineering 'observations'. That is, the onboard engineering system is monitoring the status of the spacecraft. So, even though Voyager 1 is participating in observations of Saturn, the engineering system doesn't know that; its target is the spacecraft itself.
+RMS is submitting an SCR to discuss dual use context products for discussion within DDWG and CCB (in-prep).</br>
+Six of these refer to a context product that has a typo (a new version has been submitted but not yet posted for 'DSS-42 34-m Radio Telescope').
+</li>
+<li><b>1 <code>warning.integrity.pds4_version_mismatch</code></b></br>
+The Canberra files were developed under IM v1.23.0.0 while the re-used Parkes files (secondary members in calib_freq, document, and geometry collections) were developed under IM v1.21.0.0.
+</li>
+</ul>
+
+These known issues will be resolved during lien resolution, along with any other issues raised by the reviewers and deemed reasonable/necessary. 
+
+
+<h3>Reviewers' Submitted Comments and Responses</h3>
+
+<!--The responses from the reviewers and data provider are documented in the <a href="./yet-to-be-written_liens_resolved.pdf" target="_blank">lien resolution document</a>.-->
+
+<h3>Review Outcome</h3>
+<!-- TBD-->
+
+<hr>
+<a href="/">Ring-Moon Systems Node Home</a>
+</body>
+</html>
