@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>PDS4 Data Peer Review</title>
+   <style>
+        /* Styling for directory tree */
+        .directory-tree {
+            font-family: monospace;
+            white-space: pre;
+            line-height: 0.6;
+        }
+        .directory-tree ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 0;
+            margin-bottom: -10px;
+        }
+        .directory-tree li::before {
+            content: "|__ ";
+            margin-top:0px;
+        }
+        .directory-tree li {
+            position: relative;
+            margin-bottom: -10px;
+        }
+        .directory-tree li:last-child::before {
+            content: "|__ ";
+            #margin-bottom:-20px;
+        }
+        .directory-tree li > ul::before {
+            #content: "|";
+            position: absolute;
+            left: -10px;
+            #top: -5px;
+            bottom: 0px;
+            #border-left: 1px solid #000;
+            margin-bottom:10px;
+        }
+        /* Reducing the space between nested li elements */
+        .directory-tree li > ul > li >ul {
+        margin-top: -15px; /* Adjust this value as needed */
+        }
+        .description {
+            color: #555;
+            margin-left: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>Raw Radio Science Data from the Voyager 2 Radio Occultation at Saturn</h1>
+Review facilitated by the Ring-Moon Systems Node of NASA PDS: Mia Mace, Matt Tiscareno<br>
+May, 2025
+</br>
+<br>The data provider is Richard A. Simpson.</br>
+
+<h3>Background</h3>
+
+<p>This bundle contains open-loop radio receiver data collected at the
+Canberra (Australia) 64-m antenna of the NASA Deep Space Network (DSS-43)
+during the Voyager 2 encounter with Saturn on day 1981/238. The data
+include samples from receiver outputs at S-band (13 cm wavelength)
+and X-band (3.6 cm) in right- and left-circular polarization.  Also
+included are calibration measurements collected within a few hours of
+the Saturn observations.  These data have been migrated from PDS
+version 3 (PDS3) to PDS4.
+
+<p>484 original data tapes (known as Original Data Records, or ODRs)
+were scheduled for delivery to the Voyager Radio Science Team in the
+RSC-11-6 binary format.  Of these, 12 have gone missing (or were never
+delivered).  They are not included in the PDS3 data set posted on
+the PDS/PPI web site in about 2000.  All of the data on the 12 missing
+tapes were captured by a redundant recording system, and the tapes from
+those parallel recordings are included in the PDS4 archive; so no
+observations were lost.
+
+<p>Each of the 472 tapes in the PDS3 archive forms the basis for a PDS4
+product here.  The binary file is included.  The binary data have also
+been converted to ASCII for easier reading.  There is one ASCII file
+with record header data and one ASCII file with the receiver samples
+corresponding to each ODR in each product.  Each product also
+includes a separate PDS4 label file wrtten in XML.
+
+<p>In a small number of cases, records could not be read from the ODR
+tape that was delivered to the Voyager Radio Science Team.  A
+replacement record has been substituted.  Bytes 43 and 44 in the
+replacement record header have been set to '1', and the 5000 receiver
+output samples in the record have both been set to '127'.  In two ODR
+files, duplicate records have been discovered during the PDS4
+migration; those duplicate records have been removed.
+
+<p>Each ODR has been processed to give a 'browse' product with a
+histogram of data sample values, a plot of average sample power in
+the receiver output, and a plot of time-averaged power spectra.
+There are 472 browse products, each in PDF/A-1b format.
+
+<p>Also included in the bundle are reconstructions of the spacecraft
+trajectory and spacecraft high-gain antenna pointing, which was offset
+during the Saturn atmospheric occultation to compensate for refraction.
+A receiver tuning file allows calculation of the exact received
+frequency at the ground station.  A document collection includes
+a description of the Voyager mission, the radio science operations
+plan for the Voyager 2 Saturn encounter, a Sequence of Events file,
+and a Software Interface Specification (SIS) for the archive bundle.
+Documentation of the binary formats in the ODR and receiver tuning
+binary files, which has been archived elsewhere in PDS, are
+referenced.
+
+<p>
+<em> Note: This information is provided in the bundle's readme.txt </em>
+
+</p>
+
+<h3>Data Bundle</h3>
+
+<p><b>The complete peer review bundle (voyager2_rss_saturn_raw.tar.gz) is online <a href="/review-data/voyager2_rss_saturn_raw">here</a>. Also provided are the checksum manifest and validation report; these latter two files are primarily for reviewers concerned with PDS4-compliance (see instructions below).</b>
+
+<p><b>Reviewers should begin by reading the readme.txt file (top level of the bundle). The Software Interface Specification (SIS) is included in the document collection and provides detailed descriptions of the archive bundle.</b>
+
+
+<p>The directory structure of the PDS4 bundle is illustrated below:
+    <div class="directory-tree">
+        <ul>
+            <li>voyager2_rss_saturn_raw/
+                <ul>
+                    <li>readme.txt <span class="description">High-level overview of data set</span></li>
+                    <li>bundle_voyager2_rss_saturn_raw.xml<span class="description">Label for bundle, describing members of the bundle and references etc</span></li>
+                    <li>browse/<span class="description">Directory containing browse products (images)</span>
+                        <ul>
+                            <li>collection_browse.csv <span class="description">List of browse product LIDVIDs (logical identifier with version ID), with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_browse.xml <span class="description">Label for the associated collection file</span></li>
+                            <li>vg2s_43??_198123*.pdf <span class="description">Quick look plots from radio science observations during the Vgr 2 Saturn encounter</span></li>
+                            <li>vg2s_43??_198123*.xml <span class="description">Labels for associated browse products</span></li>
+                        </ul>
+                    </li>
+                    <li>calib_freq/<span class="description">Directory containing receiver tuning data for radio science observations during the Vgr 2 Saturn encounter and estimates of USO frequency for Vgr 1 &amp 2</span>
+                        <ul>
+                            <li>collection_calib_freq.csv<span class="description">List of calibration frequency LIDVIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_calib_freq.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>*.dat/*.tab/*.txt<span class="description">Files containing open loop receiver tuning profiles for Vgr 2 Saturn; USO frequency estimates for Vgr 1, 2</span></li>
+                            <li>*.xml<span class="description">Labels for associated calib freq products</span></li>
+                        </ul>
+                   </li>
+                   <li>context/<span class="description">Directory containing context information related to the archive; such as spacecraft, instruments, targets etc.</span>
+                        <ul>
+                            <li>collection_context.csv<span class="description">List of context product LIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_context.xml<span class="description">Label for the associated collection file</span></li>
+                        </ul>
+                    </li>
+                    <li>data/<span class="description">Directory containing open loop receiver raw data for radio science observations during the Voyager 2 Saturn encounter</span>
+                        <ul>
+                            <li>collection_data.csv<span class="description">List of data product LIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_data.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>vg2s_43??_198123*.dat<span class="description">RSC-11-6 binary raw data</span></li>
+                            <li>vg2s_43??_198123*.hdr<span class="description">RSC-11-6 headers in ASCII</span></li>
+                            <li>vg2s_43??_198123*.tab<span class="description">RSC-11-6 ASCII raw data</span></li>
+                            <li>vg2s_43??_198123*.xml<span class="description">Labels for the associated data files</span></li>
+                        </ul>
+                    </li>
+                   <li>document/<span class="description">Directory containing mission description, sequence of events for the Vgr 2 Saturn encounter, radio science operations plan, HGA reconstruction documentation, and the archive SIS</span>
+                        <ul>
+                            <li>collection_document.csv<span class="description">List of members of the document collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_document.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>*.docx/*.pdf/*.txt <span class="description">Documents</span></li>
+                            <li>*.xml <span class="description">Labels for the associated document products</span></li>
+                        </ul>
+                    </li>
+                    <li>geometry/<span class="description">Directory containing (non-SPICE) geometry data for radio science observations during Vgr 2 Saturn encounter</span>
+                        <ul>
+                            <li>collection_geometry.csv <span class="description">List of members of the geometry collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_geometry.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>*.dat/*.tab<span class="description">Celestial Reference Set, High-Gain Antenna Pointing files</span></li>
+                            <li>*.xml<span class="description">Labels for the associated geometry files</span></li>
+                        </ul>
+                    </li>
+                    <li>software/<span class="description">Directory containing software files for documentation purposes</span>
+                        <ul>
+                            <li>collection_software.csv <span class="description">List of members of the software collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_software.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>aareadme.txt<span class="description">ASCII text file describing the contents of the software collection</span></li>
+                            <li>*.f<span class="description">FORTRAN 77 source code written to manipulate data from radio science observations during Vgr 2 Saturn encounter</span></li>
+                            <li>software.xml<span class="description">Labels for the associated products</span></li>
+                        </ul>
+                    </li>
+                    <li>spice/<span class="description">Directory containing SPICE files</span>
+                        <ul>
+                            <li>collection_spice.csv <span class="description">List of members of the SPICE collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_spice.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>vg2_sat.bsp<span class="description">S- and P-kernel binary file, the SPICE component that contains ephemeris data for spacecraft and target bodies</span></li>
+                            <li>vg2_sat.xml<span class="description">Label for the SPICE kernel</span></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<h3>Instructions for Reviewers</h3>
+<p>
+Here are guidelines and some information to help you produce an effective review with a reasonable level of effort.
+</p>
+
+All reviewers must address two general areas:
+<ul>
+<li> Scientific merit of data (are these the proper data to be archived?),
+<li> Usability of the data (appropriate formats; completeness of data set, including ancillary data; comprehensive documentation).
+</ul>
+
+Furthermore, if you are one of the panel members with a direct affiliation with the PDS, please also address a third general area:
+<ul>
+<li> Compliance with PDS4 Standards.
+</ul>
+If you are <b>not</b> one of the panel members with a direct affiliation with the PDS, then you do <b>not</b> need to address compliance with PDS4 standards. Rather, you should focus on the data (including ancillary data) and documentation.
+<p>
+While it is not realistic for you to analyze every data file, please check enough to convince yourself of the quality and consistency of the data and of any errors that you encounter.
+</p>
+<p>
+Please also evaluate the documentation provided in individual table labels, and referenced journal articles. Much of the information contained in the referenced articles is not duplicated in the data sets.
+</p>
+<p>
+Questions for reviewers to address are:
+<ul>
+<li> Documentation:
+<ul>
+<li> Does the documentation explain the data and how they were produced?
+<li> Does the documentation explain how to use the data?
+<li> Is the documentation (including referenced journal articles) sufficient to ensure the data will be intelligible to a scientist 10, 20, or 50 years in the future?
+</ul>
+<li> Data:
+<ul>
+<li> Are you able to manipulate and plot the data, interpret columns into tables, and understand the context and relationships of the data products?
+<li> Are there any concerns about the creation/generation, calibration (if appropriate), or general usability of the data? 
+<li> Is the archive design suitable (is the directory tree structured in a reasonable way)?
+</ul>
+</ul>
+The review panel submits written reviews by email and then, if the RMS Node thinks it is necessary, participates in a teleconference (date TBD) to discuss the reviews, including strengths and weaknesses of the data set. Specific shortcomings and errors will be identified as "liens" &ndash; questions about or requests for change &ndash;  which will need to be corrected. The review panel is responsible for making a recommendation on whether:
+<ul>
+<li> The bundle/s passed peer review and can be archived, once a set of panel identified liens have been resolved.
+<li> The material did not pass peer review, and must undergo an incremental (delta) review in certain specified areas.
+<li> The material did not pass peer review, and must undergo another full peer review.
+<li> The material did not pass peer review, and does not merit a second peer review.
+</ul>
+
+<p>
+In addition to an overall recommendation, the RMS Node will compile a list of liens in the archive design or sample products/bundle. The liens must be resolved before the associated data set can be archived.
+</p>
+
+<p></p> 
+
+<h3>Known Issues</h3>
+
+RMS has run Validate v3.7.0 on the bundle, full report available <a href="/review-data/voyager2_rss_saturn_raw">here</a>.
+</br> 
+</br>
+<code>
+Summary: <br/>
+
+ &nbsp;&nbsp;  967 product(s) </br>
+ &nbsp;&nbsp;  0 error(s) </br>
+ &nbsp;&nbsp;  6 warning(s) </br>
+
+  Product Validation Summary: </br>
+ &nbsp;&nbsp;    967         product(s) passed </br>
+ &nbsp;&nbsp;    0          product(s) failed </br>
+ &nbsp;&nbsp;    0          product(s) skipped </br>
+ &nbsp;&nbsp;    967         product(s) total </br>
+
+  Referential Integrity Check Summary:</br>
+ &nbsp;&nbsp;    967         check(s) passed </br>
+ &nbsp;&nbsp;    0          check(s) failed </br>
+ &nbsp;&nbsp;    0          check(s) skipped </br>
+ &nbsp;&nbsp;    967         check(s) total </br>
+
+  Message Types: </br>
+ &nbsp;&nbsp;    6            warning.label.context_ref_mismatch
+
+</code>
+
+<ul>
+<li><b>6 <code>warning.label.context_ref_mismatch</b></br>
+&nbsp;Value: 'Equipment' Expected one of: '[Spacecraft]'</br>
+</code>
+These refer to Voyager 2 being described as 'Equipment' rather than 'Spacecraft'. This is because Voyager 2 is the 'target' of spacecraft engineering 'observations'. That is, the onboard engineering system is monitoring the status of the spacecraft. So, even though Voyager 2 is participating in observations of Saturn, the engineering system doesn't know that; its target is the spacecraft itself. 
+RMS is submitting an SCR to discuss dual use context products for discussion within DDWG and CCB (in-prep). 
+</li>
+
+<li>Minor issue – typos in software.xml: "<b>FORTERAN</b> 77 <b>sourcew</b> code ..." </li>
+</ul>
+
+
+<p>These known issues will be resolved during lien resolution, along with any other issues raised by the reviewers and deemed reasonable/necessary. 
+
+
+<h3>Reviewers' Submitted Comments and Responses</h3>
+
+<!--The responses from the reviewers and data provider are documented in the <a href="./yet-to-be-written_liens_resolved.pdf" target="_blank">lien resolution document</a>.-->
+
+<h3>Review Outcome</h3>
+<!-- TBD-->
+
+<hr>
+<a href="/">Ring-Moon Systems Node Home</a>
+</body>
+</html>
