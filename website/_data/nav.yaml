@@ -17,6 +17,10 @@
       href: /viewmaster/archives-volumes/
       open: new_tab
 
+    - title: RMS Annex
+      href: /rms-annex/
+      open: new_tab
+
     - title: PDS-Wide Search
       href: //pds.nasa.gov/datasearch/data-search/
       open: new_tab

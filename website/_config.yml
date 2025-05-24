@@ -10,6 +10,7 @@ opus_url: "//opus.pds-rings.seti.org/opus/#"
 holdings_url: "//pds-rings.seti.org/holdings/"
 viewmaster_url: "//pds-rings.seti.org/viewmaster/"
 assets_url: "//pds-rings.seti.org/"
+rms-annex_url: "//pds-rings.seti.org/rms-annex/"
 
 # Build settings
 markdown: kramdown
