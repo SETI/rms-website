@@ -1,0 +1,257 @@
+<html>
+<head>
+<title>PDS4 Data Peer Review</title>
+   <style>
+        /* Styling for directory tree */
+        .directory-tree {
+            font-family: monospace;
+            white-space: pre;
+            line-height: 0.6;
+        }
+        .directory-tree ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 0;
+            margin-bottom: -10px;
+        }
+        .directory-tree li::before {
+            content: "|__ ";
+            margin-top:0px;
+        }
+        .directory-tree li {
+            position: relative;
+            margin-bottom: -10px;
+        }
+        .directory-tree li:last-child::before {
+            content: "|__ ";
+            #margin-bottom:-20px;
+        }
+        .directory-tree li > ul::before {
+            #content: "|";
+            position: absolute;
+            left: -10px;
+            #top: -5px;
+            bottom: 0px;
+            #border-left: 1px solid #000;
+            margin-bottom:10px;
+        }
+        /* Reducing the space between nested li elements */
+        .directory-tree li > ul > li >ul {
+        margin-top: -15px; /* Adjust this value as needed */
+        }
+        .description {
+            color: #555;
+            margin-left: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>Raw Radio Science Data from Galileo</h1>
+Review facilitated by the Ring-Moon Systems Node of NASA PDS: Mia Mace, Matt Tiscareno<br>
+May, 2025
+</br>
+<br>The data providers are Dustin R. Buccino, Elias Barbinis, and Daniel S. Kahan.</br>
+
+<h3>Background</h3>
+<p>
+This bundle is a data restoration. The original PDS3 archives were submitted by the Galileo Radio Science Support Team (RSST) at the Jet Propulsion Laboratory (JPL) to the Planetary Data System (PDS). These archives were rejected due to issues with the data; however, there was no funding remaining to resolve these items so the data were never formally archived. This PDS4 migration and archival, performed by the Radio Science Sub Node (RSSN) of the PDS, contains all known RSS data at the time of archival (May 2025).
+
+<p>Of particular interest are files from the NASA Deep Space Network including closed-loop tracking data and open-loop tracking data. The formats of these files changed throughout the Galileo era, resulting in multiple data formats.
+
+<p>Media calibration data are provided on a best-efforts basis though media calibration data are not complete for this archive. Only ionosphere calibrations are provided; and those have gaps between 1999-10-01 to 2003-01-01.
+
+<h4>Galileo mission</h4>
+
+The Galileo mission launched on October 18, 1989 on the space shuttle Atlantis. The interplanetary cruise lasted about 6 years and the spacecraft followed a Venus-Earth-Earth gravity assist (VEEGA) trajectory to Jupiter. Several targets of opportunity along the way allowed for cruise science. The spacecraft arrived at Jupiter on December 7, 1995, and released a proble into Jupiter before executing the Jupiter Orbit Insertion maneuver. The Prime Mission orbital operations consisted of 10 targeted satellite encounters over 24 months. Orbital periods varied from as long as 200 days to as little as 35-40 days between encounters. The Galileo Europa Mission (GEM) was a low-cost follow-on to the Galileo Prime Mission that uses the Galileo spacecraft to continue focused studies of the Jovian system. The mission is divided into three main phases or campaigns: Europa Campaign, Perijove Campaign and Io Campaign. The Galileo Millennium Mission (GMM) was a follow on to the GEM mission, with a greatly reduced budget. The mission was designed to continue the exploration of Io and the inner Jovian magnetosphere, and to dispose of the spacecraft with a Jupiter impact on September 21, 2003.
+
+<h4>Galileo RSS System</h4>
+
+The Galileo Radio Science Subsystem (RSS) was a powerful radio science instrument designed to explore Jupiter. It contained capabilities for both S-band and X-band radio links to Earth and an onboard Ultra Stable Oscillator (USO). It was integrated with the telecommunications subsystem (see Section 2.6.2 of the archive Software Interface Specification (SIS) in the document collection).
+
+<p>Unfortunately, the High Gain Antenna (HGA) filed to deploy and severely limited the capabilities of the investigation. The USO was used throughout the mission as an onboard stable frequency reference, but the radio link to Earth was limited to be used on the Low Gain Antenna (LGA) and at S-band uplink/downlink only.
+
+<h4>Science Objectives</h4>
+
+Radio Science investigations were carried out by two teams. The Celestial Mechanics Team, under Team Leader John Anderson, conducted experimental tests of general relativity (including searching for gravitational waves), made measurements to improve solar system ephemerides, and sought to improve gravitational models for Jupiter and its satellites. The Radio Propagation Team, under Team Leader Tay Howard, investigated the solar corona and carried out various studies in the Jovian system primarily concerning atmospheres and ionospheres.
+
+<p>Two different types of radio science measurements were conducted with the Galileo Orbiter: radio tracking in which the magnitude and direction of gravitational forces could be derived from 'closed-loop' Doppler (and, sometimes, ranging) measurements, and radio propagation experiments in which modulation on the signal received at Earth stations could be attributed to properties of the intervening medium. The radio science measurements were analyzed by two investigation teams; the Celestial Mechanics Team was primarily interested in characterizing variations in gravitational forces, and the Radio Propagation Team was primarily interested in the atmospheres of the Sun, Jupiter, and Jupiter's satellites.
+
+<p>
+<em>Note: This information is provided in the bundle's archive SIS, refer to that document for further details.</em>
+</p>
+
+<h3>Data Bundle</h3>
+
+<p><b>The complete peer review bundle (gll.rss.raw.tar.gz) is online <a href="/review-data/gll.rss.raw">here</a>. Also provided are the checksum manifest and validation report; these latter two files are primarily for reviewers concerned with PDS4-compliance (see instructions below).</b>
+
+<p><b>Reviewers should begin by reading the Software Interface Specification (SIS), which is included in the document collection and provides detailed descriptions of the archive bundle.</b>
+
+
+<p>The directory structure of the PDS4 bundle is illustrated below:
+    <div class="directory-tree">
+        <ul>
+            <li>gll.rss.raw/
+                <ul>
+                    <li>bundle_galileo_rss_raw.xml<span class="description">Label for bundle, describing members of the bundle and references etc</span></li>
+                    <li>data_0159_sci/<span class="description">Directory containing 0159_Science open-loop receiver data files from Galileo Radio Science</span>
+                        <ul>
+                            <li>collection_rsr.csv <span class="description">List of browse product LIDVIDs (logical identifier with version ID), with first column designating whether it is a primary (P) or secondary (S) member</span></li>
+                            <li>collection_rsr.xml <span class="description">Label for the associated collection file</span></li>
+                            <li>i31/<span class="description">Subdirectory for Io flyby (orbit 31)</span></li>
+                            <ul>
+ 			        <li>*_rsr.dat <span class="description">GLL Radio Science Receiver (RSR) raw data</span></li>	
+				<li>*_rsr.xml <span class="description">Labels for associated data files</span></li>
+                             </ul>
+                            <li>i32/<span class="description">Subdirectory for Io flyby (orbit 32)</span></li>
+                            <ul>
+ 			        <li>*_rsr.dat <span class="description">GLL Radio Science Receiver (RSR) raw data</span></li>	
+				<li> ... etc ...<span class="description"></span></li>
+			    </ul>
+                        </ul>
+                    </li>
+                    <li>data_rsc_11_11_odr/<span class="description">Directory containing RSC-11-11 Original Data Record (ODR) open-loop data files from Galileo Radio Science </span></li>
+                        <ul>
+                            <li>collection_odr.csv<span class="description">List of RSC-11-11 ODR LIDVIDs, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_odr.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>c10/<span class="description">Subdirectory for Callisto encounter (orbit 10)</span></li>
+                            <ul>
+                                <li>*_odr.dat<span class="description">GLL Original Data Record RSC-11-11 raw data</span></li>
+                                <li>*_odr.xml<span class="description">Labels for associated data files</span></li>
+                            </ul>
+                            <li>c20/<span class="description">Subdirectory for Callisto encounter (orbit 20)</span></li>
+                            <ul>
+ 			        <li>*_odr.dat <span class="description">GLL Original Data Record RSC-11-11 raw data</span></li>	
+				<li> ... etc ...<span class="description"></span></li>
+			    </ul>
+                        </ul>
+                   </li>
+                   <li>data_trk223_ionocal/<span class="description">Directory containing Ionosphere Calibration files for Galileo</span>
+                        <ul>
+                             <li>collection_ion.csv<span class="description">List of ionosphere calibration LIDVIDs, with first column designating whether it is a primary or secondary member</span></li>
+                             <li>collection_ion.xml<span class="description">Label for the associated collection file</span></li>
+                             <li>*_ion.dat<span class="description">DSN ionospheric calibration files</span></li>
+                             <li>*_ion.xml<span class="description">Label for associated data files</span></li>
+                        </ul>
+                    </li>
+                    <li>data_trk225_atdf/<span class="description">Directory containing TRK-2-25 Archival Tracking Data Format Files for Galileo</span>
+                        <ul>
+                            <li>...etc...<span class="description"></span></li>
+                        </ul>
+                    </li>
+                   <li>data_trk234_trknav/<span class="description">Directory containing TRK-2-34 Tracking and Navigation Files for Galileo</span>
+                        <ul>
+                            <li>...etc...<span class="description"></span></li>
+                        </ul>
+                    </li>
+                   <li>document/<span class="description">Directory containing documentation</span>
+                        <ul>
+                            <li>collection_document.csv<span class="description">List of members of the document collection, with first column designating whether it is a primary or secondary member</span></li>
+                            <li>collection_document.xml<span class="description">Label for the associated collection file</span></li>
+                            <li>gll_rss_sis.pdf<span class="description">Archive Software Interface Specification</span></li>
+                            <li>gll_rss_sis.xml<span class="description">Label for the archive SIS</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<h3>Instructions for Reviewers</h3>
+<p>
+Here are guidelines and some information to help you produce an effective review with a reasonable level of effort.
+</p>
+
+All reviewers must address two general areas:
+<ul>
+<li> Scientific merit of data (are these the proper data to be archived?),
+<li> Usability of the data (appropriate formats; completeness of data set, including ancillary data; comprehensive documentation).
+</ul>
+
+Furthermore, if you are one of the panel members with a direct affiliation with the PDS, please also address a third general area:
+<ul>
+<li> Compliance with PDS4 Standards.
+</ul>
+If you are <b>not</b> one of the panel members with a direct affiliation with the PDS, then you do <b>not</b> need to address compliance with PDS4 standards. Rather, you should focus on the data (including ancillary data) and documentation.
+<p>
+While it is not realistic for you to analyze every data file, please check enough to convince yourself of the quality and consistency of the data and of any errors that you encounter.
+</p>
+<p>
+Please also evaluate the documentation provided in individual table labels, and referenced journal articles. Much of the information contained in the referenced articles is not duplicated in the data sets.
+</p>
+<p>
+Questions for reviewers to address are:
+<ul>
+<li> Documentation:
+<ul>
+<li> Does the documentation explain the data and how they were produced?
+<li> Does the documentation explain how to use the data?
+<li> Is the documentation (including referenced journal articles) sufficient to ensure the data will be intelligible to a scientist 10, 20, or 50 years in the future?
+</ul>
+<li> Data:
+<ul>
+<li> Are you able to manipulate and plot the data, interpret columns into tables, and understand the context and relationships of the data products?
+<li> Are there any concerns about the creation/generation, calibration (if appropriate), or general usability of the data? 
+<li> Is the archive design suitable (is the directory tree structured in a reasonable way)?
+</ul>
+</ul>
+The review panel submits written reviews by email and then, if the RMS Node thinks it is necessary, participates in a teleconference (date TBD) to discuss the reviews, including strengths and weaknesses of the data set. Specific shortcomings and errors will be identified as "liens" &ndash; questions about or requests for change &ndash;  which will need to be corrected. The review panel is responsible for making a recommendation on whether:
+<ul>
+<li> The bundle/s passed peer review and can be archived, once a set of panel identified liens have been resolved.
+<li> The material did not pass peer review, and must undergo an incremental (delta) review in certain specified areas.
+<li> The material did not pass peer review, and must undergo another full peer review.
+<li> The material did not pass peer review, and does not merit a second peer review.
+</ul>
+
+<p>
+In addition to an overall recommendation, the RMS Node will compile a list of liens in the archive design or sample products/bundle. The liens must be resolved before the associated data set can be archived.
+</p>
+
+<p></p> 
+
+<h3>Known Issues</h3>
+
+RMS has run Validate v3.7.0 on the bundle and found no errors or warnings, full report available <a href="/review-data/gll.rss.raw">here</a>.
+</br> 
+</br>
+<code>
+Summary: <br/>
+
+ &nbsp;&nbsp;  945 product(s) </br>
+ &nbsp;&nbsp;  0 error(s) </br>
+ &nbsp;&nbsp;  0 warning(s) </br>
+
+  Product Validation Summary: </br>
+ &nbsp;&nbsp;    945        product(s) passed </br>
+ &nbsp;&nbsp;    0          product(s) failed </br>
+ &nbsp;&nbsp;    0          product(s) skipped </br>
+ &nbsp;&nbsp;    945        product(s) total </br>
+
+  Referential Integrity Check Summary:</br>
+ &nbsp;&nbsp;    945        check(s) passed </br>
+ &nbsp;&nbsp;    0          check(s) failed </br>
+ &nbsp;&nbsp;    0          check(s) skipped </br>
+ &nbsp;&nbsp;    945        check(s) total </br>
+
+</code>
+
+<p>However, the bundle would benefit from a readme.txt at the top level of the bundle directory, giving a high-level overview of the bundle for users. 
+
+<p>Known issues will be resolved during lien resolution, along with any other issues raised by the reviewers and deemed reasonable/necessary. 
+
+
+<h3>Reviewers' Submitted Comments and Responses</h3>
+
+<!--The responses from the reviewers and data provider are documented in the <a href="./yet-to-be-written_liens_resolved.pdf" target="_blank">lien resolution document</a>.-->
+
+<h3>Review Outcome</h3>
+<!-- TBD-->
+
+<hr>
+<a href="/">Ring-Moon Systems Node Home</a>
+</body>
+</html>
