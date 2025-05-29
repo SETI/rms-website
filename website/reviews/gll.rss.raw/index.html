@@ -73,7 +73,7 @@ The Galileo mission launched on October 18, 1989 on the space shuttle Atlantis. 
 
 The Galileo Radio Science Subsystem (RSS) was a powerful radio science instrument designed to explore Jupiter. It contained capabilities for both S-band and X-band radio links to Earth and an onboard Ultra Stable Oscillator (USO). It was integrated with the telecommunications subsystem (see Section 2.6.2 of the archive Software Interface Specification (SIS) in the document collection).
 
-<p>Unfortunately, the High Gain Antenna (HGA) filed to deploy and severely limited the capabilities of the investigation. The USO was used throughout the mission as an onboard stable frequency reference, but the radio link to Earth was limited to be used on the Low Gain Antenna (LGA) and at S-band uplink/downlink only.
+<p>Unfortunately, the High Gain Antenna (HGA) failed to deploy and severely limited the capabilities of the investigation. The USO was used throughout the mission as an onboard stable frequency reference, but the radio link to Earth was limited to be used on the Low Gain Antenna (LGA) and at S-band uplink/downlink only.
 
 <h4>Science Objectives</h4>
 
@@ -215,7 +215,8 @@ In addition to an overall recommendation, the RMS Node will compile a list of li
 
 <h3>Known Issues</h3>
 
-RMS has run Validate v3.7.0 on the bundle and found no errors or warnings, full report available <a href="/review-data/gll.rss.raw">here</a>.
+<ul>
+<li> RMS has run Validate v3.7.0 on the bundle and found no errors or warnings, full report available <a href="/review-data/gll.rss.raw">here</a>.
 </br> 
 </br>
 <code>
@@ -238,9 +239,11 @@ Summary: <br/>
  &nbsp;&nbsp;    945        check(s) total </br>
 
 </code>
+</li>
 
-<p>However, the bundle would benefit from a readme.txt at the top level of the bundle directory, giving a high-level overview of the bundle for users. 
-
+<li>However, the bundle would benefit from a readme.txt at the top level of the bundle directory, giving a high-level overview of the bundle for users. 
+<li>Typo in archive SIS: "Unfortunately, the High Gain Antenna (HGA) <em>filed</em> to deploy."
+</ul>
 <p>Known issues will be resolved during lien resolution, along with any other issues raised by the reviewers and deemed reasonable/necessary. 
 
 
