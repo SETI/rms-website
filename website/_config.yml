@@ -13,6 +13,7 @@ viewmaster_url: "//pds-rings.seti.org/viewmaster/"
 assets_url: "//pds-rings.seti.org/"
 pds4_url: "//pds-rings.seti.org/pds4/"
 tools_url: "//pds-rings.seti.org/tools/"
+rms-annex_url: "//pds-rings.seti.org/rms-annex/"
 
 # Build settings
 markdown: kramdown
