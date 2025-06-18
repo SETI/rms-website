@@ -5,58 +5,80 @@ tabs: voyager_iss
 volume: volumes/VG_28xx/VG_2803/
 ---
 
-## Where did the VGISS_0nnn volumes go?
+## Organization
 
-The VGISS_0nnn volumes have been superseded. Following the peer review of the
-Saturn data, we reorganized the data sets, electing to no longer parallel the
-volume organization of the original data. The new organization is essentially
-chronological, based on FDS count, with the data further subdivided by
-planetary system encounter.
+The Voyager images are organized on a series of PDS volumes as follows:
 
-  * VGISS_5nnn: Jupiter encounter observations, where the first digit after the five is 1 for Voyager 1 and 2 for Voyager 2.
-  * VGISS_6nnn: Saturn encounter observations, where the first digit after the six is 1 for Voyager 1 and 2 for Voyager 2.
-  * VGISS_72nn: Voyager 2, Uranus encounter observations.
-  * VGISS_82nn: Voyager 2, Neptune encounter observations.
+- [VGISS_5xxx]({{ site.viewmaster_url }}volumes/VGISS_5xxx){:target="_blank"}: Images from the Jupiter flybys
+    - VGISS_5101 to VGISS_5120: Images from the Voyager 1 flyby
+    - VGISS_5201 to VGISS_5214: Images from the Voyager 2 flyby
 
-See the table below for direct access to individual volumes.
+- [VGISS_6xxx]({{ site.viewmaster_url }}volumes/VGISS_6xxx){:target="_blank"}: Images from the Saturn flybys
+    - VGISS_6101 to VGISS_6121: Images from the Voyager 1 flyby
+    - VGISS_6201 to VGISS_6215: Images from the Voyager 2 flyby
 
-### Overview
+- [VGISS_7xxx]({{ site.viewmaster_url }}volumes/VGISS_7xxx){:target="_blank"}: Images from the Voyager 2 flyby of Uranus
 
-** All four data sets have completed the peer review and lien resolution process and have an archive status of "locally archived".**
+- [VGISS_8xxx]({{ site.viewmaster_url }}volumes/VGISS_8xxx){:target="_blank"}: Images from the Voyager 2 flyby of Neptune
 
-**Users are strongly encouraged to review the TUTORIAL.TXT and the PROCESSING.TXT files, located in the DOCUMENT directory of every volume.** These, especially PROCESSING.TXT, change with each encounter, so it is important to obtain the variation associated with the specific encounter. The tutorial is a comprehensive guide to the data in these data sets, and the processing document gives a detailed description of the processing steps behind the data files in these data sets.
+Within each sequence of volumes, images are stored in chronological order. Files are named by the seven-digit spacecraft 
+clock (aka the "Flight Data System" or "FDS" count). See the table below for direct access to individual volumes. Note 
+that the FDS counts have the following properties:
+- Voyager 1 at Jupiter: First digits are 14-17.
+- Voyager 2 at Jupiter: First digits are 18-20.
+- Voyager 1 at Saturn: First digits are 27-35.
+- Voyager 2 at Saturn: First digits are 38-44.
+- Voyager 2 at Uranus: First digits are 24-27.
+- Voyager 2 at Neptune: First digits are 08-12.
 
-These data sets contain data from four processing levels:
+## Data Files
 
-  * Raw Image: uncompressed version of the original file
-  * Cleaned Image: spikes and reseau marks removed
-  * Calibrated Image: dark current subtraction and calibration model applied
-  * Geomed Image: geometrically corrected image
+Each Voyager image is stored at four processing levels, as indicated by a suffix:
 
-The processing levels are progressive (i.e., geometrically corrected images
-have also been cleaned and calibrated). For information on processing levels,
-please see a Voyager calibrated ISS TUTORIAL.TXT file found in the DOCUMENT
-directory of each volume.
+- *_RAW.IMG: The uncompressed, raw image.
+- *_CLEANED.IMG: The raw image with noise spikes and reseau markings suppressed.
+- *_CALIB.IMG: The image after dark current subtracted and conversion to units related to reflectivity.
+- *_GEOMA.IMG: The calibrated image with camera distortion removed.
 
-###  Naming conventions
+For example, the file VGISS_5xxx/VGISS_5214/DATA/C20693XX/C2069302_RAW.IMG is the raw version of the 
+Voyager 2 Jupiter image with FDS count 20693.02.
 
-The data directories in the original volumes were sorted by target. In
-response to recommendations from the peer review panel for the Saturn data
-set, the data directories in the calibrated volumes are sorted by image
-number.
+For more information about how to use these files, see the file TUTORIAL.TXT found in each volume's DOCUMENT 
+directory. In addition, the file PROCESSING.TXT provides a detailed description of the processing steps behind 
+each data file. This information is customized for each planetary system:
 
-For details on the volume structure and file naming conventions, please review
-a Voyager calibrated ISS [AAREADME.TXT](calib_AAREADME.TXT){:target="_blank"} file (especially
-section 4). This file (with minor header variations) appears in the root
-directory of every volume.
+- Jupiter [TUTORIAL.TXT]({{ site.holdings_url }}volumes/VGISS_5xxx/VGISS_5101/DOCUMENT/TUTORIAL.TXT){:target="_blank"} and 
+[PROCESSING.TXT]({{ site.holdings_url }}volumes/VGISS_5xxx/VGISS_5101/DOCUMENT/PROCESSING.TXT){:target="_blank"}
 
-### Getting the Data You want
+- Saturn [TUTORIAL.TXT]({{ site.holdings_url }}volumes/VGISS_6xxx/VGISS_6101/DOCUMENT/TUTORIAL.TXT){:target="_blank"} and 
+[PROCESSING.TXT]({{ site.holdings_url }}volumes/VGISS_6xxx/VGISS_6101/DOCUMENT/PROCESSING.TXT){:target="_blank"}
+
+- Uranus [TUTORIAL.TXT]({{ site.holdings_url }}volumes/VGISS_7xxx/VGISS_7201/DOCUMENT/TUTORIAL.TXT){:target="_blank"} and 
+[PROCESSING.TXT]({{ site.holdings_url }}volumes/VGISS_7xxx/VGISS_7201/DOCUMENT/PROCESSING.TXT){:target="_blank"}
+
+- Neptune [TUTORIAL.TXT]({{ site.holdings_url }}volumes/VGISS_8xxx/VGISS_8201/DOCUMENT/TUTORIAL.TXT){:target="_blank"} and 
+[PROCESSING.TXT]({{ site.holdings_url }}volumes/VGISS_8xxx/VGISS_8201/DOCUMENT/PROCESSING.TXT){:target="_blank"}
+
+The images are all stored in [VICAR format]({{ site.holdings_url }}documents/VGISS_5xxx/VICAR-File-Format.pdf){:target="_blank"}. 
+Python users can read the data files using our ["vicar" module](//rms-vicar.readthedocs.io/en/latest/){:target="_blank"}. 
+
+## Getting the Data You want
 
   * Use **[OPUS]({{ site.opus_url }}/instrument=Voyager+ISS&mission=Voyager&cols=opusid,instrument,planet,target,time1,observationduration&widgets=mission,instrument,planet,target){:target="_blank"}**,
 our versatile search engine to find and retrieve specific Voyager ISS data products using a wide range of criteria.
 
-    * Search results are provided with thumbnail images for each observation, and include options to download compressed raw images, thumbnail images, tables of associated metadata, and if available versions of the images in various stages of processing from uncompressed raw images through fully calibrated and geometrically corrected images. User selected data files can be bundled as zip files for easy downloading.
+    * Search results are provided with thumbnail images for each observation, and include options to download compressed raw 
+    images, thumbnail images, tables of associated metadata, and if available versions of the images in various stages of processing 
+    from uncompressed raw images through fully calibrated and geometrically corrected images. User selected data files can be 
+    bundled as zip files for easy downloading.
 
+  * Use Viewmaster to explore the data volumes for [Jupiter]({{ site.viewmaster_url }}volumes/VGISS_5xxx){:target="_blank"}, 
+    [Saturn]({{ site.viewmaster_url }}volumes/VGISS_6xxx){:target="_blank"}, 
+    [Uranus]({{ site.viewmaster_url }}volumes/VGISS_7xxx){:target="_blank"}, 
+    or [Neptune]({{ site.viewmaster_url }}volumes/VGISS_8xxx){:target="_blank"}.
+
+    Viewmaster allows you to browse through the volumes, providing previews of images and access to observing details.
+    
   * The table below provides direct access to the calibrated volumes and tar.gz files for each volume.
 
     * Clicking on the VOLUME_ID will take you to the root directory of the volume.

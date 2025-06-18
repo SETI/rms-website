@@ -1,20 +1,23 @@
 ---
 layout: base
 layout_style: default
+assets_location: cassini/iss
+title: Cassini ISS
 tabs: cassini_iss
 ---
+{% assign assets_url = site.assets_url | append: page.assets_location | append: "/" %}
 
-![\[SATURN APPROACH IMAGE\]](PIA06077.jpg)
+![\[SATURN APPROACH IMAGE\]]({{ assets_url }}PIA06077.jpg)
 
 
-## Cassini ISS
+## {{ page.title }}
 
 
 The Cassini Imaging Science Subsystem (ISS) consists of two cameras, narrow-
 angle and wide-angle. Each obtains fine-resolution monochromatic images
 between blue and near-infrared wavelengths.
 
-**Cassini ISS Calibration Software Update**. (View a table of all **[CISSCAL release dates](cisscal_release_dates.txt){:target="_blank"}**)
+**Cassini ISS Calibration Software Update**. (View a table of all **[CISSCAL release dates]({{ assets_url }}cisscal_release_dates.txt){:target="_blank"}**)
 
   * **November 2019.** CISSCAL updated to version 4.1
   * These updates are contained in the revised [COISS_0011]({{ site.viewmaster_url }}volumes/COISS_0xxx/COISS_0011/){:target="_blank"} volume (version 4.3).
@@ -34,7 +37,7 @@ between blue and near-infrared wavelengths.
     * Completed the description of how to use CISSCAL making this version, and any subsequent versions, of the ISS User Guide the
       definitive source for how to use CISSCAL.
 
-  * [ISS Distortion](owen_2003_iss_distortion_model-1.pdf){:target="_blank"}. Provides an alternate Distortion Model for Cassini ISS.
+  * [ISS Distortion]({{ assets_url }}owen_2003_iss_distortion_model-1.pdf){:target="_blank"}. Provides an alternate Distortion Model for Cassini ISS.
 
 
 For mission highlights and press release images, see our [Cassini Gallery]({{ site.baseurl }}/galleries/cassini.html). You can also find more at JPL's [Cassini home
