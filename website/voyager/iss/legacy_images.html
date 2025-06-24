@@ -3,7 +3,10 @@ layout: base
 layout_style: default
 title: Legacy Images (ISS)
 tabs: voyager_iss
+assets_url: voyager/iss
 ---
+
+{% assign assets_url = site.assets_url | append: page.assets_url| append: "/" %}
 
 ## {{ page.title }}
 
@@ -45,10 +48,10 @@ The following links contain information about the legacy data, organization, dat
 
   * [Volume organization and file formats]({{ site.holdings_url }}volumes/VG_0xxx/VG_0038/DOCUMENT/VOLINFO.TXT){:target="_blank"}.
   * Data set descriptions for:
-    * [Jupiter]({{ site.assets_url}}dataset_jupiter.txt){:target="_blank"}
-    * [Saturn]({{ site.assets_url}}dataset_saturn.txt){:target="_blank"}
-    * [Uranus]({{ site.assets_url}}dataset_uranus.txt){:target="_blank"}
-    * [Neptune]({{ site.assets_url}}dataset_neptune.txt){:target="_blank"}
+    * [Jupiter]({{ assets_url }}dataset_jupiter.txt){:target="_blank"}
+    * [Saturn]({{ assets_url }}dataset_saturn.txt){:target="_blank"}
+    * [Uranus]({{ assets_url }}dataset_uranus.txt){:target="_blank"}
+    * [Neptune]({{ assets_url }}dataset_neptune.txt){:target="_blank"}
   * [Data set references](iss_refs.html).
 
 This link provides access to the narrow angle and wide angle [camera descriptions](instrument.html).
