@@ -96,17 +96,17 @@
   submenu:
 
     - title: Matt Tiscareno
-      href: //www.seti.org/our-scientists/matthew-tiscareno
+      href: //www.seti.org/people/matthew-tiscareno
       open: new_tab
 
     - title: Mitch Gordon
-      href: //www.seti.org/our-scientists/mitchell-gordon
+      href: //www.seti.org/people/mitchell-gordon
       open: new_tab
 
     - title: Mark Showalter
-      href: //www.seti.org/our-scientists/mark-showalter
+      href: //www.seti.org/people/mark-showalter
       open: new_tab
 
     - title: Rob French
-      href: //www.seti.org/our-scientists/robert-french
+      href: //www.seti.org/people/robert-french
       open: new_tab
