@@ -1,8 +1,10 @@
 ---
 layout: base
 layout_style: default
+assets_location: rpx/
 title: "Saturn Event Predictions"
 ---
+{% assign assets_url = site.assets_url | append: page.assets_location %}
 
 # Saturn Event Predictions
 
@@ -11,20 +13,20 @@ predicted the times of events (transits, occultations and eclipses) involving
 the classical satellites of Saturn. Their paper (_Icarus_ **105**, 427-440,
 1993) contains tables of the most easily observed events.
 
-  * [Documentation]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/readme.txt){:target="_blank"} ("README" file)
-  * Eclipses by Saturn [ 1992-1998]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ecl95.dat){:target="_blank"}
-  * Mutual eclipses and occultations of the satellites [ 1994-1997]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/phm95.dat){:target="_blank"}
-  * All events by year: [ 1992]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph92.dat){:target="_blank"},
-  [ 1993]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph93.dat){:target="_blank"},
-  [ 1994]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph94.dat){:target="_blank"},
-  [ 1995]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph95.dat){:target="_blank"},
-  [ 1996]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph96.dat){:target="_blank"},
-  [ 1997]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph97.dat){:target="_blank"},
-  [ 1998]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph98.dat){:target="_blank"},
-  [ 1999]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/ph99.dat){:target="_blank"}
-  * [ Selected eclipses by Saturn]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/table4.dat){:target="_blank"} (Table 4 from Arlot & Thuillot 1993
-  * [ Selected mutual events]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/table5.dat){:target="_blank"} (Table 5 from Arlot & Thuillot 1993)
-  * [ PC program]({{ site.assets_url }}rpx/tucson_1994/rpx_bdl/phenpc.exe) to select and print records from the above tables
+  * [Documentation]({{ assets_url }}tucson_1994/rpx_bdl/readme.txt){:target="_blank"} ("README" file)
+  * Eclipses by Saturn [ 1992-1998]({{ assets_url }}tucson_1994/rpx_bdl/ecl95.dat){:target="_blank"}
+  * Mutual eclipses and occultations of the satellites [ 1994-1997]({{ assets_url }}tucson_1994/rpx_bdl/phm95.dat){:target="_blank"}
+  * All events by year: [ 1992]({{ assets_url }}tucson_1994/rpx_bdl/ph92.dat){:target="_blank"},
+  [ 1993]({{ assets_url }}tucson_1994/rpx_bdl/ph93.dat){:target="_blank"},
+  [ 1994]({{ assets_url }}tucson_1994/rpx_bdl/ph94.dat){:target="_blank"},
+  [ 1995]({{ assets_url }}tucson_1994/rpx_bdl/ph95.dat){:target="_blank"},
+  [ 1996]({{ assets_url }}tucson_1994/rpx_bdl/ph96.dat){:target="_blank"},
+  [ 1997]({{ assets_url }}tucson_1994/rpx_bdl/ph97.dat){:target="_blank"},
+  [ 1998]({{ assets_url }}tucson_1994/rpx_bdl/ph98.dat){:target="_blank"},
+  [ 1999]({{ assets_url }}tucson_1994/rpx_bdl/ph99.dat){:target="_blank"}
+  * [ Selected eclipses by Saturn]({{ assets_url }}tucson_1994/rpx_bdl/table4.dat){:target="_blank"} (Table 4 from Arlot & Thuillot 1993
+  * [ Selected mutual events]({{ assets_url }}tucson_1994/rpx_bdl/table5.dat){:target="_blank"} (Table 5 from Arlot & Thuillot 1993)
+  * [ PC program]({{ assets_url }}tucson_1994/rpx_bdl/phenpc.exe) to select and print records from the above tables
 
 P. D. Nicholson of Cornell University has predicted the times of eclipse
 disappearances and reappearances for the small inner satellites. Eclipse
@@ -42,19 +44,19 @@ Nicholson has more accurate predictions for individual dates, if needed,
 including the eccentricities and inclinations, and instantaneous light time
 corrections.
 
-  * Pan [disappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/pan_dis.txt){:target="_blank"} and [reappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/pan_rea.txt){:target="_blank"}
-  * Atlas [disappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/atlas_dis.txt){:target="_blank"} and [reappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/atlas_rea.txt){:target="_blank"}
-  * Prometheus [disappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/prometheus_dis.txt){:target="_blank"} and [reappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/prometheus_rea.txt){:target="_blank"}
-  * Pandora [disappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/pandora_dis.txt){:target="_blank"} and [reappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/pandora_rea.txt){:target="_blank"}
-  * Janus [disappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/janus_dis.txt){:target="_blank"} and [reappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/janus_rea.txt){:target="_blank"}
-  * Epimetheus [disappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/epimetheus_dis.txt){:target="_blank"} and [reappearances]({{ site.assets_url }}rpx/tucson_1994/rpx_pdn/epimetheus_rea.txt){:target="_blank"}
+  * Pan [disappearances]({{ assets_url }}tucson_1994/rpx_pdn/pan_dis.txt){:target="_blank"} and [reappearances]({{ assets_url }}tucson_1994/rpx_pdn/pan_rea.txt){:target="_blank"}
+  * Atlas [disappearances]({{ assets_url }}tucson_1994/rpx_pdn/atlas_dis.txt){:target="_blank"} and [reappearances]({{ assets_url }}tucson_1994/rpx_pdn/atlas_rea.txt){:target="_blank"}
+  * Prometheus [disappearances]({{ assets_url }}tucson_1994/rpx_pdn/prometheus_dis.txt){:target="_blank"} and [reappearances]({{ assets_url }}tucson_1994/rpx_pdn/prometheus_rea.txt){:target="_blank"}
+  * Pandora [disappearances]({{ assets_url }}tucson_1994/rpx_pdn/pandora_dis.txt){:target="_blank"} and [reappearances]({{ assets_url }}tucson_1994/rpx_pdn/pandora_rea.txt){:target="_blank"}
+  * Janus [disappearances]({{ assets_url }}tucson_1994/rpx_pdn/janus_dis.txt){:target="_blank"} and [reappearances]({{ assets_url }}tucson_1994/rpx_pdn/janus_rea.txt){:target="_blank"}
+  * Epimetheus [disappearances]({{ assets_url }}tucson_1994/rpx_pdn/epimetheus_dis.txt){:target="_blank"} and [reappearances]({{ assets_url }}tucson_1994/rpx_pdn/epimetheus_rea.txt){:target="_blank"}
 
 Following the May and August 1995 events, P. D. Nicholson has revised
 predictions of eclipse reappearance times for
-[Prometheus]({{ site.assets_url }}rpx/tucson_1994/prometheus_revised.txt){:target="_blank"},
-[Pandora]({{ site.assets_url }}rpx/tucson_1994/pandora_revised.txt){:target="_blank"},
-[Janus]({{ site.assets_url }}rpx/tucson_1994/janus_revised.txt){:target="_blank"}, and
-[Epimetheus]({{ site.assets_url }}rpx/tucson_1994/epimetheus_revised.txt){:target="_blank"}.
+[Prometheus]({{ assets_url }}tucson_1994/prometheus_revised.txt){:target="_blank"},
+[Pandora]({{ assets_url }}tucson_1994/pandora_revised.txt){:target="_blank"},
+[Janus]({{ assets_url }}tucson_1994/janus_revised.txt){:target="_blank"}, and
+[Epimetheus]({{ assets_url }}tucson_1994/epimetheus_revised.txt){:target="_blank"}.
 Note that Prometheus event times have changed rather significantly.
 
 Dr. Eliot Young of NASA Ames is organizing a campaign to map the surface of

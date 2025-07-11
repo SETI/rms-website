@@ -20,52 +20,27 @@ The tabs associated with this page describe the ISS data files and how to
 obtain them.
 
   * [Instrument](instrument.html) \- Access to descriptive information about the Voyager cameras.
-  * [Processed Images](calib_images.html) \- Information on and access to new data sets currently being produced by the Ring-Moon Systems Node containing uncompressed, processed versions of the Voyager images.
-  * [Raw Images](raw_images.html) \- Information on and access to all of the originally submitted Voyager compressed raw images.
+  * [Images](calib_images.html) \- Information about the raw and calibrated Voyager images.
   * [Derived Products](derived.html) \- Provides direct access to:
     * All of the Voyager images of the Jovian rings.
-    * a set of derived radial profiles from the finest-resolution Voyager images of Saturn's rings. Profiles of both the lit and dark sides are included at a resolution of order 5 km.
+    * A set of derived radial profiles from the finest-resolution Voyager images of Saturn's rings. Profiles of both the lit and dark sides are included at a resolution of order 5 km.
+  * [Legacy Images](legacy_images.html) \- Compressed, raw images as originally delivered to the PDS.
 
 ## Data Set Information
 
-### New Data Sets of Processed Images
+The Voyager images are organized on a series of PDS volumes as follows:
 
-The PDS Ring-Moon Systems Node is producing new multivolume Voyager ISS data sets, one
-data set for each of the giant planets. Each data set contains sets of images
-and data tables for each of the original images. These include versions of
-each image at several stages in the image processing pipeline: uncompressed
-raw, cleaned, calibrated, and geometrically corrected.
+- [VGISS_5xxx]({{ site.viewmaster_url }}volumes/VGISS_5xxx){:target="_blank"}: Images from the Jupiter flybys
+    - VGISS_5101 to VGISS_5120: Images from the Voyager 1 flyby
+    - VGISS_5201 to VGISS_5214: Images from the Voyager 2 flyby
 
-The volume IDs are:
+- [VGISS_6xxx]({{ site.viewmaster_url }}volumes/VGISS_6xxx){:target="_blank"}: Images from the Saturn flybys
+    - VGISS_6101 to VGISS_6121: Images from the Voyager 1 flyby
+    - VGISS_6201 to VGISS_6215: Images from the Voyager 2 flyby
 
-  * VGISS_5nnn: Jupiter encounter observations, where the first digit after the five is 1 for Voyager 1 and 2 for Voyager 2.
-  * VGISS_6nnn: Saturn encounter observations, where the first digit after the six is 1 for Voyager 1 and 2 for Voyager 2.
-  * VGISS_72nn: Voyager 2, Uranus encounter observations.
-  * VGISS_82nn: Voyager 2, Neptune encounter observations.
+- [VGISS_7xxx]({{ site.viewmaster_url }}volumes/VGISS_7xxx){:target="_blank"}: Images from the Voyager 2 flyby of Uranus
 
-Obtain more information about, and access to, these volumes through the
-[Processed Images Tab.](calib_images.html)
-
-### Original Data Set of Compressed Raw Images
-
-The PDS originally released raw, compressed "EDR" versions of all the Voyager
-images on a set of CD-ROMs identified VG_0001 through VG_0038. These volumes
-can accessed through the [Raw Images Tab.](raw_images.html) The organization
-is as follows:
-
-  * VG_0001-0003: The complete Uranus images
-  * VG_0004-0005: Selected Saturn images
-  * VG_0006-0008: Selected Jupiter images
-  * VG_0009-0012: The complete Neptune images
-  * VG_0013-0025: The complete Jupiter images
-  * VG_0026-0038: The complete Saturn images
-
-**If you are unfamiliar with scientific image formats, consider taking Emily Lakdawalla's free on-line course, [Basics of Digital Imaging](//courses.planetary.org/p/imageclass){:target="_blank"}.**
-
-## General Image Naming Conventions
-
-  * For Jupiter, images beginning with 1 are from Voyager 1 and those beginning with 2 are from Voyager 2
-  * For Saturn, images beginning with 3 are from Voyager 1 and those beginning with 4 are from Voyager 2.
+- [VGISS_8xxx]({{ site.viewmaster_url }}volumes/VGISS_8xxx){:target="_blank"}: Images from the Voyager 2 flyby of Neptune
 
 ## Image Galleries
 
