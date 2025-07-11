@@ -96,17 +96,17 @@
   submenu:
 
     - title: Matt Tiscareno
-      href: //www.seti.org/people/matthew-tiscareno
+      external_href: //www.seti.org/people/matthew-tiscareno
       open: new_tab
 
     - title: Megan Seritan
-      href: //www.seti.org/people/megan-seritan
+      external_href: //www.seti.org/people/megan-seritan
       open: new_tab
 
     - title: Mark Showalter
-      href: //www.seti.org/people/mark-showalter
+      external_href: //www.seti.org/people/mark-showalter
       open: new_tab
 
     - title: Rob French
-      href: //www.seti.org/people/robert-french
+      external_href: //www.seti.org/people/robert-french
       open: new_tab
