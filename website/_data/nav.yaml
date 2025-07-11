@@ -96,17 +96,17 @@
   submenu:
 
     - title: Matt Tiscareno
-      external_href: //www.seti.org/our-scientists/matthew-tiscareno
+      href: //www.seti.org/people/matthew-tiscareno
       open: new_tab
 
     - title: Megan Seritan
-      external_href: //www.seti.org/our-scientists/megan-seritan
+      href: //www.seti.org/people/megan-seritan
       open: new_tab
 
     - title: Mark Showalter
-      external_href: //www.seti.org/our-scientists/mark-showalter
+      href: //www.seti.org/people/mark-showalter
       open: new_tab
 
     - title: Rob French
-      external_href: //www.seti.org/our-scientists/robert-french
+      href: //www.seti.org/people/robert-french
       open: new_tab
