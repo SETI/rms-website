@@ -2,19 +2,19 @@
 layout: base
 layout_style: default
 title: "Voyager 1, Wide Angle Camera, Methane - U Filter"
-directory: /voyager/iss/inst_cal/
+assets_url: voyager/iss/inst_cal/
 ---
-{% assign asset_url = site.assets_url | append: page.directory  %}
+{% assign assets_url = site.assets_url | append: page.assets_url %}
 
 # {{ page.title }}
 
-![Filter response plot for vg1_wa_ch4u]({{ asset_url }}images/vg1_wa_ch4u.gif)
+![Filter response plot for vg1_wa_ch4u]({{ assets_url }}images/vg1_wa_ch4u.gif)
 
 * Convolution of filter, optics and vidicon responses, renormalized.  
 ** Filter transmissivity alone. 
 
-Download the [data file]({{ asset_url }}data/vg1_wa_ch4u.tab){:target="_blank"} used to generate plot or
-[diagram]({{ asset_url }}images/vg1_wa_ch4u.ps) (Postscript format).
+Download the [data file]({{ assets_url }}data/vg1_wa_ch4u.tab){:target="_blank"} used to generate plot or
+[diagram]({{ assets_url }}images/vg1_wa_ch4u.ps) (Postscript format).
 
 From Danielson, G. E., _et al_., [ Radiometric Performance of the Voyager
 Cameras](//adsabs.harvard.edu/cgi-bin/nph-bib_query?1981JGR%2E%2E%2E%2E86%2E8683D&db_key=l){:target="_blank"}, _Journal of Geophysical

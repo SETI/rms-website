@@ -28,6 +28,10 @@
                 {% assign page_class = 'homepage' %}
               {% endif %}
 
+              {% if page.page_class %}
+                {% assign page_class = page_class | append: ' ' | append: page.page_class %}
+              {% endif %}
+
               <div class = "content {{page_class}}">
                 {% if page.format == 'html' %}
 
