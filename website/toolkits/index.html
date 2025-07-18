@@ -8,26 +8,30 @@ title: Ring-Moon Systems Node Open-Source Software
 
 ## Open Source Python on GitHub
 
-We provide a variety of useful tools in our GitHub repository. Modules may be installed by running the pip install command.
+We provide a variety of useful tools in our GitHub repository.
 
-Name | Description | How to Install | Supported Python Versions
----|---|:---|:---
-[cspyce](//github.com/SETI/rms-cspyce){:target="_blank"} | Python interface to the SPICE toolkit | pip install cspyce | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cspyce)](//pypi.org/project/cspyce)
-[filecache](//github.com/SETI/rms-filecache){:target="_blank"} | Supports local and remote (HTTP, AWS, Google Cloud) files using a uniform interface | pip install rms-filecache | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-filecache)](//pypi.org/project/rms-filecache)
-[interval](//github.com/SETI/rms-interval){:target="_blank"} | Dictionary keyed by ranges of floating-point numbers | pip install rms-interval | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-interval)](//pypi.org/project/rms-interval)
-[julian](//github.com/SETI/rms-julian){:target="_blank"} | Calendar time and date calculations | pip install rms-julian | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-julian)](//pypi.org/project/rms-julian)
-[pdslogger](//github.com/SETI/rms-pdslogger){:target="_blank"} | Extension to the Python logging module | pip install rms-pdslogger | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdslogger)](//pypi.org/project/rms-pdslogger)
-[pdsparser](//github.com/SETI/rms-pdsparser){:target="_blank"} | Read and manipulate PDS3 label files | pip install rms-pdsparser | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdsparser)](//pypi.org/project/rms-pdsparser)
-[pdstable](//github.com/SETI/rms-pdstable){:target="_blank"} | Read and manipulate ASCII tables with PDS3 labels | pip install rms-pdstable | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdstable)](//pypi.org/project/rms-pdstable) 
-[pdstemplate](//github.com/SETI/rms-pdstemplate){:target="_blank"} | Generate PDS labels based on templates | pip install rms-pdstemplate | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-pdstemplate)](//pypi.org/project/rms-pdstemplate)  
-[polymath](//github.com/SETI/rms-polymath){:target="_blank"} | Wrapper for NumPy that adds easy masks and vector computation | pip install rms-polymath | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-polymath)](//pypi.org/project/rms-polymath)  
-[solar](//github.com/SETI/rms-solar){:target="_blank"} | Tabulates the solar spectrum vs. wavelength | pip install rms-solar | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-solar)](//pypi.org/project/rms-solar)  
-[starcat](//github.com/SETI/rms-starcat){:target="_blank"} | A set of classes for reading and searching star catalogs | pip install rms-starcat | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-starcat)](//pypi.org/project/rms-starcat)  
-[tabulation](//github.com/SETI/rms-tabulation){:target="_blank"} | A class that performs linear interpolation | pip install rms-tabulation | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-tabulation)](//pypi.org/project/rms-tabulation)
-[textkernel](//github.com/SETI/rms-textkernel){:target="_blank"} | Reads SPICE text kernels, creating a Python dictionary | pip install rms-textkernel | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-textkernel)](//pypi.org/project/rms-textkernel)  
-[translator](//github.com/SETI/rms-translator){:target="_blank"} | Abstract class and subclasses for mapping strings such as file paths to other information | pip install rms-translator | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-translator)](//pypi.org/project/rms-translator)
-[vax](//github.com/SETI/rms-vax){:target="_blank"} | Converts Vax-format floats to IEEE | pip install rms-vax | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-vax)](//pypi.org/project/rms-vax)
-[vicar](//github.com/SETI/rms-vicar){:target="_blank"} | Reads and manipulates [VICAR](//www-mipl.jpl.nasa.gov/external/VICAR_file_fmt.pdf){:target="_blank"} formated files and their labels | pip install rms-vicar | [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rms-vicar)](//pypi.org/project/rms-vicar)  
+Name | Description | How to Install
+:---|:---|:---
+[cloud_tasks](//rms-cloud-tasks.readthedocs.io/){:target="_blank"} | A framework for running independent tasks on cloud providers with automatic compute instance and task queue management | pipx install rms-cloud-tasks 
+[cspyce](//github.com/SETI/rms-cspyce){:target="_blank"} | Python interface to the SPICE toolkit | pip install cspyce
+[filecache](//rms-filecache.readthedocs.io/){:target="_blank"} | Supports local and remote (HTTP, AWS, Google Cloud) files using a uniform interface | pip install rms-filecache
+[interval](//github.com/SETI/rms-interval){:target="_blank"} | Dictionary keyed by ranges of floating-point numbers | pip install rms-interval
+[julian](//rms-julian.readthedocs.io/){:target="_blank"} | Calendar time and date calculations | pip install rms-julian
+[link_checker](//rms-link-checker.readthedocs.io/){:target="_blank"} | Python tool that checks websites for broken links and catalogs internal assets | pipx install rms-link-checker
+[pds4_create_collection_product](//rms-pds4indextools.readthedocs.io/){:target="_blank"} | A command-line program to create a collection product from a collection of PDS4 XML labels | pipx install rms-pds4indextools
+[pds4_create_xml_index](//rms-pds4indextools.readthedocs.io/){:target="_blank"} | A command-line program to scrape all metadata information from a series of PDS4 XML labels | pipx install rms-pds4indextools
+[pdslogger](//rms-pdslogger.readthedocs.io/){:target="_blank"} | Extension to the Python logging module | pip install rms-pdslogger
+[pdsparser](//rms-pdsparser.readthedocs.io/){:target="_blank"} | Read and manipulate PDS3 label files | pip install rms-pdsparser
+[pdstable](//github.com/SETI/rms-pdstable){:target="_blank"} | Read and manipulate ASCII tables with PDS3 labels | pip install rms-pdstable
+[pdstemplate](//rms-pdstemplate.readthedocs.io/){:target="_blank"} | Generate PDS labels based on templates | pip install rms-pdstemplate  
+[polymath](//github.com/SETI/rms-polymath){:target="_blank"} | Wrapper for NumPy that adds easy masks and vector computation | pip install rms-polymath 
+[solar](//rms-solar.readthedocs.io/){:target="_blank"} | Tabulates the solar spectrum vs. wavelength | pip install rms-solar  
+[starcat](//rms-starcat.readthedocs.io/){:target="_blank"} | A set of classes for reading and searching star catalogs | pip install rms-starcat  
+[tabulation](//rms-tabulation.readthedocs.io/){:target="_blank"} | A class that performs linear interpolation | pip install rms-tabulation
+[textkernel](//rms-textkernel.readthedocs.io/){:target="_blank"} | Reads SPICE text kernels, creating a Python dictionary | pip install rms-textkernel  
+[translator](//github.com/SETI/rms-translator){:target="_blank"} | Abstract class and subclasses for mapping strings such as file paths to other information | pip install rms-translator
+[vax](//rms-vax.readthedocs.io/){:target="_blank"} | Converts Vax-format floats to IEEE | pip install rms-vax
+[vicar](//rms-vicar.readthedocs.io/){:target="_blank"} | Reads and manipulates [VICAR](//www-mipl.jpl.nasa.gov/external/VICAR_file_fmt.pdf){:target="_blank"} formated files and their labels | pip install rms-vicar  
 
 &nbsp;  
 The Astropy-affiliated astroquery package provides a Python interface to the ephemeris tools provided by the RMS Node via the [astroquery.solarsystem.pds](//astroquery.readthedocs.io/en/latest/solarsystem/pds/pds.html){:target="_blank"} submodule  

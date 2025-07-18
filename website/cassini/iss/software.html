@@ -8,16 +8,35 @@ tabs: cassini_iss
 
 **Software available or in development for general release:**
 
-### 1\. VICAR Image Processing System
+### 1\. Data Analysis Software
+
+  * ISS images are compatible with the Integrated Software for Imagers and Spectrometers (ISIS) software package which is available
+    through the [USGS Flagstaff web site](//isis.astrogeology.usgs.gov/){:target="_blank"}.
+
+  * [OMINAS](//github.com/nasa/ominas){:target="_blank"} (pronounced like 'ominous') is an
+    IDL-based software environment for the reduction and analysis of data taken by any space-based or planet-based system. The
+    linked github repository includes extensive documentation.
+
+  * CAVIAR is an IDL based software package designed for the astrometric measurement of natural satellite positions in images taken using
+    the Imaging Science Subsystem (ISS) of the Cassini spacecraft. For more information, see Cooper, et al., A&A 610, A2 (2018),
+    [DOI: 10.1051/0004-6361/201731713](//doi.org/10.1051/0004-6361/201731713){:target="_blank"}. CAVIAR does not currently appear to be 
+    publicly available. We will supply links to the appropriate pages if they become available.
+
+  * CASVU is designed specifically for ISS image data analysis. It operates under IDL and can be run under IDL VM software
+    which is available at no cost. CASVU does not currently appear to be publicly available. We will supply links to the appropriate 
+    pages if they become available.
 
 
-  * [VICAR](//www-mipl.jpl.nasa.gov/vicar_open.html){:target="_blank"}
+### 2\. VICAR Image Processing System
+
+
+  * [VICAR](//github.com/NASA-AMMOS/VICAR){:target="_blank"}
     is an open source image processing system developed and used by the Multimission Image Processing
     Lab (MIPL) at JPL.
   * VICAR was developed for use with JPL's planetary missions, and the VICAR format is compatible with both PDS3 and PDS4.
   * Questions regarding the installation and use of VICAR should be sent to: vicar_help@jpl.nasa.gov
 
-### 2\. Calibration Software
+### 3\. Calibration Software
 
   * **CISSCAL** is the ISS team developed, IDL based, calibration software. CISSCAL is available
     in the extras directory of [COISS_0011 volume]({{ site.viewmaster_url }}volumes/COISS_0xxx/COISS_0011/extras/){:target="_blank"}.
@@ -28,7 +47,7 @@ tabs: cassini_iss
 
     * The ISS User's Guide, [iss_data_user_guide_180916.pdf]({{ site.holdings_url }}volumes/COISS_0xxx/COISS_0011/document/iss_data_user_guide_180916.pdf){:target="_blank"} is the definitive source for instructions on the use of CISSCAL.
 
-    * View a table of all [CISSCAL release dates](cisscal_release_dates.txt){:target="_blank"}
+    * View a table of all [CISSCAL release dates]({{ site.assets_url }}cassini/iss/cisscal_release_dates.txt){:target="_blank"}
 
     **Note: Establishing a local ISS calibration pipeline has proven challenging, users are encouraged to first consider using the calibrated
     images available from the Ring-Moon Systems Node. See [Accessing Data](access.html), or the options available from the USGS web site (below).**
@@ -43,24 +62,6 @@ tabs: cassini_iss
     (GIS), change detection, merging of dissimilar instrument images, and use in a host of other scientific applications (e.g., ArcMAP, ENVI,
     Matlab, JMARS, etc.). Output formats currently supported include ISIS, PDS, GeoTiff, GeoJpeg2000, Jpeg, and PNG. POW supports Cassini ISS data.
 
-
-### 3\. Data Analysis Software
-
-  * ISS images are compatible with the Integrated Software for Imagers and Spectrometers (ISIS) software package which is available
-    through the [USGS Flagstaff web site](//isis.astrogeology.usgs.gov/){:target="_blank"}.
-
-  * [CAVIAR](ftp://ftp.imcce.fr/pub/softwares/caviar/){:target="_blank"}
-    is an IDL based software package designed for the astrometric measurement of natural satellite positions in images taken using
-    the Imaging Science Subsystem (ISS) of the Cassini spacecraft. For more information, see Cooper, et al., A&A 610, A2 (2018),
-    [DOI: 10.1051/0004-6361/201731713](//doi.org/10.1051/0004-6361/201731713){:target="_blank"}.
-
-  * [OMINAS](//github.com/nasa/ominas){:target="_blank"} (pronounced like 'ominous') is an
-    IDL-based software environment for the reduction and analysis of data taken by any space-based or planet-based system. The
-    linked github repository includes extensive documentation.
-
-  * CASVU is designed specifically for ISS image data analysis. It operates under IDL and can be run under IDL VM software
-    which is available at no cost. CASVU and its users' manual will be available soon. We will supply links to the appropriate
-    pages when they become available.
 
 ### 4\. Image Viewing Software
 
