@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PDS4 Data Peer Review</title>
+   <style>
+        /* Styling for directory tree */
+        .directory-tree {
+            font-family: monospace;
+            white-space: pre;
+            line-height: 0.6;
+        }
+        .directory-tree ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 0;
+            margin-bottom: -10px;
+        }
+        .directory-tree li::before {
+            content: "|__ ";
+            margin-top:0px;
+        }
+        .directory-tree li {
+            position: relative;
+            margin-bottom: -10px;
+        }
+        .directory-tree li:last-child::before {
+            content: "|__ ";
+            #margin-bottom:-20px;
+        }
+        .directory-tree li > ul::before {
+            #content: "|";
+            position: absolute;
+            left: -10px;
+            #top: -5px;
+            bottom: 0px;
+            #border-left: 1px solid #000;
+            margin-bottom:10px;
+        }
+        /* Reducing the space between nested li elements */
+        .directory-tree li > ul > li >ul {
+        margin-top: -15px; /* Adjust this value as needed */
+        }
+        .description {
+            color: #555;
+            margin-left: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body
+bgcolor="#ffffff"
+>
+
+<h1>F Ring Mosaics and Reprojected Images Created from Calibrated Cassini ISS Images, and Associated Metadata</h1>
+Review facilitated by the Ring-Moon Systems Node of NASA PDS: Mia Mace, Matt Tiscareno.<br>
+October, 2025
+<br>
+The data provider is Robert S. French.
+
+<h3>Background</h3>
+
+<p> Saturn's F ring is one of the most dynamic and scientifically intriguing features in the solar system. Discovered in 1979 by the Pioneer 11 spacecraft, the F ring is a narrow, complex, and ever-changing structure located just outside Saturn’s main ring system. Its unique morphology, characterized by multiple strands, clumps, and transient features, along with the influence of neighboring moons Prometheus and Pandora, has made it a focal point for studies of planetary ring dynamics, satellite-ring interactions, and the processes governing the evolution of ring systems. Before 2004, quality images of the F ring were limited to a handful produced.</p>
+
+<p>The purpose of this archive is to provide a carefully curated and documented set of high-quality images of the F ring taken by the Cassini ISS Narrow Angle Camera and Wide Angle Camera using clear filters. Special emphasis is placed on "FMOVIEs", sequences of dozens to hundreds of observations taken in rapid succession at a single inertial longitude while the F ring orbited through the
+field of view. Such movies provide a detailed picture of the F ring through most or all of a complete orbit.</p>
+
+<p>The archive includes the reprojected images, mosaics, and mosaics that have been adjusted by subtracting a background model. Each image and mosaic is supplemented by a table containing metadata such as resolution, phase angle, and emission angle for each valid co-rotating longitude. Reprojected images have an additional file describing the spacecraft pointing used to perform the reprojection. Mosaics have an additional file listing the reprojected images that were used to create the
+mosaic. A series of browse images in various sizes is provided for each image as well. In total 20,303 reprojected images are provided along with 302 associated mosaics.</p>
+
+<p><b>Reviewers are encouraged to read the User Guide provided in the document collection before making use of the archived results.</b></p>
+
+<h3>Data Bundle</h3>
+<p><b>The complete peer review bundle (cassini_iss_fring_mosaics_rsfrench2025.tar.gz) is online <a href="/review-data/cassini_iss_fring_mosaics_rsfrench2025">here</a>.</b> 
+Also provided are the checksum manifest and validation report; these latter two files are primarily for reviewers concerned with PDS4-compliance (see instructions below).</p>
+
+
+<p>The Cassini ISS F Ring Mosaics bundle is organized in a hierarchical directory structure, with each directory containing a PDS4 collection of a different type of derived data product. In addition, there are
+directories for documentation, context, SPICE kernels, and XML schema. The top-level directory structure is illustrated below:</p>
+    <div class="directory-tree">
+        <ul>
+            <li>cassini_iss_fring_mosaics_rsfrench2025/
+                <ul>
+                    <li>readme.txt<span class="description">Top level document</span></li>
+
+                    <li>bundle.lblx<span class="description">Label for bundle, describing members of the bundle and references etc</span></li>
+                    <li>browse_mosaic/<span class="description">Directory containing browse products for mosaics</span></li>
+                    <li>browse_mosaic_bkg_sub/<span class="description">Directory containing browse products for mosaics with background subtracted</span></li>
+                    <li>browse_reproj_img/<span class="description">Directory containing browse products for individual reprojected, calibrated images</span></li>
+                     <li>context/<span class="description">Directory containing context information related to the archive; such as spacecraft, instruments, targets</span></li>
+                    <li>data_mosaic/<span class="description">Directory containing the (non background-subtracted) F Ring mosaics created from reprojected, calibrated Cassini ISS images</span></li>
+                    <li>data_mosaic_bkg_sub/<span class="description">Directory containing the background-subtracted F Ring mosaics created from reprojected, calibrated Cassini ISS images</span></li>
+                    <li>data_reproj_img/<span class="description">Directory containing reprojected, calibrated Cassini ISS images</span></li>
+                   <li>document/<span class="description">Directory containing documentation</span></li>
+                   <li>spice_kernels/<span class="description">Directory containing SPICE kernels</span></li>
+                   <li>xml_schema/<span class="description">Directory containing XML Schema</span></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+Note: The context and xml_schema directories are used internally by PDS and do not need to be reviewed by science reviewers.
+
+<h3>Instructions for Reviewers</h3>
+<p>
+Here are guidelines and some information to help you produce an effective review with a reasonable level of effort.
+</p>
+
+All reviewers must address two general areas:
+<ul>
+<li> Scientific merit of data (are these the proper data to be archived?),
+<li> Usability of the data (appropriate formats; completeness of data set, including ancillary data; comprehensive documentation).
+</ul>
+
+Furthermore, if you are one of the panel members with a direct affiliation with the PDS, please also address a third general area:
+<ul>
+<li> Compliance with PDS4 Standards.
+</ul>
+If you are <b>not</b> one of the panel members with a direct affiliation with the PDS, then you do <b>not</b> need to address compliance with PDS4 standards. Rather, you should focus on the data (including ancillary data) and documentation.
+<p>
+While it is not realistic for you to analyze every data file, please check enough to convince yourself of the quality and consistency of the data and of any errors that you encounter.
+</p>
+<p>
+Please also evaluate the documentation provided in individual table labels, and referenced journal articles. Much of the information contained in the referenced articles is not duplicated in the data sets.
+</p>
+<p>
+Questions for reviewers to address are:
+<ul>
+<li> Documentation:
+<ul>
+<li> Does the documentation explain the data and how they were produced?
+<li> Does the documentation explain how to use the data?
+<li> Is the documentation (including referenced journal articles) sufficient to ensure the data will be intelligible to a scientist 10, 20, or 50 years in the future?
+</ul>
+<li> Data:
+<ul>
+<li> Are you able to manipulate and plot the data, interpret columns into tables, and understand the context and relationships of the data products?
+<li> Are there any concerns about the creation/generation, calibration (if appropriate), or general usability of the data? 
+<li> Is the archive design suitable (is the directory tree structured in a reasonable way)?
+</ul>
+</ul>
+The review panel submits written reviews by email and then, if the RMS Node thinks it is necessary, participates in a teleconference (date TBD) to discuss the reviews, including strengths and weaknesses of the data set. Specific shortcomings and errors will be identified as "liens" &ndash; questions about or requests for change &ndash;  which will need to be corrected. The review panel is responsible for making a recommendation on whether:
+<ul>
+<li> The bundle/s passed peer review and can be archived, once a set of panel identified liens have been resolved.
+<li> The material did not pass peer review, and must undergo an incremental (delta) review in certain specified areas.
+<li> The material did not pass peer review, and must undergo another full peer review.
+<li> The material did not pass peer review, and does not merit a second peer review.
+</ul>
+
+<p>
+In addition to an overall recommendation, the RMS Node will compile a list of liens in the archive design or sample products/bundle. The liens must be resolved before the associated data set can be archived.
+</p>
+
+<p></p> 
+
+<h3>Known Issues</h3>
+None noted.
+
+Any issues deemed reasonable/necessary will be resolved during lien resolution.
+
+
+<h3>Reviewers' Submitted Comments and Responses</h3>
+
+<!--The responses from the reviewers and data provider are documented in the <a href="./yet-to-be-written_liens_resolved.pdf" target="_blank">lien resolution document</a>.-->
+
+<h3>Review Outcome</h3>
+<!-- TBD-->
+
+<hr>
+<a href="/">Ring-Moon Systems Node Home</a>
+</body>
+</html>
