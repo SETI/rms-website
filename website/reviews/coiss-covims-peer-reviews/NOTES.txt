@@ -1,0 +1,530 @@
+
+cassini_iss_cruise/bundle.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  <lid_reference>urn:nasa:pds:mission.cassini</...>
+- This file and collection_data_raw.xml both have lid_reference to
+  urn:nasa:pds:context:target:planetary_system.jupiter_system
+Mitch has discussed this, as this doesn't exist yet. Your call.
+
+cassini_iss_cruise/data_raw/.../*.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  <lid_reference>urn:nasa:pds:cassini_iss_cruise:data_raw:cum-index</...>
+Only bundle.xml does not have it.
+- For the <Array_2D_Image>, disp:horizontal_display_axis and
+disp:vertical_display_axis should have the values of
+  Array_2D_Image/Axis_Array/axis_name, e.g. Line
+not
+  Array_2D_Image/Axis_Array/sequence_number, e.g. 1
+I.e. change
+  <disp:horizontal_display_axis>2</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>1</disp:vertical_display_axis>
+to
+  <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+- If you want tools to visualize the <Array_2D> (not the <Array_Image>),
+add 1) Array_2D/local_identifier and 2) a second disp:Display_Settings
+with local_identifier_reference set to the new local_identifier.
+
+cassini_iss_cruise/data_raw/13699xxxxx/1369908674n.xml & 77 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star_cluster.pleiades
+LIDs for star clusters are based on simbad. For the Pleiades,
+  urn:nasa:pds:context:target:star_cluster.cl_melotte_22
+
+cassini_iss_cruise/data_raw/13735xxxxx/1373566539n.xml & 11 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.cw_leo
+LIDs for stars are based on simbad. For CW Leo, the LID will be
+  urn:nasa:pds:context:target:star.irc_+10216
+
+cassini_iss_cruise/data_raw/13738xxxxx/1373843727w.xml & 294 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.78_tau
+Per simbad, use
+  urn:nasa:pds:context:target:star.tet02_tau
+
+cassini_iss_cruise/data_raw/13903xxxxx/1390389694n.xml & many others
+- The value is illegal.
+  <cassini:mission_phase_name> </cassini:mission_phase_name>
+Perhaps it should be CRUISE SCIENCE like the others
+
+cassini_iss_cruise/data_raw/14053xxxxx/1405398456n.xml & 180 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:sun.sun
+Per Guide to PDS4 Context Products V1.4 17 May 2019, use
+  urn:nasa:pds:context:target:star.sun
+though we have no context product yet
+
+cassini_iss_cruise//data_raw/14057xxxxx/1405767110w.xml
+cassini_iss_cruise//data_raw/14057xxxxx/1405779412w.xml
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.nml_tau
+Per simbad, use
+  urn:nasa:pds:context:target:star.ik_tau
+
+cassini_iss_cruise/data_raw/collection_data_raw.xml & 2129 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:ring.saturn_rings
+No context products for type=ring exist yet. As in the type=planetary_system
+debate, if there will later be context products for the individual rings, e.g.
+  urn:nasa:pds:context:target:ring.saturn.f_ring
+there is no good mechanism for associating the two.
+
+cassini_iss_cruise/document/collection_document.csv
+- Line 1 has a typo (urn:urn:nasa:):
+  S,urn:urn:nasa:pds:cassini_iss_saturn:document:iss-data-user-guide
+
+cassini_iss_cruise/metadata_raw/
+- This directory needs a collection.xml and .csv
+- PDS Standards' Table 2B-1 lists allowable top-level directories, and this is
+not there.  miscellaneous/ seems appropriate: "A miscellaneous collection
+contains supplementary information deemed by the data provider to be useful
+in the interpretation and use of other collections in the bundle but which
+does not fit within the scope of the other collections. For example,
+meta-data catalogs, data base dumps, and records of modification history
+could be included."
+
+cassini_iss_cruise/xml_schema/collection_xml_schema.csv
+- The VID seems low in
+  S,urn:nasa:pds:system_bundle:xml_schema:cassini-xml_schema::1.13
+The PDS4_CASSINI_* files provided in the top-level schema/ is newer than
+the version at pds.nasa.gov, which has VID 1.17.
+
+
+
+cassini_iss_saturn/browse_raw/collection_browse_raw.csv
+- Lines 399874 and 399875 are:
+  P,urn:nasa:pds:cassini_iss_saturn:browse_raw:1877548388n-full::1.0
+  P,urn:nasa:pds:cassini_iss_saturn:browse_raw:1881830414n-full::1.0
+I.e. the collection.csv is missing 4184 with LIDs
+  urn:nasa:pds:cassini_iss_saturn:browse_raw:1877634459n-full to
+  urn:nasa:pds:cassini_iss_saturn:browse_raw:1881830006n-full
+
+cassini_iss_saturn/bundle.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  <lid_reference>urn:nasa:pds:mission.cassini</...>
+- This file and collection_data_raw.xml both have lid_reference to
+  urn:nasa:pds:context:target:planetary_system.saturn_system
+Mitch has discussed this, as this doesn't exist yet. Your call.
+
+cassini_iss_saturn/data_raw/.../*.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  urn:nasa:pds:cassini_iss_saturn:data_raw:cum-index
+Only bundle.xml does not have it (assuming collection.xml had a typo)
+- For the <Array_2D_Image>, disp:horizontal_display_axis and
+disp:vertical_display_axis should have the values of
+  Array_2D_Image/Axis_Array/axis_name, e.g. Line
+not
+  Array_2D_Image/Axis_Array/sequence_number, e.g. 1
+I.e. change
+  <disp:horizontal_display_axis>2</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>1</disp:vertical_display_axis>
+to
+  <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+- If you want tools to visualize the <Array_2D> (not the <Array_Image>),
+add 1) Array_2D/local_identifier and 2) a second disp:Display_Settings
+with local_identifier_reference set to the new local_identifier.
+
+cassini_iss_saturn/data_raw/14595xxxxx/1459575784n.xml & 119525 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:ring.saturn_rings
+No context products for type=ring exist yet. As in the type=planetary_system
+debate, if there will later be context products for the individual rings, e.g.
+  urn:nasa:pds:context:target:ring.saturn.f_ring
+there is no good mechanism for associating the two.
+
+cassini_iss_saturn/data_raw/15530xxxxx/1553075119n.xml & 5 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.bet_sgr
+Simbad only has these as separate stars, so please use
+  urn:nasa:pds:context:target:star.bet01_sgr
+  urn:nasa:pds:context:target:star.bet02_sgr
+
+cassini_iss_saturn/data_raw/14631xxxxx/1463134433w.xml & 84 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.cw_leo
+LIDs for stars are based on simbad. For CW Leo, the LID will be
+  urn:nasa:pds:context:target:star.irc_+10216
+
+cassini_iss_saturn/data_raw/14619xxxxx/1461910009n.xml & 796 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.hr_996
+Per simbad, please use
+  urn:nasa:pds:context:target:star.kap01_cet
+
+cassini_iss_saturn/data_raw/18821xxxxx/1882154660n.xml & 55 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.lmc_303
+What is that? LMC is a galaxy. What is LMC 303? Is it a star? Simbad doesn't
+know about it. Is it a star cluster? PDS needs a naming convention for this.
+
+cassini_iss_saturn/data_raw/15411xxxxx/1541120829n.xml
+cassini_iss_saturn/data_raw/15411xxxxx/1541134395n.xml
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.mu_psa
+Per simbad, please use
+  urn:nasa:pds:context:target:star.mu._psa
+
+cassini_iss_saturn/data_raw/15800xxxxx/1580047528n.xml & 11 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.nu_cen
+Per simbad, please use
+  urn:nasa:pds:context:target:star.nu._cen
+
+cassini_iss_saturn/data_raw/collection_data_raw.xml
+- This has lid_reference to
+  urn:nasa:pds:cassini_iss_cruise:data_raw:cum-index
+Assuming there is a ...:cum-index, it should presumably be
+  urn:nasa:pds:cassini_iss_saturn:data_raw:cum-index
+- Like the browse collection, this collection.csv is missing 4184 with LIDs
+  urn:nasa:pds:cassini_iss_saturn:data_raw:1877634459n to
+  urn:nasa:pds:cassini_iss_saturn:data_raw:1881830006n
+
+cassini_iss_saturn/document/collection_document.csv
+- For Primary members, VIDs are required, i.e.
+  P,urn:nasa:pds:cassini_iss_saturn:document:iss-data-user-guide
+  P,urn:nasa:pds:cassini_iss_saturn:document:iss-na-camera-description
+  P,urn:nasa:pds:cassini_iss_saturn:document:iss-wa-camera-description
+should be
+  P,urn:nasa:pds:cassini_iss_saturn:document:iss-data-user-guide::1.0
+  P,urn:nasa:pds:cassini_iss_saturn:document:iss-na-camera-description::1.0
+  P,urn:nasa:pds:cassini_iss_saturn:document:iss-wa-camera-description::1.0
+
+cassini_iss_saturn/metadata_raw/
+- This directory needs a collection.xml and .csv
+- PDS Standards' Table 2B-1 lists allowable top-level directories, and this is
+not there.  miscellaneous/ seems appropriate: "A miscellaneous collection
+contains supplementary information deemed by the data provider to be useful
+in the interpretation and use of other collections in the bundle but which
+does not fit within the scope of the other collections. For example,
+meta-data catalogs, data base dumps, and records of modification history
+could be included."
+
+cassini_iss_saturn/xml_schema/collection_xml_schema.csv
+- The VID seems low in
+  S,urn:nasa:pds:system_bundle:xml_schema:cassini-xml_schema::1.13
+The PDS4_CASSINI_* files provided in the top-level schema/ is newer than
+the version at pds.nasa.gov, which has VID 1.17.
+
+
+
+cassini_vims_cruise/browse_raw/collection_browse_raw.csv
+- Its entries don't match the labels' LIDs. Here:
+  P,urn:nasa:pds:cassini_vims_cruise:browse_raw:1294638283-full::1.0
+  P,urn:nasa:pds:cassini_vims_cruise:browse_raw:1294638377-full::1.0
+  ...
+The files' LIDs:
+  urn:nasa:pds:cassini_vims_cruise:browse_raw:1294638283-full.png
+  urn:nasa:pds:cassini_vims_cruise:browse_raw:1294638377-full.png
+  ...
+
+cassini_vims_cruise/*.xml
+- Is this LID defined somewhere? Every label but bundle.xml has lid_reference
+  urn:nasa:pds:cassini_vims_saturn:document:vims-description
+There is a file in the other bundle with LID
+  urn:nasa:pds:cassini_vims_saturn:document:vims_instrument_description
+
+cassini_vims_cruise/bundle.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  <lid_reference>urn:nasa:pds:mission.cassini</...>
+- This file and collection_data_raw.xml both have lid_reference to
+  urn:nasa:pds:context:target:planetary_system.jupiter_system
+Mitch has discussed this, as this doesn't exist yet. Your call.
+
+cassini_vims_cruise/context/collection_context.xml
+- <logical_identifier>urn:nasa:pds:cassini_vims_saturn:context</...>
+should presumably be
+  <logical_identifier>urn:nasa:pds:cassini_vims_cruise:context</...>
+
+cassini_vims_cruise/data_raw/collection_data_raw.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  <lid_reference>urn:nasa:pds:cassini_vims_saturn:data_raw:cum-index</...>
+I also didn't see urn:nasa:pds:cassini_vims_cruise:data_raw:cum-index defined.
+
+cassini_vims_cruise/data_raw/.../*.xml
+- For the <Array_3D_Spectrum>, disp:horizontal_display_axis and
+disp:vertical_display_axis should have the values of
+  Array_3D_Spectrum/Axis_Array/axis_name, e.g. Line
+not
+  Array_3D_Spectrum/Axis_Array/sequence_number, e.g. 1
+I.e. change
+  <disp:horizontal_display_axis>3</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>1</disp:vertical_display_axis>
+to
+  <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+- If you want tools to visualize the <Array_2D>s correctly,
+add more disp:Display_Settings with local_identifier_reference set appropriately
+
+cassini_vims_cruise/data_raw/13552xxxxx/1355233813.xml & 2174 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:ring.saturn_rings
+No context products for type=ring exist yet. As in the type=planetary_system
+debate, if there will later be context products for the individual rings, e.g.
+  urn:nasa:pds:context:target:ring.saturn.f_ring
+there is no good mechanism for associating the two.
+
+cassini_vims_cruise/data_raw/13733xxxxx/1373351740.xml & 105 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:sun.sun
+Per Guide to PDS4 Context Products V1.4 17 May 2019, use
+  urn:nasa:pds:context:target:star.sun
+though we have no context product yet
+
+cassini_vims_cruise/data_raw/13736xxxxx/1373668788.xml & 6 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star_cluster.pleiades
+LIDs for star clusters are based on simbad. For the Pleiades,
+  urn:nasa:pds:context:target:star_cluster.cl_melotte_22
+
+cassini_vims_cruise/data_raw/14056xxxxx/1405644685-v1.xml
+cassini_vims_cruise/data_raw/14056xxxxx/1405644685-v2.xml
+cassini_vims_cruise/data_raw/14056xxxxx/1405644685-v3.xml
+& 392 other triples down to 1405763738
+- The LIDs don't match what's in collection_data_raw.csv, which has
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1405644685-v1::1.0
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1405644685-v2::1.0
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1405644685-v3::1.0
+while these three files have the same one LID
+  urn:nasa:pds:cassini_vims_cruise:data_raw:1405644685
+but different VIDs 1.0, 2.0, 3.0. So, if there should only be 1 version,
+delete two of the .xml files (and their .qub files) and fix the collection.csv.
+Else if all 3 versions are meant to be delivered, fix the collection.csv to:
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1405644685::1.0
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1405644685::2.0
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1405644685::3.0
+which seems less likely.
+
+cassini_vims_cruise/data_raw/14132xxxxx/1413246503-v1.xml
+cassini_vims_cruise/data_raw/14132xxxxx/1413246503-v2.xml
+& 4 other pairs down to 1444713101
+- The LIDs don't match what's in collection_data_raw.csv, which has
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1413246503-v1::1.0
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1413246503-v2::1.0
+while these two files have the same one LID
+  urn:nasa:pds:cassini_vims_cruise:data_raw:1413246503
+but different VIDs 1.0, 2.0. So, if there should only be 1 version,
+delete one of the .xml files (and its .qub file) and fix the collection.csv.
+Else if both versions are meant to be delivered, fix the collection.csv to:
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1413246503::1.0
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1413246503::2.0
+which seems less likely.
+
+cassini_vims_cruise/document/collection_document.xml
+- <logical_identifier>urn:nasa:pds:cassini_vims_saturn:document</...>
+should presumably be
+  <logical_identifier>urn:nasa:pds:cassini_vims_cruise:document</...>
+
+cassini_vims_cruise/xml_schema/collection_xml_schema.xml
+- <logical_identifier>urn:nasa:pds:cassini_vims_saturn:xml_schema</...>
+should presumably be
+  <logical_identifier>urn:nasa:pds:cassini_vims_cruise:xml_schema</...>
+
+cassini_vims_cruise/metadata_raw/
+- This directory needs a collection.xml and .csv
+- PDS Standards' Table 2B-1 lists allowable top-level directories, and this is
+not there.  miscellaneous/ seems appropriate: "A miscellaneous collection
+contains supplementary information deemed by the data provider to be useful
+in the interpretation and use of other collections in the bundle but which
+does not fit within the scope of the other collections. For example,
+meta-data catalogs, data base dumps, and records of modification history
+could be included."
+- This directory has only 1 data file. The other bundles' metadata_raw
+each has 4.
+
+cassini_vims_cruise/xml_schema/collection_xml_schema.csv
+- The VID seems low in
+  S,urn:nasa:pds:system_bundle:xml_schema:cassini-xml_schema::1.13
+The PDS4_CASSINI_* files provided in the top-level schema/ is newer than
+the version at pds.nasa.gov, which has VID 1.17.
+- To match the .xsd and the .sch on https://pds.nasa.gov/schema/released/sp/,
+  S,urn:nasa:pds:system_bundle:xml_schema:sp-xml_schema::1.11
+should have VID 1.17.
+
+
+
+cassini_vims_saturn/*.xml
+- Is this LID defined somewhere? Every label but bundle.xml has lid_reference
+  urn:nasa:pds:cassini_vims_saturn:document:vims-description
+There is a file with LID
+  urn:nasa:pds:cassini_vims_saturn:document:vims_instrument_description
+
+cassini_vims_saturn/browse_raw/collection_browse_raw.csv
+- Its entries don't match the labels' LIDs. Here:
+  P,urn:nasa:pds:cassini_vims_saturn:browse_raw:1454811589-full::1.0
+  P,urn:nasa:pds:cassini_vims_saturn:browse_raw:1454811659-full::1.0
+  ...
+The files' LIDs:
+  urn:nasa:pds:cassini_vims_saturn:browse_raw:1454811589-full.png
+  urn:nasa:pds:cassini_vims_saturn:browse_raw:1454811659-full.png
+  ...
+
+cassini_vims_saturn/bundle.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  <lid_reference>urn:nasa:pds:mission.cassini</...>
+- This file and collection_data_raw.xml both have lid_reference to
+  urn:nasa:pds:context:target:planetary_system.saturn_system
+Mitch has discussed this, as this doesn't exist yet. Your call.
+
+cassini_vims_saturn/data_raw/.../*.xml
+- For the <Array_3D_Spectrum>, disp:horizontal_display_axis and
+disp:vertical_display_axis should have the values of
+  Array_3D_Spectrum/Axis_Array/axis_name, e.g. Line
+not
+  Array_3D_Spectrum/Axis_Array/sequence_number, e.g. 1
+I.e. change
+  <disp:horizontal_display_axis>3</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>1</disp:vertical_display_axis>
+to
+  <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+  <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+- If you want tools to visualize the <Array_2D>s correctly,
+add more disp:Display_Settings with local_identifier_reference set appropriately
+
+cassini_vims_saturn/data_raw/collection_data_raw.xml
+- Is this LID defined somewhere? It's fine as long as someone will define it.
+  <lid_reference>urn:nasa:pds:cassini_vims_saturn:data_raw:cum-index</...>
+
+cassini_vims_saturn/data_raw/14548xxxxx/1454811589.xml & 127542 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:ring.saturn_rings
+No context products for type=ring exist yet. As in the type=planetary_system
+debate, if there will later be context products for the individual rings, e.g.
+  urn:nasa:pds:context:target:ring.saturn.f_ring
+there is no good mechanism for associating the two.
+
+cassini_vims_saturn/data_raw/14656xxxxx/1465673806-v1.xml
+cassini_vims_saturn/data_raw/14656xxxxx/1465673806-v2.xml 
+& 22 other pairs down to 1825945979
+- The LIDs don't match what's in collection_data_raw.csv, which has
+  P,urn:nasa:pds:cassini_vims_saturn:data_raw:1465673806-v1::1.0
+  P,urn:nasa:pds:cassini_vims_saturn:data_raw:1465673806-v2::1.0
+while these two files have the same one LID
+  urn:nasa:pds:cassini_vims_saturn:data_raw1465673806:
+but different VIDs 1.0, 2.0. So, if there should only be 1 version,
+delete one of the .xml files (and its .qub file) and fix the collection.csv.
+Else if both versions are meant to be delivered, fix the collection.csv to:
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1465673806::1.0
+  P,urn:nasa:pds:cassini_vims_cruise:data_raw:1465673806::2.0
+which seems less likely.
+
+cassini_vims_saturn/data_raw/14673xxxxx/1467344835_001-v1.xml
+cassini_vims_saturn/data_raw/14673xxxxx/1467344835_001-v2.xml 
+& many other tuples down to 1787306770_044
+- These have the same problem as above, but it's harder to see because
+the both the .xml files' LIDs and collection.csv account for the _001,
+but collection.csv again incorrectly accounts for VIDs.
+
+cassini_vims_saturn/data_raw/14785xxxxx/1478539143.xml & 74239 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:sun.sun
+Per Guide to PDS4 Context Products V1.4 17 May 2019, use
+  urn:nasa:pds:context:target:star.sun
+though we have no context product yet
+
+cassini_vims_saturn/data_raw/14953xxxxx/1495314769.xml & 2596 others
+  urn:nasa:pds:context:target:star.cw_leo
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.mu_psa
+Per simbad, please use
+  urn:nasa:pds:context:target:star.mu._psa
+
+cassini_vims_saturn/data_raw/15036xxxxx/1503621071.xml & 59 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star_cluster.pleiades
+LIDs for star clusters are based on simbad. For the Pleiades,
+  urn:nasa:pds:context:target:star_cluster.cl_melotte_22
+
+cassini_vims_saturn/data_raw/15039xxxxx/1503902475.xml & 1109 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.r_lyr
+Per simbad, please use
+  urn:nasa:pds:context:target:star.13_lyr
+
+cassini_vims_saturn/data_raw/15174xxxxx/1517491644.xml & 33 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.mu_gem
+Per simbad, please use
+  urn:nasa:pds:context:target:star.mu._gem
+
+cassini_vims_saturn/data_raw/15329xxxxx/1532905421.xml & 54 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.30_her
+Per simbad, please use
+  urn:nasa:pds:context:target:star.g_her
+
+cassini_vims_saturn/data_raw/15329xxxxx/1532915621.xml % 559 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.mu_cep
+Per simbad, please use
+  urn:nasa:pds:context:target:star.mu._cep
+
+cassini_vims_saturn/data_raw/15329xxxxx/1532925821.xml & 43 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.pi1_gru
+Per simbad, please use
+  urn:nasa:pds:context:target:star.pi.01_gru
+
+cassini_vims_saturn/data_raw/15525xxxxx/1552575925.xml & 39 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.nu_vir
+Per simbad, please use
+  urn:nasa:pds:context:target:star.nu._vir
+
+cassini_vims_saturn/data_raw/15737xxxxx/1573706260.xml & 503 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.2_cen
+Per simbad, please use
+  urn:nasa:pds:context:target:star.g_cen
+
+cassini_vims_saturn/data_raw/16239xxxxx/1623910216.xml & 3 others
+- These have lid_reference to
+  urn:nasa:pds:context:target:star.hr_996
+Per simbad, please use
+  urn:nasa:pds:context:target:star.kap01_cet
+
+cassini_vims_saturn/data_raw/18683xxxxx/1868307851.xml
+- This file was truncated at 4165 bytes on the drive I received.
+
+cassini_vims_saturn/metadata_raw/
+- This directory needs a collection.xml and .csv
+- PDS Standards' Table 2B-1 lists allowable top-level directories, and this is
+not there.  miscellaneous/ seems appropriate: "A miscellaneous collection
+contains supplementary information deemed by the data provider to be useful
+in the interpretation and use of other collections in the bundle but which
+does not fit within the scope of the other collections. For example,
+meta-data catalogs, data base dumps, and records of modification history
+could be included."
+
+cassini_vims_saturn/xml_schema/collection_xml_schema.csv
+- The VID seems low in
+  S,urn:nasa:pds:system_bundle:xml_schema:cassini-xml_schema::1.13
+The PDS4_CASSINI_* files provided in the top-level schema/ is newer than
+the version at pds.nasa.gov, which has VID 1.17.
+- To match the .xsd and the .sch on https://pds.nasa.gov/schema/released/sp/,
+  S,urn:nasa:pds:system_bundle:xml_schema:sp-xml_schema::1.11
+should have VID 1.17.
+
+
+
+schema/PDS4_Cassini_1B00_1300.*
+- These files are newer than (i.e. have not yet appeared at) the ones at
+  https://pds.nasa.gov/datastandards/schema/released
+Please ensure that these are the right version.
+
+schema/PDS4_SP_1B00_1100.xsd
+- This differs slightly from
+  https://pds.nasa.gov/datastandards/schema/released/sp/v1/PDS4_SP_1B00_1100.xsd
+Please use the one from the web site. Same for the .sch. The .xml wasn't included.
+
+
+
+generally
+- EN (and the DPH) recommends that the Root Tag include:
+  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+This has been debated, and there is no consequence for ignoring.
+- EN similarly recommends, with no consequence for ignoring, that in order
+to create a fully self-describing bundle, context/ contain secondary copies
+of context products referred to and xml_schema/ contain secondary copies of
+the schema and schematron used.
