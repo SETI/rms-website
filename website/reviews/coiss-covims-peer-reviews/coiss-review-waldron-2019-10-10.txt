@@ -1,0 +1,43 @@
+From: Waldron, Anna (US 398F) <anna.waldron@jpl.nasa.gov> 
+Sent: Thursday, October 10, 2019 10:49 AM
+To: De Cesare, Cristina M (US 398G) <cristina.m.decesare@jpl.nasa.gov>; Michael Evans <mevans@seti.org>
+Cc: Mitchell Gordon <mgordon@seti.org>
+Subject: Re: [EXTERNAL] Cassini ISS & VIMS per review
+
+Mitch and Mike, here is a summary of the some of the validate errors we found. We also were unable to find a SIS in the bundle.
+ 
+There were many “'Context product not found” errors in all collections – I wasn’t sure if these are due to a problem in our validate configuration though.
+·        ERROR [error.label.context_ref_not_found] Context product not found: urn:nasa:pds:context:target:planetary_system.jupiter_system
+·        Other references that weren’t found included these examples and many similar ones:
+urn:nasa:pds:context:target:ring.saturn_rings
+urn:nasa:pds:context:target:calibration_field.star
+urn:nasa:pds:context:target:star.r_leo
+ 
+There were many “Context reference name mismatch” warnings where the name didn’t match exactly what was expected but was close enough to have the same meaning so I’m not sure these are crucial.
+·        This warning came up many times in both ISS collections:
+WARNING [warning.label.context_ref_mismatch] Context reference name mismatch. Value: 'Cassini Orbiter Imaging Science Subsystem - Narrow Angle Camera' Expected one of: '[IMAGING SCIENCE SUBSYSTEM - NARROW ANGLE]'
+WARNING [warning.label.context_ref_mismatch] Context reference name mismatch. Value: 'Cassini Orbiter Imaging Science Subsystem - Wide Angle Camera' Expected one of: '[IMAGING SCIENCE SUBSYSTEM - WIDE ANGLE]'
+This warnings appeared many times in both VIMS collections:
+WARNING [warning.label.context_ref_mismatch] line 81: Context reference name mismatch. Value: 'Cassini Orbiter Visual And Infrared Mapping Spectrometer' Expected one of: '[VISUAL AND INFRARED MAPPING SPECTROMETER]'
+ 
+There were some repeated label errors where attributes appear to have been left empty. The attributes this occurred for were 'cassini:mission_phase_name' and 'cassini:observation_id'.
+These errors appeared multiple times in the ISS_Cruise collection:
+o   ERROR [error.label.schema] line 95, 49: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'mission_phase_name'.
+o   ERROR [error.label.schema] line 95, 49: cvc-type.3.1.3: The value '' of element 'cassini:mission_phase_name' is not valid.
+o   ERROR [error.label.schematron] line 95, 49: The attribute cassini:mission_phase_name must be equal to one of the following values 'APPROACH SCIENCE', 'APPROACH_SCIENCE', 'Approach Science', 'Approach_Science', 'CRUISE SCIENCE', 'EARTH ENCOUNTER', 'EARTH-JUPITER CRUISE', 'EQUINOX MISSION', 'EXTENDED MISSION', 'EXTENDED-EXTENDED MISSION', 'Earth Encounter', 'Equinox Mission', 'Extended Mission', 'Extended-Extended Mission', 'HIGH GAIN ANTENNA TRANSITION', 'HUYGENS DESCENT', 'HUYGENS PROBE SEPARATION', 'High Gain Antenna Transition', 'Huygens Descent', 'Huygens Probe Separation', 'INSTRUMENT CHECKOUT 1', 'INSTRUMENT CHECKOUT 2', 'INTERPLANETARY CRUISE', 'Information not provided', 'Instrument Checkout 1', 'Instrument Checkout 2', 'Interplanetary Cruise', 'JUPITER CRUISE', 'JUPITER ENCOUNTER', 'Jupiter Cruise', 'Jupiter Encounter', 'LAUNCH', 'Launch', 'OUTER CRUISE', 'Outer Cruise', 'PHOEBE ENCOUNTER', 'PROXIMAL ORBITS', 'Phoebe Encounter', 'Proximal Orbits', 'QUIET CRUISE', 'Quiet Cruise', 'SATURN ORBIT INSERTION', 'SCIENCE CRUISE', 'SCIENCE_CRUISE', 'SOLSTICE MISSION', 'SPACE SCIENCE', 'SPACE_SCIENCE', 'Saturn Orbit Insertion', 'Science Cruise', 'Solstice Mission', 'Space Science', 'TCM 1', 'TITAN A ENCOUNTER', 'TITAN B ENCOUNTER', 'TITAN C HUYGENS', 'TOUR', 'TOUR PRE-HUYGENS', 'Titan A Encounter', 'Titan B Encounter', 'Titan C Huygens', 'Tour', 'Tour Pre-Huygens', 'VENUS 1 CRUISE', 'VENUS 1 ENCOUNTER', 'VENUS 2 - EARTH CRUISE', 'VENUS 2 ENCOUNTER', 'Venus 1 Cruise', 'Venus 1 Encounter', 'Venus 2 - Earth Cruise', 'Venus 2 Encounter'.
+o   ERROR [error.label.schema] line 140, 45: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'observation_id'.
+o   ERROR [error.label.schema] line 140, 45: cvc-type.3.1.3: The value '' of element 'cassini:observation_id' is not valid.
+ 
+·        These errors appeared in both VIMS collections:
+o   ERROR [error.label.schema] line 147, 45: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'observation_id'.
+o   ERROR [error.label.schema] line 147, 45: cvc-type.3.1.3: The value '' of element 'cassini:observation_id' is not valid.
+ 
+ 
+Anna
+ 
+Anna Waldron
+Scientific Applications Software Engineer (398F)
+Instrument Software and Science Data Systems
+p: (818) 393-5727 m: (802) 540-5837
+a: T1721-109B
+e: anna.waldron@jpl.nasa.gov

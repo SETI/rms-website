@@ -1,0 +1,35 @@
+From: Chen, Richard L (US 398G) <richard.l.chen@jpl.nasa.gov> 
+Sent: Friday, October 11, 2019 12:13 PM
+To: Waldron, Anna (US 398F) <anna.waldron@jpl.nasa.gov>; Mitchell Gordon <mgordon@seti.org>; De Cesare, Cristina M (US 398G) <cristina.m.decesare@jpl.nasa.gov>; Michael Evans <mevans@seti.org>
+Cc: Lynn Neakrase <lneakras@nmsu.edu>; Padams, Jordan (US 398A) <jordan.h.padams@jpl.nasa.gov>
+Subject: Re: [EXTERNAL] Cassini ISS & VIMS per review
+
+Hi, Anna, I'm with the Engineering Node. My comments:
+
+> ERROR  [error.label.context_ref_not_found]   Context product not found: urn:nasa:pds:context:target:planetary_system.jupiter_system
+
+1) Mitch and Lynn, did we agree that this context product would eventually and painfully list all the component targets, giving EN's search a path to return products that reference either the component or the aggregation?
+2) If so, does anyone object (or volunteer) if I create a barren target:planetary_system target now with the understanding that we'll add the components later when the schema/schematron allow it?
+3) Should the last part of the LID be jupiter_system or jupiter? I mildly vote for the latter.
+
+> urn:nasa:pds:context:target:ring.saturn_rings
+Mitch sent me this context product a while ago, but for type=ring, I expected LIDs like
+ urn:nasa:pds:context:target:ring.f_ring
+ urn:nasa:pds:context:target:ring.g_ring
+IMO, the latter set is good because the DPH says so. Is the aggregated LID good as well? If so, 1) the schema/schematron will someday have to allow components later, and 2) anyone object if I rush one out there? I imagine either could be no, as I'm expecting some or maybe all of you to see clearer about this.
+
+> urn:nasa:pds:context:target:calibration_field.star
+Mitch sent me this context product a while ago, and I suggested changing the LID and the name to ...:calibration_field.starfield and "Star Field" (from "Star"). I generally don't like giving one thing, especially as secondary as this, the name of something so generic. Right? Someone searching for "star x" is going to get this and probably the products that reference this as search results. Or maybe I'm wrong. You can argue me out of most stuff.
+
+> urn:nasa:pds:context:target:star.r_leo
+We'll add this context product with LID as you have it in the next go-around. We usually don't add a context product until someone requests it.
+
+> There were many “Context reference name mismatch” warnings where the name didn’t match exactly what was expected but was close enough to have the same meaning so I’m not sure these are crucial. 
+I barely remember any mention of formation rules for names, unlike LIDs, which we're burned out on. We, PDS-wide, should think about what to do, now that validate checks for this. We have many all-caps names, which seems wrong. Minimum: I can generate a list of all LIDs, names, proposed new names. Maximum: formation rules for names + discussion of what to do with existing, non-conforming names and the products that use them. If the latter has a good chance of ever happening, we should do it rather than the minimum.
+
+For the two names you gave that raised errors, Anna, I would keep the ones you have and live with such warnings.
+
+> There were some repeated label errors where attributes appear to have been left empty. The attributes this occurred for were 'cassini:mission_phase_name' and 'cassini:observation_id'.
+I didn't have your .xml (or the .sch and .xsd) files, but the messages are legit if you've got those elements with no value or all white space values. Are the rules misfiring?
+
+Richard
