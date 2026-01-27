@@ -1,0 +1,78 @@
+{% comment %}
+
+This data table template is specifically for the press release metadata under Galleries.    
+To use this template, assign value and additional value, if applicable, to each of the rows:
+    Target
+    System
+    Target Type
+    Mission
+    Instrument Host
+    Host Type
+    Instrument
+    Detector
+    Extra Keywords
+    Acquisition Date
+    Release Date
+    Date in Caption
+    Image Credit
+    Source
+    Identifier
+
+like so:
+catalog_table:
+    - table_row: Target
+      value: Sun
+      additional_values: Mercury
+
+and so on... 
+
+    - table_row: Source 
+      value: photojournal.jpl.nasa.gov/catalog/PIA14729
+
+{% endcomment %}
+
+{% assign table_name="Cataloging Keywords" %}
+{% assign column_labels="Name,Value,Additional Values" | split: "," %}
+
+### {{ table_name }}:
+<table class="pr_table" summary ="{{ table_name }}">
+
+  <!-- table header row -->
+  <thead>
+
+    <tr>
+        {% for col in column_labels %}
+            <th scope="col" id="{{ col | slugify }}">{{ col }}</th>
+        {% endfor %}
+    </tr>
+
+  </thead>
+  <tbody>
+    {% for row in page.catalog_table %}
+        <tr>
+          <td>{{ row.table_row }}</td>
+            {% if row.table_row=="Target" or
+                    row.table_row=="System" or
+                    row.table_row=="Target Type" or
+                    row.table_row=="Mission" or
+                    row.table_row=="Instrument Host" or
+                    row.table_row=="Host Type" or
+                    row.table_row=="Instrument" or
+                    row.table_row=="Detector" %}
+              <td>{{ row.value }}</td>
+              <td>{{ row.additional_values }}</td>
+            {% elsif row.table_row=="Source" %}
+              <td colspan="2">
+                <a href = "{{ row.value }}" target="_blank">
+                        {{ row.value }}
+                </a>                      
+              </td>
+            {% else %}
+              <td colspan="2">{{ row.value }}</td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+***

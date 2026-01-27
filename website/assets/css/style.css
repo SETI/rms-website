@@ -269,7 +269,29 @@ img.diagram {
     float: none !important;
 }
 
-/* homepage boxes */
+/* press release (under gallery) specific css */
+a.press_release {
+    border-bottom: none;
+    margin-right: 2em;
+}
+
+a.press_release img {
+    float: none !important;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 1200px;
+    max-height: 800px;
+}
+
+div.press_release table {
+    width: 840px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* homepage boxes xyz */
 .homebox {
   font:1.0em 'Inclusive Sans', sans-serif;
 	border: 1px solid #cccccc;
@@ -679,6 +701,17 @@ td.colgroup-seperator {
       font-weight: bold;
 }
 
+.pr_table {
+    max-width: max-content;
+}
+
+.pr_table td {
+    text-align: left;
+}
+
+.pr_table td:first-child {
+    text-align: right;
+}
 
 /* tools page */
 .tools > .container {
@@ -705,6 +738,12 @@ td.colgroup-seperator {
     padding-left: 0;
 }
 
+.gallery.returnto {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
 .gallery li {
     list-style: none;
     display: inline;
@@ -720,12 +759,53 @@ td.colgroup-seperator {
 }
 
 .galleries .image-gallery gallery-object {
-    outline: thin solid;
+    outline: thin solid #bbb;
 }
 
 .galleries .image-gallery .thumbnail {
     border: none;
 }
+
+/* gallery nav for jumpto */
+.jumpto nav {
+    background-color: #fff;
+}
+
+.jumpto .nav-item {
+    position: relative;
+}
+
+.subnav-toggle {
+    padding: 0 3px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.subnav {
+    position: absolute;
+    margin-top: .5em;
+    padding: .1em;
+    background-color: #ddd
+}
+
+.subnav:not(:hover) {
+    display: none;
+}
+
+.subnav-items {
+    padding: 5px 10px;
+}
+
+.subnav-link:not(:first-child)::before {
+    content: " | ";
+    padding: 0 5px;
+}
+
+
+.jumpto.nav_container a:hover {
+    text-decoration: underline;
+}
+
 
 /* footer */
 .navbar-nav.nav-justified > li{
