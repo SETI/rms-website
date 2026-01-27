@@ -17,6 +17,35 @@ established as an overall clearing house for Cassini support.
 
 ##  Enhanced support available at the Ring-Moon Systems Node:
 
+  * **Consistent single-valued mission phase names**
+
+    The document [MISSION.CAT]({{ site.viewmaster_url }}holdings/volumes/COISS_2xxx/COISS_2116/catalog/mission.cat){:target="_blank"} defines Cassini mission phases with a three-tiered structure. For example, an image that was taken on 2000 December 30 could be defined as part of the Outer Cruise (1999-11-08 to 2002-07-07), or its sub-phase the Jupiter Cruise (2000-11-05 to 2001-04-30), or its sub-sub-phase the Jupiter Encounter (2000-12-30 only). And yet, the MISSION_PHASE_NAME keyword in PDS3 and the cassini:mission_phase_name attribute in PDS4 both are single-valued. The resulting ambiguity is compounded by the fact that, in their archives as delivered to PDS, different instruments made different choices regarding the mission phase names that they entered as metadata into their data products, some of which are not allowable values at all.
+
+    For PDS4 data sets curated by RMS, we have solved this problem by defining a list of mission phases that gives a single consistent value for each moment of time during the mission.  The list is as follows:
+
+    * First, short encounters that interrupt longer periods:
+      * Venus 1 Encounter: 1998-116
+      * Venus 2 Encounter: 1999-175
+      * Earth Encounter: 1999-230
+      * Jupiter Encounter: 2000-365
+      * Phoebe Encounter: 2004-163
+      * Saturn Orbit Insertion: 2004-183
+      * Titan A Encounter: 2004-300
+      * Titan B Encounter: 2004-348
+
+    * Then, full-length periods that completely cover the mission timeline:
+      * Interplanetary Cruise: 1997-001 to 1999-311
+      * Outer Cruise: 1999-312 to 2002-188
+      * Science Cruise: 2002-189 to 2004-011
+      * Approach Science: 2004-012 to 2004-162
+      * Tour Pre-Huygens: 2004-163 to 2004-358
+      * Huygens Probe Separation: 2004-359
+      * Huygens Descent: 2004-360 to 2005-013
+      * Titan C Huygens: 2005-014
+      * Tour: 2005-015 to 2008-182
+      * Equinox Mission: 2008-183 to 2010-272
+      * Solstice Mission: 2010-273 to end of mission
+
   * **Preview products and the keys to their interpretation**
 
     The PDS Ring-Moon Systems Node generates browse images or footprint diagrams for data at
