@@ -3,7 +3,7 @@
   <ul>
     <li>
         {% if page.page_menu.first_link != nil %}
-        <a href="{{page.page_menu.first_link}}">&lt;&lt; oldest </a>
+        <a href="{{page.page_menu.first_link}}">&lt;&lt; first </a>
         {% else %}
             &lt;&lt; oldest
         {% endif %}
@@ -24,7 +24,7 @@
     </li>
     <li>
         {% if page.page_menu.last_link != nil %}
-            <a href="{{page.page_menu.last_link}}">latest &gt;&gt;</a>
+            <a href="{{page.page_menu.last_link}}">last &gt;&gt;</a>
         {% else %}
             latest &gt;&gt;
         {% endif %}
