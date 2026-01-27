@@ -1,14 +1,14 @@
 <style>
     .image-gallery {overflow: hidden; padding-inline-start: 0;text-wrap:nowrap;}
-    .image-gallery gallery-object {text-align: center; margin: 1%; width: 12.5em; min-height: 150px;}
-    .image-gallery gallery-object a {text-decoration: none!important; color: #777;}
+    .image-gallery gallery-object {text-align: center; margin: 0.2%; width: 12.5em; min-height: 150px;}
+    .image-gallery gallery-object a {text-decoration: none!important; color: #111;}
     .image-gallery gallery-object a figcaption {font-size: 10pt; overflow: hidden; padding: 3px 0; text-align: center; text-wrap: auto}
     .image-gallery gallery-object a img {margin-left: auto; margin-right: auto; padding-top: .75em; text-wrap: wrap; font-size: 75%;}
+    .image-gallery gallery-object a figcaption img {padding-top: 0; padding-bottom: 3px;}
 
     gallery {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start
         margin-block-start: 1em;
         margin-block-end: 1em;
         margin-inline-start: 0px;
@@ -20,17 +20,36 @@
 <gallery class="image-gallery">
     {% for image in image_table %}
          <gallery-object>
-            <figure class="thumbnail">          
+            {% if image.movie != nil %}
+                {% assign class = 'movie thumbnail' %}
+            {% else %}
+                {% assign class = 'thumbnail' %}
+            {% endif %}
+            <figure class="{{ class }}">          
             {% if image.href != nil %}
-                <a href="{{ image.href }}">
-                <img src="{{ site.assets_url }}{{ image.src }}" alt="{{ image.alt }}" />
-                <figcaption>{{ image.title }}</figcaption></a>
+                <a href="{{ image.href }}" target="_blank">
+                {% if image.src != nil %}
+                    <img src="{{ site.assets_url }}{{ image.src }}" alt="{{ image.alt }}" />
+                {% else %}
+                    <img src="{{ image.external_src }}" alt="{{ image.alt }}" />
+                {% endif %}
+                <figcaption>
+                    {% if image.movie != nil %}
+                        <img src="{{ site.assets_url}}icons-local/movie_icon.png" alt="Movie icon">
+                    {% endif %}
+                    {{ image.title }}
+                </figcaption></a>
             {% else %} 
                 <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank"> 
                 <img src="{{ site.assets_url }}holdings/previews/{{ image.src }}" alt="{{ image.alt }}" />
-                <figcaption>{{ image.filename }}</figcaption></a>
+                <figcaption>
+                    {% if image.movie != nil %}
+                        <img src="{{ site.assets_url}}icons-local/movie_icon.png" alt="Movie icon">
+                    {% endif %}
+                    {{ image.filename }}
+                </figcaption></a>
              {% endif %}  
             </figure>        
         </gallery-object>
     {% endfor %}
-    </gallery>
+</gallery>

@@ -1,5 +1,5 @@
-{% if page.page_menu != nil %}
-<div class="gallery page_menu">
+{% capture nextpage_section %}
+<div class="gallery page_menu"> 
   <ul>
     <li>
         {% if page.page_menu.first_link != nil %}
@@ -31,22 +31,48 @@
     </li>
   </ul>
 </div>
-{% endif %}
+{% endcapture %}
 
-{% if page.jump != nil %}
-<div class="gallery jumpto">
-    <b>Jump to</b>:
-    <ul>
-        {% for link in page.jump_to %}
-            {% if link.url == null %}
-                <li><b>{{link.title}}</b></li>
-            {% else %}
-                <li><a href="{{link.url}}">{{link.title}}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+{% capture backto_section %}
+<div class="gallery returnto">
+    <a href="{{site.baseurl}}/galleries.html"><< Back to Image Galleries main page</a>
 </div>
-{% endif %}
+{% endcapture %}
 
 {% assign image_table = page.image_table %}
+{% assign image_count = image_table.size %}
+
+{% if page.page_menu != nil %}
+    {{ nextpage_section }}
+{% endif %}
+
+{% if page.jump_to != nil %}
+<div class="gallery jumpto">
+    <h4><strong>Jump to:</strong></h4>
+    <div class="nav_container jumpto">
+        <nav>
+            <ul class="nav-list">
+                {% for link in page.jump_to %}
+                <li class="nav-item">
+                    {% if link.menu_item.url == page.name %}
+                        <b>{{link.menu_item.title}}</b>
+                    {% else %}
+                        <a href="{{link.menu_item.url}}" title="{{link.menu_item.alt}}">{{link.menu_item.title}}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</div>{% endif %}
+
+{{ backto_section }}
+
 {% include image-gallery.html %}
+
+{% if image_count > 10 %}
+    {% if page.page_menu != nil %}
+        {{ nextpage_section }}
+    {% endif %}
+    {{ backto_section }}
+{% endif %}
