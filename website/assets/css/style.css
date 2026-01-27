@@ -285,13 +285,13 @@ a.press_release img {
 }
 
 div.press_release table {
-    width: 840px;
+    max-width: 840px;
     margin-left:auto;
     margin-right:auto;
 }
 
 
-/* homepage boxes xyz */
+/* homepage boxes */
 .homebox {
   font:1.0em 'Inclusive Sans', sans-serif;
 	border: 1px solid #cccccc;
@@ -785,7 +785,7 @@ td.colgroup-seperator {
     position: absolute;
     margin-top: .5em;
     padding: .1em;
-    background-color: #ddd
+    background-color: #ddd;
 }
 
 .subnav:not(:hover) {

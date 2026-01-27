@@ -20,35 +20,35 @@
 <gallery class="image-gallery">
     {% for image in image_table %}
          <gallery-object>
-            {% if image.movie != nil %}
+            {% if image.movie %}
                 {% assign class = 'movie thumbnail' %}
             {% else %}
                 {% assign class = 'thumbnail' %}
             {% endif %}
             <figure class="{{ class }}">          
             {% if image.href != nil %}
-                <a href="{{ image.href }}" target="_blank">
+                <a href="{{ image.href }}" target="_blank" rel="noopener noreferrer">
                 {% if image.src != nil %}
                     <img src="{{ site.assets_url }}{{ image.src }}" alt="{{ image.alt }}" />
                 {% else %}
                     <img src="{{ image.external_src }}" alt="{{ image.alt }}" />
                 {% endif %}
                 <figcaption>
-                    {% if image.movie != nil %}
+                    {% if image.movie %}
                         <img src="{{ site.assets_url}}icons-local/movie_icon.png" alt="Movie icon">
                     {% endif %}
                     {{ image.title }}
                 </figcaption></a>
             {% else %} 
-                <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank"> 
+                <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank" rel="noopener noreferrer"> 
                 <img src="{{ site.assets_url }}holdings/previews/{{ image.src }}" alt="{{ image.alt }}" />
                 <figcaption>
-                    {% if image.movie != nil %}
+                    {% if image.movie %}
                         <img src="{{ site.assets_url}}icons-local/movie_icon.png" alt="Movie icon">
                     {% endif %}
                     {{ image.filename }}
                 </figcaption></a>
-             {% endif %}  
+            {% endif %}  
             </figure>        
         </gallery-object>
     {% endfor %}
