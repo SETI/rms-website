@@ -105,7 +105,7 @@ a:focus {
   width: 25em;
   position: absolute;
   right: 2.2em;
-  top: 7.4em;
+  top: 6.4em;
 
 }
 
@@ -397,7 +397,7 @@ div.press_release table {
         padding:0;
     }
     .homebox {
-        margin:0; 
+        margin:0;
         padding:0;
         margin-bottom:10px;
     }
@@ -406,7 +406,7 @@ div.press_release table {
         width:100%;
     }
     div.col-xm-12 {
-        margin:0; 
+        margin:0;
         padding:0;
     }
     .mission_statement {
@@ -445,7 +445,7 @@ div.press_release table {
 }
 /* mobile hamburger menu is inside banner */
 .hamburger-container {
-    padding:0; 
+    padding:0;
     margin:0;
     padding-top:5px;
     word-wrap:nowrap;
@@ -753,7 +753,7 @@ td.colgroup-seperator {
 .gallery ul li:after {
     content: ' | ';
 }
-    
+
 .gallery li:last-child:after {
     content: none;
 }
