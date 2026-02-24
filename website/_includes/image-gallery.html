@@ -25,7 +25,7 @@
             {% else %}
                 {% assign class = 'thumbnail' %}
             {% endif %}
-            <figure class="{{ class }}">          
+            <figure class="{{ class }}">
             {% if image.href != nil %}
                 <a href="{{ image.href }}" target="_blank" rel="noopener noreferrer">
                 {% if image.src != nil %}
@@ -39,8 +39,8 @@
                     {% endif %}
                     {{ image.title }}
                 </figcaption></a>
-            {% else %} 
-                <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank" rel="noopener noreferrer"> 
+            {% else %}
+                <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank" rel="noopener noreferrer">
                 <img src="{{ site.assets_url }}holdings/previews/{{ image.src }}" alt="{{ image.alt }}" />
                 <figcaption>
                     {% if image.movie %}
@@ -48,8 +48,8 @@
                     {% endif %}
                     {{ image.filename }}
                 </figcaption></a>
-            {% endif %}  
-            </figure>        
+            {% endif %}
+            </figure>
         </gallery-object>
     {% endfor %}
 </gallery>

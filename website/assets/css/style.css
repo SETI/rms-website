@@ -277,6 +277,7 @@ a.press_release {
 
 a.press_release img {
     float: none !important;
+    display: block;
     margin: auto;
     width: auto;
     height: auto;
@@ -774,11 +775,6 @@ td.colgroup-seperator {
 .jumpto .nav-item {
     position: relative;
 }
-
-.jumpto.nav_container a:hover {
-    text-decoration: underline;
-}
-
 
 /* footer */
 .navbar-nav.nav-justified > li{
