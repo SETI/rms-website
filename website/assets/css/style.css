@@ -775,33 +775,6 @@ td.colgroup-seperator {
     position: relative;
 }
 
-.subnav-toggle {
-    padding: 0 3px;
-    margin-left: 3px;
-    vertical-align: middle;
-}
-
-.subnav {
-    position: absolute;
-    margin-top: .5em;
-    padding: .1em;
-    background-color: #ddd;
-}
-
-.subnav:not(:hover) {
-    display: none;
-}
-
-.subnav-items {
-    padding: 5px 10px;
-}
-
-.subnav-link:not(:first-child)::before {
-    content: " | ";
-    padding: 0 5px;
-}
-
-
 .jumpto.nav_container a:hover {
     text-decoration: underline;
 }
