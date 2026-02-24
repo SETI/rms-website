@@ -6,9 +6,11 @@ module Jekyll
     end
 
     def render(context)
-      content = super
-      "<div class=\"#{@class}\">#{Jekyll::Renderer.new(context.registers[:site], {}).convert(content)}</div>"
-    end
++      site = context.registers[:site]
+       content = super
+-      converter = site.find_converter_instance(Jekyll::Converters::Markdown)
++      rendered = converter.convert(content)
++      "<div class=\"#{`@class`}\">#{rendered}</div>"    end
   end
 end
 

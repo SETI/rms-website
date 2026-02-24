@@ -1,0 +1,80 @@
+.image-gallery {
+    overflow: hidden;
+    padding-inline-start: 0;
+    text-wrap: nowrap;
+}
+
+.image-gallery gallery-object {
+    text-align: center;
+    margin: 0.2%;
+    width: 12.5em;
+    min-height: 150px;
+}
+
+.image-gallery gallery-object a {
+    text-decoration: none!important;
+    color: #111;
+}
+
+.image-gallery gallery-object a figcaption {
+    font-size: 10pt;
+    overflow: hidden;
+    padding: 3px 0;
+    text-align: center;
+    text-wrap: auto
+}
+
+.image-gallery gallery-object a img {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: .75em;
+    text-wrap: wrap;
+    font-size: 75%;
+}
+
+.image-gallery gallery-object a figcaption img {
+    padding-top: 0;
+    padding-bottom: 3px;
+}
+
+gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.gallery {
+    max-width: 70em;
+}
+
+.gallery.page_menu {
+    text-align: center;
+}
+
+.gallery.jumpto ul {
+    padding-left: 0;
+}
+
+.gallery.returnto {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.gallery li {
+    list-style: none;
+    display: inline;
+    padding: .5em .1em;
+}
+
+.gallery ul li:after {
+    content: ' | ';
+}
+
+.gallery li:last-child:after {
+    content: none;
+}
