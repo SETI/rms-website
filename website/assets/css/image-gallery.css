@@ -2,6 +2,13 @@
     overflow: hidden;
     padding-inline-start: 0;
     text-wrap: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
 .image-gallery gallery-object {
@@ -21,30 +28,18 @@
     overflow: hidden;
     padding: 3px 0;
     text-align: center;
-    text-wrap: auto
+    text-wrap: auto;
 }
 
 .image-gallery gallery-object a img {
     margin-left: auto;
     margin-right: auto;
     padding-top: .75em;
-    text-wrap: wrap;
-    font-size: 75%;
 }
 
 .image-gallery gallery-object a figcaption img {
     padding-top: 0;
     padding-bottom: 3px;
-}
-
-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 
 .gallery {
