@@ -1,6 +1,5 @@
 .image-gallery {
     overflow: hidden;
-    padding-inline-start: 0;
     text-wrap: nowrap;
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +7,6 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 
 .image-gallery gallery-object {
@@ -34,12 +32,26 @@
 .image-gallery gallery-object a img {
     margin-left: auto;
     margin-right: auto;
-    padding-top: .75em;
+    padding-top: .25em;
+    transition: transform 0.3s ease;
 }
 
-.image-gallery gallery-object a figcaption img {
+.image-gallery gallery-object a img:hover {
+    transform: scale(1.1);
+}
+
+.image-gallery gallery-object figcaption {
     padding-top: 0;
     padding-bottom: 3px;
+}
+
+figure.thumbnail {
+    border: none;
+    max-height: 100px;
+}
+
+figcaption {
+    text-wrap: wrap;
 }
 
 .gallery {
@@ -48,6 +60,7 @@
 
 .gallery.page_menu {
     text-align: center;
+    padding-right: 20em;
 }
 
 .gallery.jumpto ul {

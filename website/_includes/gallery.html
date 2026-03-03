@@ -1,29 +1,29 @@
 {% capture nextpage_section %}
-<div class="gallery page_menu"> 
+<div class="gallery page_menu">
   <ul>
     <li>
-        {% if page.page_menu.first_link != nil %}
+        {% if page.page_menu.first_link %}
         <a href="{{page.page_menu.first_link}}">&lt;&lt; first </a>
         {% else %}
             &lt;&lt; oldest
         {% endif %}
     </li>
     <li>
-        {% if page.page_menu.previous_link != nil %}
+        {% if page.page_menu.previous_link %}
             <a href="{{page.page_menu.previous_link}}">&lt; previous </a>
         {% else %}
             &lt; previous
         {% endif %}
     </li>
     <li>
-        {% if page.page_menu.next_link != nil %}
+        {% if page.page_menu.next_link %}
             <a href="{{page.page_menu.next_link}}">next &gt;</a>
         {% else %}
             next &gt;
         {% endif %}
     </li>
     <li>
-        {% if page.page_menu.last_link != nil %}
+        {% if page.page_menu.last_link %}
             <a href="{{page.page_menu.last_link}}">last &gt;&gt;</a>
         {% else %}
             latest &gt;&gt;
@@ -42,15 +42,15 @@
 {% assign image_table = page.image_table %}
 {% assign image_count = image_table.size %}
 
-{% if page.page_menu != nil %}
+{% if page.page_menu %}
     {{ nextpage_section }}
 {% endif %}
 
-{% if page.jump_to != nil %}
+{% if page.jump_to %}
 <div class="gallery jumpto">
-    <h4><strong>Jump to:</strong></h4>
+    <h2>Jump to:</h2>
     <div class="nav_container jumpto">
-        <nav>
+        <nav aria-label="jumpto">
             <ul class="nav-list">
                 {% for link in page.jump_to %}
                 <li class="nav-item">
@@ -71,7 +71,7 @@
 {% include image-gallery.html %}
 
 {% if image_count > 10 %}
-    {% if page.page_menu != nil %}
+    {% if page.page_menu%}
         {{ nextpage_section }}
     {% endif %}
     {{ backto_section }}

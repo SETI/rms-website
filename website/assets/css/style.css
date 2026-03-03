@@ -731,11 +731,17 @@ td.colgroup-seperator {
     outline: thin solid #bbb;
 }
 
-.galleries .image-gallery .thumbnail {
-    border: none;
+.galleries figcaption {
+    font-size: 75%;
 }
 
 /* gallery nav for jumpto */
+.jumpto h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
 .jumpto nav {
     background-color: #fff;
 }
