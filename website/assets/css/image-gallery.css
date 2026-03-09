@@ -3,7 +3,6 @@
     text-wrap: nowrap;
     display: flex;
     flex-wrap: wrap;
-    margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -43,6 +42,8 @@
 .image-gallery gallery-object figcaption {
     padding-top: 0;
     padding-bottom: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 figure.thumbnail {
