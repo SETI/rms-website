@@ -14,21 +14,20 @@
                 {% else %}
                     <img src="{{ image.external_src }}" alt="{{ image.alt }}" />
                 {% endif %}
-                {% assign title = image.title %}
                 </a>
             {% else %}
                 <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank" rel="noopener noreferrer">
                     <img src="{{ site.assets_url }}holdings/previews/{{ image.src }}" alt="{{ image.alt }}" />
                 </a>
-                {% assign title = image.filename %}
             {% endif %}
+            {% assign title = image.title | default: image.filename %}
+                <figcaption>
+                    {% if image.movie %}
+                        <img src="{{ site.assets_url}}icons-local/movie_icon.png" alt="Movie icon">
+                    {% endif %}
+                    {{ title }}
+                </figcaption>
             </figure>
-            <figcaption>
-                {% if image.movie %}
-                    <img src="{{ site.assets_url}}icons-local/movie_icon.png" alt="Movie icon">
-                {% endif %}
-                {{ title }}
-            </figcaption>
         </gallery-object>
     {% endfor %}
 </gallery>
