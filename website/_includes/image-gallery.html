@@ -9,11 +9,7 @@
             <figure class="{{ class }}">
             {% if image.href %}
                 <a href="{{ image.href }}" target="_blank" rel="noopener noreferrer">
-                {% if image.src %}
                     <img src="{{ site.assets_url }}{{ image.src }}" alt="{{ image.alt }}" />
-                {% else %}
-                    <img src="{{ image.external_src }}" alt="{{ image.alt }}" />
-                {% endif %}
                 </a>
             {% else %}
                 <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank" rel="noopener noreferrer">

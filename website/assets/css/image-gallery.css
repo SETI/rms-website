@@ -16,7 +16,7 @@
 }
 
 .image-gallery gallery-object a {
-    text-decoration: none!important;
+    text-decoration: none;
     color: #111;
 }
 
@@ -51,7 +51,7 @@ figure.thumbnail {
     max-height: 100px;
 }
 
-figcaption {
+.image-gallery figcaption {
     text-wrap: wrap;
 }
 
