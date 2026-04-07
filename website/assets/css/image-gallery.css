@@ -60,9 +60,12 @@
 }
 
 .gallery.page_menu {
-    text-align: center;
-    padding-right: 20em;
-}
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+ }
 
 .gallery.jumpto ul {
     padding-left: 0;
