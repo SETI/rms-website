@@ -46,7 +46,7 @@
     padding-right: 2px;
 }
 
-figure.thumbnail {
+.image-gallery figure.thumbnail {
     border: none;
     max-height: 100px;
 }
