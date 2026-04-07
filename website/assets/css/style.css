@@ -105,7 +105,7 @@ a:focus {
   width: 25em;
   position: absolute;
   right: 2.2em;
-  top: 7.4em;
+  top: 6.4em;
 
 }
 
@@ -269,7 +269,28 @@ img.diagram {
     float: none !important;
 }
 
-img.
+/* press release (under gallery) specific css */
+a.press_release {
+    border-bottom: none;
+    margin-right: 2em;
+}
+
+a.press_release img {
+    float: none !important;
+    display: block;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 1200px;
+    max-height: 800px;
+}
+
+div.press_release table {
+    max-width: 840px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 
 /* homepage boxes */
 .homebox {
@@ -377,7 +398,7 @@ img.
         padding:0;
     }
     .homebox {
-        margin:0; 
+        margin:0;
         padding:0;
         margin-bottom:10px;
     }
@@ -386,7 +407,7 @@ img.
         width:100%;
     }
     div.col-xm-12 {
-        margin:0; 
+        margin:0;
         padding:0;
     }
     .mission_statement {
@@ -425,7 +446,7 @@ img.
 }
 /* mobile hamburger menu is inside banner */
 .hamburger-container {
-    padding:0; 
+    padding:0;
     margin:0;
     padding-top:5px;
     word-wrap:nowrap;
@@ -681,6 +702,17 @@ td.colgroup-seperator {
       font-weight: bold;
 }
 
+.pr_table {
+    max-width: max-content;
+}
+
+.pr_table td {
+    text-align: left;
+}
+
+.pr_table td:first-child {
+    text-align: right;
+}
 
 /* tools page */
 .tools > .container {
@@ -694,6 +726,29 @@ td.colgroup-seperator {
      margin-top:0;
 }
 
+/* galleries specific */
+.galleries .image-gallery gallery-object {
+    outline: thin solid #bbb;
+}
+
+.galleries figcaption {
+    font-size: 75%;
+}
+
+/* gallery nav for jumpto */
+.jumpto h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.jumpto nav {
+    background-color: #fff;
+}
+
+.jumpto .nav-item {
+    position: relative;
+}
 
 /* footer */
 .navbar-nav.nav-justified > li{

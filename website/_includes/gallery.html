@@ -1,0 +1,78 @@
+{% capture nextpage_section %}
+<div class="gallery page_menu">
+  <ul>
+    <li>
+        {% if page.page_menu.first_link %}
+        <a href="{{page.page_menu.first_link}}">&lt;&lt; first </a>
+        {% else %}
+            &lt;&lt; oldest
+        {% endif %}
+    </li>
+    <li>
+        {% if page.page_menu.previous_link %}
+            <a href="{{page.page_menu.previous_link}}">&lt; previous </a>
+        {% else %}
+            &lt; previous
+        {% endif %}
+    </li>
+    <li>
+        {% if page.page_menu.next_link %}
+            <a href="{{page.page_menu.next_link}}">next &gt;</a>
+        {% else %}
+            next &gt;
+        {% endif %}
+    </li>
+    <li>
+        {% if page.page_menu.last_link %}
+            <a href="{{page.page_menu.last_link}}">last &gt;&gt;</a>
+        {% else %}
+            latest &gt;&gt;
+        {% endif %}
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture backto_section %}
+<div class="gallery returnto">
+    <a href="{{site.baseurl}}/galleries.html"><< Back to Image Galleries main page</a>
+</div>
+{% endcapture %}
+
+{% assign image_table = page.image_table %}
+{% assign image_count = image_table.size %}
+
+{% if page.page_menu %}
+    {{ nextpage_section }}
+{% endif %}
+
+{% if page.jump_to %}
+<div class="gallery jumpto">
+    <h2>Jump to:</h2>
+    <div class="nav_container jumpto">
+        <nav aria-label="jumpto">
+            <ul class="nav-list">
+                {% for link in page.jump_to %}
+                <li class="nav-item">
+                    {% if link.menu_item.url == page.name %}
+                        <b>{{link.menu_item.title}}</b>
+                    {% else %}
+                        <a href="{{link.menu_item.url}}" title="{{link.menu_item.alt}}">{{link.menu_item.title}}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</div>{% endif %}
+
+{{ backto_section }}
+
+{% include image-gallery.html %}
+
+{% if image_count > 10 %}
+    {% if page.page_menu%}
+        {{ nextpage_section }}
+    {% endif %}
+    {{ backto_section }}
+{% endif %}
