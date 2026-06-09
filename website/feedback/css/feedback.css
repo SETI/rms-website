@@ -1,35 +1,3 @@
-/*
-    Copyright (c) 2019, California Institute of Technology ("Caltech").
-    U.S. Government sponsorship acknowledged.
-    All rights reserved.
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright notice,
-      this list of conditions and the following disclaimer.
-    * Redistributions must reproduce the above copyright notice, this list of
-      conditions and the following disclaimer in the documentation and/or other
-      materials provided with the distribution.
-    * Neither the name of Caltech nor its operating division, the Jet Propulsion
-      Laboratory, nor the names of its contributors may be used to endorse or
-      promote products derived from this software without specific prior written
-      permission.
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
-    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-    POSSIBILITY OF SUCH DAMAGE.
-*/
-
-.feedback-review label {
-    font-size: 14px;
-}
-
 .feedback-body .feedback-error {
     color: #b94a48;
     border-color: #b94a48;
@@ -54,7 +22,7 @@
     text-decoration: underline;
 }
 
-.feedback-modal h3 {
+#feedback-modal h3 {
     /* OPUS changes to make the feedback form header agree with our existing
        modal dialogs */
     line-height: 27px;
@@ -69,7 +37,7 @@
     text-align: center;
 }
 
-.feedback-modal {
+#feedback-modal {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -108,7 +76,7 @@
 
 }
 
-.feedback-modal .feedback-close {
+#feedback-modal .feedback-close {
     float: right;
     font-size: 20px;
     /* font-weight: bold; */ /* OPUS */
@@ -119,7 +87,7 @@
     /* opacity: 0.2; */ /* OPUS */
     /* filter: alpha(opacity=20); */ /* OPUS */
 }
-.feedback-modal .feedback-close:hover {
+#feedback-modal .feedback-close:hover {
     color: #000000;
     /* text-decoration: none; */ /* OPUS */
     /* opacity: 0.4; */ /* OPUS */
@@ -183,9 +151,7 @@
 .feedback-btn:active, .feedback-btn.active {
     background-color: #cccccc \9;
 }
-.feedback-btn:first-child {
-    /* *margin-left: 0;  */ /* OPUS - illegal CSS */
-}
+
 .feedback-btn:hover {
     color: #333333;
     text-decoration: none;
@@ -279,32 +245,6 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
     /* *padding-bottom: 3px; */ /* OPUS - illegal CSS */
 }
 
-.feedback-btn .caret {
-    margin-top: 7px;
-    margin-left: 0;
-}
-.feedback-btn:hover .caret, .open.btn-group .caret {
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.feedback-btn-inverse .caret {
-    border-top-color: #ffffff;
-    opacity: 0.75;
-    filter: alpha(opacity=75);
-}
-.feedback-btn-small .caret {
-    margin-top: 4px;
-}
-
-.feedback-bottom-right {
-    position:fixed;
-    bottom:5px;
-    right:5px;
-}
-
-
-
 .feedback-header {
     padding: 9px 15px;
     border-bottom: 1px solid #eee;
@@ -322,8 +262,6 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
 .feedback-body .modal-form {
     margin-bottom: 0;
 }
-
-
 
 .feedback-body textarea {
     margin: 0;
@@ -370,8 +308,6 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
 
 }
 
-
-
 .feedback-footer {
     /* padding: 5px 14px 15px 15px; */ /* OPUS - redundant */
     /* OPUS - these lines were copied from the .feedback-footer below */
@@ -407,204 +343,7 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
     margin-bottom: 0;
 }
 
-.feedback-glass {
-    opacity: 0.5;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=50);
-}
-
-.feedback-glass-org {
-    position: absolute;
-    z-index:2000;
-    top:0;
-    left:0;
-    width: 100%;
-    height:100%;
-    background: #777;
-    opacity: 0.5;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=50);
-}
-
-.feedback-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index:1999;
-}
-
-
-#feedback-blackout-element {
-    background: #000;
-    opacity: 0.8;
-    position:absolute;
-
-}
-
-
-.feedback-highlight-element, .feedback-highlighted {
-    position:absolute;
-
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-
-    z-index: 2000;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-
-    -webkit-box-shadow: 0px 0px 8px 0px #000;
-    box-shadow: 0px 0px 8px 0px #000;
-
-}
-
-.feedback-highlight-element {
-    pointer-events:none;
-}
-
-#feedback-highlight-close {
-    background: #ccc;
-    border:1px solid black;
-    text-align:center;
-    line-height:20px;
-    font-size:20px;
-    font-weight:bold;
-    width:20px;
-    height:20px;
-    position:absolute;
-    cursor:pointer;
-    margin-left:-12px;
-    margin-top:-12px;
-
-    z-index:2001;
-
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-
-
-    -webkit-box-shadow: 0px 0px 4px 0px #615e5e;
-    box-shadow: 0px 0px 4px 0px #615e5e;
-
-    background-color: #c5c5c5;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#c5c5c5), to(#999999));
-    background-image: -webkit-linear-gradient(top, #c5c5c5, #999999);
-    background-image:    -moz-linear-gradient(top, #c5c5c5, #999999);
-    background-image:      -o-linear-gradient(top, #c5c5c5, #999999);
-    background-image:         linear-gradient(to bottom, #c5c5c5, #999999);
-
-
-}
-
-.feedback-blackedout {
-    background: #000;
-    position:absolute;
-    z-index: 2000;
-}
-
-#feedback-highlight-container {
-    position:absolute;
-    top:0;
-    left:0;
-    pointer-events:none;
-    z-index:2010;
-}
-
-.feedback-animate-toside {
-
-    top: 100%;
-    left:100%;
-    width: 300px;
-    margin-left:-320px;
-    margin-top: -200px;
-
-}
-
-.feedback-animate-review {
-    -webkit-transition: all 2s ease 0s;
-    -moz-transition: all 2s ease 0s;
-    -ms-transition: all 2s ease 0s;
-    -o-transition: all 2s ease 0s;
-
-    top: 50%;
-    left:50%;
-    width: 600px;
-
-    margin-left:-300px;
-    margin-top: -200px;
-}
-
-.feedback-canvas-complete {
-
-    -webkit-filter:blur(5px);
-}
-
-.feedback-body canvas {
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    border:1px solid #636363;
-    -webkit-box-shadow: 0px 0px 12px 0px #615e5e;
-    box-shadow: 0px 0px 12px 0px #615e5e;
-    position:absolute;
-}
-
-.feedback-browser {
-    margin-left:330px;
-}
-
-
-.feedback-loader {
-    text-align: center;
-}
-.feedback-loader span {
-    display: inline-block;
-    vertical-align: middle;
-    width: 10px;
-    height: 10px;
-    margin: 50px auto;
-    background: black;
-    border-radius: 50px;
-    -webkit-animation: feedback-loader 0.9s infinite alternate;
-    -moz-animation: feedback-loader 0.9s infinite alternate;
-}
-.feedback-loader span:nth-of-type(2) {
-    -webkit-animation-delay: 0.3s;
-    -moz-animation-delay: 0.3s;
-}
-.feedback-loader span:nth-of-type(3) {
-    -webkit-animation-delay: 0.6s;
-    -moz-animation-delay: 0.6s;
-}
-@-webkit-keyframes feedback-loader {
-  0% {
-    width: 10px;
-    height: 10px;
-    opacity: 0.9;
-    -webkit-transform: translateY(0);
-  }
-  100% {
-    width: 24px;
-    height: 24px;
-    opacity: 0.1;
-    -webkit-transform: translateY(-21px);
-  }
-}
-@-moz-keyframes feedback-loader {
-  0% {
-    width: 10px;
-    height: 10px;
-    opacity: 0.9;
-    -moz-transform: translateY(0);
-  }
-  100% {
-    width: 24px;
-    height: 24px;
-    opacity: 0.1;
-    -moz-transform: translateY(-21px);
-  }
-}
-
-
-/* ************************************************************* Custom ***********************************************/
-.feedbackTab {
+#feedback-tab {
   display: block;
   position: fixed;
   opacity: 1;
@@ -615,6 +354,7 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
   color: rgb(255, 255, 252); /* pds-rings */
   border: 1px solid transparent;
   font-family: Arial;
+  font-size: 13px;
   line-height: 20px;
   text-decoration: none;
 
@@ -635,15 +375,15 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
 
   border-radius: 4px 4px 0 0;
   padding: 5px 15px 15px;
-  height: 60px;
-  width: 150px;
-  right: -55px;
+  height: 35px;
+  width: 185px;
+  right: -80px;
   top: 50vh;
 }
 
-.feedbackTab:hover,
-.feedbackTab:focus,
-.feedbackTab:active {
+#feedback-tab:hover,
+#feedback-tab:focus,
+#feedback-tab:active {
     color: #ffffffff; /* pds-rings */
     background-color: #004361; /* pds-rings */
     -webkit-transform: rotate(-90deg) translateY(-5px);
@@ -652,27 +392,27 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
     transform: rotate(-90deg) translateY(-5px);
 }
 
-.feedbackTab p {
+#feedback-tab p {
     /* font-size: 16px; */ /* OPUS - Bug in NASA code doesn't allow override from config.js */
     margin: 0;
     display: flex;
     justify-content: center;
 }
-.feedbackTab p:before {
-    background-image: url(../image/envelope.jpg);
+
+#feedback-tab p:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0";
+    padding-right: 8px;
+
     opacity: 1.5; /* OPUS - Added to agree with text opacity */
-    background-size: 18px 18px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 22px;
-    height: 18px;
-    content: "";
-}
-.feedbackTab p.noImage:before {
+ }
+
+#feedback-tab p.noImage:before {
     display: none;
 }
 
-.feedbackTab.left {
+#feedback-tab.left {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg) scale(1.02);
@@ -680,17 +420,17 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
     right: initial;
     left: -55px;
 }
-.feedbackTab.left:hover,
-.feedbackTab.left:focus,
-.feedbackTab.left:active {
+#feedback-tab.left:hover,
+#feedback-tab.left:focus,
+#feedback-tab.left:active {
     -webkit-transform: rotate(90deg) translateY(-5px);
     -moz-transform: rotate(90deg) translateY(-5px);
     -ms-transform: rotate(90deg) scale(1.02) translateY(-5px);
     transform: rotate(90deg) translateY(-5px);
 }
 
-.feedbackTab.bottom,
-.feedbackTab.top {
+#feedback-tab.bottom,
+#feedback-tab.top {
     -webkit-transform: initial;
     -moz-transform: initial;
     -ms-transform: initial;
@@ -700,33 +440,33 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
     bottom: initial;
 }
 
-.feedbackTab.bottom {
+#feedback-tab.bottom {
     bottom: -5px;
 }
-.feedbackTab.bottom:hover,
-.feedbackTab.bottom:focus,
-.feedbackTab.bottom:active {
+#feedback-tab.bottom:hover,
+#feedback-tab.bottom:focus,
+#feedback-tab.bottom:active {
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);
     -ms-transform: scale(1.02) translateY(-5px);
     transform: translateY(-5px);
 }
 
-.feedbackTab.top {
+#feedback-tab.top {
     top: -5px;
     border-radius: 0 0 4px 4px;
     padding: 15px 15px 5px;
 }
-.feedbackTab.top:hover,
-.feedbackTab.top:focus,
-.feedbackTab.top:active {
+#feedback-tab.top:hover,
+#feedback-tab.top:focus,
+#feedback-tab.top:active {
     -webkit-transform: translateY(5px);
     -moz-transform: translateY(5px);
     -ms-transform: scale(1.02) translateY(5px);
     transform: translateY(5px);
 }
 
-.feedback-modal {
+#feedback-modal {
     /* overwriting above default values  */
     overflow: visible;
     max-height: fit-content;
@@ -736,54 +476,13 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
     display: grid;
 }
 
-/* OPUS - duplicate with above and moved in there */
-/* .feedback-footer {
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    align-items: baseline;
-} */
-
-.reCaptcha-brand {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 0.75em;
-}
-
 .feedback-body p a,
 .feedback-body p a:hover {
     color: #0000cc;
 }
 
-.additionalHelp {
-    margin: 0px 0px -5px 5px;
-}
-
-.feedback-body.confirmation {
-    text-align: center;
-}
-
-.feedback-body.confirmation p:last-child {
-    margin-bottom: 0;
-}
-
-.feedback-body.suspectedBot,
-.feedback-body.captchaError {
-    color: rgba(100,100,100,0.7);
-}
-
-.feedback-body.suspectedBot p:first-child,
-.feedback-body.captchaError p:first-child {
-    color: black;
-}
-
-.confirmation .additionalHelp ul {
-    list-style: none;
-}
-
 @media only screen and (max-width: 1024px) {
-    .touchevents .feedbackTab {
+    .touchevents #feedback-tab {
         background-color: transparent;
         border: none;
         -webkit-transform: initial;
