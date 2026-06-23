@@ -28,7 +28,7 @@
                 return;
             }
 
-            $.get("/feedback/feedback.html",
+            $.get("./feedback/feedback.html",
                 function(html) {
                     $("body").append(html);
 
@@ -37,11 +37,11 @@
                             window.location.href);
 
                     $(".feedback-close").click(Feedback.close);
-                    $("`#feedback-modal`").click(function(e){
+                    $("#feedback-modal").click(function(e){
                         e.stopPropagation();
                     });
 
-                    $("`#feedback-form`").on("submit", Feedback.submit);
+                    $("#feedback-form").on("submit", Feedback.submit);
 
             }).fail(function(jqXHR, textStatus, errorThrown) {
                 console.error('Failed to load feedback form:', textStatus, errorThrown);
