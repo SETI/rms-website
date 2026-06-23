@@ -404,7 +404,6 @@ button.feedback-btn.small, input[type="submit"].feedback-btn.small {
     font-weight: 900;
     content: "\f0e0";
     padding-right: 8px;
-
     opacity: 1.5; /* OPUS - Added to agree with text opacity */
  }
 
