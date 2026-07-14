@@ -84,14 +84,11 @@
                     throw new Error(text || `Server responded with status: ${response.status}`);
                 }
 
-                $(".feedback-body").html(
-                    '<p>' +
-                    'Thank you for making the RMS Node a better site.' +
-                    '<br><br>' +
+                $(".feedback-content").text(
+                    'Thank you for making the RMS Node a better site.\n\n' +
                     'If you provided an email address, ' +
                     'a representative will get back to you ' +
-                    'as soon as possible.' +
-                    '</p>'
+                    'as soon as possible.'
                 );
 
             } catch (error) {

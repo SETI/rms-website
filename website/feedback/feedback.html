@@ -3,53 +3,55 @@
         <h3>
             Ring-Moon Systems Feedback and Support
             <a class="feedback-close" href="#">
-                <i class="far fa-times-circle fa-lg"></i>
+                <i class="fa fa-times-circle fa-lg"></i>
             </a>
         </h3>
     </div>
 
     <div class="feedback-body">
-        <p class="feedback-intro">
-            How can we help you?
-            Send us your question or feedback and
-            we will get back to you as soon as possible.
-        </p>
+        <div class="feedback-content">
+            <p class="feedback-intro">
+                How can we help you?
+                Send us your question or feedback and
+                we will get back to you as soon as possible.
+            </p>
 
-        <form id="feedback-form" class="feedback-form-container" method="post" action="https://pds-rings.seti.org/cgi-bin/pds-feedback.pl">
-            <div class="feedback-input">
-                <label>Name:</label>
-                <input required type="text" name="name" maxlength="120" >
-            </div>
+            <form id="feedback-form" class="feedback-form-container" method="post" action="https://pds-rings.seti.org/cgi-bin/pds-feedback.pl">
+                <div class="feedback-input">
+                    <label>Name:</label>
+                    <input required type="text" name="name" maxlength="120" >
+                </div>
 
-            <div class="feedback-input">
-                <label>Email:</label>
-                <input required type="email" name="email" maxlength="120">
-            </div>
+                <div class="feedback-input">
+                    <label>Email:</label>
+                    <input required type="email" name="email" maxlength="120">
+                </div>
 
-            <div class="feedback-input">
-                <label>Subject:</label>
-                <input required type="text" name="subject" maxlength="150" placeholder="Question/Comment/Concern">
-            </div>
+                <div class="feedback-input">
+                    <label>Subject:</label>
+                    <input required type="text" name="subject" maxlength="150" placeholder="Question/Comment/Concern">
+                </div>
 
-            <div class="feedback-input">
-                <label>Comment:</label>
-                <textarea required name="body"></textarea>
-            </div>
+                <div class="feedback-input">
+                    <label>Comment:</label>
+                    <textarea required name="body"></textarea>
+                </div>
 
-            <p class="additionalHelp">
-                In the meantime, you may find the following links helpful:
-                <ul>
-                    <li>
-                        <a href="https://pds-rings.seti.org/viewmaster/volumes/">Browse Data Volumes</a>
-                    </li>
-                    <li><a href="https://opus.pds-rings.seti.org/opus/#">OPUS Search</a></li><li><a href="https://pds.nasa.gov/datasearch/data-search/">PDS-Wide Search</a></li></ul></p>
+                <p class="additionalHelp">
+                    In the meantime, you may find the following links helpful:
+                    <ul>
+                        <li>
+                            <a href="https://pds-rings.seti.org/viewmaster/volumes/">Browse Data Volumes</a>
+                        </li>
+                        <li><a href="https://opus.pds-rings.seti.org/opus/#">OPUS Search</a></li><li><a href="https://pds.nasa.gov/datasearch/data-search/">PDS-Wide Search</a></li></ul></p>
 
-            <input type="hidden" name="location" value="">
+                <input type="hidden" name="location" value="">
 
-            <div class="feedback-footer">
-                <input type="submit" value="Send Feedback" class="feedback-btn">
-            </div>
-        </form>
+                <div class="feedback-footer">
+                    <input type="submit" value="Send Feedback" class="feedback-btn">
+                </div>
+            </form>
+        </div>
     </div>
 
 </div>
