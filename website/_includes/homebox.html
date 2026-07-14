@@ -1,36 +1,37 @@
 <div class = "homebox_row">
 
+{%- comment -%} Define targets and replacements once at the top of the template {%- endcomment -%}
+{%- capture internal_link_target -%}href="/{%- endcapture -%}
+{%- capture prepend_link_path -%}href="{{ site.baseurl }}/{%- endcapture -%}
+
+{%- capture internal_img_target -%}src="/{%- endcapture -%}
+{%- capture prepend_img_path -%}src="{{ site.assets_url }}/{%- endcapture -%}
+
 {% for homebox in page.homeboxes %}
-<div class="col-md-12 col-sm-12 col-xs-12">
-    <div class = "homebox_item">
-
-        <div class="homebox panel panel-default">
-
-          <div class = "panel-heading">
-
-           {{ homebox.title }}
-
-          </div>
-
-          <div class="panel-body">
-
-            <div>
-
-              {{ homebox.content | markdownify }}
-
-            </div>
-
-          </div><!-- /panel-body -->
-
-        </div><!--/homebox panel panel-default -->
-
-        <div class = "mobile toplink homebox-toplink">
-          <a href = "#top">back to top</a>
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="homebox_item">
+      <div class="homebox panel panel-default">
+        <div class="panel-heading">
+          {{ homebox.title }}
         </div>
-
+        <div class="panel-body">
+          <div>
+            {%- comment -%} The replace filters safely use the variables defined above {%- endcomment -%}
+            {{ homebox.content | markdownify
+              | replace: 'href="//', 'href="PROTOCOL_RELATIVE//'
+              | replace: internal_link_target, prepend_link_path
+              | replace: 'href="PROTOCOL_RELATIVE//', 'href="//'
+              | replace: internal_img_target, prepend_img_path
+            }}
+          </div>
+        </div><!-- /panel-body -->
+      </div><!--/homebox panel panel-default -->
+      <div class="mobile toplink homebox-toplink">
+        <a href="#top">back to top</a>
+      </div>
     </div><!-- /item -->
-</div>
-
+  </div>
 {% endfor %}
+
 
 </div><!-- /row -->
