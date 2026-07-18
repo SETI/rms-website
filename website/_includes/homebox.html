@@ -21,7 +21,9 @@
               | replace: 'href="//', 'href="PROTOCOL_RELATIVE//'
               | replace: internal_link_target, prepend_link_path
               | replace: 'href="PROTOCOL_RELATIVE//', 'href="//'
+              | replace: 'src="//', 'src="PROTOCOL_RELATIVE//'
               | replace: internal_img_target, prepend_img_path
+              | replace: 'src="PROTOCOL_RELATIVE//', 'src="//'
             }}
           </div>
         </div><!-- /panel-body -->
