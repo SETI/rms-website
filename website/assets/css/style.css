@@ -443,7 +443,9 @@ div.press_release table {
 }
 .banner a.site-title:hover {
 	text-decoration: none;
+  color: color-mix(in srgb, currentColor 90%, #2b498e);
 }
+
 /* mobile hamburger menu is inside banner */
 .hamburger-container {
     padding:0;
@@ -1116,4 +1118,13 @@ a.text-dark:hover, a.text-dark:focus {
   text-shadow: none;
   background-color: transparent;
   border: 0;
+}
+
+
+/* a few things from bootstrap 5 */
+html:not([dir=rtl]) .ps-1 {
+  padding-left: 0.25rem !important;
+}
+*[dir=rtl] .ps-1 {
+  padding-right: 0.25rem !important;
 }
