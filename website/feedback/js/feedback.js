@@ -1,3 +1,7 @@
+---
+---
+const BASEURL = {{ site.baseurl | jsonify }};
+
 (function($){
 
     window.Feedback={
@@ -28,7 +32,7 @@
                 return;
             }
 
-            $.get("./feedback/feedback.html",
+            $.get(`${BASEURL}/feedback/feedback.html`,
                 function(html) {
                     $("body").append(html);
 
