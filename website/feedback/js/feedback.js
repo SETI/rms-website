@@ -70,8 +70,6 @@ const BASEURL = {{ site.baseurl | jsonify }};
             const formData = new FormData($(submittedForm)[0]);
             const encodedBody = new URLSearchParams(formData).toString();
 
-            console.log('Encoded POST body:', encodedBody);
-
             try {
                 const response = await fetch(submittedForm.action, {
                     method: 'POST',
@@ -89,7 +87,7 @@ const BASEURL = {{ site.baseurl | jsonify }};
                 }
 
                 $(".feedback-content").text(
-                    'Thank you for making the RMS Node a better site.\n\n' +
+                    'Thank you for making the RMS Node a better site.' +
                     'If you provided an email address, ' +
                     'a representative will get back to you ' +
                     'as soon as possible.'

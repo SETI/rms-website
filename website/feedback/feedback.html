@@ -11,39 +11,44 @@
     <div class="feedback-body">
         <div class="feedback-content">
             <p class="feedback-intro">
-                How can we help you?
+                How can we help you?</br>
                 Send us your question or feedback and
                 we will get back to you as soon as possible.
             </p>
 
             <form id="feedback-form" class="feedback-form-container" method="post" action="https://pds-rings.seti.org/cgi-bin/pds-feedback.pl">
                 <div class="feedback-input">
-                    <label>Name:</label>
-                    <input required type="text" name="name" maxlength="120" >
+                    <label for="feedback-name">Name:</label>
+                    <input id="feedback-name" required type="text" name="name" maxlength="120" >
                 </div>
 
                 <div class="feedback-input">
-                    <label>Email:</label>
-                    <input required type="email" name="email" maxlength="120">
+                    <label for="feedback-email">Email:</label>
+                    <input id="feedback-email" required type="email" name="email" maxlength="120">
                 </div>
 
                 <div class="feedback-input">
-                    <label>Subject:</label>
-                    <input required type="text" name="subject" maxlength="150" placeholder="Question/Comment/Concern">
+                    <label for="feedback-subject">Subject:</label>
+                    <input id="feedback-subject" required type="text" name="subject" maxlength="150" placeholder="Question/Comment/Concern">
                 </div>
 
                 <div class="feedback-input">
-                    <label>Comment:</label>
-                    <textarea required name="body"></textarea>
+                    <label for="feedback-body">Comment:</label>
+                    <textarea id="feedback-body" required name="body"></textarea>
                 </div>
 
-                <p class="additionalHelp">
+                <div class="additionalHelp">
                     In the meantime, you may find the following links helpful:
                     <ul>
                         <li>
                             <a href="https://pds-rings.seti.org/viewmaster/volumes/">Browse Data Volumes</a>
                         </li>
-                        <li><a href="https://opus.pds-rings.seti.org/opus/#">OPUS Search</a></li><li><a href="https://pds.nasa.gov/datasearch/data-search/">PDS-Wide Search</a></li></ul></p>
+                        <li>
+                            <a href="https://opus.pds-rings.seti.org/opus/#">OPUS Search</a>
+                        </li>
+                        <li>
+                            <a href="https://pds.nasa.gov/datasearch/data-search/">PDS-Wide Search</a>
+                        </li></ul></div>
 
                 <input type="hidden" name="location" value="">
 
