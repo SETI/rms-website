@@ -95,6 +95,10 @@
     cursor: pointer;
 }
 
+.feedback-intro {
+    margin-bottom: 10px;
+}
+
 .feedback-input {
     padding: 5px;
     width: 100%;

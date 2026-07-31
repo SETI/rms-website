@@ -87,7 +87,7 @@ const BASEURL = {{ site.baseurl | jsonify }};
                 }
 
                 $(".feedback-content").text(
-                    'Thank you for making the RMS Node a better site.' +
+                    'Thank you for making the RMS Node a better site. ' +
                     'If you provided an email address, ' +
                     'a representative will get back to you ' +
                     'as soon as possible.'
