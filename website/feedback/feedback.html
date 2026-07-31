@@ -1,0 +1,63 @@
+<div id="feedback-modal" >
+    <div class="feedback-header">
+        <h3>
+            Ring-Moon Systems Feedback and Support
+
+            <a class="feedback-close" href="#" aria-label="Close feedback form">
+                <i class="fa fa-times-circle fa-lg" aria-hidden="true"></i>
+            </a>
+        </h3>
+    </div>
+
+    <div class="feedback-body">
+        <div class="feedback-content">
+            <p class="feedback-intro">
+                How can we help you?
+                Send us your question or feedback and
+                we will get back to you as soon as possible.
+            </p>
+
+            <form id="feedback-form" class="feedback-form-container" method="post" action="https://pds-rings.seti.org/cgi-bin/pds-feedback.pl">
+                <div class="feedback-input">
+                    <label for="feedback-name">Name:</label>
+                    <input id="feedback-name" required type="text" name="name" maxlength="120" >
+                </div>
+
+                <div class="feedback-input">
+                    <label for="feedback-email">Email:</label>
+                    <input id="feedback-email" required type="email" name="email" maxlength="120">
+                </div>
+
+                <div class="feedback-input">
+                    <label for="feedback-subject">Subject:</label>
+                    <input id="feedback-subject" required type="text" name="subject" maxlength="150" placeholder="Question/Comment/Concern">
+                </div>
+
+                <div class="feedback-input">
+                    <label for="feedback-body">Comment:</label>
+                    <textarea id="feedback-body" required name="body"></textarea>
+                </div>
+
+                <div class="additionalHelp">
+                    In the meantime, you may find the following links helpful:
+                    <ul>
+                        <li>
+                            <a href="https://pds-rings.seti.org/viewmaster/volumes/">Browse Data Volumes</a>
+                        </li>
+                        <li>
+                            <a href="https://opus.pds-rings.seti.org/opus/#">OPUS Search</a>
+                        </li>
+                        <li>
+                            <a href="https://pds.nasa.gov/datasearch/data-search/">PDS-Wide Search</a>
+                        </li></ul></div>
+
+                <input type="hidden" name="location" value="">
+
+                <div class="feedback-footer">
+                    <input type="submit" value="Send Feedback" class="feedback-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
