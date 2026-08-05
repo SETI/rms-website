@@ -6,7 +6,7 @@ Subject: Re: [EXTERNAL] Cassini ISS & VIMS per review
 
 Mitch and Mike, here is a summary of the some of the validate errors we found. We also were unable to find a SIS in the bundle.
  
-There were many "'Context product not found" errors in all collections – I wasn't sure if these are due to a problem in our validate configuration though.
+There were many "'Context product not found" errors in all collections - I wasn't sure if these are due to a problem in our validate configuration though.
 ·        ERROR [error.label.context_ref_not_found] Context product not found: urn:nasa:pds:context:target:planetary_system.jupiter_system
 ·        Other references that weren't found included these examples and many similar ones:
 urn:nasa:pds:context:target:ring.saturn_rings
