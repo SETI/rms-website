@@ -24,7 +24,7 @@ Mitch sent me this context product a while ago, and I suggested changing the LID
 > urn:nasa:pds:context:target:star.r_leo
 We'll add this context product with LID as you have it in the next go-around. We usually don't add a context product until someone requests it.
 
-> There were many “Context reference name mismatch” warnings where the name didn’t match exactly what was expected but was close enough to have the same meaning so I’m not sure these are crucial. 
+> There were many "Context reference name mismatch" warnings where the name didn't match exactly what was expected but was close enough to have the same meaning so I'm not sure these are crucial. 
 I barely remember any mention of formation rules for names, unlike LIDs, which we're burned out on. We, PDS-wide, should think about what to do, now that validate checks for this. We have many all-caps names, which seems wrong. Minimum: I can generate a list of all LIDs, names, proposed new names. Maximum: formation rules for names + discussion of what to do with existing, non-conforming names and the products that use them. If the latter has a good chance of ever happening, we should do it rather than the minimum.
 
 For the two names you gave that raised errors, Anna, I would keep the ones you have and live with such warnings.

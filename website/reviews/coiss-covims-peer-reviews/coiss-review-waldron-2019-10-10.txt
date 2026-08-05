@@ -6,14 +6,14 @@ Subject: Re: [EXTERNAL] Cassini ISS & VIMS per review
 
 Mitch and Mike, here is a summary of the some of the validate errors we found. We also were unable to find a SIS in the bundle.
  
-There were many “'Context product not found” errors in all collections – I wasn’t sure if these are due to a problem in our validate configuration though.
+There were many "'Context product not found" errors in all collections – I wasn't sure if these are due to a problem in our validate configuration though.
 ·        ERROR [error.label.context_ref_not_found] Context product not found: urn:nasa:pds:context:target:planetary_system.jupiter_system
-·        Other references that weren’t found included these examples and many similar ones:
+·        Other references that weren't found included these examples and many similar ones:
 urn:nasa:pds:context:target:ring.saturn_rings
 urn:nasa:pds:context:target:calibration_field.star
 urn:nasa:pds:context:target:star.r_leo
  
-There were many “Context reference name mismatch” warnings where the name didn’t match exactly what was expected but was close enough to have the same meaning so I’m not sure these are crucial.
+There were many "Context reference name mismatch" warnings where the name didn't match exactly what was expected but was close enough to have the same meaning so I'm not sure these are crucial.
 ·        This warning came up many times in both ISS collections:
 WARNING [warning.label.context_ref_mismatch] Context reference name mismatch. Value: 'Cassini Orbiter Imaging Science Subsystem - Narrow Angle Camera' Expected one of: '[IMAGING SCIENCE SUBSYSTEM - NARROW ANGLE]'
 WARNING [warning.label.context_ref_mismatch] Context reference name mismatch. Value: 'Cassini Orbiter Imaging Science Subsystem - Wide Angle Camera' Expected one of: '[IMAGING SCIENCE SUBSYSTEM - WIDE ANGLE]'
