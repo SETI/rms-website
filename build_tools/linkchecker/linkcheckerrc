@@ -1,4 +1,0 @@
-[filtering]
-ignorewarningsforurls=
-  ^https?://jpl\.nasa\.gov/missions/galileo/$ ^http-redirected$
-  ^https?://jpl\.nasa\.gov/missions/juno/$ ^http-redirected$
