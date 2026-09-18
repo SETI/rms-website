@@ -8,10 +8,24 @@ tabs: cassini_iss
 
 **Software available or in development for general release:**
 
-### 1\. Data Analysis Software
+### 1\. Image Viewing Software
+
+  * [rms-picmaker](//rms-picmaker.readthedocs.io/en/latest/){:target="_blank"} converts PDS3-labeled images, VICAR images, and FITS images into common display formats such as JPEG, PNG, and TIFF.
+
+  * [PDS4 Viewer](//pds-smallbodies.astro.umd.edu/tools/pds4_tools_info/pds4_viewer.html){:target="_blank"} is a stand-alone viewer for PDS4 images and other PDS4 data products.
+
+  * [Planetary Data Reader (pdr)](//pdr.readthedocs.io/en/latest/){:target="_blank"} reads PDS3 and PDS4 data products in Python and can render browse images.
+
+
+### 2\. Python Array Software
+
+  * [rms-vicar](//rms-vicar.readthedocs.io/en/latest/){:target="_blank"} is a pip-installable Python module for reading and writing JPL's VICAR file format. A VICAR image can be accessed as an array for further processing in Python.
+
+
+### 3\. Full Data Analysis Software
 
   * ISS images are compatible with the Integrated Software for Imagers and Spectrometers (ISIS) software package, which is available
-    through the [USGS Flagstaff web site](//isis.astrogeology.usgs.gov/){:target="_blank"} or from [GitHub - ISIS3](//github.com/DOI-USGS/ISIS3){:target="_blank"}
+    through the [USGS Flagstaff web site](//isis.astrogeology.usgs.gov/10.0.0/){:target="_blank"} or from [GitHub - ISIS3](//github.com/DOI-USGS/ISIS3){:target="_blank"}.
 
   * [OMINAS](//github.com/nasa/ominas){:target="_blank"} (pronounced like 'ominous') is an
     IDL-based software environment for the reduction and analysis of data taken by any space-based or planet-based system. The
@@ -22,18 +36,13 @@ tabs: cassini_iss
     [DOI: 10.1051/0004-6361/201731713](//doi.org/10.1051/0004-6361/201731713){:target="_blank"}. CAVIAR does not currently appear to be
     publicly available. We will supply links to the appropriate pages if they become available.
 
-
-### 2\. VICAR Image Processing System
-
-
-  * Use our [VICAR](https://rms-vicar.readthedocs.io/en/latest/){:target="_blank"} software, a pip-installable python module that supports reading and writing of JPS's VICAR file format.
-  * Also available, [VICAR](//github.com/NASA-AMMOS/VICAR){:target="_blank"}
+  * [VICAR](//github.com/NASA-AMMOS/VICAR){:target="_blank"}
     is an open source image processing system developed and used by the Multimission Image Processing
     Lab (MIPL) at JPL.
-  * VICAR was developed for use with JPL's planetary missions, and the VICAR format is compatible with both PDS3 and PDS4.
+    VICAR was developed for use with JPL's planetary missions, and the VICAR format is compatible with both PDS3 and PDS4.
 
 
-### 3\. Calibration Software
+### 4\. Calibration Software
 
   * **CISSCAL** is the ISS team developed, IDL based, calibration software. CISSCAL is available
     in the extras directory of [COISS_0011 volume]({{ site.viewmaster_url }}volumes/COISS_0xxx/COISS_0011/extras/){:target="_blank"}.
