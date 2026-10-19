@@ -7,6 +7,12 @@
 {%- capture internal_img_target -%}src="/{%- endcapture -%}
 {%- capture prepend_img_path -%}src="{{ site.assets_url }}/{%- endcapture -%}
 
+{%- capture tool_url_target -%}href="/tools/{%- endcapture -%}
+{%- capture prepend_tool_path -%}href="{{ site.tools_url }}{%- endcapture -%}
+
+{%- capture pds4_url_target -%}href="/pds4/{%- endcapture -%}
+{%- capture prepend_pds4_path -%}href="{{ site.pds4_url }}{%- endcapture -%}
+
 {% for homebox in page.homeboxes %}
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="homebox_item">
@@ -24,12 +30,14 @@
               | replace: 'src="//', 'src="PROTOCOL_RELATIVE//'
               | replace: internal_img_target, prepend_img_path
               | replace: 'src="PROTOCOL_RELATIVE//', 'src="//'
+              | replace: tool_url_target, prepend_tool_path
+              | replace: pds4_url_target, prepend_pds4_path
             }}
           </div>
         </div><!-- /panel-body -->
       </div><!--/homebox panel panel-default -->
       <div class="mobile toplink homebox-toplink">
-        <a href="#top">back to top</a>
+        <a href="#">back to top</a>
       </div>
     </div><!-- /item -->
   </div>
