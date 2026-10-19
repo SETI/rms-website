@@ -13,7 +13,7 @@
                 </a>
             {% else %}
                 <a href="{{ site.opus_url }}{{ page.opus_share }}{{ image.filename | downcase }}" target="_blank" rel="noopener noreferrer">
-                    <img src="{{ site.assets_url }}holdings/previews/{{ image.src }}" alt="{{ image.alt }}" />
+                    <img src="{{ site.holdings_url }}previews/{{ image.src }}" alt="{{ image.alt }}" />
                 </a>
             {% endif %}
             {% assign title = image.title | default: image.filename %}

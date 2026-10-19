@@ -5,7 +5,12 @@
 {%- capture prepend_link_path -%}href="{{ site.baseurl }}/{%- endcapture -%}
 
 {%- capture internal_img_target -%}src="/{%- endcapture -%}
-{%- capture prepend_img_path -%}src="{{ site.assets_url }}/{%- endcapture -%}
+{%- capture prepend_img_path -%}src="{{ site.assets_url }}{%- endcapture -%}
+
+{%- capture assets_path -%}{{ site.assets_url }}{%- endcapture -%}
+{%- capture tools_path -%}{{ site.tools_url }}{%- endcapture -%}
+{%- capture pds4_path -%}{{ site.pds4_url }}{%- endcapture -%}
+{%- capture viewmaster_path -%}{{ site.viewmaster_url }}{%- endcapture -%}
 
 {% for homebox in page.homeboxes %}
   <div class="col-md-12 col-sm-12 col-xs-12">
@@ -24,6 +29,9 @@
               | replace: 'src="//', 'src="PROTOCOL_RELATIVE//'
               | replace: internal_img_target, prepend_img_path
               | replace: 'src="PROTOCOL_RELATIVE//', 'src="//'
+              | replace: '/tools/', tools_path
+              | replace: '/pds4/', pds4_path
+              | replace: '/viewmaster/', viewmaster_path
             }}
           </div>
         </div><!-- /panel-body -->
